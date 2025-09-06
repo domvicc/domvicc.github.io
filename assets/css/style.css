@@ -116,6 +116,15 @@ body {
   color: transparent;
 }
 .hero-subtitle { color: var(--muted); font-size: 1.125rem; }
+/* role line under the main hero title */
+.hero-role {
+  margin: 0.25rem 0 0.5rem;
+  color: var(--primary-2);
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  font-size: 1.125rem;
+  font-family: inter, system-ui, -apple-system, "segoe ui", roboto, "helvetica neue", arial, sans-serif;
+}
 .hero-actions { display: inline-flex; gap: .75rem; margin-top: 1.25rem; }
 .hero-image { margin-top: 2rem; width: 100%; max-width: 820px; border-radius: var(--radius); box-shadow: var(--shadow); }
 
