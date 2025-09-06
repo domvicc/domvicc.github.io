@@ -1,55 +1,55 @@
-# dominic portfolio — github pages
+# Dominic portfolio — GitHub Pages
 
-this is a clean, modern multi‑page portfolio template designed for github pages. pages included:
+This is a clean, modern, multi-page portfolio template designed for GitHub Pages. Included pages:
 
-- `index.html` (home)
+- `index.html` (Home)
 - `projects.html`
 - `domguardianai.html`
 
-## quick start
+## Quick start
 
-1. create a repo named `username.github.io` on github (replace `username`).
-2. clone the repo locally and copy this folder's contents into it.
-3. commit and push:  
-   - `git add .`  
-   - `git commit -m "init portfolio"`  
+1. Create a repository named `username.github.io` on GitHub (replace `username`).
+2. Clone the repo locally and copy this folder's contents into it.
+3. Commit and push:
+   - `git add .`
+   - `git commit -m "init portfolio"`
    - `git push`
-4. in the repo: settings → pages → source: `deploy from branch`, branch: `main`, folder: `/ (root)`.
-5. open `https://username.github.io` to see your site live.
+4. In the repository settings: Pages → Source: `deploy from branch`, branch: `main`, folder: `/ (root)`.
+5. Open `https://username.github.io` to see your site live.
 
-## editing with vs code
+## Editing with VS Code
 
-- open the folder in vs code, and edit the `.html` files.
-- global styles are in `assets/css/style.css`.
-- basic scripts (mobile nav) are in `assets/js/main.js`.
+- Open the folder in VS Code and edit the `.html` files.
+- Global styles are in `assets/css/style.css`.
+- Basic scripts (mobile nav) are in `assets/js/main.js`.
 
-## adding images and other files
+## Adding images and other files
 
-- place images in `assets/img/` (project screenshots under `assets/img/projects/`).
-- update the `src` attribute in the html where indicated by comments.
-- always add `alt` text for accessibility.
-- keep filenames simple: `kebab-case-like-this.jpg`.
+- Place images in `assets/img/` (project screenshots under `assets/img/projects/`).
+- Update the `src` attribute in the HTML where indicated by comments.
+- Always add `alt` text for accessibility.
+- Keep filenames simple: `kebab-case-like-this.jpg`.
 
-example:
+Example:
 
 ```html
 <!-- projects.html -->
-<img src="assets/img/projects/minwage.jpg" alt="minimum wage dashboard screenshot" class="project-image">
+<img src="assets/img/projects/minwage.jpg" alt="Minimum Wage dashboard screenshot" class="project-image">
 ```
 
-## customizing the header and details
+## Customizing the header and details
 
-- the large header on the home page is the `<h1 class="hero-title">` element — update it with your name.
-- update contact links in the footer across pages.
-- duplicate `.project-card` blocks in `projects.html` for more projects.
+- The large header on the home page is the `<h1 class="hero-title">` element — update it with your name.
+- Update contact links in the footer across pages.
+- Duplicate `.project-card` blocks in `projects.html` for more projects.
 
-## custom domain (optional)
+## Custom domain (optional)
 
-- buy a domain (namecheap, cloudflare, etc.).
-- in repo settings → pages, add your domain (this creates a `cname` file).
-- set a `cname` record at your registrar to `username.github.io`.
-- github will provision https automatically.
+- Buy a domain (Namecheap, Cloudflare, etc.).
+- In repo settings → Pages, add your domain (this creates a `CNAME` file).
+- Set a `CNAME` record at your registrar to `username.github.io`.
+- GitHub will provision HTTPS automatically.
 
-## license
+## License
 
-you own your content. do whatever you want with this template.
+You own your content. Do whatever you want with this template.
