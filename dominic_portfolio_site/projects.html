@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>projects — dominic vicchiollo</title>
+  <meta name="description" content="projects and case studies by dominic vicchiollo.">
+  <link rel="canonical" href="./projects.html">
+  <link href="https://fonts.googleapis.com/css2?family=inter:wght@400;600;700&family=space+grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="home">
+        <span class="brand-mark">dv</span>
+        <span class="brand-text">dominic</span>
+      </a>
+      <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false">
+        <span class="sr-only">toggle navigation</span>
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+      <nav id="site-nav" class="site-nav">
+        <a href="index.html" class="nav-link">home</a>
+        <a href="projects.html" class="nav-link is-active">projects</a>
+        <a href="domguardianai.html" class="nav-link">domguardianai</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h1 class="section-title">projects</h1>
+      <p class="lead">short write‑ups with links to code and visuals. replace the placeholders below with your real projects.</p>
+
+      <!-- tip: each .project-card can include an image (optional), title, description, tags, and links -->
+      <div class="grid projects-grid">
+
+        <article class="project-card">
+          <!-- tip: add a real image to assets/img/projects/ and update the src -->
+          <!-- example: <img src="assets/img/projects/minwage.jpg" alt="minimum wage dashboard screenshot" class="project-image"> -->
+          <div class="project-content">
+            <h3 class="project-title">minimum wage compliance dashboard</h3>
+            <p class="project-desc">
+              power bi dashboard blending bls cpi with multi‑level wage rules; highlights ratio trends and alerts.
+            </p>
+            <div class="tags">
+              <span class="tag">power bi</span><span class="tag">azure</span><span class="tag">python</span>
+            </div>
+            <div class="links">
+              <a class="btn small" href="#" target="_blank" rel="noopener">repo</a>
+              <a class="btn ghost small" href="#" target="_blank" rel="noopener">live demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-content">
+            <h3 class="project-title">invoice integration pipeline</h3>
+            <p class="project-desc">
+              azure functions moving invoices between intacct and invoiced.com with attachments and csv uploads; robust logging and retries.
+            </p>
+            <div class="tags">
+              <span class="tag">azure functions</span><span class="tag">python</span><span class="tag">rest apis</span>
+            </div>
+            <div class="links">
+              <a class="btn small" href="#" target="_blank" rel="noopener">repo</a>
+              <a class="btn ghost small" href="#" target="_blank" rel="noopener">notes</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-content">
+            <h3 class="project-title">shipping analytics</h3>
+            <p class="project-desc">
+              end‑to‑end pipeline with curated datasets and kpis for client services; fp&a friendly visuals and exports.
+            </p>
+            <div class="tags">
+              <span class="tag">sql</span><span class="tag">synapse</span><span class="tag">power bi</span>
+            </div>
+            <div class="links">
+              <a class="btn small" href="#" target="_blank" rel="noopener">repo</a>
+              <a class="btn ghost small" href="#" target="_blank" rel="noopener">dashboard</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- tip: duplicate .project-card blocks for more projects; keep images under assets/img/projects/ -->
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 dominic vicchiollo</p>
+      <div class="social">
+        <a href="https://github.com/yourusername" target="_blank" rel="noopener">github</a>
+        <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener">linkedin</a>
+        <a href="mailto:youremail@example.com">email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
