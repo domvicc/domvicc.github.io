@@ -46,8 +46,8 @@ body {
 /* helpers */
 .container {
   width: 100%;
-  max-width: var(--container);
-  margin: 0 auto;
+  max-width: 100%;
+  margin: 0;
   padding: 0 1rem;
 }
 .section { padding: 4rem 0; }
