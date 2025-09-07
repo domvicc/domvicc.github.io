@@ -18,17 +18,20 @@
   --shadow: 0 12px 40px rgba(0,0,0,0.28);
 
   /* scalable canvas */
-  --content-max: 1280px;            /* fuller canvas feel */
-  --content-wide: 1600px;           /* edge-to-edge hero */
-  --gutter: clamp(1rem, 4vw, 4rem); /* responsive side gutter */
-  --section-vertical: clamp(2.25rem, 6vw, 6rem);
+  --content-max: 1280px;
+  --content-wide: 1600px;
+  --gutter: clamp(1rem, 4vw, 4rem);
+  --section-vertical: clamp(2rem, 5vw, 5rem);
 
   /* editorial indents */
-  --content-indent: clamp(1.5rem, 8vw, 140px);     /* section-level indent */
-  --prose-indent: clamp(1rem, 6vw, 72px);          /* body copy indent under headings */
+  --content-indent: clamp(1.5rem, 8vw, 140px);
+  --prose-indent: clamp(1rem, 6vw, 72px);
 
   /* header */
   --header-h: 64px;
+
+  /* hero logo tone control (darkens png slightly) */
+  --hero-logo-filter: brightness(0.9) contrast(1.28);
 }
 
 /* light mode (system preference) */
@@ -43,6 +46,9 @@
     --primary: #2563eb;
     --primary-2: #22d3ee;
     --shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+    /* in light mode, a touch stronger to ensure darker gray wordmark */
+    --hero-logo-filter: brightness(0.85) contrast(1.35);
   }
 }
 
@@ -74,7 +80,7 @@ body {
   margin-inline: auto;
   padding-inline: var(--gutter);
 }
-/* remove side gutters for the hero so the logo can really breathe */
+/* let the hero breathe edge-to-edge */
 .hero-bleed { padding-inline: 0; }
 
 .section { padding-block: var(--section-vertical); }
@@ -131,14 +137,14 @@ body {
 .nav-toggle .bar { display: block; inline-size: 22px; block-size: 2px; background: var(--text); margin: 4px 0; }
 
 /* hero
-   goals:
-   1) PNG dominates the header/canvas (edge-to-edge feel)
-   2) it fades away as you scroll
-   3) clean, modern layout
+   adjustments requested:
+   1) reduce empty space above the logo
+   2) keep the logo dominant and fade it out on scroll
 */
 .hero {
-  padding-block: calc(var(--section-vertical) + 0.75rem) calc(var(--section-vertical) / 2);
-  min-height: min(82vh, 900px);
+  /* trimmed top/bottom padding to reduce empty space */
+  padding-block: clamp(0.75rem, 2.2vw, 1.5rem) clamp(1.25rem, 3vw, 2rem);
+  min-height: min(72vh, 760px);
 }
 .hero-inner {
   text-align: center;
@@ -146,53 +152,53 @@ body {
   max-width: var(--content-wide);
 }
 
-/* hide text h1 for a logo-first header but keep it for accessibility */
+/* hide text h1 but keep for accessibility */
 .sr-only {
   position: absolute; inline-size: 1px; block-size: 1px; padding: 0; margin: -1px;
   overflow: hidden; clip: rect(0,0,1px,1px); border: 0;
 }
 
-/* scroll timeline wrapper; the image sticks and fades */
+/* scroll timeline wrapper for the image */
 .hero-logo-wrap {
   view-timeline-name: --hero;
   margin-inline: auto;
 }
 
-/* dominant PNG */
+/* dominant png (now closer to the nav, darker gray via filter) */
 .hero-logo {
   display: block;
   margin-inline: auto;
-  max-width: min(96vw, 1400px);  /* bigger, nearly full canvas */
+  max-width: min(96vw, 1400px);
   inline-size: min(96vw, 1400px);
   block-size: auto;
-  filter: drop-shadow(0 20px 54px rgba(0,0,0,0.22));
+  filter: var(--hero-logo-filter) drop-shadow(0 20px 54px rgba(0,0,0,0.22));
   will-change: transform, opacity;
 
-  /* stays near the top while you begin scrolling */
+  /* bring the sticky logo closer to the header to remove excess space */
   position: sticky;
-  top: calc(var(--header-h) + 12px);
+  top: calc(var(--header-h) + 4px);
   z-index: 1;
 }
 
-/* css scroll-driven fade to zero (modern browsers) */
+/* fade all the way out as you scroll */
 @supports (animation-timeline: auto) {
   .hero-logo {
     animation-name: hero-fade-out;
     animation-timeline: --hero;
-    animation-range: cover 0% 80%;
+    animation-range: cover 0% 75%;
     animation-timing-function: linear;
     animation-fill-mode: both;
   }
   @keyframes hero-fade-out {
     to {
       opacity: 0;
-      transform: translateY(-12px) scale(.88);
-      filter: drop-shadow(0 10px 24px rgba(0,0,0,0.12));
+      transform: translateY(-10px) scale(.9);
+      filter: var(--hero-logo-filter) drop-shadow(0 10px 24px rgba(0,0,0,0.12));
     }
   }
 }
 
-/* reduced motion: keep it static and fully opaque */
+/* reduced motion: static */
 @media (prefers-reduced-motion: reduce) {
   .hero-logo { position: relative; top: auto; animation: none !important; }
 }
@@ -239,15 +245,15 @@ body {
   background: linear-gradient(135deg, var(--primary), var(--primary-2));
 }
 
-/* modern editorial layout:
-   - section container already indented
-   - body content (prose) indents a bit more for readability
+/* editorial layout:
+   - section container is indented
+   - body prose indents a bit more for readability
 */
 .section .container {
   max-width: 960px;
   margin-left: var(--content-indent);
   margin-right: auto;
-  padding-left: 0; /* container handles horizontal gutter globally */
+  padding-left: 0;
 }
 .prose-indent { margin-left: var(--prose-indent); }
 
@@ -347,7 +353,7 @@ body {
   .site-nav.open { display: flex; }
   .nav-toggle { display: inline-block; }
   .hero { min-height: auto; }
-  .hero-logo { top: calc(var(--header-h) + 6px); }
+  .hero-logo { top: calc(var(--header-h) + 4px); }
 }
 
 /* accessibility */
@@ -358,7 +364,7 @@ body {
   .hero-logo { transition: opacity .35s ease, transform .35s ease, filter .35s ease; }
   body.has-scrolled .hero-logo {
     opacity: 0;
-    transform: translateY(-12px) scale(.88);
-    filter: drop-shadow(0 10px 24px rgba(0,0,0,0.12));
+    transform: translateY(-10px) scale(.9);
+    filter: var(--hero-logo-filter) drop-shadow(0 10px 24px rgba(0,0,0,0.12));
   }
 }

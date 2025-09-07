@@ -33,12 +33,11 @@
     </div>
   </header>
 
-  <!-- hero: dominant header PNG with in-place fade/disappear on scroll -->
+  <!-- hero: dominant header PNG with tighter top spacing and full fade-out on scroll -->
   <section class="hero">
     <div class="hero-inner container-wide hero-bleed">
       <h1 class="sr-only">Dominic Vicchiollo</h1>
 
-      <!-- scroll-timeline wrapper + sticky image -->
       <div class="hero-logo-wrap">
         <img class="hero-logo" src="assets/img/header-logo.png" alt="Dominic Vicchiollo">
       </div>
@@ -84,7 +83,7 @@
     </div>
   </section>
 
-  <!-- quick links / callouts (alt background) -->
+  <!-- quick links / callouts -->
   <section class="section alt">
     <div class="container callouts">
       <a class="callout" href="projects.html">
@@ -113,7 +112,7 @@
     </div>
   </footer>
 
-  <!-- nav toggle + fade fallback for older browsers -->
+  <!-- nav toggle + fade fallback for browsers without CSS scroll timelines -->
   <script>
     (function () {
       const toggle = document.querySelector('.nav-toggle');
@@ -125,14 +124,14 @@
         });
       }
 
-      /* fade-out fallback for browsers without CSS scroll timelines */
+      /* fade-out fallback for older browsers */
       const hero = document.querySelector('.hero');
       if (hero) {
         const supportsScrollTimeline = CSS && CSS.supports && CSS.supports('animation-timeline: auto');
         if (!supportsScrollTimeline) {
           const onScroll = () => {
             const rect = hero.getBoundingClientRect();
-            const threshold = Math.min(360, rect.height * 0.4);
+            const threshold = Math.min(320, rect.height * 0.4);
             if (window.scrollY > threshold) {
               document.body.classList.add('has-scrolled');
             } else {
