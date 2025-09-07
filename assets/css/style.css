@@ -137,16 +137,22 @@ body {
 .nav-toggle .bar { display: block; inline-size: 22px; block-size: 2px; background: var(--text); margin: 4px 0; }
 
 /* hero
-   adjustments requested:
-   1) reduce empty space above the logo
-   2) keep the logo dominant and fade it out on scroll
+   adjustments:
+   - remove big vertical gap by killing min-height
+   - keep logo dominant and fading on scroll
 */
 .hero {
-  /* tighten vertical spacing so the About section sits closer */
-  padding-block: calc(var(--section-vertical) - 0.75rem) calc(var(--section-vertical) / 3);
-  /* shorter min-height to bring content up into view faster */
-  min-height: min(70vh, 700px);
+  /* tighter vertical spacing so About sits right below */
+  padding-block: clamp(8px, 2vw, 18px) 12px;
+  /* *** fix the blank space *** */
+  min-height: 0 !important;
+  height: auto !important;
+  margin: 0;
 }
+/* ensure no decorative layers reserve space from a theme */
+.hero::before,
+.hero::after { content: none !important; display: none !important; }
+
 .hero-inner {
   text-align: center;
   margin-inline: auto;
@@ -165,18 +171,16 @@ body {
   margin-inline: auto;
 }
 
-/* dominant png (now closer to the nav, darker gray via filter) */
+/* dominant png (close to nav, slightly darker) */
 .hero-logo {
   display: block;
   margin-inline: auto;
-  /* slightly reduced so the logo is prominent but not overwhelming */
   max-width: min(82vw, 820px);
   inline-size: min(82vw, 820px);
   block-size: auto;
   filter: drop-shadow(0 14px 36px rgba(0,0,0,0.20));
   will-change: transform, opacity;
 
-  /* stays near the top while you begin scrolling */
   position: sticky;
   top: calc(var(--header-h) + 12px);
   z-index: 1;
@@ -247,10 +251,7 @@ body {
   background: linear-gradient(135deg, var(--primary), var(--primary-2));
 }
 
-/* editorial layout:
-   - section container is indented
-   - body prose indents a bit more for readability
-*/
+/* editorial layout */
 .section .container {
   max-width: 960px;
   margin-left: var(--content-indent);
@@ -354,7 +355,7 @@ body {
   }
   .site-nav.open { display: flex; }
   .nav-toggle { display: inline-block; }
-  .hero { min-height: auto; }
+  .hero { min-height: 0 !important; }         /* mobile also guaranteed no gap */
   .hero-logo { top: calc(var(--header-h) + 4px); }
 }
 
