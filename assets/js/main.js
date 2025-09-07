@@ -22,4 +22,17 @@
       }
     });
   });
+  
+  // subtle parallax for hero logo on scroll
+  const heroLogo = document.querySelector('.hero-logo');
+  if (heroLogo) {
+    let lastY = 0;
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY;
+      // small parallax offset, dampened
+      const offset = Math.round((y - lastY) * 0.06 + y * 0.02);
+      heroLogo.style.transform = `translateY(${offset}px)`;
+      lastY = y;
+    }, { passive: true });
+  }
 })();
