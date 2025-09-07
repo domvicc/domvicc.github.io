@@ -138,6 +138,25 @@ body {
 .hero-logo { display: block; margin: 0 auto 0.5rem; max-width: 680px; width: min(80%, 900px); height: auto; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,1px,1px); border: 0; }
 
+/* subtle floating animation for header logo */
+.hero-logo {
+  transition: transform 0.15s linear;
+  will-change: transform;
+  filter: drop-shadow(0 8px 24px rgba(0,0,0,0.18));
+  animation: floatY 6s ease-in-out infinite;
+}
+
+@keyframes floatY {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+/* reduce animation on small screens */
+@media (max-width: 680px) {
+  .hero-logo { animation: none; }
+}
+
 /* buttons */
 .btn {
   display: inline-block;
