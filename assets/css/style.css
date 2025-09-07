@@ -18,12 +18,12 @@
   --shadow: 0 12px 40px rgba(0,0,0,0.28);
 
   /* scalable canvas */
-  --content-max: 1280px;            /* increased for fuller canvas feel */
+  --content-max: 1280px;            /* increased for a fuller canvas feel */
   --content-wide: 1600px;           /* rare edge-to-edge sections */
   --gutter: clamp(1rem, 4vw, 4rem); /* responsive side gutter */
   --section-vertical: clamp(2.25rem, 6vw, 6rem);
 
-  /* left indent for body sections, to feel editorial + modern */
+  /* left indent for body sections to create a modern editorial margin */
   --content-indent: clamp(1.5rem, 8vw, 140px);
 
   /* header */
@@ -130,8 +130,8 @@ body {
 
 /* hero
    goals:
-   - png dominates the header
-   - stays visually "in place" as you start scrolling
+   - PNG dominates the header
+   - stays visually “in place” as you start scrolling
    - fades subtly while content takes focus
 */
 .hero {
@@ -145,19 +145,19 @@ body {
   max-width: var(--content-wide);
 }
 
-/* hide text h1 for a logo-first header but keep for a11y */
+/* hide text h1 for a logo-first header but keep it for accessibility */
 .sr-only {
   position: absolute; inline-size: 1px; block-size: 1px; padding: 0; margin: -1px;
   overflow: hidden; clip: rect(0,0,1px,1px); border: 0;
 }
 
-/* hero logo wrapper defines scroll timeline; the image sticks + fades */
+/* hero logo wrapper defines the scroll timeline; the image sticks and fades */
 .hero-logo-wrap {
   view-timeline-name: --hero;
   margin-inline: auto;
 }
 
-/* dominant png */
+/* dominant PNG */
 .hero-logo {
   display: block;
   margin-inline: auto;
@@ -167,13 +167,13 @@ body {
   filter: drop-shadow(0 18px 48px rgba(0,0,0,0.22));
   will-change: transform, opacity;
 
-  /* stays near top while you begin scrolling */
+  /* stays near the top while you begin scrolling */
   position: sticky;
   top: calc(var(--header-h) + 12px);
   z-index: 1;
 }
 
-/* scroll-driven fade + slight float up (modern css; chrome/safari stable) */
+/* scroll-driven fade + slight float up (modern CSS; Chrome/Safari stable) */
 @supports (animation-timeline: auto) {
   .hero-logo {
     animation-name: hero-fade;
