@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Dominic Vicchiollo — Portfolio</title>
-  <meta name="description" content="Portfolio of Dominic Vicchiollo—data engineering, analytics, and Azure.">
+  <meta name="description" content="Portfolio of Dominic Vicchiollo—Data Engineering, Analytics, and Azure.">
   <link rel="canonical" href="./index.html">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
@@ -33,9 +33,9 @@
     </div>
   </header>
 
-  <!-- hero: dominant header PNG with in-place floating fade on scroll -->
+  <!-- hero: dominant header PNG with in-place fade/disappear on scroll -->
   <section class="hero">
-    <div class="hero-inner container-wide">
+    <div class="hero-inner container-wide hero-bleed">
       <h1 class="sr-only">Dominic Vicchiollo</h1>
 
       <!-- scroll-timeline wrapper + sticky image -->
@@ -57,24 +57,29 @@
   <section class="section">
     <div class="container">
       <h2 class="section-title">About Me</h2>
-      <p class="lead">
-        I build practical, reliable data systems using Azure, Python, SQL, and Power BI—from data ingestion and transformation through analytics and decision-ready dashboards.
-      </p>
-      <ul class="feature-list">
-        <li>Azure Data Lake, Synapse Serverless, Data Factory, and Function Apps</li>
-        <li>Python (pandas, requests, API integration) and SQL (T-SQL)</li>
-        <li>Power BI: DAX, RLS, executive dashboards, and KPIs</li>
-        <li>Pipelines that are observable, testable, and cost-aware</li>
-      </ul>
 
-      <!-- Predictive Index PDF viewer -->
-      <div class="pdf-block">
-        <h3 class="callout-title">Predictive Index Results</h3>
-        <p class="lead">A brief snapshot of my Predictive Index results—open the full report to review details.</p>
-        <div class="pdf-wrapper">
-          <iframe src="assets/pdf/Dominic%20Vicchiollo%20Predictive%20Index%20Results.pdf" title="Predictive Index Results" loading="lazy"></iframe>
+      <!-- indented body copy for readability -->
+      <div class="section-body prose-indent">
+        <p class="lead">
+          I build practical, reliable data systems using Azure, Python, SQL, and Power BI—from data ingestion and transformation through analytics and decision-ready dashboards.
+        </p>
+
+        <ul class="feature-list">
+          <li>Azure Data Lake, Synapse Serverless, Data Factory, and Function Apps</li>
+          <li>Python (pandas, requests, API integration) and SQL (T-SQL)</li>
+          <li>Power BI: DAX, RLS, executive dashboards, and KPIs</li>
+          <li>Pipelines that are observable, testable, and cost-aware</li>
+        </ul>
+
+        <!-- Predictive Index PDF viewer -->
+        <div class="pdf-block">
+          <h3 class="callout-title">Predictive Index Results</h3>
+          <p class="lead">A brief snapshot of my Predictive Index results—open the full report to review details.</p>
+          <div class="pdf-wrapper">
+            <iframe src="assets/pdf/Dominic%20Vicchiollo%20Predictive%20Index%20Results.pdf" title="Predictive Index Results" loading="lazy"></iframe>
+          </div>
+          <p class="pdf-note">Open the full report <a href="assets/pdf/Dominic%20Vicchiollo%20Predictive%20Index%20Results.pdf" target="_blank" rel="noopener">in a new tab</a>.</p>
         </div>
-        <p class="pdf-note">Open the full report <a href="assets/pdf/Dominic%20Vicchiollo%20Predictive%20Index%20Results.pdf" target="_blank" rel="noopener">in a new tab</a>.</p>
       </div>
     </div>
   </section>
@@ -108,16 +113,37 @@
     </div>
   </footer>
 
-  <!-- minimal nav toggle (your existing assets/js/main.js can handle this too) -->
+  <!-- nav toggle + fade fallback for older browsers -->
   <script>
-    const toggle = document.querySelector('.nav-toggle');
-    const nav = document.getElementById('site-nav');
-    if (toggle && nav) {
-      toggle.addEventListener('click', () => {
-        const open = nav.classList.toggle('open');
-        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-      });
-    }
+    (function () {
+      const toggle = document.querySelector('.nav-toggle');
+      const nav = document.getElementById('site-nav');
+      if (toggle && nav) {
+        toggle.addEventListener('click', () => {
+          const open = nav.classList.toggle('open');
+          toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+      }
+
+      /* fade-out fallback for browsers without CSS scroll timelines */
+      const hero = document.querySelector('.hero');
+      if (hero) {
+        const supportsScrollTimeline = CSS && CSS.supports && CSS.supports('animation-timeline: auto');
+        if (!supportsScrollTimeline) {
+          const onScroll = () => {
+            const rect = hero.getBoundingClientRect();
+            const threshold = Math.min(360, rect.height * 0.4);
+            if (window.scrollY > threshold) {
+              document.body.classList.add('has-scrolled');
+            } else {
+              document.body.classList.remove('has-scrolled');
+            }
+          };
+          document.addEventListener('scroll', onScroll, { passive: true });
+          onScroll();
+        }
+      }
+    }());
   </script>
 </body>
 </html>

@@ -18,13 +18,14 @@
   --shadow: 0 12px 40px rgba(0,0,0,0.28);
 
   /* scalable canvas */
-  --content-max: 1280px;            /* increased for a fuller canvas feel */
-  --content-wide: 1600px;           /* rare edge-to-edge sections */
+  --content-max: 1280px;            /* fuller canvas feel */
+  --content-wide: 1600px;           /* edge-to-edge hero */
   --gutter: clamp(1rem, 4vw, 4rem); /* responsive side gutter */
   --section-vertical: clamp(2.25rem, 6vw, 6rem);
 
-  /* left indent for body sections to create a modern editorial margin */
-  --content-indent: clamp(1.5rem, 8vw, 140px);
+  /* editorial indents */
+  --content-indent: clamp(1.5rem, 8vw, 140px);     /* section-level indent */
+  --prose-indent: clamp(1rem, 6vw, 72px);          /* body copy indent under headings */
 
   /* header */
   --header-h: 64px;
@@ -67,13 +68,14 @@ body {
   margin-inline: auto;
   padding-inline: var(--gutter);
 }
-
 .container-wide {
   width: 100%;
   max-width: var(--content-wide);
   margin-inline: auto;
   padding-inline: var(--gutter);
 }
+/* remove side gutters for the hero so the logo can really breathe */
+.hero-bleed { padding-inline: 0; }
 
 .section { padding-block: var(--section-vertical); }
 .section.alt { background: var(--surface); }
@@ -107,7 +109,7 @@ body {
   inline-size: 36px; block-size: 36px; border-radius: 10px;
   background: linear-gradient(135deg, var(--primary), var(--primary-2));
   color: #000; font-weight: 700;
-  text-transform: uppercase;
+  text-transform: uppercase; /* always DV */
   letter-spacing: .5px;
 }
 .brand-text { color: var(--text); font-weight: 700; letter-spacing: .3px; }
@@ -130,18 +132,17 @@ body {
 
 /* hero
    goals:
-   - PNG dominates the header
-   - stays visually “in place” as you start scrolling
-   - fades subtly while content takes focus
+   1) PNG dominates the header/canvas (edge-to-edge feel)
+   2) it fades away as you scroll
+   3) clean, modern layout
 */
 .hero {
   padding-block: calc(var(--section-vertical) + 0.75rem) calc(var(--section-vertical) / 2);
-  min-height: min(78vh, 820px);
+  min-height: min(82vh, 900px);
 }
 .hero-inner {
   text-align: center;
   margin-inline: auto;
-  padding-inline: var(--gutter);
   max-width: var(--content-wide);
 }
 
@@ -151,7 +152,7 @@ body {
   overflow: hidden; clip: rect(0,0,1px,1px); border: 0;
 }
 
-/* hero logo wrapper defines the scroll timeline; the image sticks and fades */
+/* scroll timeline wrapper; the image sticks and fades */
 .hero-logo-wrap {
   view-timeline-name: --hero;
   margin-inline: auto;
@@ -161,10 +162,10 @@ body {
 .hero-logo {
   display: block;
   margin-inline: auto;
-  max-width: min(92vw, 1100px);
-  inline-size: min(92vw, 1100px);
+  max-width: min(96vw, 1400px);  /* bigger, nearly full canvas */
+  inline-size: min(96vw, 1400px);
   block-size: auto;
-  filter: drop-shadow(0 18px 48px rgba(0,0,0,0.22));
+  filter: drop-shadow(0 20px 54px rgba(0,0,0,0.22));
   will-change: transform, opacity;
 
   /* stays near the top while you begin scrolling */
@@ -173,21 +174,20 @@ body {
   z-index: 1;
 }
 
-/* scroll-driven fade + slight float up (modern CSS; Chrome/Safari stable) */
+/* css scroll-driven fade to zero (modern browsers) */
 @supports (animation-timeline: auto) {
   .hero-logo {
-    animation-name: hero-fade;
+    animation-name: hero-fade-out;
     animation-timeline: --hero;
-    animation-range: cover 0% 65%;
+    animation-range: cover 0% 80%;
     animation-timing-function: linear;
     animation-fill-mode: both;
   }
-
-  @keyframes hero-fade {
+  @keyframes hero-fade-out {
     to {
-      opacity: .22;
-      transform: translateY(-8px) scale(.92);
-      filter: drop-shadow(0 10px 24px rgba(0,0,0,0.16));
+      opacity: 0;
+      transform: translateY(-12px) scale(.88);
+      filter: drop-shadow(0 10px 24px rgba(0,0,0,0.12));
     }
   }
 }
@@ -239,13 +239,17 @@ body {
   background: linear-gradient(135deg, var(--primary), var(--primary-2));
 }
 
-/* modern editorial indent for body sections */
+/* modern editorial layout:
+   - section container already indented
+   - body content (prose) indents a bit more for readability
+*/
 .section .container {
   max-width: 960px;
   margin-left: var(--content-indent);
   margin-right: auto;
   padding-left: 0; /* container handles horizontal gutter globally */
 }
+.prose-indent { margin-left: var(--prose-indent); }
 
 /* callouts */
 .callouts {
@@ -323,6 +327,7 @@ body {
 
 @media (max-width: 1100px) {
   .section .container { margin-left: clamp(1rem, 5vw, 2rem); max-width: 980px; }
+  .prose-indent { margin-left: clamp(.75rem, 4vw, 40px); }
 }
 
 @media (max-width: 1000px) {
@@ -347,3 +352,13 @@ body {
 
 /* accessibility */
 .sr-only { position: absolute; inline-size: 1px; block-size: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,1px,1px); border: 0; }
+
+/* js fallback fade (non–scroll-timeline browsers) */
+@supports not (animation-timeline: auto) {
+  .hero-logo { transition: opacity .35s ease, transform .35s ease, filter .35s ease; }
+  body.has-scrolled .hero-logo {
+    opacity: 0;
+    transform: translateY(-12px) scale(.88);
+    filter: drop-shadow(0 10px 24px rgba(0,0,0,0.12));
+  }
+}
