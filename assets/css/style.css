@@ -134,6 +134,10 @@ body {
 .hero-actions { display: inline-flex; gap: .75rem; margin-top: 1.25rem; }
 .hero-image { margin-top: 2rem; width: 100%; max-width: 820px; border-radius: var(--radius); box-shadow: var(--shadow); }
 
+/* hero logo image */
+.hero-logo { display: block; margin: 0 auto 0.5rem; max-width: 680px; width: min(80%, 900px); height: auto; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,1px,1px); border: 0; }
+
 /* buttons */
 .btn {
   display: inline-block;
