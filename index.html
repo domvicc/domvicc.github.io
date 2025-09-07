@@ -269,10 +269,10 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© 2025 Dominic Vicchiollo</p>
+      <p>© <span id="year"></span> Dominic Vicchiollo</p>
       <div class="social">
-        <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/domvicc" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/dominicvicchiollo" target="_blank" rel="noopener">LinkedIn</a>
         <a href="mailto:dvicchiollo@gmail.com">Email</a>
       </div>
     </div>
@@ -280,6 +280,12 @@
 
   <!-- Nav toggle + PDF header check + hero fade fallback -->
   <script>
+    // Set current year in footer
+    document.addEventListener('DOMContentLoaded', function() {
+      var yearSpan = document.getElementById('year');
+      if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+    });
+
     (function () {
       /* Mobile nav */
       const toggle = document.querySelector('.nav-toggle');
@@ -314,7 +320,13 @@
       const frame = document.getElementById('pi-pdf');
       const link = document.getElementById('pi-link');
       if (frame && link) {
-        const src = link.getAttribute('href');
+          let isSameOrigin = false;
+          try {
+            const pdfUrl = new URL(src, window.location.href);
+            isSameOrigin = pdfUrl.origin === window.location.origin;
+          } catch (e) {
+            isSameOrigin = false;
+          }
         const usePdfJs = () => {
           const viewer = 'https://mozilla.github.io/pdf.js/web/viewer.html?file=' + encodeURIComponent(src) + '#view=page-fit';
           frame.setAttribute('src', viewer);
