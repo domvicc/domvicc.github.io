@@ -54,8 +54,10 @@
       transform-origin:top center;
       transition:opacity .3s ease,filter .2s ease;
       filter:brightness(0.88) saturate(1.05);
+      z-index: 60; /* ensure the logo renders above the sticky header */
     }
-    body.has-scrolled .hero-logo{opacity:0}
+    /* soft fade when scrolled; avoid fully hiding the logo which caused it to disappear */
+    body.has-scrolled .hero-logo{opacity:0.12}
     .hero-role{margin-top:.4rem;text-align:center;color:var(--ink-2);font-weight:600}
     .hero-subtitle{text-align:center;color:var(--ink-3);margin-top:.15rem}
     .hero-actions{display:flex;gap:.6rem;justify-content:center;margin-top:.6rem}
