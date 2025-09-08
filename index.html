@@ -8,7 +8,7 @@
   <link rel="canonical" href="./index.html" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="assets/css/style.css?v=5" />
+  <link rel="stylesheet" href="assets/css/style.css?v=6" />
   <meta name="theme-color" content="#0b1020" />
   <style>
     /* (section-specific styles removed with boxed stats section) */
@@ -131,18 +131,27 @@
         <div class="pdf-block">
           <h3 class="subheading">Predictive Index Results</h3>
           <p class="lead">A brief snapshot of my Predictive Index results—open the full report to review details.</p>
+
           <div class="pdf-wrapper">
-            <iframe
+            <object
+              data="assets/pdf/dominic_vicchiollo_predictive_index_results.pdf#view=FitH&pagemode=none"
+              type="application/pdf"
               class="pdf-frame"
-              id="pi-pdf"
-              src="assets/pdf/dominic_vicchiollo_predictive_index_results.pdf#view=FitH&pagemode=none"
-              title="Predictive Index Results"
-              loading="lazy"
-            ></iframe>
+              aria-label="Predictive Index Results PDF">
+              <p>
+                Your browser can’t display this PDF inline.
+                <a href="assets/pdf/dominic_vicchiollo_predictive_index_results.pdf" target="_blank" rel="noopener">
+                  Open the report in a new tab
+                </a>.
+              </p>
+            </object>
           </div>
+
           <p class="pdf-note">
             If the inline viewer doesn’t load,
-            <a id="pi-link" href="assets/pdf/dominic_vicchiollo_predictive_index_results.pdf" target="_blank" rel="noopener">open the full report in a new tab</a>.
+            <a id="pi-link" href="assets/pdf/dominic_vicchiollo_predictive_index_results.pdf" target="_blank" rel="noopener">
+              open the full report in a new tab
+            </a>.
           </p>
         </div>
       </div>
@@ -194,46 +203,6 @@
           const open = nav.classList.toggle('open');
           toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
         });
-      }
-
-      /* Robust PDF embed:
-         1) Try native inline (fastest).
-         2) If server forces download/wrong MIME, try a local PDF.js viewer at assets/pdfjs/web/viewer.html
-            (works without CORS because it's same-origin).
-      */
-      const frame = document.getElementById('pi-pdf');
-      const link  = document.getElementById('pi-link');
-
-      if (frame && link) {
-        const pdfUrl = new URL(link.getAttribute('href'), window.location.href).href;
-
-        // Default: native inline viewer
-        frame.src = pdfUrl + '#view=FitH&pagemode=none';
-
-        // Helper to switch to local PDF.js viewer if available
-        const tryLocalPdfJs = () => {
-          const viewer = 'assets/pdfjs/web/viewer.html';
-          if (!window.fetch) return;
-          fetch(viewer, { method: 'HEAD' })
-            .then(vr => {
-              if (vr.ok) {
-                frame.src = viewer + '?file=' + encodeURIComponent(pdfUrl) + '#view=page-fit';
-              }
-            })
-            .catch(() => {});
-        };
-
-        // If server blocks inline (e.g., Content-Disposition: attachment), fallback
-        if (window.fetch) {
-          fetch(pdfUrl, { method: 'HEAD' })
-            .then(r => {
-              const ct = (r.headers.get('content-type') || '').toLowerCase();
-              const cd = (r.headers.get('content-disposition') || '').toLowerCase();
-              const inlineOK = ct.includes('application/pdf') && !/attachment/.test(cd);
-              if (!inlineOK) tryLocalPdfJs();
-            })
-            .catch(tryLocalPdfJs);
-        }
       }
     }());
   </script>
