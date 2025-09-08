@@ -11,7 +11,9 @@
   <link rel="stylesheet" href="assets/css/style.css" />
   <meta name="theme-color" content="#0b1020" />
   <style>
-    /* (Optional) Page-specific tweaks can live here */
+    /* page-specific sugar (kept tiny) */
+    .stats .callout p{margin:.25rem 0 0;color:var(--muted)}
+    .stats .callout h4{margin:0 0 .25rem;font-weight:700}
   </style>
 </head>
 <body>
@@ -42,7 +44,7 @@
       <h1 class="sr-only">Dominic Vicchiollo</h1>
 
       <div class="hero-logo-wrap">
-        <!-- Ensure this file exists exactly at /assets/img/header-logo.png -->
+        <!-- Make sure this exists at /assets/img/header-logo.png -->
         <img
           class="hero-logo"
           src="./assets/img/header-logo.png"
@@ -62,22 +64,45 @@
     </div>
   </section>
 
-  <!-- About -->
-  <section class="section section--about" id="about">
-    <div class="container-wide">
+  <!-- At-a-glance cards (boxed) -->
+  <section class="section alt">
+    <div class="container stats callouts">
+      <div class="callout">
+        <h4>Azure-first Platforms</h4>
+        <p>Synapse (serverless & dedicated), ADLS Gen2, Functions, Data Factory.</p>
+      </div>
+      <div class="callout">
+        <h4>Reliable Pipelines</h4>
+        <p>Observable, testable, cost-aware—SFTP/API ingestion, Parquet/JSON/CSV.</p>
+      </div>
+      <div class="callout">
+        <h4>Executive Dashboards</h4>
+        <p>Power BI models & apps, KPI frameworks, RLS, shared definitions.</p>
+      </div>
+      <div class="callout">
+        <h4>Governance & Quality</h4>
+        <p>RBAC, data checks, documentation, App Insights & Azure Monitor.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About (boxed feature areas) -->
+  <section class="section" id="about">
+    <div class="container">
       <h2 class="section-title">About Me</h2>
 
       <div class="section-body prose-indent">
         <p class="lead">
-          I design and run cloud data platforms that turn fragmented line-of-business data into trustworthy, self-serve analytics. My focus is measurable outcomes for executives and engineering leaders: faster time-to-insight, lower total cost of ownership, and clear dashboards teams rely on.
+          I design and operate Azure-first data platforms that turn fragmented line-of-business data into trustworthy, self-serve analytics. My focus is measurable outcomes for executives and engineering leaders: faster time-to-insight, lower total cost of ownership, and dashboards teams rely on.
         </p>
         <p class="lead">
-          I work across the Azure stack—Synapse (serverless and dedicated), ADLS Gen2, Data Factory, and Azure Functions—with Python and SQL to deliver governed datasets and Power BI solutions for Finance, Compliance, Operations, and Executive leadership. I lead initiatives end-to-end: architecture, implementation, observability, and enablement.
+          I work across Synapse (serverless & dedicated), ADLS Gen2, Data Factory, and Azure Functions—with Python and SQL—to deliver governed datasets and Power BI solutions for Finance, Compliance, Operations, and Executive leadership. I lead initiatives end-to-end: architecture, implementation, observability, and enablement.
         </p>
 
-        <div class="about-grid">
-          <div class="about-col">
-            <h3>Platform & Architecture</h3>
+        <!-- row 1 -->
+        <div class="grid three">
+          <div class="feature-box">
+            <h3 class="subheading">Platform & Architecture</h3>
             <ul>
               <li>ADLS Gen2 lake design; Synapse SQL (serverless & dedicated).</li>
               <li>Event-driven services with Azure Functions (HTTP, Timer, Queue, Durable).</li>
@@ -85,8 +110,8 @@
             </ul>
           </div>
 
-          <div class="about-col">
-            <h3>Pipelines & Integration</h3>
+          <div class="feature-box">
+            <h3 class="subheading">Pipelines & Integration</h3>
             <ul>
               <li>Data Factory orchestration; SFTP/API ingestion; Parquet/JSON/CSV at scale.</li>
               <li>ERP/CRM/Finance integrations: NetSuite, Salesforce, Sage Intacct, Invoiced.</li>
@@ -94,17 +119,20 @@
             </ul>
           </div>
 
-          <div class="about-col">
-            <h3>Analytics & BI</h3>
+          <div class="feature-box">
+            <h3 class="subheading">Analytics & BI</h3>
             <ul>
               <li>Power BI semantic models, DAX, apps, and KPI frameworks.</li>
               <li>Executive dashboards: compliance trends, A/R health, ledger reconciliation.</li>
               <li>Curated, self-serve datasets with shared definitions and RLS.</li>
             </ul>
           </div>
+        </div>
 
-          <div class="about-col">
-            <h3>Governance & Reliability</h3>
+        <!-- row 2 -->
+        <div class="grid three" style="margin-top:1rem">
+          <div class="feature-box">
+            <h3 class="subheading">Governance & Reliability</h3>
             <ul>
               <li>RBAC & Row-Level Security; data-quality checks and documentation.</li>
               <li>Application Insights & Azure Monitor for observability and alerting.</li>
@@ -112,19 +140,28 @@
             </ul>
           </div>
 
-          <div class="about-col">
-            <h3>Leadership & Impact</h3>
+          <div class="feature-box">
+            <h3 class="subheading">Leadership & Impact</h3>
             <ul>
               <li>Sole Senior Data Engineer coordinating weekly stakeholders.</li>
               <li>Audit and optimization programs that drove material savings.</li>
               <li>Recognized with organization MVP and industry awards.</li>
             </ul>
           </div>
+
+          <div class="feature-box">
+            <h3 class="subheading">Tooling & Languages</h3>
+            <ul>
+              <li>Python (pandas, requests), SQL/T-SQL, GitHub, CI hygiene.</li>
+              <li>Power BI (DAX, RLS, metrics), Azure CLI & portal.</li>
+              <li>Automation, cost monitoring, and operational runbooks.</li>
+            </ul>
+          </div>
         </div>
 
         <!-- Predictive Index PDF viewer -->
         <div class="pdf-block">
-          <h3 class="callout-title">Predictive Index Results</h3>
+          <h3 class="subheading">Predictive Index Results</h3>
           <p class="lead">A brief snapshot of my Predictive Index results—open the full report to review details.</p>
           <div class="pdf-wrapper">
             <iframe
@@ -137,7 +174,7 @@
           </div>
           <p class="pdf-note">
             If the inline viewer doesn’t load,
-            <a id="pi-link" href="assets/pdf/predictive-index-results.pdf" target="__blank" rel="noopener">open the full report in a new tab</a>.
+            <a id="pi-link" href="assets/pdf/predictive-index-results.pdf" target="_blank" rel="noopener">open the full report in a new tab</a>.
           </p>
         </div>
       </div>
@@ -191,30 +228,11 @@
         });
       }
 
-      /* Hero fade-out fallback (for browsers without scroll-linked animations) */
-      const hero = document.querySelector('.hero');
-      if (hero) {
-        const supportsScrollTimeline = window.CSS && CSS.supports && CSS.supports('animation-timeline: auto');
-        if (!supportsScrollTimeline) {
-          const onScroll = () => {
-            const rect = hero.getBoundingClientRect();
-            const threshold = Math.min(240, rect.height * 0.35);
-            if (window.scrollY > threshold) {
-              document.body.classList.add('has-scrolled');
-            } else {
-              document.body.classList.remove('has-scrolled');
-            }
-          };
-          document.addEventListener('scroll', onScroll, { passive: true });
-          onScroll();
-        }
-      }
-
       /* Robust PDF embed: define src first; fall back to PDF.js if needed */
       const frame = document.getElementById('pi-pdf');
       const link = document.getElementById('pi-link');
       if (frame && link) {
-        const src = link.getAttribute('href'); // defined before use
+        const src = link.getAttribute('href');
 
         const usePdfJs = () => {
           const viewer = 'https://mozilla.github.io/pdf.js/web/viewer.html?file=' + encodeURIComponent(src) + '#view=page-fit';
