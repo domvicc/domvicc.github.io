@@ -9,7 +9,6 @@
   <link rel="canonical" href="./projects.html" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <!-- Site styles for the Projects hub -->
   <link rel="stylesheet" href="assets/css/style.css?v=28" />
 </head>
 <body>
@@ -33,40 +32,16 @@
       </nav>
     </div>
 
-    <!-- Projects page header -->
+    <!-- Page heading -->
     <div class="container page-hero">
       <h1 class="page-title">Projects</h1>
       <p class="page-kicker">A showcase of platform builds, SQL craftsmanship, analytics, and architecture—fast to skim, easy to dive deep.</p>
-
-      <div class="toolbar" role="region" aria-label="Projects toolbar">
-        <div class="views">
-          <button class="btn view-btn is-active" data-view="grid" aria-pressed="true" title="Grid (g)">Grid</button>
-          <button class="btn view-btn" data-view="list" aria-pressed="false" title="List (l)">List</button>
-          <button class="btn view-btn" data-view="timeline" aria-pressed="false" title="Timeline (t)">Timeline</button>
-        </div>
-
-        <div class="search-sort">
-          <div class="search">
-            <input id="search" type="search" placeholder="Search projects ( / )" aria-label="Search projects" />
-            <button class="btn ghost clear-search" title="Clear search" aria-label="Clear search">×</button>
-          </div>
-          <label class="sort" for="sort">
-            <span class="sr-only">Sort</span>
-            <select id="sort" aria-label="Sort projects">
-              <option value="recent">Recent</option>
-              <option value="a-z">A–Z</option>
-              <option value="z-a">Z–A</option>
-            </select>
-          </label>
-          <button class="btn ghost filters-toggle" data-sheet-target="#filters-sheet" aria-controls="filters-sheet" aria-expanded="false">Filters</button>
-        </div>
-      </div>
     </div>
   </header>
 
   <main id="projects" class="section">
     <div class="container projects-layout">
-      <!-- Sidebar: filters (desktop) -->
+      <!-- Sidebar: filters -->
       <aside class="filters" aria-labelledby="filters-title">
         <div class="filters-inner">
           <div class="filters-head">
@@ -85,16 +60,6 @@
           </div>
 
           <div class="filter-group">
-            <h3 class="filter-title">Year</h3>
-            <div id="filter-years" class="chips" role="group" aria-label="Filter by year"></div>
-          </div>
-
-          <div class="filter-group">
-            <h3 class="filter-title">Status</h3>
-            <div id="filter-status" class="chips" role="group" aria-label="Filter by status"></div>
-          </div>
-
-          <div class="filter-group">
             <label class="checkbox">
               <input id="filter-featured" type="checkbox" />
               <span>Featured only</span>
@@ -103,55 +68,19 @@
         </div>
       </aside>
 
-      <!-- Mobile filters sheet -->
-      <div id="filters-sheet" class="sheet" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="filters-title-mobile">
-        <div class="sheet-header">
-          <h2 id="filters-title-mobile">Filters</h2>
-          <button class="btn ghost close-sheet" data-close="#filters-sheet" aria-label="Close filters">×</button>
-        </div>
-        <div class="sheet-body">
-          <div class="filter-group">
-            <h3 class="filter-title">Tags</h3>
-            <div id="m-filter-tags" class="chips"></div>
-          </div>
-          <div class="filter-group">
-            <h3 class="filter-title">Tech</h3>
-            <div id="m-filter-tech" class="chips"></div>
-          </div>
-          <div class="filter-group">
-            <h3 class="filter-title">Year</h3>
-            <div id="m-filter-years" class="chips"></div>
-          </div>
-          <div class="filter-group">
-            <h3 class="filter-title">Status</h3>
-            <div id="m-filter-status" class="chips"></div>
-          </div>
-          <label class="checkbox">
-            <input id="m-filter-featured" type="checkbox" />
-            <span>Featured only</span>
-          </label>
-        </div>
-        <div class="sheet-footer">
-          <button class="btn apply-filters">Apply</button>
-          <button class="btn ghost small clear-filters">Clear</button>
-        </div>
-      </div>
-
       <!-- Main content -->
       <section class="projects-content" aria-live="polite">
         <!-- Quick filters row -->
         <div class="chips-row" id="quick-chips"></div>
 
-        <!-- Views container -->
+        <!-- Grid view -->
         <div id="view-grid" class="view is-active" data-view="grid" aria-label="Grid view"></div>
-        <div id="view-list" class="view" data-view="list" aria-label="List view" hidden></div>
-        <div id="view-timeline" class="view" data-view="timeline" aria-label="Timeline view" hidden></div>
 
         <!-- Empty state -->
         <div id="empty" class="empty" hidden>
           <div class="empty-card">
             <h3>No projects match your filters</h3>
-            <p>Try removing a few filters or clearing search.</p>
+            <p>Try removing a few filters.</p>
             <button class="btn clear-filters">Reset filters</button>
           </div>
         </div>
@@ -200,8 +129,8 @@
     <section class="container" style="padding:1.5rem 0;">
       <h2>Projects (basic list)</h2>
       <ul>
-        <li>Inventory Audit Journal — T-SQL, SQL Agent, Audit (enable JavaScript for full experience)</li>
-        <li>365 Day Product Sales — Window logic, KPIs, Performance</li>
+        <li>Inventory Audit Journal — T-SQL, SQL Agent, Audit</li>
+        <li>365-Day Product Sales — Window Logic, KPIs, Performance</li>
         <li>Price Matrix & Replacement Cost — Costing, Margin, ETL</li>
       </ul>
     </section>
@@ -221,13 +150,432 @@
 
   <!-- Embedded projects data -->
   <script type="application/json" id="projects-data">
-    [ ... your project objects go here (already built above) ... ]
+  [
+    {
+      "id": "inventory-audit-journal",
+      "title": "Inventory Audit Journal",
+      "subtitle": "Reconciling perpetual vs G/L with staged audit layers",
+      "description": "Large scripted job creating staging and analysis tables to reconcile perpetual vs G/L, rebate variance, and SPA claim health with repeatable indexes and branching filters.",
+      "cover": [{"src":"assets/img/inventory_audit_cover.jpg","alt":"Inventory Audit"}],
+      "tags": ["SQL Development","Audit","Inventory"],
+      "tech_stack": ["T-SQL","SQL Agent","Indexing"],
+      "role": "Data Engineer",
+      "links": {
+        "repo":"sql/inventory_audit.sql",
+        "case_study":"assets/pdfjs/web/viewer.html?file=../../pdf/inventory_audit_notes.pdf"
+      },
+      "metrics": [{"label":"Tables","value":"12"},{"label":"Indexes","value":"27"},{"label":"Runtime","value":"< 6m"}],
+      "highlights": ["Branching filter paths","Repeatable index strategy","Variance surfacing for Ops"],
+      "featured": true
+    },
+    {
+      "id": "product-365-sales",
+      "title": "365-Day Product Sales",
+      "subtitle": "Rolling 30/90/365 movement and cost for turns",
+      "description": "Aggregates rolling movement and cost to feed excess/turns KPIs while isolating returns and enforcing location-type rules.",
+      "cover": [{"src":"assets/img/365_sales.jpg","alt":"Sales Coverage"}],
+      "tags": ["SQL Development","KPIs","Performance"],
+      "tech_stack": ["T-SQL","Window Functions"],
+      "role": "Data Engineer",
+      "links": {"repo":"sql/product_365_sales.sql"},
+      "metrics": [{"label":"Rows/day","value":"40M+"},{"label":"Refresh","value":"Hourly"}],
+      "highlights": ["Window functions","Return isolation","Location rules"],
+      "featured": true
+    },
+    {
+      "id": "price-matrix-replacement-cost",
+      "title": "Price Matrix & Replacement Cost",
+      "subtitle": "Unified cost sources and tier logic",
+      "description": "Supporting scripts unify cost sources and tier logic to drive margin analytics and downstream contract pricing.",
+      "cover": [{"src":"assets/img/price_matrix.jpg","alt":"Price Matrix"}],
+      "tags": ["SQL Development","Costing","Margin"],
+      "tech_stack": ["T-SQL","ETL"],
+      "role": "Data Engineer",
+      "links": {"repo":"sql/price_matrix.sql"},
+      "metrics": [{"label":"Tiers","value":"7"},{"label":"Latency","value":"< 2m"}],
+      "highlights": ["Tier precedence","Margin analytics","Contract pricing feed"],
+      "featured": false
+    },
+    {
+      "id": "branch-ledger-feeds",
+      "title": "Branch & Ledger Feeds",
+      "subtitle": "Dimensions and facts for BI & Finance",
+      "description": "Core dimension and fact extracts shaping a governed layer for Power BI and finance reconciliation (A/R, A/P, Inventory).",
+      "cover": [{"src":"assets/img/ledger.jpg","alt":"Ledger Feeds"}],
+      "tags": ["SQL Development","Operations","Governance"],
+      "tech_stack": ["T-SQL","Power BI"],
+      "role": "Data Engineer",
+      "links": {"repo":"sql/ledger_file.sql"},
+      "metrics": [{"label":"Dimensions","value":"12"},{"label":"Facts","value":"9"}],
+      "highlights": ["Shared dimensions","BI-ready facts","Recon alignment"],
+      "featured": false
+    },
+    {
+      "id": "branch-inventory-foundation",
+      "title": "Branch Inventory Foundation",
+      "subtitle": "Surrogate keys and indexed attributes",
+      "description": "Consolidates product and branch calculation sources; indexes lead time and safety stock attributes for availability and aging analytics.",
+      "cover": [{"src":"assets/img/inventory_foundation.jpg","alt":"Inventory Foundation"}],
+      "tags": ["SQL Development","Inventory","Performance"],
+      "tech_stack": ["T-SQL","Indexing"],
+      "role": "Data Engineer",
+      "links": {"repo":"sql/product_branch_inventory.sql"},
+      "metrics": [{"label":"SLO","value":"p95 < 1.2s"},{"label":"Size","value":"200 GB"}],
+      "highlights": ["Consolidated keys","Availability analytics","Aging insights"],
+      "featured": false
+    },
+    {
+      "id": "spa-rebate-normalization",
+      "title": "SPA & Rebate Normalization",
+      "subtitle": "Clean fact for margin reconciliation",
+      "description": "Extracts PO and sales linkages, classifies SPA vs SPJ, and materializes a clean rebate fact for variance and eligibility.",
+      "cover": [{"src":"assets/img/rebates.jpg","alt":"Rebate Normalization"}],
+      "tags": ["SQL Development","Rebates","Margin"],
+      "tech_stack": ["T-SQL","Joins"],
+      "role": "Data Engineer",
+      "links": {"repo":"sql/rebates.sql"},
+      "metrics": [{"label":"Link accuracy","value":"99.2%"},{"label":"Records","value":"35M"}],
+      "highlights": ["SPA/SPJ classification","Variance surfacing","Eligibility flags"],
+      "featured": false
+    },
+    {
+      "id": "tagged-order-variance",
+      "title": "Tagged Order Variance",
+      "subtitle": "Reconcile sales lines to PO/transfer tags",
+      "description": "Reconciles sales lines to PO and transfer tags, flags cost variances, and surfaces broken tag scenarios for correction.",
+      "cover": [{"src":"assets/img/tagged_orders.jpg","alt":"Tagged Orders"}],
+      "tags": ["SQL Development","Audit","Exceptions"],
+      "tech_stack": ["T-SQL"],
+      "role": "Data Engineer",
+      "links": {"repo":"sql/so_tagged_orders.sql"},
+      "metrics": [{"label":"Exceptions/day","value":"~2k"},{"label":"MTTR","value":"< 1d"}],
+      "highlights": ["Variance detection","Exception queues","Ops handoff"],
+      "featured": false
+    },
+    {
+      "id": "unbilled-ap-exposure",
+      "title": "Unbilled AP Exposure",
+      "subtitle": "Accrual and payment G/L to UBAP",
+      "description": "Produces an unbilled payable ledger combining accrual and payment G/L postings to monitor aging and exceptions before liability surprises.",
+      "cover": [{"src":"assets/img/unbilled_ap.jpg","alt":"Unbilled AP"}],
+      "tags": ["Finance","Controls","AP"],
+      "tech_stack": ["T-SQL"],
+      "role": "Data Engineer",
+      "links": {"repo":"sql/ap_unbilled.sql"},
+      "metrics": [{"label":"Exposure delta","value":"−18%"},{"label":"Alerts","value":"Daily"}],
+      "highlights": ["Aging visibility","Pre-invoice signals","Finance alignment"],
+      "featured": false
+    },
+    {
+      "id": "covid-workforce-planning",
+      "title": "COVID-19 Workforce Planning & Reporting",
+      "subtitle": "Productivity vs. hours to inform staffing",
+      "description": "Executive dashboard measuring productivity against working hours to manage workforce utilization during the pandemic; contributed to zero layoffs.",
+      "cover": [{"src":"assets/img/workforce.jpg","alt":"Workforce Planning"}],
+      "tags": ["Operations","Case Study","Power BI","Analytics"],
+      "tech_stack": ["SQL","Power BI","SSMS"],
+      "role": "Analytics Engineer",
+      "links": {"case_study":"assets/pdfjs/web/viewer.html?file=../../pdf/operational_productivity.pdf"},
+      "metrics": [{"label":"Teams","value":"6"},{"label":"Dashboards","value":"4"}],
+      "highlights": ["Exec-ready visuals","Utilization insights","Schedule optimization"],
+      "featured": true
+    },
+    {
+      "id": "lakehouse-synapse-strategy",
+      "title": "Lakehouse & Synapse Strategy",
+      "subtitle": "ADLS Gen2 + Synapse (serverless/dedicated)",
+      "description": "Azure-first lake design with governed zones and shared definitions for BI; cost-aware and reliable.",
+      "cover": [{"src":"assets/img/lakehouse.jpg","alt":"Lakehouse"}],
+      "tags": ["Architecture","Platform","Governance"],
+      "tech_stack": ["ADLS Gen2","Synapse","RBAC/RLS"],
+      "role": "Architect",
+      "links": {},
+      "metrics": [{"label":"Zones","value":"3"},{"label":"Cost ↓","value":"~22%"}],
+      "highlights": ["Zone governance","Shared dimensions","Cost control"],
+      "featured": false
+    },
+    {
+      "id": "minwage-compliance-dashboard",
+      "title": "Minimum Wage Compliance Dashboard",
+      "subtitle": "Blending BLS CPI with multi-level wage rules",
+      "description": "Power BI dashboard with ratio trends and alerts across federal/state/county/city minimum-wage rules.",
+      "cover": [{"src":"assets/img/minwage.jpg","alt":"Minimum Wage Dashboard"}],
+      "tags": ["Compliance","Research","Analytics"],
+      "tech_stack": ["Power BI","Azure","Python"],
+      "role": "Analytics Engineer",
+      "links": {},
+      "metrics": [{"label":"Jurisdictions","value":"500+"},{"label":"Alert latency","value":"< 1 day"}],
+      "highlights": ["CPI overlays","Multi-level rules","Alerting"],
+      "featured": true
+    }
+  ]
   </script>
 
-  <!-- App script -->
-  <script src="assets/js/app.js?v=25" defer></script>
-
+  <!-- Slim app script (no top toolbar, tags/tech/featured filters only) -->
   <script>
+  (() => {
+    const $ = (s, r=document) => r.querySelector(s);
+    const $$ = (s, r=document) => [...r.querySelectorAll(s)];
+    const byId = id => document.getElementById(id);
+
+    const dataEl = byId('projects-data');
+    if (!dataEl) { console.error('Missing #projects-data'); return; }
+
+    let projects = [];
+    try { projects = JSON.parse(dataEl.textContent.trim()); }
+    catch (e) { console.error('Invalid JSON in #projects-data', e); return; }
+
+    console.info('Projects loaded:', projects.length);
+
+    // --- State (tags/tech/featured only) ---
+    const state = {
+      tags: new Set(),
+      tech: new Set(),
+      featuredOnly: false
+    };
+
+    // --- Elements ---
+    const grid = byId('view-grid');
+    const emptyState = byId('empty');
+    const quickChips = byId('quick-chips');
+    const side = {
+      tags: byId('filter-tags'),
+      tech: byId('filter-tech'),
+      featured: byId('filter-featured')
+    };
+
+    // --- Vocab from data ---
+    const vocab = {
+      tags: uniq(projects.flatMap(p => p.tags || [])).sort(alpha),
+      tech: uniq(projects.flatMap(p => p.tech_stack || [])).sort(alpha)
+    };
+
+    // Build UI
+    renderFilters();
+    renderQuickChips();
+    wireInteractions();
+    render();
+
+    // ------- UI builders -------
+    function renderFilters() {
+      side.tags.innerHTML = '';
+      vocab.tags.forEach(v => side.tags.appendChild(chip(v, state.tags)));
+
+      side.tech.innerHTML = '';
+      vocab.tech.forEach(v => side.tech.appendChild(chip(v, state.tech)));
+
+      side.featured.checked = state.featuredOnly;
+    }
+
+    function renderQuickChips() {
+      const common = ['SQL Development','Architecture','Analytics','Operations','Finance','Compliance'];
+      quickChips.innerHTML = '';
+      common.filter(t => vocab.tags.includes(t)).forEach(t => {
+        quickChips.appendChild(chip(t, state.tags));
+      });
+    }
+
+    function chip(label, setRef){
+      const pressed = setRef.has(label);
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'chip';
+      b.textContent = label;
+      b.setAttribute('aria-pressed', pressed ? 'true' : 'false');
+      return b;
+    }
+
+    // ------- Events -------
+    function wireInteractions(){
+      // Delegated clicks for all chip containers (side + quick)
+      [side.tags, side.tech, quickChips].forEach(container => {
+        container?.addEventListener('click', (e) => {
+          const c = e.target.closest('.chip');
+          if (!c) return;
+          const label = c.textContent.trim();
+          const setRef = container === side.tech ? state.tech : state.tags;
+          setRef.has(label) ? setRef.delete(label) : setRef.add(label);
+          syncChipStates(label);
+          render();
+        });
+      });
+
+      side.featured.addEventListener('change', () => {
+        state.featuredOnly = side.featured.checked;
+        render();
+      });
+
+      // Clear buttons
+      $$('.clear-filters').forEach(btn => btn.addEventListener('click', clearAll));
+      byId('btn-clear')?.addEventListener('click', clearAll);
+      byId('btn-top')?.addEventListener('click', () => window.scrollTo({ top:0, behavior:'smooth' }));
+
+      // Modal + carousel
+      $$('.modal [data-close="#project-modal"], .modal-backdrop').forEach(b => b.addEventListener('click', closeModal));
+      $('.carousel-prev')?.addEventListener('click', () => slide(-1));
+      $('.carousel-next')?.addEventListener('click', () => slide(1));
+    }
+
+    function clearAll(){
+      state.tags.clear();
+      state.tech.clear();
+      state.featuredOnly = false;
+      renderFilters(); // rebuild pressed states
+      renderQuickChips();
+      render();
+    }
+
+    function syncChipStates(label){
+      // reflect pressed state across duplicate chips
+      const pressed = $$('#projects .chips .chip, #quick-chips .chip')
+        .filter(c => c.textContent.trim() === label)[0]
+        ?.getAttribute('aria-pressed') === 'true';
+      $$('#projects .chips .chip, #quick-chips .chip').forEach(c => {
+        if (c.textContent.trim() === label) {
+          const inTags = state.tags.has(label) || state.tech.has(label);
+          c.setAttribute('aria-pressed', inTags ? 'true' : 'false');
+        }
+      });
+    }
+
+    // ------- Render grid -------
+    function render(){
+      const rows = filtered(projects);
+      grid.innerHTML = '';
+      const g = document.createElement('div');
+      g.className = 'grid';
+      rows.forEach(p => g.appendChild(renderCard(p)));
+      grid.appendChild(g);
+
+      emptyState.hidden = rows.length !== 0;
+    }
+
+    function filtered(rows){
+      return rows.filter(p => {
+        if (state.featuredOnly && !p.featured) return false;
+        if (state.tags.size && !everyIn([...state.tags], p.tags||[])) return false;
+        if (state.tech.size && !everyIn([...state.tech], p.tech_stack||[])) return false;
+        return true;
+      });
+    }
+
+    function renderCard(p){
+      const card = div('card'); card.setAttribute('data-id', p.id);
+
+      const head = div('card-head');
+      const img = document.createElement('img');
+      img.className = 'card-cover';
+      img.loading = 'lazy';
+      img.alt = p?.cover?.[0]?.alt || p.title;
+      img.src = p?.cover?.[0]?.src || 'assets/img/placeholder.jpg';
+      const badges = div('card-badges');
+      (p.tags||[]).slice(0,3).forEach(t => badges.appendChild(span('badge', t)));
+      head.append(img, badges);
+
+      const body = div('card-body');
+      body.append(
+        h('h3','card-title', p.title),
+        p.subtitle ? pEl('card-sub', p.subtitle) : div('card-sub',''),
+        p.description ? pEl('card-desc', p.description) : div('card-desc',''),
+        (() => { const meta = div('card-meta'); meta.append(metaTags(p.tech_stack||[])); return meta; })(),
+        (() => {
+          const a = div('card-actions');
+          a.append(btn('View details', () => openProject(p)));
+          if (p.links?.demo) a.append(linkBtn('Demo', p.links.demo));
+          if (p.links?.repo) a.append(copyBtn('Copy repo', p.links.repo));
+          if (p.links?.case_study) a.append(linkBtn('Case study', p.links.case_study));
+          return a;
+        })()
+      );
+
+      card.append(head, body);
+      card.addEventListener('click', (e) => { if (!e.target.closest('a,button')) openProject(p); });
+      return card;
+    }
+
+    function metaTags(items){
+      const row = div('meta-tags');
+      items.forEach(t => row.appendChild(span('meta-tag', t)));
+      return row;
+    }
+
+    // ------- Modal -------
+    const modal = byId('project-modal');
+    const carouselTrack = byId('carousel-track');
+    const modalEls = {
+      kicker: byId('modal-kicker'),
+      title: byId('modal-title'),
+      sub: byId('modal-sub'),
+      desc: byId('modal-desc'),
+      highlights: byId('modal-highlights'),
+      metrics: byId('modal-metrics'),
+      links: byId('modal-links'),
+      similar: byId('modal-similar')
+    };
+
+    let slideIndex = 0;
+
+    function openProject(p){
+      // media
+      carouselTrack.innerHTML = '';
+      const media = (p.cover && p.cover.length) ? p.cover : [{src:'assets/img/placeholder.jpg',alt:p.title}];
+      media.forEach(m => {
+        if (String(m.src).toLowerCase().endsWith('.pdf')){
+          const f = document.createElement('iframe'); f.loading='lazy'; f.src=m.src; carouselTrack.appendChild(f);
+        } else {
+          const i = document.createElement('img'); i.loading='lazy'; i.alt=m.alt||p.title; i.src=m.src; carouselTrack.appendChild(i);
+        }
+      });
+      slideIndex = 0; carouselTrack.scrollTo({left:0});
+
+      modalEls.kicker.textContent = (p.tags||[]).slice(0,1).join(' • ');
+      modalEls.title.textContent = p.title;
+      modalEls.sub.textContent = p.subtitle || '';
+      modalEls.desc.textContent = p.description || '';
+
+      modalEls.highlights.innerHTML = ''; (p.highlights||[]).forEach(hh => modalEls.highlights.appendChild(li(hh)));
+      modalEls.metrics.innerHTML = ''; (p.metrics||[]).forEach(m => { const c=div('metric'); c.append(div('metric-label', m.label), div('metric-value', m.value)); modalEls.metrics.appendChild(c); });
+      modalEls.links.innerHTML = '';
+      if (p.links?.demo) modalEls.links.appendChild(linkBtn('Open demo', p.links.demo));
+      if (p.links?.repo) modalEls.links.appendChild(copyBtn('Copy repo', p.links.repo));
+      if (p.links?.case_study) modalEls.links.appendChild(linkBtn('Open case study', p.links.case_study));
+
+      // simple related by tag overlap
+      const sim = projects
+        .filter(x => x.id !== p.id)
+        .map(x => ({x,score:overlap(p.tags||[], x.tags||[])}))
+        .filter(s => s.score>0).sort((a,b)=>b.score-a.score).slice(0,6).map(s=>s.x);
+      modalEls.similar.innerHTML=''; sim.forEach(sp => modalEls.similar.appendChild(renderMini(sp)));
+
+      openModal();
+    }
+
+    function renderMini(p){
+      const a = document.createElement('a'); a.className='card'; a.href='javascript:void(0)';
+      const img = document.createElement('img'); img.className='card-cover'; img.loading='lazy'; img.alt=p?.cover?.[0]?.alt||p.title; img.src=p?.cover?.[0]?.src||'assets/img/placeholder.jpg';
+      const body = div('card-body'); body.append(h('h4','card-title', p.title));
+      a.append(img, body);
+      a.addEventListener('click', () => openProject(p));
+      return a;
+    }
+
+    function openModal(){ modal?.setAttribute('aria-hidden','false'); $('.modal-scroller')?.focus(); }
+    function closeModal(){ if (!modal || modal.getAttribute('aria-hidden')==='true') return; modal.setAttribute('aria-hidden','true'); }
+    function slide(dir){ const count = carouselTrack.children.length; if (!count) return; slideIndex = (slideIndex + dir + count) % count; carouselTrack.scrollTo({left: carouselTrack.clientWidth * slideIndex, behavior:'smooth'}); }
+
+    // ------- Helpers -------
+    function uniq(a){ return [...new Set(a)]; }
+    function alpha(a,b){ return a.localeCompare(b); }
+    function everyIn(needles, hay){ return needles.every(n => hay.includes(n)); }
+    function overlap(a,b){ return a.filter(x => b.includes(x)).length; }
+
+    // tiny dom helpers
+    function div(cls, text){ const n=document.createElement('div'); if (cls) n.className=cls; if (text!==undefined) n.textContent=text; return n; }
+    function span(cls, text){ const n=document.createElement('span'); if (cls) n.className=cls; n.textContent=text; return n; }
+    function h(tag, cls, text){ const n=document.createElement(tag); if (cls) n.className=cls; n.textContent=text; return n; }
+    function pEl(cls, text){ const n=document.createElement('p'); if (cls) n.className=cls; n.textContent=text; return n; }
+    function li(text){ const n=document.createElement('li'); n.textContent=text; return n; }
+
     // Footer year + mobile nav
     document.addEventListener('DOMContentLoaded', () => {
       const y = document.getElementById('year');
@@ -242,6 +590,7 @@
         });
       }
     });
+  })();
   </script>
 </body>
 </html>
