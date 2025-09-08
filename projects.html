@@ -1,4 +1,4 @@
-<!-- projects.html -->
+<!-- projects.html (fixed) -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,7 +9,7 @@
   <link rel="canonical" href="./projects.html" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="assets/css/style.css?v=31" />
+  <link rel="stylesheet" href="assets/css/style.css?v=33" />
 </head>
 <body>
   <!-- Site header + nav -->
@@ -94,7 +94,7 @@
     </div>
   </main>
 
-  <!-- Project detail modal -->
+  <!-- Project detail modal (similar projects removed) -->
   <div id="project-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
     <div class="modal-backdrop" data-close="#project-modal"></div>
     <div class="modal-dialog" role="document">
@@ -116,10 +116,6 @@
           <div id="modal-metrics" class="metrics"></div>
           <div id="modal-links" class="links"></div>
         </article>
-        <section class="modal-related">
-          <h3>Similar projects</h3>
-          <div id="modal-similar" class="related"></div>
-        </section>
       </div>
     </div>
   </div>
@@ -311,289 +307,8 @@
   ]
   </script>
 
-  <!-- Slim app script (no top toolbar, tags/tech/featured filters only) -->
+  <!-- Single, normalized app script (filters default to show all; 'Similar Projects' removed) -->
   <script>
-  (() => {
-    const $ = (s, r=document) => r.querySelector(s);
-    const $$ = (s, r=document) => [...r.querySelectorAll(s)];
-    const byId = id => document.getElementById(id);
-
-    const dataEl = byId('projects-data');
-    if (!dataEl) { console.error('Missing #projects-data'); return; }
-
-    let projects = [];
-    try { projects = JSON.parse(dataEl.textContent.trim()); }
-    catch (e) { console.error('Invalid JSON in #projects-data', e); return; }
-
-    console.info('Projects loaded:', projects.length);
-
-    // --- State (tags/tech/featured only) ---
-    const state = {
-      tags: new Set(),
-      tech: new Set(),
-      featuredOnly: false
-    };
-
-    // --- Elements ---
-    const grid = byId('view-grid');
-    const emptyState = byId('empty');
-    const quickChips = byId('quick-chips');
-    const side = {
-      tags: byId('filter-tags'),
-      tech: byId('filter-tech'),
-      featured: byId('filter-featured')
-    };
-
-    // --- Vocab from data ---
-    const vocab = {
-      tags: uniq(projects.flatMap(p => p.tags || [])).sort(alpha),
-      tech: uniq(projects.flatMap(p => p.tech_stack || [])).sort(alpha)
-    };
-
-    // Build UI
-    renderFilters();
-    renderQuickChips();
-    wireInteractions();
-    render();
-
-    // ------- UI builders -------
-    function renderFilters() {
-      side.tags.innerHTML = '';
-      vocab.tags.forEach(v => side.tags.appendChild(chip(v, state.tags)));
-
-      side.tech.innerHTML = '';
-      vocab.tech.forEach(v => side.tech.appendChild(chip(v, state.tech)));
-
-      side.featured.checked = state.featuredOnly;
-    }
-
-    function renderQuickChips() {
-      const common = ['SQL Development','Architecture','Analytics','Operations','Finance','Compliance'];
-      quickChips.innerHTML = '';
-      common.filter(t => vocab.tags.includes(t)).forEach(t => {
-        quickChips.appendChild(chip(t, state.tags));
-      });
-    }
-
-    function chip(label, setRef){
-      const pressed = setRef.has(label);
-      const b = document.createElement('button');
-      b.type = 'button';
-      b.className = 'chip';
-      b.textContent = label;
-      b.setAttribute('aria-pressed', pressed ? 'true' : 'false');
-      return b;
-    }
-
-    // ------- Events -------
-    function wireInteractions(){
-      // Delegated clicks for all chip containers (side + quick)
-      [side.tags, side.tech, quickChips].forEach(container => {
-        container?.addEventListener('click', (e) => {
-          const c = e.target.closest('.chip');
-          if (!c) return;
-          const label = c.textContent.trim();
-          const setRef = container === side.tech ? state.tech : state.tags;
-          setRef.has(label) ? setRef.delete(label) : setRef.add(label);
-          syncChipStates(label);
-          render();
-        });
-      });
-
-      side.featured.addEventListener('change', () => {
-        state.featuredOnly = side.featured.checked;
-        render();
-      });
-
-      // Clear buttons
-      $$('.clear-filters').forEach(btn => btn.addEventListener('click', clearAll));
-      byId('btn-clear')?.addEventListener('click', clearAll);
-      byId('btn-top')?.addEventListener('click', () => window.scrollTo({ top:0, behavior:'smooth' }));
-
-      // Modal + carousel
-      $$('.modal [data-close="#project-modal"], .modal-backdrop').forEach(b => b.addEventListener('click', closeModal));
-      $('.carousel-prev')?.addEventListener('click', () => slide(-1));
-      $('.carousel-next')?.addEventListener('click', () => slide(1));
-    }
-
-    function clearAll(){
-      state.tags.clear();
-      state.tech.clear();
-      state.featuredOnly = false;
-      renderFilters(); // rebuild pressed states
-      renderQuickChips();
-      render();
-    }
-
-    function syncChipStates(label){
-      // reflect pressed state across duplicate chips
-      const pressed = $$('#projects .chips .chip, #quick-chips .chip')
-        .filter(c => c.textContent.trim() === label)[0]
-        ?.getAttribute('aria-pressed') === 'true';
-      $$('#projects .chips .chip, #quick-chips .chip').forEach(c => {
-        if (c.textContent.trim() === label) {
-          const inTags = state.tags.has(label) || state.tech.has(label);
-          c.setAttribute('aria-pressed', inTags ? 'true' : 'false');
-        }
-      });
-    }
-
-    // ------- Render grid -------
-    function render(){
-      const rows = filtered(projects);
-      grid.innerHTML = '';
-      const g = document.createElement('div');
-      g.className = 'grid';
-      rows.forEach(p => g.appendChild(renderCard(p)));
-      grid.appendChild(g);
-
-      emptyState.hidden = rows.length !== 0;
-    }
-
-    function filtered(rows){
-      return rows.filter(p => {
-        if (state.featuredOnly && !p.featured) return false;
-        if (state.tags.size && !everyIn([...state.tags], p.tags||[])) return false;
-        if (state.tech.size && !everyIn([...state.tech], p.tech_stack||[])) return false;
-        return true;
-      });
-    }
-
-    function renderCard(p){
-      const card = div('card'); card.setAttribute('data-id', p.id);
-
-      const head = div('card-head');
-      const img = document.createElement('img');
-      img.className = 'card-cover';
-      img.loading = 'lazy';
-      img.alt = p?.cover?.[0]?.alt || p.title;
-      img.src = p?.cover?.[0]?.src || 'assets/img/placeholder.jpg';
-      const badges = div('card-badges');
-      (p.tags||[]).slice(0,3).forEach(t => badges.appendChild(span('badge', t)));
-      head.append(img, badges);
-
-      const body = div('card-body');
-      body.append(
-        h('h3','card-title', p.title),
-        p.subtitle ? pEl('card-sub', p.subtitle) : div('card-sub',''),
-        p.description ? pEl('card-desc', p.description) : div('card-desc',''),
-        (() => { const meta = div('card-meta'); meta.append(metaTags(p.tech_stack||[])); return meta; })(),
-        (() => {
-          const a = div('card-actions');
-          a.append(btn('View details', () => openProject(p)));
-          if (p.links?.demo) a.append(linkBtn('Demo', p.links.demo));
-          if (p.links?.repo) a.append(copyBtn('Copy repo', p.links.repo));
-          if (p.links?.case_study) a.append(linkBtn('Case study', p.links.case_study));
-          return a;
-        })()
-      );
-
-      card.append(head, body);
-      card.addEventListener('click', (e) => { if (!e.target.closest('a,button')) openProject(p); });
-      return card;
-    }
-
-    function metaTags(items){
-      const row = div('meta-tags');
-      items.forEach(t => row.appendChild(span('meta-tag', t)));
-      return row;
-    }
-
-    // ------- Modal -------
-    const modal = byId('project-modal');
-    const carouselTrack = byId('carousel-track');
-    const modalEls = {
-      kicker: byId('modal-kicker'),
-      title: byId('modal-title'),
-      sub: byId('modal-sub'),
-      desc: byId('modal-desc'),
-      highlights: byId('modal-highlights'),
-      metrics: byId('modal-metrics'),
-      links: byId('modal-links'),
-      similar: byId('modal-similar')
-    };
-
-    let slideIndex = 0;
-
-    function openProject(p){
-      // media
-      carouselTrack.innerHTML = '';
-      const media = (p.cover && p.cover.length) ? p.cover : [{src:'assets/img/placeholder.jpg',alt:p.title}];
-      media.forEach(m => {
-        if (String(m.src).toLowerCase().endsWith('.pdf')){
-          const f = document.createElement('iframe'); f.loading='lazy'; f.src=m.src; carouselTrack.appendChild(f);
-        } else {
-          const i = document.createElement('img'); i.loading='lazy'; i.alt=m.alt||p.title; i.src=m.src; carouselTrack.appendChild(i);
-        }
-      });
-      slideIndex = 0; carouselTrack.scrollTo({left:0});
-
-      modalEls.kicker.textContent = (p.tags||[]).slice(0,1).join(' • ');
-      modalEls.title.textContent = p.title;
-      modalEls.sub.textContent = p.subtitle || '';
-      modalEls.desc.textContent = p.description || '';
-
-      modalEls.highlights.innerHTML = ''; (p.highlights||[]).forEach(hh => modalEls.highlights.appendChild(li(hh)));
-      modalEls.metrics.innerHTML = ''; (p.metrics||[]).forEach(m => { const c=div('metric'); c.append(div('metric-label', m.label), div('metric-value', m.value)); modalEls.metrics.appendChild(c); });
-      modalEls.links.innerHTML = '';
-      if (p.links?.demo) modalEls.links.appendChild(linkBtn('Open demo', p.links.demo));
-      if (p.links?.repo) modalEls.links.appendChild(copyBtn('Copy repo', p.links.repo));
-      if (p.links?.case_study) modalEls.links.appendChild(linkBtn('Open case study', p.links.case_study));
-
-      // simple related by tag overlap
-      const sim = projects
-        .filter(x => x.id !== p.id)
-        .map(x => ({x,score:overlap(p.tags||[], x.tags||[])}))
-        .filter(s => s.score>0).sort((a,b)=>b.score-a.score).slice(0,6).map(s=>s.x);
-      modalEls.similar.innerHTML=''; sim.forEach(sp => modalEls.similar.appendChild(renderMini(sp)));
-
-      openModal();
-    }
-
-    function renderMini(p){
-      const a = document.createElement('a'); a.className='card'; a.href='javascript:void(0)';
-      const img = document.createElement('img'); img.className='card-cover'; img.loading='lazy'; img.alt=p?.cover?.[0]?.alt||p.title; img.src=p?.cover?.[0]?.src||'assets/img/placeholder.jpg';
-      const body = div('card-body'); body.append(h('h4','card-title', p.title));
-      a.append(img, body);
-      a.addEventListener('click', () => openProject(p));
-      return a;
-    }
-
-    function openModal(){ modal?.setAttribute('aria-hidden','false'); $('.modal-scroller')?.focus(); }
-    function closeModal(){ if (!modal || modal.getAttribute('aria-hidden')==='true') return; modal.setAttribute('aria-hidden','true'); }
-    function slide(dir){ const count = carouselTrack.children.length; if (!count) return; slideIndex = (slideIndex + dir + count) % count; carouselTrack.scrollTo({left: carouselTrack.clientWidth * slideIndex, behavior:'smooth'}); }
-
-    // ------- Helpers -------
-    function uniq(a){ return [...new Set(a)]; }
-    function alpha(a,b){ return a.localeCompare(b); }
-    function everyIn(needles, hay){ return needles.every(n => hay.includes(n)); }
-    function overlap(a,b){ return a.filter(x => b.includes(x)).length; }
-
-    // tiny dom helpers
-    function div(cls, text){ const n=document.createElement('div'); if (cls) n.className=cls; if (text!==undefined) n.textContent=text; return n; }
-    function span(cls, text){ const n=document.createElement('span'); if (cls) n.className=cls; n.textContent=text; return n; }
-    function h(tag, cls, text){ const n=document.createElement(tag); if (cls) n.className=cls; n.textContent=text; return n; }
-    function pEl(cls, text){ const n=document.createElement('p'); if (cls) n.className=cls; n.textContent=text; return n; }
-    function li(text){ const n=document.createElement('li'); n.textContent=text; return n; }
-
-    // Footer year + mobile nav
-    document.addEventListener('DOMContentLoaded', () => {
-      const y = document.getElementById('year');
-      if (y) y.textContent = new Date().getFullYear();
-
-      const toggle = document.querySelector('.nav-toggle');
-      const nav = document.getElementById('site-nav');
-      if (toggle && nav) {
-        toggle.addEventListener('click', () => {
-          const open = nav.classList.toggle('open');
-          toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-        });
-      }
-    });
-  })();
-  </script>
-  <!-- Slim app script (normalized tags/tech; no top toolbar; tags/tech/featured filters only) -->
-<script>
 (() => {
   const $ = (s, r=document) => r.querySelector(s);
   const $$ = (s, r=document) => [...r.querySelectorAll(s)];
@@ -625,7 +340,7 @@
 
   // ---------- state (tags/tech/featured only) ----------
   const state = {
-    tagKeys: new Set(),
+    tagKeys: new Set(),      // default empty -> show all
     techKeys: new Set(),
     featuredOnly: false
   };
@@ -811,7 +526,7 @@
     return row;
   }
 
-  // ---------- modal ----------
+  // ---------- modal (no 'similar projects') ----------
   const modal = byId('project-modal');
   const carouselTrack = byId('carousel-track');
   const modalEls = {
@@ -821,8 +536,7 @@
     desc: byId('modal-desc'),
     highlights: byId('modal-highlights'),
     metrics: byId('modal-metrics'),
-    links: byId('modal-links'),
-    similar: byId('modal-similar')
+    links: byId('modal-links')
   };
 
   let slideIndex = 0;
@@ -852,28 +566,7 @@
     if (p.links?.repo) modalEls.links.appendChild(copyBtn('Copy repo', p.links.repo));
     if (p.links?.case_study) modalEls.links.appendChild(linkBtn('Open case study', p.links.case_study));
 
-    // related by tag overlap
-    const sim = projects
-      .filter(x => x.id !== p.id)
-      .map(x => ({x,score: overlap(p._tagKeys, x._tagKeys)}))
-      .filter(s => s.score>0).sort((a,b)=>b.score-a.score).slice(0,6).map(s=>s.x);
-
-    modalEls.similar.innerHTML=''; sim.forEach(sp => modalEls.similar.appendChild(renderMini(sp)));
-
     openModal();
-  }
-
-  function overlap(keysA, keysB){
-    let n = 0; for (const k of keysA) if (keysB.has(k)) n++; return n;
-  }
-
-  function renderMini(p){
-    const a = document.createElement('a'); a.className='card'; a.href='javascript:void(0)';
-    const img = document.createElement('img'); img.className='card-cover'; img.loading='lazy'; img.alt=p?.cover?.[0]?.alt||p.title; img.src=p?.cover?.[0]?.src||'assets/img/placeholder.jpg';
-    const body = div('card-body'); body.append(h('h4','card-title', p.title));
-    a.append(img, body);
-    a.addEventListener('click', () => openProject(p));
-    return a;
   }
 
   function openModal(){ modal?.setAttribute('aria-hidden','false'); $('.modal-scroller')?.focus(); }
@@ -886,6 +579,38 @@
   function h(tag, cls, text){ const n=document.createElement(tag); if (cls) n.className=cls; n.textContent=text; return n; }
   function pEl(cls, text){ const n=document.createElement('p'); if (cls) n.className=cls; n.textContent=text; return n; }
   function li(text){ const n=document.createElement('li'); n.textContent=text; return n; }
+
+  // ---------- button/link helpers (self-contained) ----------
+  function btn(label, onClick){
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'btn';
+    b.textContent = label;
+    b.addEventListener('click', (e) => { e.stopPropagation(); onClick && onClick(e); });
+    return b;
+  }
+  function linkBtn(label, href){
+    const a = document.createElement('a');
+    a.className = 'btn ghost';
+    a.target = '_blank';
+    a.rel = 'noopener';
+    a.href = href;
+    a.textContent = label;
+    a.addEventListener('click', (e) => e.stopPropagation());
+    return a;
+  }
+  function copyBtn(label, text){
+    const b = btn(label, async () => {
+      try {
+        await navigator.clipboard.writeText(text);
+        const prev = b.textContent;
+        b.textContent = 'Copied';
+        setTimeout(() => { b.textContent = prev; }, 1200);
+      } catch {}
+    });
+    b.classList.add('secondary');
+    return b;
+  }
 
   // Footer year + mobile nav
   document.addEventListener('DOMContentLoaded', () => {
@@ -902,7 +627,7 @@
     }
   });
 })();
-</script>
+  </script>
 
 </body>
 </html>
