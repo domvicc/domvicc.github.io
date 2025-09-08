@@ -9,14 +9,14 @@
   <link href="https://fonts.googleapis.com/css2?family=inter:wght@400;600;700&family=space+grotesk:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <!-- match home page css version for consistency -->
-  <link rel="stylesheet" href="assets/css/style.css?v=21" />
+  <link rel="stylesheet" href="assets/css/style.css?v=22" />
 
   <!-- page-scoped layout tweaks for projects -->
   <style>
     .projects-intro { color: var(--muted); margin-bottom: 1.25rem; }
     .projects-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1rem, 2.2vw, 1.5rem); }
     .project-section { margin-top: 1.5rem; }
-    .project-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem; box-shadow: var(--shadow); }
+  .project-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem; box-shadow: var(--shadow); position: relative; padding-bottom: 2.75rem; }
     .project-header { margin-bottom: .75rem; }
     .project-title { margin: 0 0 .35rem; font-weight: 700; }
     .project-desc { margin: 0; color: var(--muted); }
@@ -26,6 +26,9 @@
     .section-kicker { font-size: .9rem; color: var(--muted); margin: 0 0 .25rem; letter-spacing: .4px; text-transform: uppercase; }
     .projects-jumplinks { display: inline-flex; gap: .5rem; flex-wrap: wrap; margin-top: .75rem; }
     .projects-jumplinks .btn { padding: .45rem .7rem; border-radius: 999px; }
+  /* file link badge in lower-right of card */
+  .file-link { position: absolute; right: 1rem; bottom: .85rem; font-size: .7rem; letter-spacing: .4px; text-decoration: none; background: rgba(255,255,255,0.08); padding: .4rem .6rem; border-radius: 8px; border: 1px solid var(--border); color: var(--primary); font-weight: 600; }
+  .file-link:hover { background: linear-gradient(135deg, var(--primary), var(--primary-2)); color: #05101c; border-color: color-mix(in oklab, var(--border), var(--primary) 40%); }
     /* keep responsive rules consistent with your global media queries */
     @media (max-width: 1000px) { .projects-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 680px) { .projects-grid { grid-template-columns: 1fr; } }
@@ -88,6 +91,7 @@
             <div class="project-meta">
               <div class="tags"><span class="tag">t-sql</span><span class="tag">sql agent</span><span class="tag">audit</span></div>
             </div>
+            <a class="file-link" href="sql/inventory_audit.sql" target="_blank" rel="noopener">inventory_audit.sql</a>
           </article>
 
           <article class="project-card">
@@ -99,6 +103,7 @@
             <div class="project-meta">
               <div class="tags"><span class="tag">window logic</span><span class="tag">kpis</span><span class="tag">performance</span></div>
             </div>
+            <a class="file-link" href="sql/product_365_sales.sql" target="_blank" rel="noopener">product_365_sales.sql</a>
           </article>
 
           <article class="project-card">
@@ -110,6 +115,7 @@
             <div class="project-meta">
               <div class="tags"><span class="tag">costing</span><span class="tag">margin</span><span class="tag">etl</span></div>
             </div>
+            <a class="file-link" href="sql/price_matrix.sql" target="_blank" rel="noopener">price_matrix.sql</a>
           </article>
 
           <article class="project-card">
@@ -121,6 +127,7 @@
             <div class="project-meta">
               <div class="tags"><span class="tag">dim/fact</span><span class="tag">governance</span><span class="tag">power bi</span></div>
             </div>
+            <a class="file-link" href="sql/ledger_file.sql" target="_blank" rel="noopener">ledger_file.sql</a>
           </article>
         </div>
 
