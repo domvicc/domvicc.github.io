@@ -47,7 +47,7 @@
     --primary-2: #22d3ee;
     --shadow: 0 10px 30px rgba(0,0,0,0.08);
 
-    /* in light mode, a touch stronger to ensure darker gray wordmark */
+    /* ensure darker gray wordmark in light mode */
     --hero-logo-filter: brightness(0.85) contrast(1.35);
   }
 }
@@ -136,11 +136,7 @@ body {
 }
 .nav-toggle .bar { display: block; inline-size: 22px; block-size: 2px; background: var(--text); margin: 4px 0; }
 
-/* hero
-   adjustments:
-   - remove big vertical gap by killing min-height
-   - keep logo dominant and fading on scroll
-*/
+/* hero — compact to align with index.html */
 .hero {
   /* tighter vertical spacing so About sits right below */
   padding-block: clamp(8px, 2vw, 18px) 12px;
@@ -149,7 +145,6 @@ body {
   height: auto !important;
   margin: 0;
 }
-/* ensure no decorative layers reserve space from a theme */
 .hero::before,
 .hero::after { content: none !important; display: none !important; }
 
@@ -159,19 +154,16 @@ body {
   max-width: var(--content-wide);
 }
 
-/* hide text h1 but keep for accessibility */
+/* a11y */
 .sr-only {
   position: absolute; inline-size: 1px; block-size: 1px; padding: 0; margin: -1px;
   overflow: hidden; clip: rect(0,0,1px,1px); border: 0;
 }
 
 /* scroll timeline wrapper for the image */
-.hero-logo-wrap {
-  view-timeline-name: --hero;
-  margin-inline: auto;
-}
+.hero-logo-wrap { view-timeline-name: --hero; margin-inline: auto; }
 
-/* dominant png (close to nav, slightly darker) */
+/* dominant png close to nav */
 .hero-logo {
   display: block;
   margin-inline: auto;
@@ -186,7 +178,7 @@ body {
   z-index: 1;
 }
 
-/* fade all the way out as you scroll */
+/* fade on scroll if supported */
 @supports (animation-timeline: auto) {
   .hero-logo {
     animation-name: hero-fade-out;
@@ -204,7 +196,7 @@ body {
   }
 }
 
-/* reduced motion: static */
+/* reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .hero-logo { position: relative; top: auto; animation: none !important; }
 }
@@ -251,7 +243,7 @@ body {
   background: linear-gradient(135deg, var(--primary), var(--primary-2));
 }
 
-/* editorial layout */
+/* editorial layout (matches index: About uses .container, not .container-wide) */
 .section .container {
   max-width: 960px;
   margin-left: var(--content-indent);
@@ -275,31 +267,17 @@ body {
 .callout:hover { transform: translateY(-2px); border-color: color-mix(in oklab, var(--border), var(--primary) 30%); }
 .callout-title { margin: 0 0 .45rem; font-weight: 700; }
 
-/* projects */
+/* projects / PDF */
 .pdf-block { margin-top: 1.25rem; background: var(--card); border: 1px solid var(--border); padding: 1rem; border-radius: var(--radius); box-shadow: var(--shadow); }
 .pdf-wrapper { inline-size: 100%; aspect-ratio: 16 / 10; overflow: hidden; border-radius: calc(var(--radius) - 4px); }
 .pdf-wrapper iframe { inline-size: 100%; block-size: 100%; border: none; display: block; }
+.pdf-frame { inline-size: 100%; block-size: 100%; border: none; display: block; } /* aligns with index class */
 .pdf-note { margin-top: .5rem; color: var(--muted); font-size: .95rem; }
 
-.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: clamp(.75rem, 2vw, 1.25rem); margin-top: 1rem; }
-.project-card {
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: var(--card);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-.project-image { inline-size: 100%; block-size: 180px; object-fit: cover; display: block; }
-.project-content { padding: clamp(.75rem, 1.5vw, 1.1rem); }
-.project-title { margin: 0 0 .5rem; font-weight: 700; }
-.project-desc { color: var(--muted); margin: 0 0 .75rem; }
-.tags { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: .75rem; }
-.tag { background: rgba(255,255,255,0.06); border: 1px solid var(--border); padding: .2rem .5rem; border-radius: 999px; font-size: .85rem; }
-
-/* domguardianai page */
-.grid.two { display: grid; grid-template-columns: 1.2fr .8fr; gap: 2rem; align-items: start; }
-.grid.three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+/* reusable grids */
+.grid { display: grid; gap: 1rem; }
+.grid.two { grid-template-columns: 1.2fr .8fr; gap: 2rem; align-items: start; }
+.grid.three { grid-template-columns: repeat(3, 1fr); gap: 1rem; }
 .placeholder-img {
   border: 1px dashed var(--border);
   background: repeating-linear-gradient(45deg, rgba(255,255,255,0.03), rgba(255,255,255,0.03) 10px, rgba(255,255,255,0.06) 10px, rgba(255,255,255,0.06) 20px);
@@ -331,9 +309,7 @@ body {
 .social a { color: var(--muted); text-decoration: none; }
 .social a:hover { color: var(--text); }
 
-/* grids + responsive */
-.grid { display: grid; gap: 1rem; }
-
+/* responsive */
 @media (max-width: 1100px) {
   .section .container { margin-left: clamp(1rem, 5vw, 2rem); max-width: 980px; }
   .prose-indent { margin-left: clamp(.75rem, 4vw, 40px); }
@@ -355,12 +331,9 @@ body {
   }
   .site-nav.open { display: flex; }
   .nav-toggle { display: inline-block; }
-  .hero { min-height: 0 !important; }         /* mobile also guaranteed no gap */
+  .hero { min-height: 0 !important; } /* guarantee no gap on mobile */
   .hero-logo { top: calc(var(--header-h) + 4px); }
 }
-
-/* accessibility */
-.sr-only { position: absolute; inline-size: 1px; block-size: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,1px,1px); border: 0; }
 
 /* js fallback fade (non–scroll-timeline browsers) */
 @supports not (animation-timeline: auto) {

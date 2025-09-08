@@ -1,126 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Dominic Vicchiollo — Portfolio</title>
-  <meta name="description" content="Portfolio of Dominic Vicchiollo — Data Engineering, Analytics, and Azure.">
-  <link rel="canonical" href="./index.html">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <meta name="theme-color" content="#0b1020">
-
-  <!-- Inline layout helpers (keeps this file self-contained) -->
+  <meta name="description" content="Portfolio of Dominic Vicchiollo — Data Engineering, Analytics, and Azure." />
+  <link rel="canonical" href="./index.html" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <meta name="theme-color" content="#0b1020" />
   <style>
-    :root{
-      --container: 1280px;
-      --container-wide: 1440px;         /* wider for full-canvas feel */
-      --g: 1.25rem;
-      --radius: 14px;
-      --page-pad: clamp(20px, 3.5vw, 48px);
-      --card-border: #e3e7f2;
-      --ink-1:#1c2238; --ink-2:#2a314a; --ink-3:#3a4261;
-      --accent:#0b57d0;
-      --surface:#fff; --surface-alt:#0f152a08;
-    }
-
-    /* containers */
-    .container{max-width:var(--container);margin:0 auto;padding:0 24px;}
-    .container-wide{max-width:var(--container-wide);margin:0 auto;padding:0 24px;}
-
-    /* header / footer */
-    .site-header,.site-footer{background:var(--surface);border-bottom:1px solid #e9ecf5}
-    .site-footer{border-top:1px solid #e9ecf5;border-bottom:0;padding:1rem 0}
-    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:.75rem 0}
-    .footer-inner{display:flex;justify-content:space-between;align-items:center}
-
-    /* brand + nav */
-    .brand{display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;color:inherit}
-    .brand-mark{display:inline-grid;place-items:center;width:40px;height:40px;background:var(--accent);color:#fff;border-radius:10px;font-weight:800;letter-spacing:.5px}
-    .brand-text{font-weight:700}
-    .site-nav{display:flex;gap:1rem}
-    .nav-link{text-decoration:none;color:var(--ink-2)}
-    .nav-toggle{display:none}
-
-    /* hero — COMPRESSED to remove any blank gap above “About Me” */
-    .hero{position:relative;padding-block:8px}      /* tighter top/bottom */
-    .hero-bleed{position:relative}
-    .hero-logo-wrap{position:relative;width:100%;margin:0 auto}
-    .hero-logo{
-      display:block;
-      max-height:88px;              /* compact header image */
-      width:auto; margin:0 auto;
-      transform-origin:top center;
-      transition:opacity .3s ease,filter .2s ease;
-      filter:brightness(0.88) saturate(1.05);
-      z-index: 60; /* ensure the logo renders above the sticky header */
-    }
-    /* soft fade when scrolled; avoid fully hiding the logo which caused it to disappear */
-    body.has-scrolled .hero-logo{opacity:0.12}
-    .hero-role{margin-top:.4rem;text-align:center;color:var(--ink-2);font-weight:600}
-    .hero-subtitle{text-align:center;color:var(--ink-3);margin-top:.15rem}
-    .hero-actions{display:flex;gap:.6rem;justify-content:center;margin-top:.6rem}
-    .btn{display:inline-block;padding:.6rem .95rem;border-radius:999px;text-decoration:none;font-weight:600}
-    .btn.primary{background:var(--accent);color:#fff}
-    .btn.ghost{border:1px solid #d0d4e4;color:#0b1020;background:#fff}
-
-    /* sections */
-    .section{padding:var(--page-pad) 0}
-    .section.alt{background:var(--surface-alt)}
-    /* first content section sits CLOSE to the hero to eliminate the blank gap */
-    .section--about{padding-top:12px}
-
-    .section-title{font-family:"Space Grotesk",ui-sans-serif,system-ui;font-weight:700;letter-spacing:.2px;margin:0 0 1rem 0;color:var(--ink-1)}
-    .prose-indent p{text-indent:1.25rem}
-    .lead{font-size:1.05rem;line-height:1.6;color:var(--ink-1)}
-
-    /* about grid — FIVE CARDS ACROSS on wide screens, equal heights */
-    .about-grid{
-      display:grid; gap:var(--g);
-      grid-template-columns:repeat(12,minmax(0,1fr));
-      align-items:stretch;
-      margin-top:1.25rem
-    }
-    .about-col{
-      grid-column:span 6;
-      background:#fff;border:1px solid var(--card-border);
-      border-radius:var(--radius); padding:1rem;
-      display:flex; flex-direction:column; height:100%;
-    }
-    .about-col h3{margin:0 0 .5rem;font-size:1rem;color:var(--ink-1)}
-    .about-col ul{margin:0;padding-left:1.1rem;color:var(--ink-2)}
-    /* 2-up @ tablet, 5-up evenly distributed at desktop+ */
-    @media (min-width:700px){ .about-col{grid-column:span 6} }
-    @media (min-width:1280px){
-      .about-grid{grid-template-columns:repeat(5,minmax(0,1fr));}
-      .about-col{grid-column:span 1}
-    }
-
-    /* pdf */
-    .pdf-block{margin-top:2rem}
-    .pdf-wrapper{border-radius:var(--radius);overflow:hidden;background:#eef1f7;border:1px solid var(--card-border)}
-    .pdf-frame{width:100%;height:min(80vh,900px);border:0;display:block;background:#f6f7fb}
-    .pdf-note{margin-top:.5rem;color:var(--ink-3)}
-
-    /* callouts */
-    .callouts{display:grid;gap:var(--g);grid-template-columns:repeat(3,minmax(0,1fr))}
-    .callout{display:block;padding:1rem;border:1px solid var(--card-border);border-radius:var(--radius);text-decoration:none;color:inherit;background:#fff}
-
-    /* responsive */
-    @media (max-width:840px){
-      .site-nav{display:none}
-      .nav-toggle{display:inline-grid;place-items:center;width:40px;height:40px;border:1px solid var(--card-border);border-radius:10px;background:#fff}
-      .site-nav.open{display:flex;flex-direction:column;position:absolute;right:24px;top:56px;background:#fff;border:1px solid var(--card-border);border-radius:12px;padding:.5rem}
-      .about-col{grid-column:span 12}
-      .callouts{grid-template-columns:1fr}
-      .prose-indent p{text-indent:0}
-    }
-
-    /* a11y utility */
-    .sr-only{
-      position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;
-    }
+    /* (Optional) Page-specific tweaks can live here */
   </style>
 </head>
 <body>
@@ -145,14 +36,20 @@
     </div>
   </header>
 
-  <!-- Compact hero — no extra blank space -->
+  <!-- Hero -->
   <section class="hero">
     <div class="hero-inner container-wide hero-bleed">
       <h1 class="sr-only">Dominic Vicchiollo</h1>
 
       <div class="hero-logo-wrap">
-        <!-- 1) REPLACED HEADER LOGO PNG: drop the new file at assets/img/dv-header-logo.png -->
-        <img class="hero-logo" src="assets/img/header-logo.png" alt="Dominic Vicchiollo">
+        <!-- Ensure this file exists exactly at /assets/img/header-logo.png -->
+        <img
+          class="hero-logo"
+          src="./assets/img/header-logo.png"
+          alt="Dominic Vicchiollo"
+          decoding="async"
+          loading="eager"
+        />
       </div>
 
       <p class="hero-role">Senior Data Engineer • GovDocs</p>
@@ -165,7 +62,7 @@
     </div>
   </section>
 
-  <!-- About section (pulled tight to hero, full-canvas layout) -->
+  <!-- About -->
   <section class="section section--about" id="about">
     <div class="container-wide">
       <h2 class="section-title">About Me</h2>
@@ -175,10 +72,9 @@
           I design and run cloud data platforms that turn fragmented line-of-business data into trustworthy, self-serve analytics. My focus is measurable outcomes for executives and engineering leaders: faster time-to-insight, lower total cost of ownership, and clear dashboards teams rely on.
         </p>
         <p class="lead">
-          I am experienced in the Azure ecosystem, including Synapse (serverless and dedicated), ADLS Gen2, Data Factory, and Azure Functions built on Python and SQL to deliver governed datasets and Power BI solutions across Finance, Compliance, Operations, and Executive leadership. I lead initiatives end-to-end: architecture, implementation, observability, and enablement.
+          I work across the Azure stack—Synapse (serverless and dedicated), ADLS Gen2, Data Factory, and Azure Functions—with Python and SQL to deliver governed datasets and Power BI solutions for Finance, Compliance, Operations, and Executive leadership. I lead initiatives end-to-end: architecture, implementation, observability, and enablement.
         </p>
 
-        <!-- 3) FIVE CARDS ON ONE ROW, EVENLY DISTRIBUTED -->
         <div class="about-grid">
           <div class="about-col">
             <h3>Platform & Architecture</h3>
@@ -210,7 +106,7 @@
           <div class="about-col">
             <h3>Governance & Reliability</h3>
             <ul>
-              <li>RBAC and Row-Level Security; data-quality checks and documentation.</li>
+              <li>RBAC & Row-Level Security; data-quality checks and documentation.</li>
               <li>Application Insights & Azure Monitor for observability and alerting.</li>
               <li>Version control and release hygiene with GitHub.</li>
             </ul>
@@ -230,8 +126,6 @@
         <div class="pdf-block">
           <h3 class="callout-title">Predictive Index Results</h3>
           <p class="lead">A brief snapshot of my Predictive Index results—open the full report to review details.</p>
-
-          <!-- Place the PDF at /assets/pdf/predictive-index-results.pdf (no spaces) -->
           <div class="pdf-wrapper">
             <iframe
               class="pdf-frame"
@@ -242,14 +136,15 @@
             ></iframe>
           </div>
           <p class="pdf-note">
-            If the inline viewer doesn’t load, <a id="pi-link" href="assets/pdf/predictive-index-results.pdf" target="_blank" rel="noopener">open the full report in a new tab</a>.
+            If the inline viewer doesn’t load,
+            <a id="pi-link" href="assets/pdf/predictive-index-results.pdf" target="__blank" rel="noopener">open the full report in a new tab</a>.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Quick links / callouts -->
+  <!-- Quick links -->
   <section class="section alt">
     <div class="container callouts">
       <a class="callout" href="projects.html">
@@ -278,12 +173,11 @@
     </div>
   </footer>
 
-  <!-- Nav toggle + PDF header check + hero fade fallback -->
   <script>
-    // Set current year in footer
-    document.addEventListener('DOMContentLoaded', function() {
-      var yearSpan = document.getElementById('year');
-      if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+    // Footer year
+    document.addEventListener('DOMContentLoaded', () => {
+      const y = document.getElementById('year');
+      if (y) y.textContent = new Date().getFullYear();
     });
 
     (function () {
@@ -316,34 +210,30 @@
         }
       }
 
-      /* Robust PDF embed: try inline; fall back to PDF.js if headers block embedding. */
+      /* Robust PDF embed: define src first; fall back to PDF.js if needed */
       const frame = document.getElementById('pi-pdf');
       const link = document.getElementById('pi-link');
       if (frame && link) {
-          let isSameOrigin = false;
-          try {
-            const pdfUrl = new URL(src, window.location.href);
-            isSameOrigin = pdfUrl.origin === window.location.origin;
-          } catch (e) {
-            isSameOrigin = false;
-          }
+        const src = link.getAttribute('href'); // defined before use
+
         const usePdfJs = () => {
           const viewer = 'https://mozilla.github.io/pdf.js/web/viewer.html?file=' + encodeURIComponent(src) + '#view=page-fit';
           frame.setAttribute('src', viewer);
         };
+
+        let sameOrigin = false;
         try {
-          const isSameOrigin = src.startsWith('/') || src.startsWith('./') || src.startsWith('assets/');
-          if (isSameOrigin && window.fetch) {
-            fetch(src, { method: 'HEAD' }).then(r => {
+          sameOrigin = new URL(src, window.location.href).origin === window.location.origin;
+        } catch (_) { sameOrigin = false; }
+
+        if (sameOrigin && window.fetch) {
+          fetch(src, { method: 'HEAD' })
+            .then(r => {
               const ct = (r.headers.get('content-type') || '').toLowerCase();
               const cd = (r.headers.get('content-disposition') || '').toLowerCase();
-              if (!ct.includes('application/pdf') || /attachment/.test(cd)) {
-                usePdfJs();
-              }
-            }).catch(usePdfJs);
-          }
-        } catch (e) {
-          usePdfJs();
+              if (!ct.includes('application/pdf') || /attachment/.test(cd)) usePdfJs();
+            })
+            .catch(usePdfJs);
         }
       }
     }());
