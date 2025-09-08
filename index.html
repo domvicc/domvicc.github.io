@@ -131,32 +131,21 @@
         <div class="pdf-block">
           <h3 class="subheading">Predictive Index Results</h3>
           <p class="lead">A brief snapshot of my Predictive Index results—open the full report to review details.</p>
-
           <div class="pdf-wrapper">
-            <object
-              data="assets/pdf/dominic_vicchiollo_predictive_index_results.pdf#view=FitH&pagemode=none"
-              type="application/pdf"
+            <iframe
               class="pdf-frame"
-              aria-label="Predictive Index Results PDF">
-              <p>
-                Your browser can’t display this PDF inline.
-                <a href="assets/pdf/dominic_vicchiollo_predictive_index_results.pdf" target="_blank" rel="noopener">
-                  Open the report in a new tab
-                </a>.
-              </p>
-            </object>
+              id="pi-pdf"
+              src="assets/pdfjs/web/viewer.html?file=../../pdf/dominic_vicchiollo_predictive_index_results.pdf"
+              title="Predictive Index Results"
+              loading="lazy"
+            ></iframe>
           </div>
-
           <p class="pdf-note">
             If the inline viewer doesn’t load,
-            <a id="pi-link" href="assets/pdf/dominic_vicchiollo_predictive_index_results.pdf" target="_blank" rel="noopener">
-              open the full report in a new tab
-            </a>.
+            <a href="assets/pdf/dominic_vicchiollo_predictive_index_results.pdf" target="_blank" rel="noopener">open the full report in a new tab</a>.
           </p>
         </div>
-      </div>
-    </div>
-  </section>
+
 
   <!-- Quick links -->
   <section class="section alt">
