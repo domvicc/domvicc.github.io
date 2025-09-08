@@ -18,8 +18,8 @@
   --shadow: 0 12px 40px rgba(0,0,0,0.28);
 
   /* scalable canvas */
-  --content-max: 1680px;
-  --content-wide: 100vw;              /* use the full viewport width */
+  --content-max: 1680px;             /* broader content canvas */
+  --content-wide: 1920px;            /* true full-bleed upper bound */
   --gutter: clamp(1rem, 2.2vw, 3.5rem); /* standardized responsive side padding */
   --section-vertical: clamp(2rem, 5vw, 5rem);
 
@@ -75,7 +75,7 @@ body {
   padding-inline: var(--gutter);
 }
 .hero-bleed { padding-inline: var(--gutter); }
-/* readable prose width wrapper (optional where needed) */
+/* readable prose width wrapper */
 .prose-max { max-width: 960px; }
 
 .section { padding-block: var(--section-vertical); }
@@ -110,7 +110,7 @@ body {
   inline-size: 36px; block-size: 36px; border-radius: 10px;
   background: linear-gradient(135deg, var(--primary), var(--primary-2));
   color: #000; font-weight: 700;
-  text-transform: uppercase; /* always dv */
+  text-transform: uppercase; /* always DV */
   letter-spacing: .5px;
 }
 .brand-text { color: var(--text); font-weight: 700; letter-spacing: .3px; }
@@ -131,7 +131,7 @@ body {
 }
 .nav-toggle .bar { display: block; inline-size: 22px; block-size: 2px; background: var(--text); margin: 4px 0; }
 
-/* hero — simple logo */
+/* hero — compact and SIMPLE */
 .hero {
   padding-block: clamp(8px, 2vw, 18px) 12px;
   min-height: 0;
@@ -144,8 +144,7 @@ body {
 .hero-inner {
   text-align: center;
   margin-inline: auto;
-  max-width: none;              /* full width */
-  width: 100%;
+  max-width: var(--content-wide);
 }
 
 .sr-only {
@@ -153,7 +152,7 @@ body {
   overflow: hidden; clip: rect(0,0,1px,1px); border: 0;
 }
 
-/* simple logo */
+/* logo */
 .hero-logo-wrap { margin-inline: auto; }
 .hero-logo {
   display: block;
@@ -161,8 +160,8 @@ body {
   max-width: min(82vw, 820px);
   width: auto;
   height: auto;
-  filter: none;           /* no color/brightness changes */
-  position: static;       /* no sticky */
+  filter: none;
+  position: static;
   z-index: auto;
 }
 
@@ -208,7 +207,7 @@ body {
   background: linear-gradient(135deg, var(--primary), var(--primary-2));
 }
 
-/* full-width sections now; only constrain long paragraphs with .prose-max if desired */
+/* sections */
 .section .container { max-width: none; margin: 0; padding-inline: var(--gutter); }
 .prose-indent { margin-left: 0; }
 
@@ -227,17 +226,17 @@ body {
 .callout:hover { transform: translateY(-2px); border-color: color-mix(in oklab, var(--border), var(--primary) 30%); }
 .callout-title { margin: 0 0 .45rem; font-weight: 700; }
 
-/* projects / pdf */
+/* projects / PDF */
 .pdf-block { margin-top: 1.25rem; background: var(--card); border: 1px solid var(--border); padding: 1rem; border-radius: var(--radius); box-shadow: var(--shadow); }
 .pdf-wrapper { inline-size: 100%; aspect-ratio: 16 / 10; overflow: hidden; border-radius: calc(var(--radius) - 4px); }
 .pdf-wrapper iframe { inline-size: 100%; block-size: 100%; border: none; display: block; }
 .pdf-frame { inline-size: 100%; block-size: 100%; border: none; display: block; }
 .pdf-note { margin-top: .5rem; color: var(--muted); font-size: .95rem; }
 
-/* features: force exactly six on one row on desktop */
+/* reusable grids */
 .features-inline {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr)); /* six equal columns */
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: clamp(.9rem, 1.2vw, 1.15rem);
   align-items: stretch;
   justify-items: stretch;
@@ -245,7 +244,7 @@ body {
   width: 100%;
 }
 .features-inline .feature-box {
-  min-width: 0; /* prevent overflow */
+  min-width: 0;
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -259,7 +258,7 @@ body {
 .features-inline .feature-box li:last-child { margin-bottom: 0; }
 .features-inline .subheading { margin-top: 0; margin-bottom: .5rem; font-size: 1rem; font-weight: 700; }
 
-/* only details smaller (titles stay strong) */
+/* smaller details inside the boxes */
 .features-inline .feature-box ul {
   font-size: 0.85rem;
   line-height: 1.4;
@@ -310,18 +309,15 @@ body {
 .social a { color: var(--muted); text-decoration: none; }
 .social a:hover { color: var(--text); }
 
-/* responsive fixes:
-   keep containers full-width at all breakpoints (no unintended clipping) */
+/* responsive */
 @media (max-width: 1100px) {
-  .section .container { margin: 0; max-width: none; padding-inline: var(--gutter); }
-  .prose-indent { margin-left: 0; }
+  .section .container { margin-left: clamp(1rem, 5vw, 2rem); max-width: 980px; }
+  .prose-indent { margin-left: clamp(.75rem, 4vw, 40px); }
 }
-
 @media (max-width: 1000px) {
   .projects-grid { grid-template-columns: repeat(2, 1fr); }
   .grid.two { grid-template-columns: 1fr; }
 }
-
 @media (max-width: 680px) {
   .projects-grid { grid-template-columns: 1fr; }
   .callouts { grid-template-columns: 1fr; }
@@ -336,37 +332,40 @@ body {
   .hero { min-height: 0; }
   .hero-logo { margin-top: 6px; }
 }
-/* =========================================
-   about me – scoped, additive overrides only
-   ========================================= */
 
-/* 1) shift the "about me" title in from the left */
+/* =======================================================
+   ABOUT ME – scoped placement to match target screenshot
+   (titles nudged; description narrower/centered;
+    six-box row centered at 95%; pdf block aligned)
+   ======================================================= */
+
+/* 1) Title placement: nudge in from the left so it isn’t flush */
 #about .section-title {
-  margin-left: 10%;
-  margin-bottom: 2rem;
+  margin-left: clamp(1rem, 6vw, 2rem);
+  margin-bottom: 1.5rem;
 }
 
-/* 2) make the six feature boxes live in a 95% block,
-      starting 5% from the left (0% extra on right) */
+/* 2) Description paragraphs: narrower, centered column */
+#about .section-body {
+  /* keep the rest of the section normal; just narrow inner prose */
+}
+#about .section-body > p.lead {
+  width: 92%;
+  margin-left: auto;
+  margin-right: auto;
+  text-indent: 1.25rem;  /* professional first-line indent */
+}
+
+/* 3) Six feature boxes row: 95% width, centered */
 #about .features-inline {
   width: 95%;
-  margin-left: 5%;
-  margin-right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* keep headings strong, shrink only the detail text in the boxes */
-#about .features-inline .subheading {
-  /* do not reduce the title size */
-  font-size: 1rem;
-  font-weight: 700;
-}
-#about .features-inline .feature-box ul {
-  font-size: 0.85rem;     /* smaller details */
-  line-height: 1.4;
-}
-
-/* optional: professional paragraph first-line indent under the title */
-#about .section-body p.lead {
-  text-indent: 1.5rem;
-  margin-bottom: 1.25rem;
+/* 4) PDF block: align with the feature boxes for consistent placement */
+#about .pdf-block {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
 }
