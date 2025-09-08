@@ -337,3 +337,19 @@ body {
   .hero { min-height: 0; }
   .hero-logo { margin-top: 6px; }
 }
+/* About Me section custom styling */
+#about .section-body {
+  width: 80%;              /* content takes up 80% of page */
+  margin-left: 10%;        /* center with equal side margins */
+  margin-right: 10%;
+  text-align: left;        /* keep paragraphs aligned left */
+}
+
+#about .section-body p.lead {
+  text-indent: 1.5rem;     /* indent first line of each paragraph */
+  margin-bottom: 1.25rem;  /* add spacing for readability */
+}
+
+#about .features-inline {
+  margin-top: 2rem;        /* extra spacing above the feature grid */
+}
