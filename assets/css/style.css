@@ -336,38 +336,37 @@ body {
   .hero { min-height: 0; }
   .hero-logo { margin-top: 6px; }
 }
+/* =========================================
+   about me – scoped, additive overrides only
+   ========================================= */
 
-/* ----------------------------------------------------
-   about me – scoped overrides (only this section)
-   ---------------------------------------------------- */
-
-#about .container {
-  padding-inline: 0;            /* remove global side padding for precise control */
-}
-
-#about .section-body {
-  margin-inline: 10%;           /* left/right margins = 10% each */
-  width: auto;                  /* fills remaining (80%) */
-  text-align: left;
-}
-
-#about .section-body p.lead {
-  text-indent: 1.5rem;          /* professional first-line indent */
-  margin-bottom: 1.25rem;       /* keep paragraph rhythm */
-}
-
-#about .features-inline {
-  margin-top: 2rem;             /* breathing room above the six boxes */
-}
-/* --- About Me title margin --- */
+/* 1) shift the "about me" title in from the left */
 #about .section-title {
-  margin-left: 10%;      /* shift the "About Me" title in from the left */
-  margin-bottom: 2rem;   /* add breathing space below the title */
+  margin-left: 10%;
+  margin-bottom: 2rem;
 }
 
-/* --- About Me feature boxes margin --- */
+/* 2) make the six feature boxes live in a 95% block,
+      starting 5% from the left (0% extra on right) */
 #about .features-inline {
-  width: 95%;            /* total width */
-  margin-left: 5%;        /* push in from the left */
-  margin-right: 0;        /* no extra margin on right */
+  width: 95%;
+  margin-left: 5%;
+  margin-right: 0;
+}
+
+/* keep headings strong, shrink only the detail text in the boxes */
+#about .features-inline .subheading {
+  /* do not reduce the title size */
+  font-size: 1rem;
+  font-weight: 700;
+}
+#about .features-inline .feature-box ul {
+  font-size: 0.85rem;     /* smaller details */
+  line-height: 1.4;
+}
+
+/* optional: professional paragraph first-line indent under the title */
+#about .section-body p.lead {
+  text-indent: 1.5rem;
+  margin-bottom: 1.25rem;
 }
