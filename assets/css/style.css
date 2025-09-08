@@ -398,3 +398,186 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
+/* =========================================================
+   projects hub — scoped add-on (safe for other pages)
+   paste at the bottom of assets/css/style.css
+   all selectors are nested under #projects
+   ========================================================= */
+
+/* page header tools (view toggles, search, sort, filters btn) */
+#projects .toolbar{
+  margin-top:1rem; display:flex; flex-wrap:wrap; gap:.75rem; align-items:center; justify-content:space-between;
+  position:sticky; top:var(--header-h); z-index:45; padding:.5rem 0 .75rem;
+  backdrop-filter:saturate(120%) blur(6px);
+}
+#projects .views{display:flex; gap:.5rem}
+#projects .btn{
+  appearance:none; border:1px solid var(--border); background:var(--card); color:var(--text);
+  padding:.55rem .8rem; border-radius:12px; box-shadow:var(--shadow); cursor:pointer; font-weight:600;
+}
+#projects .btn:hover{background:linear-gradient(135deg,rgba(34,211,238,.06),rgba(129,140,248,.06))}
+#projects .btn.ghost{background:var(--surface)}
+#projects .btn.small{padding:.35rem .6rem; font-size:.9rem}
+#projects .view-btn.is-active{background:linear-gradient(135deg,var(--primary),var(--primary-2)); color:#06101a; border-color:color-mix(in oklab,var(--border),var(--primary) 40%)}
+#projects .search-sort{display:flex; align-items:center; gap:.5rem}
+#projects .search{position:relative; display:flex; align-items:center}
+#projects .search input{
+  width:min(46vw,420px); max-width:100%;
+  background:var(--surface); border:1px solid var(--border); color:var(--text);
+  padding:.6rem .9rem; border-radius:12px; outline:0;
+}
+#projects .search input:focus{box-shadow:0 0 0 2px color-mix(in oklab,#000, var(--primary) 30%), 0 0 0 4px var(--primary)}
+#projects .clear-search{
+  position:absolute; right:.25rem; background:transparent; border:0; font-size:1.2rem; padding:.25rem; color:var(--muted);
+}
+
+/* layout: sidebar filters + content */
+#projects .projects-layout{
+  display:grid; grid-template-columns:280px 1fr; gap:clamp(1rem,2vw,1.5rem);
+}
+@media (max-width:1000px){
+  #projects .projects-layout{grid-template-columns:1fr}
+}
+
+/* filters (desktop sidebar) */
+#projects .filters{position:sticky; top:calc(var(--header-h) + 64px); align-self:start}
+#projects .filters-inner{
+  background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:1rem; box-shadow:var(--shadow);
+}
+#projects .filters-head{display:flex; align-items:center; justify-content:space-between; margin-bottom:.5rem}
+#projects .filters h2{font-size:1.1rem; margin:0}
+#projects .filter-group{margin-top:.75rem}
+#projects .filter-title{font-size:.9rem; color:var(--muted); margin:0 0 .35rem}
+#projects .chips{display:flex; flex-wrap:wrap; gap:.45rem}
+#projects .chip{
+  display:inline-flex; align-items:center; gap:.35rem; border:1px solid var(--border);
+  background:rgba(255,255,255,.04); color:var(--text); padding:.35rem .6rem; border-radius:999px; cursor:pointer; user-select:none; font-size:.9rem;
+}
+#projects .chip[aria-pressed="true"]{background:linear-gradient(135deg,var(--primary),var(--primary-2)); color:#05101c; border-color:color-mix(in oklab,var(--border),var(--primary) 40%)}
+
+/* mobile filters sheet (slides up) */
+#projects .sheet{
+  position:fixed; inset:auto 0 0 0; background:var(--surface); border-top:1px solid var(--border);
+  transform:translateY(100%); transition:transform .28s ease; z-index:60; max-height:80vh; overflow:auto;
+}
+#projects .sheet[aria-hidden="false"]{transform:translateY(0)}
+#projects .sheet-header,#projects .sheet-footer{
+  display:flex; align-items:center; justify-content:space-between; padding:1rem; border-bottom:1px solid var(--border)
+}
+#projects .sheet-footer{border-top:1px solid var(--border)}
+#projects .sheet-body{padding:1rem}
+
+/* a quick summary row of active filters */
+#projects .chips-row{display:flex; flex-wrap:wrap; gap:.5rem; margin-bottom:1rem}
+
+/* views container */
+#projects .view{min-height:200px}
+#projects .view.is-active{display:block}
+#projects .view[hidden]{display:none}
+
+/* grid / list / timeline — override your global .grid safely with more specific selectors */
+#projects .view[data-view="grid"] > .grid{
+  display:grid; gap:clamp(1rem,2.2vw,1.5rem);
+  grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));
+}
+#projects .list{display:grid; gap:clamp(.75rem,1.4vw,1rem)}
+#projects .timeline{position:relative; padding-left:1.25rem}
+#projects .timeline:before{
+  content:""; position:absolute; left:4px; top:0; bottom:0; width:2px; background:color-mix(in oklab,var(--border),transparent 20%);
+}
+
+/* project cards (grid) */
+#projects .card{
+  background:var(--card); border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow); overflow:hidden;
+  display:flex; flex-direction:column; min-height:220px; transition:transform .18s ease, box-shadow .18s ease;
+}
+#projects .card:hover{transform:translateY(-2px); box-shadow:0 16px 48px rgba(0,0,0,.34)}
+#projects .card-head{position:relative}
+#projects .card-cover{width:100%; aspect-ratio:16/9; object-fit:cover; display:block; background:#0b1326}
+#projects .card-badges{position:absolute; left:.6rem; bottom:.6rem; display:flex; gap:.35rem; flex-wrap:wrap}
+#projects .badge{background:rgba(0,0,0,.45); color:#fff; border:1px solid rgba(255,255,255,.18); padding:.25rem .5rem; border-radius:999px; font-size:.8rem}
+#projects .card-body{padding:1rem}
+#projects .card-title{margin:0 0 .35rem; font-weight:700}
+#projects .card-sub{margin:0 0 .5rem; color:var(--muted)}
+#projects .card-desc{margin:0; color:var(--muted)}
+#projects .card-meta{margin-top:.7rem; display:flex; align-items:center; justify-content:space-between; gap:.5rem; flex-wrap:wrap}
+#projects .meta-tags{display:flex; gap:.35rem; flex-wrap:wrap}
+#projects .meta-tag{font-size:.8rem; padding:.25rem .5rem; border:1px solid var(--border); border-radius:999px; background:rgba(255,255,255,.04)}
+#projects .card-actions{display:flex; gap:.5rem; margin-top:.75rem; flex-wrap:wrap}
+
+/* list rows */
+#projects .row{
+  display:grid; grid-template-columns:180px 1fr; gap:1rem; align-items:center;
+  background:var(--card); border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow); padding:.75rem;
+}
+#projects .row img{width:100%; aspect-ratio:16/10; object-fit:cover; border-radius:12px}
+#projects .row .row-body{display:flex; flex-direction:column}
+#projects .row .row-meta{display:flex; gap:.5rem; flex-wrap:wrap; margin-top:.35rem}
+
+/* timeline items */
+#projects .time-group{margin-bottom:1.25rem}
+#projects .time-year{font-weight:800; color:var(--muted); margin:.25rem 0 .5rem}
+#projects .time-item{position:relative; margin:.5rem 0 .75rem .75rem; padding-left:.75rem; cursor:pointer}
+#projects .time-item:before{
+  content:""; position:absolute; left:-.75rem; top:.4rem; width:.6rem; height:.6rem; border-radius:50%;
+  background:linear-gradient(135deg,var(--primary),var(--primary-2)); border:2px solid #07101b; box-shadow:0 0 0 2px color-mix(in oklab,var(--border),transparent 35%);
+}
+#projects .time-item .time-title{margin:0}
+#projects .time-item .time-sub{margin:.2rem 0; color:var(--muted)}
+
+/* empty state */
+#projects .empty{display:grid; place-items:center; min-height:40vh}
+#projects .empty-card{
+  text-align:center; background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:1.25rem; box-shadow:var(--shadow);
+}
+
+/* floating actions */
+#projects .float-actions{position:sticky; bottom:1rem; display:flex; gap:.6rem; justify-content:flex-end; margin-top:1.25rem}
+#projects .fab{
+  border:1px solid var(--border); background:var(--surface); color:var(--text); border-radius:999px; padding:.6rem .75rem; cursor:pointer; box-shadow:var(--shadow);
+}
+#projects .fab.ghost{background:var(--card)}
+
+/* project detail modal (centered dialog) */
+#projects .modal{position:fixed; inset:0; display:none; z-index:70}
+#projects .modal[aria-hidden="false"]{display:block}
+#projects .modal-backdrop{position:absolute; inset:0; background:rgba(0,0,0,.55); backdrop-filter:blur(2px)}
+#projects .modal-dialog{
+  position:relative; width:min(960px,calc(100% - 2rem)); max-height:calc(100% - 2rem);
+  margin:1rem auto; background:var(--surface); border:1px solid var(--border); border-radius:16px; display:flex; flex-direction:column; overflow:hidden;
+}
+#projects .modal-close{position:absolute; right:.5rem; top:.5rem; border:0; background:rgba(0,0,0,.35); color:#fff; width:36px; height:36px; border-radius:50%; cursor:pointer}
+#projects .modal-scroller{overflow:auto; padding-bottom:1rem}
+#projects .modal-media{position:relative; background:#0b1326}
+#projects .carousel-track{display:grid; grid-auto-flow:column; gap:0; overflow:hidden}
+#projects .carousel-track img, 
+#projects .carousel-track iframe{width:100%; height:auto; aspect-ratio:16/9; object-fit:cover; display:block; border:0}
+#projects .carousel-prev,#projects .carousel-next{
+  position:absolute; top:50%; transform:translateY(-50%); border:0; background:rgba(0,0,0,.45); color:#fff; width:36px; height:36px; border-radius:50%; cursor:pointer
+}
+#projects .carousel-prev{left:.5rem} 
+#projects .carousel-next{right:.5rem}
+#projects .modal-header{padding:1rem}
+#projects .modal-kicker{color:var(--muted); margin:.2rem 0}
+#projects .modal-title{margin:.1rem 0 .35rem; font-size:1.5rem}
+#projects .modal-sub{margin:0; color:var(--muted)}
+#projects .modal-body{padding:0 1rem}
+#projects .highlights{display:grid; gap:.4rem; margin:.75rem 0; padding-left:1.1rem}
+#projects .metrics{display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:.5rem; margin:.5rem 0}
+#projects .metrics .metric{background:var(--card); border:1px solid var(--border); border-radius:12px; padding:.6rem}
+#projects .links{display:flex; gap:.5rem; flex-wrap:wrap; margin:.5rem 0 1rem}
+#projects .related{display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr)); gap:.6rem}
+#projects .modal-related{padding:0 1rem 1rem}
+
+/* accessibility (scoped) */
+#projects :focus-visible{
+  outline:none; box-shadow:0 0 0 2px color-mix(in oklab,#000, var(--primary) 30%), 0 0 0 4px var(--primary)
+}
+
+/* responsive tweaks */
+@media (max-width:860px){
+  #projects .search input{width:min(70vw,100%)}
+  #projects .row{grid-template-columns:1fr}
+}
+
