@@ -18,14 +18,14 @@
   --shadow: 0 12px 40px rgba(0,0,0,0.28);
 
   /* scalable canvas */
-  --content-max: 1280px;
-  --content-wide: 1600px;
-  --gutter: clamp(1rem, 4vw, 4rem);
+  --content-max: 1680px;             /* broader content canvas */
+  --content-wide: 1920px;            /* true full-bleed upper bound */
+  --gutter: clamp(1rem, 2.2vw, 3.5rem); /* standardized responsive side padding */
   --section-vertical: clamp(2rem, 5vw, 5rem);
 
   /* editorial indents */
-  --content-indent: clamp(1.5rem, 8vw, 140px);
-  --prose-indent: clamp(1rem, 6vw, 72px);
+  --content-indent: 0;               /* deprecated (kept for safety) */
+  --prose-indent: 0;                 /* handled by .prose constraint now */
 
   /* header */
   --header-h: 64px;
@@ -64,18 +64,19 @@ body {
 /* helpers */
 .container {
   width: 100%;
-  max-width: var(--content-max);
-  margin-inline: auto;
+  max-width: none;          /* allow full canvas */
+  margin: 0;
   padding-inline: var(--gutter);
 }
-.container-wide {
+.container-wide { /* synonyms kept for existing markup */
   width: 100%;
-  max-width: var(--content-wide);
-  margin-inline: auto;
+  max-width: none;
+  margin: 0;
   padding-inline: var(--gutter);
 }
-/* let the hero breathe edge-to-edge */
-.hero-bleed { padding-inline: 0; }
+.hero-bleed { padding-inline: var(--gutter); }
+/* readable prose width wrapper */
+.prose-max { max-width: 960px; }
 
 .section { padding-block: var(--section-vertical); }
 .section.alt { background: var(--surface); }
@@ -206,14 +207,9 @@ body {
   background: linear-gradient(135deg, var(--primary), var(--primary-2));
 }
 
-/* editorial layout (About uses .container) */
-.section .container {
-  max-width: 960px;
-  margin-left: var(--content-indent);
-  margin-right: auto;
-  padding-left: 0;
-}
-.prose-indent { margin-left: var(--prose-indent); }
+/* full-width sections now; only constrain long paragraphs with .prose-max */
+.section .container { max-width: none; margin: 0; padding-inline: var(--gutter); }
+.prose-indent { margin-left: 0; }
 
 /* callouts */
 .callouts {
@@ -241,10 +237,11 @@ body {
 .features-inline {
   display: flex;
   flex-wrap: nowrap;
-  gap: clamp(.75rem, 1.4vw, 1rem);
+  gap: clamp(.9rem, 1.2vw, 1.15rem);
   align-items: stretch;
-  justify-content: center;
+  justify-content: space-between; /* spread across landscape */
   margin-top: 1.25rem;
+  width: 100%;
 }
 .features-inline .feature-box {
   flex: 1 1 0;
@@ -262,7 +259,7 @@ body {
 .features-inline .subheading { margin-top: 0; margin-bottom: .5rem; font-size: .95rem; }
 
 /* allow wrapping gracefully below large desktop */
-@media (max-width: 1400px) {
+@media (max-width: 1700px) { /* allow early wrapping on slightly smaller ultra-wide */
   .features-inline { flex-wrap: wrap; }
   .features-inline .feature-box { flex: 1 1 calc(33.333% - 1rem); }
 }
