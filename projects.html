@@ -76,9 +76,10 @@
       <section class="section project-section" id="sql" aria-label="sql development projects">
         <h2 class="section-title">SQL Development</h2>
         <p class="projects-intro">
-          Production‑grade T-SQL powering operational analytics, inventory integrity, pricing strategy, and finance pipelines.
-          Scripts below (see <code>sql/</code> in this repo) show patterns I use for: incremental fact builds, cost &amp; rebate
-          reconciliation, dynamic inventory health metrics (turns, aging, SPA variance), and scheduled ETL via SQL Agent jobs.
+          Production‑grade T‑SQL driving inventory integrity, costing, pricing elasticity, rebate attribution, order audit,
+          and finance reconciliation. The <code>sql/</code> folder contains SQL Agent job scripts that materialize governed
+          tables (dimensions + facts), stage exception queues, and produce KPI‑ready aggregates for BI (turns, SPA variance,
+          lead time, unbilled AP, tagged order variance, price tiers). Each card highlights a representative slice.
         </p>
 
         <div class="projects-grid">
@@ -128,6 +129,78 @@
               <div class="tags"><span class="tag">dim/fact</span><span class="tag">governance</span><span class="tag">power bi</span></div>
             </div>
             <a class="file-link" href="sql/ledger_file.sql" target="_blank" rel="noopener">ledger_file.sql</a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-header">
+              <p class="section-kicker">inventory backbone</p>
+              <h3 class="project-title">Branch Inventory Foundation</h3>
+              <p class="project-desc"><code>product_branch_inventory.sql</code> consolidates product + branch calc sources, builds surrogate keys, and indexes lead time / safety stock attributes for downstream availability and aging analytics.</p>
+            </div>
+            <div class="project-meta">
+              <div class="tags"><span class="tag">inventory</span><span class="tag">performance</span><span class="tag">indexing</span></div>
+            </div>
+            <a class="file-link" href="sql/product_branch_inventory.sql" target="_blank" rel="noopener">product_branch_inventory.sql</a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-header">
+              <p class="section-kicker">rebate attribution</p>
+              <h3 class="project-title">SPA &amp; Rebate Normalization</h3>
+              <p class="project-desc"><code>rebates.sql</code> extracts purchase order + sales linkages, classifies SPA vs SPJ, and materializes a clean rebate fact for margin reconciliation (variance + eligibility).</p>
+            </div>
+            <div class="project-meta">
+              <div class="tags"><span class="tag">rebates</span><span class="tag">margin</span><span class="tag">joins</span></div>
+            </div>
+            <a class="file-link" href="sql/rebates.sql" target="_blank" rel="noopener">rebates.sql</a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-header">
+              <p class="section-kicker">order audit</p>
+              <h3 class="project-title">Tagged Order Variance</h3>
+              <p class="project-desc"><code>so_tagged_orders.sql</code> reconciles sales lines to PO / transfer tags, flags cost variances, and surfaces broken tag scenarios for operational correction.</p>
+            </div>
+            <div class="project-meta">
+              <div class="tags"><span class="tag">audit</span><span class="tag">exceptions</span><span class="tag">variance</span></div>
+            </div>
+            <a class="file-link" href="sql/so_tagged_orders.sql" target="_blank" rel="noopener">so_tagged_orders.sql</a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-header">
+              <p class="section-kicker">ap visibility</p>
+              <h3 class="project-title">Unbilled AP Exposure</h3>
+              <p class="project-desc"><code>ap_unbilled.sql</code> produces an unbilled payable ledger (UBAP) combining accrual + payment GL postings to monitor aging and invoice exceptions before liability surprises.</p>
+            </div>
+            <div class="project-meta">
+              <div class="tags"><span class="tag">ap</span><span class="tag">liability</span><span class="tag">controls</span></div>
+            </div>
+            <a class="file-link" href="sql/ap_unbilled.sql" target="_blank" rel="noopener">ap_unbilled.sql</a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-header">
+              <p class="section-kicker">categorization</p>
+              <h3 class="project-title">Sell Group Classification</h3>
+              <p class="project-desc"><code>product_sell_group.sql</code> assigns products to sell groups and segments supporting pricing, mix, and category performance analytics.</p>
+            </div>
+            <div class="project-meta">
+              <div class="tags"><span class="tag">dimension</span><span class="tag">segmentation</span><span class="tag">governance</span></div>
+            </div>
+            <a class="file-link" href="sql/product_sell_group.sql" target="_blank" rel="noopener">product_sell_group.sql</a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-header">
+              <p class="section-kicker">replacement cost</p>
+              <h3 class="project-title">Branch/Territory Cost Layers</h3>
+              <p class="project-desc"><code>product_replacement_cost.sql</code> resolves branch &amp; territory price sheet precedence to produce a consistent replacement cost for margin + valuation models.</p>
+            </div>
+            <div class="project-meta">
+              <div class="tags"><span class="tag">cost</span><span class="tag">precedence</span><span class="tag">valuation</span></div>
+            </div>
+            <a class="file-link" href="sql/product_replacement_cost.sql" target="_blank" rel="noopener">product_replacement_cost.sql</a>
           </article>
         </div>
       </section>
