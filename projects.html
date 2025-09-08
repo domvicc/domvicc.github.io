@@ -9,7 +9,7 @@
   <link rel="canonical" href="./projects.html" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="assets/css/style.css?v=29" />
+  <link rel="stylesheet" href="assets/css/style.css?v=30" />
 </head>
 <body>
   <!-- Site header + nav -->
@@ -592,5 +592,317 @@
     });
   })();
   </script>
+  <!-- Slim app script (normalized tags/tech; no top toolbar; tags/tech/featured filters only) -->
+<script>
+(() => {
+  const $ = (s, r=document) => r.querySelector(s);
+  const $$ = (s, r=document) => [...r.querySelectorAll(s)];
+  const byId = id => document.getElementById(id);
+
+  // ---------- load data ----------
+  const dataEl = byId('projects-data');
+  if (!dataEl) { console.error('Missing #projects-data'); return; }
+
+  let projects = [];
+  try { projects = JSON.parse(dataEl.textContent.trim()); }
+  catch (e) { console.error('Invalid JSON in #projects-data', e); return; }
+
+  console.info('Projects loaded:', projects.length);
+
+  // Normalize helper: case-insensitive, trimmed, spaces collapsed, punctuation slimmed
+  const keyify = s => String(s || '')
+    .normalize('NFKD')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .toLowerCase()
+    .replace(/[^\w]+/g, '-');
+
+  // Precompute normalized key sets on each project (for fast subset checks)
+  projects.forEach(p => {
+    p._tagKeys  = new Set((p.tags || []).map(keyify));
+    p._techKeys = new Set((p.tech_stack || []).map(keyify));
+  });
+
+  // ---------- state (tags/tech/featured only) ----------
+  const state = {
+    tagKeys: new Set(),
+    techKeys: new Set(),
+    featuredOnly: false
+  };
+
+  // ---------- elements ----------
+  const grid = byId('view-grid');
+  const emptyState = byId('empty');
+  const quickChips = byId('quick-chips');
+  const side = {
+    tags: byId('filter-tags'),
+    tech: byId('filter-tech'),
+    featured: byId('filter-featured')
+  };
+
+  // ---------- build vocab (dedup by normalized key, keep pretty first label) ----------
+  const dedupeByKey = (labels) => {
+    const map = new Map(); // key -> label
+    labels.forEach(lbl => {
+      const k = keyify(lbl);
+      if (!map.has(k)) map.set(k, String(lbl));
+    });
+    return [...map.entries()].map(([key, label]) => ({ key, label }));
+  };
+
+  const vocab = {
+    tags: dedupeByKey(projects.flatMap(p => p.tags || [])).sort((a,b)=>a.label.localeCompare(b.label)),
+    tech: dedupeByKey(projects.flatMap(p => p.tech_stack || [])).sort((a,b)=>a.label.localeCompare(b.label))
+  };
+
+  // ---------- UI build ----------
+  renderFilters();
+  renderQuickChips();
+  wireInteractions();
+  render();
+
+  function renderFilters() {
+    side.tags.innerHTML = '';
+    vocab.tags.forEach(v => side.tags.appendChild(chip(v.label, v.key, state.tagKeys)));
+
+    side.tech.innerHTML = '';
+    vocab.tech.forEach(v => side.tech.appendChild(chip(v.label, v.key, state.techKeys)));
+
+    side.featured.checked = state.featuredOnly;
+  }
+
+  function renderQuickChips() {
+    // Only include chips that actually exist in vocab (match by key)
+    const common = ['SQL Development','Architecture','Analytics','Operations','Finance','Compliance']
+      .map(label => ({ label, key: keyify(label) }));
+
+    const tagKeySet = new Set(vocab.tags.map(v => v.key));
+    quickChips.innerHTML = '';
+    common.filter(x => tagKeySet.has(x.key)).forEach(x => {
+      quickChips.appendChild(chip(x.label, x.key, state.tagKeys));
+    });
+  }
+
+  function chip(label, key, setRef){
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'chip';
+    b.textContent = label;
+    b.dataset.key = key;
+    b.setAttribute('aria-pressed', setRef.has(key) ? 'true' : 'false');
+    return b;
+  }
+
+  // ---------- events ----------
+  function wireInteractions(){
+    // Delegated clicks for chip containers (tags, tech, quick chips)
+    [
+      [side.tags, state.tagKeys],
+      [side.tech, state.techKeys],
+      [quickChips, state.tagKeys]
+    ].forEach(([container, setRef]) => {
+      container?.addEventListener('click', (e) => {
+        const c = e.target.closest('.chip');
+        if (!c) return;
+        const key = c.dataset.key || keyify(c.textContent);
+        setRef.has(key) ? setRef.delete(key) : setRef.add(key);
+        syncChipStates(key);
+        render();
+      });
+    });
+
+    side.featured.addEventListener('change', () => {
+      state.featuredOnly = side.featured.checked;
+      render();
+    });
+
+    // Clear buttons
+    $$('.clear-filters').forEach(btn => btn.addEventListener('click', clearAll));
+    byId('btn-clear')?.addEventListener('click', clearAll);
+    byId('btn-top')?.addEventListener('click', () => window.scrollTo({ top:0, behavior:'smooth' }));
+
+    // Modal + carousel
+    $$('.modal [data-close="#project-modal"], .modal-backdrop').forEach(b => b.addEventListener('click', closeModal));
+    $('.carousel-prev')?.addEventListener('click', () => slide(-1));
+    $('.carousel-next')?.addEventListener('click', () => slide(1));
+  }
+
+  function clearAll(){
+    state.tagKeys.clear();
+    state.techKeys.clear();
+    state.featuredOnly = false;
+    renderFilters();     // rebuild pressed states
+    renderQuickChips();  // rebuild quick chips
+    render();
+  }
+
+  function syncChipStates(key){
+    // Reflect pressed state across all duplicate chips for the same key
+    const pressed = state.tagKeys.has(key) || state.techKeys.has(key);
+    $$('#projects .chips .chip, #quick-chips .chip').forEach(c => {
+      const k = c.dataset.key || keyify(c.textContent);
+      if (k === key) c.setAttribute('aria-pressed', pressed ? 'true' : 'false');
+    });
+  }
+
+  // ---------- render grid ----------
+  function render(){
+    const rows = filtered(projects);
+    grid.innerHTML = '';
+    const g = document.createElement('div');
+    g.className = 'grid';
+    rows.forEach(p => g.appendChild(renderCard(p)));
+    grid.appendChild(g);
+
+    emptyState.hidden = rows.length !== 0;
+  }
+
+  function filtered(rows){
+    return rows.filter(p => {
+      if (state.featuredOnly && !p.featured) return false;
+      if (state.tagKeys.size && !isSubset(state.tagKeys, p._tagKeys)) return false;
+      if (state.techKeys.size && !isSubset(state.techKeys, p._techKeys)) return false;
+      return true;
+    });
+  }
+
+  function isSubset(needles, hayset){
+    for (const n of needles) if (!hayset.has(n)) return false;
+    return true;
+  }
+
+  function renderCard(p){
+    const card = div('card'); card.setAttribute('data-id', p.id);
+
+    const head = div('card-head');
+    const img = document.createElement('img');
+    img.className = 'card-cover';
+    img.loading = 'lazy';
+    img.alt = p?.cover?.[0]?.alt || p.title;
+    img.src = p?.cover?.[0]?.src || 'assets/img/placeholder.jpg';
+    const badges = div('card-badges');
+    (p.tags||[]).slice(0,3).forEach(t => badges.appendChild(span('badge', t)));
+    head.append(img, badges);
+
+    const body = div('card-body');
+    body.append(
+      h('h3','card-title', p.title),
+      p.subtitle ? pEl('card-sub', p.subtitle) : div('card-sub',''),
+      p.description ? pEl('card-desc', p.description) : div('card-desc',''),
+      (() => { const meta = div('card-meta'); meta.append(metaTags(p.tech_stack||[])); return meta; })(),
+      (() => {
+        const a = div('card-actions');
+        a.append(btn('View details', () => openProject(p)));
+        if (p.links?.demo) a.append(linkBtn('Demo', p.links.demo));
+        if (p.links?.repo) a.append(copyBtn('Copy repo', p.links.repo));
+        if (p.links?.case_study) a.append(linkBtn('Case study', p.links.case_study));
+        return a;
+      })()
+    );
+
+    card.append(head, body);
+    card.addEventListener('click', (e) => { if (!e.target.closest('a,button')) openProject(p); });
+    return card;
+  }
+
+  function metaTags(items){
+    const row = div('meta-tags');
+    items.forEach(t => row.appendChild(span('meta-tag', t)));
+    return row;
+  }
+
+  // ---------- modal ----------
+  const modal = byId('project-modal');
+  const carouselTrack = byId('carousel-track');
+  const modalEls = {
+    kicker: byId('modal-kicker'),
+    title: byId('modal-title'),
+    sub: byId('modal-sub'),
+    desc: byId('modal-desc'),
+    highlights: byId('modal-highlights'),
+    metrics: byId('modal-metrics'),
+    links: byId('modal-links'),
+    similar: byId('modal-similar')
+  };
+
+  let slideIndex = 0;
+
+  function openProject(p){
+    // media
+    carouselTrack.innerHTML = '';
+    const media = (p.cover && p.cover.length) ? p.cover : [{src:'assets/img/placeholder.jpg',alt:p.title}];
+    media.forEach(m => {
+      if (String(m.src).toLowerCase().endsWith('.pdf')){
+        const f = document.createElement('iframe'); f.loading='lazy'; f.src=m.src; carouselTrack.appendChild(f);
+      } else {
+        const i = document.createElement('img'); i.loading='lazy'; i.alt=m.alt||p.title; i.src=m.src; carouselTrack.appendChild(i);
+      }
+    });
+    slideIndex = 0; carouselTrack.scrollTo({left:0});
+
+    modalEls.kicker.textContent = (p.tags||[]).slice(0,1).join(' • ');
+    modalEls.title.textContent = p.title;
+    modalEls.sub.textContent = p.subtitle || '';
+    modalEls.desc.textContent = p.description || '';
+
+    modalEls.highlights.innerHTML = ''; (p.highlights||[]).forEach(hh => modalEls.highlights.appendChild(li(hh)));
+    modalEls.metrics.innerHTML = ''; (p.metrics||[]).forEach(m => { const c=div('metric'); c.append(div('metric-label', m.label), div('metric-value', m.value)); modalEls.metrics.appendChild(c); });
+    modalEls.links.innerHTML = '';
+    if (p.links?.demo) modalEls.links.appendChild(linkBtn('Open demo', p.links.demo));
+    if (p.links?.repo) modalEls.links.appendChild(copyBtn('Copy repo', p.links.repo));
+    if (p.links?.case_study) modalEls.links.appendChild(linkBtn('Open case study', p.links.case_study));
+
+    // related by tag overlap
+    const sim = projects
+      .filter(x => x.id !== p.id)
+      .map(x => ({x,score: overlap(p._tagKeys, x._tagKeys)}))
+      .filter(s => s.score>0).sort((a,b)=>b.score-a.score).slice(0,6).map(s=>s.x);
+
+    modalEls.similar.innerHTML=''; sim.forEach(sp => modalEls.similar.appendChild(renderMini(sp)));
+
+    openModal();
+  }
+
+  function overlap(keysA, keysB){
+    let n = 0; for (const k of keysA) if (keysB.has(k)) n++; return n;
+  }
+
+  function renderMini(p){
+    const a = document.createElement('a'); a.className='card'; a.href='javascript:void(0)';
+    const img = document.createElement('img'); img.className='card-cover'; img.loading='lazy'; img.alt=p?.cover?.[0]?.alt||p.title; img.src=p?.cover?.[0]?.src||'assets/img/placeholder.jpg';
+    const body = div('card-body'); body.append(h('h4','card-title', p.title));
+    a.append(img, body);
+    a.addEventListener('click', () => openProject(p));
+    return a;
+  }
+
+  function openModal(){ modal?.setAttribute('aria-hidden','false'); $('.modal-scroller')?.focus(); }
+  function closeModal(){ if (!modal || modal.getAttribute('aria-hidden')==='true') return; modal.setAttribute('aria-hidden','true'); }
+  function slide(dir){ const count = carouselTrack.children.length; if (!count) return; slideIndex = (slideIndex + dir + count) % count; carouselTrack.scrollTo({left: carouselTrack.clientWidth * slideIndex, behavior:'smooth'}); }
+
+  // ---------- tiny DOM helpers ----------
+  function div(cls, text){ const n=document.createElement('div'); if (cls) n.className=cls; if (text!==undefined) n.textContent=text; return n; }
+  function span(cls, text){ const n=document.createElement('span'); if (cls) n.className=cls; n.textContent=text; return n; }
+  function h(tag, cls, text){ const n=document.createElement(tag); if (cls) n.className=cls; n.textContent=text; return n; }
+  function pEl(cls, text){ const n=document.createElement('p'); if (cls) n.className=cls; n.textContent=text; return n; }
+  function li(text){ const n=document.createElement('li'); n.textContent=text; return n; }
+
+  // Footer year + mobile nav
+  document.addEventListener('DOMContentLoaded', () => {
+    const y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
+
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.getElementById('site-nav');
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+        const open = nav.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+  });
+})();
+</script>
+
 </body>
 </html>
