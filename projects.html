@@ -1,110 +1,249 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projects — Dominic Vicchiollo</title>
-  <meta name="description" content="projects and case studies by dominic vicchiollo.">
-  <link rel="canonical" href="./projects.html">
-  <link href="https://fonts.googleapis.com/css2?family=inter:wght@400;600;700&family=space+grotesk:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <meta name="description" content="Projects and case studies by Dominic Vicchiollo." />
+  <link rel="canonical" href="./projects.html" />
+  <link href="https://fonts.googleapis.com/css2?family=inter:wght@400;600;700&family=space+grotesk:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <!-- match home page css version for consistency -->
+  <link rel="stylesheet" href="assets/css/style.css?v=19" />
+
+  <!-- page-scoped layout tweaks for projects -->
+  <style>
+    .projects-intro { color: var(--muted); margin-bottom: 1.25rem; }
+    .projects-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1rem, 2.2vw, 1.5rem); }
+    .project-section { margin-top: 1.5rem; }
+    .project-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem; box-shadow: var(--shadow); }
+    .project-header { margin-bottom: .75rem; }
+    .project-title { margin: 0 0 .35rem; font-weight: 700; }
+    .project-desc { margin: 0; color: var(--muted); }
+    .project-meta { margin-top: .65rem; display: flex; align-items: center; justify-content: space-between; gap: .75rem; flex-wrap: wrap; }
+    .tags { display: inline-flex; gap: .4rem; flex-wrap: wrap; }
+    .tag { font-size: .85rem; padding: .25rem .55rem; border: 1px solid var(--border); border-radius: 999px; background: rgba(255,255,255,0.04); }
+    .section-kicker { font-size: .9rem; color: var(--muted); margin: 0 0 .25rem; letter-spacing: .4px; text-transform: uppercase; }
+    .projects-jumplinks { display: inline-flex; gap: .5rem; flex-wrap: wrap; margin-top: .75rem; }
+    .projects-jumplinks .btn { padding: .45rem .7rem; border-radius: 999px; }
+    /* keep responsive rules consistent with your global media queries */
+    @media (max-width: 1000px) { .projects-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 680px) { .projects-grid { grid-template-columns: 1fr; } }
+  </style>
 </head>
 <body>
+  <!-- site header + nav (mirrors home) -->
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="Home">
+      <a class="brand" href="index.html" aria-label="home">
         <span class="brand-mark">DV</span>
         <span class="brand-text">Dominic Vicchiollo</span>
       </a>
+
       <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false">
         <span class="sr-only">toggle navigation</span>
         <span class="bar"></span><span class="bar"></span><span class="bar"></span>
       </button>
-      <nav id="site-nav" class="site-nav">
+
+      <nav id="site-nav" class="site-nav" aria-label="primary">
         <a href="index.html" class="nav-link">Home</a>
-    <a href="projects.html" class="nav-link is-active">Projects</a>
-        <a href="DomGuardianAI.html" class="nav-link">DomGuardianAI</a>
+        <a href="projects.html" class="nav-link is-active">Projects</a>
+        <a href="domguardianai.html" class="nav-link">DomGuardianAI</a>
       </nav>
     </div>
   </header>
 
-  <main class="section">
+  <main class="section" id="projects">
     <div class="container">
       <h1 class="section-title">Projects</h1>
-    <h1 class="section-title">Projects</h1>
-    <p class="lead">Short write-ups with links to code and visuals. Replace the placeholders below with your real projects.</p>
+      <p class="projects-intro">
+        A curated portfolio organized by focus area. Many entries include inline pdf viewers for quick review.
+      </p>
 
-      <!-- tip: each .project-card can include an image (optional), title, description, tags, and links -->
-      <div class="grid projects-grid">
-
-        <article class="project-card">
-          <!-- tip: add a real image to assets/img/projects/ and update the src -->
-          <!-- example: <img src="assets/img/projects/minwage.jpg" alt="minimum wage dashboard screenshot" class="project-image"> -->
-          <div class="project-content">
-            <h3 class="project-title">Minimum Wage Compliance Dashboard</h3>
-            <p class="project-desc">
-              Power BI dashboard blending BLS CPI data with multi-level wage rules; highlights ratio trends and alerts.
-            </p>
-            <div class="tags">
-              <span class="tag">power bi</span><span class="tag">azure</span><span class="tag">python</span>
-            </div>
-            <div class="links">
-              <a class="btn small" href="#" target="_blank" rel="noopener">repo</a>
-              <a class="btn ghost small" href="#" target="_blank" rel="noopener">live demo</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-content">
-            <h3 class="project-title">Invoice Integration Pipeline</h3>
-            <p class="project-desc">
-              Azure Functions moving invoices between Intacct and Invoiced.com with attachments and CSV uploads; robust logging and retry behavior.
-            </p>
-            <div class="tags">
-              <span class="tag">azure functions</span><span class="tag">python</span><span class="tag">rest apis</span>
-            </div>
-            <div class="links">
-              <a class="btn small" href="#" target="_blank" rel="noopener">repo</a>
-              <a class="btn ghost small" href="#" target="_blank" rel="noopener">notes</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-content">
-            <h3 class="project-title">Shipping Analytics</h3>
-            <p class="project-desc">
-              End-to-end pipeline with curated datasets and KPIs for client services; FP&A-friendly visuals and exports.
-            </p>
-            <div class="tags">
-              <span class="tag">sql</span><span class="tag">synapse</span><span class="tag">power bi</span>
-            </div>
-            <div class="links">
-              <a class="btn small" href="#" target="_blank" rel="noopener">repo</a>
-              <a class="btn ghost small" href="#" target="_blank" rel="noopener">dashboard</a>
-            </div>
-          </div>
-        </article>
-
+      <!-- quick jump links -->
+      <div class="projects-jumplinks" aria-label="jump to category">
+        <a class="btn ghost small" href="#operations">operations</a>
+        <a class="btn ghost small" href="#finance">finance</a>
+        <a class="btn ghost small" href="#architecture">architecture</a>
+        <a class="btn ghost small" href="#compliance">compliance research</a>
       </div>
 
-      <!-- tip: duplicate .project-card blocks for more projects; keep images under assets/img/projects/ -->
+      <!-- operations -->
+      <section class="section project-section" id="operations" aria-label="operations projects">
+        <h2 class="section-title">Operations</h2>
+        <p class="projects-intro">Operational analytics, workforce planning, and productivity optimization.</p>
+
+        <!-- example with inline pdf.js viewer -->
+        <article class="project-card">
+          <div class="project-header">
+            <p class="section-kicker">case study</p>
+            <h3 class="project-title">COVID-19 Workforce Planning &amp; Reporting</h3>
+            <p class="project-desc">
+              Executive dashboard reporting and analysis measuring productivity against working hours to manage workforce
+              utilization throughout the COVID-19 pandemic. Insights informed staffing decisions and scheduling,
+              resulting in zero layoffs during the period.
+            </p>
+          </div>
+
+          <div class="project-meta">
+            <div class="tags" aria-label="key tools">
+              <span class="tag">sql</span>
+              <span class="tag">power bi</span>
+              <span class="tag">ssms</span>
+            </div>
+            <div class="links">
+              <!-- add repo or notes links if/when available -->
+            </div>
+          </div>
+
+          <!-- inline pdf viewer (uses the same pdf.js pattern as your home page) -->
+          <div class="pdf-block" style="margin-top:1rem;">
+            <div class="pdf-wrapper">
+              <iframe
+                class="pdf-frame"
+                title="operational productivity report"
+                src="assets/pdfjs/web/viewer.html?file=../../pdf/operational_productivity.pdf"
+                loading="lazy"
+              ></iframe>
+            </div>
+            <p class="pdf-note">
+              if the inline viewer doesn’t load,
+              <a href="assets/pdf/operational_productivity.pdf" target="_blank" rel="noopener">open the full report in a new tab</a>.
+            </p>
+          </div>
+        </article>
+
+        <!-- optional placeholders you can duplicate for more ops projects
+        <article class="project-card">
+          <div class="project-header">
+            <p class="section-kicker">case study</p>
+            <h3 class="project-title">title here</h3>
+            <p class="project-desc">short description here.</p>
+          </div>
+          <div class="project-meta">
+            <div class="tags"><span class="tag">python</span><span class="tag">azure functions</span></div>
+          </div>
+          <div class="pdf-block" style="margin-top:1rem;">
+            <div class="pdf-wrapper">
+              <iframe class="pdf-frame" title="pdf title" src="assets/pdfjs/web/viewer.html?file=../../pdf/your_file.pdf"></iframe>
+            </div>
+            <p class="pdf-note">if the inline viewer doesn’t load, <a href="assets/pdf/your_file.pdf" target="_blank" rel="noopener">open in a new tab</a>.</p>
+          </div>
+        </article>
+        -->
+      </section>
+
+      <!-- finance -->
+      <section class="section project-section" id="finance" aria-label="finance projects">
+        <h2 class="section-title">Finance</h2>
+        <p class="projects-intro">a/r health, reconciliation, invoice flows, and fp&amp;a-ready datasets.</p>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-header">
+              <p class="section-kicker">pipeline</p>
+              <h3 class="project-title">invoice integration pipeline</h3>
+              <p class="project-desc">
+                azure functions moving invoices between intacct and invoiced.com with attachments and csv uploads,
+                featuring structured logging and resilient retry behavior.
+              </p>
+            </div>
+            <div class="project-meta">
+              <div class="tags"><span class="tag">azure functions</span><span class="tag">python</span><span class="tag">rest apis</span></div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-header">
+              <p class="section-kicker">analytics</p>
+              <h3 class="project-title">shipping analytics</h3>
+              <p class="project-desc">
+                curated datasets and kpis for client services; fp&amp;a-friendly visuals and exports.
+              </p>
+            </div>
+            <div class="project-meta">
+              <div class="tags"><span class="tag">sql</span><span class="tag">synapse</span><span class="tag">power bi</span></div>
+            </div>
+          </article>
+
+          <!-- add more finance cards as needed -->
+        </div>
+      </section>
+
+      <!-- architecture -->
+      <section class="section project-section" id="architecture" aria-label="architecture projects">
+        <h2 class="section-title">Architecture</h2>
+        <p class="projects-intro">azure-first data platforms, cost control, and reliability engineering.</p>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-header">
+              <p class="section-kicker">platform</p>
+              <h3 class="project-title">lakehouse &amp; synapse strategy</h3>
+              <p class="project-desc">
+                adls gen2 lake design with synapse (serverless &amp; dedicated), governed zones, and shared definitions for bi.
+              </p>
+            </div>
+            <div class="project-meta">
+              <div class="tags"><span class="tag">adls gen2</span><span class="tag">synapse</span><span class="tag">rbac / rls</span></div>
+            </div>
+          </article>
+
+          <!-- duplicate for more architecture entries -->
+        </div>
+      </section>
+
+      <!-- compliance research -->
+      <section class="section project-section" id="compliance" aria-label="compliance research projects">
+        <h2 class="section-title">Compliance Research</h2>
+        <p class="projects-intro">minimum wage rules, jurisdictional changes, and curated datasets for policy tracking.</p>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-header">
+              <p class="section-kicker">research</p>
+              <h3 class="project-title">minimum wage compliance dashboard</h3>
+              <p class="project-desc">
+                power bi dashboard blending bls cpi data with multi-level wage rules; highlights ratio trends and alerts.
+              </p>
+            </div>
+            <div class="project-meta">
+              <div class="tags"><span class="tag">power bi</span><span class="tag">azure</span><span class="tag">python</span></div>
+            </div>
+          </article>
+
+          <!-- add more compliance entries as needed -->
+        </div>
+      </section>
     </div>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© 2025 Dominic Vicchiollo</p>
+      <p>© <span id="year"></span> Dominic Vicchiollo</p>
       <div class="social">
-        <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="mailto:youremail@example.com">Email</a>
+        <a href="https://github.com/domvicc" target="_blank" rel="noopener">github</a>
+        <a href="https://www.linkedin.com/in/dominicvicchiollo" target="_blank" rel="noopener">linkedin</a>
+        <a href="mailto:dvicchiollo@gmail.com">email</a>
       </div>
     </div>
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  <script>
+    // footer year + mobile nav (mirrors home page behavior)
+    document.addEventListener('DOMContentLoaded', () => {
+      const y = document.getElementById('year');
+      if (y) y.textContent = new Date().getFullYear();
+
+      const toggle = document.querySelector('.nav-toggle');
+      const nav = document.getElementById('site-nav');
+      if (toggle && nav) {
+        toggle.addEventListener('click', () => {
+          const open = nav.classList.toggle('open');
+          toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+      }
+    });
+  </script>
 </body>
 </html>
