@@ -335,37 +335,46 @@ body {
 
 /* =======================================================
    ABOUT ME – scoped placement to match target screenshot
-   (titles nudged; description narrower/centered;
-    six-box row centered at 95%; pdf block aligned)
    ======================================================= */
 
-/* 1) Title placement: nudge in from the left so it isn’t flush */
+/* Zero out the container side padding only in this section
+   so our custom widths/margins are exact. */
+#about > .container { padding-inline: 0 !important; }
+
+/* Kill inherited prose indent in this section at all widths. */
+#about .section-body.prose-indent { margin-left: 0 !important; }
+
+/* 1) Title: nudge in from the left */
 #about .section-title {
-  margin-left: clamp(1rem, 6vw, 2rem);
+  margin-left: 5%;
   margin-bottom: 1.5rem;
 }
 
-/* 2) Description paragraphs: narrower, centered column */
-#about .section-body {
-  /* keep the rest of the section normal; just narrow inner prose */
-}
+/* 2) Description paragraphs: narrower and centered */
 #about .section-body > p.lead {
   width: 92%;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  text-indent: 1.25rem;  /* professional first-line indent */
+  text-indent: 1.25rem;
 }
 
-/* 3) Six feature boxes row: 95% width, centered */
+/* 3) Six feature boxes row:
+      95% width, 5% left margin, 0 right margin */
 #about .features-inline {
   width: 95%;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 5%;
+  margin-right: 0;
 }
 
-/* 4) PDF block: align with the feature boxes for consistent placement */
+/* Keep headings strong; details smaller (already present above)
+   left here for clarity/specificity in this section */
+#about .features-inline .subheading { font-size: 1rem; font-weight: 700; }
+#about .features-inline .feature-box ul { font-size: 0.85rem; line-height: 1.4; }
+
+/* 4) PDF block: align with the feature boxes */
 #about .pdf-block {
   width: 95%;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 5%;
+  margin-right: 0;
 }
