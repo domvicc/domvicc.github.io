@@ -277,7 +277,7 @@ body {
 
 /* smaller details inside the boxes */
 .features-inline .feature-box ul {
-  font-size: 0.65rem;
+  font-size: 0.45rem;
   line-height: 1.4;
 }
 
@@ -393,7 +393,8 @@ body {
 
 /* 4) PDF block: align with the feature boxes */
 #about .pdf-block {
-  width: 100%;
-  margin-left: 5%;
-  margin-right: 5%;
+  width: 90%;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
 }
