@@ -349,7 +349,8 @@ body {
 /* 1) Title: nudge in from the left */
 #about .section-title {
   margin-left: 10%;
-  margin-bottom: 2.0rem;
+  margin-bottom: .5rem;
+  margin-top: .5rem;
 }
 
 /* 2) Description paragraphs: narrower and centered */
