@@ -31,7 +31,7 @@
   --header-h: 64px;
 
   /* hero logo tone control (darkens png slightly) */
-  --hero-logo-filter: brightness(0.5) contrast(1.28);
+  /*--hero-logo-filter: brightness(0.5) contrast(1.28);*/
 }
 
 /* light mode (system preference) */
