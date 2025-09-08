@@ -18,8 +18,8 @@
   --shadow: 0 12px 40px rgba(0,0,0,0.28);
 
   /* scalable canvas */
-  --content-max: 1680px;             /* broader content canvas */
-  --content-wide: 1920px;            /* true full-bleed upper bound */
+  --content-max: 1680px;
+  --content-wide: 100vw;              /* use the full viewport width */
   --gutter: clamp(1rem, 2.2vw, 3.5rem); /* standardized responsive side padding */
   --section-vertical: clamp(2rem, 5vw, 5rem);
 
@@ -75,7 +75,7 @@ body {
   padding-inline: var(--gutter);
 }
 .hero-bleed { padding-inline: var(--gutter); }
-/* readable prose width wrapper */
+/* readable prose width wrapper (optional where needed) */
 .prose-max { max-width: 960px; }
 
 .section { padding-block: var(--section-vertical); }
@@ -131,7 +131,7 @@ body {
 }
 .nav-toggle .bar { display: block; inline-size: 22px; block-size: 2px; background: var(--text); margin: 4px 0; }
 
-/* hero — compact and SIMPLE logo (no sticky, no animation, no filters) */
+/* hero — simple logo */
 .hero {
   padding-block: clamp(8px, 2vw, 18px) 12px;
   min-height: 0;
@@ -144,7 +144,8 @@ body {
 .hero-inner {
   text-align: center;
   margin-inline: auto;
-  max-width: var(--content-wide);
+  max-width: none;              /* full width */
+  width: 100%;
 }
 
 .sr-only {
@@ -207,7 +208,7 @@ body {
   background: linear-gradient(135deg, var(--primary), var(--primary-2));
 }
 
-/* full-width sections now; only constrain long paragraphs with .prose-max */
+/* full-width sections now; only constrain long paragraphs with .prose-max if desired */
 .section .container { max-width: none; margin: 0; padding-inline: var(--gutter); }
 .prose-indent { margin-left: 0; }
 
@@ -233,18 +234,17 @@ body {
 .pdf-frame { inline-size: 100%; block-size: 100%; border: none; display: block; }
 .pdf-note { margin-top: .5rem; color: var(--muted); font-size: .95rem; }
 
-/* reusable grids */
+/* features: force exactly six on one row on desktop */
 .features-inline {
-  display: flex;
-  flex-wrap: nowrap;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr)); /* six equal columns */
   gap: clamp(.9rem, 1.2vw, 1.15rem);
   align-items: stretch;
-  justify-content: space-between; /* spread across landscape */
+  justify-items: stretch;
   margin-top: 1.25rem;
   width: 100%;
 }
 .features-inline .feature-box {
-  flex: 1 1 0;
   min-width: 0; /* prevent overflow */
   background: var(--card);
   border: 1px solid var(--border);
@@ -252,24 +252,24 @@ body {
   padding: 1rem .9rem 1.05rem;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 .features-inline .feature-box ul { margin: 0; padding-left: 1.1rem; }
 .features-inline .feature-box li { margin-bottom: .4rem; }
 .features-inline .feature-box li:last-child { margin-bottom: 0; }
 .features-inline .subheading { margin-top: 0; margin-bottom: .5rem; font-size: .95rem; }
 
-/* allow wrapping gracefully below large desktop */
-@media (max-width: 1700px) { /* allow early wrapping on slightly smaller ultra-wide */
-  .features-inline { flex-wrap: wrap; }
-  .features-inline .feature-box { flex: 1 1 calc(33.333% - 1rem); }
+/* responsive wrapping below large desktop */
+@media (max-width: 1400px) {
+  .features-inline { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 @media (max-width: 900px) {
-  .features-inline .feature-box { flex: 1 1 calc(50% - .75rem); }
+  .features-inline { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 640px) {
-  .features-inline { gap: .75rem; }
-  .features-inline .feature-box { flex: 1 1 100%; }
+  .features-inline { grid-template-columns: 1fr; gap: .75rem; }
 }
+
 .grid { display: grid; gap: 1rem; }
 .grid.two { grid-template-columns: 1.2fr .8fr; gap: 2rem; align-items: start; }
 .grid.three { grid-template-columns: repeat(3, 1fr); gap: 1rem; }
@@ -304,10 +304,11 @@ body {
 .social a { color: var(--muted); text-decoration: none; }
 .social a:hover { color: var(--text); }
 
-/* responsive */
+/* responsive fixes:
+   keep containers full-width at all breakpoints (no unintended clipping) */
 @media (max-width: 1100px) {
-  .section .container { margin-left: clamp(1rem, 5vw, 2rem); max-width: 980px; }
-  .prose-indent { margin-left: clamp(.75rem, 4vw, 40px); }
+  .section .container { margin: 0; max-width: none; padding-inline: var(--gutter); }
+  .prose-indent { margin-left: 0; }
 }
 
 @media (max-width: 1000px) {
