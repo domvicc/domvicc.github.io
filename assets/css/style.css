@@ -271,7 +271,7 @@ body {
   height: 100%;
 }
 .features-inline .feature-box ul { margin: 0; padding-left: 1.1rem; }
-.features-inline .feature-box li { margin-bottom: .25rem; }
+.features-inline .feature-box li { margin-bottom: .40rem; }
 .features-inline .feature-box li:last-child { margin-bottom: 0; }
 .features-inline .subheading { margin-top: 0; margin-bottom: .5rem; font-size: 1rem; font-weight: 700; }
 
