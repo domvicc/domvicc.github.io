@@ -1,46 +1,24 @@
+<!-- index.html -->
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Projects — Dominic Vicchiollo</title>
-  <meta name="description" content="Projects and case studies by Dominic Vicchiollo." />
+  <title>projects — dominic vicchiollo</title>
+  <meta name="description" content="projects and case studies by dominic vicchiollo." />
   <link rel="canonical" href="./projects.html" />
   <link href="https://fonts.googleapis.com/css2?family=inter:wght@400;600;700&family=space+grotesk:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <!-- match home page css version for consistency -->
-  <link rel="stylesheet" href="assets/css/style.css?v=24" />
-
-  <!-- page-scoped layout tweaks for projects -->
-  <style>
-    .projects-intro { color: var(--muted); margin-bottom: 1.25rem; }
-    .projects-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1rem, 2.2vw, 1.5rem); }
-    .project-section { margin-top: 1.5rem; }
-  .project-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem; box-shadow: var(--shadow); position: relative; padding-bottom: 2.75rem; }
-    .project-header { margin-bottom: .75rem; }
-    .project-title { margin: 0 0 .35rem; font-weight: 700; }
-    .project-desc { margin: 0; color: var(--muted); }
-    .project-meta { margin-top: .65rem; display: flex; align-items: center; justify-content: space-between; gap: .75rem; flex-wrap: wrap; }
-    .tags { display: inline-flex; gap: .4rem; flex-wrap: wrap; }
-    .tag { font-size: .85rem; padding: .25rem .55rem; border: 1px solid var(--border); border-radius: 999px; background: rgba(255,255,255,0.04); }
-    .section-kicker { font-size: .9rem; color: var(--muted); margin: 0 0 .25rem; letter-spacing: .4px; text-transform: uppercase; }
-    .projects-jumplinks { display: inline-flex; gap: .5rem; flex-wrap: wrap; margin-top: .75rem; }
-    .projects-jumplinks .btn { padding: .45rem .7rem; border-radius: 999px; }
-  /* file link badge in lower-right of card */
-  .file-link { position: absolute; right: 1rem; bottom: .85rem; font-size: .7rem; letter-spacing: .4px; text-decoration: none; background: rgba(255,255,255,0.08); padding: .4rem .6rem; border-radius: 8px; border: 1px solid var(--border); color: var(--primary); font-weight: 600; }
-  .file-link:hover { background: linear-gradient(135deg, var(--primary), var(--primary-2)); color: #05101c; border-color: color-mix(in oklab, var(--border), var(--primary) 40%); }
-    /* keep responsive rules consistent with your global media queries */
-    @media (max-width: 1000px) { .projects-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 680px) { .projects-grid { grid-template-columns: 1fr; } }
-  </style>
+  <!-- site styles for the projects hub -->
+  <link rel="stylesheet" href="assets/css/style.css?v=25" />
 </head>
 <body>
-  <!-- site header + nav (mirrors home) -->
-  <header class="site-header">
+  <!-- site header + nav -->
+  <header class="site-header" data-parallax>
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="home">
         <span class="brand-mark">DV</span>
-        <span class="brand-text">Dominic Vicchiollo</span>
+        <span class="brand-text">dominic vicchiollo</span>
       </a>
 
       <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false">
@@ -49,315 +27,190 @@
       </button>
 
       <nav id="site-nav" class="site-nav" aria-label="primary">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="projects.html" class="nav-link is-active">Projects</a>
-        <a href="domguardianai.html" class="nav-link">DomGuardianAI</a>
+        <a href="index.html" class="nav-link">home</a>
+        <a href="projects.html" class="nav-link is-active">projects</a>
+        <a href="domguardianai.html" class="nav-link">domguardianai</a>
       </nav>
+    </div>
+
+    <!-- projects page header -->
+    <div class="container page-hero">
+      <h1 class="page-title">projects</h1>
+      <p class="page-kicker">a showcase of platform builds, sql craftsmanship, analytics, and architecture—fast to skim, easy to dive deep.</p>
+
+      <div class="toolbar" role="region" aria-label="projects toolbar">
+        <div class="views">
+          <button class="btn view-btn is-active" data-view="grid" aria-pressed="true" title="grid (g)">grid</button>
+          <button class="btn view-btn" data-view="list" aria-pressed="false" title="list (l)">list</button>
+          <button class="btn view-btn" data-view="timeline" aria-pressed="false" title="timeline (t)">timeline</button>
+        </div>
+
+        <div class="search-sort">
+          <div class="search">
+            <input id="search" type="search" placeholder="search projects ( / )" aria-label="search projects" />
+            <button class="btn ghost clear-search" title="clear search" aria-label="clear search">×</button>
+          </div>
+          <label class="sort" for="sort">
+            <span class="sr-only">sort</span>
+            <select id="sort" aria-label="sort projects">
+              <option value="recent">recent</option>
+              <option value="a-z">a–z</option>
+              <option value="z-a">z–a</option>
+            </select>
+          </label>
+          <button class="btn ghost filters-toggle" data-sheet-target="#filters-sheet" aria-controls="filters-sheet" aria-expanded="false">filters</button>
+        </div>
+      </div>
     </div>
   </header>
 
-  <main class="section" id="projects">
-    <div class="container">
-      <h1 class="section-title">Projects</h1>
-      <p class="projects-intro">
-        A curated portfolio organized by focus area. Many entries include inline pdf viewers for quick review.
-      </p>
+  <main id="projects" class="section">
+    <div class="container projects-layout">
+      <!-- sidebar: filters (desktop) -->
+      <aside class="filters" aria-labelledby="filters-title">
+        <div class="filters-inner">
+          <div class="filters-head">
+            <h2 id="filters-title">filters</h2>
+            <button class="btn ghost small clear-filters" title="clear all filters">clear</button>
+          </div>
 
-      <!-- quick jump links -->
-      <div class="projects-jumplinks" aria-label="jump to category">
-        <a class="btn ghost small" href="#operations">SQL Development</a>
-        <a class="btn ghost small" href="#operations">Operations</a>
-        <a class="btn ghost small" href="#finance">Finance</a>
-        <a class="btn ghost small" href="#architecture">Architecture</a>
-        <a class="btn ghost small" href="#compliance">Compliance Research</a>
+          <div class="filter-group">
+            <h3 class="filter-title">tags</h3>
+            <div id="filter-tags" class="chips" role="group" aria-label="filter by tags"></div>
+          </div>
+
+          <div class="filter-group">
+            <h3 class="filter-title">tech</h3>
+            <div id="filter-tech" class="chips" role="group" aria-label="filter by tech"></div>
+          </div>
+
+          <div class="filter-group">
+            <h3 class="filter-title">year</h3>
+            <div id="filter-years" class="chips" role="group" aria-label="filter by year"></div>
+          </div>
+
+          <div class="filter-group">
+            <h3 class="filter-title">status</h3>
+            <div id="filter-status" class="chips" role="group" aria-label="filter by status"></div>
+          </div>
+
+          <div class="filter-group">
+            <label class="checkbox">
+              <input id="filter-featured" type="checkbox" />
+              <span>featured only</span>
+            </label>
+          </div>
+        </div>
+      </aside>
+
+      <!-- mobile filters sheet -->
+      <div id="filters-sheet" class="sheet" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="filters-title-mobile">
+        <div class="sheet-header">
+          <h2 id="filters-title-mobile">filters</h2>
+          <button class="btn ghost close-sheet" data-close="#filters-sheet" aria-label="close filters">×</button>
+        </div>
+        <div class="sheet-body">
+          <div class="filter-group">
+            <h3 class="filter-title">tags</h3>
+            <div id="m-filter-tags" class="chips"></div>
+          </div>
+          <div class="filter-group">
+            <h3 class="filter-title">tech</h3>
+            <div id="m-filter-tech" class="chips"></div>
+          </div>
+          <div class="filter-group">
+            <h3 class="filter-title">year</h3>
+            <div id="m-filter-years" class="chips"></div>
+          </div>
+          <div class="filter-group">
+            <h3 class="filter-title">status</h3>
+            <div id="m-filter-status" class="chips"></div>
+          </div>
+          <label class="checkbox">
+            <input id="m-filter-featured" type="checkbox" />
+            <span>featured only</span>
+          </label>
+        </div>
+        <div class="sheet-footer">
+          <button class="btn apply-filters">apply</button>
+          <button class="btn ghost small clear-filters">clear</button>
+        </div>
       </div>
 
-      <!-- operations -->
-      <!-- sql development (inserted above operations) -->
-      <section class="section project-section" id="sql" aria-label="sql development projects">
-        <h2 class="section-title">SQL Development</h2>
-        <p class="projects-intro">
-          Production‑grade T‑SQL driving inventory integrity, costing, pricing elasticity, rebate attribution, order audit,
-          and finance reconciliation. The <code>sql/</code> folder contains SQL Agent job scripts that materialize governed
-          tables (dimensions + facts), stage exception queues, and produce KPI‑ready aggregates for BI (turns, SPA variance,
-          lead time, unbilled AP, tagged order variance, price tiers). Each card highlights a representative slice.
-        </p>
+      <!-- main content -->
+      <section class="projects-content" aria-live="polite">
+        <!-- chips row (quick filters) -->
+        <div class="chips-row" id="quick-chips"></div>
 
-        <div class="projects-grid">
-          <article class="project-card">
-            <div class="project-header">
-              <p class="section-kicker">inventory integrity</p>
-              <h3 class="project-title">Inventory Audit Journal</h3>
-              <p class="project-desc">Large scripted job (<code>inventory_audit.sql</code>) creating staging + analysis tables to reconcile perpetual vs G/L, rebate variance, and SPA claim health with repeatable indexes &amp; branching filters.</p>
-            </div>
-            <div class="project-meta">
-              <div class="tags"><span class="tag">t-sql</span><span class="tag">sql agent</span><span class="tag">audit</span></div>
-            </div>
-            <a class="file-link" href="sql/inventory_audit.sql" target="_blank" rel="noopener">inventory_audit.sql</a>
-          </article>
+        <!-- views container -->
+        <div id="view-grid" class="view is-active" data-view="grid" aria-label="grid view"></div>
+        <div id="view-list" class="view" data-view="list" aria-label="list view" hidden></div>
+        <div id="view-timeline" class="view" data-view="timeline" aria-label="timeline view" hidden></div>
 
-          <article class="project-card">
-            <div class="project-header">
-              <p class="section-kicker">sales velocity</p>
-              <h3 class="project-title">365 Day Product Sales</h3>
-              <p class="project-desc"><code>product_365_sales.sql</code> aggregates rolling 30/90/365 movement &amp; cost to feed excess / turns KPIs while isolating returns and enforcing location-type business rules.</p>
-            </div>
-            <div class="project-meta">
-              <div class="tags"><span class="tag">window logic</span><span class="tag">kpis</span><span class="tag">performance</span></div>
-            </div>
-            <a class="file-link" href="sql/product_365_sales.sql" target="_blank" rel="noopener">product_365_sales.sql</a>
-          </article>
-
-          <article class="project-card">
-            <div class="project-header">
-              <p class="section-kicker">pricing</p>
-              <h3 class="project-title">Price Matrix &amp; Replacement Cost</h3>
-              <p class="project-desc">Supporting scripts (<code>price_matrix.sql</code>, <code>product_replacement_cost.sql</code>) unify cost sources &amp; tier logic to drive margin analytics and downstream contract pricing.</p>
-            </div>
-            <div class="project-meta">
-              <div class="tags"><span class="tag">costing</span><span class="tag">margin</span><span class="tag">etl</span></div>
-            </div>
-            <a class="file-link" href="sql/price_matrix.sql" target="_blank" rel="noopener">price_matrix.sql</a>
-          </article>
-
-          <article class="project-card">
-            <div class="project-header">
-              <p class="section-kicker">operations</p>
-              <h3 class="project-title">Branch &amp; Ledger Feeds</h3>
-              <p class="project-desc">Core dimension + fact extracts (<code>branch_maintenance.sql</code>, <code>ledger_file.sql</code>) shaping a governed layer for Power BI &amp; finance reconciliation (A/R, A/P, inventory).</p>
-            </div>
-            <div class="project-meta">
-              <div class="tags"><span class="tag">dim/fact</span><span class="tag">governance</span><span class="tag">power bi</span></div>
-            </div>
-            <a class="file-link" href="sql/ledger_file.sql" target="_blank" rel="noopener">ledger_file.sql</a>
-          </article>
-
-          <article class="project-card">
-            <div class="project-header">
-              <p class="section-kicker">inventory backbone</p>
-              <h3 class="project-title">Branch Inventory Foundation</h3>
-              <p class="project-desc"><code>product_branch_inventory.sql</code> consolidates product + branch calc sources, builds surrogate keys, and indexes lead time / safety stock attributes for downstream availability and aging analytics.</p>
-            </div>
-            <div class="project-meta">
-              <div class="tags"><span class="tag">inventory</span><span class="tag">performance</span><span class="tag">indexing</span></div>
-            </div>
-            <a class="file-link" href="sql/product_branch_inventory.sql" target="_blank" rel="noopener">product_branch_inventory.sql</a>
-          </article>
-
-          <article class="project-card">
-            <div class="project-header">
-              <p class="section-kicker">rebate attribution</p>
-              <h3 class="project-title">SPA &amp; Rebate Normalization</h3>
-              <p class="project-desc"><code>rebates.sql</code> extracts purchase order + sales linkages, classifies SPA vs SPJ, and materializes a clean rebate fact for margin reconciliation (variance + eligibility).</p>
-            </div>
-            <div class="project-meta">
-              <div class="tags"><span class="tag">rebates</span><span class="tag">margin</span><span class="tag">joins</span></div>
-            </div>
-            <a class="file-link" href="sql/rebates.sql" target="_blank" rel="noopener">rebates.sql</a>
-          </article>
-
-          <article class="project-card">
-            <div class="project-header">
-              <p class="section-kicker">order audit</p>
-              <h3 class="project-title">Tagged Order Variance</h3>
-              <p class="project-desc"><code>so_tagged_orders.sql</code> reconciles sales lines to PO / transfer tags, flags cost variances, and surfaces broken tag scenarios for operational correction.</p>
-            </div>
-            <div class="project-meta">
-              <div class="tags"><span class="tag">audit</span><span class="tag">exceptions</span><span class="tag">variance</span></div>
-            </div>
-            <a class="file-link" href="sql/so_tagged_orders.sql" target="_blank" rel="noopener">so_tagged_orders.sql</a>
-          </article>
-
-          <article class="project-card">
-            <div class="project-header">
-              <p class="section-kicker">ap visibility</p>
-              <h3 class="project-title">Unbilled AP Exposure</h3>
-              <p class="project-desc"><code>ap_unbilled.sql</code> produces an unbilled payable ledger (UBAP) combining accrual + payment GL postings to monitor aging and invoice exceptions before liability surprises.</p>
-            </div>
-            <div class="project-meta">
-              <div class="tags"><span class="tag">ap</span><span class="tag">liability</span><span class="tag">controls</span></div>
-            </div>
-            <a class="file-link" href="sql/ap_unbilled.sql" target="_blank" rel="noopener">ap_unbilled.sql</a>
-          </article>
-
-          <article class="project-card">
-            <div class="project-header">
-              <p class="section-kicker">categorization</p>
-              <h3 class="project-title">Sell Group Classification</h3>
-              <p class="project-desc"><code>product_sell_group.sql</code> assigns products to sell groups and segments supporting pricing, mix, and category performance analytics.</p>
-            </div>
-            <div class="project-meta">
-              <div class="tags"><span class="tag">dimension</span><span class="tag">segmentation</span><span class="tag">governance</span></div>
-            </div>
-            <a class="file-link" href="sql/product_sell_group.sql" target="_blank" rel="noopener">product_sell_group.sql</a>
-          </article>
-
-          <article class="project-card">
-            <div class="project-header">
-              <p class="section-kicker">replacement cost</p>
-              <h3 class="project-title">Branch/Territory Cost Layers</h3>
-              <p class="project-desc"><code>product_replacement_cost.sql</code> resolves branch &amp; territory price sheet precedence to produce a consistent replacement cost for margin + valuation models.</p>
-            </div>
-            <div class="project-meta">
-              <div class="tags"><span class="tag">cost</span><span class="tag">precedence</span><span class="tag">valuation</span></div>
-            </div>
-            <a class="file-link" href="sql/product_replacement_cost.sql" target="_blank" rel="noopener">product_replacement_cost.sql</a>
-          </article>
+        <!-- empty state -->
+        <div id="empty" class="empty" hidden>
+          <div class="empty-card">
+            <h3>no projects match your filters</h3>
+            <p>try removing a few filters or clearing search.</p>
+            <button class="btn clear-filters">reset filters</button>
+          </div>
         </div>
-      </section>
 
-      <section class="section project-section" id="operations" aria-label="operations projects">
-        <h2 class="section-title">Operations</h2>
-        <p class="projects-intro">Operational analytics, workforce planning, and productivity optimization.</p>
-
-        <!-- example with inline pdf.js viewer -->
-        <article class="project-card">
-          <div class="project-header">
-            <p class="section-kicker">case study</p>
-            <h3 class="project-title">COVID-19 Workforce Planning &amp; Reporting</h3>
-            <p class="project-desc">
-              Executive dashboard reporting and analysis measuring productivity against working hours to manage workforce
-              utilization throughout the COVID-19 pandemic. Insights informed staffing decisions and scheduling,
-              resulting in zero layoffs during the period.
-            </p>
-          </div>
-
-          <div class="project-meta">
-            <div class="tags" aria-label="key tools">
-              <span class="tag">sql</span>
-              <span class="tag">power bi</span>
-              <span class="tag">ssms</span>
-            </div>
-            <div class="links">
-              <!-- add repo or notes links if/when available -->
-            </div>
-          </div>
-
-          <!-- inline pdf viewer (uses the same pdf.js pattern as your home page) -->
-          <div class="pdf-block" style="margin-top:1rem;">
-            <div class="pdf-wrapper">
-              <iframe
-                class="pdf-frame"
-                title="operational productivity report"
-                src="assets/pdfjs/web/viewer.html?file=../../pdf/operational_productivity.pdf"
-                loading="lazy"
-              ></iframe>
-            </div>
-            <p class="pdf-note">
-              if the inline viewer doesn’t load,
-              <a href="assets/pdf/operational_productivity.pdf" target="_blank" rel="noopener">open the full report in a new tab</a>.
-            </p>
-          </div>
-        </article>
-
-        <!-- optional placeholders you can duplicate for more ops projects
-        <article class="project-card">
-          <div class="project-header">
-            <p class="section-kicker">case study</p>
-            <h3 class="project-title">title here</h3>
-            <p class="project-desc">short description here.</p>
-          </div>
-          <div class="project-meta">
-            <div class="tags"><span class="tag">python</span><span class="tag">azure functions</span></div>
-          </div>
-          <div class="pdf-block" style="margin-top:1rem;">
-            <div class="pdf-wrapper">
-              <iframe class="pdf-frame" title="pdf title" src="assets/pdfjs/web/viewer.html?file=../../pdf/your_file.pdf"></iframe>
-            </div>
-            <p class="pdf-note">if the inline viewer doesn’t load, <a href="assets/pdf/your_file.pdf" target="_blank" rel="noopener">open in a new tab</a>.</p>
-          </div>
-        </article>
-        -->
-      </section>
-
-      <!-- finance -->
-      <section class="section project-section" id="finance" aria-label="finance projects">
-        <h2 class="section-title">Finance</h2>
-        <p class="projects-intro">a/r health, reconciliation, invoice flows, and fp&amp;a-ready datasets.</p>
-
-        <div class="projects-grid">
-          <article class="project-card">
-            <div class="project-header">
-              <p class="section-kicker">pipeline</p>
-              <h3 class="project-title">invoice integration pipeline</h3>
-              <p class="project-desc">
-                azure functions moving invoices between intacct and invoiced.com with attachments and csv uploads,
-                featuring structured logging and resilient retry behavior.
-              </p>
-            </div>
-            <div class="project-meta">
-              <div class="tags"><span class="tag">azure functions</span><span class="tag">python</span><span class="tag">rest apis</span></div>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-header">
-              <p class="section-kicker">analytics</p>
-              <h3 class="project-title">shipping analytics</h3>
-              <p class="project-desc">
-                curated datasets and kpis for client services; fp&amp;a-friendly visuals and exports.
-              </p>
-            </div>
-            <div class="project-meta">
-              <div class="tags"><span class="tag">sql</span><span class="tag">synapse</span><span class="tag">power bi</span></div>
-            </div>
-          </article>
-
-          <!-- add more finance cards as needed -->
-        </div>
-      </section>
-
-      <!-- architecture -->
-      <section class="section project-section" id="architecture" aria-label="architecture projects">
-        <h2 class="section-title">Architecture</h2>
-        <p class="projects-intro">azure-first data platforms, cost control, and reliability engineering.</p>
-
-        <div class="projects-grid">
-          <article class="project-card">
-            <div class="project-header">
-              <p class="section-kicker">platform</p>
-              <h3 class="project-title">lakehouse &amp; synapse strategy</h3>
-              <p class="project-desc">
-                adls gen2 lake design with synapse (serverless &amp; dedicated), governed zones, and shared definitions for bi.
-              </p>
-            </div>
-            <div class="project-meta">
-              <div class="tags"><span class="tag">adls gen2</span><span class="tag">synapse</span><span class="tag">rbac / rls</span></div>
-            </div>
-          </article>
-
-          <!-- duplicate for more architecture entries -->
-        </div>
-      </section>
-
-      <!-- compliance research -->
-      <section class="section project-section" id="compliance" aria-label="compliance research projects">
-        <h2 class="section-title">Compliance Research</h2>
-        <p class="projects-intro">minimum wage rules, jurisdictional changes, and curated datasets for policy tracking.</p>
-
-        <div class="projects-grid">
-          <article class="project-card">
-            <div class="project-header">
-              <p class="section-kicker">research</p>
-              <h3 class="project-title">minimum wage compliance dashboard</h3>
-              <p class="project-desc">
-                power bi dashboard blending bls cpi data with multi-level wage rules; highlights ratio trends and alerts.
-              </p>
-            </div>
-            <div class="project-meta">
-              <div class="tags"><span class="tag">power bi</span><span class="tag">azure</span><span class="tag">python</span></div>
-            </div>
-          </article>
-
-          <!-- add more compliance entries as needed -->
+        <!-- back-to-top + clear buttons -->
+        <div class="float-actions">
+          <button class="fab" id="btn-top" title="back to top">↑</button>
+          <button class="fab ghost" id="btn-clear" title="clear filters">⟲</button>
         </div>
       </section>
     </div>
   </main>
 
+  <!-- project detail modal -->
+  <div id="project-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal-backdrop" data-close="#project-modal"></div>
+    <div class="modal-dialog" role="document">
+      <button class="modal-close" data-close="#project-modal" aria-label="close">×</button>
+      <div class="modal-scroller" tabindex="0">
+        <div class="modal-media">
+          <button class="carousel-prev" aria-label="previous">‹</button>
+          <div class="carousel-track" id="carousel-track"></div>
+          <button class="carousel-next" aria-label="next">›</button>
+        </div>
+        <header class="modal-header">
+          <p class="modal-kicker" id="modal-kicker"></p>
+          <h2 class="modal-title" id="modal-title"></h2>
+          <p class="modal-sub" id="modal-sub"></p>
+        </header>
+        <article class="modal-body">
+          <p id="modal-desc"></p>
+          <ul id="modal-highlights" class="highlights"></ul>
+          <div id="modal-metrics" class="metrics"></div>
+          <div id="modal-links" class="links"></div>
+        </article>
+        <section class="modal-related">
+          <h3>similar projects</h3>
+          <div id="modal-similar" class="related"></div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <!-- noscript fallback for content -->
+  <noscript>
+    <section class="container" style="padding:1.5rem 0;">
+      <h2>projects (basic list)</h2>
+      <ul>
+        <li>inventory audit journal — t-sql, sql agent, audit (view with javascript enabled for full experience)</li>
+        <li>365 day product sales — window logic, kpis, performance</li>
+        <li>price matrix & replacement cost — costing, margin, etl</li>
+      </ul>
+    </section>
+  </noscript>
+
+  <!-- footer -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© <span id="year"></span> Dominic Vicchiollo</p>
+      <p>© <span id="year"></span> dominic vicchiollo</p>
       <div class="social">
         <a href="https://github.com/domvicc" target="_blank" rel="noopener">github</a>
         <a href="https://www.linkedin.com/in/dominicvicchiollo" target="_blank" rel="noopener">linkedin</a>
@@ -366,8 +219,193 @@
     </div>
   </footer>
 
+  <!-- embedded projects data (edit or extend as needed) -->
+  <script type="application/json" id="projects-data">
+  [
+    {
+      "id": "inventory-audit-journal",
+      "title": "inventory audit journal",
+      "subtitle": "reconciling perpetual vs g/l with staged audit layers",
+      "description": "large scripted job creating staging + analysis tables to reconcile perpetual vs g/l, rebate variance, and spa claim health with repeatable indexes and branching filters.",
+      "cover": [{"src":"assets/img/inventory_audit_cover.jpg","alt":"inventory audit cover"}],
+      "tags": ["sql development","audit","inventory"],
+      "tech_stack": ["t-sql","sql agent","indexing"],
+      "role": "data engineer",
+      "year": 2024,
+      "links": {"repo":"sql/inventory_audit.sql","case_study":"assets/pdfjs/web/viewer.html?file=../../pdf/inventory_audit_notes.pdf"},
+      "metrics": [{"label":"tables","value":"12"},{"label":"indexes","value":"27"},{"label":"runtime","value":"< 6m"}],
+      "highlights": ["branching filter paths","repeatable index strategy","variance surfacing for ops"],
+      "status": "in production",
+      "featured": true
+    },
+    {
+      "id": "product-365-sales",
+      "title": "365 day product sales",
+      "subtitle": "rolling 30/90/365 movement & cost for turns",
+      "description": "aggregates rolling movement and cost to feed excess / turns kpis while isolating returns and enforcing location-type rules.",
+      "cover": [{"src":"assets/img/365_sales.jpg","alt":"sales coverage"}],
+      "tags": ["sql development","kpis","performance"],
+      "tech_stack": ["t-sql","window functions"],
+      "role": "data engineer",
+      "year": 2024,
+      "links": {"repo":"sql/product_365_sales.sql"},
+      "metrics": [{"label":"rows/day","value":"40m+"},{"label":"refresh","value":"hourly"}],
+      "highlights": ["window functions","return isolation","location rules"],
+      "status": "in production",
+      "featured": true
+    },
+    {
+      "id": "price-matrix-replacement-cost",
+      "title": "price matrix & replacement cost",
+      "subtitle": "unified cost sources & tier logic",
+      "description": "supporting scripts unify cost sources and tier logic to drive margin analytics and downstream contract pricing.",
+      "cover": [{"src":"assets/img/price_matrix.jpg","alt":"price matrix"}],
+      "tags": ["sql development","costing","margin"],
+      "tech_stack": ["t-sql","etl"],
+      "role": "data engineer",
+      "year": 2023,
+      "links": {"repo":"sql/price_matrix.sql"},
+      "metrics": [{"label":"tiers","value":"7"},{"label":"latency","value":"< 2m"}],
+      "highlights": ["tier precedence","margin analytics","contract pricing feed"],
+      "status": "in production",
+      "featured": false
+    },
+    {
+      "id": "branch-ledger-feeds",
+      "title": "branch & ledger feeds",
+      "subtitle": "dim + fact extracts for bi & finance",
+      "description": "core dimension + fact extracts shaping a governed layer for power bi and finance reconciliation (a/r, a/p, inventory).",
+      "cover": [{"src":"assets/img/ledger.jpg","alt":"ledger feeds"}],
+      "tags": ["sql development","operations","governance"],
+      "tech_stack": ["t-sql","power bi"],
+      "role": "data engineer",
+      "year": 2023,
+      "links": {"repo":"sql/ledger_file.sql"},
+      "metrics": [{"label":"dimensions","value":"12"},{"label":"facts","value":"9"}],
+      "highlights": ["shared dimensions","bi-ready facts","recon alignment"],
+      "status": "in production",
+      "featured": false
+    },
+    {
+      "id": "branch-inventory-foundation",
+      "title": "branch inventory foundation",
+      "subtitle": "surrogate keys + indexed attributes",
+      "description": "consolidates product + branch calc sources; indexes lead time and safety stock attributes for downstream availability and aging analytics.",
+      "cover": [{"src":"assets/img/inventory_foundation.jpg","alt":"inventory foundation"}],
+      "tags": ["sql development","inventory","performance"],
+      "tech_stack": ["t-sql","indexing"],
+      "role": "data engineer",
+      "year": 2024,
+      "links": {"repo":"sql/product_branch_inventory.sql"},
+      "metrics": [{"label":"slo","value":"p95 < 1.2s"},{"label":"size","value":"200gb"}],
+      "highlights": ["consolidated keys","availability analytics","aging insights"],
+      "status": "in production",
+      "featured": false
+    },
+    {
+      "id": "spa-rebate-normalization",
+      "title": "spa & rebate normalization",
+      "subtitle": "clean fact for margin reconciliation",
+      "description": "extracts po + sales linkages, classifies spa vs spj, and materializes a clean rebate fact for variance and eligibility.",
+      "cover": [{"src":"assets/img/rebates.jpg","alt":"rebate normalization"}],
+      "tags": ["sql development","rebates","margin"],
+      "tech_stack": ["t-sql","joins"],
+      "role": "data engineer",
+      "year": 2023,
+      "links": {"repo":"sql/rebates.sql"},
+      "metrics": [{"label":"link accuracy","value":"99.2%"},{"label":"records","value":"35m"}],
+      "highlights": ["spa/spj classification","variance surfacing","eligibility flags"],
+      "status": "in production",
+      "featured": false
+    },
+    {
+      "id": "tagged-order-variance",
+      "title": "tagged order variance",
+      "subtitle": "reconcile sales lines to po/transfer tags",
+      "description": "reconciles sales lines to po and transfer tags, flags cost variances, and surfaces broken tag scenarios for correction.",
+      "cover": [{"src":"assets/img/tagged_orders.jpg","alt":"tagged orders"}],
+      "tags": ["sql development","audit","exceptions"],
+      "tech_stack": ["t-sql"],
+      "role": "data engineer",
+      "year": 2024,
+      "links": {"repo":"sql/so_tagged_orders.sql"},
+      "metrics": [{"label":"exceptions/day","value":"~2k"},{"label":"mttr","value":"< 1d"}],
+      "highlights": ["variance detection","exception queues","ops handoff"],
+      "status": "in production",
+      "featured": false
+    },
+    {
+      "id": "unbilled-ap-exposure",
+      "title": "unbilled ap exposure",
+      "subtitle": "accrual + payment gl to ubap",
+      "description": "produces an unbilled payable ledger combining accrual and payment gl postings to monitor aging and exceptions before liability surprises.",
+      "cover": [{"src":"assets/img/unbilled_ap.jpg","alt":"unbilled ap"}],
+      "tags": ["finance","controls","ap"],
+      "tech_stack": ["t-sql"],
+      "role": "data engineer",
+      "year": 2023,
+      "links": {"repo":"sql/ap_unbilled.sql"},
+      "metrics": [{"label":"exposure delta","value":"-18%"},{"label":"alerts","value":"daily"}],
+      "highlights": ["aging visibility","pre-invoice signals","finance alignment"],
+      "status": "in production",
+      "featured": false
+    },
+    {
+      "id": "covid-workforce-planning",
+      "title": "covid-19 workforce planning & reporting",
+      "subtitle": "productivity vs hours to inform staffing",
+      "description": "executive dashboard measuring productivity against working hours to manage workforce utilization during the pandemic; contributed to zero layoffs.",
+      "cover": [{"src":"assets/img/workforce.jpg","alt":"workforce planning"}],
+      "tags": ["operations","case study","power bi"],
+      "tech_stack": ["sql","power bi","ssms"],
+      "role": "analytics engineer",
+      "year": 2021,
+      "links": {"case_study":"assets/pdfjs/web/viewer.html?file=../../pdf/operational_productivity.pdf"},
+      "metrics": [{"label":"teams","value":"6"},{"label":"dashboards","value":"4"}],
+      "highlights": ["exec-ready visuals","utilization insights","schedule optimization"],
+      "status": "archived",
+      "featured": true
+    },
+    {
+      "id": "lakehouse-synapse-strategy",
+      "title": "lakehouse & synapse strategy",
+      "subtitle": "adls gen2 + synapse (serverless/dedicated)",
+      "description": "azure-first lake design with governed zones and shared definitions for bi; cost-aware and reliable.",
+      "cover": [{"src":"assets/img/lakehouse.jpg","alt":"lakehouse"}],
+      "tags": ["architecture","platform","governance"],
+      "tech_stack": ["adls gen2","synapse","rbac/rls"],
+      "role": "architect",
+      "year": 2024,
+      "links": {},
+      "metrics": [{"label":"zones","value":"3"},{"label":"cost ↓","value":"~22%"}],
+      "highlights": ["zone governance","shared dims","cost control"],
+      "status": "in production",
+      "featured": false
+    },
+    {
+      "id": "minwage-compliance-dashboard",
+      "title": "minimum wage compliance dashboard",
+      "subtitle": "blending bls cpi with multi-level wage rules",
+      "description": "power bi dashboard with ratio trends and alerts across federal/state/county/city minimum wage rules.",
+      "cover": [{"src":"assets/img/minwage.jpg","alt":"minimum wage dashboard"}],
+      "tags": ["compliance","research","analytics"],
+      "tech_stack": ["power bi","azure","python"],
+      "role": "analytics engineer",
+      "year": 2025,
+      "links": {},
+      "metrics": [{"label":"jurisdictions","value":"500+"},{"label":"alert latency","value":"< 1d"}],
+      "highlights": ["cpi overlays","multi-level rules","alerting"],
+      "status": "in production",
+      "featured": true
+    }
+  ]
+  </script>
+
+  <!-- app script -->
+  <script src="assets/js/app.js?v=25" defer></script>
+
   <script>
-    // footer year + mobile nav (mirrors home page behavior)
+    // footer year + mobile nav
     document.addEventListener('DOMContentLoaded', () => {
       const y = document.getElementById('year');
       if (y) y.textContent = new Date().getFullYear();
