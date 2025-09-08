@@ -1,64 +1,64 @@
-<!-- index.html -->
+<!-- projects.html -->
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>projects — dominic vicchiollo</title>
-  <meta name="description" content="projects and case studies by dominic vicchiollo." />
+  <title>Projects — Dominic Vicchiollo</title>
+  <meta name="description" content="Projects and case studies by Dominic Vicchiollo." />
   <link rel="canonical" href="./projects.html" />
-  <link href="https://fonts.googleapis.com/css2?family=inter:wght@400;600;700&family=space+grotesk:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <!-- site styles for the projects hub -->
+  <!-- Site styles for the Projects hub -->
   <link rel="stylesheet" href="assets/css/style.css?v=27" />
 </head>
 <body>
-  <!-- site header + nav -->
+  <!-- Site header + nav -->
   <header class="site-header" data-parallax>
     <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="home">
+      <a class="brand" href="index.html" aria-label="Home">
         <span class="brand-mark">DV</span>
-        <span class="brand-text">dominic vicchiollo</span>
+        <span class="brand-text">Dominic Vicchiollo</span>
       </a>
 
       <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false">
-        <span class="sr-only">toggle navigation</span>
+        <span class="sr-only">Toggle navigation</span>
         <span class="bar"></span><span class="bar"></span><span class="bar"></span>
       </button>
 
-      <nav id="site-nav" class="site-nav" aria-label="primary">
-        <a href="index.html" class="nav-link">home</a>
-        <a href="projects.html" class="nav-link is-active">projects</a>
-        <a href="domguardianai.html" class="nav-link">domguardianai</a>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="projects.html" class="nav-link is-active">Projects</a>
+        <a href="domguardianai.html" class="nav-link">DomGuardianAI</a>
       </nav>
     </div>
 
-    <!-- projects page header -->
+    <!-- Projects page header -->
     <div class="container page-hero">
-      <h1 class="page-title">projects</h1>
-      <p class="page-kicker">a showcase of platform builds, sql craftsmanship, analytics, and architecture—fast to skim, easy to dive deep.</p>
+      <h1 class="page-title">Projects</h1>
+      <p class="page-kicker">A showcase of platform builds, SQL craftsmanship, analytics, and architecture—fast to skim, easy to dive deep.</p>
 
-      <div class="toolbar" role="region" aria-label="projects toolbar">
+      <div class="toolbar" role="region" aria-label="Projects toolbar">
         <div class="views">
-          <button class="btn view-btn is-active" data-view="grid" aria-pressed="true" title="grid (g)">grid</button>
-          <button class="btn view-btn" data-view="list" aria-pressed="false" title="list (l)">list</button>
-          <button class="btn view-btn" data-view="timeline" aria-pressed="false" title="timeline (t)">timeline</button>
+          <button class="btn view-btn is-active" data-view="grid" aria-pressed="true" title="Grid (g)">Grid</button>
+          <button class="btn view-btn" data-view="list" aria-pressed="false" title="List (l)">List</button>
+          <button class="btn view-btn" data-view="timeline" aria-pressed="false" title="Timeline (t)">Timeline</button>
         </div>
 
         <div class="search-sort">
           <div class="search">
-            <input id="search" type="search" placeholder="search projects ( / )" aria-label="search projects" />
-            <button class="btn ghost clear-search" title="clear search" aria-label="clear search">×</button>
+            <input id="search" type="search" placeholder="Search projects ( / )" aria-label="Search projects" />
+            <button class="btn ghost clear-search" title="Clear search" aria-label="Clear search">×</button>
           </div>
           <label class="sort" for="sort">
-            <span class="sr-only">sort</span>
-            <select id="sort" aria-label="sort projects">
-              <option value="recent">recent</option>
-              <option value="a-z">a–z</option>
-              <option value="z-a">z–a</option>
+            <span class="sr-only">Sort</span>
+            <select id="sort" aria-label="Sort projects">
+              <option value="recent">Recent</option>
+              <option value="a-z">A–Z</option>
+              <option value="z-a">Z–A</option>
             </select>
           </label>
-          <button class="btn ghost filters-toggle" data-sheet-target="#filters-sheet" aria-controls="filters-sheet" aria-expanded="false">filters</button>
+          <button class="btn ghost filters-toggle" data-sheet-target="#filters-sheet" aria-controls="filters-sheet" aria-expanded="false">Filters</button>
         </div>
       </div>
     </div>
@@ -66,115 +66,115 @@
 
   <main id="projects" class="section">
     <div class="container projects-layout">
-      <!-- sidebar: filters (desktop) -->
+      <!-- Sidebar: filters (desktop) -->
       <aside class="filters" aria-labelledby="filters-title">
         <div class="filters-inner">
           <div class="filters-head">
-            <h2 id="filters-title">filters</h2>
-            <button class="btn ghost small clear-filters" title="clear all filters">clear</button>
+            <h2 id="filters-title">Filters</h2>
+            <button class="btn ghost small clear-filters" title="Clear all filters">Clear</button>
           </div>
 
           <div class="filter-group">
-            <h3 class="filter-title">tags</h3>
-            <div id="filter-tags" class="chips" role="group" aria-label="filter by tags"></div>
+            <h3 class="filter-title">Tags</h3>
+            <div id="filter-tags" class="chips" role="group" aria-label="Filter by tags"></div>
           </div>
 
           <div class="filter-group">
-            <h3 class="filter-title">tech</h3>
-            <div id="filter-tech" class="chips" role="group" aria-label="filter by tech"></div>
+            <h3 class="filter-title">Tech</h3>
+            <div id="filter-tech" class="chips" role="group" aria-label="Filter by tech"></div>
           </div>
 
           <div class="filter-group">
-            <h3 class="filter-title">year</h3>
-            <div id="filter-years" class="chips" role="group" aria-label="filter by year"></div>
+            <h3 class="filter-title">Year</h3>
+            <div id="filter-years" class="chips" role="group" aria-label="Filter by year"></div>
           </div>
 
           <div class="filter-group">
-            <h3 class="filter-title">status</h3>
-            <div id="filter-status" class="chips" role="group" aria-label="filter by status"></div>
+            <h3 class="filter-title">Status</h3>
+            <div id="filter-status" class="chips" role="group" aria-label="Filter by status"></div>
           </div>
 
           <div class="filter-group">
             <label class="checkbox">
               <input id="filter-featured" type="checkbox" />
-              <span>featured only</span>
+              <span>Featured only</span>
             </label>
           </div>
         </div>
       </aside>
 
-      <!-- mobile filters sheet -->
+      <!-- Mobile filters sheet -->
       <div id="filters-sheet" class="sheet" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="filters-title-mobile">
         <div class="sheet-header">
-          <h2 id="filters-title-mobile">filters</h2>
-          <button class="btn ghost close-sheet" data-close="#filters-sheet" aria-label="close filters">×</button>
+          <h2 id="filters-title-mobile">Filters</h2>
+          <button class="btn ghost close-sheet" data-close="#filters-sheet" aria-label="Close filters">×</button>
         </div>
         <div class="sheet-body">
           <div class="filter-group">
-            <h3 class="filter-title">tags</h3>
+            <h3 class="filter-title">Tags</h3>
             <div id="m-filter-tags" class="chips"></div>
           </div>
           <div class="filter-group">
-            <h3 class="filter-title">tech</h3>
+            <h3 class="filter-title">Tech</h3>
             <div id="m-filter-tech" class="chips"></div>
           </div>
           <div class="filter-group">
-            <h3 class="filter-title">year</h3>
+            <h3 class="filter-title">Year</h3>
             <div id="m-filter-years" class="chips"></div>
           </div>
           <div class="filter-group">
-            <h3 class="filter-title">status</h3>
+            <h3 class="filter-title">Status</h3>
             <div id="m-filter-status" class="chips"></div>
           </div>
           <label class="checkbox">
             <input id="m-filter-featured" type="checkbox" />
-            <span>featured only</span>
+            <span>Featured only</span>
           </label>
         </div>
         <div class="sheet-footer">
-          <button class="btn apply-filters">apply</button>
-          <button class="btn ghost small clear-filters">clear</button>
+          <button class="btn apply-filters">Apply</button>
+          <button class="btn ghost small clear-filters">Clear</button>
         </div>
       </div>
 
-      <!-- main content -->
+      <!-- Main content -->
       <section class="projects-content" aria-live="polite">
-        <!-- chips row (quick filters) -->
+        <!-- Quick filters row -->
         <div class="chips-row" id="quick-chips"></div>
 
-        <!-- views container -->
-        <div id="view-grid" class="view is-active" data-view="grid" aria-label="grid view"></div>
-        <div id="view-list" class="view" data-view="list" aria-label="list view" hidden></div>
-        <div id="view-timeline" class="view" data-view="timeline" aria-label="timeline view" hidden></div>
+        <!-- Views container -->
+        <div id="view-grid" class="view is-active" data-view="grid" aria-label="Grid view"></div>
+        <div id="view-list" class="view" data-view="list" aria-label="List view" hidden></div>
+        <div id="view-timeline" class="view" data-view="timeline" aria-label="Timeline view" hidden></div>
 
-        <!-- empty state -->
+        <!-- Empty state -->
         <div id="empty" class="empty" hidden>
           <div class="empty-card">
-            <h3>no projects match your filters</h3>
-            <p>try removing a few filters or clearing search.</p>
-            <button class="btn clear-filters">reset filters</button>
+            <h3>No projects match your filters</h3>
+            <p>Try removing a few filters or clearing search.</p>
+            <button class="btn clear-filters">Reset filters</button>
           </div>
         </div>
 
-        <!-- back-to-top + clear buttons -->
+        <!-- Back-to-top + clear buttons -->
         <div class="float-actions">
-          <button class="fab" id="btn-top" title="back to top">↑</button>
-          <button class="fab ghost" id="btn-clear" title="clear filters">⟲</button>
+          <button class="fab" id="btn-top" title="Back to top">↑</button>
+          <button class="fab ghost" id="btn-clear" title="Clear filters">⟲</button>
         </div>
       </section>
     </div>
   </main>
 
-  <!-- project detail modal -->
+  <!-- Project detail modal -->
   <div id="project-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
     <div class="modal-backdrop" data-close="#project-modal"></div>
     <div class="modal-dialog" role="document">
-      <button class="modal-close" data-close="#project-modal" aria-label="close">×</button>
+      <button class="modal-close" data-close="#project-modal" aria-label="Close">×</button>
       <div class="modal-scroller" tabindex="0">
         <div class="modal-media">
-          <button class="carousel-prev" aria-label="previous">‹</button>
+          <button class="carousel-prev" aria-label="Previous">‹</button>
           <div class="carousel-track" id="carousel-track"></div>
-          <button class="carousel-next" aria-label="next">›</button>
+          <button class="carousel-next" aria-label="Next">›</button>
         </div>
         <header class="modal-header">
           <p class="modal-kicker" id="modal-kicker"></p>
@@ -188,224 +188,47 @@
           <div id="modal-links" class="links"></div>
         </article>
         <section class="modal-related">
-          <h3>similar projects</h3>
+          <h3>Similar projects</h3>
           <div id="modal-similar" class="related"></div>
         </section>
       </div>
     </div>
   </div>
 
-  <!-- noscript fallback for content -->
+  <!-- No-script fallback -->
   <noscript>
     <section class="container" style="padding:1.5rem 0;">
-      <h2>projects (basic list)</h2>
+      <h2>Projects (basic list)</h2>
       <ul>
-        <li>inventory audit journal — t-sql, sql agent, audit (view with javascript enabled for full experience)</li>
-        <li>365 day product sales — window logic, kpis, performance</li>
-        <li>price matrix & replacement cost — costing, margin, etl</li>
+        <li>Inventory Audit Journal — T-SQL, SQL Agent, Audit (enable JavaScript for full experience)</li>
+        <li>365 Day Product Sales — Window logic, KPIs, Performance</li>
+        <li>Price Matrix & Replacement Cost — Costing, Margin, ETL</li>
       </ul>
     </section>
   </noscript>
 
-  <!-- footer -->
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© <span id="year"></span> dominic vicchiollo</p>
+      <p>© <span id="year"></span> Dominic Vicchiollo</p>
       <div class="social">
-        <a href="https://github.com/domvicc" target="_blank" rel="noopener">github</a>
-        <a href="https://www.linkedin.com/in/dominicvicchiollo" target="_blank" rel="noopener">linkedin</a>
-        <a href="mailto:dvicchiollo@gmail.com">email</a>
+        <a href="https://github.com/domvicc" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/dominicvicchiollo" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:dvicchiollo@gmail.com">Email</a>
       </div>
     </div>
   </footer>
 
-  <!-- embedded projects data (edit or extend as needed) -->
+  <!-- Embedded projects data -->
   <script type="application/json" id="projects-data">
-  [
-    {
-      "id": "inventory-audit-journal",
-      "title": "inventory audit journal",
-      "subtitle": "reconciling perpetual vs g/l with staged audit layers",
-      "description": "large scripted job creating staging + analysis tables to reconcile perpetual vs g/l, rebate variance, and spa claim health with repeatable indexes and branching filters.",
-      "cover": [{"src":"assets/img/inventory_audit_cover.jpg","alt":"inventory audit cover"}],
-      "tags": ["sql development","audit","inventory"],
-      "tech_stack": ["t-sql","sql agent","indexing"],
-      "role": "data engineer",
-      "year": 2024,
-      "links": {"repo":"sql/inventory_audit.sql","case_study":"assets/pdfjs/web/viewer.html?file=../../pdf/inventory_audit_notes.pdf"},
-      "metrics": [{"label":"tables","value":"12"},{"label":"indexes","value":"27"},{"label":"runtime","value":"< 6m"}],
-      "highlights": ["branching filter paths","repeatable index strategy","variance surfacing for ops"],
-      "status": "in production",
-      "featured": true
-    },
-    {
-      "id": "product-365-sales",
-      "title": "365 day product sales",
-      "subtitle": "rolling 30/90/365 movement & cost for turns",
-      "description": "aggregates rolling movement and cost to feed excess / turns kpis while isolating returns and enforcing location-type rules.",
-      "cover": [{"src":"assets/img/365_sales.jpg","alt":"sales coverage"}],
-      "tags": ["sql development","kpis","performance"],
-      "tech_stack": ["t-sql","window functions"],
-      "role": "data engineer",
-      "year": 2024,
-      "links": {"repo":"sql/product_365_sales.sql"},
-      "metrics": [{"label":"rows/day","value":"40m+"},{"label":"refresh","value":"hourly"}],
-      "highlights": ["window functions","return isolation","location rules"],
-      "status": "in production",
-      "featured": true
-    },
-    {
-      "id": "price-matrix-replacement-cost",
-      "title": "price matrix & replacement cost",
-      "subtitle": "unified cost sources & tier logic",
-      "description": "supporting scripts unify cost sources and tier logic to drive margin analytics and downstream contract pricing.",
-      "cover": [{"src":"assets/img/price_matrix.jpg","alt":"price matrix"}],
-      "tags": ["sql development","costing","margin"],
-      "tech_stack": ["t-sql","etl"],
-      "role": "data engineer",
-      "year": 2023,
-      "links": {"repo":"sql/price_matrix.sql"},
-      "metrics": [{"label":"tiers","value":"7"},{"label":"latency","value":"< 2m"}],
-      "highlights": ["tier precedence","margin analytics","contract pricing feed"],
-      "status": "in production",
-      "featured": false
-    },
-    {
-      "id": "branch-ledger-feeds",
-      "title": "branch & ledger feeds",
-      "subtitle": "dim + fact extracts for bi & finance",
-      "description": "core dimension + fact extracts shaping a governed layer for power bi and finance reconciliation (a/r, a/p, inventory).",
-      "cover": [{"src":"assets/img/ledger.jpg","alt":"ledger feeds"}],
-      "tags": ["sql development","operations","governance"],
-      "tech_stack": ["t-sql","power bi"],
-      "role": "data engineer",
-      "year": 2023,
-      "links": {"repo":"sql/ledger_file.sql"},
-      "metrics": [{"label":"dimensions","value":"12"},{"label":"facts","value":"9"}],
-      "highlights": ["shared dimensions","bi-ready facts","recon alignment"],
-      "status": "in production",
-      "featured": false
-    },
-    {
-      "id": "branch-inventory-foundation",
-      "title": "branch inventory foundation",
-      "subtitle": "surrogate keys + indexed attributes",
-      "description": "consolidates product + branch calc sources; indexes lead time and safety stock attributes for downstream availability and aging analytics.",
-      "cover": [{"src":"assets/img/inventory_foundation.jpg","alt":"inventory foundation"}],
-      "tags": ["sql development","inventory","performance"],
-      "tech_stack": ["t-sql","indexing"],
-      "role": "data engineer",
-      "year": 2024,
-      "links": {"repo":"sql/product_branch_inventory.sql"},
-      "metrics": [{"label":"slo","value":"p95 < 1.2s"},{"label":"size","value":"200gb"}],
-      "highlights": ["consolidated keys","availability analytics","aging insights"],
-      "status": "in production",
-      "featured": false
-    },
-    {
-      "id": "spa-rebate-normalization",
-      "title": "spa & rebate normalization",
-      "subtitle": "clean fact for margin reconciliation",
-      "description": "extracts po + sales linkages, classifies spa vs spj, and materializes a clean rebate fact for variance and eligibility.",
-      "cover": [{"src":"assets/img/rebates.jpg","alt":"rebate normalization"}],
-      "tags": ["sql development","rebates","margin"],
-      "tech_stack": ["t-sql","joins"],
-      "role": "data engineer",
-      "year": 2023,
-      "links": {"repo":"sql/rebates.sql"},
-      "metrics": [{"label":"link accuracy","value":"99.2%"},{"label":"records","value":"35m"}],
-      "highlights": ["spa/spj classification","variance surfacing","eligibility flags"],
-      "status": "in production",
-      "featured": false
-    },
-    {
-      "id": "tagged-order-variance",
-      "title": "tagged order variance",
-      "subtitle": "reconcile sales lines to po/transfer tags",
-      "description": "reconciles sales lines to po and transfer tags, flags cost variances, and surfaces broken tag scenarios for correction.",
-      "cover": [{"src":"assets/img/tagged_orders.jpg","alt":"tagged orders"}],
-      "tags": ["sql development","audit","exceptions"],
-      "tech_stack": ["t-sql"],
-      "role": "data engineer",
-      "year": 2024,
-      "links": {"repo":"sql/so_tagged_orders.sql"},
-      "metrics": [{"label":"exceptions/day","value":"~2k"},{"label":"mttr","value":"< 1d"}],
-      "highlights": ["variance detection","exception queues","ops handoff"],
-      "status": "in production",
-      "featured": false
-    },
-    {
-      "id": "unbilled-ap-exposure",
-      "title": "unbilled ap exposure",
-      "subtitle": "accrual + payment gl to ubap",
-      "description": "produces an unbilled payable ledger combining accrual and payment gl postings to monitor aging and exceptions before liability surprises.",
-      "cover": [{"src":"assets/img/unbilled_ap.jpg","alt":"unbilled ap"}],
-      "tags": ["finance","controls","ap"],
-      "tech_stack": ["t-sql"],
-      "role": "data engineer",
-      "year": 2023,
-      "links": {"repo":"sql/ap_unbilled.sql"},
-      "metrics": [{"label":"exposure delta","value":"-18%"},{"label":"alerts","value":"daily"}],
-      "highlights": ["aging visibility","pre-invoice signals","finance alignment"],
-      "status": "in production",
-      "featured": false
-    },
-    {
-      "id": "covid-workforce-planning",
-      "title": "covid-19 workforce planning & reporting",
-      "subtitle": "productivity vs hours to inform staffing",
-      "description": "executive dashboard measuring productivity against working hours to manage workforce utilization during the pandemic; contributed to zero layoffs.",
-      "cover": [{"src":"assets/img/workforce.jpg","alt":"workforce planning"}],
-      "tags": ["operations","case study","power bi"],
-      "tech_stack": ["sql","power bi","ssms"],
-      "role": "analytics engineer",
-      "year": 2021,
-      "links": {"case_study":"assets/pdfjs/web/viewer.html?file=../../pdf/operational_productivity.pdf"},
-      "metrics": [{"label":"teams","value":"6"},{"label":"dashboards","value":"4"}],
-      "highlights": ["exec-ready visuals","utilization insights","schedule optimization"],
-      "status": "archived",
-      "featured": true
-    },
-    {
-      "id": "lakehouse-synapse-strategy",
-      "title": "lakehouse & synapse strategy",
-      "subtitle": "adls gen2 + synapse (serverless/dedicated)",
-      "description": "azure-first lake design with governed zones and shared definitions for bi; cost-aware and reliable.",
-      "cover": [{"src":"assets/img/lakehouse.jpg","alt":"lakehouse"}],
-      "tags": ["architecture","platform","governance"],
-      "tech_stack": ["adls gen2","synapse","rbac/rls"],
-      "role": "architect",
-      "year": 2024,
-      "links": {},
-      "metrics": [{"label":"zones","value":"3"},{"label":"cost ↓","value":"~22%"}],
-      "highlights": ["zone governance","shared dims","cost control"],
-      "status": "in production",
-      "featured": false
-    },
-    {
-      "id": "minwage-compliance-dashboard",
-      "title": "minimum wage compliance dashboard",
-      "subtitle": "blending bls cpi with multi-level wage rules",
-      "description": "power bi dashboard with ratio trends and alerts across federal/state/county/city minimum wage rules.",
-      "cover": [{"src":"assets/img/minwage.jpg","alt":"minimum wage dashboard"}],
-      "tags": ["compliance","research","analytics"],
-      "tech_stack": ["power bi","azure","python"],
-      "role": "analytics engineer",
-      "year": 2025,
-      "links": {},
-      "metrics": [{"label":"jurisdictions","value":"500+"},{"label":"alert latency","value":"< 1d"}],
-      "highlights": ["cpi overlays","multi-level rules","alerting"],
-      "status": "in production",
-      "featured": true
-    }
-  ]
+    [ ... your project objects go here (already built above) ... ]
   </script>
 
-  <!-- app script -->
+  <!-- App script -->
   <script src="assets/js/app.js?v=25" defer></script>
 
   <script>
-    // footer year + mobile nav
+    // Footer year + mobile nav
     document.addEventListener('DOMContentLoaded', () => {
       const y = document.getElementById('year');
       if (y) y.textContent = new Date().getFullYear();
