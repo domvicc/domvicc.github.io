@@ -110,7 +110,7 @@ body {
   inline-size: 36px; block-size: 36px; border-radius: 10px;
   background: linear-gradient(135deg, var(--primary), var(--primary-2));
   color: #000; font-weight: 700;
-  text-transform: uppercase; /* always DV */
+  text-transform: uppercase; /* always dv */
   letter-spacing: .5px;
 }
 .brand-text { color: var(--text); font-weight: 700; letter-spacing: .3px; }
@@ -227,7 +227,7 @@ body {
 .callout:hover { transform: translateY(-2px); border-color: color-mix(in oklab, var(--border), var(--primary) 30%); }
 .callout-title { margin: 0 0 .45rem; font-weight: 700; }
 
-/* projects / PDF */
+/* projects / pdf */
 .pdf-block { margin-top: 1.25rem; background: var(--card); border: 1px solid var(--border); padding: 1rem; border-radius: var(--radius); box-shadow: var(--shadow); }
 .pdf-wrapper { inline-size: 100%; aspect-ratio: 16 / 10; overflow: hidden; border-radius: calc(var(--radius) - 4px); }
 .pdf-wrapper iframe { inline-size: 100%; block-size: 100%; border: none; display: block; }
@@ -259,12 +259,11 @@ body {
 .features-inline .feature-box li:last-child { margin-bottom: 0; }
 .features-inline .subheading { margin-top: 0; margin-bottom: .5rem; font-size: 1rem; font-weight: 700; }
 
-/* === corrected rules: only details smaller === */
+/* only details smaller (titles stay strong) */
 .features-inline .feature-box ul {
-  font-size: 0.85rem;  /* reduce details */
+  font-size: 0.85rem;
   line-height: 1.4;
 }
-/* ============================================ */
 
 /* responsive wrapping below large desktop */
 @media (max-width: 1400px) {
@@ -337,19 +336,26 @@ body {
   .hero { min-height: 0; }
   .hero-logo { margin-top: 6px; }
 }
-/* About Me section custom styling */
+
+/* ----------------------------------------------------
+   about me – scoped overrides (only this section)
+   ---------------------------------------------------- */
+
+#about .container {
+  padding-inline: 0;            /* remove global side padding for precise control */
+}
+
 #about .section-body {
-  width: 80%;              /* content takes up 80% of page */
-  margin-left: 10%;        /* center with equal side margins */
-  margin-right: 10%;
-  text-align: left;        /* keep paragraphs aligned left */
+  margin-inline: 10%;           /* left/right margins = 10% each */
+  width: auto;                  /* fills remaining (80%) */
+  text-align: left;
 }
 
 #about .section-body p.lead {
-  text-indent: 1.5rem;     /* indent first line of each paragraph */
-  margin-bottom: 1.25rem;  /* add spacing for readability */
+  text-indent: 1.5rem;          /* professional first-line indent */
+  margin-bottom: 1.25rem;       /* keep paragraph rhythm */
 }
 
 #about .features-inline {
-  margin-top: 2rem;        /* extra spacing above the feature grid */
+  margin-top: 2rem;             /* breathing room above the six boxes */
 }
