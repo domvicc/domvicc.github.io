@@ -348,9 +348,9 @@ body {
 
 /* 1) Title: nudge in from the left */
 #about .section-title {
-  margin-left: 10%;
+  margin-left: 6%;
   margin-bottom: .5rem;
-  margin-top: .5rem;
+  margin-top: 0;
 }
 
 /* 2) Description paragraphs: narrower and centered */
@@ -365,9 +365,10 @@ body {
 /* 3) Six feature boxes row:
       95% width, 5% left margin, 0 right margin */
 #about .features-inline {
-  width: 100%;
-  margin-left: 5%;
-  margin-right: 5%;
+  width: 90%;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Keep headings strong; details smaller (already present above)
