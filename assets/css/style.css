@@ -259,6 +259,17 @@ body {
 .features-inline .feature-box li:last-child { margin-bottom: 0; }
 .features-inline .subheading { margin-top: 0; margin-bottom: .5rem; font-size: .95rem; }
 
+/* === added rules for smaller detail text === */
+.features-inline .feature-box .subheading {
+  font-size: 1rem;     /* keep headings clear */
+  font-weight: 700;
+}
+.features-inline .feature-box ul {
+  font-size: 0.85rem;  /* reduce details */
+  line-height: 1.4;
+}
+/* ========================================= */
+
 /* responsive wrapping below large desktop */
 @media (max-width: 1400px) {
   .features-inline { grid-template-columns: repeat(3, minmax(0, 1fr)); }
