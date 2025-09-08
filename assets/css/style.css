@@ -158,7 +158,7 @@ body {
 .hero-logo-wrap { margin-inline: auto; }
 .hero-logo {
   display: block;
-  margin: 12px auto 0;
+  margin: 4px auto 0;
   max-width: min(82vw, 820px);
   width: auto;
   height: auto;
@@ -169,7 +169,7 @@ body {
 
 /* hero subtexts */
 .hero-role {
-  margin: .5rem 0 .35rem;
+  margin: .35rem 0 .15rem;
   color: var(--primary-2);
   font-weight: 600;
   letter-spacing: .4px;
@@ -355,8 +355,8 @@ body {
 
 /* 2) Description paragraphs: narrower and centered */
 #about .section-body > p.lead {
-  width: 92%;
-  max-width: 1400px;
+  width: 90%;
+  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
   text-indent: 1.25rem;
@@ -365,9 +365,9 @@ body {
 /* 3) Six feature boxes row:
       95% width, 5% left margin, 0 right margin */
 #about .features-inline {
-  width: 95%;
+  width: 100%;
   margin-left: 5%;
-  margin-right: 0;
+  margin-right: 5%;
 }
 
 /* Keep headings strong; details smaller (already present above)
@@ -377,7 +377,7 @@ body {
 
 /* 4) PDF block: align with the feature boxes */
 #about .pdf-block {
-  width: 95%;
+  width: 100%;
   margin-left: 5%;
-  margin-right: 0;
+  margin-right: 5%;
 }
