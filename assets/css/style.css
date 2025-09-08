@@ -359,3 +359,15 @@ body {
 #about .features-inline {
   margin-top: 2rem;             /* breathing room above the six boxes */
 }
+/* --- About Me title margin --- */
+#about .section-title {
+  margin-left: 10%;      /* shift the "About Me" title in from the left */
+  margin-bottom: 2rem;   /* add breathing space below the title */
+}
+
+/* --- About Me feature boxes margin --- */
+#about .features-inline {
+  width: 95%;            /* total width */
+  margin-left: 5%;        /* push in from the left */
+  margin-right: 0;        /* no extra margin on right */
+}
