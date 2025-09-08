@@ -197,31 +197,42 @@
       }
 
       /* Robust PDF embed:
-         Try native inline; if blocked (wrong MIME or Content-Disposition=attachment),
-         fall back to Google Viewer which always renders. */
+         1) Try native inline (fastest).
+         2) If server forces download/wrong MIME, try a local PDF.js viewer at assets/pdfjs/web/viewer.html
+            (works without CORS because it's same-origin).
+      */
       const frame = document.getElementById('pi-pdf');
       const link  = document.getElementById('pi-link');
 
       if (frame && link) {
         const pdfUrl = new URL(link.getAttribute('href'), window.location.href).href;
 
-        // Try native inline first
+        // Default: native inline viewer
         frame.src = pdfUrl + '#view=FitH&pagemode=none';
 
-        // If server forces download or wrong MIME, switch to Google viewer
+        // Helper to switch to local PDF.js viewer if available
+        const tryLocalPdfJs = () => {
+          const viewer = 'assets/pdfjs/web/viewer.html';
+          if (!window.fetch) return;
+          fetch(viewer, { method: 'HEAD' })
+            .then(vr => {
+              if (vr.ok) {
+                frame.src = viewer + '?file=' + encodeURIComponent(pdfUrl) + '#view=page-fit';
+              }
+            })
+            .catch(() => {});
+        };
+
+        // If server blocks inline (e.g., Content-Disposition: attachment), fallback
         if (window.fetch) {
           fetch(pdfUrl, { method: 'HEAD' })
             .then(r => {
               const ct = (r.headers.get('content-type') || '').toLowerCase();
               const cd = (r.headers.get('content-disposition') || '').toLowerCase();
               const inlineOK = ct.includes('application/pdf') && !/attachment/.test(cd);
-              if (!inlineOK) {
-                frame.src = 'https://docs.google.com/gview?embedded=1&url=' + encodeURIComponent(pdfUrl);
-              }
+              if (!inlineOK) tryLocalPdfJs();
             })
-            .catch(() => {
-              frame.src = 'https://docs.google.com/gview?embedded=1&url=' + encodeURIComponent(pdfUrl);
-            });
+            .catch(tryLocalPdfJs);
         }
       }
     }());
