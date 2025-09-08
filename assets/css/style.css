@@ -29,6 +29,7 @@
 
   /* header */
   --header-h: 64px;
+  --header-bg: rgba(200,205,215,0.28); /* lighter translucent gray for sticky header */
 }
 
 /* light mode (system preference) */
@@ -43,6 +44,7 @@
     --primary: #2563eb;
     --primary-2: #22d3ee;
     --shadow: 0 10px 30px rgba(0,0,0,0.08);
+  --header-bg: rgba(255,255,255,0.75); /* slightly stronger to separate on light background */
   }
 }
 
@@ -93,7 +95,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(10, 14, 26, 0.55);
+  background: var(--header-bg);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
 }
@@ -346,14 +348,14 @@ body {
 
 /* 1) Title: nudge in from the left */
 #about .section-title {
-  margin-left: 5%;
-  margin-bottom: 1.5rem;
+  margin-left: 10%;
+  margin-bottom: 2.0rem;
 }
 
 /* 2) Description paragraphs: narrower and centered */
 #about .section-body > p.lead {
   width: 92%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
   text-indent: 1.25rem;
