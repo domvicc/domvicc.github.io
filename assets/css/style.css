@@ -211,8 +211,21 @@ body {
 }
 
 /* sections */
-.section .container { max-width: none; margin: 0; padding-inline: var(--gutter); }
-.prose-indent { margin-left: 0; }
+.section { padding-block: var(--section-vertical); }
+.section.alt { background: var(--surface); }
+.section-title {
+    font-family: "space grotesk", inter, system-ui, sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.6rem, 3vw, 2rem);
+    margin: 0 0 1rem;
+  }
+  .lead { color: var(--muted); margin-bottom: 1.25rem; }
+
+  /* shrink the green gap in about section */
+  #about.section {
+    padding-block: 0.5rem !important;
+}
+
 
 /* callouts */
 .callouts {
