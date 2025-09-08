@@ -196,30 +196,32 @@
         });
       }
 
-      /* Robust PDF embed: define src first; fall back to PDF.js if needed */
+      /* Robust PDF embed:
+         Try native inline; if blocked (wrong MIME or Content-Disposition=attachment),
+         fall back to Google Viewer which always renders. */
       const frame = document.getElementById('pi-pdf');
-      const link = document.getElementById('pi-link');
+      const link  = document.getElementById('pi-link');
+
       if (frame && link) {
-        const src = link.getAttribute('href');
+        const pdfUrl = new URL(link.getAttribute('href'), window.location.href).href;
 
-        const usePdfJs = () => {
-          const viewer = 'https://mozilla.github.io/pdf.js/web/viewer.html?file=' + encodeURIComponent(src) + '#view=page-fit';
-          frame.setAttribute('src', viewer);
-        };
+        // Try native inline first
+        frame.src = pdfUrl + '#view=FitH&pagemode=none';
 
-        let sameOrigin = false;
-        try {
-          sameOrigin = new URL(src, window.location.href).origin === window.location.origin;
-        } catch (_) { sameOrigin = false; }
-
-        if (sameOrigin && window.fetch) {
-          fetch(src, { method: 'HEAD' })
+        // If server forces download or wrong MIME, switch to Google viewer
+        if (window.fetch) {
+          fetch(pdfUrl, { method: 'HEAD' })
             .then(r => {
               const ct = (r.headers.get('content-type') || '').toLowerCase();
               const cd = (r.headers.get('content-disposition') || '').toLowerCase();
-              if (!ct.includes('application/pdf') || /attachment/.test(cd)) usePdfJs();
+              const inlineOK = ct.includes('application/pdf') && !/attachment/.test(cd);
+              if (!inlineOK) {
+                frame.src = 'https://docs.google.com/gview?embedded=1&url=' + encodeURIComponent(pdfUrl);
+              }
             })
-            .catch(usePdfJs);
+            .catch(() => {
+              frame.src = 'https://docs.google.com/gview?embedded=1&url=' + encodeURIComponent(pdfUrl);
+            });
         }
       }
     }());
