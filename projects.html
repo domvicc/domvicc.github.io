@@ -283,16 +283,27 @@ pre.code{ margin:0; padding:18px; min-height:100%; font-size:.95rem; }
       "id": "inventory-audit-journal",
       "title": "Inventory Audit Journal",
       "subtitle": "Reconciling perpetual vs G/L with staged audit layers",
-      "description": "Large scripted job creating staging and analysis tables to reconcile perpetual vs G/L, rebate variance, and SPA claim health with repeatable indexes and branching filters.",
-      "cover": [{"src":"assets/img/inventory_audit_cover.jpg","alt":"Inventory Audit"}],
+      "description": "Staged audit tables reconciling perpetual inventory to the general ledger with variance isolation (quantity, value, rebate impact) and branch drill paths to action discrepancies.",
+      "cover": [
+        {"src":"assets/img/inventory_audit_perpetual_vs_gl.png","alt":"Perpetual vs G/L Reconciliation Chart"},
+        {"src":"assets/img/inventory_audit_totals.png","alt":"Inventory Audit Layer Totals"}
+      ],
       "tags": ["SQL Development","Audit","Inventory"],
       "tech_stack": ["T-SQL","SQL Agent","Indexing"],
       "role": "Data Engineer",
       "links": {
         "repo":"sql/inventory_audit.sql"
       },
-      "metrics": [{"label":"Tables","value":"12"},{"label":"Indexes","value":"27"},{"label":"Runtime","value":"< 6m"}],
-      "highlights": ["Branching filter paths","Repeatable index strategy","Variance surfacing for Ops"],
+      "metrics": [
+        {"label":"Audit tables","value":"12"},
+        {"label":"Indexes","value":"27"},
+        {"label":"Runtime","value":"< 6m"}
+      ],
+      "highlights": [
+        "Perpetual vs G/L delta isolation",
+        "Layered variance segmentation",
+        "GL alignment & exception surfacing"
+      ],
       "featured": true
     },
     {
@@ -517,6 +528,108 @@ pre.code{ margin:0; padding:18px; min-height:100%; font-size:.95rem; }
       "links": {"case_study":"assets/pdfjs/web/viewer.html?file=../../pdf/vendor_scorecard.pdf"},
       "metrics": [{"label":"Vendors tracked","value":"150+"},{"label":"OTIF improvement","value":"+6 pts"}],
       "highlights": ["Unified KPI layer","Exception ranking","Quarterly review pack"],
+      "featured": false
+    },
+    {
+      "id": "product-replacement-cost-engine",
+      "title": "Product Replacement Cost Engine",
+      "subtitle": "Multi-sheet precedence (branch / territory / tilde)",
+      "description": "Calculates branch-level replacement cost using hierarchical sheet precedence (branch, territory, default) with per-qty normalization for margin and inventory valuation feeds.",
+      "cover": [{"src":"assets/img/price_matrix.jpg","alt":"Replacement Cost Logic"}],
+      "tags": ["SQL Development","Costing","Inventory"],
+      "tech_stack": ["T-SQL","Job Agent"],
+      "role": "Data Engineer",
+      "links": {"repo":"sql/product_replacement_cost.sql"},
+      "metrics": [
+        {"label":"Branches","value":"60+"},
+        {"label":"Latency","value":"< 3m"}
+      ],
+      "highlights": ["Sheet precedence resolution","Per-qty normalization","Valuation feed"],
+      "featured": false
+    },
+    {
+      "id": "product-sell-group-dimension",
+      "title": "Product Sell Group Dimension Build",
+      "subtitle": "Pivoted multi-level merchandising hierarchy",
+      "description": "Daily materialization of unified sell group attributes (1–7) with kit awareness and secondary UPC enrichment for downstream product analytics and pricing segmentation.",
+      "cover": [{"src":"assets/img/inventory_foundation.jpg","alt":"Sell Group Dimension"}],
+      "tags": ["SQL Development","Dimension","Merchandising"],
+      "tech_stack": ["T-SQL","Pivot"],
+      "role": "Data Engineer",
+      "links": {"repo":"sql/product_sell_group.sql"},
+      "metrics": [
+        {"label":"Products","value":"100k+"},
+        {"label":"Refresh","value":"Daily"}
+      ],
+      "highlights": ["Pivoted hierarchy levels","Secondary UPC linkage","Kit flag derivation"],
+      "featured": false
+    },
+    {
+      "id": "product-365-receiving-history",
+      "title": "365-Day Receiving History",
+      "subtitle": "Rolling receipts, COGS extension & last PO",
+      "description": "Aggregates a year of positive receipt & controlled customer adjustments to derive extended COGS, last receive date, and last purchase order for inventory health and aging models.",
+      "cover": [{"src":"assets/img/365_sales.jpg","alt":"Receiving History"}],
+      "tags": ["SQL Development","Inventory","Turns"],
+      "tech_stack": ["T-SQL","Window Aggregation"],
+      "role": "Data Engineer",
+      "links": {"repo":"sql/product_365_receiving.sql"},
+      "metrics": [
+        {"label":"Rows","value":"Millions"},
+        {"label":"Lookback","value":"365 days"}
+      ],
+      "highlights": ["COGS fallback logic","Last PO derivation","Positive receipt filtering"],
+      "featured": false
+    },
+    {
+      "id": "sales-order-processed-date-capture",
+      "title": "Sales Order Processed Date Capture",
+      "subtitle": "Change log extraction with indexed keys",
+      "description": "Extracts 'Processed Order' events from sales order change log into an indexed fact enabling SLA latency and queue aging analytics.",
+      "cover": [{"src":"assets/img/tagged_orders.jpg","alt":"Processed Date Capture"}],
+      "tags": ["SQL Development","Orders","Latency"],
+      "tech_stack": ["T-SQL","Indexing"],
+      "role": "Data Engineer",
+      "links": {"repo":"sql/so_processed_date.sql"},
+      "metrics": [
+        {"label":"Indexes","value":"4"},
+        {"label":"Event filter","value":"'Processed Order'"}
+      ],
+      "highlights": ["Targeted log filter","Lightweight fact table","Latency SLA support"],
+      "featured": false
+    },
+    {
+      "id": "branch-maintenance-automation",
+      "title": "Branch Maintenance Automation",
+      "subtitle": "Multi-step job: cash box, invoice queue, COD & PO variance",
+      "description": "Automated operational quality pack generating cash box clearance, invoice preview aging, COD open balance quality, and PO variance days with percentile quality scoring.",
+      "cover": [{"src":"assets/img/ledger.jpg","alt":"Branch Maintenance Automation"}],
+      "tags": ["Operations","Quality","SQL Development"],
+      "tech_stack": ["T-SQL","SQL Agent"],
+      "role": "Data Engineer",
+      "links": {"repo":"sql/branch_maintenance.sql"},
+      "metrics": [
+        {"label":"Job steps","value":"5"},
+        {"label":"Daily runtime","value":"< 10m"}
+      ],
+      "highlights": ["Cash box clearance %","Invoice queue aging bands","COD quality percentile"],
+      "featured": false
+    },
+    {
+      "id": "vendor-buy-line-factor",
+      "title": "Vendor Buy Line Factorization",
+      "subtitle": "Branch × vendor × line contribution ratios",
+      "description": "Calculates buy line contribution factors per branch & vendor over 365-day received cost to drive sourcing prioritization and rebate negotiations.",
+      "cover": [{"src":"assets/img/rebates.jpg","alt":"Vendor Buy Line Factors"}],
+      "tags": ["Supply Chain","Costing","SQL Development"],
+      "tech_stack": ["T-SQL"],
+      "role": "Data Engineer",
+      "links": {"repo":"sql/vendory_buy_line.sql"},
+      "metrics": [
+        {"label":"Lookback","value":"365 days"},
+        {"label":"Filter threshold","value":">0.99%"}
+      ],
+      "highlights": ["Contribution factor calc","Selective thresholding","Sourcing insight"],
       "featured": false
     }
   ]
