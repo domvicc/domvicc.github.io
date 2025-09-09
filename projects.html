@@ -292,7 +292,11 @@ pre.code{ margin:0; padding:18px; min-height:100%; font-size:.95rem; }
       "tech_stack": ["T-SQL","SQL Agent","Indexing"],
       "role": "Data Engineer",
       "links": {
-        "repo":"sql/inventory_audit.sql"
+        "repo":"sql/inventory_audit.sql",
+        "case_studies": [
+          {"id":"perpetual","label":"Perpetual vs G/L","href":"assets/pdfjs/web/viewer.html?file=../../pdf/inventory_audit_perpetual.pdf"},
+          {"id":"totals","label":"Layer Totals","href":"assets/pdfjs/web/viewer.html?file=../../pdf/inventory_audit_totals.pdf"}
+        ]
       },
       "metrics": [
         {"label":"Audit tables","value":"12"},
@@ -778,11 +782,19 @@ pre.code{ margin:0; padding:18px; min-height:100%; font-size:.95rem; }
     if (p.links?.demo) els.links.appendChild(linkBtn('Open demo', p.links.demo));
     if (p.links?.repo) els.links.appendChild(linkBtn('Open repo', p.links.repo));
     if (p.links?.case_study) els.links.appendChild(linkBtn('Open PDF', p.links.case_study));
+    if (Array.isArray(p.links?.case_studies)) {
+      p.links.case_studies.forEach(cs => {
+        els.links.appendChild(linkBtn(cs.label, cs.href));
+      });
+    }
 
     // viewer (right)
     tabs.innerHTML=''; stage.innerHTML='';
     const tb = [];
     if (p.links?.case_study) tb.push({id:'pdf', label:'PDF'});
+    if (Array.isArray(p.links?.case_studies)) {
+      p.links.case_studies.forEach(cs => tb.push({id: 'pdf-'+cs.id, label: cs.label}));
+    }
     if (p.links?.repo) tb.push({id:'sql', label:'SQL'});
     if (!tb.length) tb.push({id:'cover', label:'Preview'});
     tb.forEach((t,i)=>{
@@ -801,6 +813,16 @@ pre.code{ margin:0; padding:18px; min-height:100%; font-size:.95rem; }
       const frame = document.createElement('iframe');
       frame.src = p.links.case_study;
       stage.appendChild(frame);
+    } else if (id.startsWith('pdf-') && Array.isArray(p.links?.case_studies)) {
+      const key = id.replace('pdf-','');
+      const cs = p.links.case_studies.find(c => c.id === key);
+      if (cs) {
+        const frame = document.createElement('iframe');
+        frame.src = cs.href;
+        stage.appendChild(frame);
+      } else {
+        stage.textContent = 'PDF not found.';
+      }
     } else if (id === 'sql' && p.links?.repo){
       const pre = document.createElement('pre'); pre.className = 'code';
       const code = document.createElement('code'); code.className = 'language-sql'; code.textContent = 'Loading SQL…';
