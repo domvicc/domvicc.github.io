@@ -1,4 +1,4 @@
-<!-- projects.html (modern v3) -->
+<!-- projects.html (directory v4) -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,7 +9,6 @@
   <link rel="canonical" href="./projects.html" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="assets/css/style.css?v=41" />
   <!-- highlight.js for SQL display -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
@@ -29,61 +28,53 @@
       --shadow:0 24px 80px rgba(0,0,0,.45);
       --container:1600px;
     }
-    html,body{background:var(--bg); color:var(--text); font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji", "Segoe UI Symbol";}
+    html,body{background:var(--bg); color:var(--text); font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji", "Segoe UI Symbol"; margin:0;}
+    a{color:inherit}
     .container{max-width:var(--container); margin:0 auto; padding:0 24px;}
-    .page-hero{padding:56px 0 24px;}
-    .page-title{font-family:"Space Grotesk", Inter, sans-serif; font-size:clamp(32px,4vw,56px); margin:0 0 12px;}
-    .page-kicker{color:var(--muted); max-width:60ch; margin:0;}
-    /* layout */
-    .projects-layout{display:grid; grid-template-columns: 280px 1fr; gap:24px; align-items:start;}
-    @media (max-width: 980px){ .projects-layout{ grid-template-columns: 1fr; } }
-    /* filters */
-    .filters{position:sticky; top:24px;}
-    .filters-inner{background:var(--card); border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow); padding:16px;}
-    .filter-title{margin:.75rem 0 .25rem;}
-    .chips{display:flex; flex-wrap:wrap; gap:.5rem; }
-    .chip{padding:.45rem .75rem; border-radius:999px; border:1px solid var(--border); background:rgba(255,255,255,.03); cursor:pointer; font-weight:500;}
-    .chip[aria-pressed="true"]{ background: rgba(124,156,255,.18); border-color: rgba(124,156,255,.55); }
-    .checkbox{display:flex; gap:.5rem; align-items:center; margin-top:.5rem;}
-    /* grid cards */
-    .grid{display:grid; gap:20px; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.00)), var(--card); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); display:flex; flex-direction:column; transition:transform .2s ease, border-color .2s ease; }
-    .card:hover{ transform: translateY(-2px); border-color:#2b3a6e; }
-    .card-cover{width:100%; height:180px; object-fit:cover; display:block;}
-    .card-body{padding:16px; display:grid; gap:8px;}
-    .card-title{margin:0; font-size:1.2rem;}
-    .card-sub{margin:0; color:var(--muted);}
-    .card-desc{margin:0; color:#cfd6e6;}
-    .role-badge{ align-self:start; display:inline-flex; gap:.4rem; padding:.25rem .55rem; border:1px solid rgba(34,211,238,.4); background:rgba(34,211,238,.12); border-radius:999px; font-size:.8rem; }
-    .role-badge::before{content:"Role"; opacity:.75; font-variant:all-small-caps; letter-spacing:.05em;}
-    .meta-tags{display:flex; gap:.4rem; flex-wrap:wrap;}
-    .meta-tag{font-size:.75rem; padding:.25rem .5rem; border-radius:999px; border:1px solid var(--border);}
-    .metric-chip{font-size:.75rem; padding:.35rem .55rem; border-radius:10px; border:1px dashed var(--border);}
-    .card-actions{display:flex; gap:.5rem; flex-wrap:wrap; margin-top:4px;}
-    .btn{padding:.55rem .8rem; border-radius:10px; border:1px solid var(--border); background:rgba(255,255,255,.04); color:var(--text); cursor:pointer;}
-    .btn.ghost{background:transparent;}
-    .btn.secondary{background:rgba(255,255,255,.06);}
-    /* quick row */
-    .chips-row{display:flex; gap:.5rem; flex-wrap:wrap; margin: 6px 0 14px;}
-    /* modern detail overlay */
-    .overlay{position:fixed; inset:0; z-index:60; display:none; background:rgba(7,10,22,.72); backdrop-filter: blur(8px);}
-    .overlay[aria-hidden="false"]{display:block;}
-    .overlay-inner{max-width:var(--container); margin:24px auto; height: calc(100vh - 48px); border-radius:24px; border:1px solid var(--border); background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.008)), var(--surface); box-shadow: var(--shadow); display:grid; grid-template-rows:auto 1fr;}
-    .overlay-header{display:flex; align-items:center; justify-content:space-between; padding:14px 18px; border-bottom:1px solid var(--border);}
-    .overlay-title{display:flex; align-items:center; gap:12px;}
-    .close{width:36px; height:36px; display:grid; place-items:center; border-radius:10px; border:1px solid var(--border); background:transparent; color:var(--text); cursor:pointer;}
-    .detail-split{display:grid; grid-template-columns: minmax(560px, 1fr) 1fr; gap:22px; padding:18px; overflow:hidden;}
-    @media (max-width:1200px){ .detail-split{ grid-template-columns: 1fr; } }
-    /* left workbench */
-    .workbench{height:100%; background: var(--card); border:1px solid var(--border); border-radius:18px; overflow:hidden; display:flex; flex-direction:column;}
-    .wb-tabs{display:flex; gap:8px; padding:10px; border-bottom:1px solid var(--border); background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.0));}
+    .page-hero{padding:48px 0 18px;}
+    .page-title{font-family:"Space Grotesk", Inter, sans-serif; font-size:clamp(32px,4vw,56px); margin:0 0 10px;}
+    .page-kicker{color:var(--muted); max-width:70ch; margin:0;}
+    /* app layout */
+    .app{padding:12px 0 32px;}
+    .app-layout{display:grid; grid-template-columns: 340px 1fr; gap:22px; align-items:start;}
+    @media (max-width: 1100px){ .app-layout{ grid-template-columns: 1fr; } }
+
+    /* left directory */
+    .directory{position:sticky; top:16px; align-self:start; max-height:calc(100vh - 32px);}
+    .dir-card{background:var(--card); border:1px solid var(--border); border-radius:18px; box-shadow:var(--shadow); display:flex; flex-direction:column; overflow:hidden; height:100%;}
+    .dir-head{padding:12px 14px; border-bottom:1px solid var(--border); display:flex; align-items:center; justify-content:space-between;}
+    .dir-title{font-weight:700; letter-spacing:.02em;}
+    .dir-body{overflow:auto;}
+    .tree{padding:6px;}
+    .tree details{border:1px solid var(--border); border-radius:12px; background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.0)); margin:6px 6px 10px;}
+    .tree summary{list-style:none; cursor:pointer; padding:10px 12px; display:flex; align-items:center; justify-content:space-between; gap:10px;}
+    .tree summary::-webkit-details-marker{display:none}
+    .caret{width:18px; height:18px; display:inline-grid; place-items:center; border:1px solid var(--border); border-radius:6px; background:rgba(255,255,255,.02);}
+    details[open] .caret{transform:rotate(90deg)}
+    .tree-count{color:var(--muted); font-size:.85rem;}
+    .group{padding:6px 8px 12px;}
+    .node{border:1px dashed var(--border); border-radius:10px; margin:8px; background:rgba(255,255,255,.01);}
+    .node summary{padding:8px 10px;}
+    .dir-list{list-style:none; margin:0; padding:6px;}
+    .dir-item{margin:0; padding:0;}
+    .tree-item{width:100%; text-align:left; background:transparent; color:var(--text); border:1px solid transparent; padding:8px 10px; border-radius:10px; cursor:pointer; display:flex; align-items:center; gap:8px;}
+    .tree-item:hover{background:rgba(255,255,255,.05); border-color:var(--border);}
+    .tree-item.active{background:rgba(124,156,255,.18); border-color: rgba(124,156,255,.55);}
+    .bullet{width:6px; height:6px; border-radius:999px; background:var(--accent-2); opacity:.9;}
+
+    /* right workspace (split: content + details) */
+    .workspace{display:grid; grid-template-columns: minmax(620px, 1fr) 1fr; gap:18px; min-height:60vh;}
+    @media (max-width:1200px){ .workspace{ grid-template-columns: 1fr; } }
+    .workbench{height:calc(100vh - 170px); min-height:540px; background: var(--card); border:1px solid var(--border); border-radius:18px; overflow:hidden; display:flex; flex-direction:column;}
+    @media (max-width:1100px){ .workbench{ height: 60vh; } }
+    .wb-tabs{display:flex; gap:8px; padding:10px; border-bottom:1px solid var(--border); background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.0)); position:sticky; top:0; z-index:2;}
     .tab{padding:.45rem .8rem; border-radius:999px; border:1px solid var(--border); background:transparent; cursor:pointer; font-weight:600;}
     .tab[aria-selected="true"]{ background: rgba(124,156,255,.18); border-color: rgba(124,156,255,.55); }
-    .wb-stage{position:relative; flex:1; overflow:auto;}
-    .wb-stage iframe{border:0; width:100%; height:100%; background:#0c0f1e;}
-    pre.code{margin:0; padding:18px; min-height:100%;}
-    /* right details */
-    .details{height:100%; overflow:auto; display:grid; gap:14px;}
+    .wb-stage{position:relative; flex:1; overflow:auto; background:#0c0f1e;}
+    .wb-stage iframe{border:0; width:100%; height:100%;}
+    pre.code{margin:0; padding:18px; min-height:100%; font-size:.95rem;}
+
+    .details{display:grid; gap:14px; align-content:start;}
     .kicker{color:var(--muted); margin:0;}
     .title{font-family:"Space Grotesk"; font-size:clamp(28px,3vw,40px); margin:.1rem 0;}
     .subtitle{color:#cfd6e6; font-weight:500; margin:0;}
@@ -99,6 +90,8 @@
     .metric-label{color:var(--muted); font-size:.85rem; margin:0;}
     .metric-value{font-weight:700; font-size:1.05rem; margin-top:.15rem;}
     .links{display:flex; gap:.6rem; flex-wrap:wrap; margin-top:.2rem;}
+    .btn{padding:.55rem .8rem; border-radius:10px; border:1px solid var(--border); background:rgba(255,255,255,.04); color:var(--text); cursor:pointer;}
+    .btn.ghost{background:transparent;}
   </style>
 </head>
 <body>
@@ -125,88 +118,36 @@
     <!-- Page heading -->
     <div class="container page-hero">
       <h1 class="page-title">Projects</h1>
-      <p class="page-kicker">A showcase of platform builds, SQL craftsmanship, analytics, and architecture—fast to skim, easy to dive deep.</p>
+      <p class="page-kicker">A modern navigator: select from the directory on the left; view PDFs & SQL with rich details on the right.</p>
     </div>
   </header>
 
-  <main id="projects" class="section">
-    <div class="container projects-layout">
-      <!-- Sidebar: filters -->
-      <aside class="filters" aria-labelledby="filters-title">
-        <div class="filters-inner">
-          <div class="filters-head">
-            <h2 id="filters-title">Filters</h2>
-            <button class="btn ghost small clear-filters" title="Clear all filters">Clear</button>
+  <main class="app">
+    <div class="container app-layout">
+      <!-- Directory (left) -->
+      <aside class="directory">
+        <div class="dir-card">
+          <div class="dir-head">
+            <span class="dir-title">Directory</span>
           </div>
-
-          <div class="filter-group">
-            <h3 class="filter-title">Tags</h3>
-            <div id="filter-tags" class="chips" role="group" aria-label="Filter by tags"></div>
-          </div>
-
-          <div class="filter-group">
-            <h3 class="filter-title">Tech</h3>
-            <div id="filter-tech" class="chips" role="group" aria-label="Filter by tech"></div>
-          </div>
-
-          <div class="filter-group">
-            <label class="checkbox">
-              <input id="filter-featured" type="checkbox" />
-              <span>Featured only</span>
-            </label>
+          <div class="dir-body">
+            <div id="dir-tree" class="tree"></div>
           </div>
         </div>
       </aside>
 
-      <!-- Main content -->
-      <section class="projects-content" aria-live="polite">
-        <!-- Quick filters row -->
-        <div class="chips-row" id="quick-chips"></div>
-
-        <!-- Grid view -->
-        <div id="view-grid" class="view is-active" data-view="grid" aria-label="Grid view"></div>
-
-        <!-- Empty state -->
-        <div id="empty" class="empty" hidden>
-          <div class="empty-card">
-            <h3>No projects match your filters</h3>
-            <p>Try removing a few filters.</p>
-            <button class="btn clear-filters">Reset filters</button>
-          </div>
-        </div>
-
-        <!-- Back-to-top + clear buttons -->
-        <div class="float-actions">
-          <button class="fab" id="btn-top" title="Back to top">↑</button>
-          <button class="fab ghost" id="btn-clear" title="Clear filters">⟲</button>
-        </div>
-      </section>
-    </div>
-  </main>
-
-  <!-- NEW: Full-canvas detail overlay (no carousel) -->
-  <section id="detail-overlay" class="overlay" aria-hidden="true">
-    <div class="overlay-inner">
-      <div class="overlay-header">
-        <div class="overlay-title">
-          <span id="detail-kicker" class="kicker"></span>
-          <strong id="detail-title" class="title"></strong>
-        </div>
-        <button class="close" id="detail-close" aria-label="Close">✕</button>
-      </div>
-
-      <div class="detail-split">
-        <!-- left: workbench with tabs -->
+      <!-- Workspace (right) -->
+      <section class="workspace">
         <div class="workbench">
           <div class="wb-tabs" id="wb-tabs"></div>
-          <div class="wb-stage" id="wb-stage"></div>
+          <div class="wb-stage" id="wb-stage"><!-- PDF/SQL appear here --></div>
         </div>
 
-        <!-- right: details -->
         <div class="details">
-          <h2 id="d-title" class="title" style="display:none;"></h2>
-          <p id="d-sub" class="subtitle"></p>
-          <p id="d-desc" class="desc"></p>
+          <p id="detail-kicker" class="kicker"></p>
+          <h2 id="detail-title" class="title"></h2>
+          <p id="detail-sub" class="subtitle"></p>
+          <p id="detail-desc" class="desc"></p>
 
           <div class="info-grid">
             <div class="info-card">
@@ -237,21 +178,9 @@
             <div id="d-metrics" class="metrics"></div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
-  </section>
-
-  <!-- No-script fallback -->
-  <noscript>
-    <section class="container" style="padding:1.5rem 0;">
-      <h2>Projects (basic list)</h2>
-      <ul>
-        <li>Inventory Audit Journal — T-SQL, SQL Agent, Audit</li>
-        <li>365-Day Product Sales — Window Logic, KPIs, Performance</li>
-        <li>Price Matrix & Replacement Cost — Costing, Margin, ETL</li>
-      </ul>
-    </section>
-  </noscript>
+  </main>
 
   <!-- Footer -->
   <footer class="site-footer">
@@ -428,273 +357,174 @@
   ]
   </script>
 
-  <!-- Single, normalized app script (filters default to show all) -->
+  <!-- App script: build directory and wire right-hand workspace -->
   <script>
 (() => {
   const $ = (s, r=document) => r.querySelector(s);
   const $$ = (s, r=document) => [...r.querySelectorAll(s)];
   const byId = id => document.getElementById(id);
 
-  // ---------- load data ----------
-  const dataEl = byId('projects-data');
-  if (!dataEl) { console.error('Missing #projects-data'); return; }
-
+  // load data
   let projects = [];
-  try { projects = JSON.parse(dataEl.textContent.trim()); }
+  try { projects = JSON.parse(byId('projects-data').textContent.trim()); }
   catch (e) { console.error('Invalid JSON in #projects-data', e); return; }
 
-  // Normalize helper
-  const keyify = s => String(s || '')
-    .normalize('NFKD')
-    .replace(/\s+/g, ' ')
-    .trim()
-    .toLowerCase()
-    .replace(/[^\w]+/g, '-');
-
-  // Precompute normalized key sets on each project
-  projects.forEach(p => {
-    p._tagKeys  = new Set((p.tags || []).map(keyify));
-    p._techKeys = new Set((p.tech_stack || []).map(keyify));
-  });
-
-  // ---------- state ----------
-  const state = {
-    tagKeys: new Set(),
-    techKeys: new Set(),
-    featuredOnly: false
-  };
-
-  // ---------- elements ----------
-  const grid = byId('view-grid');
-  const emptyState = byId('empty');
-  const quickChips = byId('quick-chips');
-  const side = { tags: byId('filter-tags'), tech: byId('filter-tech'), featured: byId('filter-featured') };
-
-  // vocab
-  const dedupeByKey = (labels) => {
-    const map = new Map();
-    labels.forEach(lbl => { const k = keyify(lbl); if (!map.has(k)) map.set(k, String(lbl)); });
-    return [...map.entries()].map(([key, label]) => ({ key, label }));
-  };
-  const vocab = {
-    tags: dedupeByKey(projects.flatMap(p => p.tags || [])).sort((a,b)=>a.label.localeCompare(b.label)),
-    tech: dedupeByKey(projects.flatMap(p => p.tech_stack || [])).sort((a,b)=>a.label.localeCompare(b.label))
-  };
-
-  // build UI
-  renderFilters();
-  renderQuickChips();
-  wireInteractions();
-  render();
-
-  function renderFilters() {
-    side.tags.innerHTML = '';
-    vocab.tags.forEach(v => side.tags.appendChild(chip(v.label, v.key, state.tagKeys)));
-    side.tech.innerHTML = '';
-    vocab.tech.forEach(v => side.tech.appendChild(chip(v.label, v.key, state.techKeys)));
-    side.featured.checked = state.featuredOnly;
-  }
-  function renderQuickChips() {
-    const common = ['SQL Development','Architecture','Analytics','Operations','Finance','Compliance']
-      .map(label => ({ label, key: keyify(label) }));
-    const tagKeySet = new Set(vocab.tags.map(v => v.key));
-    quickChips.innerHTML = '';
-    common.filter(x => tagKeySet.has(x.key)).forEach(x => quickChips.appendChild(chip(x.label, x.key, state.tagKeys)));
-  }
-  function chip(label, key, setRef){
-    const b = document.createElement('button');
-    b.type = 'button'; b.className = 'chip'; b.textContent = label; b.dataset.key = key;
-    b.setAttribute('aria-pressed', setRef.has(key) ? 'true' : 'false'); return b;
-  }
-
-  function wireInteractions(){
-    [[side.tags, state.tagKeys],[side.tech, state.techKeys],[quickChips, state.tagKeys]].forEach(([container, setRef]) => {
-      container?.addEventListener('click', (e) => {
-        const c = e.target.closest('.chip'); if (!c) return;
-        const key = c.dataset.key || keyify(c.textContent);
-        setRef.has(key) ? setRef.delete(key) : setRef.add(key);
-        syncChipStates(key); render();
-      });
-    });
-    side.featured.addEventListener('change', () => { state.featuredOnly = side.featured.checked; render(); });
-    $$('.clear-filters').forEach(btn => btn.addEventListener('click', clearAll));
-    byId('btn-clear')?.addEventListener('click', clearAll);
-    byId('btn-top')?.addEventListener('click', () => window.scrollTo({ top:0, behavior:'smooth' }));
-
-    // overlay close
-    byId('detail-close')?.addEventListener('click', closeOverlay);
-    byId('detail-overlay')?.addEventListener('click', (e)=>{ if (e.target.id === 'detail-overlay') closeOverlay(); });
-  }
-  function clearAll(){ state.tagKeys.clear(); state.techKeys.clear(); state.featuredOnly = false; renderFilters(); renderQuickChips(); render(); }
-  function syncChipStates(key){
-    const pressed = state.tagKeys.has(key) || state.techKeys.has(key);
-    $$('#projects .chips .chip, #quick-chips .chip').forEach(c => {
-      const k = c.dataset.key || keyify(c.textContent);
-      if (k === key) c.setAttribute('aria-pressed', pressed ? 'true' : 'false');
-    });
-  }
-
-  // grid render
-  function render(){
-    const rows = filtered(projects);
-    grid.innerHTML = '';
-    const g = document.createElement('div'); g.className = 'grid';
-    rows.forEach(p => g.appendChild(renderCard(p)));
-    grid.appendChild(g);
-    emptyState.hidden = rows.length !== 0;
-  }
-  function filtered(rows){
-    return rows.filter(p => {
-      if (state.featuredOnly && !p.featured) return false;
-      if (state.tagKeys.size && !isSubset(state.tagKeys, p._tagKeys)) return false;
-      if (state.techKeys.size && !isSubset(state.techKeys, p._techKeys)) return false;
-      return true;
-    });
-  }
-  function isSubset(needles, hayset){ for (const n of needles) if (!hayset.has(n)) return false; return true; }
-
-  function renderCard(p){
-    const card = div('card'); card.setAttribute('data-id', p.id);
-    const img = document.createElement('img');
-    img.className = 'card-cover'; img.loading='lazy';
-    img.alt = p?.cover?.[0]?.alt || p.title; img.src = p?.cover?.[0]?.src || 'assets/img/placeholder.jpg';
-    const body = div('card-body');
-    if (p.role) body.append(span('role-badge', ' ' + p.role));
-    body.append(
-      h('h3','card-title', p.title),
-      p.subtitle ? pEl('card-sub', p.subtitle) : div('card-sub',''),
-      p.description ? pEl('card-desc', p.description) : div('card-desc',''),
-      (() => { const meta = div('card-meta'); meta.append(metaTags(p.tech_stack||[])); return meta; })(),
-      (() => { const row = div(''); (p.metrics||[]).slice(0,2).forEach(m => row.appendChild(span('metric-chip', (m.label||'')+': '+(m.value||'')))); return row; })(),
-      (() => {
-        const a = div('card-actions');
-        a.append(btn('View', () => openOverlay(p)));
-        if (p.links?.case_study) a.append(linkBtn('Case study', p.links.case_study));
-        if (p.links?.repo) a.append(linkBtn('Repo', p.links.repo));
-        return a;
-      })()
-    );
-    card.append(img, body);
-    card.addEventListener('click', (e) => { if (!e.target.closest('a,button')) openOverlay(p); });
-    return card;
-  }
-  function metaTags(items){ const row = div('meta-tags'); items.forEach(t => row.appendChild(span('meta-tag', t))); return row; }
-
-  // ---------- overlay logic ----------
-  const overlay = byId('detail-overlay');
-  const el = {
+  // elements
+  const tree = byId('dir-tree');
+  const tabs = byId('wb-tabs');
+  const stage = byId('wb-stage');
+  const els = {
     kicker: byId('detail-kicker'),
     title: byId('detail-title'),
-    stage: byId('wb-stage'),
-    tabs: byId('wb-tabs'),
-    sub: byId('d-sub'),
-    desc: byId('d-desc'),
+    sub: byId('detail-sub'),
+    desc: byId('detail-desc'),
     role: byId('d-role'),
-    tags: byId('d-tags'),
     tech: byId('d-tech'),
+    tags: byId('d-tags'),
     highlights: byId('d-highlights'),
     metrics: byId('d-metrics'),
     links: byId('d-links'),
   };
 
-  function openOverlay(p){
-    // header
-    el.kicker.textContent = (p.tags||[]).slice(0,1).join(' • ');
-    el.title.textContent = p.title;
-    // right column
-    el.sub.textContent = p.subtitle || '';
-    el.desc.textContent = p.description || '';
-    el.role.innerHTML = ''; if (p.role) el.role.appendChild(span('pill', p.role));
-    el.tech.innerHTML = ''; (p.tech_stack||[]).forEach(t => el.tech.appendChild(span('pill', t)));
-    el.tags.innerHTML = ''; (p.tags||[]).forEach(t => el.tags.appendChild(span('pill', t)));
-    el.highlights.innerHTML = ''; (p.highlights||[]).forEach(hh => el.highlights.appendChild(li(hh)));
-    el.metrics.innerHTML = ''; (p.metrics||[]).forEach(m => { const c=div('metric'); c.append(div('metric-label', m.label), div('metric-value', m.value)); el.metrics.appendChild(c); });
-    el.links.innerHTML = '';
-    if (p.links?.demo) el.links.appendChild(linkBtn('Open demo', p.links.demo));
-    if (p.links?.repo) el.links.appendChild(linkBtn('Open repo', p.links.repo));
-    if (p.links?.case_study) el.links.appendChild(linkBtn('Open PDF', p.links.case_study));
+  // helpers
+  const keyify = s => String(s||'').trim().toLowerCase();
+  const sortByTitle = arr => arr.slice().sort((a,b)=>a.title.localeCompare(b.title));
 
-    // left workbench — tabs: PDF / SQL (only if present)
-    el.tabs.innerHTML = '';
-    el.stage.innerHTML = '';
+  // Build directory structure
+  buildDirectory();
 
-    const tabs = [];
-    if (p.links?.case_study) tabs.push({id:'pdf', label:'PDF'});
-    if (p.links?.repo) tabs.push({id:'sql', label:'SQL'});
-    if (!tabs.length){
-      tabs.push({id:'cover', label:'Preview'});
-    }
-    tabs.forEach((t, i) => {
-      const b = document.createElement('button');
-      b.className = 'tab';
-      b.textContent = t.label;
-      b.dataset.id = t.id;
-      b.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
-      b.addEventListener('click', () => { setTab(t.id); });
-      el.tabs.appendChild(b);
+  function buildDirectory(){
+    tree.innerHTML = '';
+
+    // All Projects
+    tree.appendChild(sectionNode('All Projects', projects.length, listNode(sortByTitle(projects))));
+
+    // Tags -> each tag group
+    const tagMap = new Map();
+    projects.forEach(p => (p.tags||[]).forEach(t => {
+      if (!tagMap.has(t)) tagMap.set(t, []);
+      tagMap.get(t).push(p);
+    }));
+    const tagsWrap = document.createElement('div'); tagsWrap.className = 'group';
+    [...tagMap.entries()].sort((a,b)=>a[0].localeCompare(b[0])).forEach(([tag, arr]) => {
+      tagsWrap.appendChild(sectionNode(tag, arr.length, listNode(sortByTitle(arr)), 'node'));
     });
-    setTab(tabs[0].id, p);
+    tree.appendChild(sectionNode('Tags', tagMap.size, tagsWrap));
 
-    overlay?.setAttribute('aria-hidden','false');
+    // Tech -> each tech group
+    const techMap = new Map();
+    projects.forEach(p => (p.tech_stack||[]).forEach(t => {
+      if (!techMap.has(t)) techMap.set(t, []);
+      techMap.get(t).push(p);
+    }));
+    const techWrap = document.createElement('div'); techWrap.className = 'group';
+    [...techMap.entries()].sort((a,b)=>a[0].localeCompare(b[0])).forEach(([tech, arr]) => {
+      techWrap.appendChild(sectionNode(tech, arr.length, listNode(sortByTitle(arr)), 'node'));
+    });
+    tree.appendChild(sectionNode('Tech', techMap.size, techWrap));
+
+    // Activate first item by default
+    const firstBtn = tree.querySelector('.dir-list .tree-item');
+    if (firstBtn) firstBtn.click();
   }
 
-  function setTab(id, pOverride){
-    // active state
-    $$('#wb-tabs .tab').forEach(b => b.setAttribute('aria-selected', b.dataset.id === id ? 'true' : 'false'));
-    // stage content
-    el.stage.innerHTML = '';
-    const p = pOverride || projects.find(pp => pp.title === byId('detail-title').textContent);
-    if (!p) return;
+  function sectionNode(label, count, childContent, cls=''){
+    const det = document.createElement('details');
+    det.className = cls ? 'tree-node '+cls : 'tree-node';
+    det.open = true;
+    const sum = document.createElement('summary');
+    sum.innerHTML = '<span>'+label+'</span><span class="tree-count">'+count+'</span>';
+    const caret = document.createElement('span'); caret.className='caret'; caret.textContent='›';
+    sum.prepend(caret);
+    det.appendChild(sum);
+    if (childContent) det.appendChild(childContent);
+    return det;
+  }
 
+  function listNode(items){
+    const ul = document.createElement('ul'); ul.className='dir-list';
+    items.forEach(p => {
+      const li = document.createElement('li'); li.className='dir-item';
+      const btn = document.createElement('button'); btn.className='tree-item'; btn.dataset.id=p.id;
+      btn.innerHTML = '<span class="bullet"></span><span>'+p.title+'</span>';
+      btn.addEventListener('click', () => selectProject(p.id, btn));
+      li.appendChild(btn); ul.appendChild(li);
+    });
+    return ul;
+  }
+
+  function selectProject(id, btn){
+    // active state
+    $$('.tree-item').forEach(b => b.classList.toggle('active', b === btn));
+    const p = projects.find(x => x.id === id);
+    if (!p) return;
+    openProject(p);
+  }
+
+  function openProject(p){
+    // right column details
+    els.kicker.textContent = (p.tags||[]).slice(0,1).join(' • ');
+    els.title.textContent = p.title;
+    els.sub.textContent = p.subtitle || '';
+    els.desc.textContent = p.description || '';
+    els.role.innerHTML = ''; if (p.role) els.role.appendChild(pill(p.role));
+    els.tech.innerHTML = ''; (p.tech_stack||[]).forEach(t => els.tech.appendChild(pill(t)));
+    els.tags.innerHTML = ''; (p.tags||[]).forEach(t => els.tags.appendChild(pill(t)));
+    els.highlights.innerHTML = ''; (p.highlights||[]).forEach(hh => els.highlights.appendChild(li(hh)));
+    els.metrics.innerHTML = ''; (p.metrics||[]).forEach(m => els.metrics.appendChild(metric(m.label, m.value)));
+    els.links.innerHTML = '';
+    if (p.links?.demo) els.links.appendChild(linkBtn('Open demo', p.links.demo));
+    if (p.links?.repo) els.links.appendChild(linkBtn('Open repo', p.links.repo));
+    if (p.links?.case_study) els.links.appendChild(linkBtn('Open PDF', p.links.case_study));
+
+    // workbench tabs/stage
+    tabs.innerHTML=''; stage.innerHTML='';
+    const tb = [];
+    if (p.links?.case_study) tb.push({id:'pdf', label:'PDF'});
+    if (p.links?.repo) tb.push({id:'sql', label:'SQL'});
+    if (!tb.length) tb.push({id:'cover', label:'Preview'});
+    tb.forEach((t,i)=>{
+      const b = document.createElement('button'); b.className='tab'; b.textContent=t.label; b.dataset.id=t.id;
+      b.setAttribute('aria-selected', i===0 ? 'true' : 'false');
+      b.addEventListener('click',()=>setTab(t.id,p));
+      tabs.appendChild(b);
+    });
+    setTab(tb[0].id,p);
+  }
+
+  function setTab(id, p){
+    $$('#wb-tabs .tab').forEach(b => b.setAttribute('aria-selected', b.dataset.id === id ? 'true' : 'false'));
+    stage.innerHTML = '';
     if (id === 'pdf' && p.links?.case_study){
       const frame = document.createElement('iframe');
-      frame.src = p.links.case_study;  // already points at pdfjs viewer
-      el.stage.appendChild(frame);
+      frame.src = p.links.case_study;
+      stage.appendChild(frame);
     } else if (id === 'sql' && p.links?.repo){
       const pre = document.createElement('pre'); pre.className = 'code';
       const code = document.createElement('code'); code.className = 'language-sql'; code.textContent = 'Loading SQL…';
-      pre.appendChild(code); el.stage.appendChild(pre);
-      // attempt to fetch SQL text (same-origin)
+      pre.appendChild(code); stage.appendChild(pre);
       fetch(p.links.repo, {cache:'no-store'}).then(r => r.ok ? r.text() : Promise.reject(r.status)).then(txt => {
         code.textContent = txt; if (window.hljs) window.hljs.highlightElement(code);
-      }).catch(()=>{
-        code.textContent = 'Could not load SQL file. Use "Open repo" to view it.';
-      });
+      }).catch(()=>{ code.textContent = 'Could not load SQL file. Use "Open repo" to view it.'; });
     } else {
-      // fallback to cover image
       const img = document.createElement('img');
       img.alt = p?.cover?.[0]?.alt || p.title;
       img.src = p?.cover?.[0]?.src || 'assets/img/placeholder.jpg';
       img.style.width='100%'; img.style.height='100%'; img.style.objectFit='cover';
-      el.stage.appendChild(img);
+      stage.appendChild(img);
     }
   }
 
-  function closeOverlay(){ byId('detail-overlay')?.setAttribute('aria-hidden','true'); }
-
-  // tiny DOM helpers
-  function div(cls, text){ const n=document.createElement('div'); if (cls) n.className=cls; if (text!==undefined) n.textContent=text; return n; }
-  function span(cls, text){ const n=document.createElement('span'); if (cls) n.className=cls; n.textContent=text; return n; }
-  function h(tag, cls, text){ const n=document.createElement(tag); if (cls) n.className=cls; n.textContent=text; return n; }
-  function pEl(cls, text){ const n=document.createElement('p'); if (cls) n.className=cls; n.textContent=text; return n; }
+  // tiny builders
+  function pill(text){ const s=document.createElement('span'); s.className='pill'; s.textContent=text; return s; }
   function li(text){ const n=document.createElement('li'); n.textContent=text; return n; }
+  function metric(label, value){ const c=document.createElement('div'); c.className='metric'; const l=document.createElement('p'); l.className='metric-label'; l.textContent=label; const v=document.createElement('p'); v.className='metric-value'; v.textContent=value; c.append(l,v); return c; }
+  function linkBtn(label, href){ const a=document.createElement('a'); a.className='btn ghost'; a.target='_blank'; a.rel='noopener'; a.href=href; a.textContent=label; return a; }
 
-  // Footer year + mobile nav
-  document.addEventListener('DOMContentLoaded', () => {
-    const y = document.getElementById('year');
-    if (y) y.textContent = new Date().getFullYear();
-    const toggle = document.querySelector('.nav-toggle');
-    const nav = document.getElementById('site-nav');
-    if (toggle && nav) {
-      toggle.addEventListener('click', () => {
-        const open = nav.classList.toggle('open');
-        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-      });
-    }
-    if (window.hljs) window.hljs.highlightAll?.();
-  });
+  // footer year
+  const y = byId('year'); if (y) y.textContent = new Date().getFullYear();
+  if (window.hljs) window.hljs.highlightAll?.();
 })();
   </script>
-
 </body>
 </html>
