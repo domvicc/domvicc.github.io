@@ -289,8 +289,7 @@ pre.code{ margin:0; padding:18px; min-height:100%; font-size:.95rem; }
       "tech_stack": ["T-SQL","SQL Agent","Indexing"],
       "role": "Data Engineer",
       "links": {
-        "repo":"sql/inventory_audit.sql",
-        "case_study":"assets/pdfjs/web/viewer.html?file=../../pdf/inventory_audit_notes.pdf"
+        "repo":"sql/inventory_audit.sql"
       },
       "metrics": [{"label":"Tables","value":"12"},{"label":"Indexes","value":"27"},{"label":"Runtime","value":"< 6m"}],
       "highlights": ["Branching filter paths","Repeatable index strategy","Variance surfacing for Ops"],
@@ -435,6 +434,90 @@ pre.code{ margin:0; padding:18px; min-height:100%; font-size:.95rem; }
       "metrics": [{"label":"Jurisdictions","value":"500+"},{"label":"Alert latency","value":"< 1 day"}],
       "highlights": ["CPI overlays","Multi-level rules","Alerting"],
       "featured": true
+    },
+    {
+      "id": "direct-through-stock-strategy",
+      "title": "Direct / Through Stock Strategy",
+      "subtitle": "Optimizing fulfillment path mix for margin & service",
+      "description": "Analysis and playbook comparing direct-ship vs. stock pathways, quantifying freight avoidance, service-level impact, and working capital trade‑offs.",
+      "cover": [{"src":"assets/img/inventory_audit_totals.png","alt":"Direct vs Stock"}],
+      "tags": ["Operations","Supply Chain","Case Study"],
+      "tech_stack": ["SQL","Power BI"],
+      "role": "Data / Ops Analyst",
+      "links": {"case_study":"assets/pdfjs/web/viewer.html?file=../../pdf/direct_through_stock.pdf"},
+      "metrics": [{"label":"Freight savings","value":"~5-8%"},{"label":"Working capital","value":"↓ selective"}],
+      "highlights": ["Path mix segmentation","Freight vs carry cost model","Actionable routing rules"],
+      "featured": false
+    },
+    {
+      "id": "injury-reporting-workflow",
+      "title": "Injury Reporting Workflow",
+      "subtitle": "Standardized HR & safety escalation path",
+      "description": "Flow design reducing lag between incident, documentation, and corrective action; codifies notifications and data capture points.",
+      "cover": [{"src":"assets/img/inventory_audit_perpetual_vs_gl.png","alt":"Injury Workflow"}],
+      "tags": ["HR","Safety","Process"],
+      "tech_stack": ["Visio","SharePoint"],
+      "role": "Process Designer",
+      "links": {"case_study":"assets/pdfjs/web/viewer.html?file=../../pdf/hr_injury_flow.pdf"},
+      "metrics": [{"label":"Report lag","value":"↓ 40%"},{"label":"Forms standardized","value":"100%"}],
+      "highlights": ["Escalation timing","Unified intake form","Compliance alignment"],
+      "featured": false
+    },
+    {
+      "id": "routing-driver-setup",
+      "title": "Routing & Driver Setup Guide",
+      "subtitle": "Onboarding & configuration for routing platform",
+      "description": "Driver, vehicle, and route template setup reference reducing onboarding variability and improving first-week route adherence.",
+      "cover": [{"src":"assets/img/ledger.jpg","alt":"Routing Setup"}],
+      "tags": ["Logistics","Enablement","Case Study"],
+      "tech_stack": ["SaaS Routing","Excel"],
+      "role": "Operations Analyst",
+      "links": {"case_study":"assets/pdfjs/web/viewer.html?file=../../pdf/innovo_routing_driver_setup.pdf"},
+      "metrics": [{"label":"Onboard time","value":"↓ 30%"},{"label":"Route adherence","value":"↑ 8 pts"}],
+      "highlights": ["Standard templates","Driver profile checklist","Faster activation"],
+      "featured": false
+    },
+    {
+      "id": "job-freight-management-flow",
+      "title": "Job & Freight Management Flow",
+      "subtitle": "Coordinating job quotes → shipment → confirmation",
+      "description": "Process map clarifying handoffs among sales, dispatch, and warehouse for complex freight & job orders to cut rework and delays.",
+      "cover": [{"src":"assets/img/price_matrix.jpg","alt":"Job & Freight Flow"}],
+      "tags": ["Process","Logistics","Operations"],
+      "tech_stack": ["Visio","ERP"],
+      "role": "Process Analyst",
+      "links": {"case_study":"assets/pdfjs/web/viewer.html?file=../../pdf/job_management_frieght_flow_chart.pdf"},
+      "metrics": [{"label":"Rework tickets","value":"↓ 18%"},{"label":"Touchpoints clarified","value":"12"}],
+      "highlights": ["Defined swimlanes","Exception branching","Status visibility"],
+      "featured": false
+    },
+    {
+      "id": "rf-operations-manual",
+      "title": "RF Operations Manual",
+      "subtitle": "Standard device usage & inventory tasks",
+      "description": "Reference manual for RF (handheld) transactions – receiving, picking, cycle count – reducing training time and errors.",
+      "cover": [{"src":"assets/img/tagged_orders.jpg","alt":"RF Manual"}],
+      "tags": ["Warehouse","Enablement","Training"],
+      "tech_stack": ["WMS","RF"],
+      "role": "Operations Trainer",
+      "links": {"case_study":"assets/pdfjs/web/viewer.html?file=../../pdf/rf_manual.pdf"},
+      "metrics": [{"label":"Training hours","value":"↓ 25%"},{"label":"Pick accuracy","value":"↑ 2.5 pts"}],
+      "highlights": ["Task screenshots","Error recovery steps","Role-based sections"],
+      "featured": false
+    },
+    {
+      "id": "vendor-performance-scorecard",
+      "title": "Vendor Performance Scorecard",
+      "subtitle": "On-time, fill rate, defect & rebate visibility",
+      "description": "Supplier scorecard consolidating OTIF, defect metrics, and rebate realization to drive quarterly vendor business reviews.",
+      "cover": [{"src":"assets/img/rebates.jpg","alt":"Vendor Scorecard"}],
+      "tags": ["Supply Chain","Analytics","Governance"],
+      "tech_stack": ["SQL","Power BI"],
+      "role": "Analytics Engineer",
+      "links": {"case_study":"assets/pdfjs/web/viewer.html?file=../../pdf/vendor_scorecard.pdf"},
+      "metrics": [{"label":"Vendors tracked","value":"150+"},{"label":"OTIF improvement","value":"+6 pts"}],
+      "highlights": ["Unified KPI layer","Exception ranking","Quarterly review pack"],
+      "featured": false
     }
   ]
   </script>
