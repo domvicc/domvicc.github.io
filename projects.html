@@ -294,7 +294,7 @@ pre.code{ margin:0; padding:18px; min-height:100%; font-size:.95rem; }
       "links": {
         "repo":"sql/inventory_audit.sql",
         "case_studies": [
-          {"id":"perpetual","label":"Perpetual vs G/L","href":"assets/pdfjs/web/viewer.html?file=../../pdf/inventory_audit_perpetual.pdf"},
+          {"id":"perpetual-vs-gl","label":"Perpetual vs G/L","href":"assets/pdfjs/web/viewer.html?file=../../pdf/inventory_audit_perpetual_vs_gl.pdf"},
           {"id":"totals","label":"Layer Totals","href":"assets/pdfjs/web/viewer.html?file=../../pdf/inventory_audit_totals.pdf"}
         ]
       },
@@ -543,7 +543,12 @@ pre.code{ margin:0; padding:18px; min-height:100%; font-size:.95rem; }
       "tags": ["Architecture","Serverless","Ingestion"],
       "tech_stack": ["Azure Functions","Event Grid","ADLS Gen2","Managed Identity"],
       "role": "Data Platform Engineer",
-      "links": {"case_study":"assets/pdfjs/web/viewer.html?file=../../pdf/azure_function_app_design_datalake_production.pdf"},
+      "links": {"case_studies":[
+        {"id":"datalake-production","label":"Production Ingestion","href":"assets/pdfjs/web/viewer.html?file=../../pdf/azure_function_app_design_datalake_production.pdf"},
+        {"id":"datalake-export","label":"Export Orchestration","href":"assets/pdfjs/web/viewer.html?file=../../pdf/azure_function_app_design_datalake_export.pdf"},
+        {"id":"custom-csv-import","label":"Custom CSV Import","href":"assets/pdfjs/web/viewer.html?file=../../pdf/azure_function_app_design_custom_csv_import.pdf"},
+        {"id":"amazon-reporting","label":"Amazon Reporting","href":"assets/pdfjs/web/viewer.html?file=../../pdf/azure_function_app_design_amazon_reporting.pdf"}
+      ]},
       "metrics": [
         {"label":"Zones traversed","value":"3"},
         {"label":"Trigger types","value":"Timer/Event"}
