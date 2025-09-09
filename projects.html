@@ -427,9 +427,9 @@ pre.code{ margin:0; padding:18px; min-height:100%; font-size:.95rem; }
       "tags": ["Architecture","Platform","Governance"],
       "tech_stack": ["ADLS Gen2","Synapse","RBAC/RLS"],
       "role": "Architect",
-      "links": {},
+  "links": {"case_study":"assets/pdfjs/web/viewer.html?file=../../pdf/datalake_architecture_design.pdf"},
       "metrics": [{"label":"Zones","value":"3"},{"label":"Cost ↓","value":"~22%"}],
-      "highlights": ["Zone governance","Shared dimensions","Cost control"],
+  "highlights": ["Zone governance","Shared dimensions","Cost control","Architecture design document"],
       "featured": false
     },
     {
@@ -528,6 +528,40 @@ pre.code{ margin:0; padding:18px; min-height:100%; font-size:.95rem; }
       "links": {"case_study":"assets/pdfjs/web/viewer.html?file=../../pdf/vendor_scorecard.pdf"},
       "metrics": [{"label":"Vendors tracked","value":"150+"},{"label":"OTIF improvement","value":"+6 pts"}],
       "highlights": ["Unified KPI layer","Exception ranking","Quarterly review pack"],
+      "featured": false
+    },
+    {
+      "id": "azure-function-datalake-ingestion",
+      "title": "Azure Function App Data Lake Ingestion",
+      "subtitle": "Event-driven serverless ingestion & orchestration",
+      "description": "Design of production Azure Function Apps handling event/timer-triggered ingestion into a governed Data Lake (landing → raw → curated) with validation, retry, dead-letter, and cost-efficient scaling.",
+      "cover": [{"src":"assets/img/lakehouse.jpg","alt":"Function Ingestion Architecture"}],
+      "tags": ["Architecture","Serverless","Ingestion"],
+      "tech_stack": ["Azure Functions","Event Grid","ADLS Gen2","Managed Identity"],
+      "role": "Data Platform Engineer",
+      "links": {"case_study":"assets/pdfjs/web/viewer.html?file=../../pdf/azure_function_app_design_datalake_production.pdf"},
+      "metrics": [
+        {"label":"Zones traversed","value":"3"},
+        {"label":"Trigger types","value":"Timer/Event"}
+      ],
+      "highlights": ["Idempotent landing writes","Schema & size validation","Retry / dead-letter pattern","Least-privilege identities"],
+      "featured": false
+    },
+    {
+      "id": "project-management-integration-framework",
+      "title": "Project Management & Integration Framework",
+      "subtitle": "Cross-system data & workflow coordination",
+      "description": "Framework mapping order, contact, invoice, and financial data flows (e.g., Salesforce & Intacct) to standardize project technical development, ownership, and change governance.",
+      "cover": [{"src":"assets/img/ledger.jpg","alt":"Integration Framework"}],
+      "tags": ["Project Management","Integration","Architecture"],
+      "tech_stack": ["Salesforce","Intacct","Data Lake"],
+      "role": "Technical Project Lead",
+      "links": {"case_study":"assets/pdfjs/web/viewer.html?file=../../pdf/project_management_technical_development.pdf"},
+      "metrics": [
+        {"label":"Core systems","value":"4"},
+        {"label":"Flow layers","value":"Intake→Processing→Finance"}
+      ],
+      "highlights": ["System ownership map","Standardized link taxonomy","Governed change pathway","Cross-domain visibility"],
       "featured": false
     },
     {
