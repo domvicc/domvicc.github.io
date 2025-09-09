@@ -581,3 +581,18 @@ body {
   #projects .row{grid-template-columns:1fr}
 }
 
+/* mobile overlap fixes for project page */
+@media (max-width: 768px) {
+  .workspace > * { min-width: 0; }
+
+  .directory { position: static; top: auto; max-height: none; }
+  .dir-card { height: auto; }
+  .dir-body { overflow: visible; }
+
+  .workbench { height: auto; min-height: 56svh; }
+  @supports (height: 1dvh) {
+    .workbench { min-height: 56dvh; }
+  }
+  .wb-stage { min-height: 320px; }
+  .wb-stage iframe { min-height: 320px; }
+}
