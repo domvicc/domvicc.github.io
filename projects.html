@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>[page_title]</title>
+  <meta name="description" content="[page_description]" />
+  <link rel="icon" href="[path_to_favicon]" type="image/svg+xml" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+
+  <style>
+/* ======= site-wide css (light modern palette & header) ======= */
+:root{
+  --bg:#0b1020;
+  --surface:#0f1428;
+  --card:#121a31;
+  --border:#1c2442;
+  --text:#e6e9ef;
+  --muted:#a7b0c0;
+  --primary:#22d3ee;
+  --primary-2:#818cf8;
+  --radius:16px;
+  --shadow:0 12px 40px rgba(0,0,0,.28);
+  --content-max:1680px;
+  --content-wide:1920px;
+  --gutter:clamp(1rem,2.2vw,3.5rem);
+  --section-vertical:clamp(2rem,5vw,5rem);
+  --header-h:64px;
+  --header-bg:rgba(200,205,215,.28);
+}
+@media (prefers-color-scheme: light){
+  :root{
+    --bg:#f7f9fc;
+    --surface:#ffffff;
+    --card:#ffffff;
+    --border:#e5e8ef;
+    --text:#0a0e1a;
+    --muted:#5c667a;
+    --primary:#2563eb;
+    --primary-2:#22d3ee;
+    --shadow:0 10px 30px rgba(0,0,0,.08);
+    --header-bg:rgba(255,255,255,.75);
+  }
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  color:var(--text);
+  background:
+    radial-gradient(1200px 600px at 20% -10%, rgba(34,211,238,.12), transparent 60%),
+    radial-gradient(800px 600px at 80% 0%, rgba(129,140,248,.14), transparent 60%),
+    var(--bg);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+.container,.container-wide{width:100%;max-width:none;margin:0;padding-inline:var(--gutter)}
+.section{padding-block:var(--section-vertical)}
+.section-title{
+  font-family:"Space Grotesk",Inter,system-ui,sans-serif;
+  font-weight:700;
+  font-size:clamp(1.6rem,3vw,2rem);
+  margin:0 0 1rem;
+}
+.lead{color:var(--muted);margin-bottom:1.25rem}
+
+/* header + nav */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:var(--header-bg);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border);
+}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:var(--header-h);padding-inline:var(--gutter)}
+.brand{display:inline-flex;align-items:center;gap:.5rem;text-decoration:none}
+.brand-mark{
+  display:inline-grid;place-items:center;inline-size:36px;block-size:36px;border-radius:10px;
+  background:linear-gradient(135deg,var(--primary),var(--primary-2));color:#000;font-weight:700;text-transform:uppercase;letter-spacing:.5px
+}
+.brand-text{color:var(--text);font-weight:700;letter-spacing:.3px}
+.site-nav{display:flex;gap:.25rem;align-items:center}
+.nav-link{color:var(--muted);text-decoration:none;padding:.55rem .8rem;border-radius:10px}
+.nav-link:hover,.nav-link.is-active{color:var(--text);background:rgba(0,0,0,.06)}
+.nav-toggle{display:none;border:1px solid var(--border);background:transparent;color:var(--text);padding:.5rem;border-radius:10px}
+.nav-toggle .bar{display:block;inline-size:22px;block-size:2px;background:var(--text);margin:4px 0}
+
+/* compact hero */
+.hero{padding-block:4px 6px;min-height:0;margin:0}
+.hero-inner{text-align:left;margin-inline:auto;max-width:var(--content-wide)}
+
+/* buttons */
+.btn{display:inline-block;border:1px solid var(--border);background:var(--surface);color:var(--text);padding:.72rem 1rem;border-radius:14px;text-decoration:none;font-weight:600;transition:transform .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn.primary{background:linear-gradient(135deg,var(--primary),var(--primary-2));border:none;color:#05101c}
+.btn.ghost{background:transparent}
+.btn.small{padding:.5rem .7rem;font-size:.9rem}
+
+/* footer */
+.site-footer{border-top:1px solid var(--border);background:rgba(10,14,26,.08)}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;padding-block:1rem}
+.social{display:inline-flex;gap:.75rem}
+.social a{color:var(--muted);text-decoration:none}
+.social a:hover{color:var(--text)}
+
+/* responsive header behavior */
+@media (max-width:680px){
+  .header-inner{height:auto;padding-block:.5rem}
+  .site-nav{
+    position:absolute;right:1rem;top:var(--header-h);background:var(--surface);
+    border:1px solid var(--border);border-radius:12px;padding:.5rem;display:none;flex-direction:column;min-width:180px;box-shadow:var(--shadow)
+  }
+  .site-nav.open{display:flex}
+  .nav-toggle{display:inline-block}
+}
+
+/* ======= app (directory nav + two-pane workspace) ======= */
+.app{padding-block:calc(var(--section-vertical) - 2rem)}
+.app-layout{display:grid;grid-template-columns:340px 1fr;gap:22px;align-items:start}
+@media (max-width:1100px){.app-layout{grid-template-columns:1fr}}
+
+/* left directory */
+.directory{position:sticky;top:calc(var(--header-h) + 12px);align-self:start;max-height:calc(100vh - 80px)}
+.dir-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);display:flex;flex-direction:column;overflow:hidden;height:100%}
+.dir-head{padding:12px 14px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+.dir-title{font-weight:700;letter-spacing:.02em}
+.dir-body{overflow:auto}
+.tree{padding:6px}
+.tree details{border:1px solid var(--border);border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,0));margin:6px 6px 10px}
+.tree summary{list-style:none;cursor:pointer;padding:10px 12px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.tree summary::-webkit-details-marker{display:none}
+.caret{width:18px;height:18px;display:inline-grid;place-items:center;border:1px solid var(--border);border-radius:6px;background:rgba(0,0,0,.03)}
+details[open] .caret{transform:rotate(90deg)}
+.tree-count{color:var(--muted);font-size:.85rem}
+.group{padding:6px 8px 12px}
+.node{border:1px dashed var(--border);border-radius:10px;margin:8px;background:rgba(0,0,0,.02)}
+.node summary{padding:8px 10px}
+.dir-list{list-style:none;margin:0;padding:6px}
+.dir-item{margin:0;padding:0}
+.tree-item{
+  width:100%;text-align:left;background:transparent;color:var(--text);border:1px solid transparent;
+  padding:8px 10px;border-radius:10px;cursor:pointer;display:flex;align-items:center;gap:8px
+}
+.tree-item:hover{background:rgba(0,0,0,.05);border-color:var(--border)}
+.tree-item.active{
+  background:linear-gradient(135deg,var(--primary),var(--primary-2));color:#06101a;
+  border-color:color-mix(in oklab,var(--border),var(--primary) 40%)
+}
+.bullet{width:6px;height:6px;border-radius:999px;background:var(--primary);opacity:.9}
+
+/* workspace: details left, viewer right */
+.workspace{display:grid;grid-template-columns:1fr minmax(620px,1fr);gap:18px;min-height:60vh}
+@media (max-width:1200px){.workspace{grid-template-columns:1fr}}
+
+/* details pane */
+.details{
+  display:grid;gap:14px;align-content:start;background:var(--card);border:1px solid var(--border);
+  border-radius:var(--radius);padding:14px;box-shadow:var(--shadow)
+}
+.kicker{color:var(--muted);margin:0}
+.title{font-family:"Space Grotesk";font-size:clamp(28px,3vw,40px);margin:.1rem 0}
+.subtitle{color:var(--muted);font-weight:500;margin:0}
+.desc{color:color-mix(in oklab,var(--text),#000 10%);line-height:1.6;margin:.5rem 0 0}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.info-card{border:1px solid var(--border);background:var(--surface);border-radius:14px;padding:10px 12px}
+.info-title{color:var(--muted);font-size:.85rem;margin:0 0 6px}
+.pill-row{display:flex;flex-wrap:wrap;gap:.4rem}
+.pill{font-size:.8rem;padding:.25rem .6rem;border-radius:999px;border:1px solid var(--border);background:rgba(0,0,0,.02)}
+.highlights{margin:4px 0 0;padding-left:1.1rem}
+.metrics{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}
+.metric{border:1px solid var(--border);background:var(--surface);border-radius:12px;padding:.6rem .7rem}
+.metric-label{color:var(--muted);font-size:.85rem;margin:0}
+.metric-value{font-weight:700;font-size:1.05rem;margin-top:.15rem}
+.links{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.2rem}
+
+/* viewer pane */
+.workbench{
+  height:calc(100vh - 170px);min-height:540px;background:var(--card);border:1px solid var(--border);
+  border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow)
+}
+@media (max-width:1100px){.workbench{height:60vh}}
+.wb-tabs{
+  display:flex;gap:8px;padding:10px;border-bottom:1px solid var(--border);
+  background:linear-gradient(180deg,rgba(0,0,0,.03),rgba(0,0,0,0));position:sticky;top:0;z-index:2
+}
+.tab{padding:.45rem .8rem;border-radius:999px;border:1px solid var(--border);background:var(--surface);cursor:pointer;font-weight:600;color:var(--text)}
+.tab[aria-selected="true"]{
+  background:linear-gradient(135deg,var(--primary),var(--primary-2));color:#06101a;
+  border-color:color-mix(in oklab,var(--border),var(--primary) 40%)
+}
+.wb-stage{position:relative;flex:1;overflow:auto;background:var(--surface);display:grid;place-items:center}
+.wb-stage .placeholder{color:var(--muted);font-size:1rem;padding:1rem 1.5rem;text-align:center}
+  </style>
+</head>
+<body>
+  <!-- header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="[brand_home_href]" aria-label="[brand_aria_label]">
+        <span class="brand-mark">DV</span>
+        <span class="brand-text">[brand_text]</span>
+      </a>
+
+      <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="[primary_nav_label]">
+        <a href="[nav_link_1_href]" class="nav-link is-active">[nav_link_1_text]</a>
+        <a href="[nav_link_2_href]" class="nav-link">[nav_link_2_text]</a>
+        <a href="[nav_link_3_href]" class="nav-link">[nav_link_3_text]</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- hero / page heading -->
+  <section class="hero">
+    <div class="hero-inner container">
+      <h1 class="section-title" style="font-size:clamp(2rem,4vw,3rem);margin-top:.75rem;">[page_heading]</h1>
+      <p class="lead">[page_subheading_or_intro_text]</p>
+    </div>
+  </section>
+
+  <!-- main app layout -->
+  <main class="app" id="[app_id]">
+    <div class="container app-layout">
+
+      <!-- directory (left) -->
+      <aside class="directory">
+        <div class="dir-card">
+          <div class="dir-head">
+            <span class="dir-title">[directory_title]</span>
+          </div>
+          <div class="dir-body">
+            <div class="tree">
+              <!-- sample collapsible groups with placeholder items -->
+              <details open>
+                <summary><span class="caret">›</span><span>[section_title_a]</span><span class="tree-count">[count_a]</span></summary>
+                <ul class="dir-list">
+                  <li class="dir-item">
+                    <button class="tree-item active" data-id="[item_id_1]">
+                      <span class="bullet"></span><span>[item_label_1]</span>
+                    </button>
+                  </li>
+                  <li class="dir-item">
+                    <button class="tree-item" data-id="[item_id_2]">
+                      <span class="bullet"></span><span>[item_label_2]</span>
+                    </button>
+                  </li>
+                </ul>
+              </details>
+
+              <details open class="node">
+                <summary><span class="caret">›</span><span>[section_title_b]</span><span class="tree-count">[count_b]</span></summary>
+                <div class="group">
+                  <details open>
+                    <summary><span class="caret">›</span><span>[subgroup_title_b1]</span><span class="tree-count">[count_b1]</span></summary>
+                    <ul class="dir-list">
+                      <li class="dir-item">
+                        <button class="tree-item" data-id="[item_id_3]">
+                          <span class="bullet"></span><span>[item_label_3]</span>
+                        </button>
+                      </li>
+                    </ul>
+                  </details>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- workspace (details left, viewer right) -->
+      <section class="workspace">
+
+        <!-- details pane -->
+        <div class="details">
+          <p class="kicker">[item_kicker]</p>
+          <h2 class="title">[item_title]</h2>
+          <p class="subtitle">[item_subtitle]</p>
+          <p class="desc">[item_short_description]</p>
+
+          <div class="info-grid">
+            <div class="info-card">
+              <p class="info-title">[info_block_1_title]</p>
+              <div class="pill-row">
+                <span class="pill">[pill_1]</span>
+                <span class="pill">[pill_2]</span>
+                <span class="pill">[pill_3]</span>
+              </div>
+            </div>
+            <div class="info-card">
+              <p class="info-title">[info_block_2_title]</p>
+              <div class="pill-row">
+                <span class="pill">[pill_4]</span>
+                <span class="pill">[pill_5]</span>
+                <span class="pill">[pill_6]</span>
+              </div>
+            </div>
+            <div class="info-card">
+              <p class="info-title">[info_block_3_title]</p>
+              <div class="pill-row">
+                <span class="pill">[pill_7]</span>
+                <span class="pill">[pill_8]</span>
+              </div>
+            </div>
+            <div class="info-card">
+              <p class="info-title">[actions_title]</p>
+              <div class="links">
+                <a class="btn ghost" href="[action_link_1_href]" target="_blank" rel="noopener">[action_link_1_label]</a>
+                <a class="btn ghost" href="[action_link_2_href]" target="_blank" rel="noopener">[action_link_2_label]</a>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <p class="info-title" style="margin:.2rem 0 .4rem;">[highlights_title]</p>
+            <ul class="highlights">
+              <li>[highlight_1]</li>
+              <li>[highlight_2]</li>
+              <li>[highlight_3]</li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="info-title" style="margin:.2rem 0 .4rem;">[metrics_title]</p>
+            <div class="metrics">
+              <div class="metric">
+                <p class="metric-label">[metric_label_1]</p>
+                <p class="metric-value">[metric_value_1]</p>
+              </div>
+              <div class="metric">
+                <p class="metric-label">[metric_label_2]</p>
+                <p class="metric-value">[metric_value_2]</p>
+              </div>
+              <div class="metric">
+                <p class="metric-label">[metric_label_3]</p>
+                <p class="metric-value">[metric_value_3]</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- viewer pane -->
+        <div class="workbench">
+          <div class="wb-tabs" id="wb-tabs">
+            <button class="tab" aria-selected="true" data-tab="tab-1">[tab_label_1]</button>
+            <button class="tab" aria-selected="false" data-tab="tab-2">[tab_label_2]</button>
+            <button class="tab" aria-selected="false" data-tab="tab-3">[tab_label_3]</button>
+          </div>
+          <div class="wb-stage" id="wb-stage">
+            <div class="placeholder">[viewer_content_placeholder — e.g., embed pdf, image, or code here]</div>
+          </div>
+        </div>
+
+      </section>
+    </div>
+  </main>
+
+  <!-- footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> [owner_name]</p>
+      <div class="social">
+        <a href="[social_link_1_href]" target="_blank" rel="noopener">[social_link_1_label]</a>
+        <a href="[social_link_2_href]" target="_blank" rel="noopener">[social_link_2_label]</a>
+        <a href="[social_link_3_href]" target="_blank" rel="noopener">[social_link_3_label]</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+/* minimal interactivity: mobile nav toggle + viewer tabs */
+(function(){
+  const navToggle=document.querySelector('.nav-toggle');
+  const nav=document.getElementById('site-nav');
+  if(navToggle&&nav){
+    navToggle.addEventListener('click',()=>{
+      const open=nav.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded',open?'true':'false');
+    });
+  }
+
+  const yearEl=document.getElementById('year');
+  if(yearEl){ yearEl.textContent=new Date().getFullYear(); }
+
+  const tabs=document.querySelectorAll('#wb-tabs .tab');
+  const stage=document.getElementById('wb-stage');
+  tabs.forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      tabs.forEach(b=>b.setAttribute('aria-selected','false'));
+      btn.setAttribute('aria-selected','true');
+      const id=btn.getAttribute('data-tab');
+      stage.innerHTML='';
+      const ph=document.createElement('div');
+      ph.className='placeholder';
+      ph.textContent='[content for ' + id + ' goes here]';
+      stage.appendChild(ph);
+    });
+  });
+
+  /* directory item active state (style only) */
+  const items=document.querySelectorAll('.tree-item');
+  items.forEach(i=>{
+    i.addEventListener('click',()=>{
+      items.forEach(b=>b.classList.remove('active'));
+      i.classList.add('active');
+      // optional: update details pane when clicked
+      // document.querySelector('.title').textContent='[updated_item_title_based_on_selection]';
+    });
+  });
+})();
+  </script>
+</body>
+</html>
