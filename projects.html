@@ -6,7 +6,7 @@
   <title>[page_title]</title>
   <meta name="description" content="[page_description]" />
   <link rel="icon" href="[path_to_favicon]" type="image/svg+xml" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=inter:wght@400;600;700&family=space+grotesk:wght@600;700&display=swap" rel="stylesheet" />
 
   <style>
 /* ======= site-wide css (light modern palette & header) ======= */
@@ -21,7 +21,6 @@
   --primary-2:#818cf8;
   --radius:16px;
   --shadow:0 12px 40px rgba(0,0,0,.28);
-  --content-max:1680px;
   --content-wide:1920px;
   --gutter:clamp(1rem,2.2vw,3.5rem);
   --section-vertical:clamp(2rem,5vw,5rem);
@@ -46,7 +45,7 @@
 html,body{height:100%}
 body{
   margin:0;
-  font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-family:inter,system-ui,-apple-system,"segoe ui",roboto,"helvetica neue",arial,"noto sans","apple color emoji","segoe ui emoji","segoe ui symbol";
   color:var(--text);
   background:
     radial-gradient(1200px 600px at 20% -10%, rgba(34,211,238,.12), transparent 60%),
@@ -56,17 +55,17 @@ body{
   -webkit-font-smoothing:antialiased;
   text-rendering:optimizeLegibility;
 }
-.container,.container-wide{width:100%;max-width:none;margin:0;padding-inline:var(--gutter)}
+.container{width:100%;max-width:none;margin:0;padding-inline:var(--gutter)}
 .section{padding-block:var(--section-vertical)}
 .section-title{
-  font-family:"Space Grotesk",Inter,system-ui,sans-serif;
+  font-family:"space grotesk",inter,system-ui,sans-serif;
   font-weight:700;
   font-size:clamp(1.6rem,3vw,2rem);
   margin:0 0 1rem;
 }
 .lead{color:var(--muted);margin-bottom:1.25rem}
 
-/* header + nav */
+/* header + nav (restored default) */
 .site-header{
   position:sticky;top:0;z-index:50;
   background:var(--header-bg);
@@ -93,9 +92,7 @@ body{
 /* buttons */
 .btn{display:inline-block;border:1px solid var(--border);background:var(--surface);color:var(--text);padding:.72rem 1rem;border-radius:14px;text-decoration:none;font-weight:600;transition:transform .15s ease}
 .btn:hover{transform:translateY(-1px)}
-.btn.primary{background:linear-gradient(135deg,var(--primary),var(--primary-2));border:none;color:#05101c}
 .btn.ghost{background:transparent}
-.btn.small{padding:.5rem .7rem;font-size:.9rem}
 
 /* footer */
 .site-footer{border-top:1px solid var(--border);background:rgba(10,14,26,.08)}
@@ -159,7 +156,7 @@ details[open] .caret{transform:rotate(90deg)}
   border-radius:var(--radius);padding:14px;box-shadow:var(--shadow)
 }
 .kicker{color:var(--muted);margin:0}
-.title{font-family:"Space Grotesk";font-size:clamp(28px,3vw,40px);margin:.1rem 0}
+.title{font-family:"space grotesk";font-size:clamp(28px,3vw,40px);margin:.1rem 0}
 .subtitle{color:var(--muted);font-weight:500;margin:0}
 .desc{color:color-mix(in oklab,var(--text),#000 10%);line-height:1.6;margin:.5rem 0 0}
 .info-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
@@ -194,27 +191,27 @@ details[open] .caret{transform:rotate(90deg)}
   </style>
 </head>
 <body>
-  <!-- header -->
+  <!-- header (default restored with working links) -->
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="[brand_home_href]" aria-label="[brand_aria_label]">
+      <a class="brand" href="index.html" aria-label="home">
         <span class="brand-mark">DV</span>
-        <span class="brand-text">[brand_text]</span>
+        <span class="brand-text">dominic vicchiollo</span>
       </a>
 
       <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false">
         <span class="bar"></span><span class="bar"></span><span class="bar"></span>
       </button>
 
-      <nav id="site-nav" class="site-nav" aria-label="[primary_nav_label]">
-        <a href="[nav_link_1_href]" class="nav-link is-active">[nav_link_1_text]</a>
-        <a href="[nav_link_2_href]" class="nav-link">[nav_link_2_text]</a>
-        <a href="[nav_link_3_href]" class="nav-link">[nav_link_3_text]</a>
+      <nav id="site-nav" class="site-nav" aria-label="primary">
+        <a href="index.html" class="nav-link">home</a>
+        <a href="projects.html" class="nav-link is-active">projects</a>
+        <a href="domguardianai.html" class="nav-link">domguardianai</a>
       </nav>
     </div>
   </header>
 
-  <!-- hero / page heading -->
+  <!-- hero -->
   <section class="hero">
     <div class="hero-inner container">
       <h1 class="section-title" style="font-size:clamp(2rem,4vw,3rem);margin-top:.75rem;">[page_heading]</h1>
@@ -234,7 +231,6 @@ details[open] .caret{transform:rotate(90deg)}
           </div>
           <div class="dir-body">
             <div class="tree">
-              <!-- sample collapsible groups with placeholder items -->
               <details open>
                 <summary><span class="caret">›</span><span>[section_title_a]</span><span class="tree-count">[count_a]</span></summary>
                 <ul class="dir-list">
@@ -250,7 +246,6 @@ details[open] .caret{transform:rotate(90deg)}
                   </li>
                 </ul>
               </details>
-
               <details open class="node">
                 <summary><span class="caret">›</span><span>[section_title_b]</span><span class="tree-count">[count_b]</span></summary>
                 <div class="group">
@@ -400,14 +395,11 @@ details[open] .caret{transform:rotate(90deg)}
     });
   });
 
-  /* directory item active state (style only) */
   const items=document.querySelectorAll('.tree-item');
   items.forEach(i=>{
     i.addEventListener('click',()=>{
       items.forEach(b=>b.classList.remove('active'));
       i.classList.add('active');
-      // optional: update details pane when clicked
-      // document.querySelector('.title').textContent='[updated_item_title_based_on_selection]';
     });
   });
 })();
