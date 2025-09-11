@@ -47,12 +47,12 @@
 <body>
   <div class="page">
     <h1>viewer lab</h1>
-    <p class="lead">three approaches you can try: a floating <strong>pdf.js panel</strong>, an <strong>svg pan/zoom canvas</strong>, and a <strong>deep‑zoom</strong> tile viewer.</p>
+    <p class="lead">three approaches you can try: a floating <strong>pdf.js panel</strong>, an <strong>svg pan/zoom canvas</strong>, and a <strong>deep-zoom</strong> tile viewer.</p>
 
     <div class="bar">
       <button class="btn" data-open="pdfjs">open pdf.js viewer</button>
       <button class="btn" data-open="svg">open svg canvas</button>
-      <button class="btn" data-open="deepzoom">open deep‑zoom</button>
+      <button class="btn" data-open="deepzoom">open deep-zoom</button>
     </div>
 
     <p class="hint">
@@ -63,12 +63,12 @@
     </p>
   </div>
   <!-- openseadragon for the deep-zoom option (cdn) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/4.1.0/openseadragon.min.js" integrity="sha512-pJ8ZJ0s6k5xq8Y+a9vN8SP8k9c6qk4ZFiVd1aYFfM7aKf5w5C5xN1M5E4oQq2BTG4XfC6ecG2Ih0nJkbgm2GNg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/4.1.0/openseadragon.min.js" integrity="sha512-pJ8ZJ0s6k5xq8Y+a9vN8SP8k9c6qk4ZFiVd1aYFfM7aKf5w5C5xN1M5E4oQq2BTG4XfC6ecG2Ih0nJkbgm2GNg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
     (function(){
       var s = document.createElement('script');
-      // change this if app2.js is in a different folder, e.g. 'assets/js/app2.js'
-        s.src = 'assets/js/app2.js'; 
+      // adjust this path depending on where app2.js actually is
+      s.src = 'assets/js/app2.js';  
       s.onload = function(){ console.log('app2.js loaded'); };
       s.onerror = function(){
         console.error('Failed to load app2.js — check the path in projects3.html');
@@ -80,6 +80,3 @@
   </script>
 </body>
 </html>
- 
-
- 
