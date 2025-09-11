@@ -219,7 +219,7 @@ details[open] .caret{transform:rotate(90deg)}
       <h1 class="section-title" style="font-size:clamp(2rem,4vw,3rem);margin-top:.75rem;">Projects</h1>
       <p class="lead">
         This page is a working showcase of my personal projects—built to highlight my technical capabilities and skills.
-        Expect cloud‑native pipelines, a data &amp; AI lakehouse, and ML‑backed analytics that reflect how I design, ship, and iterate. If something sparks an idea or you want to dig deeper, I’m always up for a technical conversation.
+        Expect cloud-native pipelines, a data &amp; AI lakehouse, and ML-backed analytics that reflect how I design, ship, and iterate. If something sparks an idea or you want to dig deeper, I’m always up for a technical conversation.
       </p>
     </div>
   </section>
@@ -278,9 +278,9 @@ details[open] .caret{transform:rotate(90deg)}
         <div class="details">
           <p class="kicker">Azure • Lakehouse • ML</p>
           <h2 class="title">DomGuardianAI</h2>
-          <p class="subtitle">End‑to‑end data lakehouse with orchestration, analytics, and MLOps.</p>
+          <p class="subtitle">End-to-end data lakehouse with orchestration, analytics, and MLOps.</p>
           <p class="desc">
-            A production‑ready architecture that ingests financial and news data (news feeds, XBRL 10‑K/8‑K, ticker/NASDAQ, technical analysis), lands to ADLS Gen2 in Parquet, queries via Synapse Serverless with external tables/pyodbc, orchestrates with Durable Azure Functions and queue‑based triggers, and serves analytics in Power BI—pairing classic ML (logistic regression, random forest, LSTM) with Azure OpenAI for conversational and generative use cases.
+            A production-ready architecture that ingests financial and news data (news feeds, XBRL 10-K/8-K, ticker/NASDAQ, technical analysis), lands to ADLS Gen2 in Parquet, queries via Synapse Serverless with external tables/pyodbc, orchestrates with Durable Azure Functions and queue-based triggers, and serves analytics in Power BI—pairing classic ML (logistic regression, random forest, LSTM) with Azure OpenAI for conversational and generative use cases.
           </p>
 
           <div class="info-grid">
@@ -304,7 +304,7 @@ details[open] .caret{transform:rotate(90deg)}
               <p class="info-title">Data &amp; ML</p>
               <div class="pill-row">
                 <span class="pill">Parquet + External Tables</span>
-                <span class="pill">scikit‑learn / TensorFlow (LSTM)</span>
+                <span class="pill">scikit-learn / TensorFlow (LSTM)</span>
               </div>
             </div>
             <div class="info-card">
@@ -319,8 +319,8 @@ details[open] .caret{transform:rotate(90deg)}
           <div>
             <p class="info-title" style="margin:.2rem 0 .4rem;">Highlights</p>
             <ul class="highlights">
-              <li>Sources: News feeds, XBRL 10‑K/8‑K, ticker/NASDAQ, and technical analysis.</li>
-              <li>Durable orchestration across HTTP, Timer, Queue, and Blob triggers with queue‑based messaging.</li>
+              <li>Sources: News feeds, XBRL 10-K/8-K, ticker/NASDAQ, and technical analysis.</li>
+              <li>Durable orchestration across HTTP, Timer, Queue, and Blob triggers with queue-based messaging.</li>
               <li>Quality gates and zones: Validation, retention, and normalized tables across Raw → Staging → Curated.</li>
             </ul>
           </div>
@@ -351,7 +351,8 @@ details[open] .caret{transform:rotate(90deg)}
             <button class="tab" aria-selected="false" data-tab="tab-2">Architecture</button>
             <button class="tab" aria-selected="false" data-tab="tab-3">Notes</button>
           </div>
-          <div class="wb-stage" id="wb-stage" data-pdf="assets/pdf/DGAI.pdf" data-svg="assets/svg/DGAI.svg"></div>
+          <!-- changed to use svg only -->
+          <div class="wb-stage" id="wb-stage" data-svg="assets/svg/DGAI.svg"></div>
     </div>
 
 </div>
@@ -395,149 +396,143 @@ details[open] .caret{transform:rotate(90deg)}
   if(yearEl){ yearEl.textContent=new Date().getFullYear(); }
 
   const tabs=document.querySelectorAll('#wb-tabs .tab');
-const stage=document.getElementById('wb-stage');
+  const stage=document.getElementById('wb-stage');
 
-function render_pdf_inline(stage, pdf_path){
-  const rel = pdf_path.replace(/^assets\//,'');
-  const src = 'assets/pdfjs/web/viewer.html?file=' + encodeURIComponent('../..' + '/' + rel);
-  const f = document.createElement('iframe');
-  f.style.position='absolute'; f.style.inset='0'; f.style.width='100%'; f.style.height='100%'; f.style.border='0'; f.style.background='#fff';
-  f.src = src;
-  stage.appendChild(f);
-}
-function render_svg_inline(stage, svg_path){
-  const wrap = document.createElement('div');
-  wrap.style.position='absolute'; wrap.style.inset='0'; wrap.style.background='#fff'; wrap.style.overflow='hidden'; wrap.style.touchAction='none'; wrap.style.cursor='grab';
-  stage.appendChild(wrap);
-  fetch(svg_path).then(r=>r.ok?r.text():Promise.reject()).then(txt=>{
-    wrap.innerHTML = txt;
-    const svg = wrap.querySelector('svg'); if(!svg){ wrap.textContent='svg failed to load'; return; }
-    svg.style.transformOrigin='0 0';
-    let scale=1,x=0,y=0,drag=false,lx=0,ly=0;
-    function apply(){ svg.style.transform=`translate(${x}px, ${y}px) scale(${scale})`; }
-    wrap.addEventListener('wheel', (e)=>{ e.preventDefault(); const p=e.deltaY<0?1.1:1/1.1; scale=Math.min(Math.max(scale*p,0.4),8); apply(); }, {passive:false});
-    wrap.addEventListener('pointerdown', (e)=>{ drag=true; wrap.setPointerCapture(e.pointerId); lx=e.clientX; ly=e.clientY; });
-    wrap.addEventListener('pointermove', (e)=>{ if(!drag) return; x+=e.clientX-lx; y+=e.clientY-ly; lx=e.clientX; ly=e.clientY; apply(); });
-    wrap.addEventListener('pointerup', ()=>{ drag=false; });
-    wrap.addEventListener('dblclick', ()=>{ scale=1;x=0;y=0;apply(); });
-    apply();
-  }).catch(()=>{ const ph=document.createElement('div'); ph.className='placeholder'; ph.textContent='svg failed to load'; stage.appendChild(ph); });
-}
-function render_auto_inline(stage, input){
-  const lower = (input||'').toLowerCase();
-  if (lower.endsWith('.pdf')) return render_pdf_inline(stage, input);
-  if (lower.endsWith('.svg')) return render_svg_inline(stage, input);
-  const img=document.createElement('img'); img.src=input; img.alt='preview'; img.className='canvas-image'; stage.appendChild(img);
-}
+  function render_pdf_inline(stage, pdf_path){
+    const rel = pdf_path.replace(/^assets\\//,''); // only used if a pdf is ever passed
+    const src = 'assets/pdfjs/web/viewer.html?file=' + encodeURIComponent('../..' + '/' + rel);
+    const f = document.createElement('iframe');
+    f.style.position='absolute'; f.style.inset='0'; f.style.width='100%'; f.style.height='100%'; f.style.border='0'; f.style.background='#fff';
+    f.src = src;
+    stage.appendChild(f);
+  }
+  function render_svg_inline(stage, svg_path){
+    const wrap = document.createElement('div');
+    wrap.style.position='absolute'; wrap.style.inset='0'; wrap.style.background='#fff'; wrap.style.overflow='hidden'; wrap.style.touchAction='none'; wrap.style.cursor='grab';
+    stage.appendChild(wrap);
+    fetch(svg_path).then(r=>r.ok?r.text():Promise.reject()).then(txt=>{
+      wrap.innerHTML = txt;
+      const svg = wrap.querySelector('svg'); if(!svg){ wrap.textContent='svg failed to load'; return; }
+      svg.style.transformOrigin='0 0';
+      let scale=1,x=0,y=0,drag=false,lx=0,ly=0;
+      function apply(){ svg.style.transform=`translate(${x}px, ${y}px) scale(${scale})`; }
+      wrap.addEventListener('wheel', (e)=>{ e.preventDefault(); const p=e.deltaY<0?1.1:1/1.1; scale=Math.min(Math.max(scale*p,0.4),8); apply(); }, {passive:false});
+      wrap.addEventListener('pointerdown', (e)=>{ drag=true; wrap.setPointerCapture(e.pointerId); lx=e.clientX; ly=e.clientY; });
+      wrap.addEventListener('pointermove', (e)=>{ if(!drag) return; x+=e.clientX-lx; y+=e.clientY-ly; lx=e.clientX; ly=e.clientY; apply(); });
+      wrap.addEventListener('pointerup', ()=>{ drag=false; });
+      wrap.addEventListener('dblclick', ()=>{ scale=1;x=0;y=0;apply(); });
+      apply();
+    }).catch(()=>{ const ph=document.createElement('div'); ph.className='placeholder'; ph.textContent='svg failed to load'; stage.appendChild(ph); });
+  }
+  function render_auto_inline(stage, input){
+    const lower = (input||'').toLowerCase();
+    if (lower.endsWith('.svg')) return render_svg_inline(stage, input); // prefer svg
+    if (lower.endsWith('.pdf')) return render_pdf_inline(stage, input);
+    const img=document.createElement('img'); img.src=input; img.alt='preview'; img.className='canvas-image'; stage.appendChild(img);
+  }
 
-function render_tab(label){
-  stage.innerHTML='';
-  if(label==='Architecture'){
-    const pdf = stage.dataset.pdf;
-    const svg = stage.dataset.svg;
-    if (window.viewer && (pdf || svg)){
-      if (pdf) { window.viewer.render_auto(stage, pdf); }
-      else if (svg) { window.viewer.render_auto(stage, svg); }
-    } else if (pdf || svg) {
-      render_auto_inline(stage, pdf || svg);
+  function render_tab(label){
+    stage.innerHTML='';
+    if(label==='Architecture'){
+      const pdf = stage.dataset.pdf;
+      const svg = stage.dataset.svg;
+      // prefer svg when available
+      if (window.viewer && (svg || pdf)){
+        if (svg) { window.viewer.render_auto(stage, svg); }
+        else if (pdf) { window.viewer.render_auto(stage, pdf); }
+      } else if (svg || pdf) {
+        render_auto_inline(stage, svg || pdf);
+      } else {
+        const ph=document.createElement('div');
+        ph.className='placeholder';
+        ph.textContent='no media configured';
+        stage.appendChild(ph);
+      }
+    } else if(label==='Notes') {
+      const wrap=document.createElement('div');
+      wrap.style.padding='1.1rem 1.25rem';
+      wrap.style.maxWidth='900px';
+      wrap.style.margin='0 auto';
+      wrap.style.fontSize='.95rem';
+      wrap.style.lineHeight='1.55';
+      wrap.innerHTML = ""+
+        "<h3 style=\\"margin-top:0;font-family:'Space Grotesk',Inter,sans-serif;font-weight:600;\\">Supporting Utility: Diagram PDF → SVG Converter</h3>"+
+        "<p>I wrote a lightweight Python script to convert diagram PDFs into SVGs for this page. Earlier versions embedded PNGs that blurred when zoomed; switching to SVG preserves text sharpness and reduces the need for multiple raster sizes.</p>"+
+        "<p><strong>Benefits</strong>: Vector clarity at any zoom, lean assets, simpler zoom/pan logic.</p>"+
+        "<p><strong>Workflow</strong>:</p>"+
+        "<ol style=\\"padding-left:1.2rem;margin:.6rem 0 1rem;\\"><li>Export architecture diagram to single-page PDF.</li><li>Place PDF next to the script in <code>assets/py/</code>.</li><li>Run the script — it emits a same-name <code>.svg</code>.</li><li>Viewer prefers SVG (falls back to PDF via pdf.js).</li></ol>"+
+        "<p style=\\"margin:.8rem 0 .4rem;\\"><strong>Script: <code>assets/py/pdf_to_svg.py</code></strong> (<a href=\\"assets/py/pdf_to_svg.py\\" download>download</a>)</p>";
+      const pre=document.createElement('pre');
+      pre.style.background='#0a0f1e';
+      pre.style.border='1px solid var(--border)';
+      pre.style.borderRadius='12px';
+      pre.style.padding='14px';
+      pre.style.overflow='auto';
+      pre.style.maxHeight='420px';
+      pre.style.fontSize='.8rem';
+      pre.style.lineHeight='1.4';
+      const code=document.createElement('code');
+      code.textContent = (
+  `# Converts first page of a PDF to SVG (vector) for crisp zoomable display.\\n`+
+  `import fitz  # PyMuPDF\\n`+
+  `import os\\n\\n`+
+  `def pdf_to_svg(pdf_file):\\n`+
+  `    script_dir = os.path.dirname(os.path.abspath(__file__))\\n`+
+  `    pdf_path = os.path.join(script_dir, pdf_file)\\n`+
+  `    output_file = os.path.splitext(pdf_path)[0] + ".svg"\\n\\n`+
+  `    doc = fitz.open(pdf_path)\\n`+
+  `    page = doc[0]  # first page\\n`+
+  `    svg = page.get_svg_image()\\n\\n`+
+  `    with open(output_file, "w", encoding="utf-8") as f:\\n`+
+  `        f.write(svg)\\n\\n`+
+  `    print(f"converted: {output_file}")\\n\\n`+
+  `if __name__ == "__main__":\\n`+
+  `    pdf_to_svg("DGAI.pdf")\\n`
+      );
+      pre.appendChild(code);
+      wrap.appendChild(pre);
+      const tail=document.createElement('p');
+      tail.style.marginTop='1rem';
+      tail.innerHTML='Possible enhancements: multi-page loop, CLI flags (--out, --all-pages), PNG fallback rendering. Kept lean for portfolio clarity.';
+      wrap.appendChild(tail);
+      stage.appendChild(wrap);
     } else {
       const ph=document.createElement('div');
       ph.className='placeholder';
-      ph.textContent='no media configured';
+      ph.textContent='content for ' + label + ' goes here.';
       stage.appendChild(ph);
     }
-  } else if(label==='Notes') {
-    const wrap=document.createElement('div');
-    wrap.style.padding='1.1rem 1.25rem';
-    wrap.style.maxWidth='900px';
-    wrap.style.margin='0 auto';
-    wrap.style.fontSize='.95rem';
-    wrap.style.lineHeight='1.55';
-    wrap.innerHTML = ""+
-      "<h3 style=\"margin-top:0;font-family:'Space Grotesk',Inter,sans-serif;font-weight:600;\">Supporting Utility: Diagram PDF → SVG Converter</h3>"+
-      "<p>I wrote a lightweight Python script to convert diagram PDFs into SVGs for this page. Earlier versions embedded PNGs that blurred when zoomed; switching to SVG preserves text sharpness and reduces the need for multiple raster sizes.</p>"+
-      "<p><strong>Benefits</strong>: Vector clarity at any zoom, lean assets, simpler zoom/pan logic.</p>"+
-      "<p><strong>Workflow</strong>:</p>"+
-      "<ol style=\"padding-left:1.2rem;margin:.6rem 0 1rem;\"><li>Export architecture diagram to single‑page PDF.</li><li>Place PDF next to the script in <code>assets/py/</code>.</li><li>Run the script — it emits a same‑name <code>.svg</code>.</li><li>Viewer prefers SVG (falls back to PDF via pdf.js).</li></ol>"+
-      "<p style=\"margin:.8rem 0 .4rem;\"><strong>Script: <code>assets/py/pdf_to_svg.py</code></strong> (<a href=\"assets/py/pdf_to_svg.py\" download>download</a>)</p>";
-    const pre=document.createElement('pre');
-    pre.style.background='#0a0f1e';
-    pre.style.border='1px solid var(--border)';
-    pre.style.borderRadius='12px';
-    pre.style.padding='14px';
-    pre.style.overflow='auto';
-    pre.style.maxHeight='420px';
-    pre.style.fontSize='.8rem';
-    pre.style.lineHeight='1.4';
-    const code=document.createElement('code');
-    code.textContent = (
-`# Converts first page of a PDF to SVG (vector) for crisp zoomable display.\n`+
-`import fitz  # PyMuPDF\n`+
-`import os\n\n`+
-`def pdf_to_svg(pdf_file):\n`+
-`    script_dir = os.path.dirname(os.path.abspath(__file__))\n`+
-`    pdf_path = os.path.join(script_dir, pdf_file)\n`+
-`    output_file = os.path.splitext(pdf_path)[0] + ".svg"\n\n`+
-`    doc = fitz.open(pdf_path)\n`+
-`    page = doc[0]  # first page\n`+
-`    svg = page.get_svg_image()\n\n`+
-`    with open(output_file, "w", encoding="utf-8") as f:\n`+
-`        f.write(svg)\n\n`+
-`    print(f"converted: {output_file}")\n\n`+
-`if __name__ == "__main__":\n`+
-`    pdf_to_svg("DGAI.pdf")\n`
-    );
-    pre.appendChild(code);
-    wrap.appendChild(pre);
-    const tail=document.createElement('p');
-    tail.style.marginTop='1rem';
-    tail.innerHTML='Possible enhancements: multi-page loop, CLI flags (--out, --all-pages), PNG fallback rendering. Kept lean for portfolio clarity.';
-    wrap.appendChild(tail);
-    stage.appendChild(wrap);
-  } else {
-    const ph=document.createElement('div');
-    ph.className='placeholder';
-    ph.textContent='content for ' + label + ' goes here.';
-    stage.appendChild(ph);
   }
-}
-render_tab('Architecture');
-tabs.forEach(btn=>{
-  btn.addEventListener('click',()=>{
-    tabs.forEach(b=>b.setAttribute('aria-selected','false'));
-    btn.setAttribute('aria-selected','true');
-    const label=btn.textContent.trim();
-    render_tab(label);
+  render_tab('Architecture');
+  tabs.forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      tabs.forEach(b=>b.setAttribute('aria-selected','false'));
+      btn.setAttribute('aria-selected','true');
+      const label=btn.textContent.trim();
+      render_tab(label);
+    });
   });
-});
 
-const items=document.querySelectorAll('.tree-item');
-items.forEach(i=>{
-  i.addEventListener('click',()=>{
-    items.forEach(b=>b.classList.remove('active'));
-    i.classList.add('active');
+  const items=document.querySelectorAll('.tree-item');
+  items.forEach(i=>{
+    i.addEventListener('click',()=>{
+      items.forEach(b=>b.classList.remove('active'));
+      i.classList.add('active');
+    });
   });
-});
 })();</script>
   <script>
     const zoomContainer = document.querySelector('.zoom-container');
-    const zoomImage = zoomContainer.querySelector('.zoom-image');
-
-    let scale = 1;
-
-    zoomContainer.addEventListener('wheel', function(e) {
-      e.preventDefault();
-      if (e.deltaY < 0) {
-        // zoom in
-        scale *= 1.1;
-      } else {
-        // zoom out
-        scale /= 1.1;
-      }
-      // clamp zoom so it doesn’t get too crazy
-      scale = Math.min(Math.max(0.5, scale), 5);
-      zoomImage.style.transform = `scale(${scale})`;
-});
+    const zoomImage = zoomContainer ? zoomContainer.querySelector('.zoom-image') : null;
+    if (zoomContainer && zoomImage) {
+      let scale = 1;
+      zoomContainer.addEventListener('wheel', function(e) {
+        e.preventDefault();
+        if (e.deltaY < 0) { scale *= 1.1; } else { scale /= 1.1; }
+        scale = Math.min(Math.max(0.5, scale), 5);
+        zoomImage.style.transform = `scale(${scale})`;
+      });
+    }
 </script>
 </body>
 </html>
