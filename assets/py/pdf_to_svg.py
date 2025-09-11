@@ -1,36 +1,32 @@
+# ------------------------------------------------------------
+# technical notes:
+# - place this script in the same directory as the target pdf
+# - specify the filename in the main block (default: "DGAI.pdf")
+# - output will be generated as an svg file in the same directory
+# - this script only converts the first page of the pdf
+# ------------------------------------------------------------
+
+import fitz  # pymupdf library...see git readme for install instructions
 import os
-import cairosvg
-from PyPDF2 import PdfReader
 
-# function to convert pdf to svg
-def convert_pdf_to_svg(input_dir, output_dir):
-    # make sure output folder exists
-    os.makedirs(output_dir, exist_ok=True)
+def pdf_to_svg(pdf_file):
+    # determine script location to ensure consistent path resolution
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    pdf_path = os.path.join(script_dir, pdf_file)
+    output_file = os.path.splitext(pdf_path)[0] + ".svg"
 
-    # loop through all pdf files in input folder
-    for file in os.listdir(input_dir):
-        if file.lower().endswith(".pdf"):
-            pdf_path = os.path.join(input_dir, file)
-            pdf_name = os.path.splitext(os.path.basename(pdf_path))[0]
+    # open pdf and extract the first page
+    doc = fitz.open(pdf_path)
+    page = doc[0]  # zero-based index
+    svg = page.get_svg_image()
 
-            # read pdf to get page count
-            reader = PdfReader(pdf_path)
+    # write svg output with utf-8 encoding
+    with open(output_file, "w", encoding="utf-8") as f:
+        f.write(svg)
 
-            # loop through each page in pdf
-            for i, _ in enumerate(reader.pages, start=1):
-                output_svg = os.path.join(output_dir, f"{pdf_name}_page_{i}.svg")
-                # convert page to svg
-                cairosvg.pdf2svg(
-                    url=pdf_path,
-                    write_to=output_svg,
-                    page=i
-                )
-                print(f"saved: {output_svg}")
+    # console confirmation
+    print(f"converted: {output_file}")
 
-# example usage
 if __name__ == "__main__":
-    # set these paths as needed for your project
-    input_dir = r"C:\path\to\pdfs"
-    output_dir = r"C:\path\to\svgs"
-
-    convert_pdf_to_svg(input_dir, output_dir)
+    # default input file (modify as required)
+    pdf_to_svg("DGAI.pdf")
