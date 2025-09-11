@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>[page_title]</title>
-  <meta name="description" content="[page_description]" />
-  <link rel="icon" href="[path_to_favicon]" type="image/svg+xml" />
+  <title>Projects — Dominic Vicchiollo</title>
+  <meta name="description" content="Selected projects: DomGuardianAI (DGAI) data lakehouse architecture, orchestration, analytics, and ML." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link href="https://fonts.googleapis.com/css2?family=inter:wght@400;600;700&family=space+grotesk:wght@600;700&display=swap" rel="stylesheet" />
 
   <style>
@@ -214,47 +214,47 @@ details[open] .caret{transform:rotate(90deg)}
   <!-- hero -->
   <section class="hero">
     <div class="hero-inner container">
-      <h1 class="section-title" style="font-size:clamp(2rem,4vw,3rem);margin-top:.75rem;">[page_heading]</h1>
-      <p class="lead">[page_subheading_or_intro_text]</p>
+      <h1 class="section-title" style="font-size:clamp(2rem,4vw,3rem);margin-top:.75rem;">Projects</h1>
+      <p class="lead">A curated set of data engineering and analytics projects. Click a project to see details and artifacts.</p>
     </div>
   </section>
 
   <!-- main app layout -->
-  <main class="app" id="[app_id]">
+  <main class="app" id="projects-app">
     <div class="container app-layout">
 
       <!-- directory (left) -->
       <aside class="directory">
         <div class="dir-card">
           <div class="dir-head">
-            <span class="dir-title">[directory_title]</span>
+            <span class="dir-title">projects</span>
           </div>
           <div class="dir-body">
             <div class="tree">
               <details open>
-                <summary><span class="caret">›</span><span>[section_title_a]</span><span class="tree-count">[count_a]</span></summary>
+                <summary><span class="caret">›</span><span>featured</span><span class="tree-count">2</span></summary>
                 <ul class="dir-list">
                   <li class="dir-item">
-                    <button class="tree-item active" data-id="[item_id_1]">
-                      <span class="bullet"></span><span>[item_label_1]</span>
+                    <button class="tree-item active" data-id="dgai">
+                      <span class="bullet"></span><span>DomGuardianAI — data & AI lakehouse</span>
                     </button>
                   </li>
                   <li class="dir-item">
-                    <button class="tree-item" data-id="[item_id_2]">
-                      <span class="bullet"></span><span>[item_label_2]</span>
+                    <button class="tree-item" data-id="coming-soon">
+                      <span class="bullet"></span><span>coming soon</span>
                     </button>
                   </li>
                 </ul>
               </details>
               <details open class="node">
-                <summary><span class="caret">›</span><span>[section_title_b]</span><span class="tree-count">[count_b]</span></summary>
+                <summary><span class="caret">›</span><span>by domain</span><span class="tree-count">1</span></summary>
                 <div class="group">
                   <details open>
-                    <summary><span class="caret">›</span><span>[subgroup_title_b1]</span><span class="tree-count">[count_b1]</span></summary>
+                    <summary><span class="caret">›</span><span>data platforms</span><span class="tree-count">1</span></summary>
                     <ul class="dir-list">
                       <li class="dir-item">
-                        <button class="tree-item" data-id="[item_id_3]">
-                          <span class="bullet"></span><span>[item_label_3]</span>
+                        <button class="tree-item" data-id="dgai-architecture">
+                          <span class="bullet"></span><span>DomGuardianAI architecture</span>
                         </button>
                       </li>
                     </ul>
@@ -271,67 +271,67 @@ details[open] .caret{transform:rotate(90deg)}
 
         <!-- details pane -->
         <div class="details">
-          <p class="kicker">[item_kicker]</p>
-          <h2 class="title">[item_title]</h2>
-          <p class="subtitle">[item_subtitle]</p>
-          <p class="desc">[item_short_description]</p>
+          <p class="kicker">azure • lakehouse • ml</p>
+          <h2 class="title">DomGuardianAI (DGAI)</h2>
+          <p class="subtitle">end‑to‑end data lakehouse with orchestration, analytics, and mlops</p>
+          <p class="desc">A production‑ready architecture that ingests financial and news data (news feeds, XBRL 10‑K/8‑K, ticker/NASDAQ, technical analysis), lands to ADLS Gen2 as Parquet, queries via Synapse Serverless with external tables/pyodbc, orchestrates with Durable Azure Functions and queue‑based triggers, and serves analytics in Power BI with ML models (logistic regression, random forest, LSTM) and Azure OpenAI.</p>
 
           <div class="info-grid">
             <div class="info-card">
-              <p class="info-title">[info_block_1_title]</p>
+              <p class="info-title">platform components</p>
               <div class="pill-row">
-                <span class="pill">[pill_1]</span>
-                <span class="pill">[pill_2]</span>
-                <span class="pill">[pill_3]</span>
+                <span class="pill">ADLS Gen2</span>
+                <span class="pill">Synapse Serverless</span>
+                <span class="pill">Power BI</span>
               </div>
             </div>
             <div class="info-card">
-              <p class="info-title">[info_block_2_title]</p>
+              <p class="info-title">orchestration</p>
               <div class="pill-row">
-                <span class="pill">[pill_4]</span>
-                <span class="pill">[pill_5]</span>
-                <span class="pill">[pill_6]</span>
+                <span class="pill">Durable Functions</span>
+                <span class="pill">HTTP/Timer/Queue/Blob triggers</span>
+                <span class="pill">Parallel execution</span>
               </div>
             </div>
             <div class="info-card">
-              <p class="info-title">[info_block_3_title]</p>
+              <p class="info-title">data & ml</p>
               <div class="pill-row">
-                <span class="pill">[pill_7]</span>
-                <span class="pill">[pill_8]</span>
+                <span class="pill">Parquet + External Tables</span>
+                <span class="pill">sklearn/TensorFlow (LSTM)</span>
               </div>
             </div>
             <div class="info-card">
-              <p class="info-title">[actions_title]</p>
+              <p class="info-title">artifacts</p>
               <div class="links">
-                <a class="btn ghost" href="[action_link_1_href]" target="_blank" rel="noopener">[action_link_1_label]</a>
-                <a class="btn ghost" href="[action_link_2_href]" target="_blank" rel="noopener">[action_link_2_label]</a>
+                <a class="btn ghost" href="assets/pdf/DGAI.pdf" target="_blank" rel="noopener">view architecture (pdf)</a>
+                <a class="btn ghost" href="assets/pdf/DGAI.pdf" target="_blank" rel="noopener">download pdf</a>
               </div>
             </div>
           </div>
 
           <div>
-            <p class="info-title" style="margin:.2rem 0 .4rem;">[highlights_title]</p>
+            <p class="info-title" style="margin:.2rem 0 .4rem;">highlights</p>
             <ul class="highlights">
-              <li>[highlight_1]</li>
-              <li>[highlight_2]</li>
-              <li>[highlight_3]</li>
+              <li>sources: news feeds, XBRL 10‑K/8‑K, ticker & NASDAQ, and technical analysis.</li>
+              <li>durable orchestration across HTTP, Timer, Queue, and Blob triggers with queue‑based messaging.</li>
+              <li>quality gates and zones: validation, retention, normalized tables across raw → staging → curated.</li>
             </ul>
           </div>
 
           <div>
-            <p class="info-title" style="margin:.2rem 0 .4rem;">[metrics_title]</p>
+            <p class="info-title" style="margin:.2rem 0 .4rem;">quick metrics</p>
             <div class="metrics">
               <div class="metric">
-                <p class="metric-label">[metric_label_1]</p>
-                <p class="metric-value">[metric_value_1]</p>
+                <p class="metric-label">data zones</p>
+                <p class="metric-value">raw → staging → curated</p>
               </div>
               <div class="metric">
-                <p class="metric-label">[metric_label_2]</p>
-                <p class="metric-value">[metric_value_2]</p>
+                <p class="metric-label">storage format</p>
+                <p class="metric-value">Parquet on ADLS Gen2</p>
               </div>
               <div class="metric">
-                <p class="metric-label">[metric_label_3]</p>
-                <p class="metric-value">[metric_value_3]</p>
+                <p class="metric-label">analytics</p>
+                <p class="metric-value">Power BI + ML models</p>
               </div>
             </div>
           </div>
@@ -340,12 +340,12 @@ details[open] .caret{transform:rotate(90deg)}
         <!-- viewer pane -->
         <div class="workbench">
           <div class="wb-tabs" id="wb-tabs">
-            <button class="tab" aria-selected="true" data-tab="tab-1">[tab_label_1]</button>
-            <button class="tab" aria-selected="false" data-tab="tab-2">[tab_label_2]</button>
-            <button class="tab" aria-selected="false" data-tab="tab-3">[tab_label_3]</button>
+            <button class="tab" aria-selected="true" data-tab="tab-1">overview</button>
+            <button class="tab" aria-selected="false" data-tab="tab-2">architecture</button>
+            <button class="tab" aria-selected="false" data-tab="tab-3">notes</button>
           </div>
           <div class="wb-stage" id="wb-stage">
-            <div class="placeholder">[viewer_content_placeholder — e.g., embed pdf, image, or code here]</div>
+            <div class="placeholder"><iframe src="assets/pdf/DGAI.pdf" title="DGAI Architecture PDF" style="width:100%;height:100%;border:0;"></iframe></div>
           </div>
         </div>
 
@@ -356,11 +356,11 @@ details[open] .caret{transform:rotate(90deg)}
   <!-- footer -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© <span id="year"></span> [owner_name]</p>
+      <p>© <span id="year"></span> dominic vicchiollo</p>
       <div class="social">
-        <a href="[social_link_1_href]" target="_blank" rel="noopener">[social_link_1_label]</a>
-        <a href="[social_link_2_href]" target="_blank" rel="noopener">[social_link_2_label]</a>
-        <a href="[social_link_3_href]" target="_blank" rel="noopener">[social_link_3_label]</a>
+        <a href="#" target="_blank" rel="noopener">linkedin</a>
+        <a href="#" target="_blank" rel="noopener">github</a>
+        <a href="#" target="_blank" rel="noopener">email</a>
       </div>
     </div>
   </footer>
