@@ -404,12 +404,12 @@ const stage=document.getElementById('wb-stage');
 function renderTab(label){
   stage.innerHTML='';
   if (label === 'Architecture') {
-    const src='assets/pdf/DGAI.pdf#toolbar=1&navpanes=1&scrollbar=1&view=FitH';
-    stage.innerHTML = `
-      <object data="${src}" type="application/pdf" class="pdf-object">
-        <iframe src="${src}" class="pdf-iframe" title="DomGuardianAI architecture (PDF)" loading="lazy"></iframe>
-        <p class="pdf-fallback">PDF preview unavailable. <a href="assets/pdf/DGAI.pdf" target="_blank" rel="noopener">Open the PDF</a>.</p>
-      </object>`;
+    const frame = document.createElement('iframe');
+    frame.className = 'pdf-frame pdf-iframe';
+    frame.src = 'assets/pdfjs/web/viewer.html?file=../../pdf/DGAI.pdf';
+    frame.title = 'DomGuardianAI architecture (PDF)';
+    frame.loading = 'lazy';
+    stage.appendChild(frame);
   } else {
     const ph=document.createElement('div');
     ph.className='placeholder';
