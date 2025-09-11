@@ -53,7 +53,16 @@ body.force-light{
   --primary-2:#22d3ee;
   --shadow:0 10px 30px rgba(0,0,0,.08);
   --header-bg:rgba(255,255,255,.75);
-  background:var(--bg); /* remove radial dark gradients */
+  /* removed flat background so base gradient shows */
+  /* background:var(--bg); */
+}
+/* ensure gradient if any later global rule tries to add images */
+body.force-light.projects-page{
+  background:
+    radial-gradient(1200px 600px at 20% -10%, rgba(34,211,238,.12), transparent 60%),
+    radial-gradient(800px 600px at 80% 0%, rgba(129,140,248,.14), transparent 60%),
+    var(--bg) !important;
+  background-attachment: fixed;
 }
 *{box-sizing:border-box}
 html,body{height:100%}
@@ -61,10 +70,6 @@ body{
   margin:0;
   font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   color:var(--text);
-  background:
-    radial-gradient(1200px 600px at 20% -10%, rgba(34,211,238,.12), transparent 60%),
-    radial-gradient(800px 600px at 80% 0%, rgba(129,140,248,.14), transparent 60%),
-    var(--bg);
   line-height:1.6;
   -webkit-font-smoothing:antialiased;
   text-rendering:optimizeLegibility;
@@ -220,7 +225,7 @@ details[open] .caret{transform:rotate(90deg)}
 .wb-stage .placeholder{color:var(--muted);font-size:1rem;padding:1rem 1.5rem;text-align:center}
   </style>
 </head>
-<body class="force-light">
+<body class="force-light projects-page">
   <!-- header (default restored with working links) -->
   <header class="site-header">
     <div class="header-inner">
