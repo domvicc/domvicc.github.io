@@ -13,7 +13,7 @@
   const cfg = {
     // matches the hint in projects3.html
     pdfjs_viewer: resolve('assets/pdfjs/web/viewer.html?file=../../pdf/DGAI.pdf'),
-    svg_file: resolve('assets/svg/dgai.svg'),
+  svg_file: resolve('assets/svg/DGAI.svg'),
     deepzoom_dzi: resolve('assets/tiles/dgai.dzi')
   };
 
