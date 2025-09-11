@@ -41,6 +41,20 @@
     --header-bg:rgba(255,255,255,.75);
   }
 }
+/* force light mode regardless of system preference */
+body.force-light{
+  --bg:#f7f9fc;
+  --surface:#ffffff;
+  --card:#ffffff;
+  --border:#e5e8ef;
+  --text:#0a0e1a;
+  --muted:#5c667a;
+  --primary:#2563eb;
+  --primary-2:#22d3ee;
+  --shadow:0 10px 30px rgba(0,0,0,.08);
+  --header-bg:rgba(255,255,255,.75);
+  background:var(--bg); /* remove radial dark gradients */
+}
 *{box-sizing:border-box}
 html,body{height:100%}
 body{
@@ -206,7 +220,7 @@ details[open] .caret{transform:rotate(90deg)}
 .wb-stage .placeholder{color:var(--muted);font-size:1rem;padding:1rem 1.5rem;text-align:center}
   </style>
 </head>
-<body>
+<body class="force-light">
   <!-- header (default restored with working links) -->
   <header class="site-header">
     <div class="header-inner">
