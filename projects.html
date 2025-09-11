@@ -187,7 +187,8 @@ details[open] .caret{transform:rotate(90deg)}
   background:linear-gradient(135deg,var(--primary),var(--primary-2));color:#06101a;
   border-color:color-mix(in oklab,var(--border),var(--primary) 40%)
 }
-.wb-stage{position:relative;flex:1;overflow:auto;background:var(--surface);display:grid;place-items:center}
+.wb-stage{position:relative;flex:1;overflow:auto;background:var(--surface);display:grid;place-items:stretch;border:1px solid var(--border);border-radius:var(--radius)}
+.canvas-image{width:100%;height:100%;object-fit:contain;display:block;background:#fff}
 .wb-stage .placeholder{color:var(--muted);font-size:1rem;padding:1rem 1.5rem;text-align:center}
   </style>
 </head>
@@ -351,9 +352,8 @@ details[open] .caret{transform:rotate(90deg)}
             <button class="tab" aria-selected="false" data-tab="tab-3">Notes</button>
           </div>
           <div class="wb-stage" id="wb-stage">
-            <div class="placeholder">
-              <iframe src="assets/pdf/DGAI.pdf" title="DomGuardianAI Architecture (PDF)" style="width:100%;height:100%;border:0;"></iframe>
-            </div>
+  <img src="assets/img/DGAI.png" alt="DomGuardianAI architecture" class="canvas-image" />
+</div>
           </div>
         </div>
 
@@ -394,23 +394,34 @@ details[open] .caret{transform:rotate(90deg)}
   if(yearEl){ yearEl.textContent=new Date().getFullYear(); }
 
   const tabs=document.querySelectorAll('#wb-tabs .tab');
-  const stage=document.getElementById('wb-stage');
-  tabs.forEach(btn=>{
-    btn.addEventListener('click',()=>{
-      tabs.forEach(b=>b.setAttribute('aria-selected','false'));
-      btn.setAttribute('aria-selected','true');
-      const id=btn.getAttribute('data-tab');
-      stage.innerHTML='';
-      const ph=document.createElement('div');
-      ph.className='placeholder';
-      const label=btn.textContent.trim();
-      ph.textContent='Content for ' + label + ' goes here.';
-      stage.appendChild(ph);
-    });
+const stage=document.getElementById('wb-stage');
+function renderTab(label){
+  stage.innerHTML='';
+  if(label==='Architecture'){
+    const img=document.createElement('img');
+    img.src='assets/img/DGAI.png';
+    img.alt='DomGuardianAI architecture';
+    img.className='canvas-image';
+    stage.appendChild(img);
+  } else {
+    const ph=document.createElement('div');
+    ph.className='placeholder';
+    ph.textContent='Content for ' + label + ' goes here.';
+    stage.appendChild(ph);
+  }
+}
+renderTab('Architecture');
+tabs.forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    tabs.forEach(b=>b.setAttribute('aria-selected','false'));
+    btn.setAttribute('aria-selected','true');
+    const label=btn.textContent.trim();
+    renderTab(label);
   });
+});
 
-  const items=document.querySelectorAll('.tree-item');
-  items.forEach(i=>{
+const items=document.querySelectorAll('.tree-item');
+items.forEach(i=>{
     i.addEventListener('click',()=>{
       items.forEach(b=>b.classList.remove('active'));
       i.classList.add('active');
