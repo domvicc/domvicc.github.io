@@ -351,10 +351,7 @@ details[open] .caret{transform:rotate(90deg)}
             <button class="tab" aria-selected="false" data-tab="tab-2">Architecture</button>
             <button class="tab" aria-selected="false" data-tab="tab-3">Notes</button>
           </div>
-          <div class="wb-stage" id="wb-stage">
-          <div class="zoom-container">
-        <img src="assets/img/DGAI.png" alt="DomGuardianAI architecture" class="zoom-image" />
-      </div>
+          <div class="wb-stage" id="wb-stage" data-pdf="assets/pdf/DGAI.pdf" data-svg="assets/svg/DGAI.svg"></div>
     </div>
 
 </div>
@@ -399,40 +396,81 @@ details[open] .caret{transform:rotate(90deg)}
 
   const tabs=document.querySelectorAll('#wb-tabs .tab');
 const stage=document.getElementById('wb-stage');
-function renderTab(label){
+
+function render_pdf_inline(stage, pdf_path){
+  const rel = pdf_path.replace(/^assets\//,'');
+  const src = 'assets/pdfjs/web/viewer.html?file=' + encodeURIComponent('../..' + '/' + rel);
+  const f = document.createElement('iframe');
+  f.style.position='absolute'; f.style.inset='0'; f.style.width='100%'; f.style.height='100%'; f.style.border='0'; f.style.background='#fff';
+  f.src = src;
+  stage.appendChild(f);
+}
+function render_svg_inline(stage, svg_path){
+  const wrap = document.createElement('div');
+  wrap.style.position='absolute'; wrap.style.inset='0'; wrap.style.background='#fff'; wrap.style.overflow='hidden'; wrap.style.touchAction='none'; wrap.style.cursor='grab';
+  stage.appendChild(wrap);
+  fetch(svg_path).then(r=>r.ok?r.text():Promise.reject()).then(txt=>{
+    wrap.innerHTML = txt;
+    const svg = wrap.querySelector('svg'); if(!svg){ wrap.textContent='svg failed to load'; return; }
+    svg.style.transformOrigin='0 0';
+    let scale=1,x=0,y=0,drag=false,lx=0,ly=0;
+    function apply(){ svg.style.transform=`translate(${x}px, ${y}px) scale(${scale})`; }
+    wrap.addEventListener('wheel', (e)=>{ e.preventDefault(); const p=e.deltaY<0?1.1:1/1.1; scale=Math.min(Math.max(scale*p,0.4),8); apply(); }, {passive:false});
+    wrap.addEventListener('pointerdown', (e)=>{ drag=true; wrap.setPointerCapture(e.pointerId); lx=e.clientX; ly=e.clientY; });
+    wrap.addEventListener('pointermove', (e)=>{ if(!drag) return; x+=e.clientX-lx; y+=e.clientY-ly; lx=e.clientX; ly=e.clientY; apply(); });
+    wrap.addEventListener('pointerup', ()=>{ drag=false; });
+    wrap.addEventListener('dblclick', ()=>{ scale=1;x=0;y=0;apply(); });
+    apply();
+  }).catch(()=>{ const ph=document.createElement('div'); ph.className='placeholder'; ph.textContent='svg failed to load'; stage.appendChild(ph); });
+}
+function render_auto_inline(stage, input){
+  const lower = (input||'').toLowerCase();
+  if (lower.endsWith('.pdf')) return render_pdf_inline(stage, input);
+  if (lower.endsWith('.svg')) return render_svg_inline(stage, input);
+  const img=document.createElement('img'); img.src=input; img.alt='preview'; img.className='canvas-image'; stage.appendChild(img);
+}
+
+function render_tab(label){
   stage.innerHTML='';
   if(label==='Architecture'){
-    const img=document.createElement('img');
-    img.src='assets/img/DGAI.png';
-    img.alt='DomGuardianAI architecture';
-    img.className='canvas-image';
-    stage.appendChild(img);
+    const pdf = stage.dataset.pdf;
+    const svg = stage.dataset.svg;
+    if (window.viewer && (pdf || svg)){
+      if (pdf) { window.viewer.render_auto(stage, pdf); }
+      else if (svg) { window.viewer.render_auto(stage, svg); }
+    } else if (pdf || svg) {
+      render_auto_inline(stage, pdf || svg);
+    } else {
+      const ph=document.createElement('div');
+      ph.className='placeholder';
+      ph.textContent='no media configured';
+      stage.appendChild(ph);
+    }
   } else {
     const ph=document.createElement('div');
     ph.className='placeholder';
-    ph.textContent='Content for ' + label + ' goes here.';
+    ph.textContent='content for ' + label + ' goes here.';
     stage.appendChild(ph);
   }
 }
-renderTab('Architecture');
+render_tab('Architecture');
 tabs.forEach(btn=>{
   btn.addEventListener('click',()=>{
     tabs.forEach(b=>b.setAttribute('aria-selected','false'));
     btn.setAttribute('aria-selected','true');
     const label=btn.textContent.trim();
-    renderTab(label);
+    render_tab(label);
   });
 });
 
 const items=document.querySelectorAll('.tree-item');
 items.forEach(i=>{
-    i.addEventListener('click',()=>{
-      items.forEach(b=>b.classList.remove('active'));
-      i.classList.add('active');
-    });
+  i.addEventListener('click',()=>{
+    items.forEach(b=>b.classList.remove('active'));
+    i.classList.add('active');
   });
-})();
-  </script>
+});
+})();</script>
   <script>
     const zoomContainer = document.querySelector('.zoom-container');
     const zoomImage = zoomContainer.querySelector('.zoom-image');
