@@ -37,24 +37,11 @@
       content:"";
       position:absolute;
       inset:0;
-      background:
-        linear-gradient(150deg,rgba(34,211,238,.08),transparent 42%),
-        radial-gradient(1000px 680px at 78% 22%,rgba(129,140,248,.22),transparent 68%),
-        url(assets/web/dgai_backround.webp) center/cover no-repeat;
-      filter:brightness(.50) contrast(1.05) saturate(.95);
-      opacity:.95;
-      z-index:-3;
-    }
-    .dgai-hero::after{
-      /* slightly deepened overlay for readability */
-      content:"";
-      position:absolute;
-      inset:0;
-      background:
-        radial-gradient(1100px 820px at 18% 88%,rgba(34,211,238,.10),transparent 72%),
-        linear-gradient(180deg,rgba(6,11,18,.88),rgba(4,6,12,.94));
-      backdrop-filter:blur(7px);
-      z-index:-2;
+      background:url(assets/web/dgai_backround.webp) center/cover no-repeat;
+      /* remove filters/opacity so raw image floats */
+      filter:none;
+      opacity:1;
+      z-index:-1;
     }
     .dgai-hero .hero-inner{
       position:relative;
@@ -184,6 +171,19 @@
   </main>
 
   <footer class="site-footer">
+    <div class="container footer-inner">
+        <p>© 2025 Dominic Vicchiollo</p>
+      <div class="social">
+          <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:youremail@example.com">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
     <div class="container footer-inner">
         <p>© 2025 Dominic Vicchiollo</p>
       <div class="social">
