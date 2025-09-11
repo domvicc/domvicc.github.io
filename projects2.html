@@ -191,6 +191,10 @@ details[open] .caret{transform:rotate(90deg)}
 .canvas-image{width:100%;height:100%;object-fit:contain;display:block;background:#fff}
 .wb-stage .placeholder{color:var(--muted);font-size:1rem;padding:1rem 1.5rem;text-align:center}
 .wb-stage iframe{width:100%;height:100%;border:0;background:#fff}
+.wb-stage .pdf-object{width:100%;height:100%;border:0;background:#fff}
+.wb-stage .pdf-iframe{width:100%;height:100%;border:0;background:#fff}
+.wb-stage .pdf-fallback{padding:1rem;color:var(--muted);text-align:center}
+
   </style>
 </head>
 <body>
@@ -400,12 +404,13 @@ const stage=document.getElementById('wb-stage');
 function renderTab(label){
   stage.innerHTML='';
   if (label === 'Architecture') {
-    const frame = document.createElement('iframe');
-    frame.src = 'assets/pdf/DGAI.pdf#view=FitH';
-    frame.title = 'DomGuardianAI architecture (PDF)';
-    frame.loading = 'lazy';
-    stage.appendChild(frame);
-} else {
+    const src='assets/pdf/DGAI.pdf#toolbar=1&navpanes=1&scrollbar=1&view=FitH';
+    stage.innerHTML = `
+      <object data="${src}" type="application/pdf" class="pdf-object">
+        <iframe src="${src}" class="pdf-iframe" title="DomGuardianAI architecture (PDF)" loading="lazy"></iframe>
+        <p class="pdf-fallback">PDF preview unavailable. <a href="assets/pdf/DGAI.pdf" target="_blank" rel="noopener">Open the PDF</a>.</p>
+      </object>`;
+  } else {
     const ph=document.createElement('div');
     ph.className='placeholder';
     ph.textContent='Content for ' + label + ' goes here.';
