@@ -125,6 +125,30 @@
     }
     /* minimal footer tweak for dark */
     body.ai-dark .site-footer{background:linear-gradient(180deg,#0a111b,#05070d);border-top:1px solid rgba(255,255,255,.08);}
+
+    /* === added: responsive background variants + readability tint === */
+    @media (min-aspect-ratio:21/9){
+      .ai-dark .dgai-hero::before{
+        background-position:center;
+      }
+    }
+    @media (max-aspect-ratio:4/5){
+      .ai-dark .dgai-hero{
+        padding:3.2rem 1rem 2.4rem;
+      }
+      .ai-dark .dgai-hero::before{
+        background-position:top center;
+      }
+    }
+    body.ai-dark::after{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background:linear-gradient(180deg,rgba(0,0,0,.18),rgba(0,0,0,.42));
+      mix-blend-mode:normal;
+    }
+    /* === end additions === */
   </style>
 </head>
 <body class="ai-dark">
@@ -184,16 +208,14 @@
   <script src="assets/js/main.js"></script>
 </body>
 </html>
-    <div class="container footer-inner">
-        <p>© 2025 Dominic Vicchiollo</p>
-      <div class="social">
-          <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="mailto:youremail@example.com">Email</a>
-      </div>
-    </div>
-  </footer>
+  }
+}
 
-  <script src="assets/js/main.js"></script>
-</body>
-</html>
+/* optional readability tint */
+body::after{
+  content:"";
+  position:fixed; inset:0;
+  background:linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.45));
+  pointer-events:none;
+}
+
