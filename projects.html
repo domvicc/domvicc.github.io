@@ -74,6 +74,10 @@ body{
   max-width:960px;
 }
 
+/* optional minor utility (code viewer scroll already ok) */
+.project-details{display:none}
+.project-details.active{display:block}
+
 /* header + nav (restored default) */
 .site-header{
   position:sticky;top:0;z-index:50;
@@ -249,11 +253,16 @@ details[open] .caret{transform:rotate(90deg)}
           <div class="dir-body">
             <div class="tree">
               <details open>
-                <summary><span class="caret">›</span><span>Featured</span><span class="tree-count">2</span></summary>
+                <summary><span class="caret">›</span><span>Featured</span><span class="tree-count">3</span></summary>
                 <ul class="dir-list">
                   <li class="dir-item">
                     <button class="tree-item active" data-id="dgai">
                       <span class="bullet"></span><span>DomGuardianAI — Data &amp; AI Lakehouse</span>
+                    </button>
+                  </li>
+                  <li class="dir-item">
+                    <button class="tree-item" data-id="pdf-svg-util">
+                      <span class="bullet"></span><span>PDF → SVG Converter Utility</span>
                     </button>
                   </li>
                   <li class="dir-item">
@@ -283,93 +292,158 @@ details[open] .caret{transform:rotate(90deg)}
         </div>
       </aside>
 
-      <!-- workspace (details left, viewer right) -->
+      <!-- workspace -->
       <section class="workspace">
 
-        <!-- details pane -->
+        <!-- details pane (now multi-project) -->
         <div class="details">
-          <p class="kicker">Azure • Lakehouse • ML</p>
-          <h2 class="title">DomGuardianAI</h2>
-          <p class="subtitle">End-to-end Data Lakehouse with orchestration, analytics, and MLOps.</p>
-          <p class="desc">
-            A personal project in continuous development: production-ready architecture that ingests financial and news data (news feeds, XBRL 10-K/8-K, ticker/NASDAQ, technical analysis), lands to ADLS Gen2 in Parquet, queries via Synapse Serverless with external tables/pyodbc, orchestrates with Durable Azure Functions and queue-based triggers, and serves analytics in Power BI—pairing classic ML (logistic regression, random forest, LSTM) with Azure OpenAI for conversational and generative use cases.
-          </p>
+          <!-- DomGuardianAI project -->
+          <div class="project-details" data-project="dgai">
+            <p class="kicker">Azure • Lakehouse • ML</p>
+            <h2 class="title">DomGuardianAI</h2>
+            <p class="subtitle">End-to-end Data Lakehouse with orchestration, analytics, and MLOps.</p>
+            <p class="desc">
+              A personal project in continuous development: production-ready architecture that ingests financial and news data (news feeds, XBRL 10-K/8-K, ticker/NASDAQ, technical analysis), lands to ADLS Gen2 in Parquet, queries via Synapse Serverless with external tables/pyodbc, orchestrates with Durable Azure Functions and queue-based triggers, and serves analytics in Power BI—pairing classic ML (logistic regression, random forest, LSTM) with Azure OpenAI for conversational and generative use cases.
+            </p>
 
-          <div class="info-grid">
-            <div class="info-card">
-              <p class="info-title">Platform Components</p>
-              <div class="pill-row">
-                <span class="pill">ADLS Gen2</span>
-                <span class="pill">Synapse Serverless</span>
-                <span class="pill">Power BI</span>
+            <div class="info-grid">
+              <div class="info-card">
+                <p class="info-title">Platform Components</p>
+                <div class="pill-row">
+                  <span class="pill">ADLS Gen2</span>
+                  <span class="pill">Synapse Serverless</span>
+                  <span class="pill">Power BI</span>
+                </div>
+              </div>
+              <div class="info-card">
+                <p class="info-title">Orchestration</p>
+                <div class="pill-row">
+                  <span class="pill">Durable Functions</span>
+                  <span class="pill">HTTP/Timer/Queue/Blob Triggers</span>
+                  <span class="pill">Parallel Execution</span>
+                </div>
+              </div>
+              <div class="info-card">
+                <p class="info-title">Data &amp; ML</p>
+                <div class="pill-row">
+                  <span class="pill">Parquet + External Tables</span>
+                  <span class="pill">scikit-learn / TensorFlow (LSTM)</span>
+                </div>
+              </div>
+              <div class="info-card">
+                <p class="info-title">Artifacts</p>
+                <div class="links">
+                  <a class="btn ghost" href="assets/pdf/DGAI.pdf" target="_blank" rel="noopener">View Architecture (PDF)</a>
+                  <a class="btn ghost" href="assets/pdf/DGAI.pdf" download>Download PDF</a>
+                </div>
               </div>
             </div>
-            <div class="info-card">
-              <p class="info-title">Orchestration</p>
-              <div class="pill-row">
-                <span class="pill">Durable Functions</span>
-                <span class="pill">HTTP/Timer/Queue/Blob Triggers</span>
-                <span class="pill">Parallel Execution</span>
-              </div>
+
+            <div>
+              <p class="info-title" style="margin:.2rem 0 .4rem;">Highlights</p>
+              <ul class="highlights">
+                <li>Sources: News feeds, XBRL 10-K/8-K, ticker/NASDAQ, and technical analysis.</li>
+                <li>Durable orchestration across HTTP, Timer, Queue, and Blob triggers with queue-based messaging.</li>
+                <li>Quality gates and zones: Validation, retention, and normalized tables across Raw → Staging → Curated.</li>
+              </ul>
             </div>
-            <div class="info-card">
-              <p class="info-title">Data &amp; ML</p>
-              <div class="pill-row">
-                <span class="pill">Parquet + External Tables</span>
-                <span class="pill">scikit-learn / TensorFlow (LSTM)</span>
-              </div>
-            </div>
-            <div class="info-card">
-              <p class="info-title">Artifacts</p>
-              <div class="links">
-                <a class="btn ghost" href="assets/pdf/DGAI.pdf" target="_blank" rel="noopener">View Architecture (PDF)</a>
-                <a class="btn ghost" href="assets/pdf/DGAI.pdf" download>Download PDF</a>
+
+            <div>
+              <p class="info-title" style="margin:.2rem 0 .4rem;">Quick Metrics</p>
+              <div class="metrics">
+                <div class="metric">
+                  <p class="metric-label">Data Zones</p>
+                  <p class="metric-value">Raw → Staging → Curated</p>
+                </div>
+                <div class="metric">
+                  <p class="metric-label">Storage Format</p>
+                  <p class="metric-value">Parquet on ADLS Gen2</p>
+                </div>
+                <div class="metric">
+                  <p class="metric-label">Analytics</p>
+                  <p class="metric-value">Power BI + ML Models</p>
+                </div>
               </div>
             </div>
           </div>
 
-          <div>
-            <p class="info-title" style="margin:.2rem 0 .4rem;">Highlights</p>
-            <ul class="highlights">
-              <li>Sources: News feeds, XBRL 10-K/8-K, ticker/NASDAQ, and technical analysis.</li>
-              <li>Durable orchestration across HTTP, Timer, Queue, and Blob triggers with queue-based messaging.</li>
-              <li>Quality gates and zones: Validation, retention, and normalized tables across Raw → Staging → Curated.</li>
-            </ul>
-          </div>
-
-          <div>
-            <p class="info-title" style="margin:.2rem 0 .4rem;">Quick Metrics</p>
-            <div class="metrics">
-              <div class="metric">
-                <p class="metric-label">Data Zones</p>
-                <p class="metric-value">Raw → Staging → Curated</p>
+          <!-- PDF → SVG Utility project -->
+            <div class="project-details" data-project="pdf-svg-util">
+              <p class="kicker">Python • Automation</p>
+              <h2 class="title">PDF → SVG Converter Utility</h2>
+              <p class="subtitle">Lightweight script converting single‑page diagram PDFs to scalable SVG for crisp zoom &amp; pan.</p>
+              <p class="desc">
+                Supporting helper used to prepare architecture diagrams for this portfolio. Converts the first page of a diagram PDF export into an inline SVG using PyMuPDF (fitz). SVG delivery keeps text/vector fidelity, reduces asset size, and enables smooth client-side zoom/pan without raster quality loss.
+              </p>
+              <div class="info-grid">
+                <div class="info-card">
+                  <p class="info-title">Purpose</p>
+                  <div class="pill-row">
+                    <span class="pill">Diagram Optimization</span>
+                    <span class="pill">Vector Fidelity</span>
+                    <span class="pill">Zoom/Pan Ready</span>
+                  </div>
+                </div>
+                <div class="info-card">
+                  <p class="info-title">Tech</p>
+                  <div class="pill-row">
+                    <span class="pill">Python</span>
+                    <span class="pill">PyMuPDF (fitz)</span>
+                    <span class="pill">SVG Output</span>
+                  </div>
+                </div>
+                <div class="info-card">
+                  <p class="info-title">Benefits</p>
+                  <div class="pill-row">
+                    <span class="pill">Smaller Assets</span>
+                    <span class="pill">Sharp Text</span>
+                    <span class="pill">Simple Script</span>
+                  </div>
+                </div>
+                <div class="info-card">
+                  <p class="info-title">Artifacts</p>
+                  <div class="links">
+                    <a class="btn ghost" href="assets/py/pdf_to_svg.py" download>Download Script</a>
+                  </div>
+                </div>
               </div>
-              <div class="metric">
-                <p class="metric-label">Storage Format</p>
-                <p class="metric-value">Parquet on ADLS Gen2</p>
+              <div>
+                <p class="info-title" style="margin:.2rem 0 .4rem;">Highlights</p>
+                <ul class="highlights">
+                  <li>~30 lines leveraging PyMuPDF for fast PDF parsing.</li>
+                  <li>Single-page (first page) PDF → SVG conversion.</li>
+                  <li>Removes need for multiple PNG resolutions.</li>
+                  <li>Extensible: add loops, CLI flags, multi-page logic.</li>
+                </ul>
               </div>
-              <div class="metric">
-                <p class="metric-label">Analytics</p>
-                <p class="metric-value">Power BI + ML Models</p>
+              <div>
+                <p class="info-title" style="margin:.2rem 0 .4rem;">Quick Metrics</p>
+                <div class="metrics">
+                  <div class="metric">
+                    <p class="metric-label">Lines of Code</p>
+                    <p class="metric-value">≈ 30</p>
+                  </div>
+                  <div class="metric">
+                    <p class="metric-label">Dependency</p>
+                    <p class="metric-value">PyMuPDF</p>
+                  </div>
+                  <div class="metric">
+                    <p class="metric-label">Output</p>
+                    <p class="metric-value">SVG</p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
         </div>
 
         <!-- viewer pane -->
         <div class="workbench">
-          <div class="wb-tabs" id="wb-tabs">
-            <button class="tab" aria-selected="true" data-tab="tab-1">Overview</button>
-            <button class="tab" aria-selected="false" data-tab="tab-2">Architecture</button>
-            <button class="tab" aria-selected="false" data-tab="tab-3">Notes</button>
-          </div>
-          <!-- changed to use svg only -->
-          <div class="wb-stage" id="wb-stage" data-svg="assets/svg/DGAI.svg"></div>
+          <div class="wb-tabs" id="wb-tabs"></div>
+          <div class="wb-stage" id="wb-stage" data-project="dgai" data-svg="assets/svg/DGAI.svg"></div>
         </div>
 
-      </section> <!-- /workspace -->
-
-    </div> <!-- /container app-layout -->
+      </section>
+    </div>
   </main>
 
   <!-- footer -->
@@ -390,8 +464,9 @@ details[open] .caret{transform:rotate(90deg)}
   </footer>
 
   <script>
-/* minimal interactivity: mobile nav toggle + viewer tabs */
+/* minimal interactivity + dynamic project/tabs */
 (function(){
+  // existing: header nav toggle + year
   const navToggle=document.querySelector('.nav-toggle');
   const nav=document.getElementById('site-nav');
   if(navToggle&&nav){
@@ -400,135 +475,125 @@ details[open] .caret{transform:rotate(90deg)}
       navToggle.setAttribute('aria-expanded',open?'true':'false');
     });
   }
-
   const yearEl=document.getElementById('year');
   if(yearEl){ yearEl.textContent=new Date().getFullYear(); }
 
-  const tabs=document.querySelectorAll('#wb-tabs .tab');
+  // viewer elements
   const stage=document.getElementById('wb-stage');
+  const tabsBar=document.getElementById('wb-tabs');
 
+  // project configuration
+  const PROJECTS={
+    dgai:{
+      tabs:['Overview','Architecture'],
+      defaultTab:'Architecture',
+      svg:'assets/svg/DGAI.svg'
+    },
+    'pdf-svg-util':{
+      tabs:['Overview','Code'],
+      defaultTab:'Code',
+      script:'assets/py/pdf_to_svg.py'
+    }
+  };
+
+  // media renderers (reuse existing logic)
   function render_pdf_inline(stage, pdf_path){
-    const rel = pdf_path.replace(/^assets\//,''); // only used if a pdf is ever passed
+    const rel = pdf_path.replace(/^assets\//,'');
     const src = 'assets/pdfjs/web/viewer.html?file=' + encodeURIComponent('../..' + '/' + rel);
-    const f = document.createElement('iframe');
-    f.style.position='absolute'; f.style.inset='0'; f.style.width='100%'; f.style.height='100%'; f.style.border='0'; f.style.background='#fff';
-    f.src = src;
-    stage.appendChild(f);
+    const f=document.createElement('iframe');
+    Object.assign(f.style,{position:'absolute',inset:'0',width:'100%',height:'100%',border:'0',background:'#fff'});
+    f.src=src; stage.appendChild(f);
   }
   function render_svg_inline(stage, svg_path){
-    const wrap = document.createElement('div');
-    wrap.style.position='absolute'; wrap.style.inset='0'; wrap.style.background='#fff'; wrap.style.overflow='hidden'; wrap.style.touchAction='none'; wrap.style.cursor='grab';
+    const wrap=document.createElement('div');
+    Object.assign(wrap.style,{position:'absolute',inset:'0',background:'#fff',overflow:'hidden',touchAction:'none',cursor:'grab'});
     stage.appendChild(wrap);
     fetch(svg_path).then(r=>r.ok?r.text():Promise.reject()).then(txt=>{
-      wrap.innerHTML = txt;
-      const svg = wrap.querySelector('svg'); if(!svg){ wrap.textContent='svg failed to load'; return; }
+      wrap.innerHTML=txt;
+      const svg=wrap.querySelector('svg'); if(!svg){ wrap.textContent='svg failed to load'; return; }
       svg.style.transformOrigin='0 0';
       let scale=1,x=0,y=0,drag=false,lx=0,ly=0;
       function apply(){ svg.style.transform=`translate(${x}px, ${y}px) scale(${scale})`; }
-      wrap.addEventListener('wheel', (e)=>{ e.preventDefault(); const p=e.deltaY<0?1.1:1/1.1; scale=Math.min(Math.max(scale*p,0.4),8); apply(); }, {passive:false});
-      wrap.addEventListener('pointerdown', (e)=>{ drag=true; wrap.setPointerCapture(e.pointerId); lx=e.clientX; ly=e.clientY; });
-      wrap.addEventListener('pointermove', (e)=>{ if(!drag) return; x+=e.clientX-lx; y+=e.clientY-ly; lx=e.clientX; ly=e.clientY; apply(); });
-      wrap.addEventListener('pointerup', ()=>{ drag=false; });
-      wrap.addEventListener('dblclick', ()=>{ scale=1;x=0;y=0;apply(); });
+      wrap.addEventListener('wheel',e=>{ e.preventDefault(); const p=e.deltaY<0?1.1:1/1.1; scale=Math.min(Math.max(scale*p,0.4),8); apply(); },{passive:false});
+      wrap.addEventListener('pointerdown',e=>{ drag=true; wrap.setPointerCapture(e.pointerId); lx=e.clientX; ly=e.clientY; });
+      wrap.addEventListener('pointermove',e=>{ if(!drag)return; x+=e.clientX-lx; y+=e.clientY-ly; lx=e.clientX; ly=e.clientY; apply(); });
+      wrap.addEventListener('pointerup',()=>{ drag=false; });
+      wrap.addEventListener('dblclick',()=>{ scale=1;x=0;y=0;apply(); });
       apply();
     }).catch(()=>{ const ph=document.createElement('div'); ph.className='placeholder'; ph.textContent='svg failed to load'; stage.appendChild(ph); });
   }
-  function render_auto_inline(stage, input){
-    const lower = (input||'').toLowerCase();
-    if (lower.endsWith('.svg')) return render_svg_inline(stage, input); // prefer svg
-    if (lower.endsWith('.pdf')) return render_pdf_inline(stage, input);
-    const img=document.createElement('img'); img.src=input; img.alt='preview'; img.className='canvas-image'; stage.appendChild(img);
+  function render_auto_inline(stage,input){
+    const lower=(input||'').toLowerCase();
+    if(lower.endsWith('.svg')) return render_svg_inline(stage,input);
+    if(lower.endsWith('.pdf')) return render_pdf_inline(stage,input);
+    const img=document.createElement('img');
+    img.src=input; img.alt='preview'; img.className='canvas-image';
+    stage.appendChild(img);
   }
 
-  function render_tab(label){
+  function renderTab(project,label){
     stage.innerHTML='';
-    if(label==='Architecture'){
-      const pdf = stage.dataset.pdf;
-      const svg = stage.dataset.svg;
-      // prefer svg when available
-      if (window.viewer && (svg || pdf)){
-        if (svg) { window.viewer.render_auto(stage, svg); }
-        else if (pdf) { window.viewer.render_auto(stage, pdf); }
-      } else if (svg || pdf) {
-        render_auto_inline(stage, svg || pdf);
-      } else {
-        const ph=document.createElement('div');
-        ph.className='placeholder';
-        ph.textContent='no media configured';
-        stage.appendChild(ph);
-      }
-    } else if(label==='Notes') {
-      const wrap=document.createElement('div');
-      wrap.style.padding='1.1rem 1.25rem';
-      wrap.style.maxWidth='900px';
-      wrap.style.margin='0 auto';
-      wrap.style.fontSize='.95rem';
-      wrap.style.lineHeight='1.55';
-      wrap.innerHTML = ""+
-        "<h3 style=\"margin-top:0;font-family:'Space Grotesk',Inter,sans-serif;font-weight:600;\">Supporting Utility: Diagram PDF → SVG Converter</h3>"+
-        "<p>I wrote a lightweight Python script to convert diagram PDFs into SVGs for this page. Earlier versions embedded PNGs that blurred when zoomed; switching to SVG preserves text sharpness and reduces the need for multiple raster sizes.</p>"+
-        "<p><strong>Benefits</strong>: Vector clarity at any zoom, lean assets, simpler zoom/pan logic.</p>"+
-        "<p><strong>Workflow</strong>:</p>"+
-        "<ol style=\"padding-left:1.2rem;margin:.6rem 0 1rem;\"><li>Export architecture diagram to single-page PDF.</li><li>Place PDF next to the script in <code>assets/py/</code>.</li><li>Run the script — it emits a same-name <code>.svg</code>.</li><li>Viewer prefers SVG (falls back to PDF via pdf.js).</li></ol>"+
-        "<p style=\"margin:.8rem 0 .4rem;\"><strong>Script: <code>assets/py/pdf_to_svg.py</code></strong> (<a href=\"assets/py/pdf_to_svg.py\" download>download</a>)</p>";
-      const pre=document.createElement('pre');
-      pre.style.background='#0a0f1e';
-      pre.style.border='1px solid var(--border)';
-      pre.style.borderRadius='12px';
-      pre.style.padding='14px';
-      pre.style.overflow='auto';
-      pre.style.maxHeight='420px';
-      pre.style.fontSize='.8rem';
-      pre.style.lineHeight='1.4';
-      const code=document.createElement('code');
-      code.textContent = (
-  `# Converts first page of a PDF to SVG (vector) for crisp zoomable display.\n`+
-  `import fitz  # PyMuPDF\n`+
-  `import os\n\n`+
-  `def pdf_to_svg(pdf_file):\n`+
-  `    script_dir = os.path.dirname(os.path.abspath(__file__))\n`+
-  `    pdf_path = os.path.join(script_dir, pdf_file)\n`+
-  `    output_file = os.path.splitext(pdf_path)[0] + ".svg"\n\n`+
-  `    doc = fitz.open(pdf_path)\n`+
-  `    page = doc[0]  # first page\n`+
-  `    svg = page.get_svg_image()\n\n`+
-  `    with open(output_file, "w", encoding="utf-8") as f:\n`+
-  `        f.write(svg)\n\n`+
-  `    print(f"converted: {output_file}")\n\n`+
-  `if __name__ == "__main__":\n`+
-  `    pdf_to_svg("DGAI.pdf")\n`
-      );
-      pre.appendChild(code);
-      wrap.appendChild(pre);
-      const tail=document.createElement('p');
-      tail.style.marginTop='1rem';
-      tail.innerHTML='Possible enhancements: multi-page loop, CLI flags (--out, --all-pages), PNG fallback rendering. Kept lean for portfolio clarity.';
-      wrap.appendChild(tail);
-      stage.appendChild(wrap);
+    const cfg=PROJECTS[project];
+    if(label==='Architecture' && cfg.svg){
+      render_auto_inline(stage,cfg.svg);
+    } else if(label==='Code' && cfg.script){
+      fetch(cfg.script).then(r=>r.text()).then(txt=>{
+        const pre=document.createElement('pre');
+        Object.assign(pre.style,{margin:0,padding:'14px',background:'#0a0f1e',color:'#fff',fontSize:'.8rem',lineHeight:'1.4',overflow:'auto',height:'100%'});
+        pre.textContent=txt;
+        stage.appendChild(pre);
+      }).catch(()=>{ stage.textContent='script failed to load'; });
     } else {
       const ph=document.createElement('div');
       ph.className='placeholder';
-      ph.textContent='content for ' + label + ' goes here.';
+      ph.textContent='content for '+label+' goes here.';
       stage.appendChild(ph);
     }
   }
-  render_tab('Architecture');
-  tabs.forEach(btn=>{
+
+  function buildTabs(project){
+    tabsBar.innerHTML='';
+    PROJECTS[project].tabs.forEach(name=>{
+      const b=document.createElement('button');
+      b.className='tab';
+      b.textContent=name;
+      b.setAttribute('aria-selected','false');
+      b.addEventListener('click',()=>{
+        [...tabsBar.querySelectorAll('.tab')].forEach(t=>t.setAttribute('aria-selected','false'));
+        b.setAttribute('aria-selected','true');
+        renderTab(project,name);
+      });
+      tabsBar.appendChild(b);
+    });
+  }
+
+  function showProject(id){
+    // toggle active details
+    document.querySelectorAll('.project-details').forEach(sec=>{
+      sec.classList.toggle('active',sec.dataset.project===id);
+    });
+    // active in tree
+    document.querySelectorAll('.tree-item').forEach(btn=>{
+      btn.classList.toggle('active',btn.dataset.id===id);
+    });
+    // tabs + initial tab
+    buildTabs(id);
+    const cfg=PROJECTS[id];
+    const def=cfg.defaultTab||cfg.tabs[0];
+    const btn=[...tabsBar.querySelectorAll('.tab')].find(t=>t.textContent===def) || tabsBar.querySelector('.tab');
+    if(btn){ btn.click(); }
+  }
+
+  // tree click handlers
+  document.querySelectorAll('.tree-item').forEach(btn=>{
     btn.addEventListener('click',()=>{
-      tabs.forEach(b=>b.setAttribute('aria-selected','false'));
-      btn.setAttribute('aria-selected','true');
-      const label=btn.textContent.trim();
-      render_tab(label);
+      const id=btn.dataset.id;
+      if(PROJECTS[id]) showProject(id);
     });
   });
 
-  const items=document.querySelectorAll('.tree-item');
-  items.forEach(i=>{
-    i.addEventListener('click',()=>{
-      items.forEach(b=>b.classList.remove('active'));
-      i.classList.add('active');
-    });
-  });
+  // init
+  showProject('dgai');
 })();
   </script>
   <script>
