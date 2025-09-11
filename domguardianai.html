@@ -33,25 +33,27 @@
       isolation:isolate;
     }
     .dgai-hero::before{
+      /* updated background stack & image */
       content:"";
       position:absolute;
       inset:0;
       background:
-        linear-gradient(140deg,rgba(34,211,238,.10),transparent 40%),
-        radial-gradient(900px 600px at 70% 20%,rgba(129,140,248,.18),transparent 65%),
-        url(assets/img/header_ai.png) center/cover no-repeat;
-      filter:brightness(.55) saturate(.9);
-      opacity:.9;
+        linear-gradient(150deg,rgba(34,211,238,.08),transparent 42%),
+        radial-gradient(1000px 680px at 78% 22%,rgba(129,140,248,.22),transparent 68%),
+        url(assets/web/dgai_backround.webp) center/cover no-repeat;
+      filter:brightness(.50) contrast(1.05) saturate(.95);
+      opacity:.95;
       z-index:-3;
     }
     .dgai-hero::after{
+      /* slightly deepened overlay for readability */
       content:"";
       position:absolute;
       inset:0;
       background:
-        radial-gradient(1000px 800px at 15% 85%,rgba(34,211,238,.08),transparent 70%),
-        linear-gradient(180deg,rgba(7,11,18,.85),rgba(5,7,13,.95));
-      backdrop-filter:blur(6px);
+        radial-gradient(1100px 820px at 18% 88%,rgba(34,211,238,.10),transparent 72%),
+        linear-gradient(180deg,rgba(6,11,18,.88),rgba(4,6,12,.94));
+      backdrop-filter:blur(7px);
       z-index:-2;
     }
     .dgai-hero .hero-inner{
@@ -92,7 +94,7 @@
       font-size:clamp(2.6rem,6vw,4.2rem);
       margin:.3rem 0 .4rem;
       letter-spacing:.5px;
-      background:linear-gradient(90deg,#e6e9ef,#9cb6ff 55%,#22d3ee);
+      background:linear-gradient(95deg,#e6e9ef,#b5c8ff 50%,#22d3ee 78%,#6ddff5);
       -webkit-background-clip:text;
       color:transparent;
     }

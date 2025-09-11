@@ -612,3 +612,46 @@ body {
   transform-origin: center center;
   transition: transform 0.1s ease;
 }
+/* default background */
+body{
+  margin:0;
+  background-color:#0b0d10;
+  background-image:url('/img/bg-1920x1080.webp');
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+
+/* modern browsers: pick best size automatically */
+@supports (background-image:image-set(url('x') 1x)){
+  body{
+    background-image:image-set(
+      url('/img/bg-1280x720.webp') type('image/webp') 1x,
+      url('/img/bg-1920x1080.webp') type('image/webp') 1.5x,
+      url('/img/bg-2560x1440.webp') type('image/webp') 2x,
+      url('/img/bg-3840x2160.webp') type('image/webp') 3x
+    );
+  }
+}
+
+/* ultrawide screens */
+@media (min-aspect-ratio:21/9){
+  body{ background-image:url('/img/bg-3440x1440.webp'); }
+}
+
+/* portrait phones */
+@media (max-aspect-ratio:4/5){
+  body{
+    background-image:url('/img/bg-1080x1920.webp');
+    background-position:top center;
+  }
+}
+
+/* optional readability tint */
+body::after{
+  content:"";
+  position:fixed; inset:0;
+  background:linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.45));
+  pointer-events:none;
+}
+
