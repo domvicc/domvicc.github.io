@@ -67,13 +67,13 @@
   <script>
     (function(){
       var s = document.createElement('script');
-      // adjust this path depending on where app2.js actually is
-      s.src = 'assets/js/app2.js';  
+      /* keep this path if app2.js is in assets/js/ */
+      s.src = 'assets/js/app2.js';
       s.onload = function(){ console.log('app2.js loaded'); };
       s.onerror = function(){
-        console.error('Failed to load app2.js — check the path in projects3.html');
+        console.error('failed to load app2.js — check the path in projects3.html');
         var hint = document.querySelector('.page .hint');
-        if(hint) hint.textContent = 'Error: app2.js failed to load — check the path in projects3.html (open DevTools → Network to inspect)';
+        if(hint) hint.textContent = 'error: app2.js failed to load — check the path in projects3.html (open devtools → network to inspect)';
       };
       document.body.appendChild(s);
     })();

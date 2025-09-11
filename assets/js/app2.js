@@ -7,14 +7,10 @@
   'use strict';
 
   // ---------- config (edit paths to match your repo) ----------
-  // resources are resolved relative to the page (document.baseURI) so
-  // projects3.html can inject this script from assets/js/ without breaking fetch/iframe URLs
-  const resolve = (p) => new URL(p, document.baseURI).href;
   const cfg = {
-    // matches the hint in projects3.html
-    pdfjs_viewer: resolve('assets/pdfjs/web/viewer.html?file=../../pdf/DGAI.pdf'),
-  svg_file: resolve('assets/svg/DGAI.svg'),
-    deepzoom_dzi: resolve('assets/tiles/dgai.dzi')
+    pdfjs_viewer: 'assets/pdfjs/web/viewer.html?file=../../pdf/DGAI.pdf#view=page-fit',
+    svg_file: 'assets/svg/dgai.svg',
+    deepzoom_dzi: 'assets/tiles/dgai.dzi'
   };
 
   // ---------- utils ----------
