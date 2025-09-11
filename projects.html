@@ -218,8 +218,8 @@ details[open] .caret{transform:rotate(90deg)}
     <div class="hero-inner container">
       <h1 class="section-title" style="font-size:clamp(2rem,4vw,3rem);margin-top:.75rem;">Projects</h1>
       <p class="lead">
-        This page is a working showcase of my personal projects—built to highlight my technical capabilities and skills.
-        Expect cloud-native pipelines, a data &amp; AI lakehouse, and ML-backed analytics that reflect how I design, ship, and iterate. If something sparks an idea or you want to dig deeper, I’m always up for a technical conversation.
+        This page is a working showcase of my personal projects built to highlight my technical capabilities and skills.
+        Projects displayed here include cloud-native pipelines, a data lake; AI data lake &amp; architecture, and ML-backed analytics that reflect how I design, ship, and iterate. If something sparks an idea or opportunity for collaboration, I’m always open for a technical conversation.
       </p>
     </div>
   </section>
@@ -278,9 +278,9 @@ details[open] .caret{transform:rotate(90deg)}
         <div class="details">
           <p class="kicker">Azure • Lakehouse • ML</p>
           <h2 class="title">DomGuardianAI</h2>
-          <p class="subtitle">End-to-end data lakehouse with orchestration, analytics, and MLOps.</p>
+          <p class="subtitle">End-to-end Data Lakehouse with orchestration, analytics, and MLOps.</p>
           <p class="desc">
-            A production-ready architecture that ingests financial and news data (news feeds, XBRL 10-K/8-K, ticker/NASDAQ, technical analysis), lands to ADLS Gen2 in Parquet, queries via Synapse Serverless with external tables/pyodbc, orchestrates with Durable Azure Functions and queue-based triggers, and serves analytics in Power BI—pairing classic ML (logistic regression, random forest, LSTM) with Azure OpenAI for conversational and generative use cases.
+            A personal project in continuous development: production-ready architecture that ingests financial and news data (news feeds, XBRL 10-K/8-K, ticker/NASDAQ, technical analysis), lands to ADLS Gen2 in Parquet, queries via Synapse Serverless with external tables/pyodbc, orchestrates with Durable Azure Functions and queue-based triggers, and serves analytics in Power BI—pairing classic ML (logistic regression, random forest, LSTM) with Azure OpenAI for conversational and generative use cases.
           </p>
 
           <div class="info-grid">
@@ -353,14 +353,11 @@ details[open] .caret{transform:rotate(90deg)}
           </div>
           <!-- changed to use svg only -->
           <div class="wb-stage" id="wb-stage" data-svg="assets/svg/DGAI.svg"></div>
-    </div>
-
-</div>
-          </div>
         </div>
 
-      </section>
-    </div>
+      </section> <!-- /workspace -->
+
+    </div> <!-- /container app-layout -->
   </main>
 
   <!-- footer -->
@@ -399,7 +396,7 @@ details[open] .caret{transform:rotate(90deg)}
   const stage=document.getElementById('wb-stage');
 
   function render_pdf_inline(stage, pdf_path){
-    const rel = pdf_path.replace(/^assets\\//,''); // only used if a pdf is ever passed
+    const rel = pdf_path.replace(/^assets\//,''); // only used if a pdf is ever passed
     const src = 'assets/pdfjs/web/viewer.html?file=' + encodeURIComponent('../..' + '/' + rel);
     const f = document.createElement('iframe');
     f.style.position='absolute'; f.style.inset='0'; f.style.width='100%'; f.style.height='100%'; f.style.border='0'; f.style.background='#fff';
@@ -456,12 +453,12 @@ details[open] .caret{transform:rotate(90deg)}
       wrap.style.fontSize='.95rem';
       wrap.style.lineHeight='1.55';
       wrap.innerHTML = ""+
-        "<h3 style=\\"margin-top:0;font-family:'Space Grotesk',Inter,sans-serif;font-weight:600;\\">Supporting Utility: Diagram PDF → SVG Converter</h3>"+
+        "<h3 style=\"margin-top:0;font-family:'Space Grotesk',Inter,sans-serif;font-weight:600;\">Supporting Utility: Diagram PDF → SVG Converter</h3>"+
         "<p>I wrote a lightweight Python script to convert diagram PDFs into SVGs for this page. Earlier versions embedded PNGs that blurred when zoomed; switching to SVG preserves text sharpness and reduces the need for multiple raster sizes.</p>"+
         "<p><strong>Benefits</strong>: Vector clarity at any zoom, lean assets, simpler zoom/pan logic.</p>"+
         "<p><strong>Workflow</strong>:</p>"+
-        "<ol style=\\"padding-left:1.2rem;margin:.6rem 0 1rem;\\"><li>Export architecture diagram to single-page PDF.</li><li>Place PDF next to the script in <code>assets/py/</code>.</li><li>Run the script — it emits a same-name <code>.svg</code>.</li><li>Viewer prefers SVG (falls back to PDF via pdf.js).</li></ol>"+
-        "<p style=\\"margin:.8rem 0 .4rem;\\"><strong>Script: <code>assets/py/pdf_to_svg.py</code></strong> (<a href=\\"assets/py/pdf_to_svg.py\\" download>download</a>)</p>";
+        "<ol style=\"padding-left:1.2rem;margin:.6rem 0 1rem;\"><li>Export architecture diagram to single-page PDF.</li><li>Place PDF next to the script in <code>assets/py/</code>.</li><li>Run the script — it emits a same-name <code>.svg</code>.</li><li>Viewer prefers SVG (falls back to PDF via pdf.js).</li></ol>"+
+        "<p style=\"margin:.8rem 0 .4rem;\"><strong>Script: <code>assets/py/pdf_to_svg.py</code></strong> (<a href=\"assets/py/pdf_to_svg.py\" download>download</a>)</p>";
       const pre=document.createElement('pre');
       pre.style.background='#0a0f1e';
       pre.style.border='1px solid var(--border)';
@@ -473,21 +470,21 @@ details[open] .caret{transform:rotate(90deg)}
       pre.style.lineHeight='1.4';
       const code=document.createElement('code');
       code.textContent = (
-  `# Converts first page of a PDF to SVG (vector) for crisp zoomable display.\\n`+
-  `import fitz  # PyMuPDF\\n`+
-  `import os\\n\\n`+
-  `def pdf_to_svg(pdf_file):\\n`+
-  `    script_dir = os.path.dirname(os.path.abspath(__file__))\\n`+
-  `    pdf_path = os.path.join(script_dir, pdf_file)\\n`+
-  `    output_file = os.path.splitext(pdf_path)[0] + ".svg"\\n\\n`+
-  `    doc = fitz.open(pdf_path)\\n`+
-  `    page = doc[0]  # first page\\n`+
-  `    svg = page.get_svg_image()\\n\\n`+
-  `    with open(output_file, "w", encoding="utf-8") as f:\\n`+
-  `        f.write(svg)\\n\\n`+
-  `    print(f"converted: {output_file}")\\n\\n`+
-  `if __name__ == "__main__":\\n`+
-  `    pdf_to_svg("DGAI.pdf")\\n`
+  `# Converts first page of a PDF to SVG (vector) for crisp zoomable display.\n`+
+  `import fitz  # PyMuPDF\n`+
+  `import os\n\n`+
+  `def pdf_to_svg(pdf_file):\n`+
+  `    script_dir = os.path.dirname(os.path.abspath(__file__))\n`+
+  `    pdf_path = os.path.join(script_dir, pdf_file)\n`+
+  `    output_file = os.path.splitext(pdf_path)[0] + ".svg"\n\n`+
+  `    doc = fitz.open(pdf_path)\n`+
+  `    page = doc[0]  # first page\n`+
+  `    svg = page.get_svg_image()\n\n`+
+  `    with open(output_file, "w", encoding="utf-8") as f:\n`+
+  `        f.write(svg)\n\n`+
+  `    print(f"converted: {output_file}")\n\n`+
+  `if __name__ == "__main__":\n`+
+  `    pdf_to_svg("DGAI.pdf")\n`
       );
       pre.appendChild(code);
       wrap.appendChild(pre);
@@ -520,7 +517,8 @@ details[open] .caret{transform:rotate(90deg)}
       i.classList.add('active');
     });
   });
-})();</script>
+})();
+  </script>
   <script>
     const zoomContainer = document.querySelector('.zoom-container');
     const zoomImage = zoomContainer ? zoomContainer.querySelector('.zoom-image') : null;
@@ -533,6 +531,6 @@ details[open] .caret{transform:rotate(90deg)}
         zoomImage.style.transform = `scale(${scale})`;
       });
     }
-</script>
+  </script>
 </body>
 </html>
