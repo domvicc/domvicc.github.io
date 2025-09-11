@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>viewer lab — pdf + svg + deep zoom</title>
+  <meta name="description" content="floating viewer prototypes: pdf.js panel, svg pan/zoom canvas, and deep-zoom tiling." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <style>
+    :root{
+      --bg:#0b1020; --surface:#0f1428; --card:#121a31; --border:#1c2442; --text:#e6e9ef; --muted:#a7b0c0;
+      --primary:#22d3ee; --primary-2:#818cf8; --radius:14px; --shadow:0 12px 38px rgba(0,0,0,.28);
+    }
+    body{margin:0;background:var(--bg);color:var(--text);font-family:inter,system-ui,ui-sans-serif,Segoe UI,roboto,arial,sans-serif}
+    .page{padding:20px;min-height:100vh;background:
+      radial-gradient(1200px 600px at 20% -10%, rgba(34,211,238,.12), transparent 60%),
+      radial-gradient(800px 600px at 80% 0%, rgba(129,140,248,.14), transparent 60%),
+      var(--bg);
+    }
+    h1{font-family:space grotesk,inter,sans-serif;font-size:clamp(22px,3vw,28px);margin:6px 0 10px}
+    .lead{color:var(--muted);margin:0 0 14px}
+    .bar{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 10px}
+    .btn{appearance:none;border:1px solid var(--border);background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,0));color:var(--text);
+      padding:.55rem .8rem;border-radius:12px;cursor:pointer;font-weight:600}
+    .btn:hover{border-color:color-mix(in oklab,var(--border),var(--primary) 45%);box-shadow:0 0 0 3px rgba(34,211,238,.15)}
+    .hint{color:var(--muted);font-size:.9rem;margin-top:6px}
+    /* floating panel */
+    .panel{position:fixed;inset:auto auto 24px 24px;width:min(900px,70vw);height:min(640px,70vh);display:flex;flex-direction:column;
+      background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);z-index:20;overflow:hidden}
+    .panel[data-state="max"]{inset:16px; width:auto;height:auto}
+    .panel-head{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 10px;border-bottom:1px solid var(--border);cursor:move;background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(0,0,0,0))}
+    .panel-title{font-weight:700}
+    .panel-actions{display:flex;gap:6px}
+    .icon-btn{border:1px solid var(--border);background:transparent;color:var(--text);border-radius:10px;padding:.35rem .55rem;cursor:pointer}
+    .panel-body{position:relative;flex:1;background:#fff}
+    .panel-resizer{position:absolute;right:0;bottom:0;width:14px;height:14px;cursor:nwse-resize;background:linear-gradient(135deg, transparent 50%, rgba(0,0,0,.25) 50%)}
+    /* viewers */
+    .panel-body iframe{position:absolute;inset:0;border:0;width:100%;height:100%;background:#fff}
+    .svg-stage{position:absolute;inset:0;background:#fff;overflow:hidden;touch-action:none;cursor:grab}
+    .svg-stage.is-dragging{cursor:grabbing}
+    .svg-canvas{transform-origin:0 0;user-select:none;-webkit-user-drag:none}
+    .dz-stage{position:absolute;inset:0;background:#fff}
+    .fallback{position:absolute;inset:0;display:grid;place-items:center;padding:1rem;color:#333}
+    .kbd{display:inline-block;padding:.1rem .35rem;border-radius:6px;border:1px solid #d9d9d9;background:#f7f7f7;color:#333;font-size:.85em}
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1>viewer lab</h1>
+    <p class="lead">three approaches you can try: a floating <strong>pdf.js panel</strong>, an <strong>svg pan/zoom canvas</strong>, and a <strong>deep‑zoom</strong> tile viewer.</p>
+
+    <div class="bar">
+      <button class="btn" data-open="pdfjs">open pdf.js viewer</button>
+      <button class="btn" data-open="svg">open svg canvas</button>
+      <button class="btn" data-open="deepzoom">open deep‑zoom</button>
+    </div>
+
+    <p class="hint">
+      defaults expect files at:
+      <code>assets/pdfjs/web/viewer.html?file=../../pdf/DGAI.pdf</code>,
+      <code>assets/svg/dgai.svg</code>, and <code>assets/tiles/dgai.dzi</code>.
+      update paths in <span class="kbd">app2.js</span> as needed.
+    </p>
+  </div>
+
+  <!-- openseadragon for the deep-zoom option (cdn) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/4.1.0/openseadragon.min.js" integrity="sha512-pJ8ZJ0s6k5xq8Y+a9vN8SP8k9c6qk4ZFiVd1aYFfM7aKf5w5C5xN1M5E4oQq2BTG4XfC6ecG2Ih0nJkbgm2GNg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- app logic -->
+  <script src="app2.js"></script>
+</body>
+</html>
