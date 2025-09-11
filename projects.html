@@ -352,7 +352,11 @@ details[open] .caret{transform:rotate(90deg)}
             <button class="tab" aria-selected="false" data-tab="tab-3">Notes</button>
           </div>
           <div class="wb-stage" id="wb-stage">
-  <img src="assets/img/DGAI.png" alt="DomGuardianAI architecture" class="canvas-image" />
+          <div class="zoom-container">
+        <img src="assets/img/DGAI.png" alt="DomGuardianAI architecture" class="zoom-image" />
+      </div>
+    </div>
+
 </div>
           </div>
         </div>
@@ -429,5 +433,25 @@ items.forEach(i=>{
   });
 })();
   </script>
+  <script>
+const zoomContainer = document.querySelector('.zoom-container');
+const zoomImage = zoomContainer.querySelector('.zoom-image');
+
+let scale = 1;
+
+zoomContainer.addEventListener('wheel', function(e) {
+  e.preventDefault();
+  if (e.deltaY < 0) {
+    // zoom in
+    scale *= 1.1;
+  } else {
+    // zoom out
+    scale /= 1.1;
+  }
+  // clamp zoom so it doesn’t get too crazy
+  scale = Math.min(Math.max(0.5, scale), 5);
+  zoomImage.style.transform = `scale(${scale})`;
+});
+</script>
 </body>
 </html>
