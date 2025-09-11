@@ -9,8 +9,136 @@
   <link href="https://fonts.googleapis.com/css2?family=inter:wght@400;600;700&family=space+grotesk:wght@600;700&display=swap" rel="stylesheet">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/css/style.css">
+  <!-- new dark minimalist overrides -->
+  <style>
+    body.ai-dark{
+      --bg:#05070d;
+      --surface:#0c121b;
+      --text:#e6e9ef;
+      --accent1:#22d3ee;
+      --accent2:#818cf8;
+      background:#05070d;
+      color:var(--text);
+      font-feature-settings:"ss01" 1;
+    }
+    .ai-dark main{padding:0;}
+    .dgai-hero{
+      position:relative;
+      min-height:calc(100vh - 64px);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:4rem 1.5rem 3rem;
+      overflow:hidden;
+      isolation:isolate;
+    }
+    .dgai-hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(140deg,rgba(34,211,238,.10),transparent 40%),
+        radial-gradient(900px 600px at 70% 20%,rgba(129,140,248,.18),transparent 65%),
+        url(assets/img/header_ai.png) center/cover no-repeat;
+      filter:brightness(.55) saturate(.9);
+      opacity:.9;
+      z-index:-3;
+    }
+    .dgai-hero::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(1000px 800px at 15% 85%,rgba(34,211,238,.08),transparent 70%),
+        linear-gradient(180deg,rgba(7,11,18,.85),rgba(5,7,13,.95));
+      backdrop-filter:blur(6px);
+      z-index:-2;
+    }
+    .dgai-hero .hero-inner{
+      position:relative;
+      text-align:center;
+      max-width:860px;
+      width:100%;
+    }
+    .logo-wrap{
+      width:140px;height:140px;
+      margin:0 auto 1.25rem;
+      border-radius:28px;
+      background:radial-gradient(circle at 35% 30%,#243248,#0c121e);
+      display:grid;place-items:center;
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,.06),
+        0 12px 40px -8px rgba(0,0,0,.55),
+        0 0 40px -10px rgba(34,211,238,.40);
+      position:relative;
+      overflow:hidden;
+    }
+    .logo-wrap::before{
+      content:"";
+      position:absolute;inset:-12%;
+      background:conic-gradient(from 210deg at 30% 40%,rgba(34,211,238,.55),rgba(129,140,248,.45),rgba(34,211,238,.4));
+      mix-blend-mode:overlay;
+      filter:blur(32px) saturate(140%);
+      opacity:.35;
+      animation:slowSpin 18s linear infinite;
+    }
+    @keyframes slowSpin{to{transform:rotate(360deg);}}
+    .logo-wrap img{
+      width:100%;height:100%;object-fit:cover;border-radius:inherit;
+      mix-blend-mode:screen;
+    }
+    .dgai-title{
+      font-family:"Space Grotesk",Inter,sans-serif;
+      font-size:clamp(2.6rem,6vw,4.2rem);
+      margin:.3rem 0 .4rem;
+      letter-spacing:.5px;
+      background:linear-gradient(90deg,#e6e9ef,#9cb6ff 55%,#22d3ee);
+      -webkit-background-clip:text;
+      color:transparent;
+    }
+    .dgai-tagline{
+      font-size:clamp(.95rem,1.8vw,1.15rem);
+      font-weight:600;
+      letter-spacing:.15em;
+      text-transform:uppercase;
+      color:rgba(255,255,255,.55);
+      margin:0 0 1.9rem;
+    }
+    .dgai-desc{
+      font-size:clamp(1rem,1.4vw,1.15rem);
+      line-height:1.55;
+      color:rgba(230,233,239,.78);
+      font-weight:400;
+      margin:0 auto 2.4rem;
+      max-width:740px;
+    }
+    .cta-row{display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap;}
+    .btn.glow{
+      background:linear-gradient(135deg,#1d2638,#141c2c);
+      border:1px solid rgba(255,255,255,.08);
+      position:relative;
+      color:#e6e9ef;
+    }
+    .btn.glow::before{
+      content:"";
+      position:absolute;inset:0;border-radius:inherit;
+      background:linear-gradient(135deg,rgba(34,211,238,.45),rgba(129,140,248,.35));
+      opacity:0;transition:.35s;
+      mix-blend-mode:screen;
+    }
+    .btn.glow:hover::before{opacity:1;}
+    .minor-note{
+      font-size:.65rem;
+      letter-spacing:.26em;
+      text-transform:uppercase;
+      color:rgba(255,255,255,.32);
+      margin-top:2.6rem;
+    }
+    /* minimal footer tweak for dark */
+    body.ai-dark .site-footer{background:linear-gradient(180deg,#0a111b,#05070d);border-top:1px solid rgba(255,255,255,.08);}
+  </style>
 </head>
-<body>
+<body class="ai-dark">
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="home">
@@ -29,71 +157,28 @@
     </div>
   </header>
 
-  <main class="section">
-    <div class="container">
-      <h1 class="section-title">DomGuardianAI</h1>
-      <p class="lead">
-    A practical AI assistant focused on workforce compliance data: natural-language search over curated datasets, summaries, and quick answers. Built using Azure and Python.
-      </p>
-
-      <div class="grid two">
-        <div>
-          <h2 class="subheading">Overview</h2>
-          <p>
-              This page is a work in progress - dv.
-          </p>
-          <ul class="feature-list">
-              <li>Data ingestion from multiple sources into an Azure Data Lake</li>
-              <li>Embedding/vector search over curated compliance datasets</li>
-              <li>API endpoints for chat, Q&A, and dashboard integration</li>
-              <li>Observability: logging, metrics, and basic evaluations</li>
-          </ul>
-          <div class="links">
-            <!-- tip: point these buttons to real resources -->
-            <a class="btn small" href="#" target="_blank" rel="noopener">Repo</a>
-            <a class="btn ghost small" href="#" target="_blank" rel="noopener">Architecture Doc</a>
-          </div>
+  <main>
+    <!-- new immersive hero -->
+    <section class="dgai-hero">
+      <div class="hero-inner">
+        <div class="logo-wrap">
+          <img src="assets/img/dgai_logo.png" alt="DomGuardianAI logo">
         </div>
-
-        <div>
-          <!-- tip: place an architecture diagram or screenshot here -->
-          <!-- example: <img src="assets/img/domguardianai-arch.png" class="responsive" alt="domguardianai architecture diagram"> -->
-          <div class="placeholder-img">add your diagram or screenshot here</div>
+        <h1 class="dgai-title">DomGuardianAI</h1>
+        <p class="dgai-tagline">Silent architecture in motion</p>
+        <p class="dgai-desc">
+          Layered ingestion. Parallel refinement. Vectorized memory and quiet evaluators. Signals become context; context becomes intuition. Interfaces that answer, summarize, anticipate. What appears is only a fragment—the deeper system is still unfolding.
+        </p>
+        <div class="cta-row">
+          <a href="projects.html" class="btn glow">Explore Platform</a>
+          <a href="#" class="btn glow" style="opacity:.55;pointer-events:none;">Artifacts Soon</a>
         </div>
+        <p class="minor-note">preview • evolving surface</p>
       </div>
+    </section>
 
-      <hr class="divider">
-
-      <h2 class="subheading">key features</h2>
-      <div class="grid three">
-        <div class="feature-box">
-            <h3>NL search</h3>
-            <p>Query datasets in plain English with guardrails and helpful context.</p>
-        </div>
-        <div class="feature-box">
-            <h3>Curated results</h3>
-            <p>Answers reference specific sources and fields so analysts can verify them.</p>
-        </div>
-        <div class="feature-box">
-            <h3>Lightweight ops</h3>
-            <p>Serverless functions and storage queues keep costs low and scaling simple.</p>
-        </div>
-      </div>
-
-      <h2 class="subheading">tech stack</h2>
-      <ul class="stack-list">
-    <li>Python (FastAPI or Flask) for the API</li>
-    <li>Azure Functions, Event Grid, and Storage</li>
-    <li>Synapse Serverless SQL for curated views</li>
-    <li>Vector store (choose your provider) for retrieval</li>
-      </ul>
-
-      <h2 class="subheading">results</h2>
-      <p>
-          Summarize outcomes: time saved, accuracy improvements, stakeholder impact, and lessons learned.
-      </p>
-
-    </div>
+    <!-- old content removed for minimalist concept iteration -->
+    <!-- ...existing code... -->
   </main>
 
   <footer class="site-footer">
