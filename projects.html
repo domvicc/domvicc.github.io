@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projects — Dominic Vicchiollo</title>
-  <meta name="description" content="Selected projects: DomGuardianAI (DGAI) data lakehouse architecture, orchestration, analytics, and ML." />
+  <meta name="description" content="Selected projects: DomGuardianAI data & AI lakehouse architecture, orchestration, analytics, and ML." />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link href="https://fonts.googleapis.com/css2?family=inter:wght@400;600;700&family=space+grotesk:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
 
   <style>
 /* ======= site-wide css (light modern palette & header) ======= */
@@ -45,7 +45,7 @@
 html,body{height:100%}
 body{
   margin:0;
-  font-family:inter,system-ui,-apple-system,"segoe ui",roboto,"helvetica neue",arial,"noto sans","apple color emoji","segoe ui emoji","segoe ui symbol";
+  font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   color:var(--text);
   background:
     radial-gradient(1200px 600px at 20% -10%, rgba(34,211,238,.12), transparent 60%),
@@ -58,7 +58,7 @@ body{
 .container{width:100%;max-width:none;margin:0;padding-inline:var(--gutter)}
 .section{padding-block:var(--section-vertical)}
 .section-title{
-  font-family:"space grotesk",inter,system-ui,sans-serif;
+  font-family:"Space Grotesk",Inter,system-ui,sans-serif;
   font-weight:700;
   font-size:clamp(1.6rem,3vw,2rem);
   margin:0 0 1rem;
@@ -100,6 +100,7 @@ body{
 .social{display:inline-flex;gap:.75rem}
 .social a{color:var(--muted);text-decoration:none}
 .social a:hover{color:var(--text)}
+.disclaimer{font-size:.9rem;color:var(--muted);margin:0}
 
 /* responsive header behavior */
 @media (max-width:680px){
@@ -156,7 +157,7 @@ details[open] .caret{transform:rotate(90deg)}
   border-radius:var(--radius);padding:14px;box-shadow:var(--shadow)
 }
 .kicker{color:var(--muted);margin:0}
-.title{font-family:"space grotesk";font-size:clamp(28px,3vw,40px);margin:.1rem 0}
+.title{font-family:"Space Grotesk";font-size:clamp(28px,3vw,40px);margin:.1rem 0}
 .subtitle{color:var(--muted);font-weight:500;margin:0}
 .desc{color:color-mix(in oklab,var(--text),#000 10%);line-height:1.6;margin:.5rem 0 0}
 .info-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
@@ -194,19 +195,19 @@ details[open] .caret{transform:rotate(90deg)}
   <!-- header (default restored with working links) -->
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="index.html" aria-label="home">
+      <a class="brand" href="index.html" aria-label="Home">
         <span class="brand-mark">DV</span>
-        <span class="brand-text">dominic vicchiollo</span>
+        <span class="brand-text">Dominic Vicchiollo</span>
       </a>
 
-      <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false">
+      <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="bar"></span><span class="bar"></span><span class="bar"></span>
       </button>
 
-      <nav id="site-nav" class="site-nav" aria-label="primary">
-        <a href="index.html" class="nav-link">home</a>
-        <a href="projects.html" class="nav-link is-active">projects</a>
-        <a href="domguardianai.html" class="nav-link">domguardianai</a>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="projects.html" class="nav-link is-active">Projects</a>
+        <a href="domguardianai.html" class="nav-link">DomGuardianAI</a>
       </nav>
     </div>
   </header>
@@ -215,7 +216,10 @@ details[open] .caret{transform:rotate(90deg)}
   <section class="hero">
     <div class="hero-inner container">
       <h1 class="section-title" style="font-size:clamp(2rem,4vw,3rem);margin-top:.75rem;">Projects</h1>
-      <p class="lead">A curated set of data engineering and analytics projects. Click a project to see details and artifacts.</p>
+      <p class="lead">
+        This page is a working showcase of my personal projects—built to highlight my technical capabilities and skills.
+        Expect cloud‑native pipelines, a data &amp; AI lakehouse, and ML‑backed analytics that reflect how I design, ship, and iterate. If something sparks an idea or you want to dig deeper, I’m always up for a technical conversation.
+      </p>
     </div>
   </section>
 
@@ -227,34 +231,34 @@ details[open] .caret{transform:rotate(90deg)}
       <aside class="directory">
         <div class="dir-card">
           <div class="dir-head">
-            <span class="dir-title">projects</span>
+            <span class="dir-title">Projects</span>
           </div>
           <div class="dir-body">
             <div class="tree">
               <details open>
-                <summary><span class="caret">›</span><span>featured</span><span class="tree-count">2</span></summary>
+                <summary><span class="caret">›</span><span>Featured</span><span class="tree-count">2</span></summary>
                 <ul class="dir-list">
                   <li class="dir-item">
                     <button class="tree-item active" data-id="dgai">
-                      <span class="bullet"></span><span>DomGuardianAI — data & AI lakehouse</span>
+                      <span class="bullet"></span><span>DomGuardianAI — Data &amp; AI Lakehouse</span>
                     </button>
                   </li>
                   <li class="dir-item">
                     <button class="tree-item" data-id="coming-soon">
-                      <span class="bullet"></span><span>coming soon</span>
+                      <span class="bullet"></span><span>Coming Soon</span>
                     </button>
                   </li>
                 </ul>
               </details>
               <details open class="node">
-                <summary><span class="caret">›</span><span>by domain</span><span class="tree-count">1</span></summary>
+                <summary><span class="caret">›</span><span>By Domain</span><span class="tree-count">1</span></summary>
                 <div class="group">
                   <details open>
-                    <summary><span class="caret">›</span><span>data platforms</span><span class="tree-count">1</span></summary>
+                    <summary><span class="caret">›</span><span>Data Platforms</span><span class="tree-count">1</span></summary>
                     <ul class="dir-list">
                       <li class="dir-item">
                         <button class="tree-item" data-id="dgai-architecture">
-                          <span class="bullet"></span><span>DomGuardianAI architecture</span>
+                          <span class="bullet"></span><span>DomGuardianAI Architecture</span>
                         </button>
                       </li>
                     </ul>
@@ -271,14 +275,16 @@ details[open] .caret{transform:rotate(90deg)}
 
         <!-- details pane -->
         <div class="details">
-          <p class="kicker">azure • lakehouse • ml</p>
-          <h2 class="title">DomGuardianAI (DGAI)</h2>
-          <p class="subtitle">end‑to‑end data lakehouse with orchestration, analytics, and mlops</p>
-          <p class="desc">A production‑ready architecture that ingests financial and news data (news feeds, XBRL 10‑K/8‑K, ticker/NASDAQ, technical analysis), lands to ADLS Gen2 as Parquet, queries via Synapse Serverless with external tables/pyodbc, orchestrates with Durable Azure Functions and queue‑based triggers, and serves analytics in Power BI with ML models (logistic regression, random forest, LSTM) and Azure OpenAI.</p>
+          <p class="kicker">Azure • Lakehouse • ML</p>
+          <h2 class="title">DomGuardianAI</h2>
+          <p class="subtitle">End‑to‑end data lakehouse with orchestration, analytics, and MLOps.</p>
+          <p class="desc">
+            A production‑ready architecture that ingests financial and news data (news feeds, XBRL 10‑K/8‑K, ticker/NASDAQ, technical analysis), lands to ADLS Gen2 in Parquet, queries via Synapse Serverless with external tables/pyodbc, orchestrates with Durable Azure Functions and queue‑based triggers, and serves analytics in Power BI—pairing classic ML (logistic regression, random forest, LSTM) with Azure OpenAI for conversational and generative use cases.
+          </p>
 
           <div class="info-grid">
             <div class="info-card">
-              <p class="info-title">platform components</p>
+              <p class="info-title">Platform Components</p>
               <div class="pill-row">
                 <span class="pill">ADLS Gen2</span>
                 <span class="pill">Synapse Serverless</span>
@@ -286,52 +292,52 @@ details[open] .caret{transform:rotate(90deg)}
               </div>
             </div>
             <div class="info-card">
-              <p class="info-title">orchestration</p>
+              <p class="info-title">Orchestration</p>
               <div class="pill-row">
                 <span class="pill">Durable Functions</span>
-                <span class="pill">HTTP/Timer/Queue/Blob triggers</span>
-                <span class="pill">Parallel execution</span>
+                <span class="pill">HTTP/Timer/Queue/Blob Triggers</span>
+                <span class="pill">Parallel Execution</span>
               </div>
             </div>
             <div class="info-card">
-              <p class="info-title">data & ml</p>
+              <p class="info-title">Data &amp; ML</p>
               <div class="pill-row">
                 <span class="pill">Parquet + External Tables</span>
-                <span class="pill">sklearn/TensorFlow (LSTM)</span>
+                <span class="pill">scikit‑learn / TensorFlow (LSTM)</span>
               </div>
             </div>
             <div class="info-card">
-              <p class="info-title">artifacts</p>
+              <p class="info-title">Artifacts</p>
               <div class="links">
-                <a class="btn ghost" href="assets/img/DGAI.png" target="_blank" rel="noopener">view architecture (pdf)</a>
-                <a class="btn ghost" href="assets/img/DGAI.png" target="_blank" rel="noopener">download pdf</a>
+                <a class="btn ghost" href="assets/pdf/DGAI.pdf" target="_blank" rel="noopener">View Architecture (PDF)</a>
+                <a class="btn ghost" href="assets/pdf/DGAI.pdf" download>Download PDF</a>
               </div>
             </div>
           </div>
 
           <div>
-            <p class="info-title" style="margin:.2rem 0 .4rem;">highlights</p>
+            <p class="info-title" style="margin:.2rem 0 .4rem;">Highlights</p>
             <ul class="highlights">
-              <li>sources: news feeds, XBRL 10‑K/8‑K, ticker & NASDAQ, and technical analysis.</li>
-              <li>durable orchestration across HTTP, Timer, Queue, and Blob triggers with queue‑based messaging.</li>
-              <li>quality gates and zones: validation, retention, normalized tables across raw → staging → curated.</li>
+              <li>Sources: News feeds, XBRL 10‑K/8‑K, ticker/NASDAQ, and technical analysis.</li>
+              <li>Durable orchestration across HTTP, Timer, Queue, and Blob triggers with queue‑based messaging.</li>
+              <li>Quality gates and zones: Validation, retention, and normalized tables across Raw → Staging → Curated.</li>
             </ul>
           </div>
 
           <div>
-            <p class="info-title" style="margin:.2rem 0 .4rem;">quick metrics</p>
+            <p class="info-title" style="margin:.2rem 0 .4rem;">Quick Metrics</p>
             <div class="metrics">
               <div class="metric">
-                <p class="metric-label">data zones</p>
-                <p class="metric-value">raw → staging → curated</p>
+                <p class="metric-label">Data Zones</p>
+                <p class="metric-value">Raw → Staging → Curated</p>
               </div>
               <div class="metric">
-                <p class="metric-label">storage format</p>
+                <p class="metric-label">Storage Format</p>
                 <p class="metric-value">Parquet on ADLS Gen2</p>
               </div>
               <div class="metric">
-                <p class="metric-label">analytics</p>
-                <p class="metric-value">Power BI + ML models</p>
+                <p class="metric-label">Analytics</p>
+                <p class="metric-value">Power BI + ML Models</p>
               </div>
             </div>
           </div>
@@ -340,12 +346,14 @@ details[open] .caret{transform:rotate(90deg)}
         <!-- viewer pane -->
         <div class="workbench">
           <div class="wb-tabs" id="wb-tabs">
-            <button class="tab" aria-selected="true" data-tab="tab-1">overview</button>
-            <button class="tab" aria-selected="false" data-tab="tab-2">architecture</button>
-            <button class="tab" aria-selected="false" data-tab="tab-3">notes</button>
+            <button class="tab" aria-selected="true" data-tab="tab-1">Overview</button>
+            <button class="tab" aria-selected="false" data-tab="tab-2">Architecture</button>
+            <button class="tab" aria-selected="false" data-tab="tab-3">Notes</button>
           </div>
           <div class="wb-stage" id="wb-stage">
-            <div class="placeholder"><iframe src="assets/img/DGAI.png" title="DGAI Architecture PDF" style="width:100%;height:100%;border:0;"></iframe></div>
+            <div class="placeholder">
+              <iframe src="assets/pdf/DGAI.pdf" title="DomGuardianAI Architecture (PDF)" style="width:100%;height:100%;border:0;"></iframe>
+            </div>
           </div>
         </div>
 
@@ -355,12 +363,17 @@ details[open] .caret{transform:rotate(90deg)}
 
   <!-- footer -->
   <footer class="site-footer">
+    <div class="container" style="padding-block:.75rem 0;">
+      <p class="disclaimer">
+        Disclaimer: All content on this page represents my personal work. Examples use synthetic data or publicly available sources only; nothing proprietary, confidential, or client‑specific appears here.
+      </p>
+    </div>
     <div class="container footer-inner">
-      <p>© <span id="year"></span> dominic vicchiollo</p>
+      <p>© <span id="year"></span> Dominic Vicchiollo</p>
       <div class="social">
-        <a href="#" target="_blank" rel="noopener">linkedin</a>
-        <a href="#" target="_blank" rel="noopener">github</a>
-        <a href="#" target="_blank" rel="noopener">email</a>
+        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#" target="_blank" rel="noopener">GitHub</a>
+        <a href="#" target="_blank" rel="noopener">Email</a>
       </div>
     </div>
   </footer>
@@ -390,7 +403,8 @@ details[open] .caret{transform:rotate(90deg)}
       stage.innerHTML='';
       const ph=document.createElement('div');
       ph.className='placeholder';
-      ph.textContent='[content for ' + id + ' goes here]';
+      const label=btn.textContent.trim();
+      ph.textContent='Content for ' + label + ' goes here.';
       stage.appendChild(ph);
     });
   });
