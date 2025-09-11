@@ -7,10 +7,14 @@
   'use strict';
 
   // ---------- config (edit paths to match your repo) ----------
+  // resources are resolved relative to the page (document.baseURI) so
+  // projects3.html can inject this script from assets/js/ without breaking fetch/iframe urls
+  const resolve = (p) => new URL(p, document.baseURI).href;
   const cfg = {
-    pdfjs_viewer: 'assets/pdfjs/web/viewer.html?file=../../pdf/DGAI.pdf#view=page-fit',
-    svg_file: 'assets/svg/dgai.svg',
-    deepzoom_dzi: 'assets/tiles/dgai.dzi'
+    // matches the hint in projects3.html
+    pdfjs_viewer: resolve('assets/pdfjs/web/viewer.html?file=../../pdf/DGAI.pdf'),
+    svg_file: resolve('assets/svg/DGAI.svg'),
+    deepzoom_dzi: resolve('assets/tiles/dgai.dzi')
   };
 
   // ---------- utils ----------
@@ -79,7 +83,7 @@
 
     // actions
     panel.addEventListener('click', (e) => {
-      const btn = (e.target).closest('[data-act]');
+      const btn = (e.target).closest && (e.target).closest('[data-act]');
       if (!btn) return;
       const act = btn.getAttribute('data-act');
       if (act === 'close') panel.remove();
@@ -134,15 +138,15 @@
         if (!svg_text){
           svg_text = `<svg class="svg-canvas" width="1400" height="900" viewBox="0 0 1400 900" xmlns="http://www.w3.org/2000/svg">
             <defs>
-              <lineargradient id="grad" x1="0" x2="1" y1="0" y2="1">
+              <linearGradient id="grad" x1="0" x2="1" y1="0" y2="1">
                 <stop offset="0%" stop-color="#22d3ee"/><stop offset="100%" stop-color="#818cf8"/>
-              </lineargradient>
+              </linearGradient>
             </defs>
             <rect x="0" y="0" width="1400" height="900" fill="#ffffff"/>
             <g id="g" font-family="inter, sans-serif">
               <rect x="120" y="120" width="1160" height="660" rx="18" fill="url(#grad)" opacity=".08" stroke="#e5e7eb"/>
               <text x="700" y="180" text-anchor="middle" font-size="28" fill="#111827">svg canvas placeholder</text>
-              <text x="700" y="215" text-anchor="middle" font-size="15" fill="#374151">replace assets/svg/dgai.svg to load your diagram</text>
+              <text x="700" y="215" text-anchor="middle" font-size="15" fill="#374151">replace assets/svg/DGAI.svg to load your diagram</text>
               <circle cx="700" cy="450" r="140" fill="url(#grad)" opacity=".25"/>
               <rect x="520" y="380" width="360" height="140" rx="12" fill="#ffffff" stroke="#d1d5db"/>
               <text x="700" y="455" text-anchor="middle" font-size="16" fill="#111827">drag to pan • scroll to zoom • dbl-click to reset</text>
@@ -208,7 +212,7 @@
   // ---------- option 3: deep-zoom (openseadragon) ----------
   function open_deepzoom(){
     make_panel({
-      title: 'deep‑zoom',
+      title: 'deep-zoom',
       content: (body) => {
         const wrap = document.createElement('div');
         wrap.className = 'dz-stage';
