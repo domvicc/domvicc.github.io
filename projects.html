@@ -223,6 +223,12 @@ details[open] .caret{transform:rotate(90deg)}
 .wb-stage{position:relative;flex:1;overflow:auto;background:var(--surface);display:grid;place-items:stretch;border:1px solid var(--border);border-radius:var(--radius)}
 .canvas-image{width:100%;height:100%;object-fit:contain;display:block;background:#fff}
 .wb-stage .placeholder{color:var(--muted);font-size:1rem;padding:1rem 1.5rem;text-align:center}
+
+.evals{display:grid;gap:14px;margin-top:12px}
+.eval-card{border:1px solid var(--border);background:var(--surface);border-radius:14px;padding:10px 12px;display:grid;gap:6px}
+.eval-card img{width:100%;height:auto;border:1px solid var(--border);border-radius:10px;background:#fff}
+.eval-title{margin:0;font-weight:600}
+.eval-desc{margin:0;color:var(--muted);font-size:.85rem;line-height:1.45}
   </style>
 </head>
 <body class="force-light projects-page">
@@ -273,7 +279,7 @@ details[open] .caret{transform:rotate(90deg)}
           <div class="dir-body">
             <div class="tree">
               <details open>
-                <summary><span class="caret">›</span><span>Featured</span><span class="tree-count">3</span></summary>
+                <summary><span class="caret">›</span><span>Featured</span><span class="tree-count">4</span></summary>
                 <ul class="dir-list">
                   <li class="dir-item">
                     <button class="tree-item active" data-id="dgai">
@@ -288,6 +294,11 @@ details[open] .caret{transform:rotate(90deg)}
                   <li class="dir-item">
                     <button class="tree-item" data-id="coming-soon">
                       <span class="bullet"></span><span>Coming Soon</span>
+                    </button>
+                  </li>
+                  <li class="dir-item">
+                    <button class="tree-item" data-id="cc-fraud-nn">
+                      <span class="bullet"></span><span>Credit Card Fraud NN</span>
                     </button>
                   </li>
                 </ul>
@@ -454,6 +465,109 @@ details[open] .caret{transform:rotate(90deg)}
                 </div>
               </div>
             </div>
+
+          <!-- Credit Card Fraud Detection Neural Network -->
+          <div class="project-details" data-project="cc-fraud-nn">
+            <p class="kicker">Imbalanced ML • TensorFlow • Risk Analytics</p>
+            <h2 class="title">Credit Card Fraud Detection NN</h2>
+            <p class="subtitle">Baseline dense neural network to flag rare fraudulent card transactions (≈0.17% fraud rate).</p>
+            <p class="desc">
+              Trains a small dropout‑regularized neural net on the public credit card fraud dataset (OpenML id 42175). It
+              standardizes features, applies class weighting for imbalance, evaluates with AUC / Precision‑Recall focus,
+              sweeps thresholds, calibrates probability quality, and projects hidden‑layer embeddings with UMAP to
+              visualize risk clusters. Outputs ready‑to‑discuss artifacts (PNG charts) plus a recommended starting review
+              threshold (max F1) that can be shifted toward higher precision (fewer alerts) or higher recall (more fraud caught).
+            </p>
+
+            <div class="info-card" style="margin-top:.4rem;">
+              <p class="info-title" style="margin:0 0 .35rem;">Expected vs Observed Outcomes</p>
+              <ul class="highlights" style="margin:.25rem 0 0;">
+                <li><strong>Expectation:</strong> High ROC AUC (&gt;0.95) but modest precision at balanced (0.50) threshold due to extreme rarity.</li>
+                <li><strong>Observed:</strong> ROC AUC 0.9821; Average Precision 0.6844 (strong ranking ability).</li>
+                <li><strong>Precision @0.50:</strong> 0.054 (alerts mostly benign at default cutoff).</li>
+                <li><strong>Recall @0.50:</strong> 0.908 (most fraud is caught early).</li>
+                <li><strong>Brier Score:</strong> 0.0211 (probabilities well calibrated for decision tiers / cost modeling).</li>
+                <li><strong>Takeaway:</strong> Lower the threshold to chase maximum recall only if ops capacity tolerates higher false alert load; otherwise raise threshold slightly to boost alert purity, guided by the threshold sweep chart.</li>
+              </ul>
+            </div>
+
+            <div class="metrics" style="margin-top:.6rem;">
+              <div class="metric">
+                <p class="metric-label">ROC AUC</p>
+                <p class="metric-value">0.9821</p>
+              </div>
+              <div class="metric">
+                <p class="metric-label">Avg Precision (PR AUC)</p>
+                <p class="metric-value">0.6844</p>
+              </div>
+              <div class="metric">
+                <p class="metric-label">Brier Score</p>
+                <p class="metric-value">0.0211</p>
+              </div>
+              <div class="metric">
+                <p class="metric-label">Rec / Prec @0.50</p>
+                <p class="metric-value">0.908 / 0.054</p>
+              </div>
+            </div>
+
+            <p class="info-title" style="margin:.9rem 0 .4rem;">Model Evaluation Charts</p>
+            <div class="evals">
+              <div class="eval-card">
+                <p class="eval-title">Threshold Tuning – Precision vs Recall</p>
+                <img src="assets/img/cc-fraud/threshold_sweep.png" alt="Precision and recall versus decision threshold curve">
+                <p class="eval-desc">
+                  Shows how increasing the score cutoff raises precision (cleaner alerts) but lowers recall (more missed fraud).
+                  Pick a point that balances missed‑fraud cost vs analyst capacity; start near the precision≈recall bend.
+                </p>
+              </div>
+              <div class="eval-card">
+                <p class="eval-title">ROC Curve</p>
+                <img src="assets/img/cc-fraud/roc_curve.png" alt="ROC curve with high top-left bend">
+                <p class="eval-desc">
+                  Overall discrimination power (AUC 0.9821). Used mainly to compare models; not ideal alone for choosing the final threshold on rare events.
+                </p>
+              </div>
+              <div class="eval-card">
+                <p class="eval-title">Precision–Recall Curve</p>
+                <img src="assets/img/cc-fraud/pr_curve.png" alt="Precision-recall curve for rare fraud detection">
+                <p class="eval-desc">
+                  Focuses on alert quality vs fraud coverage in imbalanced settings. Steep drop region warns where extra alerts add little incremental fraud found.
+                </p>
+              </div>
+              <div class="eval-card">
+                <p class="eval-title">Reliability (Calibration)</p>
+                <img src="assets/img/cc-fraud/calibration.png" alt="Calibration curve comparing predicted to observed fraud rate">
+                <p class="eval-desc">
+                  Near-diagonal + low Brier means probabilities reflect real risk—enabling tiered actions (auto decline, manual review, pass) and cost modeling.
+                </p>
+              </div>
+              <div class="eval-card">
+                <p class="eval-title">Confusion Matrix (Normalized)</p>
+                <img src="assets/img/cc-fraud/confusion_matrix.png" alt="Normalized confusion matrix at 0.50 threshold">
+                <p class="eval-desc">
+                  High recall with low precision at default 0.50 illustrates imbalance impact. Adjust threshold upward if analyst workload is strained.
+                </p>
+              </div>
+              <div class="eval-card">
+                <p class="eval-title">Risk Map (UMAP Embedding)</p>
+                <img src="assets/img/cc-fraud/risk_map.png" alt="UMAP embedding colored by predicted fraud probability">
+                <p class="eval-desc">
+                  Clusters highlight concentrated high‑risk behavior patterns (potential rings / device groupings) for deeper feature engineering or rule layering.
+                </p>
+              </div>
+            </div>
+
+            <div class="info-card" style="margin-top:1rem;">
+              <p class="info-title" style="margin:0 0 .35rem;">Artifacts</p>
+              <div class="links">
+                <a class="btn ghost" href="assets/py/credit_card_fraud_detection_neural_network.py" download>Download Code</a>
+              </div>
+              <p class="eval-desc" style="margin-top:.6rem;">
+                Place PNGs at: assets/img/cc-fraud/ (filenames: threshold_sweep.png, roc_curve.png, pr_curve.png,
+                calibration.png, confusion_matrix.png, risk_map.png).
+              </p>
+            </div>
+          </div>
         </div>
 
         <!-- viewer pane -->
@@ -513,6 +627,11 @@ details[open] .caret{transform:rotate(90deg)}
       tabs:['Overview','Code'],
       defaultTab:'Code',
       script:'assets/py/pdf_to_svg.py'
+    },
+    'cc-fraud-nn':{
+      tabs:['Overview','Code'],
+      defaultTab:'Overview',
+      script:'assets/py/credit_card_fraud_detection_neural_network.py'
     }
   };
 
