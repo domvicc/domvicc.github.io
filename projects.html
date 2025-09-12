@@ -592,7 +592,7 @@ details[open] .caret{transform:rotate(90deg)}
       script:'assets/py/credit_card_fraud_detection_neural_network.py',
       charts:[
         {
-          file:'threshold_sweep.png',
+          file:'threshold_tuning.png',
           title:'Threshold Tuning – Precision vs Recall',
           alt:'Precision and recall versus decision threshold curve',
           desc:'How tightening the cutoff trades fewer false alerts for more missed fraud. Start near the bend where precision and recall separate.'
@@ -604,13 +604,13 @@ details[open] .caret{transform:rotate(90deg)}
             desc:'Shows overall separation power (AUC 0.9821). Good for comparing models; not ideal alone for threshold choice on rare events.'
         },
         {
-          file:'pr_curve.png',
+          file:'precision_recall_curve.png',
           title:'Precision–Recall Curve',
           alt:'Precision-recall curve for rare fraud detection',
           desc:'Focuses on alert quality vs fraud coverage. Falling edge shows diminishing returns from lowering the threshold further.'
         },
         {
-          file:'calibration.png',
+          file:'reliability_curve.png',
           title:'Reliability (Calibration)',
           alt:'Calibration curve comparing predicted to observed fraud rate',
           desc:'Near-diagonal + low Brier score → scores approximate true risk; supports tiered actions and cost optimization.'
@@ -622,10 +622,10 @@ details[open] .caret{transform:rotate(90deg)}
           desc:'High recall but low precision at default 0.50 due to rarity. Raise threshold if analyst queue is overloaded.'
         },
         {
-          file:'risk_map.png',
-          title:'Risk Map (UMAP Embedding)',
-          alt:'UMAP embedding colored by predicted fraud probability',
-          desc:'Clusters of high scores hint at coordinated behavior/device groupings for deeper rules or feature engineering.'
+          file:'threshold_tuning.png',   // changed from risk_map.png
+          title:'Threshold Tuning Focus View',
+          alt:'Threshold tuning chart highlighting optimal operating region',
+          desc:'Secondary view of the threshold tuning curve used to call out the practical operating band where small threshold shifts materially change alert volume or missed fraud.'
         }
       ]
     }
