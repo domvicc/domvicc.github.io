@@ -592,37 +592,37 @@ details[open] .caret{transform:rotate(90deg)}
       script:'assets/py/credit_card_fraud_detection_neural_network.py',
       charts:[
         {
-          file:'assets/img/threshold_sweep.png',
+          file:'threshold_sweep.png',
           title:'Threshold Tuning – Precision vs Recall',
           alt:'Precision and recall versus decision threshold curve',
           desc:'How tightening the cutoff trades fewer false alerts for more missed fraud. Start near the bend where precision and recall separate.'
         },
         {
-          file:'assets/img/roc_curve.png',
+          file:'roc_curve.png',
             title:'ROC Curve',
             alt:'ROC curve with high top-left bend',
             desc:'Shows overall separation power (AUC 0.9821). Good for comparing models; not ideal alone for threshold choice on rare events.'
         },
         {
-          file:'assets/img/pr_curve.png',
+          file:'pr_curve.png',
           title:'Precision–Recall Curve',
           alt:'Precision-recall curve for rare fraud detection',
           desc:'Focuses on alert quality vs fraud coverage. Falling edge shows diminishing returns from lowering the threshold further.'
         },
         {
-          file:'assets/img/calibration.png',
+          file:'calibration.png',
           title:'Reliability (Calibration)',
           alt:'Calibration curve comparing predicted to observed fraud rate',
           desc:'Near-diagonal + low Brier score → scores approximate true risk; supports tiered actions and cost optimization.'
         },
         {
-          file:'assets/img/confusion_matrix.png',
+          file:'confusion_matrix.png',
           title:'Confusion Matrix (Normalized)',
           alt:'Normalized confusion matrix at 0.50 threshold',
           desc:'High recall but low precision at default 0.50 due to rarity. Raise threshold if analyst queue is overloaded.'
         },
         {
-          file:'assets/img/risk_map.png',
+          file:'risk_map.png',
           title:'Risk Map (UMAP Embedding)',
           alt:'UMAP embedding colored by predicted fraud probability',
           desc:'Clusters of high scores hint at coordinated behavior/device groupings for deeper rules or feature engineering.'
@@ -683,7 +683,7 @@ details[open] .caret{transform:rotate(90deg)}
       card.className='eval-card';
       const t=document.createElement('p'); t.className='eval-title'; t.textContent=c.title;
       const img=document.createElement('img');
-      img.src='assets/img/cc-fraud/'+c.file;
+      img.src='assets/img/'+c.file;
       img.alt=c.alt;
       const d=document.createElement('p'); d.className='eval-desc'; d.textContent=c.desc;
       card.appendChild(t); card.appendChild(img); card.appendChild(d);
