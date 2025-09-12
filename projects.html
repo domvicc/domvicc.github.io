@@ -470,13 +470,13 @@ details[open] .caret{transform:rotate(90deg)}
           <div class="project-details" data-project="cc-fraud-nn">
             <p class="kicker">Imbalanced ML • TensorFlow • Risk Analytics</p>
             <h2 class="title">Credit Card Fraud Detection NN</h2>
-            <p class="subtitle">Baseline dense neural network to flag rare fraudulent card transactions (≈0.17% fraud rate).</p>
+            <p class="subtitle">Neural network that helps spot rare fraudulent credit card transactions.</p>
             <p class="desc">
-              Trains a small dropout‑regularized neural net on the public credit card fraud dataset (OpenML id 42175). It
-              standardizes features, applies class weighting for imbalance, evaluates with AUC / Precision‑Recall focus,
-              sweeps thresholds, calibrates probability quality, and projects hidden‑layer embeddings with UMAP to
-              visualize risk clusters. Outputs ready‑to‑discuss artifacts (PNG charts) plus a recommended starting review
-              threshold (max F1) that can be shifted toward higher precision (fewer alerts) or higher recall (more fraud caught).
+              This model learns patterns from past card transactions to warn which new ones look risky. Because real fraud
+              is extremely rare, it gives each transaction a risk score (0–1) instead of a simple yes/no. A higher score means
+              “look closer.” We can move the decision cutoff to show fewer alerts (higher precision) or catch more fraud
+              (higher recall). Charts below explain how well it ranks fraud, how trustworthy the scores are, and what happens
+              when we tighten or loosen that cutoff. The goal: reduce missed fraud while keeping analyst workload reasonable.
             </p>
 
             <div class="info-card" style="margin-top:.4rem;">
@@ -629,8 +629,8 @@ details[open] .caret{transform:rotate(90deg)}
       script:'assets/py/pdf_to_svg.py'
     },
     'cc-fraud-nn':{
-      tabs:['Overview','Code'],
-      defaultTab:'Overview',
+      tabs:['Code'],              // removed Overview
+      defaultTab:'Code',
       script:'assets/py/credit_card_fraud_detection_neural_network.py'
     }
   };
