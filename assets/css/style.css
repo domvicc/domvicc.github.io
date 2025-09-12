@@ -627,11 +627,3 @@ body.projects-page{
   background-repeat:no-repeat;
   background-attachment:fixed;
 }
-      url('/img/bg-1920x1080.webp') type('image/webp') 1.5x,
-      url('/img/bg-2560x1440.webp') type('image/webp') 2x,
-      url('/img/bg-3840x2160.webp') type('image/webp') 3x
-    );
-  }
-}
-
-
