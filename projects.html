@@ -511,51 +511,9 @@ details[open] .caret{transform:rotate(90deg)}
             </div>
 
             <p class="info-title" style="margin:.9rem 0 .4rem;">Model Evaluation Charts</p>
-            <div class="evals">
-              <div class="eval-card">
-                <p class="eval-title">Threshold Tuning – Precision vs Recall</p>
-                <img src="assets/img/cc-fraud/threshold_sweep.png" alt="Precision and recall versus decision threshold curve">
-                <p class="eval-desc">
-                  Shows how increasing the score cutoff raises precision (cleaner alerts) but lowers recall (more missed fraud).
-                  Pick a point that balances missed‑fraud cost vs analyst capacity; start near the precision≈recall bend.
-                </p>
-              </div>
-              <div class="eval-card">
-                <p class="eval-title">ROC Curve</p>
-                <img src="assets/img/cc-fraud/roc_curve.png" alt="ROC curve with high top-left bend">
-                <p class="eval-desc">
-                  Overall discrimination power (AUC 0.9821). Used mainly to compare models; not ideal alone for choosing the final threshold on rare events.
-                </p>
-              </div>
-              <div class="eval-card">
-                <p class="eval-title">Precision–Recall Curve</p>
-                <img src="assets/img/cc-fraud/pr_curve.png" alt="Precision-recall curve for rare fraud detection">
-                <p class="eval-desc">
-                  Focuses on alert quality vs fraud coverage in imbalanced settings. Steep drop region warns where extra alerts add little incremental fraud found.
-                </p>
-              </div>
-              <div class="eval-card">
-                <p class="eval-title">Reliability (Calibration)</p>
-                <img src="assets/img/cc-fraud/calibration.png" alt="Calibration curve comparing predicted to observed fraud rate">
-                <p class="eval-desc">
-                  Near-diagonal + low Brier means probabilities reflect real risk—enabling tiered actions (auto decline, manual review, pass) and cost modeling.
-                </p>
-              </div>
-              <div class="eval-card">
-                <p class="eval-title">Confusion Matrix (Normalized)</p>
-                <img src="assets/img/cc-fraud/confusion_matrix.png" alt="Normalized confusion matrix at 0.50 threshold">
-                <p class="eval-desc">
-                  High recall with low precision at default 0.50 illustrates imbalance impact. Adjust threshold upward if analyst workload is strained.
-                </p>
-              </div>
-              <div class="eval-card">
-                <p class="eval-title">Risk Map (UMAP Embedding)</p>
-                <img src="assets/img/cc-fraud/risk_map.png" alt="UMAP embedding colored by predicted fraud probability">
-                <p class="eval-desc">
-                  Clusters highlight concentrated high‑risk behavior patterns (potential rings / device groupings) for deeper feature engineering or rule layering.
-                </p>
-              </div>
-            </div>
+            <p class="eval-desc" style="margin:0 0 .6rem;">
+              View the full interactive gallery in the Charts tab (right panel). Each shows how the model performs and how to tune alert volume vs fraud catch.
+            </p>
 
             <div class="info-card" style="margin-top:1rem;">
               <p class="info-title" style="margin:0 0 .35rem;">Artifacts</p>
@@ -629,9 +587,47 @@ details[open] .caret{transform:rotate(90deg)}
       script:'assets/py/pdf_to_svg.py'
     },
     'cc-fraud-nn':{
-      tabs:['Code'],              // removed Overview
+      tabs:['Code','Charts'],          // added Charts tab
       defaultTab:'Code',
-      script:'assets/py/credit_card_fraud_detection_neural_network.py'
+      script:'assets/py/credit_card_fraud_detection_neural_network.py',
+      charts:[
+        {
+          file:'threshold_sweep.png',
+          title:'Threshold Tuning – Precision vs Recall',
+          alt:'Precision and recall versus decision threshold curve',
+          desc:'How tightening the cutoff trades fewer false alerts for more missed fraud. Start near the bend where precision and recall separate.'
+        },
+        {
+          file:'roc_curve.png',
+            title:'ROC Curve',
+            alt:'ROC curve with high top-left bend',
+            desc:'Shows overall separation power (AUC 0.9821). Good for comparing models; not ideal alone for threshold choice on rare events.'
+        },
+        {
+          file:'pr_curve.png',
+          title:'Precision–Recall Curve',
+          alt:'Precision-recall curve for rare fraud detection',
+          desc:'Focuses on alert quality vs fraud coverage. Falling edge shows diminishing returns from lowering the threshold further.'
+        },
+        {
+          file:'calibration.png',
+          title:'Reliability (Calibration)',
+          alt:'Calibration curve comparing predicted to observed fraud rate',
+          desc:'Near-diagonal + low Brier score → scores approximate true risk; supports tiered actions and cost optimization.'
+        },
+        {
+          file:'confusion_matrix.png',
+          title:'Confusion Matrix (Normalized)',
+          alt:'Normalized confusion matrix at 0.50 threshold',
+          desc:'High recall but low precision at default 0.50 due to rarity. Raise threshold if analyst queue is overloaded.'
+        },
+        {
+          file:'risk_map.png',
+          title:'Risk Map (UMAP Embedding)',
+          alt:'UMAP embedding colored by predicted fraud probability',
+          desc:'Clusters of high scores hint at coordinated behavior/device groupings for deeper rules or feature engineering.'
+        }
+      ]
     }
   };
 
@@ -670,6 +666,33 @@ details[open] .caret{transform:rotate(90deg)}
     stage.appendChild(img);
   }
 
+  function renderCharts(stage,cfg){
+    stage.innerHTML='';
+    const wrap=document.createElement('div');
+    wrap.style.padding='12px';
+    const heading=document.createElement('h3');
+    heading.textContent='Model Evaluation Charts';
+    heading.style.margin='0 0 12px';
+    heading.style.fontSize='1.1rem';
+    wrap.appendChild(heading);
+
+    const gallery=document.createElement('div');
+    gallery.className='evals';
+    cfg.charts.forEach(c=>{
+      const card=document.createElement('div');
+      card.className='eval-card';
+      const t=document.createElement('p'); t.className='eval-title'; t.textContent=c.title;
+      const img=document.createElement('img');
+      img.src='assets/img/cc-fraud/'+c.file;
+      img.alt=c.alt;
+      const d=document.createElement('p'); d.className='eval-desc'; d.textContent=c.desc;
+      card.appendChild(t); card.appendChild(img); card.appendChild(d);
+      gallery.appendChild(card);
+    });
+    wrap.appendChild(gallery);
+    stage.appendChild(wrap);
+  }
+
   function renderTab(project,label){
     stage.innerHTML='';
     const cfg=PROJECTS[project];
@@ -682,6 +705,8 @@ details[open] .caret{transform:rotate(90deg)}
         pre.textContent=txt;
         stage.appendChild(pre);
       }).catch(()=>{ stage.textContent='script failed to load'; });
+    } else if(label==='Charts' && cfg.charts){
+      renderCharts(stage,cfg);
     } else {
       const ph=document.createElement('div');
       ph.className='placeholder';
