@@ -510,13 +510,19 @@ details[open] .caret{transform:rotate(90deg)}
               </div>
             </div>
 
+            <p class="info-title" style="margin:.9rem 0 .4rem;">Model Evaluation Charts</p>
+            <p class="eval-desc" style="margin:0 0 .6rem;">
+              View the full interactive gallery in the Charts tab (right panel). Each shows how the model performs and how to tune alert volume vs fraud catch.
+            </p>
+
             <div class="info-card" style="margin-top:1rem;">
               <p class="info-title" style="margin:0 0 .35rem;">Artifacts</p>
               <div class="links">
                 <a class="btn ghost" href="assets/py/credit_card_fraud_detection_neural_network.py" download>Download Code</a>
               </div>
               <p class="eval-desc" style="margin-top:.6rem;">
-                Evaluation visuals load automatically on the right. PNG source path: assets/img/cc-fraud/.
+                Place PNGs at: assets/img/cc-fraud/ (filenames: threshold_sweep.png, roc_curve.png, pr_curve.png,
+                calibration.png, confusion_matrix.png, risk_map.png).
               </p>
             </div>
           </div>
@@ -568,18 +574,59 @@ details[open] .caret{transform:rotate(90deg)}
   const stage=document.getElementById('wb-stage');
   const tabsBar=document.getElementById('wb-tabs');
 
+  // project configuration
   const PROJECTS={
-    dgai:{ tabs:['Overview','Architecture'], defaultTab:'Architecture', svg:'assets/svg/DGAI.svg' },
-    'pdf-svg-util':{ tabs:['Overview','Code'], defaultTab:'Code', script:'assets/py/pdf_to_svg.py' },
+    dgai:{
+      tabs:['Overview','Architecture'],
+      defaultTab:'Architecture',
+      svg:'assets/svg/DGAI.svg'
+    },
+    'pdf-svg-util':{
+      tabs:['Overview','Code'],
+      defaultTab:'Code',
+      script:'assets/py/pdf_to_svg.py'
+    },
     'cc-fraud-nn':{
-      tabs:[],                      // no tabs; gallery auto-renders
+      tabs:['Code','Charts'],          // added Charts tab
+      defaultTab:'Code',
+      script:'assets/py/credit_card_fraud_detection_neural_network.py',
       charts:[
-        {file:'threshold_sweep.png', title:'Threshold Tuning – Precision vs Recall', alt:'Precision and recall versus decision threshold curve', desc:'How tightening the cutoff trades fewer false alerts for more missed fraud.'},
-        {file:'roc_curve.png', title:'ROC Curve', alt:'ROC curve', desc:'Overall separation power (AUC 0.9821).'},
-        {file:'pr_curve.png', title:'Precision–Recall Curve', alt:'Precision-recall curve', desc:'Alert quality vs fraud coverage; guides threshold selection.'},
-        {file:'calibration.png', title:'Reliability (Calibration)', alt:'Calibration curve', desc:'Probabilities track real risk (low Brier) enabling tiered actions.'},
-        {file:'confusion_matrix.png', title:'Confusion Matrix (Normalized)', alt:'Normalized confusion matrix', desc:'High recall / low precision at 0.50; adjust threshold to control workload.'},
-        {file:'risk_map.png', title:'Risk Map (UMAP Embedding)', alt:'UMAP embedding risk map', desc:'High‑risk clusters surface coordinated behavior or feature gaps.'}
+        {
+          file:'threshold_sweep.png',
+          title:'Threshold Tuning – Precision vs Recall',
+          alt:'Precision and recall versus decision threshold curve',
+          desc:'How tightening the cutoff trades fewer false alerts for more missed fraud. Start near the bend where precision and recall separate.'
+        },
+        {
+          file:'roc_curve.png',
+            title:'ROC Curve',
+            alt:'ROC curve with high top-left bend',
+            desc:'Shows overall separation power (AUC 0.9821). Good for comparing models; not ideal alone for threshold choice on rare events.'
+        },
+        {
+          file:'pr_curve.png',
+          title:'Precision–Recall Curve',
+          alt:'Precision-recall curve for rare fraud detection',
+          desc:'Focuses on alert quality vs fraud coverage. Falling edge shows diminishing returns from lowering the threshold further.'
+        },
+        {
+          file:'calibration.png',
+          title:'Reliability (Calibration)',
+          alt:'Calibration curve comparing predicted to observed fraud rate',
+          desc:'Near-diagonal + low Brier score → scores approximate true risk; supports tiered actions and cost optimization.'
+        },
+        {
+          file:'confusion_matrix.png',
+          title:'Confusion Matrix (Normalized)',
+          alt:'Normalized confusion matrix at 0.50 threshold',
+          desc:'High recall but low precision at default 0.50 due to rarity. Raise threshold if analyst queue is overloaded.'
+        },
+        {
+          file:'risk_map.png',
+          title:'Risk Map (UMAP Embedding)',
+          alt:'UMAP embedding colored by predicted fraud probability',
+          desc:'Clusters of high scores hint at coordinated behavior/device groupings for deeper rules or feature engineering.'
+        }
       ]
     }
   };
@@ -628,15 +675,22 @@ details[open] .caret{transform:rotate(90deg)}
     heading.style.margin='0 0 12px';
     heading.style.fontSize='1.1rem';
     wrap.appendChild(heading);
-    const gallery=document.createElement('div'); gallery.className='evals';
+
+    const gallery=document.createElement('div');
+    gallery.className='evals';
     cfg.charts.forEach(c=>{
-      const card=document.createElement('div'); card.className='eval-card';
+      const card=document.createElement('div');
+      card.className='eval-card';
       const t=document.createElement('p'); t.className='eval-title'; t.textContent=c.title;
-      const img=document.createElement('img'); img.src='assets/img/cc-fraud/'+c.file; img.alt=c.alt;
+      const img=document.createElement('img');
+      img.src='assets/img/cc-fraud/'+c.file;
+      img.alt=c.alt;
       const d=document.createElement('p'); d.className='eval-desc'; d.textContent=c.desc;
-      card.appendChild(t); card.appendChild(img); card.appendChild(d); gallery.appendChild(card);
+      card.appendChild(t); card.appendChild(img); card.appendChild(d);
+      gallery.appendChild(card);
     });
-    wrap.appendChild(gallery); stage.appendChild(wrap);
+    wrap.appendChild(gallery);
+    stage.appendChild(wrap);
   }
 
   function renderTab(project,label){
@@ -648,75 +702,21 @@ details[open] .caret{transform:rotate(90deg)}
       fetch(cfg.script).then(r=>r.text()).then(txt=>{
         const pre=document.createElement('pre');
         Object.assign(pre.style,{margin:0,padding:'14px',background:'#0a0f1e',color:'#fff',fontSize:'.8rem',lineHeight:'1.4',overflow:'auto',height:'100%'});
-        pre.textContent=txt; stage.appendChild(pre);
+        pre.textContent=txt;
+        stage.appendChild(pre);
       }).catch(()=>{ stage.textContent='script failed to load'; });
+    } else if(label==='Charts' && cfg.charts){
+      renderCharts(stage,cfg);
     } else {
-      const ph=document.createElement('div'); ph.className='placeholder'; ph.textContent='content for '+label+' goes here.'; stage.appendChild(ph);
+      const ph=document.createElement('div');
+      ph.className='placeholder';
+      ph.textContent='content for '+label+' goes here.';
+      stage.appendChild(ph);
     }
   }
 
   function buildTabs(project){
     tabsBar.innerHTML='';
-    const cfg=PROJECTS[project];
-    if(!cfg.tabs.length){
-      tabsBar.style.display='none';
-      // auto gallery (or other default) for tabless project
-      if(cfg.charts) renderCharts(stage,cfg); else if(cfg.script) renderTab(project,'Code');
-      return;
-    }
-    tabsBar.style.display='flex';
-    cfg.tabs.forEach(name=>{
-      const b=document.createElement('button');
-      b.className='tab'; b.textContent=name; b.setAttribute('aria-selected','false');
-      b.addEventListener('click',()=>{
-        [...tabsBar.querySelectorAll('.tab')].forEach(t=>t.setAttribute('aria-selected','false'));
-        b.setAttribute('aria-selected','true'); renderTab(project,name);
-      });
-      tabsBar.appendChild(b);
-    });
-  }
-
-  function showProject(id){
-    document.querySelectorAll('.project-details').forEach(sec=>{
-      sec.classList.toggle('active',sec.dataset.project===id);
-    });
-    document.querySelectorAll('.tree-item').forEach(btn=>{
-      btn.classList.toggle('active',btn.dataset.id===id);
-    });
-    buildTabs(id);
-    const cfg=PROJECTS[id];
-    if(cfg.tabs.length){
-      const def=cfg.defaultTab||cfg.tabs[0];
-      const btn=[...tabsBar.querySelectorAll('.tab')].find(t=>t.textContent===def)||tabsBar.querySelector('.tab');
-      if(btn) btn.click();
-    }
-  }
-
-  document.querySelectorAll('.tree-item').forEach(btn=>{
-    btn.addEventListener('click',()=>{
-      const id=btn.dataset.id;
-      if(PROJECTS[id]) showProject(id);
-    });
-  });
-
-  showProject('dgai');
-})();
-  </script>
-  <script>
-    const zoomContainer = document.querySelector('.zoom-container');
-    const zoomImage = zoomContainer ? zoomContainer.querySelector('.zoom-image') : null;
-    if (zoomContainer && zoomImage) {
-      let scale = 1;
-      zoomContainer.addEventListener('wheel', function(e) {
-        e.preventDefault();
-        if (e.deltaY < 0) { scale *= 1.1; } else { scale /= 1.1; }
-        scale = Math.min(Math.max(0.5, scale), 5);
-        zoomImage.style.transform = `scale(${scale})`;
-      });
-    }
-  </script>
-</body>
-</html>
     PROJECTS[project].tabs.forEach(name=>{
       const b=document.createElement('button');
       b.className='tab';
