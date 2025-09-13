@@ -67,7 +67,7 @@ export function renderCharts(stage,cfg){
     const card=document.createElement('div');
     card.className='eval-card';
     const t=document.createElement('p'); t.className='eval-title'; t.textContent=c.title;
-    const img=document.createElement('img'); img.src='assets/img/cc-fraud/'+c.file; img.alt=c.alt||c.title;
+    const img=document.createElement('img'); img.src='assets/img/'+c.file; img.alt=c.alt||c.title;
     const d=document.createElement('p'); d.className='eval-desc'; d.textContent=c.desc||'';
     card.appendChild(t); card.appendChild(img); card.appendChild(d);
     gallery.appendChild(card);

@@ -1,17 +1,17 @@
 // assets/js/projects/data.js
 export const PROJECTS={
     dgai:{
-      tabs:['Overview','Architecture'],
+      tabs:['Architecture'],
       defaultTab:'Architecture',
       svg:'assets/svg/DGAI.svg'
     },
     'pdf-svg-util':{
-      tabs:['Overview','Code'],
+      tabs:['Code'],
       defaultTab:'Code',
       script:'assets/py/pdf_to_svg.py'
     },
     'cc-fraud-nn':{
-      tabs:['Code','Charts'],          // added Charts tab
+      tabs:['Charts','Code'],          // added Charts tab
       defaultTab:'Code',
       script:'assets/py/credit_card_fraud_detection_neural_network.py',
       charts:[

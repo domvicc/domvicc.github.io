@@ -12,6 +12,18 @@
   <meta name="theme-color" content="#0b1020" />
   <style>
     /* (section-specific styles removed with boxed stats section) */
+    @media (max-width:640px){
+      .hero-actions{
+        display:flex;            /* ensure flex (override if previously inline/block) */
+        flex-direction:column;   /* stack buttons */
+        align-items:stretch;
+        gap:.6rem;
+      }
+      .hero-actions .btn{
+        width:100%;
+        justify-content:center;
+      }
+    }
   </style>
 </head>
 <body>
@@ -189,4 +201,3 @@
 
 
 
- 
