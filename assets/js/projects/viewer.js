@@ -1,8 +1,8 @@
-// Project Viewer Module (clean)
+// project viewer module (clean)
 
 let _stage, _tabsBar, _projects;
 
-/* ---------- Render Helpers ---------- */
+/* ---------- render helpers ---------- */
 export function renderSvgInline(stage, svgPath){
   stage.innerHTML = '';
   const wrap = document.createElement('div');
@@ -35,7 +35,7 @@ export function renderSvgInline(stage, svgPath){
 
 export function renderPdfInline(stage, pdfPath){
   stage.innerHTML='';
-  const rel=pdfPath.replace(/^assets\//,'')
+  const rel = pdfPath.replace(/^assets\//,'');
   const src='assets/pdfjs/web/viewer.html?file='+encodeURIComponent('../..'+'/'+rel);
   const f=document.createElement('iframe');
   Object.assign(f.style,{position:'absolute',inset:'0',width:'100%',height:'100%',border:'0',background:'#fff'});
@@ -76,7 +76,7 @@ export function renderCharts(stage,cfg){
   stage.appendChild(wrap);
 }
 
-/* ---------- Tabs / Switching ---------- */
+/* ---------- tabs / switching ---------- */
 function renderTab(projectId,label){
   const cfg=_projects[projectId];
   if(!cfg){ _stage.textContent='Unknown project'; return; }
@@ -150,50 +150,3 @@ export function initProjectViewer({stage,tabsBar,projects,defaultProject}){
 }
 
 export const _debug=()=>({_projects,_stage,_tabsBar});
-  // tabs builder
-  function buildTabs(project){
-    tabsBar.innerHTML = '';
-    const tabs = (PROJECTS[project] && PROJECTS[project].tabs) || [];
-    tabs.forEach(name => {
-      const b = document.createElement('button');
-      b.className = 'tab';
-      b.textContent = name;
-      b.setAttribute('aria-selected','false');
-      b.addEventListener('click', () => {
-        [...tabsBar.querySelectorAll('.tab')].forEach(t => t.setAttribute('aria-selected','false'));
-        b.setAttribute('aria-selected','true');
-        renderTab(project, name);
-      });
-      tabsBar.appendChild(b);
-    });
-  }
-
-  // project switcher
-  function showProject(id){
-    // toggle active details
-    document.querySelectorAll('.project-details').forEach(sec => {
-      sec.classList.toggle('active', sec.dataset.project === id);
-    });
-    // active in tree
-    document.querySelectorAll('.tree-item').forEach(btn => {
-      btn.classList.toggle('active', btn.dataset.id === id);
-    });
-    // tabs + initial tab
-    buildTabs(id);
-    const cfg = PROJECTS[id] || {};
-    const def = cfg.defaultTab || (cfg.tabs && cfg.tabs[0]);
-    const btn = [...tabsBar.querySelectorAll('.tab')].find(t => t.textContent === def) || tabsBar.querySelector('.tab');
-    if(btn){ btn.click(); }
-  }
-
-  // tree click handlers
-  document.querySelectorAll('.tree-item').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const id = btn.dataset.id;
-      if(PROJECTS[id]) showProject(id);
-    });
-  });
-
-  // init
-  if(PROJECTS[defaultProject]) showProject(defaultProject);
-}
