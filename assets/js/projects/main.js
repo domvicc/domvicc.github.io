@@ -16,6 +16,8 @@ const PROJECTS = {
     tabs:['Code','Charts'],
     defaultTab:'Code',
     script:'assets/py/credit_card_fraud_detection_neural_network.py',
+    // Chart file names only; viewer.js composes full path:
+    // assets/img/cc-fraud/<file>
     charts:[
       { file:'threshold_tuning.png', title:'Threshold Tuning – Precision vs Recall', alt:'Precision vs recall by threshold', desc:'Trade-off between alert purity and fraud coverage.' },
       { file:'roc_curve.png', title:'ROC Curve', alt:'ROC curve', desc:'Overall discrimination power (AUC).' },

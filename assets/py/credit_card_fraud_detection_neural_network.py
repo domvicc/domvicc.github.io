@@ -204,16 +204,16 @@ def main():
     print(f"\nrecommended starting threshold by f1: {t:.3f} (precision={pp:.3f}, recall={rr:.3f}, f1={f1:.3f})")
 
     # dump figures to site assets directory (used by front-end)
-    OUTPUT_DIR = "assets/img/cc-fraud"
+    OUTPUT_DIR = "assets/img/cc-fraud"  # viewer.js expects this base path
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
     paths = {
         "confusion": f"{OUTPUT_DIR}/confusion_matrix.png",
         "roc": f"{OUTPUT_DIR}/roc_curve.png",
-        "pr": f"{OUTPUT_DIR}/precision_recall_curve.png",        # was pr_curve.png
-        "threshold": f"{OUTPUT_DIR}/threshold_tuning.png",       # was threshold_sweep.png
-        "calibration": f"{OUTPUT_DIR}/reliability_curve.png",    # was calibration.png
-        "risk": f"{OUTPUT_DIR}/risk_map.png"
+        "pr": f"{OUTPUT_DIR}/precision_recall_curve.png",
+        "threshold": f"{OUTPUT_DIR}/threshold_tuning.png",
+        "calibration": f"{OUTPUT_DIR}/reliability_curve.png",
+        "risk": f"{OUTPUT_DIR}/risk_map.png"     # risk_map not in charts list currently (optional)
     }
 
     plot_confusion(cm, paths["confusion"])
