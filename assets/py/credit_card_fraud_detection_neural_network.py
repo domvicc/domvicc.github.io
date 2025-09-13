@@ -203,13 +203,24 @@ def main():
     t, pp, rr, f1 = best_threshold_by_f1(ys, p)
     print(f"\nrecommended starting threshold by f1: {t:.3f} (precision={pp:.3f}, recall={rr:.3f}, f1={f1:.3f})")
 
-    # dump figures to ./figures (keep names stable)
-    os.makedirs("figures", exist_ok=True)
-    plot_confusion(cm, "figures/confusion_matrix.png")
-    plot_roc_curve(ys, p, "figures/roc_curve.png")
-    plot_pr_curve(ys, p, "figures/pr_curve.png")
-    plot_threshold_sweep(ys, p, "figures/threshold_sweep.png")
-    plot_calibration(ys, p, "figures/calibration.png")
+    # dump figures to site assets directory (used by front-end)
+    OUTPUT_DIR = "assets/img/cc-fraud"
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+    paths = {
+        "confusion": f"{OUTPUT_DIR}/confusion_matrix.png",
+        "roc": f"{OUTPUT_DIR}/roc_curve.png",
+        "pr": f"{OUTPUT_DIR}/precision_recall_curve.png",        # was pr_curve.png
+        "threshold": f"{OUTPUT_DIR}/threshold_tuning.png",       # was threshold_sweep.png
+        "calibration": f"{OUTPUT_DIR}/reliability_curve.png",    # was calibration.png
+        "risk": f"{OUTPUT_DIR}/risk_map.png"
+    }
+
+    plot_confusion(cm, paths["confusion"])
+    plot_roc_curve(ys, p, paths["roc"])
+    plot_pr_curve(ys, p, paths["pr"])
+    plot_threshold_sweep(ys, p, paths["threshold"])
+    plot_calibration(ys, p, paths["calibration"])
 
     # risk map using penultimate (last hidden Dense) layer embeddings (nice structure)
     try:
@@ -230,7 +241,11 @@ def main():
         print(f"embedding extraction failed ({e}); using scaled features instead.")
         Z = Xa
     pa = model.predict(Xa, verbose=0).flatten()
-    plot_risk_map_2d(Z, ya, pa, "figures/risk_map.png")
+    plot_risk_map_2d(Z, ya, pa, paths["risk"])
+
+    print("\nSaved evaluation artifacts:")
+    for k,v in paths.items():
+        print(f" - {k:11s}: {v}")
 
     # quick human notes to steer usage (print only, keep it simple)
     print("\n==== interpret these visuals ====")
