@@ -27,51 +27,7 @@ function renderTab(project,label){
     }
   }
 
-  function buildTabs(project){
-    tabsBar.innerHTML='';
-    PROJECTS[project].tabs.forEach(name=>{
-      const b=document.createElement('button');
-      b.className='tab';
-      b.textContent=name;
-      b.setAttribute('aria-selected','false');
-      b.addEventListener('click',()=>{
-        [...tabsBar.querySelectorAll('.tab')].forEach(t=>t.setAttribute('aria-selected','false'));
-        b.setAttribute('aria-selected','true');
-        renderTab(project,name);
-      });
-      tabsBar.appendChild(b);
-    });
-  }
-
-  function showProject(id){
-    // toggle active details
-    document.querySelectorAll('.project-details').forEach(sec=>{
-      sec.classList.toggle('active',sec.dataset.project===id);
-    });
-    // active in tree
-    document.querySelectorAll('.tree-item').forEach(btn=>{
-      btn.classList.toggle('active',btn.dataset.id===id);
-    });
-    // tabs + initial tab
-    buildTabs(id);
-    const cfg=PROJECTS[id];
-    const def=cfg.defaultTab||cfg.tabs[0];
-    const btn=[...tabsBar.querySelectorAll('.tab')].find(t=>t.textContent===def) || tabsBar.querySelector('.tab');
-    if(btn){ btn.click(); }
-  }
-
-  // tree click handlers
-  document.querySelectorAll('.tree-item').forEach(btn=>{
-    btn.addEventListener('click',()=>{
-      const id=btn.dataset.id;
-      if(PROJECTS[id]) showProject(id);
-    });
-  });
-
-  // init
-  showProject('dgai');
-}
-
+  
 function buildTabs(project){
     tabsBar.innerHTML='';
     PROJECTS[project].tabs.forEach(name=>{
@@ -88,62 +44,10 @@ function buildTabs(project){
     });
   }
 
-  function showProject(id){
-    // toggle active details
-    document.querySelectorAll('.project-details').forEach(sec=>{
-      sec.classList.toggle('active',sec.dataset.project===id);
-    });
-    // active in tree
-    document.querySelectorAll('.tree-item').forEach(btn=>{
-      btn.classList.toggle('active',btn.dataset.id===id);
-    });
-    // tabs + initial tab
-    buildTabs(id);
-    const cfg=PROJECTS[id];
-    const def=cfg.defaultTab||cfg.tabs[0];
-    const btn=[...tabsBar.querySelectorAll('.tab')].find(t=>t.textContent===def) || tabsBar.querySelector('.tab');
-    if(btn){ btn.click(); }
-  }
-
-  // tree click handlers
-  document.querySelectorAll('.tree-item').forEach(btn=>{
-    btn.addEventListener('click',()=>{
-      const id=btn.dataset.id;
-      if(PROJECTS[id]) showProject(id);
-    });
-  });
-
-  // init
-  showProject('dgai');
-}
-
+  
 function showProject(id){
     // toggle active details
     document.querySelectorAll('.project-details').forEach(sec=>{
       sec.classList.toggle('active',sec.dataset.project===id);
-    });
-    // active in tree
-    document.querySelectorAll('.tree-item').forEach(btn=>{
-      btn.classList.toggle('active',btn.dataset.id===id);
-    });
-    // tabs + initial tab
-    buildTabs(id);
-    const cfg=PROJECTS[id];
-    const def=cfg.defaultTab||cfg.tabs[0];
-    const btn=[...tabsBar.querySelectorAll('.tab')].find(t=>t.textContent===def) || tabsBar.querySelector('.tab');
-    if(btn){ btn.click(); }
-  }
-
-  // tree click handlers
-  document.querySelectorAll('.tree-item').forEach(btn=>{
-    btn.addEventListener('click',()=>{
-      const id=btn.dataset.id;
-      if(PROJECTS[id]) showProject(id);
-    });
-  });
-
-  // init
-  showProject('dgai');
-}
-
+    }
 export { buildTabs, renderTab, showProject };
