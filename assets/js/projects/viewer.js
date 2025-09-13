@@ -150,11 +150,6 @@ function buildTabs(projectId){
     }
     return;
   }
-  // --- Reorder: Charts first, Code second (best practice centralization) ---
-  if(cfg.tabs.includes('Charts') && cfg.tabs.includes('Code')){
-    const rest = cfg.tabs.filter(t=> t!=='Charts' && t!=='Code');
-    cfg.tabs = ['Charts','Code', ...rest];
-  }
   _tabsBar.style.display='flex';
   cfg.tabs.forEach(name=>{
     const b=document.createElement('button');
@@ -178,7 +173,7 @@ export function showProject(id){
   buildTabs(id);
   const cfg=_projects[id];
   if(cfg && cfg.tabs && cfg.tabs.length){
-    const def=cfg.defaultTab || cfg.tabs[0]; // Charts will now be first if present
+    const def=cfg.defaultTab||cfg.tabs[0];
     const btn=[..._tabsBar.querySelectorAll('.tab')].find(t=>t.textContent===def) || _tabsBar.querySelector('.tab');
     if(btn) btn.click();
   }
@@ -193,6 +188,11 @@ export function initProjectViewer({stage,tabsBar,projects,defaultProject}){
       if(_projects[id]) showProject(id);
     });
   });
+  const start = (defaultProject && _projects[defaultProject]) ? defaultProject : Object.keys(_projects)[0];
+  if(start) showProject(start);
+}
+
+export const _debug=()=>({_projects,_stage,_tabsBar});
   const start = (defaultProject && _projects[defaultProject]) ? defaultProject : Object.keys(_projects)[0];
   if(start) showProject(start);
 }

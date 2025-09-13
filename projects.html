@@ -425,5 +425,29 @@
   </footer>
   <script src="assets/js/helpers/nav.js" defer></script>
   <script type="module" src="assets/js/projects/main.js"></script>
-  </body>
+  <!-- Reorder workbench tabs: make Charts first & active (restored) -->
+  <script>
+    (function () {
+      const tabsEl = document.getElementById('wb-tabs');
+      if (!tabsEl) return;
+      function applyOrder() {
+        const tabs = Array.from(tabsEl.querySelectorAll('button.tab'));
+        if (tabs.length < 2) return;
+        const charts = tabs.find(b => /charts/i.test(b.textContent.trim()));
+        const code = tabs.find(b => /code/i.test(b.textContent.trim()));
+        if (charts && code) {
+          if (charts.nextSibling !== code) {
+            tabsEl.insertBefore(charts, code);
+          }
+          if (charts.getAttribute('aria-selected') !== 'true') {
+            charts.click();
+          }
+        }
+      }
+      const mo = new MutationObserver(applyOrder);
+      mo.observe(tabsEl, { childList: true });
+      applyOrder();
+    })();
+  </script>
+</body>
 </html>
