@@ -15,7 +15,7 @@ export function renderSvgInline(stage, svgPath){
     .then(txt=>{
       wrap.innerHTML = txt;
       const svg = wrap.querySelector('svg');
-      if(!svg){ wrap.textContent='SVG failed to load'; return; }
+      if(!svg){ wrap.textContent='svg failed to load'; return; }
       svg.style.transformOrigin='0 0';
       let scale=1,x=0,y=0,drag=false,lx=0,ly=0;
       const apply=()=> svg.style.transform=`translate(${x}px,${y}px) scale(${scale})`;
@@ -30,7 +30,7 @@ export function renderSvgInline(stage, svgPath){
       wrap.addEventListener('dblclick',()=>{scale=1;x=0;y=0;apply();});
       apply();
     })
-    .catch(()=>{ wrap.textContent='SVG failed to load'; });
+    .catch(()=>{ wrap.textContent='svg failed to load'; });
 }
 
 export function renderPdfInline(stage, pdfPath){
@@ -58,7 +58,7 @@ export function renderCharts(stage,cfg){
   const wrap=document.createElement('div');
   wrap.style.padding='12px';
   const h=document.createElement('h3');
-  h.textContent='Model Evaluation Charts';
+  h.textContent='model evaluation charts';
   h.style.margin='0 0 12px'; h.style.fontSize='1.05rem';
   wrap.appendChild(h);
   const gallery=document.createElement('div');
@@ -79,7 +79,7 @@ export function renderCharts(stage,cfg){
 /* ---------- tabs / switching ---------- */
 function renderCodeBox(projectId){
   const cfg=_projects[projectId];
-  if(!cfg?.script){ _stage.innerHTML='<div class="placeholder">No code available.</div>'; return; }
+  if(!cfg?.script){ _stage.innerHTML='<div class="placeholder">no code available.</div>'; return; }
   _stage.innerHTML='';
   const box=document.createElement('div');
   box.className='code-box';
@@ -93,7 +93,7 @@ function renderCodeBox(projectId){
   const copyBtn=document.createElement('button');
   copyBtn.type='button';
   copyBtn.className='copy-btn';
-  copyBtn.textContent='Copy';
+  copyBtn.textContent='copy';
   actions.appendChild(copyBtn);
   header.appendChild(actions);
   box.appendChild(header);
@@ -121,20 +121,20 @@ function renderCodeBox(projectId){
   copyBtn.addEventListener('click',()=>{
     const raw=[...code.querySelectorAll('span')].map(s=>s.textContent).join('\n');
     navigator.clipboard.writeText(raw).then(()=>{
-      copyBtn.textContent='Copied';
+      copyBtn.textContent='copied';
       box.classList.add('copy-ok');
-      setTimeout(()=>{copyBtn.textContent='Copy';box.classList.remove('copy-ok');},1600);
+      setTimeout(()=>{copyBtn.textContent='copy';box.classList.remove('copy-ok');},1600);
     });
   });
 }
 
 function renderTab(projectId,label){
   const cfg=_projects[projectId];
-  if(!cfg){ _stage.textContent='Unknown project'; return; }
+  if(!cfg){ _stage.textContent='unknown project'; return; }
   if(label==='Architecture' && cfg.svg) return renderAutoInline(_stage,cfg.svg);
   if(label==='Charts' && cfg.charts) return renderCharts(_stage,cfg);
-  if(label==='Code' && cfg.script) return renderCodeBox(projectId); // <— replaced simple pre
-  _stage.innerHTML='<div class="placeholder">No content for '+label+'</div>';
+  if(label==='Code' && cfg.script) return renderCodeBox(projectId);
+  _stage.innerHTML='<div class="placeholder">no content for '+label+'</div>';
 }
 
 function buildTabs(projectId){
@@ -146,7 +146,7 @@ function buildTabs(projectId){
       if(cfg.charts) renderCharts(_stage,cfg);
       else if(cfg.script) renderTab(projectId,'Code');
       else if(cfg.svg) renderAutoInline(_stage,cfg.svg);
-      else _stage.innerHTML='<div class="placeholder">No content defined.</div>';
+      else _stage.innerHTML='<div class="placeholder">no content defined.</div>';
     }
     return;
   }
@@ -188,11 +188,6 @@ export function initProjectViewer({stage,tabsBar,projects,defaultProject}){
       if(_projects[id]) showProject(id);
     });
   });
-  const start = (defaultProject && _projects[defaultProject]) ? defaultProject : Object.keys(_projects)[0];
-  if(start) showProject(start);
-}
-
-export const _debug=()=>({_projects,_stage,_tabsBar});
   const start = (defaultProject && _projects[defaultProject]) ? defaultProject : Object.keys(_projects)[0];
   if(start) showProject(start);
 }
