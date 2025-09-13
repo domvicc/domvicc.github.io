@@ -108,7 +108,7 @@
         <!-- details pane (now multi-project) -->
         <div class="details">
           <!-- DomGuardianAI project -->
-          <div class="project-details" data-project="dgai">
+          <div class="project-details active" data-project="dgai">
             <p class="kicker">Azure • Lakehouse • ML</p>
             <h2 class="title">DomGuardianAI</h2>
             <p class="subtitle">End-to-end Data Lakehouse with orchestration, analytics, and MLOps.</p>
@@ -309,7 +309,12 @@
         <!-- viewer pane -->
         <div class="workbench">
           <div class="wb-tabs" id="wb-tabs"></div>
-          <div class="wb-stage" id="wb-stage" data-project="dgai" data-svg="assets/svg/DGAI.svg"></div>
+          <div class="wb-stage" id="wb-stage">
+            <div class="placeholder" style="padding:1.2rem;font-size:.9rem;color:var(--muted);">
+              Loading project viewer…
+              <noscript>Enable JavaScript to view architecture diagrams and code.</noscript>
+            </div>
+          </div>
         </div>
 
       </section>
