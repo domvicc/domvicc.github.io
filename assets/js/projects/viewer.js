@@ -77,19 +77,62 @@ export function renderCharts(stage,cfg){
 }
 
 /* ---------- tabs / switching ---------- */
+function renderCodeBox(projectId){
+  const cfg=_projects[projectId];
+  if(!cfg?.script){ _stage.innerHTML='<div class="placeholder">No code available.</div>'; return; }
+  _stage.innerHTML='';
+  const box=document.createElement('div');
+  box.className='code-box';
+
+  const header=document.createElement('div');
+  header.className='code-box-header';
+  const fname=cfg.script.split('/').pop();
+  header.innerHTML=`<span class="file-name">${fname}</span>`;
+  const actions=document.createElement('div');
+  actions.className='code-box-actions';
+  const copyBtn=document.createElement('button');
+  copyBtn.type='button';
+  copyBtn.className='copy-btn';
+  copyBtn.textContent='Copy';
+  actions.appendChild(copyBtn);
+  header.appendChild(actions);
+  box.appendChild(header);
+
+  const pre=document.createElement('pre');
+  const code=document.createElement('code');
+  pre.appendChild(code);
+  box.appendChild(pre);
+  _stage.appendChild(box);
+
+  fetch(cfg.script).then(r=>r.text()).then(txt=>{
+    const lines=txt.replace(/\r\n?/g,'\n').split('\n');
+    const frag=document.createDocumentFragment();
+    lines.forEach(line=>{
+      const span=document.createElement('span');
+      // show a space if line empty so line height remains
+      span.textContent=line.length?line:' ';
+      frag.appendChild(span);
+    });
+    code.appendChild(frag);
+  }).catch(()=>{
+    code.innerHTML='/* failed to load script */';
+  });
+
+  copyBtn.addEventListener('click',()=>{
+    const raw=[...code.querySelectorAll('span')].map(s=>s.textContent).join('\n');
+    navigator.clipboard.writeText(raw).then(()=>{
+      copyBtn.textContent='Copied';
+      box.classList.add('copy-ok');
+      setTimeout(()=>{copyBtn.textContent='Copy';box.classList.remove('copy-ok');},1600);
+    });
+  });
+}
+
 function renderTab(projectId,label){
   const cfg=_projects[projectId];
   if(!cfg){ _stage.textContent='Unknown project'; return; }
   if(label==='Architecture' && cfg.svg) return renderAutoInline(_stage,cfg.svg);
-  if(label==='Code' && cfg.script){
-    _stage.innerHTML='';
-    fetch(cfg.script).then(r=>r.text()).then(txt=>{
-      const pre=document.createElement('pre');
-      Object.assign(pre.style,{margin:0,padding:'14px',background:'#0a0f1e',color:'#fff',fontSize:'.8rem',lineHeight:'1.4',overflow:'auto',height:'100%'});
-      pre.textContent=txt; _stage.appendChild(pre);
-    }).catch(()=>{ _stage.textContent='Script failed to load'; });
-    return;
-  }
+  if(label==='Code' && cfg.script) return renderCodeBox(projectId); // <— replaced simple pre
   if(label==='Charts' && cfg.charts) return renderCharts(_stage,cfg);
   _stage.innerHTML='<div class="placeholder">No content for '+label+'</div>';
 }
