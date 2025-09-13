@@ -423,40 +423,7 @@
       </div>
     </div>
   </footer>
-
-  
-  
   <script src="assets/js/helpers/nav.js" defer></script>
   <script type="module" src="assets/js/projects/main.js"></script>
-  <!-- Reorder workbench tabs: make Charts first & active -->
-  <script>
-    (function () {
-      const tabsEl = document.getElementById('wb-tabs');
-      if (!tabsEl) return;
-
-      function applyOrder() {
-        const tabs = Array.from(tabsEl.querySelectorAll('button.tab'));
-        if (tabs.length < 2) return;
-        const charts = tabs.find(b => /charts/i.test(b.textContent.trim()));
-        const code = tabs.find(b => /code/i.test(b.textContent.trim()));
-        if (charts && code) {
-          // Move Charts before Code if not already
-            if (charts.nextSibling !== code) {
-              tabsEl.insertBefore(charts, code);
-            }
-          // Activate Charts if not selected
-          if (charts.getAttribute('aria-selected') !== 'true') {
-            charts.click(); // leverage existing handler
-          }
-        }
-      }
-
-      // Observe for dynamic tab creation
-      const mo = new MutationObserver(applyOrder);
-      mo.observe(tabsEl, { childList: true });
-      // Also try immediately
-      applyOrder();
-    })();
-  </script>
-</body>
+  </body>
 </html>
