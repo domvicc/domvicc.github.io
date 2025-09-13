@@ -203,17 +203,16 @@ def main():
     t, pp, rr, f1 = best_threshold_by_f1(ys, p)
     print(f"\nrecommended starting threshold by f1: {t:.3f} (precision={pp:.3f}, recall={rr:.3f}, f1={f1:.3f})")
 
-    # dump figures to site assets directory (used by front-end)
-    OUTPUT_DIR = "assets/img/cc-fraud"  # viewer.js expects this base path
+    # dump figures to site assets directory (front-end viewer prefixes assets/img/cc-fraud/)
+    OUTPUT_DIR = "assets/img/"  # ensure this matches viewer.js expectation
     os.makedirs(OUTPUT_DIR, exist_ok=True)
-
     paths = {
         "confusion": f"{OUTPUT_DIR}/confusion_matrix.png",
         "roc": f"{OUTPUT_DIR}/roc_curve.png",
         "pr": f"{OUTPUT_DIR}/precision_recall_curve.png",
         "threshold": f"{OUTPUT_DIR}/threshold_tuning.png",
-        "calibration": f"{OUTPUT_DIR}/reliability_curve.png",
-        "risk": f"{OUTPUT_DIR}/risk_map.png"     # risk_map not in charts list currently (optional)
+        "calibration": f"{OUTPUT_DIR}/reliability_curve.png"
+        
     }
 
     plot_confusion(cm, paths["confusion"])
@@ -262,4 +261,5 @@ def main():
     print("- pair with rules/graphs (shared ip/device/merchant) to cut false hits")
 
 if __name__ == "__main__":
+    main()
     main()
