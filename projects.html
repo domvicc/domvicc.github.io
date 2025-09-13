@@ -9,6 +9,25 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="assets/css/projects.css" />
+  <style>
+    /* Overrides: make project directory non-floating */
+    .directory{
+      position:static !important;
+      left:auto; top:auto;
+      width:100%;
+      height:auto;
+      z-index:auto;
+    }
+    .dir-card{
+      box-shadow:none !important;
+    }
+    /* Optional: tighten internal spacing since no shadow */
+    .dir-card .dir-head{background:transparent;}
+    /* Ensure large-screen grid still keeps first column width */
+    @media (min-width:1100px){
+      .app-layout{grid-template-columns:340px 1fr;}
+    }
+  </style>
 </head>
 <body class="force-light projects-page">
   <!-- header (default restored with working links) -->
