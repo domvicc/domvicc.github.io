@@ -17,17 +17,17 @@ const PROJECTS = {
     defaultTab:'Code',
     script:'assets/py/credit_card_fraud_detection_neural_network.py',
     charts:[
-      { file:'threshold_tuning.png', title:'Threshold Tuning – Precision vs Recall', alt:'Precision vs recall threshold curve', desc:'Trade-off between alert purity and fraud coverage.' },
-      { file:'roc_curve.png', title:'ROC Curve', alt:'ROC curve', desc:'Overall separation power (AUC indicator).' },
-      { file:'precision_recall_curve.png', title:'Precision–Recall Curve', alt:'PR curve', desc:'Alert quality vs fraud catch in imbalance.' },
-      { file:'reliability_curve.png', title:'Reliability (Calibration)', alt:'Calibration curve', desc:'Probability trustworthiness (Brier context).' },
-      { file:'confusion_matrix.png', title:'Confusion Matrix (Normalized)', alt:'Normalized confusion matrix', desc:'Recall / precision at current threshold.' },
-      { file:'threshold_tuning.png', title:'Threshold Tuning Focus View', alt:'Focused threshold tuning view', desc:'Operating band sensitivity illustration.' }
+      { file:'threshold_tuning.png', title:'Threshold Tuning – Precision vs Recall', alt:'Precision vs recall by threshold', desc:'Trade-off between alert purity and fraud coverage.' },
+      { file:'roc_curve.png', title:'ROC Curve', alt:'ROC curve', desc:'Overall discrimination power (AUC).' },
+      { file:'precision_recall_curve.png', title:'Precision–Recall Curve', alt:'PR curve', desc:'Alert quality vs fraud catch on imbalanced data.' },
+      { file:'reliability_curve.png', title:'Reliability (Calibration)', alt:'Calibration curve', desc:'How well predicted probabilities match reality.' },
+      { file:'confusion_matrix.png', title:'Confusion Matrix (Normalized)', alt:'Normalized confusion matrix', desc:'Recall / precision snapshot at threshold.' },
+      { file:'threshold_tuning.png', title:'Threshold Tuning Focus View', alt:'Threshold focus view', desc:'Operating band sensitivity illustration.' }
     ]
   }
 };
 
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('DOMContentLoaded', ()=>{
   try{
     initProjectViewer({
       stage: document.getElementById('wb-stage'),
@@ -35,11 +35,11 @@ window.addEventListener('DOMContentLoaded', () => {
       projects: PROJECTS,
       defaultProject: 'dgai'
     });
-  }catch(e){
+  }catch(err){
+    console.error('Viewer init failed', err);
     const stage=document.getElementById('wb-stage');
     if(stage){
-      stage.innerHTML='<div class="placeholder">Failed to initialize project viewer: '+e.message+'</div>';
+      stage.innerHTML='<div class="placeholder">Viewer failed: '+err.message+'</div>';
     }
-    console.error('Project viewer init failed', e);
   }
 });
