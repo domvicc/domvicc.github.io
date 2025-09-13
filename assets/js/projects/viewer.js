@@ -132,8 +132,8 @@ function renderTab(projectId,label){
   const cfg=_projects[projectId];
   if(!cfg){ _stage.textContent='Unknown project'; return; }
   if(label==='Architecture' && cfg.svg) return renderAutoInline(_stage,cfg.svg);
-  if(label==='Code' && cfg.script) return renderCodeBox(projectId); // <— replaced simple pre
   if(label==='Charts' && cfg.charts) return renderCharts(_stage,cfg);
+  if(label==='Code' && cfg.script) return renderCodeBox(projectId); // <— replaced simple pre
   _stage.innerHTML='<div class="placeholder">No content for '+label+'</div>';
 }
 
