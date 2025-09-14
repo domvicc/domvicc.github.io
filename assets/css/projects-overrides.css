@@ -1,9 +1,23 @@
 /* page-specific overrides for projects.html (merged) */
 
-/* workspace now has workbench first in markup; set columns (left wider media) */
-.workspace{grid-template-columns:minmax(600px,1fr) 1fr;}
+/* explicit layout: force details (info) left and workbench (viewer) right via grid areas,
+   regardless of DOM source order; stack vertically on narrow screens */
+.workspace{
+  display:grid; /* reinforce */
+  grid-template-columns:1fr minmax(620px,1fr);
+  grid-template-areas:"details workbench";
+  gap:18px; /* mirrors base */
+  min-height:60vh; /* mirrors base */
+}
+.details{grid-area:details;}
+.workbench{grid-area:workbench;}
 @media (max-width:1200px){
-  .workspace{grid-template-columns:1fr}
+  .workspace{
+    grid-template-columns:1fr;
+    grid-template-areas:
+      "details"
+      "workbench";
+  }
 }
 
 /* optional: tighten top seam between tabs and stage when on left */
