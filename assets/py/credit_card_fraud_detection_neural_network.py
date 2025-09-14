@@ -203,8 +203,8 @@ def main():
     t, pp, rr, f1 = best_threshold_by_f1(ys, p)
     print(f"\nrecommended starting threshold by f1: {t:.3f} (precision={pp:.3f}, recall={rr:.3f}, f1={f1:.3f})")
 
-    # dump figures to site assets directory (front-end viewer prefixes assets/img/cc-fraud/)
-    OUTPUT_DIR = "assets/img/"  # ensure this matches viewer.js expectation
+    # dump figures to site assets directory 
+    OUTPUT_DIR = "assets/img/"
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     paths = {
         "confusion": f"{OUTPUT_DIR}/confusion_matrix.png",
@@ -221,7 +221,7 @@ def main():
     plot_threshold_sweep(ys, p, paths["threshold"])
     plot_calibration(ys, p, paths["calibration"])
 
-    # risk map using penultimate (last hidden Dense) layer embeddings (nice structure)
+    # risk map using last hidden Dense layer embeddings 
     try:
         # ensure model is built (should be after fit, but safeguard)
         if not model.built:
@@ -246,7 +246,7 @@ def main():
     for k,v in paths.items():
         print(f" - {k:11s}: {v}")
 
-    # quick human notes to steer usage (print only, keep it simple)
+    # quick notes to help usage
     print("\n==== interpret these visuals ====")
     print("- roc curve: more top-left bend = better separation")
     print("- precision–recall: for rare fraud, balance recall vs analyst load")
