@@ -10,6 +10,9 @@ function injectScrollHintCss(){
   style.dataset.scrollHint='true';
   style.textContent=`
     .scroll-hint{position:absolute;top:8px;right:10px;z-index:20;display:flex;align-items:center;gap:4px;padding:4px 8px;border-radius:14px;background:rgba(0,0,0,.55);color:#fff;font-size:10px;font-weight:500;letter-spacing:.5px;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);animation:shimmer 2.2s linear infinite;cursor:default;}
+    /* right-aligned inside tabs bar */
+    .wb-tabs{position:relative;}
+    .wb-tabs .scroll-hint{position:static;margin-left:auto;background:rgba(0,0,0,.55);}
     .scroll-hint svg{width:10px;height:10px;stroke:currentColor;stroke-width:2;fill:none;}
     @keyframes shimmer{0%{opacity:.85}50%{opacity:.35}100%{opacity:.85}}
     .scroll-hint.hide{opacity:0;transition:opacity .35s ease;}
@@ -24,13 +27,13 @@ function showScrollHint(container){
   requestAnimationFrame(()=>{
     if(!(target.scrollHeight>target.clientHeight+10)) return; // no vertical overflow
     injectScrollHintCss();
-    // avoid duplicate
-    if(target.querySelector(':scope > .scroll-hint')) return;
+    const host=_tabsBar || target; // prefer tabs bar
+    if(host.querySelector(':scope > .scroll-hint')) return; // avoid duplicate
     const hint=document.createElement('div');
     hint.className='scroll-hint';
     hint.innerHTML=`<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4.5 6 8.5 10 4.5"/></svg><span>SCROLL</span>`;
-    target.appendChild(hint);
-    const hide=()=>{hint.classList.add('hide');setTimeout(()=>hint.remove(),400);target.removeEventListener('scroll',hide);};
+    host.appendChild(hint);
+    const hide=()=>{hint.classList.add('hide');setTimeout(()=>hint.remove(),600);target.removeEventListener('scroll',hide);};
     target.addEventListener('scroll',hide,{passive:true});
     setTimeout(hide,4000);
   });
