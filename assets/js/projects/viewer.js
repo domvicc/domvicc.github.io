@@ -140,6 +140,21 @@ function makeTokenizer(lang){
       return out||' ';
     };
   }
+  if(lang==='sql'){
+    // lightweight SQL tokenization (case-insensitive keywords)
+    const keywords=[
+      'select','from','where','join','left','right','full','inner','outer','on','group','by','order','having','asc','desc','case','when','then','else','end','as','and','or','not','in','is','null','like','between','distinct','union','all','with','cte','create','view','drop','replace','into','values','update','set','delete','insert','top','limit','over','partition','row_number','dense_rank','count','sum','avg','min','max','coalesce'
+    ];
+    const kwRe=new RegExp('\\b(' + keywords.join('|') + ')\\b','i');
+    const patterns=[
+      {type:'comment',re:/--.*/},
+      {type:'comment',re:/\/\*[\s\S]*?\*\//},
+      {type:'string',re:/(?:'(?:\\.|[^'\\])*')/},
+      {type:'number',re:/\b\d+(?:\.\d+)?\b/},
+      {type:'keyword',re:kwRe},
+    ];
+    return line=>tokenizeFlat(line,patterns);
+  }
   if(lang==='js'||lang==='ts'){
     const keywords=["break","case","catch","class","const","continue","debugger","default","delete","do","else","export","extends","finally","for","function","if","import","in","instanceof","let","new","return","super","switch","this","throw","try","typeof","var","void","while","with","yield","await","async","of"];
     const kwRe=new RegExp('\\b('+keywords.join('|')+')\\b');
@@ -302,7 +317,7 @@ function renderCodeBox(projectId){
     const frag=document.createDocumentFragment();
     const fname=cfg.script.split('/').pop();
     const ext=fname.split('.').pop().toLowerCase();
-    const lang = ext==='py'?'py':(ext==='js'?'js':(ext==='ts'?'ts':null));
+  const lang = ext==='py'?'py':(ext==='js'?'js':(ext==='ts'?'ts':(ext==='sql'?'sql':null)));
     const tokenize=makeTokenizer(lang||'');
     lines.forEach(line=>{
       const lineSpan=document.createElement('span');
