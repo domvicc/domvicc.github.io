@@ -1,17 +1,9 @@
 /* page-specific overrides for projects.html (merged) */
 
-/* swap layout so the viewer/workbench (media/code) sits left of the details panel */
-.workspace{grid-template-columns:minmax(580px,1fr) 1fr;}
-
-/* use order to be resilient if markup order changes later */
-.workbench{order:1}
-.details{order:2}
-
-/* on narrow screens keep natural single column order with workbench first */
+/* workspace now has workbench first in markup; set columns (left wider media) */
+.workspace{grid-template-columns:minmax(600px,1fr) 1fr;}
 @media (max-width:1200px){
   .workspace{grid-template-columns:1fr}
-  .workbench{order:1}
-  .details{order:2}
 }
 
 /* optional: tighten top seam between tabs and stage when on left */

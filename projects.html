@@ -106,8 +106,17 @@
 
       <!-- workspace -->
       <section class="workspace">
+        <!-- viewer pane (moved before details to appear on the left) -->
+        <div class="workbench">
+          <div class="wb-tabs" id="wb-tabs"></div>
+          <div class="wb-stage" id="wb-stage">
+            <div class="placeholder" style="padding:1.2rem;font-size:.9rem;color:var(--muted);">
+              /* Lines 419-421 omitted */
+            </div>
+          </div>
+        </div>
 
-        <!-- details pane -->
+        <!-- details pane (now right column) -->
         <div class="details">
           <!-- DomGuardianAI project -->
           <div class="project-details active" data-project="dgai">
@@ -218,18 +227,8 @@
                   <a class="btn ghost" href="assets/py/pdf_to_svg.py" download>Download Script</a>
                 </div>
               </div>
-              <div>
-                <p class="info-title" style="margin:.2rem 0 .4rem;">Highlights</p>
-                <ul class="highlights">
-                  <li>~30 lines leveraging PyMuPDF for fast PDF parsing.</li>
-                  <li>Single-page (first page) PDF → SVG conversion.</li>
-                  <li>Removes need for multiple PNG resolutions.</li>
-                  <li>Extensible: add loops, CLI flags, multi-page logic.</li>
-                </ul>
-              </div>
-              <div>
-                <p class="info-title" style="margin:.2rem 0 .4rem;">Quick Metrics</p>
-                <div class="metrics">
+
+            </div>
                   <div class="metric">
                     <p class="metric-label">Lines of Code</p>
                     <p class="metric-value">≈ 30</p>
