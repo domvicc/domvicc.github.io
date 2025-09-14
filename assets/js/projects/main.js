@@ -26,6 +26,12 @@ const PROJECTS = {
       { file:'confusion_matrix.png', title:'Confusion Matrix (Normalized)', alt:'Normalized confusion matrix', desc:'Recall / precision snapshot at threshold.' },
       { file:'threshold_tuning.png', title:'Threshold Tuning Focus View', alt:'Threshold focus view', desc:'Operating band sensitivity illustration.' }
     ]
+  },
+  'quant-rating':{
+    tabs:['Overview','Code'],
+    defaultTab:'Overview',
+    // Reuse code viewer for SQL view definition
+    script:'sql/company_quant_rating.sql'
   }
 };
 

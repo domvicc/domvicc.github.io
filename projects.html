@@ -144,7 +144,7 @@
           <div class="dir-body">
             <div class="tree">
               <details open>
-                <summary><span class="caret">›</span><span>Featured</span><span class="tree-count">3</span></summary>
+                <summary><span class="caret">›</span><span>Featured</span><span class="tree-count">4</span></summary>
                 <ul class="dir-list">
                   <li class="dir-item">
                     <button class="tree-item active" data-id="dgai">
@@ -159,6 +159,11 @@
                   <li class="dir-item">
                     <button class="tree-item" data-id="cc-fraud-nn">
                       <span class="bullet"></span><span>Credit Card Fraud NN</span>
+                    </button>
+                  </li>
+                  <li class="dir-item">
+                    <button class="tree-item" data-id="quant-rating">
+                      <span class="bullet"></span><span>Equity Quant Rating Model</span>
                     </button>
                   </li>
                 </ul>
@@ -414,6 +419,86 @@
               </article>
               <script src="assets/js/product-card.js"></script>
             </div>
+          </div>
+          
+          <!-- Equity Quant Rating (Radar Chart) -->
+          <div class="project-details" data-project="quant-rating">
+            <p class="kicker">Azure Synapse • Parquet • Factor Scoring</p>
+            <h2 class="title">Equity Quant Rating Model</h2>
+            <p class="subtitle">Multi-factor 1–10 scoring & radar visualization across Quality, Growth, Value, Momentum, Income, Risk.</p>
+            <p class="desc">
+              This project builds a lightweight fundamental + market factor model over equity overview data sourced via the Alpha Vantage API. Raw JSON payloads are landed in an ADLS Gen2 data lake (Raw → Staging → Curated) as partitioned Parquet. Synapse Serverless external tables (over the Parquet) power a semantic layer consumed in Power BI to render a radar chart for each symbol. A single view (<code>db.company_overview_ranking_vw</code>) performs type normalization, derives margins & ratios, buckets raw measures into intuitive 1–10 score bands, and applies blended weights (Quality 27.5%, Growth 20%, Value 22.5%, Momentum 15%, Income 10%, Risk 5%) to output an overall score. The design favors transparency (explicit CASE logic) over opaque ML so that each pillar remains explainable for portfolio screening or idea generation.
+            </p>
+
+            <div class="info-grid">
+              <div class="info-card">
+                <p class="info-title">Data Flow</p>
+                <div class="pill-row">
+                  <span class="pill">Alpha Vantage API</span>
+                  <span class="pill">ADLS Gen2 Parquet</span>
+                  <span class="pill">Synapse Serverless</span>
+                </div>
+              </div>
+              <div class="info-card">
+                <p class="info-title">Model Pillars</p>
+                <div class="pill-row">
+                  <span class="pill">Quality</span>
+                  <span class="pill">Growth</span>
+                  <span class="pill">Value</span>
+                  <span class="pill">Momentum</span>
+                  <span class="pill">Income</span>
+                  <span class="pill">Risk</span>
+                </div>
+              </div>
+              <div class="info-card">
+                <p class="info-title">Transform Logic</p>
+                <div class="pill-row">
+                  <span class="pill">TRY_CONVERT Cleansing</span>
+                  <span class="pill">Derived Margins</span>
+                  <span class="pill">Bucketed Scores</span>
+                </div>
+              </div>
+              <div class="info-card">
+                <p class="info-title">Artifacts</p>
+                <div class="links">
+                  <a class="btn ghost" href="sql/company_quant_rating.sql" download>Download SQL View</a>
+                  <a class="btn ghost" href="assets/img/quant_ticker_analysis.png" target="_blank" rel="noopener">Radar Chart Image</a>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <p class="info-title" style="margin:.2rem 0 .4rem;">Highlights</p>
+              <ul class="highlights">
+                <li>Explicit factor scoring logic (no black-box model) for auditability and rapid tuning.</li>
+                <li>Missing data defaults to neutral (score 5) to avoid over-penalizing sparse fundamentals.</li>
+                <li>Weighted blend aligns with moderate growth + quality bias while capping risk influence.</li>
+                <li>All transformations encapsulated in a single reproducible view (<code>company_overview_ranking_vw</code>).</li>
+                <li>End-to-end path: API ingest → Parquet lake zones → Synapse external SQL → Power BI radar.</li>
+              </ul>
+            </div>
+
+            <div>
+              <p class="info-title" style="margin:.2rem 0 .4rem;">Quick Metrics</p>
+              <div class="metrics">
+                <div class="metric">
+                  <p class="metric-label">Pillars Weighted</p>
+                  <p class="metric-value">6 (Q,G,V,M,I,R)</p>
+                </div>
+                <div class="metric">
+                  <p class="metric-label">Score Range</p>
+                  <p class="metric-value">1–10 (per pillar)</p>
+                </div>
+                <div class="metric">
+                  <p class="metric-label">Overall Blend</p>
+                  <p class="metric-value">Weighted Avg (2 dp)</p>
+                </div>
+              </div>
+            </div>
+
+            <p class="info-title" style="margin:.9rem 0 .4rem;">Sample Visualization</p>
+            <p class="eval-desc" style="margin:0 0 .6rem;">Example radar (Value, Growth, Momentum, Quality, Income, Risk) illustrating balanced factor exposure.</p>
+            <img src="assets/img/quant_ticker_analysis.png" alt="Radar chart showing multi-factor quant rating dimensions" style="max-width:520px;width:100%;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.18);background:#fff;" loading="lazy" />
           </div>
         </div>
 
