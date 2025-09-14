@@ -2,6 +2,40 @@
 
 let _stage, _tabsBar, _projects;
 
+// scroll hint state
+let _scrollHintCssInjected=false;
+function injectScrollHintCss(){
+  if(_scrollHintCssInjected) return; _scrollHintCssInjected=true;
+  const style=document.createElement('style');
+  style.dataset.scrollHint='true';
+  style.textContent=`
+    .scroll-hint{position:absolute;top:8px;right:10px;z-index:20;display:flex;align-items:center;gap:4px;padding:4px 8px;border-radius:14px;background:rgba(0,0,0,.55);color:#fff;font-size:10px;font-weight:500;letter-spacing:.5px;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);animation:shimmer 2.2s linear infinite;cursor:default;}
+    .scroll-hint svg{width:10px;height:10px;stroke:currentColor;stroke-width:2;fill:none;}
+    @keyframes shimmer{0%{opacity:.85}50%{opacity:.35}100%{opacity:.85}}
+    .scroll-hint.hide{opacity:0;transition:opacity .35s ease;}
+  `;
+  document.head.appendChild(style);
+}
+function showScrollHint(container){
+  // choose element with overflow potential
+  const target = container;
+  if(!target) return;
+  // small debounce to ensure layout complete
+  requestAnimationFrame(()=>{
+    if(!(target.scrollHeight>target.clientHeight+10)) return; // no vertical overflow
+    injectScrollHintCss();
+    // avoid duplicate
+    if(target.querySelector(':scope > .scroll-hint')) return;
+    const hint=document.createElement('div');
+    hint.className='scroll-hint';
+    hint.innerHTML=`<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4.5 6 8.5 10 4.5"/></svg><span>SCROLL</span>`;
+    target.appendChild(hint);
+    const hide=()=>{hint.classList.add('hide');setTimeout(()=>hint.remove(),400);target.removeEventListener('scroll',hide);};
+    target.addEventListener('scroll',hide,{passive:true});
+    setTimeout(hide,4000);
+  });
+}
+
 // --- lightweight vscode-ish syntax highlighting (refined) ---
 let _themeInjected=false;
 function injectCodeTheme(){
@@ -148,8 +182,9 @@ export function renderSvgInline(stage, svgPath){
       wrap.addEventListener('pointerup',()=>{drag=false;});
       wrap.addEventListener('dblclick',()=>{scale=1;x=0;y=0;apply();});
       apply();
-    })
-    .catch(()=>{ wrap.textContent='svg failed to load'; });
+  })
+  .catch(()=>{ wrap.textContent='svg failed to load'; })
+  .finally(()=>{ showScrollHint(stage); });
 }
 
 export function renderPdfInline(stage, pdfPath){
@@ -160,6 +195,7 @@ export function renderPdfInline(stage, pdfPath){
   Object.assign(f.style,{position:'absolute',inset:'0',width:'100%',height:'100%',border:'0',background:'#fff'});
   f.src=src;
   stage.appendChild(f);
+  showScrollHint(stage);
 }
 
 export function renderAutoInline(stage,input){
@@ -170,6 +206,7 @@ export function renderAutoInline(stage,input){
   const img=document.createElement('img');
   img.src=input; img.alt='preview'; img.className='canvas-image';
   stage.appendChild(img);
+  showScrollHint(stage);
 }
 
 export function renderCharts(stage,cfg){
@@ -193,6 +230,7 @@ export function renderCharts(stage,cfg){
   });
   wrap.appendChild(gallery);
   stage.appendChild(wrap);
+  showScrollHint(stage);
 }
 
 // media gallery (generic)
@@ -224,6 +262,7 @@ function renderMedia(stage,cfg){
   }
   wrap.appendChild(gallery);
   stage.appendChild(wrap);
+  showScrollHint(stage);
 }
 
 /* ---------- tabs / switching ---------- */
@@ -271,7 +310,7 @@ function renderCodeBox(projectId){
     code.appendChild(frag);
   }).catch(()=>{
     code.innerHTML='/* failed to load script */';
-  });
+  }).finally(()=>{ showScrollHint(pre); });
 
   copyBtn.addEventListener('click',()=>{
     const raw=[...code.querySelectorAll('.code-line')]
@@ -293,6 +332,7 @@ function renderTab(projectId,label){
   if(label==='Code' && cfg.script) return renderCodeBox(projectId);
   if(label==='Overview' && cfg.media) return renderMedia(_stage,cfg);
   _stage.innerHTML='<div class="placeholder">no content for '+label+'</div>';
+  showScrollHint(_stage);
 }
 
 function buildTabs(projectId){
