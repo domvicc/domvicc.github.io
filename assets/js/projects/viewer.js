@@ -8,22 +8,33 @@ function injectCodeTheme(){
   if(_themeInjected) return;
   _themeInjected=true;
   const css=`
-  /* token colors only (do not override existing pre background) */
-  .code-box .token.comment { color:#6A9955; }
+  /* VSCode-inspired dark theme */
+  .code-box { background:#1e1e1e; color:#d4d4d4; padding:12px; border-radius:6px; overflow:auto; font-family:Consolas, "Courier New", monospace; font-size:13px; }
+  .code-box .code-line { display:block; white-space:pre; }
+  .code-box .token.comment { color:#6A9955; font-style:italic; }
   .code-box .token.keyword { color:#569CD6; }
   .code-box .token.string { color:#CE9178; }
   .code-box .token.number { color:#B5CEA8; }
   .code-box .token.function { color:#DCDCAA; }
   .code-box .token.class { color:#4EC9B0; }
-  .code-box .token.decorator,
+  .code-box .token.decorator { color:#C586C0; }
   .code-box .token.builtin { color:#C586C0; }
   .code-box .token.operator { color:#D4D4D4; }
+  .code-box .token.identifier { color:#9CDCFE; }
+  .code-box .token.property { color:#9CDCFE; }
+  .code-box .token.punctuation { color:#D4D4D4; }
+  /* header / actions */
+  .code-box-header { display:flex; justify-content:space-between; align-items:center; padding:4px 8px; background:#252526; color:#ccc; font-size:12px; border-radius:4px 4px 0 0; }
+  .code-box-actions .copy-btn { background:#333; border:1px solid #555; color:#ccc; border-radius:3px; padding:2px 6px; cursor:pointer; font-size:12px; }
+  .code-box-actions .copy-btn:hover { background:#444; }
+  .code-box.copy-ok .copy-btn { background:#006400; color:#fff; border-color:#0a0; }
   `;
   const style=document.createElement('style');
   style.dataset.codeTheme='vscode-lite';
   style.textContent=css;
   document.head.appendChild(style);
 }
+
 function escapeHtml(s){ return s.replace(/[&<>]/g,c=>({ '&':'&amp;','<':'&lt;','>':'&gt;' }[c])); }
 function tokenizeFlat(text,patterns){
   let out='',i=0;
