@@ -8,35 +8,15 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
 
+  <!-- base/global -->
   <link rel="stylesheet" href="assets/css/projects.css" />
-  <style>
-    /* Overrides: make project directory non-floating */
-    .directory{
-      position:static !important;
-      left:auto; top:auto;
-      width:100%;
-      height:auto;
-      z-index:auto;
-    }
-    .dir-card{
-      box-shadow:none !important;
-    }
-    /* Optional: tighten internal spacing since no shadow */
-    .dir-card .dir-head{background:transparent;}
-    /* Ensure large-screen grid still keeps first column width */
-    @media (min-width:1100px){
-      .app-layout{grid-template-columns:340px 1fr;}
-    }
-    /* Code box component
-       NOTE: Original custom styling removed to allow VS Code-like theme injected
-       by assets/js/projects/viewer.js (injectCodeTheme) to take full effect without
-       being overridden here. Only minimal layout overrides (if any needed) should
-       be added below. */
-    .code-box{height:100%;display:flex;flex-direction:column;}
-  </style>
+  <!-- page-only overrides (replaces the old inline <style>) -->
+  <link rel="stylesheet" href="assets/css/projects-overrides.css" />
+  <!-- amazon product card styles -->
+  <link rel="stylesheet" href="assets/css/product-card.css" />
 </head>
 <body class="force-light projects-page">
-  <!-- header (default restored with working links) -->
+  <!-- header -->
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="index.html" aria-label="Home">
@@ -127,7 +107,7 @@
       <!-- workspace -->
       <section class="workspace">
 
-        <!-- details pane (now multi-project) -->
+        <!-- details pane -->
         <div class="details">
           <!-- DomGuardianAI project -->
           <div class="project-details active" data-project="dgai">
@@ -200,43 +180,42 @@
           </div>
 
           <!-- PDF → SVG Utility project -->
-            <div class="project-details" data-project="pdf-svg-util">
-              <p class="kicker">Python • Automation</p>
-              <h2 class="title">PDF → SVG Converter Utility</h2>
-              <p class="subtitle">Lightweight script converting single‑page diagram PDFs to scalable SVG for crisp zoom &amp; pan.</p>
-              <p class="desc">
-                Supporting helper used to prepare architecture diagrams for this portfolio. Converts the first page of a diagram PDF export into an inline SVG using PyMuPDF (fitz). SVG delivery keeps text/vector fidelity, reduces asset size, and enables smooth client-side zoom/pan without raster quality loss.
-              </p>
-              <div class="info-grid">
-                <div class="info-card">
-                  <p class="info-title">Purpose</p>
-                  <div class="pill-row">
-                    <span class="pill">Diagram Optimization</span>
-                    <span class="pill">Vector Fidelity</span>
-                    <span class="pill">Zoom/Pan Ready</span>
-                  </div>
+          <div class="project-details" data-project="pdf-svg-util">
+            <p class="kicker">Python • Automation</p>
+            <h2 class="title">PDF → SVG Converter Utility</h2>
+            <p class="subtitle">Lightweight script converting single-page diagram PDFs to scalable SVG for crisp zoom &amp; pan.</p>
+            <p class="desc">
+              Supporting helper used to prepare architecture diagrams for this portfolio. Converts the first page of a diagram PDF export into an inline SVG using PyMuPDF (fitz). SVG delivery keeps text/vector fidelity, reduces asset size, and enables smooth client-side zoom/pan without raster quality loss.
+            </p>
+            <div class="info-grid">
+              <div class="info-card">
+                <p class="info-title">Purpose</p>
+                <div class="pill-row">
+                  <span class="pill">Diagram Optimization</span>
+                  <span class="pill">Vector Fidelity</span>
+                  <span class="pill">Zoom/Pan Ready</span>
                 </div>
-                <div class="info-card">
-                  <p class="info-title">Tech</p>
-                  <div class="pill-row">
-                    <span class="pill">Python</span>
-                    <span class="pill">PyMuPDF (fitz)</span>
-                    <span class="pill">SVG Output</span>
-                  </div>
+              </div>
+              <div class="info-card">
+                <p class="info-title">Tech</p>
+                <div class="pill-row">
+                  <span class="pill">Python</span>
+                  <span class="pill">PyMuPDF (fitz)</span>
+                  <span class="pill">SVG Output</span>
                 </div>
-                <div class="info-card">
-                  <p class="info-title">Benefits</p>
-                  <div class="pill-row">
-                    <span class="pill">Smaller Assets</span>
-                    <span class="pill">Sharp Text</span>
-                    <span class="pill">Simple Script</span>
-                  </div>
+              </div>
+              <div class="info-card">
+                <p class="info-title">Benefits</p>
+                <div class="pill-row">
+                  <span class="pill">Smaller Assets</span>
+                  <span class="pill">Sharp Text</span>
+                  <span class="pill">Simple Script</span>
                 </div>
-                <div class="info-card">
-                  <p class="info-title">Artifacts</p>
-                  <div class="links">
-                    <a class="btn ghost" href="assets/py/pdf_to_svg.py" download>Download Script</a>
-                  </div>
+              </div>
+              <div class="info-card">
+                <p class="info-title">Artifacts</p>
+                <div class="links">
+                  <a class="btn ghost" href="assets/py/pdf_to_svg.py" download>Download Script</a>
                 </div>
               </div>
               <div>
@@ -265,7 +244,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+          </div>
 
           <!-- Credit Card Fraud Detection Neural Network -->
           <div class="project-details" data-project="cc-fraud-nn">
@@ -279,7 +258,7 @@
               it assigns each transaction a risk score (0–1) rather than a binary label. A higher score signals
               “review more closely.” The decision threshold can be adjusted to reduce alert volume (improving precision)
               or maximize fraud capture (improving recall). The charts below illustrate ranking quality, calibration,
-              and threshold trade‑offs. Goal: minimize missed fraud while keeping analyst workload manageable.
+              and threshold trade-offs. Goal: minimize missed fraud while keeping analyst workload manageable.
             </p>
 
             <div class="info-card" style="margin-top:.4rem;">
@@ -331,15 +310,14 @@
               </p>
             </div>
 
-            <!-- Moved book cover image below artifacts, above product preview -->
+            <!-- Book cover -->
             <img
               src="assets/img/ultimate_nerual_networks_with_python.png"
               alt="Book cover: Ultimate Neural Network Programming with Python"
               style="max-width:160px;margin:1rem 0 .25rem;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,.15);" />
 
-            <!-- Added Amazon product preview (below artifacts) -->
+            <!-- Amazon product preview -->
             <div class="amazon-product-preview" style="margin:1.2rem 0 0;">
-              <link rel="stylesheet" href="assets/css/product-card.css">
               <article
                 class="product-card"
                 data-asin="B0CMQ9LGFW"
@@ -353,10 +331,9 @@
                 <div class="meta">ASIN: <span id="product-asin"></span></div>
                 <noscript><p><a href="https://www.amazon.com/dp/B0CMQ9LGFW">Open on Amazon</a></p></noscript>
               </article>
-              <script src="assets/js/product-card.js"></script>
             </div>
           </div>
-          
+
           <!-- Equity Quant Rating (Radar Chart) -->
           <div class="project-details" data-project="quant-rating">
             <p class="kicker">Alpha Vantage • Azure Synapse • Power BI • Quant Analysis • Ticker Analysis</p>
@@ -431,8 +408,6 @@
                 </div>
               </div>
             </div>
-
-            <!-- Sample visualization moved to Media tab -->
           </div>
         </div>
 
@@ -440,8 +415,6 @@
         <div class="workbench">
           <div class="wb-tabs" id="wb-tabs"></div>
           <div class="wb-stage" id="wb-stage">
-            <!-- Images for fraud project are NOT hard-coded here;
-                 viewer.js builds paths as: assets/img/cc-fraud/<filename>.png -->
             <div class="placeholder" style="padding:1.2rem;font-size:.9rem;color:var(--muted);">
               Loading project viewer…
               <noscript>Enable JavaScript to view architecture diagrams and code.</noscript>
@@ -469,31 +442,10 @@
       </div>
     </div>
   </footer>
+
+  <!-- scripts -->
   <script src="assets/js/helpers/nav.js" defer></script>
+  <script src="assets/js/product-card.js" defer></script>
   <script type="module" src="assets/js/projects/main.js"></script>
-  <!-- Reorder workbench tabs: make Charts first & active (restored) -->
-  <script>
-    (function () {
-      const tabsEl = document.getElementById('wb-tabs');
-      if (!tabsEl) return;
-      function applyOrder() {
-        const tabs = Array.from(tabsEl.querySelectorAll('button.tab'));
-        if (tabs.length < 2) return;
-        const charts = tabs.find(b => /charts/i.test(b.textContent.trim()));
-        const code = tabs.find(b => /code/i.test(b.textContent.trim()));
-        if (charts && code) {
-          if (charts.nextSibling !== code) {
-            tabsEl.insertBefore(charts, code);
-          }
-          if (charts.getAttribute('aria-selected') !== 'true') {
-            charts.click();
-          }
-        }
-      }
-      const mo = new MutationObserver(applyOrder);
-      mo.observe(tabsEl, { childList: true });
-      applyOrder();
-    })();
-  </script>
 </body>
 </html>

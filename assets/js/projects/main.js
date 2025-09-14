@@ -13,8 +13,8 @@ const PROJECTS = {
     script:'assets/py/pdf_to_svg.py'
   },
   'cc-fraud-nn':{
-    tabs:['Code','Charts'],
-    defaultTab:'Code',
+    tabs:['Charts','Code'],
+    defaultTab:'Charts',
     script:'assets/py/credit_card_fraud_detection_neural_network.py',
     // Chart file names only; viewer.js composes full path:
     // assets/img/cc-fraud/<file>
