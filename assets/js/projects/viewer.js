@@ -2,21 +2,21 @@
 
 let _stage, _tabsBar, _projects;
 
-// --- added: lightweight VSCode-ish syntax highlighting ---
+// --- lightweight vscode-ish syntax highlighting (refined) ---
 let _themeInjected=false;
 function injectCodeTheme(){
   if(_themeInjected) return;
   _themeInjected=true;
   const css=`
-  .code-box pre { background:#1e1e1e; color:#d4d4d4; }
-  .code-box .code-line { display:block; white-space:pre; font-family:Consolas, 'Courier New', monospace; }
+  /* token colors only (do not override existing pre background) */
   .code-box .token.comment { color:#6A9955; }
   .code-box .token.keyword { color:#569CD6; }
   .code-box .token.string { color:#CE9178; }
   .code-box .token.number { color:#B5CEA8; }
   .code-box .token.function { color:#DCDCAA; }
   .code-box .token.class { color:#4EC9B0; }
-  .code-box .token.decorator, .code-box .token.builtin { color:#C586C0; }
+  .code-box .token.decorator,
+  .code-box .token.builtin { color:#C586C0; }
   .code-box .token.operator { color:#D4D4D4; }
   `;
   const style=document.createElement('style');
@@ -24,11 +24,26 @@ function injectCodeTheme(){
   style.textContent=css;
   document.head.appendChild(style);
 }
-
-function escapeHtml(s){
-  return s.replace(/[&<>]/g,c=>({ '&':'&amp;','<':'&lt;','>':'&gt;' }[c]));
+function escapeHtml(s){ return s.replace(/[&<>]/g,c=>({ '&':'&amp;','<':'&lt;','>':'&gt;' }[c])); }
+function tokenizeFlat(text,patterns){
+  let out='',i=0;
+  while(i<text.length){
+    let earliest=null,pat=null;
+    for(const p of patterns){
+      p.re.lastIndex=0;
+      const m=p.re.exec(text.slice(i));
+      if(m){
+        const idx=i+m.index;
+        if(earliest===null||idx<earliest){ earliest=idx; pat={p,match:m[0],offset:idx}; if(idx===i) break; }
+      }
+    }
+    if(!pat){ out+=escapeHtml(text.slice(i)); break; }
+    if(pat.offset>i) out+=escapeHtml(text.slice(i,pat.offset));
+    out+=`<span class="token ${pat.p.type}">${escapeHtml(pat.match)}</span>`;
+    i=pat.offset+pat.match.length;
+  }
+  return out;
 }
-
 function makeTokenizer(lang){
   if(lang==='py'){
     const keywords=["False","None","True","and","as","assert","async","await","break","class","continue","def","del","elif","else","except","finally","for","from","global","if","import","in","is","lambda","nonlocal","not","or","pass","raise","return","try","while","with","yield"];
@@ -45,60 +60,41 @@ function makeTokenizer(lang){
       {type:'function',re:/\b(?<=def\s+)[A-Za-z_]\w*/},
       {type:'class',re:/\b(?<=class\s+)[A-Za-z_]\w*/},
     ];
-    // stateful for triple quotes
-    let triple=null; // ''' or """
+    let triple=null;
     return line=>{
-      let out='';
-      let i=0;
-      const len=line.length;
+      let out='',working=line;
       if(triple){
-        const closeIdx=line.indexOf(triple);
-        if(closeIdx===-1){
-          return `<span class="token string">${escapeHtml(line)}</span>`;
+        const closeIdx=working.indexOf(triple);
+        if(closeIdx===-1) return `<span class="token string">${escapeHtml(working)}</span>`;
+        out+=`<span class="token string">${escapeHtml(working.slice(0,closeIdx+3))}</span>`;
+        triple=null;
+        working=working.slice(closeIdx+3);
+      }
+      const tqRe=/(?:'''|""")/g;
+      while(working.length){
+        tqRe.lastIndex=0;
+        const m=tqRe.exec(working);
+        if(!m){ out+=tokenizeFlat(working,patterns); break; }
+        const before=working.slice(0,m.index);
+        if(before) out+=tokenizeFlat(before,patterns);
+        const rest=working.slice(m.index+3);
+        const closeAgain=rest.indexOf(m[0]);
+        if(closeAgain===-1){
+          out+=`<span class="token string">${escapeHtml(working.slice(m.index))}</span>`;
+          triple=m[0];
+          working='';
         }else{
-          const before=line.slice(0,closeIdx+3);
-            out+=`<span class="token string">${escapeHtml(before)}</span>`;
-          triple=null;
-          line=line.slice(closeIdx+3);
-          i=0;
+          const full=m[0]+rest.slice(0,closeAgain+3);
+          out+=`<span class="token string">${escapeHtml(full)}</span>`;
+          working=rest.slice(closeAgain+3);
         }
       }
-      // search for new triple quotes
-      const tripleRe=/(?:'''|""")/g;
-      while(i<line.length){
-        if(!triple){
-          tripleRe.lastIndex=i;
-          const tq=tripleRe.exec(line);
-          if(tq){
-            // process segment before triple
-            const segment=line.slice(i,tq.index);
-            out+=tokenizeFlat(segment,patterns);
-            // start triple
-            const rest=line.slice(tq.index+3);
-            const closeAgain=rest.indexOf(tq[0]);
-            if(closeAgain===-1){
-              out+=`<span class="token string">${escapeHtml(line.slice(tq.index))}</span>`;
-              triple=tq[0];
-              return out;
-            }else{
-              const tripleContent=line.slice(tq.index, tq.index+3+closeAgain+3);
-              out+=`<span class="token string">${escapeHtml(tripleContent)}</span>`;
-              i=tq.index+tripleContent.length;
-              continue;
-            }
-          }else{
-            out+=tokenizeFlat(line.slice(i),patterns);
-            break;
-          }
-        }
-      }
-      return out || ' ';
+      return out||' ';
     };
   }
-  // JS / TS
-  if(lang==='js' || lang==='ts'){
+  if(lang==='js'||lang==='ts'){
     const keywords=["break","case","catch","class","const","continue","debugger","default","delete","do","else","export","extends","finally","for","function","if","import","in","instanceof","let","new","return","super","switch","this","throw","try","typeof","var","void","while","with","yield","await","async","of"];
-    const kwRe=new RegExp('\\b(' + keywords.join('|') + ')\\b');
+    const kwRe=new RegExp('\\b('+keywords.join('|')+')\\b');
     const patterns=[
       {type:'comment',re:/\/\/.*/},
       {type:'comment',re:/\/\*[\s\S]*?\*\//},
@@ -110,39 +106,9 @@ function makeTokenizer(lang){
     ];
     return line=>tokenizeFlat(line,patterns);
   }
-  // fallback
   return line=>escapeHtml(line)||' ';
 }
-
-function tokenizeFlat(text,patterns){
-  let out='';
-  let i=0;
-  while(i<text.length){
-    let earliest=null,pat=null;
-    for(const p of patterns){
-      p.re.lastIndex=0;
-      const m=p.re.exec(text.slice(i));
-      if(m){
-        const idx=i+m.index;
-        if(earliest===null || idx<earliest){
-          earliest=idx; pat={p,match:m[0],offset:idx};
-          if(idx===i) break;
-        }
-      }
-    }
-    if(!pat){
-      out+=escapeHtml(text.slice(i));
-      break;
-    }
-    if(pat.offset>i){
-      out+=escapeHtml(text.slice(i,pat.offset));
-    }
-    out+=`<span class="token ${pat.p.type}">${escapeHtml(pat.match)}</span>`;
-    i=pat.offset+pat.match.length;
-  }
-  return out;
-}
-// --- end added highlighting utilities ---
+// --- end highlighting utilities ---
 
 /* ---------- render helpers ---------- */
 export function renderSvgInline(stage, svgPath){
@@ -252,13 +218,13 @@ function renderCodeBox(projectId){
     const frag=document.createDocumentFragment();
     const fname=cfg.script.split('/').pop();
     const ext=fname.split('.').pop().toLowerCase();
-    let lang = ext==='py'?'py':(ext==='js'?'js':(ext==='ts'?'ts':null));
+    const lang = ext==='py'?'py':(ext==='js'?'js':(ext==='ts'?'ts':null));
     const tokenize=makeTokenizer(lang||'');
     lines.forEach(line=>{
-      const span=document.createElement('span');
-      span.className='code-line';
-      span.innerHTML=tokenize(line);
-      frag.appendChild(span);
+      const lineSpan=document.createElement('span');
+      lineSpan.className='code-line';
+      lineSpan.innerHTML=tokenize(line);
+      frag.appendChild(lineSpan);
     });
     code.appendChild(frag);
   }).catch(()=>{
@@ -266,7 +232,9 @@ function renderCodeBox(projectId){
   });
 
   copyBtn.addEventListener('click',()=>{
-    const raw=[...code.querySelectorAll('span')].map(s=>s.textContent).join('\n');
+    const raw=[...code.querySelectorAll('.code-line')]
+      .map(l=>l.textContent)
+      .join('\n');
     navigator.clipboard.writeText(raw).then(()=>{
       copyBtn.textContent='copied';
       box.classList.add('copy-ok');

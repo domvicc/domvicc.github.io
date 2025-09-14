@@ -76,13 +76,14 @@
       color:#e6edf3;
     }
     .code-box pre code{display:block;white-space:pre;}
-    .code-box pre code span{
+    /* updated selectors: only line wrapper spans show numbers */
+    .code-box pre code .code-line{
       display:block;
       padding-left:3.1em;
       position:relative;
       min-height:1.05em;
     }
-    .code-box pre code span:before{
+    .code-box pre code .code-line:before{
       counter-increment:ln;
       content:counter(ln);
       position:absolute;
@@ -93,6 +94,7 @@
       color:#4d5a72;
       user-select:none;
     }
+    /* token spans inherit color from injected theme */
     .code-box.copy-ok .code-box-header{background:#0f332f;}
     .code-box.copy-ok .code-box-actions button.copy-btn{color:#10b981;border-color:#10b981;}
   </style>
