@@ -31,7 +31,10 @@ const PROJECTS = {
     tabs:['Overview','Code'],
     defaultTab:'Overview',
     // Reuse code viewer for SQL view definition
-    script:'sql/company_quant_rating.sql'
+    script:'sql/company_quant_rating.sql',
+    media:[
+      { file:'assets/img/quant_ticker_analysis.png', title:'Radar: Multi-Factor Pillar Scores', alt:'Radar chart of Quality Growth Value Momentum Income Risk pillars', desc:'Power BI radar visualization sourced from Synapse view.' }
+    ]
   }
 };
 

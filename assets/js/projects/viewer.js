@@ -195,6 +195,37 @@ export function renderCharts(stage,cfg){
   stage.appendChild(wrap);
 }
 
+// media gallery (generic)
+function renderMedia(stage,cfg){
+  stage.innerHTML='';
+  const wrap=document.createElement('div');
+  wrap.style.padding='12px';
+  const h=document.createElement('h3');
+  h.textContent='media';
+  h.style.margin='0 0 12px'; h.style.fontSize='1.05rem';
+  wrap.appendChild(h);
+  const gallery=document.createElement('div');
+  gallery.className='evals';
+  (cfg.media||[]).forEach(m=>{
+    const card=document.createElement('div'); card.className='eval-card';
+    const t=document.createElement('p'); t.className='eval-title'; t.textContent=m.title||'Media';
+    card.appendChild(t);
+    const isImg=/\.(png|jpe?g|gif|svg)$/i.test(m.file||'');
+    if(isImg){
+      const img=document.createElement('img'); img.src=m.file; img.alt=m.alt||m.title||'media image'; card.appendChild(img);
+    }else if(m.file){
+      const a=document.createElement('a'); a.href=m.file; a.textContent='Open'; a.target='_blank'; a.rel='noopener'; card.appendChild(a);
+    }
+    if(m.desc){ const d=document.createElement('p'); d.className='eval-desc'; d.textContent=m.desc; card.appendChild(d); }
+    gallery.appendChild(card);
+  });
+  if(!gallery.children.length){
+    const p=document.createElement('p'); p.className='eval-desc'; p.textContent='No media defined.'; wrap.appendChild(p);
+  }
+  wrap.appendChild(gallery);
+  stage.appendChild(wrap);
+}
+
 /* ---------- tabs / switching ---------- */
 function renderCodeBox(projectId){
   const cfg=_projects[projectId];
@@ -260,6 +291,7 @@ function renderTab(projectId,label){
   if(label==='Architecture' && cfg.svg) return renderAutoInline(_stage,cfg.svg);
   if(label==='Charts' && cfg.charts) return renderCharts(_stage,cfg);
   if(label==='Code' && cfg.script) return renderCodeBox(projectId);
+  if(label==='Overview' && cfg.media) return renderMedia(_stage,cfg);
   _stage.innerHTML='<div class="placeholder">no content for '+label+'</div>';
 }
 
