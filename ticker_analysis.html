@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAPL Financial Analysis Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        :root {
+            --bg-page:#0f172a;           /* slate-900 */
+            --bg-layer:#142033;          /* custom deep */
+            --bg-card:#1e293b;           /* slate-800 */
+            --bg-card-alt:#273449;       /* slate-700 */
+            --grid-line:rgba(255,255,255,0.05);
+            --text-primary:#f1f5f9;      /* slate-100 */
+            --text-secondary:#94a3b8;    /* slate-400 */
+            --accent-indigo:#6366f1;
+            --accent-emerald:#10b981;
+            --accent-violet:#8b5cf6;
+            --accent-amber:#f59e0b;
+            --accent-rose:#fb7185;
+            --accent-cyan:#06b6d4;
+            --accent-pink:#ec4899;
+        }
+        body.mystic {
+            background: radial-gradient(circle at 20% 25%, #15253b 0%, #0f172a 55%, #0b1120 100%);
+            color: var(--text-primary);
+        }
+        .grid-bg {
+            background-image:
+              linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+              linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+            background-size: 36px 36px;
+        }
+        /* Elevation & glass feel */
+        header, footer {
+            background: rgba(15,23,42,0.75);
+            backdrop-filter: blur(8px);
+        }
+        /* Card & surfaces */
+        .bg-white { background-color: var(--bg-card) !important; }
+        .shadow-md { box-shadow: 0 4px 18px -4px rgba(0,0,0,0.55), 0 2px 6px -2px rgba(0,0,0,0.6); }
+        .card-hover:hover {
+            box-shadow: 0 14px 35px -6px rgba(0,0,0,0.75), 0 6px 14px -4px rgba(0,0,0,0.6);
+        }
+        /* Text overrides */
+        .text-gray-800 { color: var(--text-primary) !important; }
+        .text-gray-700 { color: var(--text-primary) !important; }
+        .text-gray-500 { color: var(--text-secondary) !important; }
+        /* Badge / soft backgrounds mapped to richer tones */
+        .bg-blue-100    { background-color: rgba(99,102,241,0.18) !important; color: var(--accent-indigo) !important; }
+        .bg-green-100   { background-color: rgba(16,185,129,0.18) !important; color: var(--accent-emerald) !important; }
+        .bg-purple-100  { background-color: rgba(139,92,246,0.18) !important; color: var(--accent-violet) !important; }
+        .bg-yellow-100  { background-color: rgba(245,158,11,0.18) !important; color: var(--accent-amber) !important; }
+        .bg-blue-600, .text-blue-600 { color: var(--accent-indigo) !important; }
+        .text-green-600 { color: var(--accent-emerald) !important; }
+        .text-purple-600 { color: var(--accent-violet) !important; }
+        .text-yellow-600 { color: var(--accent-amber) !important; }
+        .trend-up { color: var(--accent-emerald); }
+        .trend-down { color: var(--accent-rose); }
+        /* Tables */
+        thead.bg-gray-50 { background: var(--bg-card-alt) !important; }
+        tbody tr:hover { background: rgba(255,255,255,0.03); }
+    </style>
+</head>
+<body class="mystic font-sans antialiased grid-bg">
+    <div class="min-h-screen">
+        <!-- Header -->
+        <header class="bg-white shadow-sm">
+            <div class="container mx-auto px-4 py-6">
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center space-x-4">
+                        <i data-feather="dollar-sign" class="text-blue-600 w-8 h-8"></i>
+                        <h1 class="text-2xl font-bold text-gray-800">AAPL Financial Analysis</h1>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Last Updated: Dec 17, 2024</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="container mx-auto px-4 py-8">
+            <!-- Overview Cards -->
+            <section class="mb-12">
+                <h2 class="text-xl font-semibold text-gray-700 mb-6 flex items-center">
+                    <i data-feather="activity" class="mr-2 w-5 h-5"></i> Key Metrics
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Revenue Card -->
+                    <div class="bg-white rounded-xl shadow-md p-6 transition-all duration-300 card-hover" data-aos="fade-up">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <p class="text-gray-500 text-sm font-medium">Total Revenue (2024)</p>
+                                <h3 class="text-2xl font-bold text-gray-800 mt-1">$391B</h3>
+                                <div class="flex items-center mt-2">
+                                    <span class="text-green-500 text-sm font-medium flex items-center">
+                                        <i data-feather="trending-up" class="w-4 h-4 mr-1"></i> 2.0%
+                                    </span>
+                                    <span class="text-gray-500 text-sm ml-2">YoY Growth</span>
+                                </div>
+                            </div>
+                            <div class="bg-blue-100 p-3 rounded-lg">
+                                <i data-feather="credit-card" class="text-blue-600 w-6 h-6"></i>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <canvas id="revenueChart" height="80"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Net Income Card -->
+                    <div class="bg-white rounded-xl shadow-md p-6 transition-all duration-300 card-hover" data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <p class="text-gray-500 text-sm font-medium">Net Income (2024)</p>
+                                <h3 class="text-2xl font-bold text-gray-800 mt-1">$93.7B</h3>
+                                <div class="flex items-center mt-2">
+                                    <span class="text-green-500 text-sm font-medium flex items-center">
+                                        <i data-feather="trending-up" class="w-4 h-4 mr-1"></i> 3.4%
+                                    </span>
+                                    <span class="text-gray-500 text-sm ml-2">YoY Growth</span>
+                                </div>
+                            </div>
+                            <div class="bg-green-100 p-3 rounded-lg">
+                                <i data-feather="dollar-sign" class="text-green-600 w-6 h-6"></i>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <canvas id="incomeChart" height="80"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Gross Margin Card -->
+                    <div class="bg-white rounded-xl shadow-md p-6 transition-all duration-300 card-hover" data-aos="fade-up" data-aos-delay="200">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <p class="text-gray-500 text-sm font-medium">Gross Margin (2024)</p>
+                                <h3 class="text-2xl font-bold text-gray-800 mt-1">46.2%</h3>
+                                <div class="flex items-center mt-2">
+                                    <span class="text-green-500 text-sm font-medium flex items-center">
+                                        <i data-feather="trending-up" class="w-4 h-4 mr-1"></i> 0.9%
+                                    </span>
+                                    <span class="text-gray-500 text-sm ml-2">YoY Change</span>
+                                </div>
+                            </div>
+                            <div class="bg-purple-100 p-3 rounded-lg">
+                                <i data-feather="percent" class="text-purple-600 w-6 h-6"></i>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <canvas id="marginChart" height="80"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- EBITDA Card -->
+                    <div class="bg-white rounded-xl shadow-md p-6 transition-all duration-300 card-hover" data-aos="fade-up" data-aos-delay="300">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <p class="text-gray-500 text-sm font-medium">EBITDA (2024)</p>
+                                <h3 class="text-2xl font-bold text-gray-800 mt-1">$134.7B</h3>
+                                <div class="flex items-center mt-2">
+                                    <span class="text-green-500 text-sm font-medium flex items-center">
+                                        <i data-feather="trending-up" class="w-4 h-4 mr-1"></i> 7.0%
+                                    </span>
+                                    <span class="text-gray-500 text-sm ml-2">YoY Growth</span>
+                                </div>
+                            </div>
+                            <div class="bg-yellow-100 p-3 rounded-lg">
+                                <i data-feather="bar-chart-2" class="text-yellow-600 w-6 h-6"></i>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <canvas id="ebitdaChart" height="80"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Main Charts -->
+            <section class="mb-12">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Revenue & Income Trend -->
+                    <div class="bg-white rounded-xl shadow-md p-6" data-aos="fade-right">
+                        <div class="flex justify-between items-center mb-6">
+                            <h2 class="text-lg font-semibold text-gray-700">
+                                <i data-feather="trending-up" class="w-5 h-5 inline mr-2"></i> Revenue & Net Income Trend
+                            </h2>
+                            <div class="flex space-x-2">
+                                <button class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">5Y</button>
+                                <button class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm font-medium">10Y</button>
+                                <button class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm font-medium">Max</button>
+                            </div>
+                        </div>
+                        <div class="h-80">
+                            <canvas id="revenueIncomeChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Profitability Margins -->
+                    <div class="bg-white rounded-xl shadow-md p-6" data-aos="fade-left">
+                        <div class="flex justify-between items-center mb-6">
+                            <h2 class="text-lg font-semibold text-gray-700">
+                                <i data-feather="pie-chart" class="w-5 h-5 inline mr-2"></i> Profitability Margins
+                            </h2>
+                            <div class="flex items-center">
+                                <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-medium mr-2">Gross</span>
+                                <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs font-medium mr-2">EBITDA</span>
+                                <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs font-medium">Net</span>
+                            </div>
+                        </div>
+                        <div class="h-80">
+                            <canvas id="marginsChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Expense Breakdown -->
+            <section class="mb-12">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Expense Composition -->
+                    <div class="bg-white rounded-xl shadow-md p-6" data-aos="fade-right">
+                        <div class="flex justify-between items-center mb-6">
+                            <h2 class="text-lg font-semibold text-gray-700">
+                                <i data-feather="list" class="w-5 h-5 inline mr-2"></i> Expense Composition (2024)
+                            </h2>
+                            <div class="text-sm text-gray-500">As % of Revenue</div>
+                        </div>
+                        <div class="h-80">
+                            <canvas id="expenseChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Operating Efficiency -->
+                    <div class="bg-white rounded-xl shadow-md p-6" data-aos="fade-left">
+                        <div class="flex justify-between items-center mb-6">
+                            <h2 class="text-lg font-semibold text-gray-700">
+                                <i data-feather="zap" class="w-5 h-5 inline mr-2"></i> Operating Efficiency
+                            </h2>
+                            <div class="flex space-x-2">
+                                <button class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">COGS</button>
+                                <button class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">R&D</button>
+                                <button class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">SG&A</button>
+                            </div>
+                        </div>
+                        <div class="h-80">
+                            <canvas id="efficiencyChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Detailed Financial Table -->
+            <section class="mb-12" data-aos="fade-up">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="px-6 py-4 border-b border-gray-200">
+                        <h2 class="text-lg font-semibold text-gray-700">
+                            <i data-feather="file-text" class="w-5 h-5 inline mr-2"></i> Annual Financial Data (in millions USD)
+                        </h2>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Year</th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Revenue</th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Net Income</th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Gross Profit</th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">EBITDA</th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Gross Margin</th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Net Margin</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <!-- Data rows will be inserted here by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-white border-t border-gray-200 py-8">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="flex items-center space-x-2 mb-4 md:mb-0">
+                        <i data-feather="pie-chart" class="text-blue-600 w-6 h-6"></i>
+                        <span class="text-gray-700 font-medium">AAPL Financial Dashboard</span>
+                    </div>
+                    <div class="text-sm text-gray-500">
+                        Data as of December 2024 | Not for investment purposes
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Initialize AOS and Feather Icons
+        AOS.init();
+        feather.replace();
+
+        // Sample data (in reality, you would fetch this from an API)
+        const financialData = [
+            { year: '2019', revenue: 256598, netIncome: 55256, grossProfit: 98392, ebitda: 76477,
+              cogs: 180027, rnd: 16217, sga: 18245, depreciation: 11300, tax: 10481 },
+            { year: '2020', revenue: 271642, netIncome: 57411, grossProfit: 104956, ebitda: 77344,
+              cogs: 189475, rnd: 18752, sga: 19916, depreciation: 9700, tax: 9680 },
+            { year: '2021', revenue: 363172, netIncome: 94680, grossProfit: 152836, ebitda: 120233,
+              cogs: 234954, rnd: 21914, sga: 21973, depreciation: 9500, tax: 14527 },
+            { year: '2022', revenue: 391397, netIncome: 99803, grossProfit: 170782, ebitda: 130541,
+              cogs: 248640, rnd: 26251, sga: 25094, depreciation: 8700, tax: 19300 },
+            { year: '2023', revenue: 379352, netIncome: 96995, grossProfit: 169148, ebitda: 125820,
+              cogs: 239069, rnd: 29915, sga: 24932, depreciation: 8500, tax: 16741 },
+            { year: '2024', revenue: 391035, netIncome: 93736, grossProfit: 180683, ebitda: 134661, 
+              cogs: 236449, rnd: 31370, sga: 26097, depreciation: 8200, tax: 29749 }
+        ];
+
+        // Calculate margins
+        financialData.forEach(item => {
+            item.grossMargin = (item.grossProfit / item.revenue * 100).toFixed(1);
+            item.netMargin = (item.netIncome / item.revenue * 100).toFixed(1);
+            item.ebitdaMargin = (item.ebitda / item.revenue * 100).toFixed(1);
+        });
+
+        // Populate table
+        const tableBody = document.querySelector('tbody');
+        financialData.forEach(item => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${item.year}</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">$${(item.revenue / 1000).toLocaleString()}B</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">$${(item.netIncome / 1000).toLocaleString()}B</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">$${(item.grossProfit / 1000).toLocaleString()}B</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">$${(item.ebitda / 1000).toLocaleString()}B</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${item.grossMargin}%</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${item.netMargin}%</td>
+            `;
+            tableBody.appendChild(row);
+        });
+
+        // Mini Charts
+        const miniChartOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false },
+                tooltip: { enabled: false }
+            },
+            scales: {
+                x: { display: false },
+                y: { display: false }
+            },
+            elements: {
+                line: {
+                    borderWidth: 2,
+                    tension: 0.4
+                },
+                point: { radius: 0 }
+            }
+        };
+
+        // Revenue Mini Chart
+        const revenueCtx = document.getElementById('revenueChart').getContext('2d');
+        new Chart(revenueCtx, {
+            type: 'line',
+            data: {
+                labels: financialData.map(item => item.year),
+                datasets: [{
+                    data: financialData.map(item => item.revenue / 1000),
+                    borderColor: '#6366f1',
+                    backgroundColor: 'rgba(99,102,241,0.15)',
+                    fill: true
+                }]
+            },
+            options: miniChartOptions
+        });
+
+        // Net Income Mini Chart
+        const incomeCtx = document.getElementById('incomeChart').getContext('2d');
+        new Chart(incomeCtx, {
+            type: 'line',
+            data: {
+                labels: financialData.map(item => item.year),
+                datasets: [{
+                    data: financialData.map(item => item.netIncome / 1000),
+                    borderColor: '#10b981',
+                    backgroundColor: 'rgba(16,185,129,0.15)',
+                    fill: true
+                }]
+            },
+            options: miniChartOptions
+        });
+
+        // Gross Margin Mini Chart
+        const marginCtx = document.getElementById('marginChart').getContext('2d');
+        new Chart(marginCtx, {
+            type: 'line',
+            data: {
+                labels: financialData.map(item => item.year),
+                datasets: [{
+                    data: financialData.map(item => item.grossMargin),
+                    borderColor: '#8b5cf6',
+                    backgroundColor: 'rgba(139,92,246,0.15)',
+                    fill: true
+                }]
+            },
+            options: miniChartOptions
+        });
+
+        // EBITDA Mini Chart
+        const ebitdaCtx = document.getElementById('ebitdaChart').getContext('2d');
+        new Chart(ebitdaCtx, {
+            type: 'line',
+            data: {
+                labels: financialData.map(item => item.year),
+                datasets: [{
+                    data: financialData.map(item => item.ebitda / 1000),
+                    borderColor: '#f59e0b',
+                    backgroundColor: 'rgba(245,158,11,0.15)',
+                    fill: true
+                }]
+            },
+            options: miniChartOptions
+        });
+
+        // Revenue & Income Chart
+        const revenueIncomeCtx = document.getElementById('revenueIncomeChart').getContext('2d');
+        new Chart(revenueIncomeCtx, {
+            type: 'bar',
+            data: {
+                labels: financialData.map(item => item.year),
+                datasets: [
+                    {
+                        label: 'Revenue',
+                        data: financialData.map(item => item.revenue / 1000),
+                        backgroundColor: 'rgba(99,102,241,0.55)',
+                        borderColor: '#6366f1',
+                        borderWidth: 1,
+                        yAxisID: 'y'
+                    },
+                    {
+                        label: 'Net Income',
+                        data: financialData.map(item => item.netIncome / 1000),
+                        backgroundColor: 'rgba(16,185,129,0.65)',
+                        borderColor: '#10b981',
+                        borderWidth: 2,
+                        type: 'line',
+                        yAxisID: 'y'
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: { display: false },
+                    legend: { 
+                        position: 'top',
+                        labels: {
+                            boxWidth: 12,
+                            padding: 20
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return `${context.dataset.label}: $${context.raw.toLocaleString()}B`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Amount (in Billions USD)'
+                        }
+                    }
+                }
+            }
+        });
+
+        // Margins Chart
+        const marginsCtx = document.getElementById('marginsChart').getContext('2d');
+        new Chart(marginsCtx, {
+            type: 'line',
+            data: {
+                labels: financialData.map(item => item.year),
+                datasets: [
+                    {
+                        label: 'Gross Margin',
+                        data: financialData.map(item => item.grossMargin),
+                        borderColor: '#6366f1',
+                        backgroundColor: 'rgba(99,102,241,0.12)',
+                        borderWidth: 2,
+                        tension: 0.4,
+                        fill: true
+                    },
+                    {
+                        label: 'EBITDA Margin',
+                        data: financialData.map(item => item.ebitdaMargin),
+                        borderColor: '#f59e0b',
+                        backgroundColor: 'rgba(245,158,11,0.12)',
+                        borderWidth: 2,
+                        tension: 0.4,
+                        fill: true
+                    },
+                    {
+                        label: 'Net Margin',
+                        data: financialData.map(item => item.netMargin),
+                        borderColor: '#8b5cf6',
+                        backgroundColor: 'rgba(139,92,246,0.12)',
+                        borderWidth: 2,
+                        tension: 0.4,
+                        fill: true
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: { display: false },
+                    legend: { 
+                        position: 'top',
+                        labels: {
+                            boxWidth: 12,
+                            padding: 20
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return `${context.dataset.label}: ${context.raw}%`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Margin (%)'
+                        }
+                    }
+                }
+            }
+        });
+
+        // Expense Chart
+        const expenseCtx = document.getElementById('expenseChart').getContext('2d');
+        new Chart(expenseCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['COGS', 'R&D', 'SG&A', 'Depreciation', 'Tax', 'Net Income'],
+                datasets: [{
+                    data: [
+                        financialData[0].cogs / financialData[0].revenue * 100,
+                        financialData[0].rnd / financialData[0].revenue * 100,
+                        financialData[0].sga / financialData[0].revenue * 100,
+                        financialData[0].depreciation / financialData[0].revenue * 100,
+                        financialData[0].tax / financialData[0].revenue * 100,
+                        financialData[0].netIncome / financialData[0].revenue * 100
+                    ],
+                    backgroundColor: [
+                        'rgba(220,38,38,0.7)',
+                        'rgba(6,182,212,0.7)',
+                        'rgba(245,158,11,0.7)',
+                        'rgba(139,92,246,0.7)',
+                        'rgba(236,72,153,0.7)',
+                        'rgba(16,185,129,0.7)'
+                    ],
+                    borderColor: [
+                        'rgba(220,38,38,1)',
+                        'rgba(6,182,212,1)',
+                        'rgba(245,158,11,1)',
+                        'rgba(139,92,246,1)',
+                        'rgba(236,72,153,1)',
+                        'rgba(16,185,129,1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'right',
+                        labels: {
+                            padding: 20,
+                            boxWidth: 12,
+                            font: {
+                                size: 12
+                            }
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return `${context.label}: ${context.raw.toFixed(1)}%`;
+                            }
+                        }
+                    }
+                },
+                cutout: '70%'
+            }
+        });
+
+        // Efficiency Chart
+        const efficiencyCtx = document.getElementById('efficiencyChart').getContext('2d');
+        new Chart(efficiencyCtx, {
+            type: 'bar',
+            data: {
+                labels: financialData.map(item => item.year),
+                datasets: [
+                    {
+                        label: 'COGS %',
+                        data: financialData.map(item => item.cogs / item.revenue * 100),
+                        backgroundColor: 'rgba(220,38,38,0.65)'
+                    },
+                    {
+                        label: 'R&D %',
+                        data: financialData.map(item => item.rnd / item.revenue * 100),
+                        backgroundColor: 'rgba(99,102,241,0.65)'
+                    },
+                    {
+                        label: 'SG&A %',
+                        data: financialData.map(item => item.sga / item.revenue * 100),
+                        backgroundColor: 'rgba(245,158,11,0.65)'
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: { display: false },
+                    legend: { 
+                        position: 'top',
+                        labels: {
+                            boxWidth: 12,
+                            padding: 20
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return `${context.dataset.label}: ${context.raw.toFixed(1)}%`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: '% of Revenue'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
