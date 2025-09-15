@@ -26,6 +26,8 @@
             --accent-rose:#fb7185;
             --accent-cyan:#06b6d4;
             --accent-pink:#ec4899;
+            --bg-card-light:#253246;
+            --ring-accent:linear-gradient(140deg,#6366f180, #10b98140, #8b5cf640);
         }
         body.mystic {
             background: radial-gradient(circle at 20% 25%, #15253b 0%, #0f172a 55%, #0b1120 100%);
@@ -43,10 +45,56 @@
             backdrop-filter: blur(8px);
         }
         /* Card & surfaces */
-        .bg-white { background-color: var(--bg-card) !important; }
+        .bg-white {
+            background:
+              linear-gradient(160deg, var(--bg-card-light) 0%, var(--bg-card) 65%) !important;
+            position:relative;
+            border:1px solid rgba(255,255,255,0.06);
+        }
+        .bg-white::after {
+            content:"";
+            position:absolute;
+            inset:0;
+            pointer-events:none;
+            background:
+              linear-gradient(100deg, rgba(255,255,255,0.07), transparent 55%);
+            mix-blend-mode:overlay;
+            opacity:.55;
+        }
         .shadow-md { box-shadow: 0 4px 18px -4px rgba(0,0,0,0.55), 0 2px 6px -2px rgba(0,0,0,0.6); }
+        .card-hover {
+            transition:transform .55s cubic-bezier(.22,.99,.32,1), box-shadow .55s;
+            overflow:hidden;
+        }
+        .card-hover::before,
+        .card-hover::after {
+            content:"";
+            position:absolute;
+            inset:-1px;
+            border-radius:inherit;
+            pointer-events:none;
+            opacity:0;
+            transition:opacity .6s;
+        }
+        .card-hover::before {
+            background:var(--ring-accent);
+            filter:blur(22px);
+        }
+        .card-hover::after {
+            background:
+              conic-gradient(from 0deg at 50% 50%, rgba(99,102,241,.35), rgba(16,185,129,0.0), rgba(139,92,246,.35), rgba(16,185,129,0.0), rgba(99,102,241,.35));
+            animation:ringSpin 9s linear infinite;
+            mix-blend-mode:color-dodge;
+        }
+        @keyframes ringSpin {
+            to { transform:rotate(360deg); }
+        }
         .card-hover:hover {
-            box-shadow: 0 14px 35px -6px rgba(0,0,0,0.75), 0 6px 14px -4px rgba(0,0,0,0.6);
+            transform:translateY(-6px) scale(1.012);
+        }
+        .card-hover:hover::before,
+        .card-hover:hover::after {
+            opacity:1;
         }
         /* Text overrides */
         .text-gray-800 { color: var(--text-primary) !important; }
@@ -64,8 +112,61 @@
         .trend-up { color: var(--accent-emerald); }
         .trend-down { color: var(--accent-rose); }
         /* Tables */
-        thead.bg-gray-50 { background: var(--bg-card-alt) !important; }
+        thead.bg-gray-50 {
+            background:linear-gradient(145deg,#2b3a50,#253246) !important;
+        }
         tbody tr:hover { background: rgba(255,255,255,0.03); }
+        /* Ambient subtle animated glow layer */
+        body.mystic::after {
+            content:"";
+            position:fixed;
+            inset:0;
+            pointer-events:none;
+            background:
+              radial-gradient(circle at 80% 20%, rgba(99,102,241,0.12), transparent 60%),
+              radial-gradient(circle at 15% 75%, rgba(16,185,129,0.10), transparent 55%);
+            mix-blend-mode:screen;
+            animation: ambientShift 18s linear infinite;
+            opacity:.9;
+        }
+        @keyframes ambientShift {
+            0% { transform:translate3d(0,0,0); }
+            50% { transform:translate3d(0,-12px,0); }
+            100% { transform:translate3d(0,0,0); }
+        }
+        /* Compact spacing adjustments */
+        main.container.py-8 { padding-top:1.5rem !important; padding-bottom:1.5rem !important; }
+        section.mb-12 { margin-bottom:2.5rem !important; } /* mb-10 feel */
+        .grid.gap-8 { gap:1.5rem !important; } /* gap-6 */
+        .p-6 { padding:1.25rem !important; } /* p-5 */
+        /* Table refinements */
+        thead.bg-gray-50 {
+            background:linear-gradient(145deg,#2b3a50,#253246) !important;
+        }
+        table tbody tr td { padding-top:.65rem !important; padding-bottom:.65rem !important; }
+        table tbody tr { transition:background .3s; }
+        /* Canvas subtle pop */
+        .h-80 canvas, #revenueChart, #incomeChart, #marginChart, #ebitdaChart {
+            filter:drop-shadow(0 4px 8px rgba(0,0,0,0.35));
+        }
+        /* Buttons refinement */
+        button.bg-blue-100,
+        button.bg-gray-100 {
+            backdrop-filter:blur(4px);
+            border:1px solid rgba(255,255,255,0.07);
+            transition:background .35s, transform .4s;
+        }
+        button.bg-blue-100:hover,
+        button.bg-gray-100:hover {
+            background:rgba(99,102,241,0.25) !important;
+            transform:translateY(-2px);
+        }
+        /* Soft divider lines lighten */
+        .border-gray-200 { border-color:rgba(255,255,255,0.09) !important; }
+        .divide-gray-200 > :not([hidden]) ~ :not([hidden]) {
+            --tw-divide-opacity:1;
+            border-color:rgba(255,255,255,0.07);
+        }
     </style>
 </head>
 <body class="mystic font-sans antialiased grid-bg">
@@ -94,7 +195,7 @@
                 </h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     <!-- Revenue Card -->
-                    <div class="bg-white rounded-xl shadow-md p-6 transition-all duration-300 card-hover" data-aos="fade-up">
+                    <div class="bg-white rounded-xl shadow-md p-5 transition-all duration-300 card-hover" data-aos="fade-up">
                         <div class="flex justify-between items-start">
                             <div>
                                 <p class="text-gray-500 text-sm font-medium">Total Revenue (2024)</p>
@@ -116,7 +217,7 @@
                     </div>
 
                     <!-- Net Income Card -->
-                    <div class="bg-white rounded-xl shadow-md p-6 transition-all duration-300 card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-white rounded-xl shadow-md p-5 transition-all duration-300 card-hover" data-aos="fade-up" data-aos-delay="100">
                         <div class="flex justify-between items-start">
                             <div>
                                 <p class="text-gray-500 text-sm font-medium">Net Income (2024)</p>
@@ -138,7 +239,7 @@
                     </div>
 
                     <!-- Gross Margin Card -->
-                    <div class="bg-white rounded-xl shadow-md p-6 transition-all duration-300 card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-white rounded-xl shadow-md p-5 transition-all duration-300 card-hover" data-aos="fade-up" data-aos-delay="200">
                         <div class="flex justify-between items-start">
                             <div>
                                 <p class="text-gray-500 text-sm font-medium">Gross Margin (2024)</p>
@@ -160,7 +261,7 @@
                     </div>
 
                     <!-- EBITDA Card -->
-                    <div class="bg-white rounded-xl shadow-md p-6 transition-all duration-300 card-hover" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-white rounded-xl shadow-md p-5 transition-all duration-300 card-hover" data-aos="fade-up" data-aos-delay="300">
                         <div class="flex justify-between items-start">
                             <div>
                                 <p class="text-gray-500 text-sm font-medium">EBITDA (2024)</p>
