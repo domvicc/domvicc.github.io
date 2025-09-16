@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.AOS.init();
   }
 
-  // ----- candlestick data (source values preserved) -----
+  // ----- candlestick data -----
   const candlestickData = [
     { t: new Date('2025-08-18'), o: 231.7,   h: 233.12, l: 230.11,  c: 230.89 },
     { t: new Date('2025-08-15'), o: 234,     h: 234.28, l: 229.335, c: 231.59 },
@@ -44,10 +44,11 @@ document.addEventListener('DOMContentLoaded', () => {
     { t: new Date('2025-07-08'), o: 210.1,   h: 211.43, l: 208.45,  c: 210.01 }
   ];
 
+  // sort ascending by date (oldest -> newest)
+  candlestickData.sort((a, b) => a.t - b.t);
+
   // transform to plugin format {x, o, h, l, c}
-  const ohlcData = candlestickData.map(d => ({
-    x: d.t, o: d.o, h: d.h, l: d.l, c: d.c
-  }));
+  const ohlcData = candlestickData.map(d => ({ x: d.t, o: d.o, h: d.h, l: d.l, c: d.c }));
 
   // ----- candlestick chart -----
   const candleCtx = document.getElementById('candlestickChart').getContext('2d');
@@ -55,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
     type: 'candlestick',
     data: {
       datasets: [{
-        label: 'AAPL',
+        label: 'aapl',
         data: ohlcData,
         color: { up: '#10b981', down: '#ef4444', unchanged: '#9ca3af' }
       }]
@@ -63,10 +64,11 @@ document.addEventListener('DOMContentLoaded', () => {
     options: {
       responsive: true,
       maintainAspectRatio: false,
+      normalized: true,
       scales: {
         x: {
           type: 'time',
-          time: { unit: 'day' },
+          time: { unit: 'day', tooltipFormat: 'PP' },
           grid: { color: 'rgba(255, 255, 255, 0.1)' },
           ticks: { color: '#9ca3af' }
         },
@@ -79,12 +81,19 @@ document.addEventListener('DOMContentLoaded', () => {
         legend: { display: false },
         tooltip: {
           callbacks: {
-            label: function (context) {
+            // show the candle's date as the tooltip title
+            title: (items) => {
+              const d = items[0].raw.x;
+              return new Intl.DateTimeFormat('en-US', {
+                year: 'numeric', month: 'short', day: '2-digit'
+              }).format(new Date(d));
+            },
+            label: (context) => {
               const d = context.raw;
               return [
-                'open: $' + d.o.toFixed(2),
-                'high: $' + d.h.toFixed(2),
-                'low: $'  + d.l.toFixed(2),
+                'open: $'  + d.o.toFixed(2),
+                'high: $'  + d.h.toFixed(2),
+                'low: $'   + d.l.toFixed(2),
                 'close: $' + d.c.toFixed(2)
               ];
             }
@@ -102,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
       labels: ['Q1 2024', 'Q2 2024', 'Q3 2024', 'Q4 2024'],
       datasets: [
         {
-          label: 'Revenue (B)',
+          label: 'revenue (b)',
           data: [119.6, 94.8, 81.8, 89.5],
           backgroundColor: 'rgba(59, 130, 246, 0.7)',
           borderColor: 'rgba(59, 130, 246, 1)',
@@ -110,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
           yAxisID: 'y'
         },
         {
-          label: 'Net Income (B)',
+          label: 'net income (b)',
           data: [34.6, 24.2, 19.9, 15.0],
           backgroundColor: 'rgba(16, 185, 129, 0.7)',
           borderColor: 'rgba(16, 185, 129, 1)',
@@ -133,24 +142,21 @@ document.addEventListener('DOMContentLoaded', () => {
           position: 'left',
           grid: { color: 'rgba(255, 255, 255, 0.1)' },
           ticks: { color: '#9ca3af' },
-          title: { display: true, text: 'Revenue ($B)', color: '#9ca3af' }
+          title: { display: true, text: 'revenue ($b)', color: '#9ca3af' }
         },
         y1: {
           type: 'linear',
           position: 'right',
           grid: { drawOnChartArea: false, color: 'rgba(255, 255, 255, 0.1)' },
           ticks: { color: '#9ca3af' },
-          title: { display: true, text: 'Net Income ($B)', color: '#9ca3af' }
+          title: { display: true, text: 'net income ($b)', color: '#9ca3af' }
         }
       },
       plugins: {
-        legend: {
-          position: 'top',
-          labels: { color: '#f3f4f6' }
-        },
+        legend: { position: 'top', labels: { color: '#f3f4f6' } },
         tooltip: {
           callbacks: {
-            label: function (context) {
+            label: (context) => {
               let label = context.dataset.label ? context.dataset.label + ': ' : '';
               if (context.parsed.y !== null) {
                 label += new Intl.NumberFormat('en-US', {
@@ -158,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
                   currency: 'USD',
                   minimumFractionDigits: 1,
                   maximumFractionDigits: 1
-                }).format(context.parsed.y) + 'B';
+                }).format(context.parsed.y) + 'b';
               }
               return label;
             }
