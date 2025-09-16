@@ -1,0 +1,9 @@
+/* candlestick coloring helpers (if needed elsewhere) */
+.candle-up { fill: #10b981; stroke: #10b981; }
+.candle-down { fill: #ef4444; stroke: #ef4444; }
+.wick-up { stroke: #10b981; }
+.wick-down { stroke: #ef4444; }
+
+/* hide scrollbars on supporting browsers */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
