@@ -56,48 +56,137 @@ document.addEventListener('DOMContentLoaded', () => {
     type: 'candlestick',
     data: {
       datasets: [{
-        label: 'aapl',
+        label: 'AAPL',
         data: ohlcData,
-        color: { up: '#10b981', down: '#ef4444', unchanged: '#9ca3af' }
+        color: { 
+          up: '#00d4aa', 
+          down: '#ff6b6b', 
+          unchanged: '#64748b' 
+        },
+        borderColor: {
+          up: '#00d4aa',
+          down: '#ff6b6b',
+          unchanged: '#64748b'
+        },
+        borderWidth: 1,
+        borderSkipped: false
       }]
     },
     options: {
       responsive: true,
       maintainAspectRatio: false,
       normalized: true,
+      interaction: {
+        intersect: false,
+        mode: 'index'
+      },
       scales: {
         x: {
           type: 'time',
-          time: { unit: 'day', tooltipFormat: 'PP' },
-          grid: { color: 'rgba(255, 255, 255, 0.1)' },
-          ticks: { color: '#9ca3af' }
+          time: { 
+            unit: 'day', 
+            tooltipFormat: 'MMM dd, yyyy',
+            displayFormats: {
+              day: 'MMM dd',
+              week: 'MMM dd',
+              month: 'MMM yyyy'
+            }
+          },
+          grid: { 
+            color: 'rgba(148, 163, 184, 0.1)',
+            drawBorder: false,
+            lineWidth: 1
+          },
+          ticks: { 
+            color: '#94a3b8',
+            font: {
+              size: 11,
+              family: 'Inter, system-ui, sans-serif'
+            },
+            maxTicksLimit: 8,
+            padding: 8
+          },
+          border: {
+            display: false
+          }
         },
         y: {
-          grid: { color: 'rgba(255, 255, 255, 0.1)' },
-          ticks: { color: '#9ca3af' }
+          position: 'right',
+          grid: { 
+            color: 'rgba(148, 163, 184, 0.1)',
+            drawBorder: false,
+            lineWidth: 1
+          },
+          ticks: { 
+            color: '#94a3b8',
+            font: {
+              size: 11,
+              family: 'Inter, system-ui, sans-serif'
+            },
+            padding: 8,
+            callback: function(value) {
+              return '$' + value.toFixed(2);
+            }
+          },
+          border: {
+            display: false
+          }
         }
       },
       plugins: {
-        legend: { display: false },
+        legend: { 
+          display: false 
+        },
         tooltip: {
+          backgroundColor: 'rgba(15, 23, 42, 0.95)',
+          titleColor: '#f1f5f9',
+          bodyColor: '#cbd5e1',
+          borderColor: 'rgba(148, 163, 184, 0.2)',
+          borderWidth: 1,
+          cornerRadius: 8,
+          padding: 12,
+          titleFont: {
+            size: 13,
+            weight: '600',
+            family: 'Inter, system-ui, sans-serif'
+          },
+          bodyFont: {
+            size: 12,
+            family: 'Inter, system-ui, sans-serif'
+          },
+          displayColors: false,
           callbacks: {
-            // show the candle's date as the tooltip title
             title: (items) => {
               const d = items[0].raw.x;
               return new Intl.DateTimeFormat('en-US', {
-                year: 'numeric', month: 'short', day: '2-digit'
+                weekday: 'short',
+                year: 'numeric', 
+                month: 'short', 
+                day: '2-digit'
               }).format(new Date(d));
             },
             label: (context) => {
               const d = context.raw;
+              const change = d.c - d.o;
+              const changePercent = ((change / d.o) * 100).toFixed(2);
+              const changeColor = change >= 0 ? '#00d4aa' : '#ff6b6b';
+              const changeSymbol = change >= 0 ? '+' : '';
+              
               return [
-                'open: $'  + d.o.toFixed(2),
-                'high: $'  + d.h.toFixed(2),
-                'low: $'   + d.l.toFixed(2),
-                'close: $' + d.c.toFixed(2)
+                `Open: $${d.o.toFixed(2)}`,
+                `High: $${d.h.toFixed(2)}`,
+                `Low: $${d.l.toFixed(2)}`,
+                `Close: $${d.c.toFixed(2)}`,
+                `Change: ${changeSymbol}$${change.toFixed(2)} (${changeSymbol}${changePercent}%)`
               ];
             }
           }
+        }
+      },
+      elements: {
+        point: {
+          radius: 0,
+          hoverRadius: 6
         }
       }
     }

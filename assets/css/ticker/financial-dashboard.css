@@ -1,9 +1,86 @@
-/* candlestick coloring helpers (if needed elsewhere) */
-.candle-up { fill: #10b981; stroke: #10b981; }
-.candle-down { fill: #ef4444; stroke: #ef4444; }
-.wick-up { stroke: #10b981; }
-.wick-down { stroke: #ef4444; }
+/* Professional candlestick chart styling */
+.candlestick-container {
+  position: relative;
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.1) 0%, rgba(15, 23, 42, 0.05) 100%);
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.1);
+}
 
-/* hide scrollbars on supporting browsers */
+.candlestick-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 212, 170, 0.02) 0%, rgba(255, 107, 107, 0.02) 100%);
+  border-radius: 12px;
+  pointer-events: none;
+}
+
+/* Chart canvas improvements */
+#candlestickChart {
+  border-radius: 8px;
+  background: transparent;
+}
+
+/* Enhanced tooltip styling */
+.chartjs-tooltip {
+  backdrop-filter: blur(8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Candlestick coloring helpers */
+.candle-up { 
+  fill: #00d4aa; 
+  stroke: #00d4aa; 
+  stroke-width: 1;
+}
+.candle-down { 
+  fill: #ff6b6b; 
+  stroke: #ff6b6b; 
+  stroke-width: 1;
+}
+.wick-up { 
+  stroke: #00d4aa; 
+  stroke-width: 1.5;
+}
+.wick-down { 
+  stroke: #ff6b6b; 
+  stroke-width: 1.5;
+}
+
+/* Chart hover effects */
+.chart-container:hover {
+  transform: translateY(-1px);
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Professional grid styling */
+.chart-grid {
+  stroke: rgba(148, 163, 184, 0.08);
+  stroke-width: 1;
+}
+
+/* Hide scrollbars on supporting browsers */
 .scrollbar-hide::-webkit-scrollbar { display: none; }
 .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Responsive chart improvements */
+@media (max-width: 768px) {
+  .candlestick-container {
+    padding: 12px;
+  }
+  
+  #candlestickChart {
+    border-radius: 6px;
+  }
+}
+
+/* Dark theme enhancements */
+@media (prefers-color-scheme: dark) {
+  .candlestick-container {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.2) 0%, rgba(15, 23, 42, 0.1) 100%);
+  }
+}

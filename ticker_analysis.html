@@ -190,18 +190,21 @@
           <!-- charts row -->
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
             <!-- candlestick -->
-            <div class="lg:col-span-2 bg-gray-800 rounded-xl p-5 border border-gray-700">
+            <div class="lg:col-span-2 bg-gray-800 rounded-xl p-5 border border-gray-700 candlestick-container">
               <div class="flex justify-between items-center mb-4">
-                <h3 class="font-semibold">AAPL Daily Price (Last 60 Days)</h3>
+                <div>
+                  <h3 class="font-semibold text-lg">AAPL Daily Price Chart</h3>
+                  <p class="text-sm text-gray-400 mt-1">Last 60 trading days</p>
+                </div>
                 <div class="flex space-x-2">
-                  <button class="px-3 py-1 text-xs bg-gray-700 rounded-lg">1M</button>
-                  <button class="px-3 py-1 text-xs bg-blue-600 rounded-lg">3M</button>
-                  <button class="px-3 py-1 text-xs bg-gray-700 rounded-lg">6M</button>
-                  <button class="px-3 py-1 text-xs bg-gray-700 rounded-lg">1Y</button>
+                  <button class="px-3 py-1 text-xs bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors">1M</button>
+                  <button class="px-3 py-1 text-xs bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors">3M</button>
+                  <button class="px-3 py-1 text-xs bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors">6M</button>
+                  <button class="px-3 py-1 text-xs bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors">1Y</button>
                 </div>
               </div>
-              <div class="h-80">
-                <canvas id="candlestickChart"></canvas>
+              <div class="h-80 relative">
+                <canvas id="candlestickChart" class="chart-container"></canvas>
               </div>
             </div>
 
