@@ -190,17 +190,38 @@
           <!-- charts row -->
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
             <!-- candlestick -->
-            <div class="lg:col-span-2 bg-gray-800 rounded-xl p-5 border border-gray-700 candlestick-container">
-              <div class="flex justify-between items-center mb-4">
-                <div>
-                  <h3 class="font-semibold text-lg">AAPL Daily Price Chart</h3>
-                  <p class="text-sm text-gray-400 mt-1">Last 60 trading days</p>
+            <div class="lg:col-span-2 candlestick-container">
+              <div class="flex justify-between items-center p-3 bg-gray-800 border-b border-gray-700">
+                <div class="flex items-center space-x-4">
+                  <div>
+                    <h3 class="font-semibold text-white">AAPL Apple Inc</h3>
+                    <div class="flex items-center space-x-4 text-sm text-gray-300">
+                      <span>O: 231.70</span>
+                      <span>H: 233.12</span>
+                      <span>L: 230.11</span>
+                      <span>C: 230.89</span>
+                      <span class="text-red-400">-0.12 (-0.05%)</span>
+                    </div>
+                  </div>
                 </div>
-                <div class="flex space-x-2">
-                  <button class="px-3 py-1 text-xs bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors">1M</button>
-                  <button class="px-3 py-1 text-xs bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors">3M</button>
-                  <button class="px-3 py-1 text-xs bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors">6M</button>
-                  <button class="px-3 py-1 text-xs bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors">1Y</button>
+                <div class="flex items-center space-x-4">
+                  <div class="text-sm text-gray-300">
+                    <span>MA MA5 230.45</span>
+                  </div>
+                  <div class="flex space-x-1">
+                    <button class="px-2 py-1 text-xs bg-gray-700 text-white rounded">1D</button>
+                    <button class="px-2 py-1 text-xs bg-gray-700 text-white rounded">5D</button>
+                    <button class="px-2 py-1 text-xs bg-blue-600 text-white rounded">1M</button>
+                  </div>
+                  <div class="flex space-x-1">
+                    <button class="px-2 py-1 text-xs bg-gray-700 text-white rounded">1m</button>
+                    <button class="px-2 py-1 text-xs bg-gray-700 text-white rounded">5m</button>
+                    <button class="px-2 py-1 text-xs bg-gray-700 text-white rounded">30m</button>
+                    <button class="px-2 py-1 text-xs bg-gray-700 text-white rounded">1h</button>
+                    <button class="px-2 py-1 text-xs bg-gray-700 text-white rounded">D</button>
+                    <button class="px-2 py-1 text-xs bg-gray-700 text-white rounded">W</button>
+                    <button class="px-2 py-1 text-xs bg-gray-700 text-white rounded">M</button>
+                  </div>
                 </div>
               </div>
               <div class="h-80 relative">

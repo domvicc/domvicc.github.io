@@ -50,6 +50,34 @@ document.addEventListener('DOMContentLoaded', () => {
   // transform to plugin format {x, o, h, l, c}
   const ohlcData = candlestickData.map(d => ({ x: d.t, o: d.o, h: d.h, l: d.l, c: d.c }));
 
+  // Calculate moving average (5-period)
+  const calculateMA = (data, period) => {
+    const ma = [];
+    for (let i = 0; i < data.length; i++) {
+      if (i < period - 1) {
+        ma.push(null);
+      } else {
+        let sum = 0;
+        for (let j = 0; j < period; j++) {
+          sum += data[i - j].c;
+        }
+        ma.push(sum / period);
+      }
+    }
+    return ma;
+  };
+
+  const maData = calculateMA(ohlcData, 5).map((value, index) => ({
+    x: ohlcData[index].x,
+    y: value
+  })).filter(item => item.y !== null);
+
+  // Calculate volume data (simulated)
+  const volumeData = ohlcData.map(d => ({
+    x: d.x,
+    y: Math.random() * 10000000 + 5000000 // Simulated volume
+  }));
+
   // ----- candlestick chart -----
   const candleCtx = document.getElementById('candlestickChart').getContext('2d');
   new Chart(candleCtx, {
@@ -59,23 +87,35 @@ document.addEventListener('DOMContentLoaded', () => {
         label: 'AAPL',
         data: ohlcData,
         color: { 
-          up: '#00d4aa', 
-          down: '#ff6b6b', 
-          unchanged: '#64748b' 
+          up: '#26a69a', 
+          down: '#ef5350', 
+          unchanged: '#78909c' 
         },
         borderColor: {
-          up: '#00d4aa',
-          down: '#ff6b6b',
-          unchanged: '#64748b'
+          up: '#26a69a',
+          down: '#ef5350',
+          unchanged: '#78909c'
         },
-        borderWidth: 1,
+        borderWidth: 0,
         borderSkipped: false
+      }, {
+        label: 'MA5',
+        data: maData,
+        type: 'line',
+        borderColor: '#9c27b0',
+        backgroundColor: 'transparent',
+        borderWidth: 1,
+        pointRadius: 0,
+        pointHoverRadius: 0,
+        tension: 0,
+        fill: false
       }]
     },
     options: {
       responsive: true,
       maintainAspectRatio: false,
       normalized: true,
+      backgroundColor: '#000000',
       interaction: {
         intersect: false,
         mode: 'index'
@@ -85,26 +125,26 @@ document.addEventListener('DOMContentLoaded', () => {
           type: 'time',
           time: { 
             unit: 'day', 
-            tooltipFormat: 'MMM dd, yyyy',
+            tooltipFormat: 'MMM dd, HH:mm',
             displayFormats: {
               day: 'MMM dd',
-              week: 'MMM dd',
-              month: 'MMM yyyy'
+              hour: 'HH:mm',
+              minute: 'HH:mm'
             }
           },
           grid: { 
-            color: 'rgba(148, 163, 184, 0.1)',
+            color: 'rgba(255, 255, 255, 0.1)',
             drawBorder: false,
-            lineWidth: 1
+            lineWidth: 0.5
           },
           ticks: { 
-            color: '#94a3b8',
+            color: '#ffffff',
             font: {
-              size: 11,
-              family: 'Inter, system-ui, sans-serif'
+              size: 10,
+              family: 'Arial, sans-serif'
             },
-            maxTicksLimit: 8,
-            padding: 8
+            maxTicksLimit: 6,
+            padding: 4
           },
           border: {
             display: false
@@ -113,19 +153,19 @@ document.addEventListener('DOMContentLoaded', () => {
         y: {
           position: 'right',
           grid: { 
-            color: 'rgba(148, 163, 184, 0.1)',
+            color: 'rgba(255, 255, 255, 0.1)',
             drawBorder: false,
-            lineWidth: 1
+            lineWidth: 0.5
           },
           ticks: { 
-            color: '#94a3b8',
+            color: '#ffffff',
             font: {
-              size: 11,
-              family: 'Inter, system-ui, sans-serif'
+              size: 10,
+              family: 'Arial, sans-serif'
             },
-            padding: 8,
+            padding: 4,
             callback: function(value) {
-              return '$' + value.toFixed(2);
+              return value.toFixed(2);
             }
           },
           border: {
@@ -138,47 +178,45 @@ document.addEventListener('DOMContentLoaded', () => {
           display: false 
         },
         tooltip: {
-          backgroundColor: 'rgba(15, 23, 42, 0.95)',
-          titleColor: '#f1f5f9',
-          bodyColor: '#cbd5e1',
-          borderColor: 'rgba(148, 163, 184, 0.2)',
+          backgroundColor: 'rgba(0, 0, 0, 0.8)',
+          titleColor: '#ffffff',
+          bodyColor: '#ffffff',
+          borderColor: 'rgba(255, 255, 255, 0.2)',
           borderWidth: 1,
-          cornerRadius: 8,
-          padding: 12,
+          cornerRadius: 4,
+          padding: 8,
           titleFont: {
-            size: 13,
-            weight: '600',
-            family: 'Inter, system-ui, sans-serif'
+            size: 11,
+            weight: 'normal',
+            family: 'Arial, sans-serif'
           },
           bodyFont: {
-            size: 12,
-            family: 'Inter, system-ui, sans-serif'
+            size: 10,
+            family: 'Arial, sans-serif'
           },
           displayColors: false,
           callbacks: {
             title: (items) => {
               const d = items[0].raw.x;
               return new Intl.DateTimeFormat('en-US', {
-                weekday: 'short',
-                year: 'numeric', 
-                month: 'short', 
-                day: '2-digit'
+                month: 'short',
+                day: '2-digit',
+                hour: '2-digit',
+                minute: '2-digit'
               }).format(new Date(d));
             },
             label: (context) => {
-              const d = context.raw;
-              const change = d.c - d.o;
-              const changePercent = ((change / d.o) * 100).toFixed(2);
-              const changeColor = change >= 0 ? '#00d4aa' : '#ff6b6b';
-              const changeSymbol = change >= 0 ? '+' : '';
-              
-              return [
-                `Open: $${d.o.toFixed(2)}`,
-                `High: $${d.h.toFixed(2)}`,
-                `Low: $${d.l.toFixed(2)}`,
-                `Close: $${d.c.toFixed(2)}`,
-                `Change: ${changeSymbol}$${change.toFixed(2)} (${changeSymbol}${changePercent}%)`
-              ];
+              if (context.datasetIndex === 0) {
+                const d = context.raw;
+                return [
+                  `O: ${d.o.toFixed(2)}`,
+                  `H: ${d.h.toFixed(2)}`,
+                  `L: ${d.l.toFixed(2)}`,
+                  `C: ${d.c.toFixed(2)}`
+                ];
+              } else {
+                return `MA5: ${context.parsed.y.toFixed(2)}`;
+              }
             }
           }
         }
@@ -186,7 +224,7 @@ document.addEventListener('DOMContentLoaded', () => {
       elements: {
         point: {
           radius: 0,
-          hoverRadius: 6
+          hoverRadius: 4
         }
       }
     }

@@ -1,28 +1,21 @@
-/* Professional candlestick chart styling */
+/* Trading platform candlestick chart styling */
 .candlestick-container {
   position: relative;
-  background: linear-gradient(135deg, rgba(30, 41, 59, 0.1) 0%, rgba(15, 23, 42, 0.05) 100%);
-  border-radius: 12px;
-  padding: 16px;
-  border: 1px solid rgba(148, 163, 184, 0.1);
+  background: #000000;
+  border-radius: 0;
+  padding: 0;
+  border: 1px solid #333333;
+  overflow: hidden;
 }
 
 .candlestick-container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(0, 212, 170, 0.02) 0%, rgba(255, 107, 107, 0.02) 100%);
-  border-radius: 12px;
-  pointer-events: none;
+  display: none;
 }
 
 /* Chart canvas improvements */
 #candlestickChart {
-  border-radius: 8px;
-  background: transparent;
+  border-radius: 0;
+  background: #000000;
 }
 
 /* Enhanced tooltip styling */
@@ -31,24 +24,24 @@
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-/* Candlestick coloring helpers */
+/* Trading platform candlestick coloring */
 .candle-up { 
-  fill: #00d4aa; 
-  stroke: #00d4aa; 
-  stroke-width: 1;
+  fill: #26a69a; 
+  stroke: #26a69a; 
+  stroke-width: 0;
 }
 .candle-down { 
-  fill: #ff6b6b; 
-  stroke: #ff6b6b; 
-  stroke-width: 1;
+  fill: #ef5350; 
+  stroke: #ef5350; 
+  stroke-width: 0;
 }
 .wick-up { 
-  stroke: #00d4aa; 
-  stroke-width: 1.5;
+  stroke: #26a69a; 
+  stroke-width: 1;
 }
 .wick-down { 
-  stroke: #ff6b6b; 
-  stroke-width: 1.5;
+  stroke: #ef5350; 
+  stroke-width: 1;
 }
 
 /* Chart hover effects */
