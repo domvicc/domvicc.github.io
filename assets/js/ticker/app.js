@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Calculate optimal Y-axis range for default view (similar to zoom logic)
     const defaultYRange = (() => {
-      const defaultDays = 180; // Show last 6 months by default
+      const defaultDays = 90; // Show last 3 months by default for better detail
       const cutoffDate = new Date(last_date);
       cutoffDate.setDate(cutoffDate.getDate() - defaultDays);
       
@@ -145,9 +145,16 @@ document.addEventListener('DOMContentLoaded', () => {
       
       const yMin = Math.min(...visibleData.map(d => d.low));
       const yMax = Math.max(...visibleData.map(d => d.high));
-      const padding = (yMax - yMin) * 0.1;
+      const padding = (yMax - yMin) * 0.05; // Reduce padding for tighter view
       
       return { range: [yMin - padding, yMax + padding] };
+    })();
+    
+    // Set default X-axis range to match (last 3 months)
+    const defaultXRange = (() => {
+      const cutoffDate = new Date(last_date);
+      cutoffDate.setDate(cutoffDate.getDate() - 90);
+      return { range: [cutoffDate, last_date] };
     })();
     
     const layout={
@@ -158,7 +165,18 @@ document.addEventListener('DOMContentLoaded', () => {
       showlegend:true,
       legend:{orientation:'h',x:0,y:1.1},
       dragmode:'pan',
-      xaxis:{domain:[0,1],rangeslider:{visible:true,thickness:0.07,bgcolor:colors.paper,bordercolor:colors.border},rangeselector:{buttons:[{step:'month',stepmode:'backward',count:1,label:'1m'},{step:'month',stepmode:'backward',count:3,label:'3m'},{step:'month',stepmode:'backward',count:6,label:'6m'},{step:'year',stepmode:'todate',label:'ytd'},{step:'year',stepmode:'backward',count:1,label:'1y'},{step:'all',label:'all'}],bgcolor:colors.paper,activecolor:colors.accent,font:{color:colors.text}},showspikes:true,spikemode:'across',spikecolor:colors.muted,spikethickness:1,gridcolor:colors.grid,linecolor:colors.border},
+      xaxis:{
+        domain:[0,1],
+        rangeslider:{visible:true,thickness:0.07,bgcolor:colors.paper,bordercolor:colors.border},
+        rangeselector:{buttons:[{step:'month',stepmode:'backward',count:1,label:'1m'},{step:'month',stepmode:'backward',count:3,label:'3m'},{step:'month',stepmode:'backward',count:6,label:'6m'},{step:'year',stepmode:'todate',label:'ytd'},{step:'year',stepmode:'backward',count:1,label:'1y'},{step:'all',label:'all'}],bgcolor:colors.paper,activecolor:colors.accent,font:{color:colors.text}},
+        showspikes:true,
+        spikemode:'across',
+        spikecolor:colors.muted,
+        spikethickness:1,
+        gridcolor:colors.grid,
+        linecolor:colors.border,
+        ...defaultXRange
+      },
       yaxis:{
         domain:[0.28,1],
         side:'right',
