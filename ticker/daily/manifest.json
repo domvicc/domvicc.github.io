@@ -1,11 +1,20 @@
 {
   "tickers": [
+<<<<<<< HEAD
     "AAPL.json",
     "ABNB.json",
     "ADBE.json",
     "ADI.json",
     "AMGN.json",
     "AMZN.json",
+=======
+    "aapl",
+    "abnb",
+    "adbe",
+    "adi_daily",
+    "amgn_daily",
+    "amzn_daily",
+>>>>>>> accfde0f534f5765245008ddea1ea3c36007a85f
     "manifest"
   ]
 }
