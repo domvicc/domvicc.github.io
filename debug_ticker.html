@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticker Analysis Debug</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background: #1a1a1a; color: #fff; }
+        .debug-info { background: #2a2a2a; padding: 15px; margin: 10px 0; border-radius: 5px; }
+        .error { color: #ff6b6b; }
+        .success { color: #51cf66; }
+        .warning { color: #ffd43b; }
+        #console { background: #000; color: #0f0; font-family: monospace; padding: 15px; height: 300px; overflow-y: scroll; white-space: pre-wrap; }
+    </style>
+</head>
+<body>
+    <h1>Ticker Analysis Debug Tool</h1>
+    
+    <div class="debug-info">
+        <h3>Environment Info</h3>
+        <p><strong>Location:</strong> <span id="location"></span></p>
+        <p><strong>Protocol:</strong> <span id="protocol"></span></p>
+        <p><strong>Host:</strong> <span id="host"></span></p>
+        <p><strong>User Agent:</strong> <span id="userAgent"></span></p>
+    </div>
+
+    <div class="debug-info">
+        <h3>File Loading Test</h3>
+        <button onclick="testManifest()" style="padding: 10px; margin: 5px;">Test Manifest Loading</button>
+        <button onclick="testDataFiles()" style="padding: 10px; margin: 5px;">Test Data Files</button>
+        <button onclick="clearConsole()" style="padding: 10px; margin: 5px;">Clear Console</button>
+    </div>
+
+    <div class="debug-info">
+        <h3>Console Output</h3>
+        <div id="console"></div>
+    </div>
+
+    <script>
+        // Populate environment info
+        document.getElementById('location').textContent = window.location.href;
+        document.getElementById('protocol').textContent = window.location.protocol;
+        document.getElementById('host').textContent = window.location.host;
+        document.getElementById('userAgent').textContent = navigator.userAgent;
+
+        const consoleDiv = document.getElementById('console');
+        
+        function log(message, type = 'info') {
+            const timestamp = new Date().toISOString().substr(11, 12);
+            const className = type === 'error' ? 'error' : type === 'warn' ? 'warning' : type === 'success' ? 'success' : '';
+            consoleDiv.innerHTML += `<span class="${className}">[${timestamp}] ${message}</span>\n`;
+            consoleDiv.scrollTop = consoleDiv.scrollHeight;
+        }
+
+        function clearConsole() {
+            consoleDiv.innerHTML = '';
+        }
+
+        async function testManifest() {
+            log('Testing manifest.json loading...', 'info');
+            
+            try {
+                const response = await fetch('ticker/daily/manifest.json');
+                log(`Manifest fetch status: ${response.status} ${response.statusText}`, response.ok ? 'success' : 'error');
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    log(`Manifest data: ${JSON.stringify(data, null, 2)}`, 'success');
+                    return data;
+                } else {
+                    log(`Failed to load manifest: ${response.status}`, 'error');
+                    return null;
+                }
+            } catch (error) {
+                log(`Manifest loading error: ${error.message}`, 'error');
+                return null;
+            }
+        }
+
+        async function testDataFiles() {
+            log('Testing data file loading...', 'info');
+            
+            const manifest = await testManifest();
+            if (!manifest || !manifest.files) {
+                log('No manifest or files array found', 'error');
+                return;
+            }
+
+            for (const fileName of manifest.files) {
+                try {
+                    const url = `ticker/daily/${fileName}`;
+                    log(`Testing file: ${url}`, 'info');
+                    
+                    const response = await fetch(url);
+                    log(`${fileName} status: ${response.status} ${response.statusText}`, response.ok ? 'success' : 'error');
+                    
+                    if (response.ok) {
+                        const data = await response.json();
+                        if (Array.isArray(data)) {
+                            log(`${fileName} loaded: ${data.length} records`, 'success');
+                            
+                            // Check first record structure
+                            if (data.length > 0) {
+                                const firstRecord = data[0];
+                                log(`First record keys: ${Object.keys(firstRecord).join(', ')}`, 'info');
+                                if (firstRecord.ticker) {
+                                    log(`Ticker symbol: ${firstRecord.ticker}`, 'info');
+                                }
+                            }
+                        } else {
+                            log(`${fileName} unexpected format: not an array`, 'warning');
+                        }
+                    }
+                } catch (error) {
+                    log(`Error loading ${fileName}: ${error.message}`, 'error');
+                }
+            }
+        }
+
+        // Auto-run basic tests on page load
+        window.onload = function() {
+            log('Debug tool loaded. Click buttons to run tests.', 'info');
+            log('Environment: ' + (window.location.protocol === 'https:' ? 'GitHub Pages (HTTPS)' : 'Local Development (HTTP)'), 'info');
+        };
+    </script>
+</body>
+</html>

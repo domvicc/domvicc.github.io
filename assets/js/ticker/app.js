@@ -121,15 +121,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- discover json files ---
   const list_json_files=async(dirUrl)=>{
+    console.log('list_json_files: Trying to load from:', dirUrl);
     const tryManifests=async(name)=>{
-      try{const r=await fetch(dirUrl+name); if(!r.ok) return null; const m=await r.json();
+      console.log('tryManifests: Attempting to load:', dirUrl + name);
+      try{const r=await fetch(dirUrl+name); 
+        console.log('tryManifests: Fetch response for', name, '- Status:', r.status, r.ok ? 'OK' : 'FAILED');
+        if(!r.ok) return null; 
+        const m=await r.json();
+        console.log('tryManifests: Parsed JSON for', name, ':', m);
         if(Array.isArray(m)){const arr=m.map(x=>String(x)); return arr.map(x=>(/\.json$/i.test(x)?x:`${x}.json`));}
         if(Array.isArray(m.files)) return m.files.map(String);
         if(Array.isArray(m.tickers)) return m.tickers.map(t=>`${t}.json`);
         return null;
-      }catch(_){return null;}
+      }catch(e){console.error('tryManifests: Error loading', name, ':', e); return null;}
     };
-    for(const c of ['manifest.json','tickers.json','index.json','files.json']){ const files=await tryManifests(c); if(files&&files.length) return files; }
+    for(const c of ['manifest.json','tickers.json','index.json','files.json']){ 
+      console.log('list_json_files: Trying manifest file:', c);
+      const files=await tryManifests(c); 
+      if(files&&files.length) {
+        console.log('list_json_files: Found files in', c, ':', files);
+        return files;
+      }
+    }
     try{const r=await fetch(dirUrl); if(r.ok){const html=await r.text(); const doc=new DOMParser().parseFromString(html,'text/html');
         const hrefs=[...doc.querySelectorAll('a')].map(a=>a.getAttribute('href')||'').filter(h=>/\.json$/i.test(h)); return hrefs.map(h=>h.split('?')[0].split('#')[0]);}}catch(_){}
     return [];
@@ -142,17 +155,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const fetch_all_from_directory=async()=>{
     set_status('discovering data files…');
+    console.log('fetch_all_from_directory: Starting discovery from:', dir_url);
     const files=await list_json_files(dir_url);
     if(!files.length){ 
       console.error('No JSON files discovered. Tried manifest files:', ['manifest.json','tickers.json','index.json','files.json']);
+      console.error('Check if manifest.json exists at:', dir_url + 'manifest.json');
       set_status('No JSON files found in /ticker/daily. Check manifest.json exists and contains valid file list.'); 
       return new Map(); 
     }
+    console.log('fetch_all_from_directory: Found files to load:', files);
     set_status(`loading ${files.length} file${files.length!==1?'s':''}…`);
     const results=await pMap(files,async(fname)=>{
       const url=dir_url+fname;
-      try{const res=await fetch(url); if(!res.ok) throw new Error(`http ${res.status} - ${res.statusText}`); const j=await res.json();
+      console.log('fetch_all_from_directory: Loading file:', url);
+      try{const res=await fetch(url); 
+        console.log('fetch_all_from_directory: Fetch response for', fname, '- Status:', res.status, res.ok ? 'OK' : 'FAILED');
+        if(!res.ok) throw new Error(`http ${res.status} - ${res.statusText}`); 
+        const j=await res.json();
+        console.log('fetch_all_from_directory: JSON loaded for', fname, '- Records:', Array.isArray(j) ? j.length : 'Not an array');
         let parsed=parse_daily_json(j);
+        console.log('fetch_all_from_directory: Parsed data for', fname, '- Tickers found:', parsed.size);
         if(parsed.size===0 && Array.isArray(j)){ const sym=String(fname.replace(/\.json$/i,'')).toLowerCase(); const rows=j.map(normalize_row).filter(Boolean); if(rows.length) parsed.set(sym,rows); }
         return {fname,parsed};
       }catch(e){console.error('Failed to load ticker file:', fname, 'Error:', e); return {fname,error:e};}
