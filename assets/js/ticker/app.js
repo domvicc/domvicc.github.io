@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const url=dir_url+fname;
       try{const res=await fetch(url,{cache:'no-store'}); if(!res.ok) throw new Error('http '+res.status); const j=await res.json();
         let parsed=parse_daily_json(j);
-        if(parsed.size===0 && Array.isArray(j)){ const sym=String(fname.replace(/\\.json$/i,'')).toLowerCase(); const rows=j.map(normalize_row).filter(Boolean); if(rows.length) parsed.set(sym,rows); }
+        if(parsed.size===0 && Array.isArray(j)){ const sym=String(fname.replace(/\.json$/i,'')).toLowerCase(); const rows=j.map(normalize_row).filter(Boolean); if(rows.length) parsed.set(sym,rows); }
         return {fname,parsed};
       }catch(e){console.warn('failed',fname,e); return {fname,error:e};}
     },8);
