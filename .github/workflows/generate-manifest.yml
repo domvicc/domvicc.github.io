@@ -1,0 +1,33 @@
+name: Generate ticker manifest
+
+on:
+  push:
+    branches: [ main, master ]
+    paths:
+      - "ticker/daily/*.json"
+      - "scripts/build-manifest.mjs"
+      - ".github/workflows/generate-manifest.yml"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Generate manifest.json
+        run: node scripts/build-manifest.mjs
+
+      - name: Commit manifest.json
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update ticker manifest [skip ci]"
+          file_pattern: "ticker/daily/manifest.json"
