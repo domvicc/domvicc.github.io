@@ -1,14 +1,4 @@
 {
-<<<<<<< HEAD
-  "files": [
-    "AAPL.json",
-    "ABNB.json",
-    "ADBE.json",
-    "ADI_daily.json",
-    "AMGN_daily.json",
-    "AMZN_daily.json",
-    "META_daily.json"
-=======
   "tickers": [
     "aapl",
     "abnb",
@@ -17,6 +7,5 @@
     "amgn_daily",
     "amzn_daily",
     "manifest"
->>>>>>> 562d60e46facf802512f1e902820552ac4e7d455
   ]
 }
