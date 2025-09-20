@@ -1,13 +1,4 @@
 {
-<<<<<<< HEAD
-  "files": [
-    "AAPL.json",
-    "ABNB.json",
-    "ADBE.json",
-    "ADI.json",
-    "AMGN.json",
-    "AMZN.json"
-=======
   "tickers": [
     "aapl",
     "abnb",
@@ -16,6 +7,5 @@
     "amgn_daily",
     "amzn_daily",
     "manifest"
->>>>>>> 86dc5989f8423b5d8a89f459b18136bac0b1257f
   ]
 }
