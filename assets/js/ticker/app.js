@@ -131,6 +131,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const trace_ma20={type:'scatter',mode:'lines',name:'ma20',x:arrays.x,y:m20,line:{width:1.2,dash:'dot',color:colors.muted},yaxis:'y',visible:(el_ma20?.checked??true)?true:'legendonly',hovertemplate:'ma20: %{y:.2f}<extra></extra>'};
     const trace_volume={type:'bar',name:'volume',x:arrays.x,y:vol,marker:{color:vol_colors},yaxis:'y2',visible:(el_volume?.checked??true)?true:'legendonly',hovertemplate:'vol: %{y:,}<extra></extra>'};
     const last_close=arrays.c.at(-1), last_date=arrays.x.at(-1);
+    
+    // Calculate optimal Y-axis range for default view (similar to zoom logic)
+    const defaultYRange = (() => {
+      const defaultDays = 180; // Show last 6 months by default
+      const cutoffDate = new Date(last_date);
+      cutoffDate.setDate(cutoffDate.getDate() - defaultDays);
+      
+      const visibleData = arrays.h.map((high, i) => ({high, low: arrays.l[i], date: new Date(arrays.x[i])}))
+        .filter(d => d.date >= cutoffDate);
+      
+      if (visibleData.length === 0) return { autorange: true };
+      
+      const yMin = Math.min(...visibleData.map(d => d.low));
+      const yMax = Math.max(...visibleData.map(d => d.high));
+      const padding = (yMax - yMin) * 0.1;
+      
+      return { range: [yMin - padding, yMax + padding] };
+    })();
+    
     const layout={
       paper_bgcolor:colors.paper,
       plot_bgcolor:colors.plot,
@@ -140,7 +159,16 @@ document.addEventListener('DOMContentLoaded', () => {
       legend:{orientation:'h',x:0,y:1.1},
       dragmode:'pan',
       xaxis:{domain:[0,1],rangeslider:{visible:true,thickness:0.07,bgcolor:colors.paper,bordercolor:colors.border},rangeselector:{buttons:[{step:'month',stepmode:'backward',count:1,label:'1m'},{step:'month',stepmode:'backward',count:3,label:'3m'},{step:'month',stepmode:'backward',count:6,label:'6m'},{step:'year',stepmode:'todate',label:'ytd'},{step:'year',stepmode:'backward',count:1,label:'1y'},{step:'all',label:'all'}],bgcolor:colors.paper,activecolor:colors.accent,font:{color:colors.text}},showspikes:true,spikemode:'across',spikecolor:colors.muted,spikethickness:1,gridcolor:colors.grid,linecolor:colors.border},
-      yaxis:{domain:[0.28,1],side:'right',gridcolor:colors.grid,zerolinecolor:colors.grid,linecolor:colors.border,tickformat:',.2f',autorange:true,fixedrange:false},
+      yaxis:{
+        domain:[0.28,1],
+        side:'right',
+        gridcolor:colors.grid,
+        zerolinecolor:colors.grid,
+        linecolor:colors.border,
+        tickformat:',.2f',
+        fixedrange:false,
+        ...defaultYRange
+      },
       yaxis2:{domain:[0,0.2],side:'right',gridcolor:colors.grid,zerolinecolor:colors.grid,linecolor:colors.border,title:{text:'volume',font:{color:colors.muted,size:11}}},
       hovermode:'x unified',uirevision:`rev-${(el_ticker?.value||current_ticker||'aapl')}-${el_type?.value||'candlestick'}`,
       shapes:[{type:'line',xref:'x',yref:'y',x0:arrays.x[0],x1:last_date,y0:last_close,y1:last_close,line:{color:colors.muted,width:1,dash:'dot'}}],
