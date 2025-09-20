@@ -114,8 +114,8 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const download_csv=(rows,filename='ohlc.csv')=>{
-    const header='date,open,high,low,close\\n';
-    const body=rows.map(r=>{const iso=new Date(r.t).toISOString(); return `${iso.substring(0,10)},${r.o},${r.h},${r.l},${r.c}`;}).join('\\n');
+    const header='date,open,high,low,close\n';
+    const body=rows.map(r=>{const iso=new Date(r.t).toISOString(); return `${iso.substring(0,10)},${r.o},${r.h},${r.l},${r.c}`;}).join('\n');
     const blob=new Blob([header+body],{type:'text/csv;charset=utf-8;'}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=filename; a.click(); URL.revokeObjectURL(a.href);
   };
 
