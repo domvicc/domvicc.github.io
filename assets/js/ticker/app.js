@@ -194,9 +194,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const config={
       responsive:true,
       displaylogo:false,
-      scrollZoom:true,
-      modeBarButtonsToAdd:['v1hovermode','hovercompare','togglespikelines','toImage'],
-      toImageButtonOptions:{format:'png',filename:`${(el_ticker?.value||current_ticker||'aapl')}_chart`}
+      displayModeBar:false,
+      scrollZoom:true
     };
     if(!el_chart.dataset.rendered){
       Plotly.newPlot(el_chart,[trace_price,trace_ma5,trace_ma20,trace_volume],layout,config).then(()=>{
