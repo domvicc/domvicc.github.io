@@ -1,11 +1,11 @@
 {
   "tickers": [
-    "AAPL",
-    "ABNB",
-    "ADBE",
-    "ADI",
-    "AMGN",
-    "AMZN"
-  ],
-  "count": 6
+    "aapl_daily",
+    "abnb_daily",
+    "adbe_daily",
+    "adi_daily",
+    "amgn_daily",
+    "amzn_daily",
+    "manifest"
+  ]
 }
