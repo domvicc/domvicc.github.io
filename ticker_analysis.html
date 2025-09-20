@@ -4,28 +4,15 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>financial dashboard | domguardian.ai</title>
-
-  <!-- tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- aos (animate on scroll) -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-  <!-- feather icons -->
   <script src="https://unpkg.com/feather-icons"></script>
-
-  <!-- plotly.js -->
   <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
-
-  <!-- app styles (plotly theme + controls) -->
   <link rel="stylesheet" href="assets/css/ticker/styles.css" />
 </head>
-
 <body class="theme-dark bg-gray-900 text-gray-100 font-sans">
   <div class="min-h-screen flex flex-col">
-
-    <!-- header -->
     <header class="bg-gray-800 border-b border-gray-700 py-4 px-6">
       <div class="flex justify-between items-center">
         <div class="flex items-center space-x-4">
@@ -48,7 +35,6 @@
     </header>
 
     <div class="flex flex-1 overflow-hidden">
-      <!-- sidebar -->
       <aside class="w-64 bg-gray-800 border-r border-gray-700 flex-shrink-0 hidden md:block">
         <div class="p-4">
           <div class="flex items-center space-x-3 mb-8">
@@ -63,324 +49,106 @@
 
           <nav>
             <ul class="space-y-2">
-              <li>
-                <a href="#" class="flex items-center space-x-3 px-3 py-2 bg-gray-700 rounded-lg text-blue-400">
-                  <i data-feather="home"></i>
-                  <span>overview</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="flex items-center space-x-3 px-3 py-2 hover:bg-gray-700 rounded-lg hover:text-blue-400">
-                  <i data-feather="trending-up"></i>
-                  <span>market data</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="flex items-center space-x-3 px-3 py-2 hover:bg-gray-700 rounded-lg hover:text-blue-400">
-                  <i data-feather="dollar-sign"></i>
-                  <span>financials</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="flex items-center space-x-3 px-3 py-2 hover:bg-gray-700 rounded-lg hover:text-blue-400">
-                  <i data-feather="pie-chart"></i>
-                  <span>analysis</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="flex items-center space-x-3 px-3 py-2 hover:bg-gray-700 rounded-lg hover:text-blue-400">
-                  <i data-feather="file-text"></i>
-                  <span>reports</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="flex items-center space-x-3 px-3 py-2 hover:bg-gray-700 rounded-lg hover:text-blue-400">
-                  <i data-feather="bell"></i>
-                  <span>alerts</span>
-                </a>
-              </li>
+              <li><a href="#" class="flex items-center space-x-3 px-3 py-2 bg-gray-700 rounded-lg text-blue-400"><i data-feather="home"></i><span>overview</span></a></li>
+              <li><a href="#" class="flex items-center space-x-3 px-3 py-2 hover:bg-gray-700 rounded-lg hover:text-blue-400"><i data-feather="trending-up"></i><span>market data</span></a></li>
+              <li><a href="#" class="flex items-center space-x-3 px-3 py-2 hover:bg-gray-700 rounded-lg hover:text-blue-400"><i data-feather="dollar-sign"></i><span>financials</span></a></li>
+              <li><a href="#" class="flex items-center space-x-3 px-3 py-2 hover:bg-gray-700 rounded-lg hover:text-blue-400"><i data-feather="pie-chart"></i><span>analysis</span></a></li>
+              <li><a href="#" class="flex items-center space-x-3 px-3 py-2 hover:bg-gray-700 rounded-lg hover:text-blue-400"><i data-feather="file-text"></i><span>reports</span></a></li>
+              <li><a href="#" class="flex items-center space-x-3 px-3 py-2 hover:bg-gray-700 rounded-lg hover:text-blue-400"><i data-feather="bell"></i><span>alerts</span></a></li>
             </ul>
           </nav>
 
           <div class="mt-8 pt-4 border-t border-gray-700">
             <h3 class="text-xs uppercase font-semibold text-gray-400 mb-3">quick links</h3>
             <ul class="space-y-2">
-              <li>
-                <a href="#" class="flex items-center space-x-3 px-3 py-2 hover:bg-gray-700 rounded-lg hover:text-blue-400">
-                  <i data-feather="external-link"></i>
-                  <span>company website</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="flex items-center space-x-3 px-3 py-2 hover:bg-gray-700 rounded-lg hover:text-blue-400">
-                  <i data-feather="download"></i>
-                  <span>export data</span>
-                </a>
-              </li>
+              <li><a href="#" class="flex items-center space-x-3 px-3 py-2 hover:bg-gray-700 rounded-lg hover:text-blue-400"><i data-feather="external-link"></i><span>company website</span></a></li>
+              <li><a href="#" class="flex items-center space-x-3 px-3 py-2 hover:bg-gray-700 rounded-lg hover:text-blue-400"><i data-feather="download"></i><span>export data</span></a></li>
             </ul>
           </div>
         </div>
       </aside>
 
-      <!-- main -->
       <main class="flex-1 overflow-auto">
         <div class="p-6">
-
-          <!-- stock overview -->
           <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6" data-aos="fade-up">
             <div class="bg-gray-800 rounded-xl p-5 border border-gray-700">
               <div class="flex justify-between items-start">
-                <div>
-                  <p class="text-gray-400 text-sm">current price</p>
-                  <h3 class="text-2xl font-bold mt-1">$230.89</h3>
-                </div>
-                <span class="px-2 py-1 text-xs rounded-full bg-green-900 text-green-400 flex items-center">
-                  <i data-feather="arrow-up" class="w-3 h-3 mr-1"></i>
-                  1.24%
-                </span>
+                <div><p class="text-gray-400 text-sm">current price</p><h3 class="text-2xl font-bold mt-1">$230.89</h3></div>
+                <span class="px-2 py-1 text-xs rounded-full bg-green-900 text-green-400 flex items-center"><i data-feather="arrow-up" class="w-3 h-3 mr-1"></i>1.24%</span>
               </div>
-              <div class="mt-4 flex items-center justify-between">
-                <p class="text-gray-400 text-sm">nasdaq: aapl</p>
-                <i data-feather="activity" class="text-blue-400"></i>
-              </div>
+              <div class="mt-4 flex items-center justify-between"><p class="text-gray-400 text-sm">nasdaq: aapl</p><i data-feather="activity" class="text-blue-400"></i></div>
             </div>
-
-            <div class="bg-gray-800 rounded-xl p-5 border border-gray-700">
-              <div class="flex justify-between items-start">
-                <div>
-                  <p class="text-gray-400 text-sm">market cap</p>
-                  <h3 class="text-2xl font-bold mt-1">$3.45t</h3>
-                </div>
-                <i data-feather="award" class="text-yellow-400"></i>
-              </div>
-              <div class="mt-4">
-                <p class="text-gray-400 text-sm">#1 most valuable</p>
-              </div>
-            </div>
-
-            <div class="bg-gray-800 rounded-xl p-5 border border-gray-700">
-              <div class="flex justify-between items-start">
-                <div>
-                  <p class="text-gray-400 text-sm">p/e ratio</p>
-                  <h3 class="text-2xl font-bold mt-1">35.38</h3>
-                </div>
-                <i data-feather="bar-chart" class="text-purple-400"></i>
-              </div>
-              <div class="mt-4">
-                <p class="text-gray-400 text-sm">industry: 25.7</p>
-              </div>
-            </div>
-
-            <div class="bg-gray-800 rounded-xl p-5 border border-gray-700">
-              <div class="flex justify-between items-start">
-                <div>
-                  <p class="text-gray-400 text-sm">dividend yield</p>
-                  <h3 class="text-2xl font-bold mt-1">0.43%</h3>
-                </div>
-                <i data-feather="dollar-sign" class="text-green-400"></i>
-              </div>
-              <div class="mt-4">
-                <p class="text-gray-400 text-sm">$1.01 per share</p>
-              </div>
-            </div>
+            <div class="bg-gray-800 rounded-xl p-5 border border-gray-700"><div class="flex justify-between items-start"><div><p class="text-gray-400 text-sm">market cap</p><h3 class="text-2xl font-bold mt-1">$3.45t</h3></div><i data-feather="award" class="text-yellow-400"></i></div><div class="mt-4"><p class="text-gray-400 text-sm">#1 most valuable</p></div></div>
+            <div class="bg-gray-800 rounded-xl p-5 border border-gray-700"><div class="flex justify-between items-start"><div><p class="text-gray-400 text-sm">p/e ratio</p><h3 class="text-2xl font-bold mt-1">35.38</h3></div><i data-feather="bar-chart" class="text-purple-400"></i></div><div class="mt-4"><p class="text-gray-400 text-sm">industry: 25.7</p></div></div>
+            <div class="bg-gray-800 rounded-xl p-5 border border-gray-700"><div class="flex justify-between items-start"><div><p class="text-gray-400 text-sm">dividend yield</p><h3 class="text-2xl font-bold mt-1">0.43%</h3></div><i data-feather="dollar-sign" class="text-green-400"></i></div><div class="mt-4"><p class="text-gray-400 text-sm">$1.01 per share</p></div></div>
           </div>
 
-          <!-- charts row -->
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
-            <!-- candlestick (plotly) -->
             <div class="lg:col-span-2 bg-gray-800 rounded-xl border border-gray-700" data-aos="fade-up">
-              <!-- top bar with pair + controls -->
               <div class="flex flex-col md:flex-row md:items-center md:justify-between p-3 border-b border-gray-700 gap-3">
                 <div class="flex items-start md:items-center gap-4">
                   <div>
                     <h3 class="font-semibold text-white">aapl apple inc.</h3>
                     <div class="flex flex-wrap items-center gap-3 text-sm text-gray-300">
-                      <span>o: 231.70</span>
-                      <span>h: 233.12</span>
-                      <span>l: 230.11</span>
-                      <span>c: 230.89</span>
-                      <span class="text-red-400">-0.12 (-0.05%)</span>
+                      <span>o: 231.70</span><span>h: 233.12</span><span>l: 230.11</span><span>c: 230.89</span><span class="text-red-400">-0.12 (-0.05%)</span>
                     </div>
                   </div>
                 </div>
 
-                <!-- dynamic plotly controls (ids consumed by app.js) -->
                 <div class="controls">
-                  <label class="control">
-                    <span>filter</span>
-                    <input id="ticker-filter" type="text" placeholder="type to filter…" />
-                  </label>
-
-                  <label class="control">
-                    <span>ticker</span>
-                    <select id="ticker-select"></select>
-                  </label>
-
-                  <label class="control">
-                    <span>timeframe</span>
-                    <select id="timeframe-select">
-                      <option value="3m">3m</option>
-                      <option value="6m" selected>6m</option>
-                      <option value="ytd">ytd</option>
-                      <option value="1y">1y</option>
-                      <option value="all">all</option>
-                    </select>
-                  </label>
-
-                  <label class="control">
-                    <span>chart</span>
-                    <select id="type-select">
-                      <option value="candlestick" selected>candlestick</option>
-                      <option value="ohlc">ohlc</option>
-                    </select>
-                  </label>
-
-                  <label class="control checkbox">
-                    <input type="checkbox" id="ma5-toggle" checked />
-                    <span>ma5</span>
-                  </label>
-
-                  <label class="control checkbox">
-                    <input type="checkbox" id="ma20-toggle" checked />
-                    <span>ma20</span>
-                  </label>
-
-                  <label class="control checkbox">
-                    <input type="checkbox" id="volume-toggle" checked />
-                    <span>volume</span>
-                  </label>
-
-                  <button id="refresh-btn" class="btn" title="refresh">
-                    <i data-feather="rotate-ccw"></i>
-                  </button>
-
-                  <button id="download-btn" class="btn" title="download csv">
-                    <i data-feather="download"></i>
-                  </button>
-
-                  <button id="theme-btn" class="btn" title="toggle theme">
-                    <i data-feather="moon"></i>
-                  </button>
+                  <label class="control"><span>filter</span><input id="ticker-filter" type="text" placeholder="type to filter…" /></label>
+                  <label class="control"><span>ticker</span><select id="ticker-select"></select></label>
+                  <label class="control"><span>timeframe</span>
+                    <select id="timeframe-select"><option value="3m">3m</option><option value="6m">6m</option><option value="ytd" selected>ytd</option><option value="1y">1y</option><option value="all">all</option></select></label>
+                  <label class="control"><span>chart</span><select id="type-select"><option value="candlestick" selected>candlestick</option><option value="ohlc">ohlc</option></select></label>
+                  <label class="control checkbox"><input type="checkbox" id="ma5-toggle" checked /><span>ma5</span></label>
+                  <label class="control checkbox"><input type="checkbox" id="ma20-toggle" checked /><span>ma20</span></label>
+                  <label class="control checkbox"><input type="checkbox" id="volume-toggle" checked /><span>volume</span></label>
+                  <button id="refresh-btn" class="btn" title="refresh"><i data-feather="rotate-ccw"></i></button>
+                  <button id="download-btn" class="btn" title="download csv"><i data-feather="download"></i></button>
+                  <button id="theme-btn" class="btn" title="toggle theme"><i data-feather="moon"></i></button>
                 </div>
               </div>
-
-              <!-- plotly main chart -->
-              <div class="h-96 md:h-[520px]">
-                <div id="candlestick_chart" class="chart"></div>
-              </div>
+              <div class="h-96 md:h-[520px]"><div id="candlestick_chart" class="chart"></div></div>
               <div id="chart-status" class="status px-3 pb-3"></div>
             </div>
 
-            <!-- financial metrics (unchanged static demo) -->
             <div class="bg-gray-800 rounded-xl p-5 border border-gray-700" data-aos="fade-up" data-aos-delay="100">
               <h3 class="font-semibold mb-4">key financials</h3>
               <div class="space-y-4">
-                <div>
-                  <div class="flex justify-between text-sm mb-1">
-                    <span class="text-gray-400">revenue (ttm)</span>
-                    <span>$408.62b</span>
-                  </div>
-                  <div class="w-full bg-gray-700 rounded-full h-2">
-                    <div class="bg-blue-500 h-2 rounded-full" style="width: 100%"></div>
-                  </div>
-                </div>
-                <div>
-                  <div class="flex justify-between text-sm mb-1">
-                    <span class="text-gray-400">gross profit</span>
-                    <span>$190.74b</span>
-                  </div>
-                  <div class="w-full bg-gray-700 rounded-full h-2">
-                    <div class="bg-green-500 h-2 rounded-full" style="width: 85%"></div>
-                  </div>
-                </div>
-                <div>
-                  <div class="flex justify-between text-sm mb-1">
-                    <span class="text-gray-400">net income</span>
-                    <span>$93.74b</span>
-                  </div>
-                  <div class="w-full bg-gray-700 rounded-full h-2">
-                    <div class="bg-purple-500 h-2 rounded-full" style="width: 75%"></div>
-                  </div>
-                </div>
-                <div>
-                  <div class="flex justify-between text-sm mb-1">
-                    <span class="text-gray-400">ebitda</span>
-                    <span>$134.66b</span>
-                  </div>
-                  <div class="w-full bg-gray-700 rounded-full h-2">
-                    <div class="bg-yellow-500 h-2 rounded-full" style="width: 80%"></div>
-                  </div>
-                </div>
-                <div>
-                  <div class="flex justify-between text-sm mb-1">
-                    <span class="text-gray-400">profit margin</span>
-                    <span>24.3%</span>
-                  </div>
-                  <div class="w-full bg-gray-700 rounded-full h-2">
-                    <div class="bg-red-500 h-2 rounded-full" style="width: 65%"></div>
-                  </div>
-                </div>
+                <div><div class="flex justify-between text-sm mb-1"><span class="text-gray-400">revenue (ttm)</span><span>$408.62b</span></div><div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-blue-500 h-2 rounded-full" style="width: 100%"></div></div></div>
+                <div><div class="flex justify-between text-sm mb-1"><span class="text-gray-400">gross profit</span><span>$190.74b</span></div><div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-green-500 h-2 rounded-full" style="width: 85%"></div></div></div>
+                <div><div class="flex justify-between text-sm mb-1"><span class="text-gray-400">net income</span><span>$93.74b</span></div><div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-purple-500 h-2 rounded-full" style="width: 75%"></div></div></div>
+                <div><div class="flex justify-between text-sm mb-1"><span class="text-gray-400">ebitda</span><span>$134.66b</span></div><div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-yellow-500 h-2 rounded-full" style="width: 80%"></div></div></div>
+                <div><div class="flex justify-between text-sm mb-1"><span class="text-gray-400">profit margin</span><span>24.3%</span></div><div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-red-500 h-2 rounded-full" style="width: 65%"></div></div></div>
               </div>
-
               <div class="mt-6 pt-4 border-t border-gray-700">
                 <h4 class="text-sm font-semibold mb-3">valuation ratios</h4>
                 <div class="grid grid-cols-2 gap-4">
-                  <div class="bg-gray-700 p-3 rounded-lg">
-                    <p class="text-xs text-gray-400">p/e</p>
-                    <p class="font-medium">35.38</p>
-                  </div>
-                  <div class="bg-gray-700 p-3 rounded-lg">
-                    <p class="text-xs text-gray-400">p/b</p>
-                    <p class="font-medium">52.6</p>
-                  </div>
-                  <div class="bg-gray-700 p-3 rounded-lg">
-                    <p class="text-xs text-gray-400">p/s</p>
-                    <p class="font-medium">8.45</p>
-                  </div>
-                  <div class="bg-gray-700 p-3 rounded-lg">
-                    <p class="text-xs text-gray-400">ev/ebitda</p>
-                    <p class="font-medium">8.59</p>
-                  </div>
+                  <div class="bg-gray-700 p-3 rounded-lg"><p class="text-xs text-gray-400">p/e</p><p class="font-medium">35.38</p></div>
+                  <div class="bg-gray-700 p-3 rounded-lg"><p class="text-xs text-gray-400">p/b</p><p class="font-medium">52.6</p></div>
+                  <div class="bg-gray-700 p-3 rounded-lg"><p class="text-xs text-gray-400">p/s</p><p class="font-medium">8.45</p></div>
+                  <div class="bg-gray-700 p-3 rounded-lg"><p class="text-xs text-gray-400">ev/ebitda</p><p class="font-medium">8.59</p></div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- performance (plotly) -->
           <div class="grid grid-cols-1 gap-6 mb-6" data-aos="fade-up">
             <div class="bg-gray-800 rounded-xl p-5 border border-gray-700">
               <h3 class="font-semibold mb-4">quarterly revenue &amp; earnings</h3>
-              <div class="h-80">
-                <div id="performance_chart" class="chart small"></div>
-              </div>
+              <div class="h-80"><div id="performance_chart" class="chart small"></div></div>
             </div>
           </div>
 
-          <!-- company overview -->
           <div class="bg-gray-800 rounded-xl p-5 border border-gray-700 mb-6" data-aos="fade-up">
             <h3 class="font-semibold mb-4">company overview</h3>
-            <p class="text-gray-300 mb-4">
-              apple inc. is an american multinational technology company that specializes in consumer electronics, computer software,
-              and online services. apple is the world's largest technology company by revenue and the world's most valuable company.
-            </p>
-
+            <p class="text-gray-300 mb-4">apple inc. is an american multinational technology company that specializes in consumer electronics, computer software, and online services.</p>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div class="bg-gray-700 p-3 rounded-lg">
-                <p class="text-xs text-gray-400">sector</p>
-                <p class="font-medium">technology</p>
-              </div>
-              <div class="bg-gray-700 p-3 rounded-lg">
-                <p class="text-xs text-gray-400">industry</p>
-                <p class="font-medium">consumer electronics</p>
-              </div>
-              <div class="bg-gray-700 p-3 rounded-lg">
-                <p class="text-xs text-gray-400">employees</p>
-                <p class="font-medium">164,000</p>
-              </div>
-              <div class="bg-gray-700 p-3 rounded-lg">
-                <p class="text-xs text-gray-400">founded</p>
-                <p class="font-medium">1976</p>
-              </div>
+              <div class="bg-gray-700 p-3 rounded-lg"><p class="text-xs text-gray-400">sector</p><p class="font-medium">technology</p></div>
+              <div class="bg-gray-700 p-3 rounded-lg"><p class="text-xs text-gray-400">industry</p><p class="font-medium">consumer electronics</p></div>
+              <div class="bg-gray-700 p-3 rounded-lg"><p class="text-xs text-gray-400">employees</p><p class="font-medium">164,000</p></div>
+              <div class="bg-gray-700 p-3 rounded-lg"><p class="text-xs text-gray-400">founded</p><p class="font-medium">1976</p></div>
             </div>
           </div>
 
@@ -388,8 +156,6 @@
       </main>
     </div>
   </div>
-
-  <!-- app script (defer so libs are ready) -->
   <script defer src="assets/js/ticker/app.js"></script>
 </body>
 </html>
