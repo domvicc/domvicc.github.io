@@ -6,9 +6,13 @@ document.addEventListener('DOMContentLoaded', () => {
     window.feather.replace();
   }
 
-  // aos animations
+  // aos animations (w/ fallback if AOS script fails to load)
   if (window.AOS && typeof window.AOS.init === 'function') {
     window.AOS.init();
+  } else {
+    // If the CSS from AOS is present but JS didn't run, elements with data-aos stay hidden (opacity:0).
+    // Remove the attribute so they render normally.
+    document.querySelectorAll('[data-aos]').forEach(el => el.removeAttribute('data-aos'));
   }
 
   // ------------- paths -------------
@@ -379,8 +383,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const download_csv = (rows, filename = 'ohlc.csv') => {
-    const header = 'date,open,high,low,close
-';
+    const header = 'date,open,high,low,close\n';
     const body = rows.map(r => {
       const d = new Date(r.t);
       const iso = d.toISOString();
