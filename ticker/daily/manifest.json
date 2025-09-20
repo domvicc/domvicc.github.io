@@ -1,11 +1,10 @@
 {
-  "tickers": [
-    "aapl_daily",
-    "abnb_daily",
-    "adbe_daily",
-    "adi_daily",
-    "amgn_daily",
-    "amzn_daily",
-    "manifest"
+  "files": [
+    "AAPL.json",
+    "ABNB.json",
+    "ADBE.json",
+    "ADI.json",
+    "AMGN.json",
+    "AMZN.json"
   ]
 }
