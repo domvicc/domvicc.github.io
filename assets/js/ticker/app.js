@@ -90,7 +90,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const trace_ma20={type:'scatter',mode:'lines',name:'ma20',x:arrays.x,y:m20,line:{width:1.2,dash:'dot',color:colors.muted},yaxis:'y',visible:(el_ma20?.checked??true)?true:'legendonly',hovertemplate:'ma20: %{y:.2f}<extra></extra>'};
     const trace_volume={type:'bar',name:'volume',x:arrays.x,y:vol,marker:{color:vol_colors},yaxis:'y2',visible:(el_volume?.checked??true)?true:'legendonly',hovertemplate:'vol: %{y:,}<extra></extra>'};
     const last_close=arrays.c.at(-1), last_date=arrays.x.at(-1);
-    const layout={paper_bgcolor:colors.paper,plot_bgcolor:colors.plot,font:{color:colors.text,size:12},margin:{t:30,r:20,b:35,l:45},showlegend:true,legend:{orientation:'h',x:0,y:1.1},
+    const layout={
+      paper_bgcolor:colors.paper,
+      plot_bgcolor:colors.plot,
+      font:{color:colors.text,size:12},
+      margin:{t:30,r:20,b:35,l:45},
+      showlegend:true,
+      legend:{orientation:'h',x:0,y:1.1},
+      dragmode:'pan',
       xaxis:{domain:[0,1],rangeslider:{visible:true,thickness:0.07,bgcolor:colors.paper,bordercolor:colors.border},rangeselector:{buttons:[{step:'month',stepmode:'backward',count:1,label:'1m'},{step:'month',stepmode:'backward',count:3,label:'3m'},{step:'month',stepmode:'backward',count:6,label:'6m'},{step:'year',stepmode:'todate',label:'ytd'},{step:'year',stepmode:'backward',count:1,label:'1y'},{step:'all',label:'all'}],bgcolor:colors.paper,activecolor:colors.accent,font:{color:colors.text}},showspikes:true,spikemode:'across',spikecolor:colors.muted,spikethickness:1,gridcolor:colors.grid,linecolor:colors.border},
       yaxis:{domain:[0.28,1],side:'right',gridcolor:colors.grid,zerolinecolor:colors.grid,linecolor:colors.border,tickformat:',.2f'},
       yaxis2:{domain:[0,0.2],side:'right',gridcolor:colors.grid,zerolinecolor:colors.grid,linecolor:colors.border,title:{text:'volume',font:{color:colors.muted,size:11}}},
