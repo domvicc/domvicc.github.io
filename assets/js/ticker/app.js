@@ -12,7 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ------------- paths -------------
-  const json_path = 'ticker/daily/daily_ticker.json'; // relative to site root
+  // now points to a DIRECTORY that contains one json file per ticker
+  const dir_url = 'ticker/daily/'; // trailing slash required
 
   // ------------- ui elements -------------
   const el_chart = document.getElementById('candlestick_chart');
@@ -90,29 +91,21 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   // ------------- json parsing (robust to several shapes) -------------
-  /**
-   * normalize a row-like object into { t: Date, o,h,l,c }
-   */
   const normalize_row = (obj) => {
-    // keys can be o/h/l/c or open/high/low/close
     const o = obj.o ?? obj.open;
     const h = obj.h ?? obj.high;
     const l = obj.l ?? obj.low;
     const c = obj.c ?? obj.close;
 
-    // common date/timestamp keys
     let dt = obj.t ?? obj.date ?? obj.timestamp ?? obj.time;
     if (typeof dt === 'string') {
-      // support iso, 'yyyy-mm-dd', etc.
       dt = new Date(dt);
     } else if (typeof dt === 'number') {
-      // seconds vs ms
       if (dt < 2_000_000_000) dt *= 1000;
       dt = new Date(dt);
     } else if (dt instanceof Date) {
-      // already ok
+      // ok
     } else {
-      // fallback: try compose from y,m,d
       const y = obj.year ?? obj.y;
       const m = obj.month ?? obj.m;
       const d = obj.day ?? obj.d;
@@ -123,14 +116,6 @@ document.addEventListener('DOMContentLoaded', () => {
     return { t: dt, o: Number(o), h: Number(h), l: Number(l), c: Number(c) };
   };
 
-  /**
-   * parse various shapes into a map: symbol -> rows[]
-   * supported shapes:
-   *  - { "aapl": [ {date, open, high, low, close}, ... ], "msft": [...] }
-   *  - [{ ticker: "aapl", date, open, high, low, close }, ...]
-   *  - { tickers: [{ symbol: "aapl", data: [ ...rows... ] }, ...] }
-   *  - { data: [ ...any of the above array forms... ] }
-   */
   const parse_daily_json = (json) => {
     const map = new Map();
 
@@ -144,7 +129,6 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const parse_array = (arr) => {
-      // array of either flat rows (with ticker/symbol) or blocks with {symbol, data:[]}
       for (const item of arr) {
         if (Array.isArray(item?.data) && (item.symbol || item.ticker || item.s)) {
           const sym = (item.symbol || item.ticker || item.s);
@@ -164,7 +148,6 @@ document.addEventListener('DOMContentLoaded', () => {
       } else if (Array.isArray(json.tickers)) {
         parse_array(json.tickers);
       } else {
-        // assume keys are tickers
         for (const [sym, rows] of Object.entries(json)) {
           if (Array.isArray(rows)) {
             for (const r of rows) push_row(sym, r);
@@ -173,7 +156,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    // sort each series by date asc and dedupe same-date (keep last)
     for (const [sym, rows] of map) {
       rows.sort((a,b) => a.t - b.t);
       const dedup = [];
@@ -330,7 +312,7 @@ document.addEventListener('DOMContentLoaded', () => {
       },
 
       hovermode: 'x unified',
-      uirevision: `rev-${el_ticker?.value || current_ticker || 'aapl'}-${el_type?.value || 'candlestick'}`,
+      uirevision: `rev-${(el_ticker?.value || current_ticker || 'aapl')}-${el_type?.value || 'candlestick'}`,
 
       shapes: [
         {
@@ -397,7 +379,8 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const download_csv = (rows, filename = 'ohlc.csv') => {
-    const header = 'date,open,high,low,close\n';
+    const header = 'date,open,high,low,close
+';
     const body = rows.map(r => {
       const d = new Date(r.t);
       const iso = d.toISOString();
@@ -412,18 +395,113 @@ document.addEventListener('DOMContentLoaded', () => {
     URL.revokeObjectURL(link.href);
   };
 
-  // ------------- data loading (from local json) -------------
-  const fetch_all_from_json = async () => {
+  // ------------- directory loading (one file per ticker) -------------
+  /**
+   * List json files under a directory. Tries in order:
+   * 1) manifest.json (array or {files:[...]} or {tickers:[...]})
+   * 2) autoindex html of the directory (works with `python -m http.server`, nginx/Apache dir listing, etc.)
+   */
+  const list_json_files = async (dirUrl) => {
+    // try manifest.json
     try {
-      const res = await fetch(json_path, { cache: 'no-store' });
-      if (!res.ok) throw new Error(`http ${res.status}`);
-      const json = await res.json();
-      return parse_daily_json(json);
-    } catch (e) {
-      console.error(e);
-      set_status(`failed loading ${json_path} — ${e.message}`);
+      const r = await fetch(dirUrl + 'manifest.json', { cache: 'no-store' });
+      if (r.ok) {
+        const m = await r.json();
+        if (Array.isArray(m)) return m.map(x => String(x));
+        if (Array.isArray(m.files)) return m.files;
+        if (Array.isArray(m.tickers)) return m.tickers.map(t => `${t}.json`);
+      }
+    } catch (_) {}
+
+    // try autoindex
+    try {
+      const r = await fetch(dirUrl, { cache: 'no-store' });
+      if (r.ok) {
+        const text = await r.text();
+        const doc = new DOMParser().parseFromString(text, 'text/html');
+        const hrefs = [...doc.querySelectorAll('a')]
+          .map(a => a.getAttribute('href') || '')
+          .filter(h => /\.json$/i.test(h));
+        return hrefs.map(h => h.split('?')[0].split('#')[0]);
+      }
+    } catch (_) {}
+
+    return [];
+  };
+
+  // small concurrency limiter
+  const pMap = async (list, mapper, concurrency = 8) => {
+    const ret = [];
+    let idx = 0;
+    const next = async () => {
+      while (idx < list.length) {
+        const i = idx++;
+        try { ret[i] = await mapper(list[i], i); }
+        catch (e) { ret[i] = { error: e }; }
+      }
+    };
+    const workers = Array.from({ length: Math.min(concurrency, Math.max(1, list.length)) }, next);
+    await Promise.all(workers);
+    return ret;
+  };
+
+  const merge_series = (into, fromMap) => {
+    for (const [sym, rows] of fromMap) {
+      const key = String(sym).toLowerCase();
+      const existing = into.get(key) || [];
+      const merged = existing.concat(rows);
+      merged.sort((a,b) => a.t - b.t);
+      const out = [];
+      let lastKey = null;
+      for (const r of merged) {
+        const k = r.t.toISOString().slice(0,10);
+        if (k !== lastKey) { out.push(r); lastKey = k; } else { out[out.length-1] = r; }
+      }
+      into.set(key, out);
+    }
+    return into;
+  };
+
+  const fetch_all_from_directory = async () => {
+    set_status('discovering data files…');
+    const files = await list_json_files(dir_url);
+    if (!files.length) {
+      set_status('no json files discovered in ticker/daily. add a manifest.json or enable directory listing.');
       return new Map();
     }
+
+    const jsonFiles = files.filter(f => /\.json$/i.test(f));
+
+    set_status(`loading ${jsonFiles.length} file${jsonFiles.length !== 1 ? 's' : ''}…`);
+
+    const results = await pMap(jsonFiles, async (fname) => {
+      const url = dir_url + fname;
+      try {
+        const res = await fetch(url, { cache: 'no-store' });
+        if (!res.ok) throw new Error(`http ${res.status}`);
+        const j = await res.json();
+
+        let parsed = parse_daily_json(j);
+
+        if (parsed.size === 0 && Array.isArray(j)) {
+          const sym = String(fname.replace(/\.json$/i, '')).toLowerCase();
+          const rows = j.map(normalize_row).filter(Boolean);
+          if (rows.length) parsed.set(sym, rows);
+        }
+
+        return { fname, parsed };
+      } catch (e) {
+        console.warn('failed', fname, e);
+        return { fname, error: e };
+      }
+    }, 8);
+
+    const map = new Map();
+    for (const r of results) {
+      if (r && r.parsed instanceof Map) merge_series(map, r.parsed);
+    }
+
+    return map;
   };
 
   const use_ticker = (sym) => {
@@ -462,14 +540,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // ------------- init + events -------------
   const boot = async () => {
     set_status('loading daily data…');
-    ticker_map = await fetch_all_from_json();
+    ticker_map = await fetch_all_from_directory();
     all_tickers = Array.from(ticker_map.keys()).sort();
 
-    // populate the select options dynamically
     if (all_tickers.length === 0) {
-      set_status('no tickers found in json; nothing to display');
+      set_status('no tickers found; ensure the server exposes a directory listing or add ticker/daily/manifest.json.');
       return;
     }
+
     populate_ticker_select(all_tickers, el_ticker);
     current_ticker = el_ticker.value;
     current_rows = ticker_map.get(current_ticker) || [];
@@ -478,12 +556,10 @@ document.addEventListener('DOMContentLoaded', () => {
     render_performance();
   };
 
-  // select change
   if (el_ticker) el_ticker.addEventListener('change', () => {
     use_ticker(el_ticker.value);
   });
 
-  // filter input (filters the dropdown options; does not change selection automatically)
   if (el_ticker_filter) el_ticker_filter.addEventListener('input', debounce(() => {
     const q = (el_ticker_filter.value || '').trim().toLowerCase();
     const filtered = !q ? all_tickers : all_tickers.filter(t => t.includes(q));
@@ -498,8 +574,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (el_timeframe) el_timeframe.addEventListener('change', () => apply_timeframe(current_rows));
 
   if (el_refresh) el_refresh.addEventListener('click', async () => {
-    set_status('refreshing from json…');
-    ticker_map = await fetch_all_from_json();
+    set_status('refreshing file list…');
+    ticker_map = await fetch_all_from_directory();
     const tickers = Array.from(ticker_map.keys()).sort();
     all_tickers = tickers;
     populate_ticker_select(tickers, el_ticker, true);
