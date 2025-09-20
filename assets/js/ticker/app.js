@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const dir_url = 'ticker/daily/'; // directory with per-ticker jsons
+  let currentArrays = null; // Store current data for dynamic Y-axis
 
   const el_chart = document.getElementById('candlestick_chart');
   const el_status = document.getElementById('chart-status');
@@ -77,10 +78,50 @@ document.addEventListener('DOMContentLoaded', () => {
     else if(tickers.length){selectEl.value=tickers.includes('aapl')?'aapl':tickers[0];}
   };
 
+  // Helper function to calculate dynamic candlestick width
+  const calculateCandlestickWidth = (visibleDataPoints) => {
+    // Adjust width based on number of visible points
+    if (visibleDataPoints > 500) return 0.3;
+    if (visibleDataPoints > 200) return 0.5;
+    if (visibleDataPoints > 100) return 0.7;
+    if (visibleDataPoints > 50) return 0.8;
+    return 0.9;
+  };
+
+  // Helper function to get visible data range and adjust Y-axis
+  const adjustYAxisToVisibleData = (arrays, xRange) => {
+    if (!xRange || !arrays.x.length) return { autorange: true };
+    
+    const [xMin, xMax] = xRange;
+    const visibleIndices = [];
+    
+    // Find indices of visible data points
+    for (let i = 0; i < arrays.x.length; i++) {
+      const date = new Date(arrays.x[i]);
+      if (date >= new Date(xMin) && date <= new Date(xMax)) {
+        visibleIndices.push(i);
+      }
+    }
+    
+    if (visibleIndices.length === 0) return { autorange: true };
+    
+    // Get min/max values for visible data
+    let yMin = Infinity, yMax = -Infinity;
+    visibleIndices.forEach(i => {
+      yMin = Math.min(yMin, arrays.l[i]); // low
+      yMax = Math.max(yMax, arrays.h[i]); // high
+    });
+    
+    // Add padding (10% on each side)
+    const padding = (yMax - yMin) * 0.1;
+    return { range: [yMin - padding, yMax + padding] };
+  };
+
   const render_candles=(rows)=>{
     if(!rows||!rows.length){set_status('no data to render');return;}
     const colors=get_theme_colors();
     const arrays=to_arrays(rows);
+    currentArrays = arrays; // Store for dynamic Y-axis updates
     const vol=simulate_volume(rows);
     const vol_colors=arrays.c.map((v,i)=>v>=arrays.o[i]?colors.good:colors.bad);
     const m5=sma(arrays.c,5), m20=sma(arrays.c,20);
@@ -99,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
       legend:{orientation:'h',x:0,y:1.1},
       dragmode:'pan',
       xaxis:{domain:[0,1],rangeslider:{visible:true,thickness:0.07,bgcolor:colors.paper,bordercolor:colors.border},rangeselector:{buttons:[{step:'month',stepmode:'backward',count:1,label:'1m'},{step:'month',stepmode:'backward',count:3,label:'3m'},{step:'month',stepmode:'backward',count:6,label:'6m'},{step:'year',stepmode:'todate',label:'ytd'},{step:'year',stepmode:'backward',count:1,label:'1y'},{step:'all',label:'all'}],bgcolor:colors.paper,activecolor:colors.accent,font:{color:colors.text}},showspikes:true,spikemode:'across',spikecolor:colors.muted,spikethickness:1,gridcolor:colors.grid,linecolor:colors.border},
-      yaxis:{domain:[0.28,1],side:'right',gridcolor:colors.grid,zerolinecolor:colors.grid,linecolor:colors.border,tickformat:',.2f'},
+      yaxis:{domain:[0.28,1],side:'right',gridcolor:colors.grid,zerolinecolor:colors.grid,linecolor:colors.border,tickformat:',.2f',autorange:true,fixedrange:false},
       yaxis2:{domain:[0,0.2],side:'right',gridcolor:colors.grid,zerolinecolor:colors.grid,linecolor:colors.border,title:{text:'volume',font:{color:colors.muted,size:11}}},
       hovermode:'x unified',uirevision:`rev-${(el_ticker?.value||current_ticker||'aapl')}-${el_type?.value||'candlestick'}`,
       shapes:[{type:'line',xref:'x',yref:'y',x0:arrays.x[0],x1:last_date,y0:last_close,y1:last_close,line:{color:colors.muted,width:1,dash:'dot'}}],
@@ -111,7 +152,41 @@ document.addEventListener('DOMContentLoaded', () => {
       modeBarButtonsToAdd:['v1hovermode','hovercompare','togglespikelines','toImage'],
       toImageButtonOptions:{format:'png',filename:`${(el_ticker?.value||current_ticker||'aapl')}_chart`}
     };
-    if(!el_chart.dataset.rendered){Plotly.newPlot(el_chart,[trace_price,trace_ma5,trace_ma20,trace_volume],layout,config).then(()=>{el_chart.dataset.rendered='1';});}
+    if(!el_chart.dataset.rendered){
+      Plotly.newPlot(el_chart,[trace_price,trace_ma5,trace_ma20,trace_volume],layout,config).then(()=>{
+        el_chart.dataset.rendered='1';
+        
+        // Add event listener for zoom/pan events
+        el_chart.on('plotly_relayout', (eventData) => {
+          if (currentArrays && (eventData['xaxis.range[0]'] && eventData['xaxis.range[1]'])) {
+            const xRange = [eventData['xaxis.range[0]'], eventData['xaxis.range[1]']];
+            const yAxisUpdate = adjustYAxisToVisibleData(currentArrays, xRange);
+            
+            // Count visible data points for dynamic width
+            const visibleCount = currentArrays.x.filter(x => {
+              const date = new Date(x);
+              return date >= new Date(xRange[0]) && date <= new Date(xRange[1]);
+            }).length;
+            
+            const candleWidth = calculateCandlestickWidth(visibleCount);
+            
+            // Update both Y-axis and candlestick width
+            const updates = {};
+            if (yAxisUpdate.range) {
+              updates['yaxis.range'] = yAxisUpdate.range;
+            }
+            
+            Plotly.restyle(el_chart, {
+              'width': [candleWidth]
+            }, [0]); // Update only the first trace (candlesticks)
+            
+            if (Object.keys(updates).length > 0) {
+              Plotly.relayout(el_chart, updates);
+            }
+          }
+        });
+      });
+    }
     else {Plotly.react(el_chart,[trace_price,trace_ma5,trace_ma20,trace_volume],layout,config);}
     const change=arrays.c.at(-1)-arrays.o.at(-1); const pct=(change/arrays.o.at(-1))*100; const dir=change>=0?'▲':'▼';
     set_status(`${fmt_date(last_date)} • open ${fmt_currency(arrays.o.at(-1))} • close ${fmt_currency(last_close)} • ${dir} ${fmt_currency(Math.abs(change))} (${pct.toFixed(2)}%)`);
