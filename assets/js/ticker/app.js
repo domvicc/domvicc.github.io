@@ -97,7 +97,13 @@ document.addEventListener('DOMContentLoaded', () => {
       hovermode:'x unified',uirevision:`rev-${(el_ticker?.value||current_ticker||'aapl')}-${el_type?.value||'candlestick'}`,
       shapes:[{type:'line',xref:'x',yref:'y',x0:arrays.x[0],x1:last_date,y0:last_close,y1:last_close,line:{color:colors.muted,width:1,dash:'dot'}}],
       annotations:[{x:last_date,y:last_close,xref:'x',yref:'y',text:`close ${fmt_currency(last_close)}`,showarrow:true,arrowhead:1,ax:20,ay:-20,bgcolor:'rgba(0,0,0,.2)',bordercolor:colors.border,font:{size:11}}]};
-    const config={responsive:true,displaylogo:false,modeBarButtonsToAdd:['v1hovermode','hovercompare','togglespikelines','toImage'],toImageButtonOptions:{format:'png',filename:`${(el_ticker?.value||current_ticker||'aapl')}_chart`}};
+    const config={
+      responsive:true,
+      displaylogo:false,
+      scrollZoom:true,
+      modeBarButtonsToAdd:['v1hovermode','hovercompare','togglespikelines','toImage'],
+      toImageButtonOptions:{format:'png',filename:`${(el_ticker?.value||current_ticker||'aapl')}_chart`}
+    };
     if(!el_chart.dataset.rendered){Plotly.newPlot(el_chart,[trace_price,trace_ma5,trace_ma20,trace_volume],layout,config).then(()=>{el_chart.dataset.rendered='1';});}
     else {Plotly.react(el_chart,[trace_price,trace_ma5,trace_ma20,trace_volume],layout,config);}
     const change=arrays.c.at(-1)-arrays.o.at(-1); const pct=(change/arrays.o.at(-1))*100; const dir=change>=0?'▲':'▼';
