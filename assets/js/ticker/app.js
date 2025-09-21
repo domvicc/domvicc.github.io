@@ -787,14 +787,16 @@ document.addEventListener('DOMContentLoaded', () => {
     populate_ticker_select(all_tickers,el_ticker);
     current_ticker = el_ticker.value || DEFAULT_TICKER;
     
+    // Clear ticker filter to ensure all tickers are visible initially
+    if(el_ticker_filter) el_ticker_filter.value = '';
+    
     current_rows=ticker_map.get(current_ticker)||[];
     render_candles(current_rows); 
     apply_timeframe(current_rows); 
     render_performance();
     
-    // Skip initial dashboard updates to preserve static HTML styling
-    // Updates will happen when user interacts with ticker selector
-    updateHeaderQuote(current_ticker); // Only update header with chart data
+    // Skip ALL initial dashboard updates to preserve static HTML styling
+    // Updates will only happen when user manually selects different tickers
   };
 
   if(el_ticker) el_ticker.addEventListener('change',()=>use_ticker(el_ticker.value));
