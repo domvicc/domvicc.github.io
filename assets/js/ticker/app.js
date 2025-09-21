@@ -12,6 +12,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const dir_url = 'ticker/daily/'; // directory with per-ticker jsons
   let currentArrays = null; // Store current data for dynamic Y-axis
 
+  // Get ticker from URL parameter or default to 'aapl'
+  const getTickerFromURL = () => {
+    const params = new URLSearchParams(window.location.search);
+    const ticker = params.get('ticker');
+    return ticker ? ticker.toLowerCase() : 'aapl';
+  };
+
+  // Dynamic data endpoints
+  const data_endpoints = {
+    ticker: 'ticker/daily/',
+    company_overview: 'company_overview/',
+    income_statement: 'income_statement/',
+    balance_sheet: 'balance_sheet/'
+  };
+
   const el_chart = document.getElementById('candlestick_chart');
   const el_status = document.getElementById('chart-status');
   const el_performance = document.getElementById('performance_chart');
@@ -29,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let ticker_map = new Map();
   let all_tickers = [];
   let current_rows = [];
-  let current_ticker = 'aapl';
+  let current_ticker = getTickerFromURL(); // Use URL parameter or default to 'aapl'
 
   // Comprehensive ticker data for dynamic dashboard updates
   const ticker_data = {
@@ -376,35 +391,104 @@ document.addEventListener('DOMContentLoaded', () => {
     const blob=new Blob([header+body],{type:'text/csv;charset=utf-8;'}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=filename; a.click(); URL.revokeObjectURL(a.href);
   };
 
+  // --- Dynamic Data Loading Functions ---
+  const loadDataFromEndpoint = async (endpoint, ticker) => {
+    const url = `${data_endpoints[endpoint]}${ticker.toUpperCase()}.json`;
+    try {
+      console.log(`Loading ${endpoint} data from:`, url);
+      const response = await fetch(url);
+      if (!response.ok) {
+        console.warn(`Failed to load ${endpoint} data for ${ticker}:`, response.status);
+        return null;
+      }
+      const data = await response.json();
+      console.log(`Successfully loaded ${endpoint} data for ${ticker}`);
+      return data;
+    } catch (error) {
+      console.warn(`Error loading ${endpoint} data for ${ticker}:`, error);
+      return null;
+    }
+  };
+
+  const loadTickerData = async (ticker) => {
+    return await loadDataFromEndpoint('ticker', ticker);
+  };
+
+  const loadCompanyOverview = async (ticker) => {
+    return await loadDataFromEndpoint('company_overview', ticker);
+  };
+
+  const loadIncomeStatement = async (ticker) => {
+    return await loadDataFromEndpoint('income_statement', ticker);
+  };
+
+  const loadBalanceSheet = async (ticker) => {
+    return await loadDataFromEndpoint('balance_sheet', ticker);
+  };
+
+  const loadAllTickerData = async (ticker) => {
+    const [tickerData, companyOverview, incomeStatement, balanceSheet] = await Promise.all([
+      loadTickerData(ticker),
+      loadCompanyOverview(ticker),
+      loadIncomeStatement(ticker),
+      loadBalanceSheet(ticker)
+    ]);
+
+    return {
+      ticker: tickerData,
+      companyOverview,
+      incomeStatement,
+      balanceSheet
+    };
+  };
+
   // --- Dynamic Dashboard Updates ---
-  const updateSidebarCompanyInfo = (ticker) => {
-    const data = ticker_data[ticker.toLowerCase()];
+  const updateSidebarCompanyInfo = (ticker, apiData = null) => {
+    // Use API data if available, otherwise fall back to hardcoded data
+    const data = apiData?.companyOverview || ticker_data[ticker.toLowerCase()];
     if (!data) return;
 
     // Update company name and symbol in sidebar
     const companyNameEl = document.querySelector('aside h2.font-bold');
     const companySymbolEl = document.querySelector('aside p.text-xs.text-gray-400');
     
-    if (companyNameEl) companyNameEl.textContent = data.name.toLowerCase();
-    if (companySymbolEl) companySymbolEl.textContent = `${data.exchange.toLowerCase()}: ${data.symbol.toLowerCase()}`;
+    if (companyNameEl) companyNameEl.textContent = (data.Name || data.name || '').toLowerCase();
+    if (companySymbolEl) {
+      const exchange = data.Exchange || data.exchange || 'NASDAQ';
+      const symbol = data.Symbol || data.symbol || ticker.toUpperCase();
+      companySymbolEl.textContent = `${exchange.toLowerCase()}: ${symbol.toLowerCase()}`;
+    }
   };
 
-  const updateKeyMetricsCards = (ticker) => {
-    const data = ticker_data[ticker.toLowerCase()];
+  const updateKeyMetricsCards = (ticker, apiData = null) => {
+    // Use API data if available, otherwise fall back to hardcoded data
+    const data = apiData?.companyOverview || ticker_data[ticker.toLowerCase()];
     if (!data) return;
+
+    // Map API fields to our expected format
+    const currentPrice = data.currentPrice || parseFloat(data.Price) || 0;
+    const changePercent = data.changePercent || parseFloat(data.ChangePercent) || 0;
+    const marketCap = data.marketCap || data.MarketCapitalization || '0';
+    const peRatio = data.peRatio || parseFloat(data.PERatio) || 0;
+    const dividendYield = data.dividendYield || parseFloat(data.DividendYield) || 0;
+    const dividendPerShare = data.dividendPerShare || parseFloat(data.DividendPerShare) || 0;
 
     // Update current price card
     const priceEl = document.querySelector('.grid .bg-gray-800 h3');
     const changeEl = document.querySelector('.grid .bg-gray-800 span');
     const symbolEl = document.querySelector('.grid .bg-gray-800 p.text-gray-400');
     
-    if (priceEl) priceEl.textContent = `$${data.currentPrice}`;
+    if (priceEl) priceEl.textContent = `$${currentPrice.toFixed(2)}`;
     if (changeEl) {
-      const isPositive = data.changePercent > 0;
+      const isPositive = changePercent > 0;
       changeEl.className = `px-2 py-1 text-xs rounded-full ${isPositive ? 'bg-green-900 text-green-400' : 'bg-red-900 text-red-400'} flex items-center`;
-      changeEl.innerHTML = `<i data-feather="${isPositive ? 'arrow-up' : 'arrow-down'}" class="w-3 h-3 mr-1"></i>${Math.abs(data.changePercent).toFixed(2)}%`;
+      changeEl.innerHTML = `<i data-feather="${isPositive ? 'arrow-up' : 'arrow-down'}" class="w-3 h-3 mr-1"></i>${Math.abs(changePercent).toFixed(2)}%`;
     }
-    if (symbolEl) symbolEl.textContent = `${data.exchange.toLowerCase()}: ${data.symbol.toLowerCase()}`;
+    if (symbolEl) {
+      const exchange = data.Exchange || data.exchange || 'nasdaq';
+      const symbol = data.Symbol || data.symbol || ticker;
+      symbolEl.textContent = `${exchange.toLowerCase()}: ${symbol.toLowerCase()}`;
+    }
 
     // Update other metric cards
     const metricCards = document.querySelectorAll('.grid .bg-gray-800');
@@ -412,35 +496,67 @@ document.addEventListener('DOMContentLoaded', () => {
       // Market cap card
       const marketCapValue = metricCards[1].querySelector('h3');
       const marketCapDesc = metricCards[1].querySelector('p.text-gray-400');
-      if (marketCapValue) marketCapValue.textContent = data.marketCap;
-      if (marketCapDesc) marketCapDesc.textContent = data.marketCapRank;
+      if (marketCapValue) marketCapValue.textContent = formatMarketCap(marketCap);
+      if (marketCapDesc) marketCapDesc.textContent = data.marketCapRank || '#N/A by market cap';
 
       // P/E ratio card
       const peValue = metricCards[2].querySelector('h3');
       const peDesc = metricCards[2].querySelector('p.text-gray-400');
-      if (peValue) peValue.textContent = data.peRatio.toFixed(2);
-      if (peDesc) peDesc.textContent = `industry: ${data.industryPE}`;
+      if (peValue) peValue.textContent = peRatio.toFixed(2);
+      if (peDesc) peDesc.textContent = `industry: ${data.industryPE || 'N/A'}`;
 
       // Dividend yield card
       const divValue = metricCards[3].querySelector('h3');
       const divDesc = metricCards[3].querySelector('p.text-gray-400');
-      if (divValue) divValue.textContent = `${data.dividendYield.toFixed(2)}%`;
-      if (divDesc) divDesc.textContent = data.dividendPerShare > 0 ? `$${data.dividendPerShare.toFixed(2)} per share` : 'No dividend';
+      if (divValue) divValue.textContent = `${(dividendYield * 100).toFixed(2)}%`;
+      if (divDesc) divDesc.textContent = dividendPerShare > 0 ? `$${dividendPerShare.toFixed(2)} per share` : 'No dividend';
     }
   };
 
-  const updateFinancialMetricsSection = (ticker) => {
-    const data = ticker_data[ticker.toLowerCase()];
+  // Helper function to format market cap
+  const formatMarketCap = (marketCap) => {
+    if (typeof marketCap === 'string' && (marketCap.includes('T') || marketCap.includes('B'))) {
+      return marketCap;
+    }
+    const num = parseFloat(marketCap);
+    if (num >= 1e12) return `$${(num / 1e12).toFixed(2)}T`;
+    if (num >= 1e9) return `$${(num / 1e9).toFixed(2)}B`;
+    if (num >= 1e6) return `$${(num / 1e6).toFixed(2)}M`;
+    return `$${num.toFixed(2)}`;
+  };
+
+  const updateFinancialMetricsSection = (ticker, apiData = null) => {
+    // Use API data if available, otherwise fall back to hardcoded data
+    const data = apiData?.incomeStatement || ticker_data[ticker.toLowerCase()];
     if (!data) return;
+
+    // Map API fields to our expected format
+    const revenue = data.totalRevenue || data.revenue || 0;
+    const netIncome = data.netIncome || data.netIncome || 0;
+    const grossProfit = data.grossProfit || data.grossProfit || 0;
+    const operatingIncome = data.operatingIncome || data.operatingIncome || 0;
 
     // Update the key financials section
     const financialSection = document.querySelector('.bg-gray-800 .space-y-4');
     if (financialSection) {
+      // Convert to billions for display if values are large
+      const formatFinancial = (value) => {
+        const num = parseFloat(value);
+        if (num >= 1e9) return (num / 1e9).toFixed(1);
+        if (num >= 1e6) return (num / 1e6).toFixed(1);
+        return (num / 1e9).toFixed(1); // Assume most values are in the billions range
+      };
+
+      const revenueB = formatFinancial(revenue);
+      const netIncomeB = formatFinancial(netIncome);
+      const grossProfitB = formatFinancial(grossProfit);
+      const operatingIncomeB = formatFinancial(operatingIncome);
+
       const metrics = [
-        { label: 'revenue (ttm)', value: `$${data.revenue}b`, width: '100%' },
-        { label: 'net income (ttm)', value: `$${data.netIncome}b`, width: `${(data.netIncome / data.revenue * 100).toFixed(0)}%` },
-        { label: 'gross profit (ttm)', value: `$${data.grossProfit}b`, width: `${(data.grossProfit / data.revenue * 100).toFixed(0)}%` },
-        { label: 'operating income (ttm)', value: `$${data.operatingIncome}b`, width: `${(data.operatingIncome / data.revenue * 100).toFixed(0)}%` }
+        { label: 'revenue (ttm)', value: `$${revenueB}b`, width: '100%' },
+        { label: 'net income (ttm)', value: `$${netIncomeB}b`, width: revenue > 0 ? `${(netIncome / revenue * 100).toFixed(0)}%` : '0%' },
+        { label: 'gross profit (ttm)', value: `$${grossProfitB}b`, width: revenue > 0 ? `${(grossProfit / revenue * 100).toFixed(0)}%` : '0%' },
+        { label: 'operating income (ttm)', value: `$${operatingIncomeB}b`, width: revenue > 0 ? `${(operatingIncome / revenue * 100).toFixed(0)}%` : '0%' }
       ];
 
       financialSection.innerHTML = metrics.map(metric => `
@@ -457,43 +573,52 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  const updateCompanyOverviewSection = (ticker) => {
-    const data = ticker_data[ticker.toLowerCase()];
+  const updateCompanyOverviewSection = (ticker, apiData = null) => {
+    // Use API data if available, otherwise fall back to hardcoded data
+    const data = apiData?.companyOverview || ticker_data[ticker.toLowerCase()];
     if (!data) return;
 
     // Update company description
     const descEl = document.querySelector('.bg-gray-800 p.text-gray-300');
-    if (descEl) descEl.textContent = data.description;
+    if (descEl) {
+      const description = data.Description || data.description || 'No description available.';
+      descEl.textContent = description;
+    }
 
     // Update company details grid
     const detailsGrid = document.querySelector('.grid.grid-cols-2.md\\:grid-cols-4');
     if (detailsGrid) {
+      const sector = data.Sector || data.sector || 'N/A';
+      const industry = data.Industry || data.industry || 'N/A';
+      const employees = data.FullTimeEmployees || data.employees || 'N/A';
+      const founded = data.Founded || data.founded || 'N/A';
+
       detailsGrid.innerHTML = `
         <div class="bg-gray-700 p-3 rounded-lg">
           <p class="text-xs text-gray-400">sector</p>
-          <p class="font-medium">${data.sector.toLowerCase()}</p>
+          <p class="font-medium">${sector.toLowerCase()}</p>
         </div>
         <div class="bg-gray-700 p-3 rounded-lg">
           <p class="text-xs text-gray-400">industry</p>
-          <p class="font-medium">${data.industry.toLowerCase()}</p>
+          <p class="font-medium">${industry.toLowerCase()}</p>
         </div>
         <div class="bg-gray-700 p-3 rounded-lg">
           <p class="text-xs text-gray-400">employees</p>
-          <p class="font-medium">${data.employees}</p>
+          <p class="font-medium">${employees}</p>
         </div>
         <div class="bg-gray-700 p-3 rounded-lg">
           <p class="text-xs text-gray-400">founded</p>
-          <p class="font-medium">${data.founded}</p>
+          <p class="font-medium">${founded}</p>
         </div>
       `;
     }
   };
 
-  const updateAllDashboardElements = (ticker) => {
-    updateSidebarCompanyInfo(ticker);
-    updateKeyMetricsCards(ticker);
-    updateFinancialMetricsSection(ticker);
-    updateCompanyOverviewSection(ticker);
+  const updateAllDashboardElements = (ticker, apiData = null) => {
+    updateSidebarCompanyInfo(ticker, apiData);
+    updateKeyMetricsCards(ticker, apiData);
+    updateFinancialMetricsSection(ticker, apiData);
+    updateCompanyOverviewSection(ticker, apiData);
     
     // Refresh feather icons after DOM updates
     if (window.feather && typeof window.feather.replace === 'function') {
@@ -565,13 +690,22 @@ document.addEventListener('DOMContentLoaded', () => {
     return map;
   };
 
-  const use_ticker=(sym)=>{
+  const use_ticker=async(sym)=>{
     const key=String(sym||'').toLowerCase(); 
     current_ticker=key; 
     current_rows=ticker_map.get(key)||[]; 
     render_candles(current_rows); 
     apply_timeframe(current_rows);
-    updateAllDashboardElements(key); // Update all dashboard elements when ticker changes
+    
+    // Try to load API data for the new ticker
+    try {
+      console.log(`use_ticker: Loading API data for ${key}`);
+      const apiData = await loadDataFromEndpoint(key);
+      updateAllDashboardElements(key, apiData);
+    } catch (error) {
+      console.warn(`use_ticker: Failed to load API data for ${key}, using fallback:`, error);
+      updateAllDashboardElements(key); // Fallback to hardcoded data
+    }
   };
 
   const render_performance=()=>{
@@ -583,6 +717,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const boot=async()=>{
     set_status('loading daily data…');
     console.log('Boot: Starting ticker data load from:', dir_url);
+    
+    // Check for ticker in URL parameters
+    const urlTicker = getTickerFromURL();
+    console.log('Boot: URL ticker parameter:', urlTicker);
+    
     try {
       ticker_map=await fetch_all_from_directory();
       all_tickers=Array.from(ticker_map.keys()).sort();
@@ -597,10 +736,44 @@ document.addEventListener('DOMContentLoaded', () => {
       set_status('Error loading data. Check browser console for details.');
       return;
     }
+    
     populate_ticker_select(all_tickers,el_ticker);
-    current_ticker=el_ticker.value; current_rows=ticker_map.get(current_ticker)||[];
-    render_candles(current_rows); apply_timeframe(current_rows); render_performance();
-    updateAllDashboardElements(current_ticker); // Initialize dashboard with default ticker
+    
+    // Set initial ticker from URL or default
+    let initialTicker = urlTicker;
+    if (urlTicker && !all_tickers.includes(urlTicker.toUpperCase())) {
+      console.warn(`Boot: URL ticker "${urlTicker}" not found in available tickers, using default`);
+      initialTicker = null;
+    }
+    
+    current_ticker = initialTicker || el_ticker.value;
+    if (el_ticker && initialTicker) {
+      el_ticker.value = initialTicker;
+    }
+    
+    current_rows=ticker_map.get(current_ticker)||[];
+    render_candles(current_rows); 
+    apply_timeframe(current_rows); 
+    render_performance();
+    
+    // Load API data for the ticker and update dashboard
+    if (urlTicker) {
+      console.log(`Boot: Loading API data for URL ticker: ${urlTicker}`);
+      try {
+        const apiData = await loadDataFromEndpoint(urlTicker);
+        updateAllDashboardElements(current_ticker, apiData);
+        
+        // Update page title with company name
+        if (apiData?.companyOverview?.Name) {
+          document.title = `${apiData.companyOverview.Name} (${urlTicker.toUpperCase()}) - Ticker Analysis`;
+        }
+      } catch (error) {
+        console.warn('Boot: Failed to load API data, falling back to hardcoded data:', error);
+        updateAllDashboardElements(current_ticker); // Fallback to hardcoded data
+      }
+    } else {
+      updateAllDashboardElements(current_ticker); // Initialize dashboard with default ticker
+    }
   };
 
   if(el_ticker) el_ticker.addEventListener('change',()=>use_ticker(el_ticker.value));
