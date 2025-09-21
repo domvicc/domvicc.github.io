@@ -31,6 +31,130 @@ document.addEventListener('DOMContentLoaded', () => {
   let current_rows = [];
   let current_ticker = 'aapl';
 
+  // Comprehensive ticker data for dynamic dashboard updates
+  const ticker_data = {
+    'aapl': {
+      name: 'Apple Inc.',
+      symbol: 'AAPL',
+      exchange: 'NASDAQ',
+      currentPrice: 230.89,
+      change: 2.84,
+      changePercent: 1.24,
+      marketCap: '3.45T',
+      marketCapRank: '#1 most valuable',
+      peRatio: 35.38,
+      industryPE: 25.7,
+      dividendYield: 0.43,
+      dividendPerShare: 1.01,
+      revenue: 408.62,
+      netIncome: 123.45,
+      grossProfit: 189.34,
+      operatingIncome: 134.62,
+      sector: 'Technology',
+      industry: 'Consumer Electronics',
+      employees: '164,000',
+      founded: '1976',
+      description: 'Apple Inc. is an American multinational technology company that specializes in consumer electronics, computer software, and online services.',
+      website: 'https://www.apple.com'
+    },
+    'abnb': {
+      name: 'Airbnb, Inc.',
+      symbol: 'ABNB',
+      exchange: 'NASDAQ',
+      currentPrice: 142.56,
+      change: -1.23,
+      changePercent: -0.86,
+      marketCap: '94.2B',
+      marketCapRank: '#174 by market cap',
+      peRatio: 18.7,
+      industryPE: 22.4,
+      dividendYield: 0.0,
+      dividendPerShare: 0.0,
+      revenue: 9.92,
+      netIncome: 4.79,
+      grossProfit: 7.83,
+      operatingIncome: 1.26,
+      sector: 'Consumer Discretionary',
+      industry: 'Travel Services',
+      employees: '6,407',
+      founded: '2008',
+      description: 'Airbnb, Inc. operates a platform that enables hosts to offer stays and experiences to guests worldwide.',
+      website: 'https://www.airbnb.com'
+    },
+    'adbe': {
+      name: 'Adobe Inc.',
+      symbol: 'ADBE',
+      exchange: 'NASDAQ',
+      currentPrice: 578.32,
+      change: 8.45,
+      changePercent: 1.48,
+      marketCap: '259.7B',
+      marketCapRank: '#67 by market cap',
+      peRatio: 45.2,
+      industryPE: 28.9,
+      dividendYield: 0.0,
+      dividendPerShare: 0.0,
+      revenue: 19.41,
+      netIncome: 5.61,
+      grossProfit: 17.49,
+      operatingIncome: 6.84,
+      sector: 'Technology',
+      industry: 'Software',
+      employees: '26,430',
+      founded: '1982',
+      description: 'Adobe Inc. operates as a diversified software company worldwide, providing digital media and digital experience solutions.',
+      website: 'https://www.adobe.com'
+    },
+    'meta': {
+      name: 'Meta Platforms, Inc.',
+      symbol: 'META',
+      exchange: 'NASDAQ',
+      currentPrice: 589.12,
+      change: 12.34,
+      changePercent: 2.14,
+      marketCap: '1.49T',
+      marketCapRank: '#8 by market cap',
+      peRatio: 28.4,
+      industryPE: 31.2,
+      dividendYield: 0.37,
+      dividendPerShare: 2.00,
+      revenue: 134.90,
+      netIncome: 39.07,
+      grossProfit: 108.14,
+      operatingIncome: 46.75,
+      sector: 'Communication Services',
+      industry: 'Social Media',
+      employees: '67,317',
+      founded: '2004',
+      description: 'Meta Platforms, Inc. develops products that enable people to connect and share with friends and family through mobile devices, personal computers, virtual reality headsets, and wearables worldwide.',
+      website: 'https://www.meta.com'
+    },
+    'amzn': {
+      name: 'Amazon.com, Inc.',
+      symbol: 'AMZN',
+      exchange: 'NASDAQ',
+      currentPrice: 186.43,
+      change: -2.17,
+      changePercent: -1.15,
+      marketCap: '1.95T',
+      marketCapRank: '#5 by market cap',
+      peRatio: 47.8,
+      industryPE: 25.3,
+      dividendYield: 0.0,
+      dividendPerShare: 0.0,
+      revenue: 574.79,
+      netIncome: 30.43,
+      grossProfit: 270.16,
+      operatingIncome: 48.03,
+      sector: 'Consumer Discretionary',
+      industry: 'E-commerce',
+      employees: '1,541,000',
+      founded: '1994',
+      description: 'Amazon.com, Inc. engages in the retail sale of consumer products and subscriptions in North America and internationally.',
+      website: 'https://www.amazon.com'
+    }
+  };
+
   const to_arrays = (rows) => {
     const x=[],o=[],h=[],l=[],c=[];
     for (const r of rows){x.push(r.t);o.push(r.o);h.push(r.h);l.push(r.l);c.push(r.c);}
@@ -252,6 +376,131 @@ document.addEventListener('DOMContentLoaded', () => {
     const blob=new Blob([header+body],{type:'text/csv;charset=utf-8;'}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=filename; a.click(); URL.revokeObjectURL(a.href);
   };
 
+  // --- Dynamic Dashboard Updates ---
+  const updateSidebarCompanyInfo = (ticker) => {
+    const data = ticker_data[ticker.toLowerCase()];
+    if (!data) return;
+
+    // Update company name and symbol in sidebar
+    const companyNameEl = document.querySelector('aside h2.font-bold');
+    const companySymbolEl = document.querySelector('aside p.text-xs.text-gray-400');
+    
+    if (companyNameEl) companyNameEl.textContent = data.name.toLowerCase();
+    if (companySymbolEl) companySymbolEl.textContent = `${data.exchange.toLowerCase()}: ${data.symbol.toLowerCase()}`;
+  };
+
+  const updateKeyMetricsCards = (ticker) => {
+    const data = ticker_data[ticker.toLowerCase()];
+    if (!data) return;
+
+    // Update current price card
+    const priceEl = document.querySelector('.grid .bg-gray-800 h3');
+    const changeEl = document.querySelector('.grid .bg-gray-800 span');
+    const symbolEl = document.querySelector('.grid .bg-gray-800 p.text-gray-400');
+    
+    if (priceEl) priceEl.textContent = `$${data.currentPrice}`;
+    if (changeEl) {
+      const isPositive = data.changePercent > 0;
+      changeEl.className = `px-2 py-1 text-xs rounded-full ${isPositive ? 'bg-green-900 text-green-400' : 'bg-red-900 text-red-400'} flex items-center`;
+      changeEl.innerHTML = `<i data-feather="${isPositive ? 'arrow-up' : 'arrow-down'}" class="w-3 h-3 mr-1"></i>${Math.abs(data.changePercent).toFixed(2)}%`;
+    }
+    if (symbolEl) symbolEl.textContent = `${data.exchange.toLowerCase()}: ${data.symbol.toLowerCase()}`;
+
+    // Update other metric cards
+    const metricCards = document.querySelectorAll('.grid .bg-gray-800');
+    if (metricCards.length >= 4) {
+      // Market cap card
+      const marketCapValue = metricCards[1].querySelector('h3');
+      const marketCapDesc = metricCards[1].querySelector('p.text-gray-400');
+      if (marketCapValue) marketCapValue.textContent = data.marketCap;
+      if (marketCapDesc) marketCapDesc.textContent = data.marketCapRank;
+
+      // P/E ratio card
+      const peValue = metricCards[2].querySelector('h3');
+      const peDesc = metricCards[2].querySelector('p.text-gray-400');
+      if (peValue) peValue.textContent = data.peRatio.toFixed(2);
+      if (peDesc) peDesc.textContent = `industry: ${data.industryPE}`;
+
+      // Dividend yield card
+      const divValue = metricCards[3].querySelector('h3');
+      const divDesc = metricCards[3].querySelector('p.text-gray-400');
+      if (divValue) divValue.textContent = `${data.dividendYield.toFixed(2)}%`;
+      if (divDesc) divDesc.textContent = data.dividendPerShare > 0 ? `$${data.dividendPerShare.toFixed(2)} per share` : 'No dividend';
+    }
+  };
+
+  const updateFinancialMetricsSection = (ticker) => {
+    const data = ticker_data[ticker.toLowerCase()];
+    if (!data) return;
+
+    // Update the key financials section
+    const financialSection = document.querySelector('.bg-gray-800 .space-y-4');
+    if (financialSection) {
+      const metrics = [
+        { label: 'revenue (ttm)', value: `$${data.revenue}b`, width: '100%' },
+        { label: 'net income (ttm)', value: `$${data.netIncome}b`, width: `${(data.netIncome / data.revenue * 100).toFixed(0)}%` },
+        { label: 'gross profit (ttm)', value: `$${data.grossProfit}b`, width: `${(data.grossProfit / data.revenue * 100).toFixed(0)}%` },
+        { label: 'operating income (ttm)', value: `$${data.operatingIncome}b`, width: `${(data.operatingIncome / data.revenue * 100).toFixed(0)}%` }
+      ];
+
+      financialSection.innerHTML = metrics.map(metric => `
+        <div>
+          <div class="flex justify-between text-sm mb-1">
+            <span class="text-gray-400">${metric.label}</span>
+            <span>${metric.value}</span>
+          </div>
+          <div class="w-full bg-gray-700 rounded-full h-2">
+            <div class="bg-blue-500 h-2 rounded-full" style="width: ${metric.width}"></div>
+          </div>
+        </div>
+      `).join('');
+    }
+  };
+
+  const updateCompanyOverviewSection = (ticker) => {
+    const data = ticker_data[ticker.toLowerCase()];
+    if (!data) return;
+
+    // Update company description
+    const descEl = document.querySelector('.bg-gray-800 p.text-gray-300');
+    if (descEl) descEl.textContent = data.description;
+
+    // Update company details grid
+    const detailsGrid = document.querySelector('.grid.grid-cols-2.md\\:grid-cols-4');
+    if (detailsGrid) {
+      detailsGrid.innerHTML = `
+        <div class="bg-gray-700 p-3 rounded-lg">
+          <p class="text-xs text-gray-400">sector</p>
+          <p class="font-medium">${data.sector.toLowerCase()}</p>
+        </div>
+        <div class="bg-gray-700 p-3 rounded-lg">
+          <p class="text-xs text-gray-400">industry</p>
+          <p class="font-medium">${data.industry.toLowerCase()}</p>
+        </div>
+        <div class="bg-gray-700 p-3 rounded-lg">
+          <p class="text-xs text-gray-400">employees</p>
+          <p class="font-medium">${data.employees}</p>
+        </div>
+        <div class="bg-gray-700 p-3 rounded-lg">
+          <p class="text-xs text-gray-400">founded</p>
+          <p class="font-medium">${data.founded}</p>
+        </div>
+      `;
+    }
+  };
+
+  const updateAllDashboardElements = (ticker) => {
+    updateSidebarCompanyInfo(ticker);
+    updateKeyMetricsCards(ticker);
+    updateFinancialMetricsSection(ticker);
+    updateCompanyOverviewSection(ticker);
+    
+    // Refresh feather icons after DOM updates
+    if (window.feather && typeof window.feather.replace === 'function') {
+      window.feather.replace();
+    }
+  };
+
   // --- discover json files ---
   const list_json_files=async(dirUrl)=>{
     console.log('list_json_files: Trying to load from:', dirUrl);
@@ -316,7 +565,14 @@ document.addEventListener('DOMContentLoaded', () => {
     return map;
   };
 
-  const use_ticker=(sym)=>{const key=String(sym||'').toLowerCase(); current_ticker=key; current_rows=ticker_map.get(key)||[]; render_candles(current_rows); apply_timeframe(current_rows);};
+  const use_ticker=(sym)=>{
+    const key=String(sym||'').toLowerCase(); 
+    current_ticker=key; 
+    current_rows=ticker_map.get(key)||[]; 
+    render_candles(current_rows); 
+    apply_timeframe(current_rows);
+    updateAllDashboardElements(key); // Update all dashboard elements when ticker changes
+  };
 
   const render_performance=()=>{
     const c=get_theme_colors(); const x=['q1 2024','q2 2024','q3 2024','q4 2024']; const revenue=[119.6,94.8,81.8,89.5]; const income=[34.6,24.2,19.9,15.0];
@@ -344,6 +600,7 @@ document.addEventListener('DOMContentLoaded', () => {
     populate_ticker_select(all_tickers,el_ticker);
     current_ticker=el_ticker.value; current_rows=ticker_map.get(current_ticker)||[];
     render_candles(current_rows); apply_timeframe(current_rows); render_performance();
+    updateAllDashboardElements(current_ticker); // Initialize dashboard with default ticker
   };
 
   if(el_ticker) el_ticker.addEventListener('change',()=>use_ticker(el_ticker.value));
