@@ -619,10 +619,49 @@ document.addEventListener('DOMContentLoaded', () => {
     updateKeyMetricsCards(ticker, apiData);
     updateFinancialMetricsSection(ticker, apiData);
     updateCompanyOverviewSection(ticker, apiData);
+    updateHeaderQuote(ticker, apiData);
     
     // Refresh feather icons after DOM updates
     if (window.feather && typeof window.feather.replace === 'function') {
       window.feather.replace();
+    }
+  };
+
+  // Update the intrapanel quote header (symbol + OHLC + change)
+  const updateHeaderQuote = (ticker, apiData = null) => {
+    if (!ticker || !current_rows || current_rows.length === 0) return;
+    const rows = current_rows; // already timeframe-filtered where applicable
+    const latest = rows[rows.length - 1];
+    // Find previous close (prior trading day) - scan backwards for first earlier bar with a close
+    let prevClose = null;
+    for (let i = rows.length - 2; i >= 0; i--) { if (rows[i].close != null) { prevClose = rows[i].close; break; } }
+    const open = latest.open ?? latest.Open ?? 0;
+    const high = latest.high ?? latest.High ?? 0;
+    const low = latest.low ?? latest.Low ?? 0;
+    const close = latest.close ?? latest.Close ?? 0;
+    const change = (prevClose != null) ? (close - prevClose) : 0;
+    const changePct = (prevClose != null && prevClose !== 0) ? (change / prevClose * 100) : 0;
+    const company = apiData?.companyOverview?.Name || ticker_data[ticker]?.companyName || ticker_data[ticker]?.name || '';
+
+    const elSymbol = document.getElementById('quote-symbol');
+    const elCompany = document.getElementById('quote-company');
+    const elOpen = document.getElementById('quote-open');
+    const elHigh = document.getElementById('quote-high');
+    const elLow = document.getElementById('quote-low');
+    const elClose = document.getElementById('quote-close');
+    const elChange = document.getElementById('quote-change');
+
+    if (elSymbol) elSymbol.textContent = ticker.toLowerCase();
+    if (elCompany && company) elCompany.textContent = company.toLowerCase();
+    if (elOpen) elOpen.textContent = Number(open).toFixed(2);
+    if (elHigh) elHigh.textContent = Number(high).toFixed(2);
+    if (elLow) elLow.textContent = Number(low).toFixed(2);
+    if (elClose) elClose.textContent = Number(close).toFixed(2);
+    if (elChange) {
+      const positive = change > 0;
+      elChange.className = positive ? 'text-green-400' : (change < 0 ? 'text-red-400' : 'text-gray-300');
+      const sign = change > 0 ? '+' : '';
+      elChange.textContent = `${sign}${change.toFixed(2)} (${sign}${changePct.toFixed(2)}%)`;
     }
   };
 
@@ -696,6 +735,7 @@ document.addEventListener('DOMContentLoaded', () => {
     current_rows=ticker_map.get(key)||[]; 
     render_candles(current_rows); 
     apply_timeframe(current_rows);
+    updateHeaderQuote(key); // provisional update with existing data while API loads
     
     // Try to load API data for the new ticker
     try {
@@ -762,6 +802,7 @@ document.addEventListener('DOMContentLoaded', () => {
       try {
         const apiData = await loadDataFromEndpoint(urlTicker);
         updateAllDashboardElements(current_ticker, apiData);
+        updateHeaderQuote(current_ticker, apiData);
         
         // Update page title with company name
         if (apiData?.companyOverview?.Name) {
@@ -769,10 +810,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       } catch (error) {
         console.warn('Boot: Failed to load API data, falling back to hardcoded data:', error);
-        updateAllDashboardElements(current_ticker); // Fallback to hardcoded data
+        updateAllDashboardElements(current_ticker); // Fallback
+        updateHeaderQuote(current_ticker); // Fallback header
       }
     } else {
       updateAllDashboardElements(current_ticker); // Initialize dashboard with default ticker
+      updateHeaderQuote(current_ticker);
     }
   };
 
