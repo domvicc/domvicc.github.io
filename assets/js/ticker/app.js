@@ -481,14 +481,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Current Price card updates (keep original static label styling)
     const priceEl = priceCard.querySelector('h3');
-    const changeEl = priceCard.querySelector('span.rounded-full');
+  const changeEl = priceCard.querySelector('span.rounded-full, span.px-2'); // support existing markup
     const symbolEl = priceCard.querySelector('div.mt-4 p.text-gray-400');
     
   if (priceEl) priceEl.textContent = `$${currentPrice.toFixed(2)}`;
     if (changeEl) {
       const isPositive = changePercent > 0;
-      changeEl.className = `px-2 py-1 text-xs rounded-full ${isPositive ? 'bg-green-900 text-green-400' : 'bg-red-900 text-red-400'} flex items-center`;
-      changeEl.innerHTML = `<i data-feather="${isPositive ? 'arrow-up' : 'arrow-down'}" class="w-3 h-3 mr-1"></i>${Math.abs(changePercent).toFixed(2)}%`;
+      // Only update text, do not replace inner structure to avoid flicker
+      changeEl.textContent = `${isPositive?'+':''}${Math.abs(changePercent).toFixed(2)}%`;
+      // Adjust classes minimally (toggle color classes only)
+      changeEl.classList.remove('bg-green-900','text-green-400','bg-red-900','text-red-400');
+      if(isPositive){ changeEl.classList.add('bg-green-900','text-green-400'); }
+      else { changeEl.classList.add('bg-red-900','text-red-400'); }
     }
     if (symbolEl) {
       const exchange = (data.Exchange || data.exchange || 'NASDAQ').toUpperCase();
@@ -501,13 +505,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const marketCapValue = marketCapCard.querySelector('h3');
     const marketCapDesc = marketCapCard.querySelector('p.text-gray-400');
     if (marketCapValue) marketCapValue.textContent = formatMarketCap(marketCap);
-    if (marketCapDesc) marketCapDesc.textContent = data.marketCapRank || '#N/A by market cap';
+  if (marketCapDesc) marketCapDesc.textContent = data.marketCapRank || '#N/A by Market Cap';
 
     // P/E Ratio card
     const peValue = peCard.querySelector('h3');
     const peDesc = peCard.querySelector('p.text-gray-400');
     if (peValue) peValue.textContent = peRatio.toFixed(2);
-    if (peDesc) peDesc.textContent = `Industry: ${data.industryPE || 'N/A'}`;
+  if (peDesc) peDesc.textContent = `Industry: ${data.industryPE || 'N/A'}`;
 
     // Dividend Yield card
     const divValue = dividendCard.querySelector('h3');
@@ -516,9 +520,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const yieldPercent = dividendYield; // do not multiply again
     if (divValue) divValue.textContent = `${yieldPercent.toFixed(2)}%`;
     if (divDesc) divDesc.textContent = dividendPerShare > 0 ? `$${dividendPerShare.toFixed(2)} per share` : 'No dividend';
-    
-    // Ensure feather icons inside updated badges are refreshed
-    if (window.feather && typeof window.feather.replace === 'function') window.feather.replace();
+    // Removed feather.replace() here to avoid repaint flicker; global refresh happens after aggregate updates.
   };
 
   // Helper function to format market cap
@@ -789,8 +791,10 @@ document.addEventListener('DOMContentLoaded', () => {
     render_candles(current_rows); 
     apply_timeframe(current_rows); 
     render_performance();
-    updateAllDashboardElements(current_ticker); // Initialize dashboard
-    updateHeaderQuote(current_ticker);
+    
+    // Skip initial dashboard updates to preserve static HTML styling
+    // Updates will happen when user interacts with ticker selector
+    updateHeaderQuote(current_ticker); // Only update header with chart data
   };
 
   if(el_ticker) el_ticker.addEventListener('change',()=>use_ticker(el_ticker.value));
