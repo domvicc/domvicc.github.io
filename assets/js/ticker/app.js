@@ -12,12 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const dir_url = 'ticker/daily/'; // directory with per-ticker jsons
   let currentArrays = null; // Store current data for dynamic Y-axis
 
-  // Get ticker from URL parameter or default to 'aapl'
-  const getTickerFromURL = () => {
-    const params = new URLSearchParams(window.location.search);
-    const ticker = params.get('ticker');
-    return ticker ? ticker.toLowerCase() : 'aapl';
-  };
+  // Default starting ticker
+  const DEFAULT_TICKER = 'aapl';
 
   // Dynamic data endpoints
   const data_endpoints = {
@@ -44,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let ticker_map = new Map();
   let all_tickers = [];
   let current_rows = [];
-  let current_ticker = getTickerFromURL(); // Use URL parameter or default to 'aapl'
+  let current_ticker = DEFAULT_TICKER; // always start from default now
 
   // Comprehensive ticker data for dynamic dashboard updates
   const ticker_data = {
@@ -444,20 +440,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Dynamic Dashboard Updates ---
   const updateSidebarCompanyInfo = (ticker, apiData = null) => {
-    // Use API data if available, otherwise fall back to hardcoded data
-    const data = apiData?.companyOverview || ticker_data[ticker.toLowerCase()];
-    if (!data) return;
+    const key = String(ticker||'').toLowerCase();
+    // Prefer API data, then hardcoded, else fallback placeholder
+    const base = apiData?.companyOverview || ticker_data[key] || {};
+    const exchange = base.Exchange || base.exchange || 'NASDAQ';
+    const symbol = (base.Symbol || base.symbol || ticker || '').toUpperCase();
+    const displayName = (base.Name || base.name || symbol).toLowerCase();
 
-    // Update company name and symbol in sidebar
     const companyNameEl = document.querySelector('aside h2.font-bold');
     const companySymbolEl = document.querySelector('aside p.text-xs.text-gray-400');
-    
-    if (companyNameEl) companyNameEl.textContent = (data.Name || data.name || '').toLowerCase();
-    if (companySymbolEl) {
-      const exchange = data.Exchange || data.exchange || 'NASDAQ';
-      const symbol = data.Symbol || data.symbol || ticker.toUpperCase();
-      companySymbolEl.textContent = `${exchange.toLowerCase()}: ${symbol.toLowerCase()}`;
-    }
+
+    if (companyNameEl) companyNameEl.textContent = displayName;
+    if (companySymbolEl) companySymbolEl.textContent = `${exchange.toLowerCase()}: ${symbol.toLowerCase()}`;
   };
 
   const updateKeyMetricsCards = (ticker, apiData = null) => {
@@ -641,7 +635,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const close = latest.close ?? latest.Close ?? 0;
     const change = (prevClose != null) ? (close - prevClose) : 0;
     const changePct = (prevClose != null && prevClose !== 0) ? (change / prevClose * 100) : 0;
-    const company = apiData?.companyOverview?.Name || ticker_data[ticker]?.companyName || ticker_data[ticker]?.name || '';
+  const lower = String(ticker||'').toLowerCase();
+  const company = apiData?.companyOverview?.Name || ticker_data[lower]?.companyName || ticker_data[lower]?.name || ticker.toUpperCase();
 
     const elSymbol = document.getElementById('quote-symbol');
     const elCompany = document.getElementById('quote-company');
@@ -758,10 +753,6 @@ document.addEventListener('DOMContentLoaded', () => {
     set_status('loading daily data…');
     console.log('Boot: Starting ticker data load from:', dir_url);
     
-    // Check for ticker in URL parameters
-    const urlTicker = getTickerFromURL();
-    console.log('Boot: URL ticker parameter:', urlTicker);
-    
     try {
       ticker_map=await fetch_all_from_directory();
       all_tickers=Array.from(ticker_map.keys()).sort();
@@ -778,45 +769,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     populate_ticker_select(all_tickers,el_ticker);
-    
-    // Set initial ticker from URL or default
-    let initialTicker = urlTicker;
-    if (urlTicker && !all_tickers.includes(urlTicker.toUpperCase())) {
-      console.warn(`Boot: URL ticker "${urlTicker}" not found in available tickers, using default`);
-      initialTicker = null;
-    }
-    
-    current_ticker = initialTicker || el_ticker.value;
-    if (el_ticker && initialTicker) {
-      el_ticker.value = initialTicker;
-    }
+    current_ticker = el_ticker.value || DEFAULT_TICKER;
     
     current_rows=ticker_map.get(current_ticker)||[];
     render_candles(current_rows); 
     apply_timeframe(current_rows); 
     render_performance();
-    
-    // Load API data for the ticker and update dashboard
-    if (urlTicker) {
-      console.log(`Boot: Loading API data for URL ticker: ${urlTicker}`);
-      try {
-        const apiData = await loadDataFromEndpoint(urlTicker);
-        updateAllDashboardElements(current_ticker, apiData);
-        updateHeaderQuote(current_ticker, apiData);
-        
-        // Update page title with company name
-        if (apiData?.companyOverview?.Name) {
-          document.title = `${apiData.companyOverview.Name} (${urlTicker.toUpperCase()}) - Ticker Analysis`;
-        }
-      } catch (error) {
-        console.warn('Boot: Failed to load API data, falling back to hardcoded data:', error);
-        updateAllDashboardElements(current_ticker); // Fallback
-        updateHeaderQuote(current_ticker); // Fallback header
-      }
-    } else {
-      updateAllDashboardElements(current_ticker); // Initialize dashboard with default ticker
-      updateHeaderQuote(current_ticker);
-    }
+    updateAllDashboardElements(current_ticker); // Initialize dashboard
+    updateHeaderQuote(current_ticker);
   };
 
   if(el_ticker) el_ticker.addEventListener('change',()=>use_ticker(el_ticker.value));
