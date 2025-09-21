@@ -627,9 +627,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const updateAllDashboardElements = (ticker, apiData = null) => {
     updateSidebarCompanyInfo(ticker, apiData);
     updateKeyMetricsCards(ticker, apiData);
-    updateFinancialMetricsSection(ticker, apiData);
+    // Skip updateFinancialMetricsSection to preserve static HTML styling
     updateCompanyOverviewSection(ticker, apiData);
-    updateHeaderQuote(ticker, apiData);
+    // updateHeaderQuote called separately to avoid duplication
     
     // Refresh feather icons after DOM updates
     if (window.feather && typeof window.feather.replace === 'function') {
