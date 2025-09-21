@@ -450,8 +450,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const companyNameEl = document.querySelector('aside h2.font-bold');
     const companySymbolEl = document.querySelector('aside p.text-xs.text-gray-400');
 
-    if (companyNameEl) companyNameEl.textContent = displayName;
-    if (companySymbolEl) companySymbolEl.textContent = `${exchange.toLowerCase()}: ${symbol.toLowerCase()}`;
+    if (companyNameEl) companyNameEl.textContent = displayName.replace(/\b\w/g,c=>c.toUpperCase());
+    if (companySymbolEl) companySymbolEl.textContent = `${exchange.toUpperCase()}: ${symbol.toUpperCase()}`;
   };
 
   const updateKeyMetricsCards = (ticker, apiData = null) => {
@@ -467,44 +467,58 @@ document.addEventListener('DOMContentLoaded', () => {
     const dividendYield = data.dividendYield || parseFloat(data.DividendYield) || 0;
     const dividendPerShare = data.dividendPerShare || parseFloat(data.DividendPerShare) || 0;
 
-    // Update current price card
-    const priceEl = document.querySelector('.grid .bg-gray-800 h3');
-    const changeEl = document.querySelector('.grid .bg-gray-800 span');
-    const symbolEl = document.querySelector('.grid .bg-gray-800 p.text-gray-400');
+    // Locate the primary metrics grid (first one with 4 columns on md screens)
+    const metricsGrid = document.querySelector('.grid.grid-cols-1.md\\:grid-cols-4');
+    if(!metricsGrid) return;
+    const metricCards = metricsGrid.children;
+    if(metricCards.length < 4) return;
+
+    // Card references in order
+    const priceCard = metricCards[0];
+    const marketCapCard = metricCards[1];
+    const peCard = metricCards[2];
+    const dividendCard = metricCards[3];
+
+    // Current Price card updates (keep original static label styling)
+    const priceEl = priceCard.querySelector('h3');
+    const changeEl = priceCard.querySelector('span.rounded-full');
+    const symbolEl = priceCard.querySelector('div.mt-4 p.text-gray-400');
     
-    if (priceEl) priceEl.textContent = `$${currentPrice.toFixed(2)}`;
+  if (priceEl) priceEl.textContent = `$${currentPrice.toFixed(2)}`;
     if (changeEl) {
       const isPositive = changePercent > 0;
       changeEl.className = `px-2 py-1 text-xs rounded-full ${isPositive ? 'bg-green-900 text-green-400' : 'bg-red-900 text-red-400'} flex items-center`;
       changeEl.innerHTML = `<i data-feather="${isPositive ? 'arrow-up' : 'arrow-down'}" class="w-3 h-3 mr-1"></i>${Math.abs(changePercent).toFixed(2)}%`;
     }
     if (symbolEl) {
-      const exchange = data.Exchange || data.exchange || 'nasdaq';
-      const symbol = data.Symbol || data.symbol || ticker;
-      symbolEl.textContent = `${exchange.toLowerCase()}: ${symbol.toLowerCase()}`;
+      const exchange = (data.Exchange || data.exchange || 'NASDAQ').toUpperCase();
+      const symbol = (data.Symbol || data.symbol || ticker).toUpperCase();
+      symbolEl.textContent = `${exchange}: ${symbol}`;
     }
 
     // Update other metric cards
-    const metricCards = document.querySelectorAll('.grid .bg-gray-800');
-    if (metricCards.length >= 4) {
-      // Market cap card
-      const marketCapValue = metricCards[1].querySelector('h3');
-      const marketCapDesc = metricCards[1].querySelector('p.text-gray-400');
-      if (marketCapValue) marketCapValue.textContent = formatMarketCap(marketCap);
-      if (marketCapDesc) marketCapDesc.textContent = data.marketCapRank || '#N/A by market cap';
+    // Market Cap card
+    const marketCapValue = marketCapCard.querySelector('h3');
+    const marketCapDesc = marketCapCard.querySelector('p.text-gray-400');
+    if (marketCapValue) marketCapValue.textContent = formatMarketCap(marketCap);
+    if (marketCapDesc) marketCapDesc.textContent = data.marketCapRank || '#N/A by market cap';
 
-      // P/E ratio card
-      const peValue = metricCards[2].querySelector('h3');
-      const peDesc = metricCards[2].querySelector('p.text-gray-400');
-      if (peValue) peValue.textContent = peRatio.toFixed(2);
-      if (peDesc) peDesc.textContent = `industry: ${data.industryPE || 'N/A'}`;
+    // P/E Ratio card
+    const peValue = peCard.querySelector('h3');
+    const peDesc = peCard.querySelector('p.text-gray-400');
+    if (peValue) peValue.textContent = peRatio.toFixed(2);
+    if (peDesc) peDesc.textContent = `Industry: ${data.industryPE || 'N/A'}`;
 
-      // Dividend yield card
-      const divValue = metricCards[3].querySelector('h3');
-      const divDesc = metricCards[3].querySelector('p.text-gray-400');
-      if (divValue) divValue.textContent = `${(dividendYield * 100).toFixed(2)}%`;
-      if (divDesc) divDesc.textContent = dividendPerShare > 0 ? `$${dividendPerShare.toFixed(2)} per share` : 'No dividend';
-    }
+    // Dividend Yield card
+    const divValue = dividendCard.querySelector('h3');
+    const divDesc = dividendCard.querySelector('p.text-gray-400');
+    // dividendYield already appears to be a percent (0.43 means 0.43%) in hardcoded data
+    const yieldPercent = dividendYield; // do not multiply again
+    if (divValue) divValue.textContent = `${yieldPercent.toFixed(2)}%`;
+    if (divDesc) divDesc.textContent = dividendPerShare > 0 ? `$${dividendPerShare.toFixed(2)} per share` : 'No dividend';
+    
+    // Ensure feather icons inside updated badges are refreshed
+    if (window.feather && typeof window.feather.replace === 'function') window.feather.replace();
   };
 
   // Helper function to format market cap
@@ -547,10 +561,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const operatingIncomeB = formatFinancial(operatingIncome);
 
       const metrics = [
-        { label: 'revenue (ttm)', value: `$${revenueB}b`, width: '100%' },
-        { label: 'net income (ttm)', value: `$${netIncomeB}b`, width: revenue > 0 ? `${(netIncome / revenue * 100).toFixed(0)}%` : '0%' },
-        { label: 'gross profit (ttm)', value: `$${grossProfitB}b`, width: revenue > 0 ? `${(grossProfit / revenue * 100).toFixed(0)}%` : '0%' },
-        { label: 'operating income (ttm)', value: `$${operatingIncomeB}b`, width: revenue > 0 ? `${(operatingIncome / revenue * 100).toFixed(0)}%` : '0%' }
+        { label: 'Revenue (TTM)', value: `$${revenueB}B`, width: '100%' },
+        { label: 'Net Income (TTM)', value: `$${netIncomeB}B`, width: revenue > 0 ? `${(netIncome / revenue * 100).toFixed(0)}%` : '0%' },
+        { label: 'Gross Profit (TTM)', value: `$${grossProfitB}B`, width: revenue > 0 ? `${(grossProfit / revenue * 100).toFixed(0)}%` : '0%' },
+        { label: 'Operating Income (TTM)', value: `$${operatingIncomeB}B`, width: revenue > 0 ? `${(operatingIncome / revenue * 100).toFixed(0)}%` : '0%' }
       ];
 
       financialSection.innerHTML = metrics.map(metric => `
@@ -589,19 +603,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
       detailsGrid.innerHTML = `
         <div class="bg-gray-700 p-3 rounded-lg">
-          <p class="text-xs text-gray-400">sector</p>
-          <p class="font-medium">${sector.toLowerCase()}</p>
+          <p class="text-xs text-gray-400">Sector</p>
+          <p class="font-medium">${sector.replace(/\b\w/g,c=>c.toUpperCase())}</p>
         </div>
         <div class="bg-gray-700 p-3 rounded-lg">
-          <p class="text-xs text-gray-400">industry</p>
-          <p class="font-medium">${industry.toLowerCase()}</p>
+          <p class="text-xs text-gray-400">Industry</p>
+          <p class="font-medium">${industry.replace(/\b\w/g,c=>c.toUpperCase())}</p>
         </div>
         <div class="bg-gray-700 p-3 rounded-lg">
-          <p class="text-xs text-gray-400">employees</p>
+          <p class="text-xs text-gray-400">Employees</p>
           <p class="font-medium">${employees}</p>
         </div>
         <div class="bg-gray-700 p-3 rounded-lg">
-          <p class="text-xs text-gray-400">founded</p>
+          <p class="text-xs text-gray-400">Founded</p>
           <p class="font-medium">${founded}</p>
         </div>
       `;
@@ -646,8 +660,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const elClose = document.getElementById('quote-close');
     const elChange = document.getElementById('quote-change');
 
-    if (elSymbol) elSymbol.textContent = ticker.toLowerCase();
-    if (elCompany && company) elCompany.textContent = company.toLowerCase();
+  if (elSymbol) elSymbol.textContent = ticker.toUpperCase();
+  if (elCompany && company) elCompany.textContent = company.replace(/\b\w/g,c=>c.toUpperCase());
     if (elOpen) elOpen.textContent = Number(open).toFixed(2);
     if (elHigh) elHigh.textContent = Number(high).toFixed(2);
     if (elLow) elLow.textContent = Number(low).toFixed(2);
