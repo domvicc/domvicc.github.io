@@ -51,6 +51,6 @@ with open(output_path, "w", newline="", encoding="utf-8") as f:
         
         writer.writerow([title_text, issuer_text, date_text, credential_text])
 
-print(f"✅ Certifications exported to {output_path}")
+print(f" Certifications exported to {output_path}")
 
 driver.quit()
