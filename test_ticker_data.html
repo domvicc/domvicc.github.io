@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Ticker Data Loading</title>
+</head>
+<body>
+    <h1>Test Ticker Data Loading</h1>
+    <div id="results"></div>
+
+    <script>
+        async function testTicker(symbol) {
+            try {
+                const response = await fetch(`ticker/daily/${symbol}.json`);
+                const data = await response.json();
+                
+                if (Array.isArray(data) && data.length > 0) {
+                    const latest = data[data.length - 1];
+                    console.log(`${symbol} latest data:`, latest);
+                    
+                    // Test both property access methods
+                    const open1 = latest.o ?? latest.open ?? 0;
+                    const high1 = latest.h ?? latest.high ?? 0;
+                    const low1 = latest.l ?? latest.low ?? 0;
+                    const close1 = latest.c ?? latest.close ?? 0;
+                    
+                    return {
+                        symbol,
+                        dataLength: data.length,
+                        latest,
+                        ohlc: { open: open1, high: high1, low: low1, close: close1 },
+                        hasData: open1 > 0 && high1 > 0 && low1 > 0 && close1 > 0
+                    };
+                }
+                return { symbol, error: 'No data found' };
+            } catch (error) {
+                return { symbol, error: error.message };
+            }
+        }
+
+        async function runTests() {
+            const results = document.getElementById('results');
+            results.innerHTML = '<p>Testing ticker data...</p>';
+            
+            const symbols = ['ADI', 'AMZN', 'AAPL'];
+            const testResults = [];
+            
+            for (const symbol of symbols) {
+                const result = await testTicker(symbol);
+                testResults.push(result);
+                console.log(`Test result for ${symbol}:`, result);
+            }
+            
+            // Display results
+            let html = '<h2>Test Results:</h2>';
+            testResults.forEach(result => {
+                if (result.error) {
+                    html += `<p><strong>${result.symbol}:</strong> ❌ Error: ${result.error}</p>`;
+                } else {
+                    const status = result.hasData ? '✅' : '❌';
+                    html += `
+                        <div style="margin: 10px 0; padding: 10px; border: 1px solid #ccc;">
+                            <h3>${status} ${result.symbol} (${result.dataLength} records)</h3>
+                            <p><strong>OHLC:</strong> 
+                                O: ${result.ohlc.open.toFixed(2)}, 
+                                H: ${result.ohlc.high.toFixed(2)}, 
+                                L: ${result.ohlc.low.toFixed(2)}, 
+                                C: ${result.ohlc.close.toFixed(2)}
+                            </p>
+                            <p><strong>Latest Record:</strong> ${JSON.stringify(result.latest)}</p>
+                        </div>
+                    `;
+                }
+            });
+            
+            results.innerHTML = html;
+        }
+
+        // Run tests when page loads
+        window.addEventListener('load', runTests);
+    </script>
+</body>
+</html>

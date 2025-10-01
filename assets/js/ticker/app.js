@@ -163,6 +163,30 @@ document.addEventListener('DOMContentLoaded', () => {
       founded: '1994',
       description: 'Amazon.com, Inc. engages in the retail sale of consumer products and subscriptions in North America and internationally.',
       website: 'https://www.amazon.com'
+    },
+    'adi': {
+      name: 'Analog Devices, Inc.',
+      symbol: 'ADI',
+      exchange: 'NASDAQ',
+      currentPrice: 234.67,
+      change: 3.21,
+      changePercent: 1.39,
+      marketCap: '121.8B',
+      marketCapRank: '#145 by market cap',
+      peRatio: 42.3,
+      industryPE: 28.5,
+      dividendYield: 1.67,
+      dividendPerShare: 3.92,
+      revenue: 12.32,
+      netIncome: 3.45,
+      grossProfit: 7.89,
+      operatingIncome: 4.23,
+      sector: 'Technology',
+      industry: 'Semiconductors',
+      employees: '25,000',
+      founded: '1965',
+      description: 'Analog Devices, Inc. designs, manufactures, tests, and markets integrated circuits, software, and subsystems.',
+      website: 'https://www.analog.com'
     }
   };
 
@@ -644,11 +668,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const latest = rows[rows.length - 1];
     // Find previous close (prior trading day) - scan backwards for first earlier bar with a close
     let prevClose = null;
-    for (let i = rows.length - 2; i >= 0; i--) { if (rows[i].close != null) { prevClose = rows[i].close; break; } }
-    const open = latest.open ?? latest.Open ?? 0;
-    const high = latest.high ?? latest.High ?? 0;
-    const low = latest.low ?? latest.Low ?? 0;
-    const close = latest.close ?? latest.Close ?? 0;
+    for (let i = rows.length - 2; i >= 0; i--) { if ((rows[i].c ?? rows[i].close) != null) { prevClose = rows[i].c ?? rows[i].close; break; } }
+    const open = latest.o ?? latest.open ?? 0;
+    const high = latest.h ?? latest.high ?? 0;
+    const low = latest.l ?? latest.low ?? 0;
+    const close = latest.c ?? latest.close ?? 0;
     const change = (prevClose != null) ? (close - prevClose) : 0;
     const changePct = (prevClose != null && prevClose !== 0) ? (change / prevClose * 100) : 0;
   const lower = String(ticker||'').toLowerCase();
