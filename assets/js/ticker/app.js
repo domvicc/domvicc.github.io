@@ -866,7 +866,7 @@ document.addEventListener('DOMContentLoaded', () => {
       {label:'P/B', val: ratioFmt(safeNum(data.PriceToBookRatio))},
       {label:'EV/EBITDA', val: ratioFmt(safeNum(data.EVToEBITDA))}
     ];
-    el.innerHTML = items.map(i=>`<div class="bg-gray-700 p-3 rounded-lg"><p class="text-xs text-gray-400">${i.label}</p><p class="font-medium">${i.val}</p></div>`).join('');
+    el.innerHTML = items.map(i=>`<div class="flex justify-between items-center py-2 border-b border-gray-700/50 last:border-b-0"><span class="text-gray-400 text-sm">${i.label}</span><span class="text-white font-medium">${i.val}</span></div>`).join('');
   }
 
   function renderProfitability(data){
@@ -879,7 +879,7 @@ document.addEventListener('DOMContentLoaded', () => {
       {label:'EBITDA ($B)', val: (()=>{const e=safeNum(data.EBITDA); return e? (e/1e9).toFixed(2):'—';})()},
       {label:'Gross Profit ($B)', val: (()=>{const g=safeNum(data.GrossProfitTTM); return g? (g/1e9).toFixed(2):'—';})()}
     ];
-    el.innerHTML = items.map(i=>`<div class="bg-gray-700 p-3 rounded-lg"><p class="text-xs text-gray-400">${i.label}</p><p class="font-medium">${i.val}</p></div>`).join('');
+    el.innerHTML = items.map(i=>`<div class="flex justify-between items-center py-2 border-b border-gray-700/50 last:border-b-0"><span class="text-gray-400 text-sm">${i.label}</span><span class="text-white font-medium">${i.val}</span></div>`).join('');
   }
 
   function renderGrowth(data){
@@ -894,7 +894,7 @@ document.addEventListener('DOMContentLoaded', () => {
       {label:'Book Value', val: ratioFmt(safeNum(data.BookValue))},
       {label:'Beta', val: ratioFmt(safeNum(data.Beta))}
     ];
-    el.innerHTML = items.map(i=>`<div class="bg-gray-700 p-3 rounded-lg"><p class="text-xs text-gray-400">${i.label}</p><p class="font-medium">${i.val}</p></div>`).join('');
+    el.innerHTML = items.map(i=>`<div class="flex justify-between items-center py-2 border-b border-gray-700/50 last:border-b-0"><span class="text-gray-400 text-sm">${i.label}</span><span class="text-white font-medium">${i.val}</span></div>`).join('');
   }
 
   function renderAnalyst(data, currentPrice){
@@ -947,7 +947,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {label:'200D MA', v: ma200},
         {label:'52W High', v: high},
         {label:'52W Low', v: low}
-      ].map(m=>`<div class="bg-gray-700 p-2 rounded-md flex flex-col"><span class="text-gray-400 text-[10px]">${m.label}</span><span class="text-xs font-medium">${m.v?m.v.toFixed(2):'—'}</span></div>`).join('');
+      ].map(m=>`<div class="flex justify-between items-center py-1.5 border-b border-gray-700/30 last:border-b-0"><span class="text-gray-400 text-xs">${m.label}</span><span class="text-white text-xs font-medium">${m.v?m.v.toFixed(2):'—'}</span></div>`).join('');
     }
   }
 
