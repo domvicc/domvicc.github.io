@@ -9,7 +9,8 @@ const PROJECTS = {
   },
   'linkedin-scraper':{
     tabs:['Overview','Code'],
-    defaultTab:'Overview',
+    // Set Code as default so code viewer opens first
+    defaultTab:'Code',
     script:'assets/py/linkedin_credentials_scrape.py'
   },
   'pdf-svg-util':{
