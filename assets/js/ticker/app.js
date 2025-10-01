@@ -2,17 +2,14 @@
 document.addEventListener('DOMContentLoaded', () => {
   if (window.feather && typeof window.feather.replace === 'function') window.feather.replace();
 
-  // AOS with fallback
+  // AOS with fallback (remove attribute if library missing)
   if (window.AOS && typeof window.AOS.init === 'function') {
     window.AOS.init();
   } else {
     document.querySelectorAll('[data-aos]').forEach(el => el.removeAttribute('data-aos'));
   }
 
-  // Initialize cards with default ticker data immediately
-  setTimeout(() => {
-    updateKeyMetricsCards(DEFAULT_TICKER);
-  }, 100);
+  // NOTE: Removed premature updateKeyMetricsCards call to avoid initial flash.
 
   const dir_url = 'ticker/daily/'; // directory with per-ticker jsons
   let currentArrays = null; // Store current data for dynamic Y-axis
@@ -523,51 +520,33 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const updateKeyMetricsCards = (ticker, apiData = null) => {
-    console.log('updateKeyMetricsCards called with ticker:', ticker);
-    
-    // Use API data if available, otherwise fall back to hardcoded data
-    const data = apiData?.companyOverview || ticker_data[ticker.toLowerCase()];
-    if (!data) {
-      console.warn('updateKeyMetricsCards: No data found for ticker:', ticker);
-      return;
+    if(!ticker) return;
+    const key = String(ticker).toLowerCase();
+    const data = apiData?.companyOverview || ticker_data[key];
+    if(!data) return; // silent fail to avoid console noise in production
+
+    // Price: prefer explicit currentPrice then latest candle close
+    let currentPrice = Number(data.currentPrice || data.Price) || 0;
+    if(currentPrice === 0 && current_rows && current_rows.length){
+      const last = current_rows[current_rows.length-1];
+      const lastClose = last?.c ?? last?.close;
+      if(lastClose>0) currentPrice = Number(lastClose) || currentPrice;
     }
 
-    console.log('updateKeyMetricsCards: Using data:', data);
-
-    // Map API fields to our expected format with better fallbacks
-    // Prioritize hardcoded data over potentially missing chart data
-    let currentPrice = data.currentPrice || parseFloat(data.Price) || 0;
-    
-    // If we have chart data and it contains valid price, use latest close as fallback
-    if (currentPrice === 0 && current_rows && current_rows.length > 0) {
-      const latestClose = current_rows[current_rows.length - 1]?.c || current_rows[current_rows.length - 1]?.close;
-      if (latestClose && latestClose > 0) {
-        currentPrice = latestClose;
-      }
+    // Change percent: prefer computed from current_rows, fallback to hardcoded
+    let changePercent = computeChangePercentFromRows();
+    if(changePercent == null){
+      changePercent = Number(data.changePercent || data.ChangePercent) || 0;
     }
-    
-    const changePercent = data.changePercent || parseFloat(data.ChangePercent) || 0;
-    const marketCap = data.marketCap || data.MarketCapitalization || '0';
-    const peRatio = data.peRatio || parseFloat(data.PERatio) || 0;
-    const dividendYield = data.dividendYield || parseFloat(data.DividendYield) || 0;
-    const dividendPerShare = data.dividendPerShare || parseFloat(data.DividendPerShare) || 0;
+  const marketCapRaw = data.marketCap || data.MarketCapitalization || '0';
+  const peRatio = Number(data.peRatio || data.PERatio) || 0;
+  const dividendYieldRaw = normalizeDividendYield(Number(data.dividendYield), data.DividendYield);
+    const dividendPerShare = Number(data.dividendPerShare || data.DividendPerShare) || 0;
 
-    // Locate the primary metrics grid by ID
     const metricsGrid = document.getElementById('metrics-grid');
-    if(!metricsGrid) {
-      console.warn('updateKeyMetricsCards: Could not find metrics grid');
-      return;
-    }
-    
-    console.log('updateKeyMetricsCards: Found metrics grid:', metricsGrid);
-    
+    if(!metricsGrid) return;
     const metricCards = metricsGrid.children;
-    if(metricCards.length < 4) {
-      console.warn('updateKeyMetricsCards: Expected 4 cards, found:', metricCards.length);
-      return;
-    }
-
-    console.log('updateKeyMetricsCards: Found', metricCards.length, 'cards');
+    if(metricCards.length < 4) return;
 
     // Card references in order
     const priceCard = metricCards[0];
@@ -580,15 +559,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const changeEl = priceCard.querySelector('span.rounded-full, span.px-2'); // support existing markup
     const symbolEl = priceCard.querySelector('div.mt-4 p.text-gray-400');
     
-    if (priceEl) priceEl.textContent = `$${currentPrice.toFixed(2)}`;
+    if (priceEl) priceEl.textContent = currentPrice>0 ? `$${currentPrice.toFixed(2)}` : '--';
     if (changeEl) {
       const isPositive = changePercent > 0;
-      // Only update text, do not replace inner structure to avoid flicker
-      changeEl.textContent = `${isPositive?'+':''}${Math.abs(changePercent).toFixed(2)}%`;
-      // Adjust classes minimally (toggle color classes only)
+      changeEl.textContent = changePercent !== 0 ? `${isPositive?'+':''}${Math.abs(changePercent).toFixed(2)}%` : '--';
       changeEl.classList.remove('bg-green-900','text-green-400','bg-red-900','text-red-400');
-      if(isPositive){ changeEl.classList.add('bg-green-900','text-green-400'); }
-      else { changeEl.classList.add('bg-red-900','text-red-400'); }
+      if(changePercent!==0){
+        changeEl.classList.add(isPositive? 'bg-green-900':'bg-red-900', isPositive? 'text-green-400':'text-red-400');
+      }
     }
     if (symbolEl) {
       const exchange = (data.Exchange || data.exchange || 'NASDAQ').toUpperCase();
@@ -598,27 +576,43 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Update other metric cards with better selectors
     // Market Cap card
-    const marketCapValue = marketCapCard.querySelector('h3');
-    const marketCapDesc = marketCapCard.querySelector('div.mt-4 p.text-gray-400');
-    if (marketCapValue) marketCapValue.textContent = formatMarketCap(marketCap);
-    if (marketCapDesc) marketCapDesc.textContent = data.marketCapRank || '#1 most valuable';
+  const marketCapValue = marketCapCard.querySelector('h3');
+  const marketCapDesc = marketCapCard.querySelector('div.mt-4 p.text-gray-400');
+  if (marketCapValue) marketCapValue.textContent = formatMarketCap(marketCapRaw);
+    if (marketCapDesc){
+      const rankObj = computeMarketCapRank(ticker);
+      if(rankObj){
+        marketCapDesc.textContent = `Rank #${rankObj.rank} of ${rankObj.total}`;
+      } else if (data.marketCapRank){
+        marketCapDesc.textContent = data.marketCapRank;
+      } else {
+        marketCapDesc.textContent = '';
+      }
+    }
 
     // P/E Ratio card
-    const peValue = peCard.querySelector('h3');
-    const peDesc = peCard.querySelector('div.mt-4 p.text-gray-400');
-    if (peValue) peValue.textContent = peRatio.toFixed(2);
-    if (peDesc) peDesc.textContent = `Industry: ${data.industryPE || '25.7'}`;
+  const peValue = peCard.querySelector('h3');
+  const peDesc = peCard.querySelector('div.mt-4 p.text-gray-400');
+  if (peValue) peValue.textContent = peRatio>0 ? peRatio.toFixed(2) : '--';
+    if (peDesc){
+      const industryAvg = computeIndustryAveragePERatio(ticker);
+      if(industryAvg){
+        peDesc.textContent = `Industry Avg: ${industryAvg.toFixed(1)}`;
+      } else if (data.industryPE) {
+        peDesc.textContent = `Industry: ${data.industryPE}`;
+      } else {
+        peDesc.textContent = '';
+      }
+    }
 
     // Dividend Yield card
     const divValue = dividendCard.querySelector('h3');
     const divDesc = dividendCard.querySelector('div.mt-4 p.text-gray-400');
-    // dividendYield already appears to be a percent (0.43 means 0.43%) in hardcoded data
-    const yieldPercent = dividendYield; // do not multiply again
-    if (divValue) divValue.textContent = `${yieldPercent.toFixed(2)}%`;
-    if (divDesc) divDesc.textContent = dividendPerShare > 0 ? `$${dividendPerShare.toFixed(2)} per share` : 'No dividend';
-    
-    console.log('updateKeyMetricsCards: Updated all cards successfully');
-    // Removed feather.replace() here to avoid repaint flicker; global refresh happens after aggregate updates.
+    if (divValue) {
+      // Hardcoded data uses 0.43 to mean 0.43% already
+      divValue.textContent = dividendYieldRaw>0 ? `${dividendYieldRaw.toFixed(2)}%` : '0.00%';
+    }
+    if (divDesc) divDesc.textContent = dividendPerShare>0 ? `$${dividendPerShare.toFixed(2)} per share` : 'No dividend';
   };
 
   // Helper function to format market cap
@@ -631,6 +625,67 @@ document.addEventListener('DOMContentLoaded', () => {
     if (num >= 1e9) return `$${(num / 1e9).toFixed(2)}B`;
     if (num >= 1e6) return `$${(num / 1e6).toFixed(2)}M`;
     return `$${num.toFixed(2)}`;
+  };
+
+  // ---------- Helper Computations Added ----------
+  const computeChangePercentFromRows = () => {
+    if(!current_rows || current_rows.length < 2) return null;
+    const latest = current_rows[current_rows.length-1];
+    let prevClose = null;
+    for (let i = current_rows.length - 2; i >=0; i--) {
+      const c = current_rows[i].c ?? current_rows[i].close;
+      if (c != null) { prevClose = c; break; }
+    }
+    const close = latest.c ?? latest.close;
+    if(prevClose==null || prevClose===0 || close==null) return null;
+    return ( (close - prevClose) / prevClose ) * 100;
+  };
+
+  const parseNumericMarketCap = (val) => {
+    if(val==null) return 0;
+    if(typeof val === 'number') return val;
+    if(/^[0-9]+$/.test(val)) return parseFloat(val);
+    const m = String(val).trim();
+    if(m.endsWith('T')) return parseFloat(m)*1e12;
+    if(m.endsWith('B')) return parseFloat(m)*1e9;
+    if(m.endsWith('M')) return parseFloat(m)*1e6;
+    return parseFloat(m)||0;
+  };
+
+  const computeMarketCapRank = (ticker) => {
+    // Build array of {ticker, mc}
+    const list = Object.entries(ticker_data).map(([k,v])=>({t:k, mc: parseNumericMarketCap(v.marketCap || v.MarketCapitalization)}))
+      .filter(o=>o.mc>0)
+      .sort((a,b)=>b.mc - a.mc);
+    const idx = list.findIndex(o=>o.t === ticker.toLowerCase());
+    if(idx===-1) return null;
+    return { rank: idx+1, total: list.length };
+  };
+
+  const computeIndustryAveragePERatio = (ticker) => {
+    const base = ticker_data[ticker.toLowerCase()];
+    if(!base) return null;
+    const sector = (base.sector||'').toLowerCase();
+    const industry = (base.industry||'').toLowerCase();
+    const peers = Object.values(ticker_data).filter(v=>
+      (v.industry && v.industry.toLowerCase()===industry) || (v.sector && v.sector.toLowerCase()===sector)
+    );
+    const nums = peers.map(p=>Number(p.peRatio||p.PERatio)).filter(n=>n>0);
+    if(!nums.length) return null;
+    const avg = nums.reduce((a,b)=>a+b,0)/nums.length;
+    return avg;
+  };
+
+  const normalizeDividendYield = (raw, apiVal) => {
+    // raw from hardcoded may already be percent; apiVal (DividendYield) often decimal like 0.004
+    if(raw && raw > 1 && raw < 50) return raw; // already a percent value like 2.15
+    if(raw && raw > 0 && raw <= 1) return raw; // treat small value as already percent (e.g. 0.43) if usage defined that way
+    if(apiVal){
+      const n = Number(apiVal);
+      if(n>0 && n < 0.25) return n*100; // API decimal to percent
+      if(n<=50) return n; // already percent form
+    }
+    return 0;
   };
 
   const updateFinancialMetricsSection = (ticker, apiData = null) => {
