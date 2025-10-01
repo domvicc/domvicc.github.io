@@ -148,62 +148,134 @@
             </div>
           </div>
 
-          <div class="bg-gray-800 rounded-xl p-5 border border-gray-700 mb-6" data-aos="fade-up">
-            <h3 class="font-semibold mb-4">Company Overview</h3>
-            <p class="text-gray-300 mb-4">Apple Inc. is an American multinational technology company that specializes in consumer electronics, computer software, and online services.</p>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div class="bg-gray-700 p-3 rounded-lg"><p class="text-xs text-gray-400">Sector</p><p class="font-medium">Technology</p></div>
-              <div class="bg-gray-700 p-3 rounded-lg"><p class="text-xs text-gray-400">Industry</p><p class="font-medium">Consumer Electronics</p></div>
-              <div class="bg-gray-700 p-3 rounded-lg"><p class="text-xs text-gray-400">Employees</p><p class="font-medium">164,000</p></div>
-              <div class="bg-gray-700 p-3 rounded-lg"><p class="text-xs text-gray-400">Founded</p><p class="font-medium">1976</p></div>
-            </div>
-          </div>
-
-          <!-- Dynamic Valuation & Multiples -->
-          <div class="bg-gray-800 rounded-xl p-5 border border-gray-700 mb-6" data-aos="fade-up" id="valuation-card">
-            <h3 class="font-semibold mb-4 flex items-center gap-2"><i data-feather="sliders" class="w-4 h-4 text-blue-400"></i><span>Valuation & Multiples</span></h3>
-            <div id="valuation-metrics" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-sm"></div>
-          </div>
-
-          <!-- Dynamic Profitability & Efficiency -->
-          <div class="bg-gray-800 rounded-xl p-5 border border-gray-700 mb-6" data-aos="fade-up" id="profitability-card">
-            <h3 class="font-semibold mb-4 flex items-center gap-2"><i data-feather="cpu" class="w-4 h-4 text-green-400"></i><span>Profitability & Efficiency</span></h3>
-            <div id="profitability-metrics" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-sm"></div>
-          </div>
-
-          <!-- Dynamic Growth Snapshot -->
-          <div class="bg-gray-800 rounded-xl p-5 border border-gray-700 mb-6" data-aos="fade-up" id="growth-card">
-            <h3 class="font-semibold mb-4 flex items-center gap-2"><i data-feather="trending-up" class="w-4 h-4 text-purple-400"></i><span>Growth Snapshot</span></h3>
-            <div id="growth-metrics" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 text-sm"></div>
-          </div>
-
-          <!-- Analyst Sentiment & Range -->
-          <div class="bg-gray-800 rounded-xl p-5 border border-gray-700 mb-6" data-aos="fade-up" id="analyst-card">
-            <h3 class="font-semibold mb-4 flex items-center gap-2"><i data-feather="users" class="w-4 h-4 text-yellow-400"></i><span>Analyst Sentiment</span></h3>
-            <div class="grid md:grid-cols-3 gap-6">
-              <!-- Distribution Bar -->
-              <div>
-                <p class="text-xs uppercase tracking-wide text-gray-400 mb-2">Recommendation Distribution</p>
-                <div id="analyst-bar" class="flex h-6 overflow-hidden rounded-md border border-gray-700"></div>
-                <div id="analyst-legend" class="flex flex-wrap gap-3 mt-3 text-xs"></div>
-              </div>
-              <!-- Target & Totals -->
-              <div class="flex flex-col gap-3">
-                <div class="bg-gray-700 p-3 rounded-lg flex items-center justify-between"><span class="text-gray-400 text-xs">Target Price</span><span id="analyst-target" class="font-medium">—</span></div>
-                <div class="bg-gray-700 p-3 rounded-lg flex items-center justify-between"><span class="text-gray-400 text-xs">Current vs Target</span><span id="analyst-target-delta" class="font-medium">—</span></div>
-                <div class="bg-gray-700 p-3 rounded-lg flex items-center justify-between"><span class="text-gray-400 text-xs">Ratings Total</span><span id="analyst-total" class="font-medium">—</span></div>
-              </div>
-              <!-- 52W Range & MAs -->
-              <div>
-                <p class="text-xs uppercase tracking-wide text-gray-400 mb-2">52W Range Position</p>
-                <div class="mb-2 text-xs flex justify-between text-gray-400"><span id="range-low">Low</span><span id="range-high">High</span></div>
-                <div class="w-full h-3 bg-gray-700 rounded-full overflow-hidden relative">
-                  <div id="range-progress" class="h-3 bg-gradient-to-r from-blue-500 via-cyan-400 to-emerald-400" style="width:0%"></div>
-                  <div id="range-marker" class="absolute top-0 -translate-x-1/2 h-3 w-1 bg-white/80" style="left:0%"></div>
+          <!-- Consolidated Company Information Dashboard -->
+          <div class="bg-gray-800 rounded-xl border border-gray-700 mb-6" data-aos="fade-up">
+            <!-- Header Section -->
+            <div class="p-6 border-b border-gray-700">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
+                  <i data-feather="building" class="text-white w-6 h-6"></i>
                 </div>
-                <p id="range-label" class="text-xs mt-2 text-gray-300">—</p>
-                <div class="mt-4 grid grid-cols-2 gap-2 text-xs" id="ma-boxes"></div>
+                <div>
+                  <h3 class="text-xl font-bold text-white">Company Information Dashboard</h3>
+                  <p class="text-gray-400 text-sm">Comprehensive financial metrics and company overview</p>
+                </div>
               </div>
+              <p class="text-gray-300 text-sm leading-relaxed">Apple Inc. is an American multinational technology company that specializes in consumer electronics, computer software, and online services.</p>
+            </div>
+
+            <!-- Main Content Grid -->
+            <div class="p-6 space-y-8">
+              
+              <!-- Company Basics -->
+              <div>
+                <div class="flex items-center gap-2 mb-4">
+                  <i data-feather="info" class="w-4 h-4 text-blue-400"></i>
+                  <h4 class="font-semibold text-white">Company Basics</h4>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                  <div class="bg-gray-700/50 p-4 rounded-lg border border-gray-600/50 hover:bg-gray-700/70 transition-colors">
+                    <p class="text-xs text-gray-400 uppercase tracking-wide">Sector</p>
+                    <p class="font-semibold text-white mt-1">Technology</p>
+                  </div>
+                  <div class="bg-gray-700/50 p-4 rounded-lg border border-gray-600/50 hover:bg-gray-700/70 transition-colors">
+                    <p class="text-xs text-gray-400 uppercase tracking-wide">Industry</p>
+                    <p class="font-semibold text-white mt-1">Consumer Electronics</p>
+                  </div>
+                  <div class="bg-gray-700/50 p-4 rounded-lg border border-gray-600/50 hover:bg-gray-700/70 transition-colors">
+                    <p class="text-xs text-gray-400 uppercase tracking-wide">Employees</p>
+                    <p class="font-semibold text-white mt-1">164,000</p>
+                  </div>
+                  <div class="bg-gray-700/50 p-4 rounded-lg border border-gray-600/50 hover:bg-gray-700/70 transition-colors">
+                    <p class="text-xs text-gray-400 uppercase tracking-wide">Founded</p>
+                    <p class="font-semibold text-white mt-1">1976</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Valuation & Multiples -->
+              <div id="valuation-card">
+                <div class="flex items-center gap-2 mb-4">
+                  <i data-feather="sliders" class="w-4 h-4 text-blue-400"></i>
+                  <h4 class="font-semibold text-white">Valuation & Multiples</h4>
+                </div>
+                <div id="valuation-metrics" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4"></div>
+              </div>
+
+              <!-- Profitability & Efficiency -->
+              <div id="profitability-card">
+                <div class="flex items-center gap-2 mb-4">
+                  <i data-feather="cpu" class="w-4 h-4 text-green-400"></i>
+                  <h4 class="font-semibold text-white">Profitability & Efficiency</h4>
+                </div>
+                <div id="profitability-metrics" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4"></div>
+              </div>
+
+              <!-- Growth Metrics -->
+              <div id="growth-card">
+                <div class="flex items-center gap-2 mb-4">
+                  <i data-feather="trending-up" class="w-4 h-4 text-purple-400"></i>
+                  <h4 class="font-semibold text-white">Growth Snapshot</h4>
+                </div>
+                <div id="growth-metrics" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4"></div>
+              </div>
+
+              <!-- Analyst Sentiment & Market Position -->
+              <div id="analyst-card">
+                <div class="flex items-center gap-2 mb-6">
+                  <i data-feather="users" class="w-4 h-4 text-yellow-400"></i>
+                  <h4 class="font-semibold text-white">Analyst Sentiment & Market Position</h4>
+                </div>
+                
+                <div class="grid lg:grid-cols-3 gap-8">
+                  <!-- Analyst Distribution -->
+                  <div class="space-y-4">
+                    <div>
+                      <p class="text-xs uppercase tracking-wide text-gray-400 mb-3">Recommendation Distribution</p>
+                      <div id="analyst-bar" class="flex h-6 overflow-hidden rounded-lg border border-gray-600"></div>
+                      <div id="analyst-legend" class="flex flex-wrap gap-3 mt-3 text-xs"></div>
+                    </div>
+                  </div>
+                  
+                  <!-- Target Metrics -->
+                  <div class="space-y-3">
+                    <p class="text-xs uppercase tracking-wide text-gray-400 mb-3">Price Targets</p>
+                    <div class="bg-gray-700/50 p-4 rounded-lg border border-gray-600/50 flex items-center justify-between">
+                      <span class="text-gray-400 text-xs uppercase tracking-wide">Target Price</span>
+                      <span id="analyst-target" class="font-semibold text-white">—</span>
+                    </div>
+                    <div class="bg-gray-700/50 p-4 rounded-lg border border-gray-600/50 flex items-center justify-between">
+                      <span class="text-gray-400 text-xs uppercase tracking-wide">Current vs Target</span>
+                      <span id="analyst-target-delta" class="font-semibold text-white">—</span>
+                    </div>
+                    <div class="bg-gray-700/50 p-4 rounded-lg border border-gray-600/50 flex items-center justify-between">
+                      <span class="text-gray-400 text-xs uppercase tracking-wide">Total Ratings</span>
+                      <span id="analyst-total" class="font-semibold text-white">—</span>
+                    </div>
+                  </div>
+                  
+                  <!-- Range & Technical -->
+                  <div class="space-y-4">
+                    <div>
+                      <p class="text-xs uppercase tracking-wide text-gray-400 mb-3">52-Week Range Position</p>
+                      <div class="mb-3 text-xs flex justify-between text-gray-400">
+                        <span id="range-low">Low</span>
+                        <span id="range-high">High</span>
+                      </div>
+                      <div class="w-full h-4 bg-gray-700 rounded-full overflow-hidden relative border border-gray-600">
+                        <div id="range-progress" class="h-4 bg-gradient-to-r from-blue-500 via-cyan-400 to-emerald-400 rounded-full" style="width:0%"></div>
+                        <div id="range-marker" class="absolute top-0 -translate-x-1/2 h-4 w-1.5 bg-white rounded-full border border-gray-800" style="left:0%"></div>
+                      </div>
+                      <p id="range-label" class="text-xs mt-2 text-gray-300 text-center">—</p>
+                    </div>
+                    <div>
+                      <p class="text-xs uppercase tracking-wide text-gray-400 mb-3">Moving Averages</p>
+                      <div id="ma-boxes" class="grid grid-cols-2 gap-2 text-xs"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
 
