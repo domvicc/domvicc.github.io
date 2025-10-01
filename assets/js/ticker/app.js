@@ -84,152 +84,11 @@ document.addEventListener('DOMContentLoaded', () => {
   let current_ticker = DEFAULT_TICKER; // always start from default now
 
   // Comprehensive ticker data for dynamic dashboard updates
-  const ticker_data = {
-    'aapl': {
-      name: 'Apple Inc.',
-      symbol: 'AAPL',
-      exchange: 'NASDAQ',
-      currentPrice: 230.89,
-      change: 2.84,
-      changePercent: 1.24,
-      marketCap: '3.45T',
-      marketCapRank: '#1 most valuable',
-      peRatio: 35.38,
-      industryPE: 25.7,
-      dividendYield: 0.43,
-      dividendPerShare: 1.01,
-      revenue: 408.62,
-      netIncome: 123.45,
-      grossProfit: 189.34,
-      operatingIncome: 134.62,
-      sector: 'Technology',
-      industry: 'Consumer Electronics',
-      employees: '164,000',
-      founded: '1976',
-      description: 'Apple Inc. is an American multinational technology company that specializes in consumer electronics, computer software, and online services.',
-      website: 'https://www.apple.com'
-    },
-    'abnb': {
-      name: 'Airbnb, Inc.',
-      symbol: 'ABNB',
-      exchange: 'NASDAQ',
-      currentPrice: 142.56,
-      change: -1.23,
-      changePercent: -0.86,
-      marketCap: '94.2B',
-      marketCapRank: '#174 by market cap',
-      peRatio: 18.7,
-      industryPE: 22.4,
-      dividendYield: 0.0,
-      dividendPerShare: 0.0,
-      revenue: 9.92,
-      netIncome: 4.79,
-      grossProfit: 7.83,
-      operatingIncome: 1.26,
-      sector: 'Consumer Discretionary',
-      industry: 'Travel Services',
-      employees: '6,407',
-      founded: '2008',
-      description: 'Airbnb, Inc. operates a platform that enables hosts to offer stays and experiences to guests worldwide.',
-      website: 'https://www.airbnb.com'
-    },
-    'adbe': {
-      name: 'Adobe Inc.',
-      symbol: 'ADBE',
-      exchange: 'NASDAQ',
-      currentPrice: 578.32,
-      change: 8.45,
-      changePercent: 1.48,
-      marketCap: '259.7B',
-      marketCapRank: '#67 by market cap',
-      peRatio: 45.2,
-      industryPE: 28.9,
-      dividendYield: 0.0,
-      dividendPerShare: 0.0,
-      revenue: 19.41,
-      netIncome: 5.61,
-      grossProfit: 17.49,
-      operatingIncome: 6.84,
-      sector: 'Technology',
-      industry: 'Software',
-      employees: '26,430',
-      founded: '1982',
-      description: 'Adobe Inc. operates as a diversified software company worldwide, providing digital media and digital experience solutions.',
-      website: 'https://www.adobe.com'
-    },
-    'meta': {
-      name: 'Meta Platforms, Inc.',
-      symbol: 'META',
-      exchange: 'NASDAQ',
-      currentPrice: 589.12,
-      change: 12.34,
-      changePercent: 2.14,
-      marketCap: '1.49T',
-      marketCapRank: '#8 by market cap',
-      peRatio: 28.4,
-      industryPE: 31.2,
-      dividendYield: 0.37,
-      dividendPerShare: 2.00,
-      revenue: 134.90,
-      netIncome: 39.07,
-      grossProfit: 108.14,
-      operatingIncome: 46.75,
-      sector: 'Communication Services',
-      industry: 'Social Media',
-      employees: '67,317',
-      founded: '2004',
-      description: 'Meta Platforms, Inc. develops products that enable people to connect and share with friends and family through mobile devices, personal computers, virtual reality headsets, and wearables worldwide.',
-      website: 'https://www.meta.com'
-    },
-    'amzn': {
-      name: 'Amazon.com, Inc.',
-      symbol: 'AMZN',
-      exchange: 'NASDAQ',
-      currentPrice: 186.43,
-      change: -2.17,
-      changePercent: -1.15,
-      marketCap: '1.95T',
-      marketCapRank: '#5 by market cap',
-      peRatio: 47.8,
-      industryPE: 25.3,
-      dividendYield: 0.0,
-      dividendPerShare: 0.0,
-      revenue: 574.79,
-      netIncome: 30.43,
-      grossProfit: 270.16,
-      operatingIncome: 48.03,
-      sector: 'Consumer Discretionary',
-      industry: 'E-commerce',
-      employees: '1,541,000',
-      founded: '1994',
-      description: 'Amazon.com, Inc. engages in the retail sale of consumer products and subscriptions in North America and internationally.',
-      website: 'https://www.amazon.com'
-    },
-    'adi': {
-      name: 'Analog Devices, Inc.',
-      symbol: 'ADI',
-      exchange: 'NASDAQ',
-      currentPrice: 234.67,
-      change: 3.21,
-      changePercent: 1.39,
-      marketCap: '121.8B',
-      marketCapRank: '#145 by market cap',
-      peRatio: 42.3,
-      industryPE: 28.5,
-      dividendYield: 1.67,
-      dividendPerShare: 3.92,
-      revenue: 12.32,
-      netIncome: 3.45,
-      grossProfit: 7.89,
-      operatingIncome: 4.23,
-      sector: 'Technology',
-      industry: 'Semiconductors',
-      employees: '25,000',
-      founded: '1965',
-      description: 'Analog Devices, Inc. designs, manufactures, tests, and markets integrated circuits, software, and subsystems.',
-      website: 'https://www.analog.com'
-    }
-  };
+  // Removed hardcoded ticker_data. All company context now sourced dynamically via:
+  // - Manifest preload (loadCompanyOverviewManifest)
+  // - Per-symbol JSON fetch (getCompanyOverview / loadCompanyOverview)
+  // Provide an empty object to avoid reference errors; logic below must not rely on seeded values.
+  const ticker_data = {};
 
   const to_arrays = (rows) => {
     const x=[],o=[],h=[],l=[],c=[];
@@ -507,7 +366,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const updateSidebarCompanyInfo = (ticker, apiData = null) => {
     const key = String(ticker||'').toLowerCase();
     // Prefer API data, then hardcoded, else fallback placeholder
-    const base = apiData?.companyOverview || ticker_data[key] || {};
+  const base = apiData?.companyOverview || companyOverviewCache.get(key) || {};
     const exchange = base.Exchange || base.exchange || 'NASDAQ';
     const symbol = (base.Symbol || base.symbol || ticker || '').toUpperCase();
     const displayName = (base.Name || base.name || symbol).toLowerCase();
@@ -522,7 +381,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const updateKeyMetricsCards = (ticker, apiData = null) => {
     if(!ticker) return;
     const key = String(ticker).toLowerCase();
-    const data = apiData?.companyOverview || ticker_data[key];
+  const data = apiData?.companyOverview || companyOverviewCache.get(key);
     if(!data) return; // silent fail to avoid console noise in production
 
     // Price: prefer explicit currentPrice then latest candle close
@@ -653,24 +512,40 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const computeMarketCapRank = (ticker) => {
-    // Build array of {ticker, mc}
-    const list = Object.entries(ticker_data).map(([k,v])=>({t:k, mc: parseNumericMarketCap(v.marketCap || v.MarketCapitalization)}))
+    const key = String(ticker||'').toLowerCase();
+    if(!companyOverviewCache || companyOverviewCache.size===0) return null;
+    const list = Array.from(companyOverviewCache.entries())
+      .map(([t,obj])=>({t, mc: parseNumericMarketCap(obj.MarketCapitalization || obj.marketCap)}))
       .filter(o=>o.mc>0)
       .sort((a,b)=>b.mc - a.mc);
-    const idx = list.findIndex(o=>o.t === ticker.toLowerCase());
+    const idx = list.findIndex(o=>o.t === key);
     if(idx===-1) return null;
     return { rank: idx+1, total: list.length };
   };
 
   const computeIndustryAveragePERatio = (ticker) => {
-    const base = ticker_data[ticker.toLowerCase()];
+    const key = String(ticker||'').toLowerCase();
+    // Resolve a base object from either hardcoded set or cache
+  const base = companyOverviewCache.get(key);
     if(!base) return null;
-    const sector = (base.sector||'').toLowerCase();
-    const industry = (base.industry||'').toLowerCase();
-    const peers = Object.values(ticker_data).filter(v=>
-      (v.industry && v.industry.toLowerCase()===industry) || (v.sector && v.sector.toLowerCase()===sector)
-    );
-    const nums = peers.map(p=>Number(p.peRatio||p.PERatio)).filter(n=>n>0);
+    const sector = (base.sector || base.Sector || '').toLowerCase();
+    const industry = (base.industry || base.Industry || '').toLowerCase();
+    if(!sector && !industry) return null;
+
+    // Build unified peer set
+    const unified = companyOverviewCache ? Array.from(companyOverviewCache.values()) : [];
+    // Filter peers sharing exact industry, fallback to sector if industry sparse
+    let peers = unified.filter(v => {
+      const ind = (v.industry || v.Industry || '').toLowerCase();
+      return industry && ind === industry;
+    });
+    if(peers.length < 2) { // insufficient peers, broaden to sector
+      peers = unified.filter(v => {
+        const sec = (v.sector || v.Sector || '').toLowerCase();
+        return sector && sec === sector;
+      });
+    }
+    const nums = peers.map(p=>Number(p.peRatio || p.PERatio)).filter(n=>n>0 && isFinite(n));
     if(!nums.length) return null;
     const avg = nums.reduce((a,b)=>a+b,0)/nums.length;
     return avg;
@@ -692,7 +567,7 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('updateFinancialMetricsSection called with ticker:', ticker);
     
     // Use API data if available, otherwise fall back to hardcoded data
-    const data = apiData?.incomeStatement || ticker_data[ticker.toLowerCase()];
+  const data = apiData?.incomeStatement || companyOverviewCache.get(ticker.toLowerCase());
     if (!data) {
       console.warn('updateFinancialMetricsSection: No data found for ticker:', ticker);
       return;
@@ -771,7 +646,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const valuationGrid = document.getElementById('valuation-ratios-grid');
     if (valuationGrid) {
       // Use company overview data for ratios, fallback to ticker data
-      const overviewData = apiData?.companyOverview || ticker_data[ticker.toLowerCase()];
+  const overviewData = apiData?.companyOverview || companyOverviewCache.get(ticker.toLowerCase());
       if (overviewData) {
         const peRatio = overviewData.peRatio || parseFloat(overviewData.PERatio) || 0;
         const pbRatio = overviewData.pbRatio || parseFloat(overviewData.PriceToBookRatio) || 0;
@@ -797,7 +672,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const updateCompanyOverviewSection = (ticker, apiData = null) => {
     // Use API data if available, otherwise fall back to hardcoded data
-    const data = apiData?.companyOverview || ticker_data[ticker.toLowerCase()];
+  const data = apiData?.companyOverview || companyOverviewCache.get(ticker.toLowerCase());
     if (!data) return;
 
     // Update company description
@@ -860,7 +735,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const change = (prevClose != null) ? (close - prevClose) : 0;
     const changePct = (prevClose != null && prevClose !== 0) ? (change / prevClose * 100) : 0;
   const lower = String(ticker||'').toLowerCase();
-  const company = apiData?.companyOverview?.Name || ticker_data[lower]?.companyName || ticker_data[lower]?.name || ticker.toUpperCase();
+  const company = apiData?.companyOverview?.Name || companyOverviewCache.get(lower)?.Name || companyOverviewCache.get(lower)?.name || ticker.toUpperCase();
 
     const elSymbol = document.getElementById('quote-symbol');
     const elCompany = document.getElementById('quote-company');
