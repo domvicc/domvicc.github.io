@@ -898,6 +898,7 @@ document.addEventListener('DOMContentLoaded', () => {
     render_performance();
     await loadCompanyOverviewManifest();
     const initialOverview = await getCompanyOverview(current_ticker);
+    updateHeaderQuote(current_ticker, initialOverview? {companyOverview:initialOverview}: null);
     updateAllDashboardElements(current_ticker, initialOverview? {companyOverview:initialOverview}: null);
   };
 
