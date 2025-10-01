@@ -647,9 +647,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Map API fields to our expected format
     const revenue = data.totalRevenue || data.revenue || 0;
-    const netIncome = data.netIncome || data.netIncome || 0;
-    const grossProfit = data.grossProfit || data.grossProfit || 0;
-    const operatingIncome = data.operatingIncome || data.operatingIncome || 0;
+    const netIncome = data.netIncome || 0;
+    const grossProfit = data.grossProfit || 0;
+    const operatingIncome = data.operatingIncome || 0;
+
+    console.log('Financial values:', { revenue, netIncome, grossProfit, operatingIncome });
 
     // Update the key financials section - try multiple selectors
     let financialSection = document.querySelector('.bg-gray-800 .space-y-4');
@@ -673,12 +675,15 @@ document.addEventListener('DOMContentLoaded', () => {
     
     console.log('updateFinancialMetricsSection: Found section:', financialSection);
 
-    // Convert to billions for display if values are large
+    // Convert to billions for display - handle both raw numbers and already-formatted billions
     const formatFinancial = (value) => {
       const num = parseFloat(value);
+      // If value is already in billions format (< 1000), use as-is
+      if (num < 1000) return num.toFixed(1);
+      // Otherwise convert from raw dollars to billions
       if (num >= 1e9) return (num / 1e9).toFixed(1);
       if (num >= 1e6) return (num / 1e6).toFixed(1);
-      return (num / 1e9).toFixed(1); // Assume most values are in the billions range
+      return num.toFixed(1);
     };
 
     const revenueB = formatFinancial(revenue);
