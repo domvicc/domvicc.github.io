@@ -1,4 +1,4 @@
-// run when dom is ready
+  // run when dom is ready
 document.addEventListener('DOMContentLoaded', () => {
   if (window.feather && typeof window.feather.replace === 'function') window.feather.replace();
 
@@ -8,6 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     document.querySelectorAll('[data-aos]').forEach(el => el.removeAttribute('data-aos'));
   }
+
+  // Initialize cards with default ticker data immediately
+  setTimeout(() => {
+    updateKeyMetricsCards(DEFAULT_TICKER);
+  }, 100);
 
   const dir_url = 'ticker/daily/'; // directory with per-ticker jsons
   let currentArrays = null; // Store current data for dynamic Y-axis
@@ -518,9 +523,16 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const updateKeyMetricsCards = (ticker, apiData = null) => {
+    console.log('updateKeyMetricsCards called with ticker:', ticker);
+    
     // Use API data if available, otherwise fall back to hardcoded data
     const data = apiData?.companyOverview || ticker_data[ticker.toLowerCase()];
-    if (!data) return;
+    if (!data) {
+      console.warn('updateKeyMetricsCards: No data found for ticker:', ticker);
+      return;
+    }
+
+    console.log('updateKeyMetricsCards: Using data:', data);
 
     // Map API fields to our expected format
     const currentPrice = data.currentPrice || parseFloat(data.Price) || 0;
@@ -530,11 +542,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const dividendYield = data.dividendYield || parseFloat(data.DividendYield) || 0;
     const dividendPerShare = data.dividendPerShare || parseFloat(data.DividendPerShare) || 0;
 
-    // Locate the primary metrics grid (first one with 4 columns on md screens)
-    const metricsGrid = document.querySelector('.grid.grid-cols-1.md\\:grid-cols-4');
-    if(!metricsGrid) return;
+    // Locate the primary metrics grid by ID
+    const metricsGrid = document.getElementById('metrics-grid');
+    if(!metricsGrid) {
+      console.warn('updateKeyMetricsCards: Could not find metrics grid');
+      return;
+    }
+    
+    console.log('updateKeyMetricsCards: Found metrics grid:', metricsGrid);
+    
     const metricCards = metricsGrid.children;
-    if(metricCards.length < 4) return;
+    if(metricCards.length < 4) {
+      console.warn('updateKeyMetricsCards: Expected 4 cards, found:', metricCards.length);
+      return;
+    }
+
+    console.log('updateKeyMetricsCards: Found', metricCards.length, 'cards');
 
     // Card references in order
     const priceCard = metricCards[0];
