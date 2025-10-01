@@ -667,6 +667,33 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       `).join('');
     }
+
+    // Update valuation ratios section
+    const valuationGrid = document.getElementById('valuation-ratios-grid');
+    if (valuationGrid) {
+      // Use company overview data for ratios, fallback to ticker data
+      const overviewData = apiData?.companyOverview || ticker_data[ticker.toLowerCase()];
+      if (overviewData) {
+        const peRatio = overviewData.peRatio || parseFloat(overviewData.PERatio) || 0;
+        const pbRatio = overviewData.pbRatio || parseFloat(overviewData.PriceToBookRatio) || 0;
+        const psRatio = overviewData.psRatio || parseFloat(overviewData.PriceToSalesRatioTTM) || 0;
+        const evEbitda = overviewData.evEbitda || parseFloat(overviewData.EVToEBITDA) || 0;
+
+        const ratios = [
+          { label: 'P/E', value: peRatio > 0 ? peRatio.toFixed(2) : '—' },
+          { label: 'P/B', value: pbRatio > 0 ? pbRatio.toFixed(1) : '—' },
+          { label: 'P/S', value: psRatio > 0 ? psRatio.toFixed(2) : '—' },
+          { label: 'EV/EBITDA', value: evEbitda > 0 ? evEbitda.toFixed(2) : '—' }
+        ];
+
+        valuationGrid.innerHTML = ratios.map(ratio => `
+          <div class="bg-gray-700 p-3 rounded-lg">
+            <p class="text-xs text-gray-400">${ratio.label}</p>
+            <p class="font-medium">${ratio.value}</p>
+          </div>
+        `).join('');
+      }
+    }
   };
 
   const updateCompanyOverviewSection = (ticker, apiData = null) => {
@@ -713,6 +740,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const updateAllDashboardElements = (ticker, apiData = null) => {
     updateSidebarCompanyInfo(ticker, apiData);
     updateKeyMetricsCards(ticker, apiData);
+    updateFinancialMetricsSection(ticker, apiData);
     updateCompanyOverviewSection(ticker, apiData);
     renderExtendedSections(ticker, apiData);
     if (window.feather && typeof window.feather.replace === 'function') window.feather.replace();
