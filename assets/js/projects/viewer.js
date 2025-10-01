@@ -398,9 +398,14 @@ export function showProject(id){
 export function initProjectViewer({stage,tabsBar,projects,defaultProject}){
   if(!stage||!tabsBar) throw new Error('initProjectViewer: stage and tabsBar required');
   _stage=stage; _tabsBar=tabsBar; _projects=projects||{};
-  document.querySelectorAll('.tree-item').forEach(btn=>{
+  console.log('initProjectViewer called with projects:', Object.keys(_projects));
+  const treeItems = document.querySelectorAll('.tree-item');
+  console.log('Found tree items:', treeItems.length);
+  treeItems.forEach((btn, index) => {
+    console.log(`Tree item ${index}: data-id="${btn.dataset.id}"`);
     btn.addEventListener('click',()=>{
       const id=btn.dataset.id;
+      console.log('Tree item clicked:', id, 'Project exists:', !!_projects[id]);
       if(_projects[id]) showProject(id);
     });
   });

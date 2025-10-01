@@ -7,6 +7,11 @@ const PROJECTS = {
     defaultTab:'Architecture',
     svg:'assets/svg/DGAI.svg'
   },
+  'linkedin-scraper':{
+    tabs:['Overview','Code'],
+    defaultTab:'Overview',
+    script:'assets/py/linkedin_credentials_scrape.py'
+  },
   'pdf-svg-util':{
     tabs:['Overview','Code'],
     defaultTab:'Code',
@@ -40,6 +45,8 @@ const PROJECTS = {
 
 window.addEventListener('DOMContentLoaded', ()=>{
   try{
+    console.log('PROJECTS configuration:', PROJECTS);
+    console.log('Has linkedin-scraper:', 'linkedin-scraper' in PROJECTS);
     initProjectViewer({
       stage: document.getElementById('wb-stage'),
       tabsBar: document.getElementById('wb-tabs'),
@@ -53,4 +60,42 @@ window.addEventListener('DOMContentLoaded', ()=>{
       stage.innerHTML='<div class="placeholder">Viewer failed: '+err.message+'</div>';
     }
   }
+
+  // Handle export actions
+  document.addEventListener('click', (e) => {
+    const target = e.target.closest('[data-action]');
+    if (!target) return;
+
+    const action = target.dataset.action;
+    
+    if (action === 'export-linkedin-scraper') {
+      e.preventDefault();
+      downloadLinkedInScraper();
+    }
+  });
 });
+
+// Export function for LinkedIn scraper
+async function downloadLinkedInScraper() {
+  try {
+    const response = await fetch('assets/py/linkedin_credentials_scrape.py');
+    const scriptContent = await response.text();
+    
+    const blob = new Blob([scriptContent], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'linkedin_credentials_scraper.py';
+    a.style.display = 'none';
+    
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    
+    URL.revokeObjectURL(url);
+  } catch (error) {
+    console.error('Failed to download LinkedIn scraper:', error);
+    alert('Failed to download file. Please try again.');
+  }
+}

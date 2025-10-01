@@ -60,11 +60,16 @@
           <div class="dir-body">
             <div class="tree">
               <details open>
-                <summary><span class="caret">›</span><span>Featured</span><span class="tree-count">4</span></summary>
+                <summary><span class="caret">›</span><span>Featured</span><span class="tree-count">5</span></summary>
                 <ul class="dir-list">
                   <li class="dir-item">
                     <button class="tree-item active" data-id="dgai">
                       <span class="bullet"></span><span>DomGuardianAI — Data &amp; AI Lakehouse</span>
+                    </button>
+                  </li>
+                  <li class="dir-item">
+                    <button class="tree-item" data-id="linkedin-scraper">
+                      <span class="bullet"></span><span>LinkedIn Credentials Scraper</span>
                     </button>
                   </li>
                   <li class="dir-item">
@@ -231,6 +236,85 @@
             </div>
 
           </div><!-- /project-details pdf-svg-util (added missing closing wrapper) -->
+
+          <!-- LinkedIn Credentials Scraper -->
+          <div class="project-details" data-project="linkedin-scraper">
+            <p class="kicker">Python • Selenium • Web Scraping • Automation • BeautifulSoup</p>
+            <h2 class="title">LinkedIn Credentials Scraper</h2>
+            <p class="subtitle">Automated certification extraction tool that scrapes LinkedIn profile data and exports to CSV.</p>
+            <p class="desc">
+              A Python automation script that uses Selenium WebDriver and BeautifulSoup to programmatically log into LinkedIn, navigate to a profile's certifications section, and extract structured certification data. The tool parses certification titles, issuing organizations, dates, and credential IDs from the DOM, then exports the results to a clean CSV format. Features automatic browser control, robust element detection with fallback handling, and configurable output paths. Built with comprehensive human-readable comments for educational purposes.
+            </p>
+
+            <div class="info-grid">
+              <div class="info-card">
+                <p class="info-title">Core Technologies</p>
+                <div class="pill-row">
+                  <span class="pill">Selenium WebDriver</span>
+                  <span class="pill">BeautifulSoup4</span>
+                  <span class="pill">Python CSV</span>
+                  <span class="pill">Chrome Browser</span>
+                </div>
+              </div>
+              <div class="info-card">
+                <p class="info-title">Automation Features</p>
+                <div class="pill-row">
+                  <span class="pill">Auto Login</span>
+                  <span class="pill">DOM Parsing</span>
+                  <span class="pill">Data Extraction</span>
+                  <span class="pill">CSV Export</span>
+                </div>
+              </div>
+              <div class="info-card">
+                <p class="info-title">Data Handling</p>
+                <div class="pill-row">
+                  <span class="pill">Error Handling</span>
+                  <span class="pill">UTF-8 Encoding</span>
+                  <span class="pill">Structured Output</span>
+                </div>
+              </div>
+              <div class="info-card">
+                <p class="info-title">Artifacts</p>
+                <div class="links">
+                  <a href="#" class="link" data-action="export-linkedin-scraper">📥 Export Script</a>
+                  <a href="#" class="link" data-action="view-code" data-project="linkedin-scraper">📝 View Code</a>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <p class="info-title" style="margin:.2rem 0 .4rem;">Key Features</p>
+              <ul class="highlights">
+                <li>Automated browser control with Selenium WebDriver for LinkedIn navigation</li>
+                <li>Robust DOM parsing using BeautifulSoup with CSS selector targeting</li>
+                <li>Comprehensive error handling with fallback values for missing elements</li>
+                <li>Clean CSV export with proper encoding and structured column headers</li>
+                <li>Educational code comments explaining each step for learning purposes</li>
+              </ul>
+            </div>
+
+            <div>
+              <p class="info-title" style="margin:.2rem 0 .4rem;">Technical Highlights</p>
+              <div class="metrics">
+                <div class="metric">
+                  <span class="metric-value">~60</span>
+                  <span class="metric-label">Lines of Code</span>
+                </div>
+                <div class="metric">
+                  <span class="metric-value">4</span>
+                  <span class="metric-label">Data Fields</span>
+                </div>
+                <div class="metric">
+                  <span class="metric-value">3</span>
+                  <span class="metric-label">Core Libraries</span>
+                </div>
+                <div class="metric">
+                  <span class="metric-value">100%</span>
+                  <span class="metric-label">Commented</span>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <!-- Credit Card Fraud Detection Neural Network -->
           <div class="project-details" data-project="cc-fraud-nn">
@@ -421,5 +505,6 @@
   <script src="assets/js/helpers/nav.js" defer></script>
   <script src="assets/js/product-card.js" defer></script>
   <script type="module" src="assets/js/projects/main.js"></script>
+  <script src="debug-linkedin.js" defer></script>
 </body>
 </html>
