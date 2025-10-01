@@ -49,6 +49,28 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // Prefetch all company overviews listed in manifest to enable accurate initial ranking totals.
+  async function prefetchAllCompanyOverviews(concurrency=6){
+    await loadCompanyOverviewManifest();
+    if(!manifestTickers || manifestTickers.length===0) return;
+    const limiter = async (list, worker, limit) => {
+      const ret=[]; let i=0; const running=new Set();
+      const launch=()=>{
+        if(i>=list.length) return Promise.resolve();
+        const item=list[i++];
+        const p=worker(item).finally(()=>{running.delete(p);});
+        running.add(p);
+        let chain = Promise.resolve();
+        if(running.size>=limit){ chain = Promise.race(running); }
+        return chain.then(launch);
+      };
+      const starters=Math.min(limit,list.length);
+      const launches=[]; for(let j=0;j<starters;j++) launches.push(launch());
+      await Promise.all(launches); return ret;
+    };
+    await limiter(manifestTickers, async (sym)=>{ if(!companyOverviewCache.has(sym)) await getCompanyOverview(sym); }, concurrency);
+  }
+
   async function getCompanyOverview(sym){
     const key = String(sym||'').toLowerCase();
     if(companyOverviewCache.has(key)) return companyOverviewCache.get(key);
@@ -870,8 +892,9 @@ document.addEventListener('DOMContentLoaded', () => {
     render_candles(current_rows); 
     apply_timeframe(current_rows); 
     render_performance();
-    await loadCompanyOverviewManifest();
-    const initialOverview = await getCompanyOverview(current_ticker);
+    // Load manifest & prefetch all overviews so ranking has full denominator on first paint
+    await prefetchAllCompanyOverviews();
+    const initialOverview = companyOverviewCache.get(current_ticker) || await getCompanyOverview(current_ticker);
     updateHeaderQuote(current_ticker, initialOverview? {companyOverview:initialOverview}: null);
     updateAllDashboardElements(current_ticker, initialOverview? {companyOverview:initialOverview}: null);
   };
