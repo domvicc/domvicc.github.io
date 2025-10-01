@@ -159,6 +159,87 @@
             </div>
           </div>
 
+          <!-- Dynamic Valuation & Multiples -->
+          <div class="bg-gray-800 rounded-xl p-5 border border-gray-700 mb-6" data-aos="fade-up" id="valuation-card">
+            <h3 class="font-semibold mb-4 flex items-center gap-2"><i data-feather="sliders" class="w-4 h-4 text-blue-400"></i><span>Valuation & Multiples</span></h3>
+            <div id="valuation-metrics" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-sm"></div>
+          </div>
+
+          <!-- Dynamic Profitability & Efficiency -->
+          <div class="bg-gray-800 rounded-xl p-5 border border-gray-700 mb-6" data-aos="fade-up" id="profitability-card">
+            <h3 class="font-semibold mb-4 flex items-center gap-2"><i data-feather="cpu" class="w-4 h-4 text-green-400"></i><span>Profitability & Efficiency</span></h3>
+            <div id="profitability-metrics" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-sm"></div>
+          </div>
+
+          <!-- Dynamic Growth Snapshot -->
+          <div class="bg-gray-800 rounded-xl p-5 border border-gray-700 mb-6" data-aos="fade-up" id="growth-card">
+            <h3 class="font-semibold mb-4 flex items-center gap-2"><i data-feather="trending-up" class="w-4 h-4 text-purple-400"></i><span>Growth Snapshot</span></h3>
+            <div id="growth-metrics" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 text-sm"></div>
+          </div>
+
+          <!-- Analyst Sentiment & Range -->
+          <div class="bg-gray-800 rounded-xl p-5 border border-gray-700 mb-6" data-aos="fade-up" id="analyst-card">
+            <h3 class="font-semibold mb-4 flex items-center gap-2"><i data-feather="users" class="w-4 h-4 text-yellow-400"></i><span>Analyst Sentiment</span></h3>
+            <div class="grid md:grid-cols-3 gap-6">
+              <!-- Distribution Bar -->
+              <div>
+                <p class="text-xs uppercase tracking-wide text-gray-400 mb-2">Recommendation Distribution</p>
+                <div id="analyst-bar" class="flex h-6 overflow-hidden rounded-md border border-gray-700"></div>
+                <div id="analyst-legend" class="flex flex-wrap gap-3 mt-3 text-xs"></div>
+              </div>
+              <!-- Target & Totals -->
+              <div class="flex flex-col gap-3">
+                <div class="bg-gray-700 p-3 rounded-lg flex items-center justify-between"><span class="text-gray-400 text-xs">Target Price</span><span id="analyst-target" class="font-medium">—</span></div>
+                <div class="bg-gray-700 p-3 rounded-lg flex items-center justify-between"><span class="text-gray-400 text-xs">Current vs Target</span><span id="analyst-target-delta" class="font-medium">—</span></div>
+                <div class="bg-gray-700 p-3 rounded-lg flex items-center justify-between"><span class="text-gray-400 text-xs">Ratings Total</span><span id="analyst-total" class="font-medium">—</span></div>
+              </div>
+              <!-- 52W Range & MAs -->
+              <div>
+                <p class="text-xs uppercase tracking-wide text-gray-400 mb-2">52W Range Position</p>
+                <div class="mb-2 text-xs flex justify-between text-gray-400"><span id="range-low">Low</span><span id="range-high">High</span></div>
+                <div class="w-full h-3 bg-gray-700 rounded-full overflow-hidden relative">
+                  <div id="range-progress" class="h-3 bg-gradient-to-r from-blue-500 via-cyan-400 to-emerald-400" style="width:0%"></div>
+                  <div id="range-marker" class="absolute top-0 -translate-x-1/2 h-3 w-1 bg-white/80" style="left:0%"></div>
+                </div>
+                <p id="range-label" class="text-xs mt-2 text-gray-300">—</p>
+                <div class="mt-4 grid grid-cols-2 gap-2 text-xs" id="ma-boxes"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Peer Comparison Table -->
+          <div class="bg-gray-800 rounded-xl p-5 border border-gray-700 mb-6" data-aos="fade-up" id="peer-card">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="font-semibold flex items-center gap-2"><i data-feather="grid" class="w-4 h-4 text-pink-400"></i><span>Peer Comparison</span></h3>
+              <div class="flex items-center gap-2 text-xs">
+                <label class="flex items-center gap-1"><span class="text-gray-400">Sort</span>
+                  <select id="peer-sort" class="bg-gray-700 border border-gray-600 rounded px-2 py-1">
+                    <option value="marketcap">Market Cap</option>
+                    <option value="pe">P/E</option>
+                    <option value="profit">Profit Margin</option>
+                    <option value="roe">ROE</option>
+                  </select>
+                </label>
+              </div>
+            </div>
+            <div class="overflow-auto">
+              <table class="min-w-full text-sm" id="peer-table">
+                <thead class="text-gray-400 text-xs uppercase">
+                  <tr class="border-b border-gray-700">
+                    <th class="text-left font-medium py-2 pr-4">Symbol</th>
+                    <th class="text-left font-medium py-2 pr-4">Sector</th>
+                    <th class="text-right font-medium py-2 pr-4">Market Cap</th>
+                    <th class="text-right font-medium py-2 pr-4">P/E</th>
+                    <th class="text-right font-medium py-2 pr-4">Profit %</th>
+                    <th class="text-right font-medium py-2 pr-4">ROE %</th>
+                  </tr>
+                </thead>
+                <tbody id="peer-tbody"></tbody>
+              </table>
+            </div>
+          </div>
+
+
         </div>
       </main>
     </div>

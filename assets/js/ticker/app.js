@@ -23,6 +23,45 @@ document.addEventListener('DOMContentLoaded', () => {
     balance_sheet: 'balance_sheet/'
   };
 
+  // Cache for company overview manifest + individual files
+  let companyOverviewCache = new Map();
+  let companyOverviewLoaded = false;
+  let manifestTickers = [];
+
+  async function loadCompanyOverviewManifest(){
+    if(companyOverviewLoaded) return;
+    try{
+      const res = await fetch('ticker/company_overview/manifest.json');
+      if(!res.ok) throw new Error('manifest fetch '+res.status);
+      const manifest = await res.json();
+      manifestTickers = (manifest.tickers||manifest.data?.map(d=>d.Symbol)||[]).map(s=>s.toLowerCase());
+      // Pre-seed cache from inline data array if present
+      if(Array.isArray(manifest.data)){
+        for(const obj of manifest.data){
+          if(obj && obj.Symbol) companyOverviewCache.set(obj.Symbol.toLowerCase(), obj);
+        }
+      }
+      companyOverviewLoaded = true;
+    }catch(err){
+      console.warn('company overview manifest load failed', err);
+    }
+  }
+
+  async function getCompanyOverview(sym){
+    const key = String(sym||'').toLowerCase();
+    if(companyOverviewCache.has(key)) return companyOverviewCache.get(key);
+    try{
+      const res = await fetch(`ticker/company_overview/${key.toUpperCase()}.json`);
+      if(!res.ok) throw new Error(res.status);
+      const data = await res.json();
+      companyOverviewCache.set(key,data);
+      return data;
+    }catch(err){
+      console.warn('fetch company overview failed', key, err);
+      return null;
+    }
+  }
+
   const el_chart = document.getElementById('candlestick_chart');
   const el_status = document.getElementById('chart-status');
   const el_performance = document.getElementById('performance_chart');
@@ -651,14 +690,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const updateAllDashboardElements = (ticker, apiData = null) => {
     updateSidebarCompanyInfo(ticker, apiData);
     updateKeyMetricsCards(ticker, apiData);
-    // Skip updateFinancialMetricsSection to preserve static HTML styling
     updateCompanyOverviewSection(ticker, apiData);
-    // updateHeaderQuote called separately to avoid duplication
-    
-    // Refresh feather icons after DOM updates
-    if (window.feather && typeof window.feather.replace === 'function') {
-      window.feather.replace();
-    }
+    renderExtendedSections(ticker, apiData);
+    if (window.feather && typeof window.feather.replace === 'function') window.feather.replace();
   };
 
   // Update the intrapanel quote header (symbol + OHLC + change)
@@ -771,16 +805,9 @@ document.addEventListener('DOMContentLoaded', () => {
     render_candles(current_rows); 
     apply_timeframe(current_rows);
     updateHeaderQuote(key); // provisional update with existing data while API loads
-    
-    // Try to load API data for the new ticker
-    try {
-      console.log(`use_ticker: Loading API data for ${key}`);
-      const apiData = await loadDataFromEndpoint(key);
-      updateAllDashboardElements(key, apiData);
-    } catch (error) {
-      console.warn(`use_ticker: Failed to load API data for ${key}, using fallback:`, error);
-      updateAllDashboardElements(key); // Fallback to hardcoded data
-    }
+    await loadCompanyOverviewManifest();
+    const overview = await getCompanyOverview(key);
+    updateAllDashboardElements(key, overview ? {companyOverview: overview}: null);
   };
 
   const render_performance=()=>{
@@ -818,10 +845,163 @@ document.addEventListener('DOMContentLoaded', () => {
     render_candles(current_rows); 
     apply_timeframe(current_rows); 
     render_performance();
-    
-    // Skip ALL initial dashboard updates to preserve static HTML styling
-    // Updates will only happen when user manually selects different tickers
+    await loadCompanyOverviewManifest();
+    const initialOverview = await getCompanyOverview(current_ticker);
+    updateAllDashboardElements(current_ticker, initialOverview? {companyOverview:initialOverview}: null);
   };
+
+  /* ================= Extended Sections Rendering ================= */
+  const safeNum = (v)=>{ if(v==null||v==='None'||v==='') return null; const n=Number(v); return isNaN(n)?null:n; };
+  const pctFmt = (v, d=1)=> v==null? '—' : (v*100).toFixed(d)+'%';
+  const ratioFmt = (v, d=2)=> v==null? '—' : Number(v).toFixed(d);
+  const capFmt = (v)=>{ if(v==null) return '—'; const n=Number(v); if(isNaN(n)) return '—'; if(n>=1e12) return (n/1e12).toFixed(2)+'T'; if(n>=1e9) return (n/1e9).toFixed(2)+'B'; if(n>=1e6) return (n/1e6).toFixed(2)+'M'; return n.toFixed(0); };
+
+  function renderValuation(data){
+    const el = document.getElementById('valuation-metrics'); if(!el||!data) return;
+    const items = [
+      {label:'P/E', val: ratioFmt(safeNum(data.PERatio))},
+      {label:'Fwd P/E', val: ratioFmt(safeNum(data.ForwardPE))},
+      {label:'PEG', val: ratioFmt(safeNum(data.PEGRatio))},
+      {label:'P/S', val: ratioFmt(safeNum(data.PriceToSalesRatioTTM))},
+      {label:'P/B', val: ratioFmt(safeNum(data.PriceToBookRatio))},
+      {label:'EV/EBITDA', val: ratioFmt(safeNum(data.EVToEBITDA))}
+    ];
+    el.innerHTML = items.map(i=>`<div class="bg-gray-700 p-3 rounded-lg"><p class="text-xs text-gray-400">${i.label}</p><p class="font-medium">${i.val}</p></div>`).join('');
+  }
+
+  function renderProfitability(data){
+    const el = document.getElementById('profitability-metrics'); if(!el||!data) return;
+    const items = [
+      {label:'Profit Margin', val: pctFmt(safeNum(data.ProfitMargin))},
+      {label:'Op Margin', val: pctFmt(safeNum(data.OperatingMarginTTM))},
+      {label:'ROA', val: pctFmt(safeNum(data.ReturnOnAssetsTTM))},
+      {label:'ROE', val: pctFmt(safeNum(data.ReturnOnEquityTTM))},
+      {label:'EBITDA ($B)', val: (()=>{const e=safeNum(data.EBITDA); return e? (e/1e9).toFixed(2):'—';})()},
+      {label:'Gross Profit ($B)', val: (()=>{const g=safeNum(data.GrossProfitTTM); return g? (g/1e9).toFixed(2):'—';})()}
+    ];
+    el.innerHTML = items.map(i=>`<div class="bg-gray-700 p-3 rounded-lg"><p class="text-xs text-gray-400">${i.label}</p><p class="font-medium">${i.val}</p></div>`).join('');
+  }
+
+  function renderGrowth(data){
+    const el = document.getElementById('growth-metrics'); if(!el||!data) return;
+    const revGrowth = safeNum(data.QuarterlyRevenueGrowthYOY);
+    const earnGrowth = safeNum(data.QuarterlyEarningsGrowthYOY);
+    const items = [
+      {label:'Rev YoY', val: pctFmt(revGrowth)},
+      {label:'Earnings YoY', val: pctFmt(earnGrowth)},
+      {label:'Revenue/Share', val: ratioFmt(safeNum(data.RevenuePerShareTTM))},
+      {label:'EPS (TTM)', val: ratioFmt(safeNum(data.DilutedEPSTTM))},
+      {label:'Book Value', val: ratioFmt(safeNum(data.BookValue))},
+      {label:'Beta', val: ratioFmt(safeNum(data.Beta))}
+    ];
+    el.innerHTML = items.map(i=>`<div class="bg-gray-700 p-3 rounded-lg"><p class="text-xs text-gray-400">${i.label}</p><p class="font-medium">${i.val}</p></div>`).join('');
+  }
+
+  function renderAnalyst(data, currentPrice){
+    const bar = document.getElementById('analyst-bar');
+    const legend = document.getElementById('analyst-legend');
+    const tgt = document.getElementById('analyst-target');
+    const delta = document.getElementById('analyst-target-delta');
+    const totalEl = document.getElementById('analyst-total');
+    if(!data||!bar) return;
+    const buckets = [
+      {k:'AnalystRatingStrongBuy', label:'Strong Buy', color:'bg-emerald-500'},
+      {k:'AnalystRatingBuy', label:'Buy', color:'bg-green-500'},
+      {k:'AnalystRatingHold', label:'Hold', color:'bg-yellow-500'},
+      {k:'AnalystRatingSell', label:'Sell', color:'bg-orange-500'},
+      {k:'AnalystRatingStrongSell', label:'Strong Sell', color:'bg-red-500'}
+    ];
+    const counts = buckets.map(b=>({ ...b, v: safeNum(data[b.k])||0 }));
+    const total = counts.reduce((a,b)=>a+b.v,0)||1;
+    bar.innerHTML = counts.map(c=>`<div class="h-full ${c.color}" style="width:${(c.v/total*100).toFixed(2)}%"></div>`).join('');
+    if(legend) legend.innerHTML = counts.map(c=>`<span class="flex items-center gap-1"><span class="inline-block w-3 h-3 rounded-sm ${c.color}"></span>${c.label} <span class="text-gray-400">${c.v}</span></span>`).join('');
+    if(tgt){ const target = safeNum(data.AnalystTargetPrice); tgt.textContent = target? '$'+target.toFixed(2):'—'; if(delta){ if(target && currentPrice){ const diff = ((target-currentPrice)/currentPrice*100).toFixed(1); delta.textContent = (diff>0?'+':'')+diff+'%'; } else delta.textContent='—'; }}
+    if(totalEl) totalEl.textContent = total ? total : '—';
+  }
+
+  function renderRangeMomentum(data, currentPrice){
+    const lowEl = document.getElementById('range-low');
+    const highEl = document.getElementById('range-high');
+    const prog = document.getElementById('range-progress');
+    const marker = document.getElementById('range-marker');
+    const label = document.getElementById('range-label');
+    const maBoxes = document.getElementById('ma-boxes');
+    if(!data) return;
+    const low = safeNum(data['52WeekLow']);
+    const high = safeNum(data['52WeekHigh']);
+    const ma50 = safeNum(data['50DayMovingAverage']);
+    const ma200 = safeNum(data['200DayMovingAverage']);
+    if(lowEl) lowEl.textContent = low? low.toFixed(2):'Low';
+    if(highEl) highEl.textContent = high? high.toFixed(2):'High';
+    if(currentPrice && low && high && high>low){
+      const pct = (currentPrice-low)/(high-low)*100;
+      if(prog) prog.style.width = pct.toFixed(2)+'%';
+      if(marker) marker.style.left = pct.toFixed(2)+'%';
+      if(label) label.textContent = `Price at ${(pct).toFixed(1)}% of 52W range`;
+    }else{
+      if(label) label.textContent='—';
+    }
+    if(maBoxes){
+      maBoxes.innerHTML = [
+        {label:'50D MA', v: ma50},
+        {label:'200D MA', v: ma200},
+        {label:'52W High', v: high},
+        {label:'52W Low', v: low}
+      ].map(m=>`<div class="bg-gray-700 p-2 rounded-md flex flex-col"><span class="text-gray-400 text-[10px]">${m.label}</span><span class="text-xs font-medium">${m.v?m.v.toFixed(2):'—'}</span></div>`).join('');
+    }
+  }
+
+  function renderPeerTable(){
+    const tbody = document.getElementById('peer-tbody'); if(!tbody||companyOverviewCache.size===0) return;
+    const rows = Array.from(companyOverviewCache.values());
+    const sortSel = document.getElementById('peer-sort');
+    let sortBy = sortSel? sortSel.value: 'marketcap';
+    const numOrNull = (k,o)=>{const v = safeNum(o[k]); return v==null? -Infinity : v; };
+    const enrich = rows.map(r=>({
+      sym: r.Symbol||r.symbol,
+      sector: (r.Sector||'').toLowerCase().replace(/\b\w/g,c=>c.toUpperCase()),
+      mc: safeNum(r.MarketCapitalization),
+      pe: safeNum(r.PERatio),
+      profit: safeNum(r.ProfitMargin),
+      roe: safeNum(r.ReturnOnEquityTTM)
+    }));
+    const cmpMap = {
+      marketcap:(a,b)=> (b.mc||0)-(a.mc||0),
+      pe:(a,b)=> (a.pe||Infinity)-(b.pe||Infinity),
+      profit:(a,b)=> (b.profit||0)-(a.profit||0),
+      roe:(a,b)=> (b.roe||0)-(a.roe||0)
+    };
+    enrich.sort(cmpMap[sortBy]||cmpMap.marketcap);
+    const fmtPct = v=> v==null? '—' : (v*100).toFixed(1);
+    const fmtCap = v=> v==null? '—' : capFmt(v);
+    tbody.innerHTML = enrich.map(r=>`<tr class="border-b border-gray-700/50 hover:bg-gray-700/30 transition">
+      <td class="py-2 pr-4 font-medium">${r.sym}</td>
+      <td class="py-2 pr-4">${r.sector||'—'}</td>
+      <td class="py-2 pr-4 text-right">${fmtCap(r.mc)}</td>
+      <td class="py-2 pr-4 text-right">${r.pe==null?'—':r.pe.toFixed(2)}</td>
+      <td class="py-2 pr-4 text-right">${fmtPct(r.profit)}</td>
+      <td class="py-2 pr-4 text-right">${fmtPct(r.roe)}</td>
+    </tr>`).join('');
+  }
+
+  function renderExtendedSections(ticker, api){
+    const data = api?.companyOverview || api || null;
+    if(!data) return;
+    // derive current price from latest candle
+    let currentPrice = null;
+    if(current_rows && current_rows.length) currentPrice = current_rows.at(-1).c;
+    renderValuation(data);
+    renderProfitability(data);
+    renderGrowth(data);
+    renderAnalyst(data, currentPrice);
+    renderRangeMomentum(data, currentPrice);
+    renderPeerTable();
+  }
+
+  // Sort change listener for peer table
+  document.addEventListener('change', (e)=>{
+    if(e.target && e.target.id === 'peer-sort') renderPeerTable();
+  });
 
   if(el_ticker) el_ticker.addEventListener('change',()=>use_ticker(el_ticker.value));
   if(el_ticker_filter) el_ticker_filter.addEventListener('input',debounce(()=>{const q=(el_ticker_filter.value||'').trim().toLowerCase(); const filtered=!q?all_tickers:all_tickers.filter(t=>t.includes(q)); populate_ticker_select(filtered,el_ticker,true);},120));
