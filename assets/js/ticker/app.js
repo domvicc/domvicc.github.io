@@ -20,9 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Dynamic data endpoints
   const data_endpoints = {
     ticker: 'ticker/daily/',
-    company_overview: 'company_overview/',
-    income_statement: 'income_statement/',
-    balance_sheet: 'balance_sheet/'
+    company_overview: 'ticker/company_overview/',
+    income_statement: 'ticker/income_statement/',
+    balance_sheet: 'ticker/balance_sheet/'
   };
 
   // Cache for company overview manifest + individual files
@@ -36,7 +36,14 @@ document.addEventListener('DOMContentLoaded', () => {
       const res = await fetch('ticker/company_overview/manifest.json');
       if(!res.ok) throw new Error('manifest fetch '+res.status);
       const manifest = await res.json();
-      manifestTickers = (manifest.tickers||manifest.data?.map(d=>d.Symbol)||[]).map(s=>s.toLowerCase());
+      // Handle both old 'tickers' format and new 'files' format
+      if(manifest.files && Array.isArray(manifest.files)){
+        // Extract ticker symbols from filenames (remove .json extension)
+        manifestTickers = manifest.files.map(f => f.replace(/\.json$/i, '').toLowerCase());
+      } else {
+        // Fallback to old format
+        manifestTickers = (manifest.tickers||manifest.data?.map(d=>d.Symbol)||[]).map(s=>s.toLowerCase());
+      }
       // Pre-seed cache from inline data array if present
       if(Array.isArray(manifest.data)){
         for(const obj of manifest.data){
