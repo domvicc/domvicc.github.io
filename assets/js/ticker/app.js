@@ -842,6 +842,40 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
+  // Load ticker symbols from manifest for initial filter population
+  const loadTickerListFromManifest = async () => {
+    console.log('loadTickerListFromManifest: Loading ticker list from manifest...');
+    try {
+      const response = await fetch(dir_url + 'manifest.json');
+      if (!response.ok) {
+        console.warn('loadTickerListFromManifest: manifest.json not found, falling back to hardcoded list');
+        return ['aapl', 'abnb', 'adbe', 'adi', 'amgn', 'amzn']; // fallback
+      }
+      
+      const manifest = await response.json();
+      console.log('loadTickerListFromManifest: Loaded manifest:', manifest);
+      
+      let tickerList = [];
+      if (Array.isArray(manifest.files)) {
+        // Extract ticker symbols from filenames (remove .json extension)
+        tickerList = manifest.files
+          .map(filename => filename.replace(/\.json$/i, '').toLowerCase())
+          .filter(ticker => ticker.length > 0)
+          .sort();
+      } else if (Array.isArray(manifest.tickers)) {
+        tickerList = manifest.tickers.map(t => String(t).toLowerCase()).sort();
+      } else if (Array.isArray(manifest)) {
+        tickerList = manifest.map(t => String(t).toLowerCase()).sort();
+      }
+      
+      console.log('loadTickerListFromManifest: Extracted tickers:', tickerList);
+      return tickerList.length > 0 ? tickerList : ['aapl', 'abnb', 'adbe', 'adi', 'amgn', 'amzn'];
+    } catch (error) {
+      console.error('loadTickerListFromManifest: Error loading manifest:', error);
+      return ['aapl', 'abnb', 'adbe', 'adi', 'amgn', 'amzn']; // fallback
+    }
+  };
+
   // --- discover json files ---
   const list_json_files=async(dirUrl)=>{
     console.log('list_json_files: Trying to load from:', dirUrl);
@@ -1585,32 +1619,46 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  const boot=async()=>{
+  const boot=async()=>{    
+    // First, load ticker list from manifest to populate the select immediately
+    console.log('Boot: Loading ticker list from manifest...');
+    const manifestTickers = await loadTickerListFromManifest();
+    all_tickers = manifestTickers;
+    populate_ticker_select(all_tickers, el_ticker);
+    current_ticker = el_ticker.value || DEFAULT_TICKER;
+    
+    // Clear ticker filter to ensure all tickers are visible initially
+    if (el_ticker_filter) el_ticker_filter.value = '';
+    
+    console.log('Boot: Ticker select populated with', all_tickers.length, 'tickers from manifest');
+    
+    // Now load the actual ticker data
     set_status('loading daily data…');
     console.log('Boot: Starting ticker data load from:', dir_url);
     
     try {
       ticker_map=await fetch_all_from_directory();
-      all_tickers=Array.from(ticker_map.keys()).sort();
-      console.log('Boot: Loaded tickers:', all_tickers.length, 'symbols:', all_tickers);
-      if(all_tickers.length===0){ 
-        console.error('Boot: No tickers loaded - check manifest.json and data files');
-        set_status('No tickers found. Check browser console for detailed error information.'); 
-        return; 
+      const availableTickers = Array.from(ticker_map.keys()).sort();
+      console.log('Boot: Loaded tickers:', availableTickers.length, 'symbols:', availableTickers);
+      
+      // Update ticker list with actually available data (in case manifest has more than available data)
+      if (availableTickers.length > 0) {
+        all_tickers = availableTickers;
+        populate_ticker_select(all_tickers, el_ticker, true); // keep current selection if possible
+        console.log('Boot: Updated ticker select with', availableTickers.length, 'available tickers');
+      } else {
+        console.error('Boot: No ticker data loaded - check manifest.json and data files');
+        set_status('No ticker data found. Using manifest list only.'); 
+        // Don't return here - continue with manifest-based ticker list
       }
     } catch(error) {
-      console.error('Boot: Error during initialization:', error);
-      set_status('Error loading data. Check browser console for details.');
-      return;
+      console.error('Boot: Error during data loading:', error);
+      set_status('Error loading ticker data. Using manifest list only.');
+      // Don't return here - continue with manifest-based ticker list
     }
     
-    populate_ticker_select(all_tickers,el_ticker);
-    current_ticker = el_ticker.value || DEFAULT_TICKER;
-    
-    // Clear ticker filter to ensure all tickers are visible initially
-    if(el_ticker_filter) el_ticker_filter.value = '';
-    
-    current_rows=ticker_map.get(current_ticker)||[];
+    // Ensure we have a valid current ticker
+    current_ticker = el_ticker.value || DEFAULT_TICKER;    current_rows=ticker_map.get(current_ticker)||[];
     render_candles(current_rows); 
     apply_timeframe(current_rows); 
     renderFinancialCharts(current_ticker);
