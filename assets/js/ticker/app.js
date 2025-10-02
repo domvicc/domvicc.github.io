@@ -107,7 +107,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const el_chart = document.getElementById('candlestick_chart');
   const el_status = document.getElementById('chart-status');
-  const el_performance = document.getElementById('performance_chart');
+  
+  // New Financial Charts
+  const el_revenue_earnings = document.getElementById('revenue_earnings_chart');
+  const el_profit_margins = document.getElementById('profit_margins_chart');
+  const el_operating_expenses = document.getElementById('operating_expenses_chart');
+  const el_asset_composition = document.getElementById('asset_composition_chart');
+  const el_debt_equity = document.getElementById('debt_equity_chart');
+  const el_liquidity = document.getElementById('liquidity_chart');
+  
+  // Chart Controls
+  const el_income_period = document.getElementById('income-period-select');
+  const el_income_timeframe = document.getElementById('income-timeframe-select');
+  const el_income_growth = document.getElementById('income-growth-toggle');
+  const el_income_refresh = document.getElementById('income-refresh-btn');
+  const el_balance_period = document.getElementById('balance-period-select');
+  const el_balance_timeframe = document.getElementById('balance-timeframe-select');
+  const el_balance_ratios = document.getElementById('balance-ratios-toggle');
+  const el_balance_refresh = document.getElementById('balance-refresh-btn');
+  
   const el_ticker = document.getElementById('ticker-select');
   const el_ticker_filter = document.getElementById('ticker-filter');
   const el_timeframe = document.getElementById('timeframe-select');
@@ -624,12 +642,18 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('updateFinancialMetricsSection called with ticker:', ticker);
     
     // Use income statement data if available, otherwise fall back to company overview
-    let data = apiData?.incomeStatement;
-    if (!data && apiData?.companyOverview) {
+    let data = null;
+    
+    // Try to get the most recent annual report from income statement data
+    if (apiData?.incomeStatement?.annualReports && Array.isArray(apiData.incomeStatement.annualReports) && apiData.incomeStatement.annualReports.length > 0) {
+      data = apiData.incomeStatement.annualReports[0]; // Most recent annual report
+      console.log('updateFinancialMetricsSection: Using income statement data');
+    } else if (apiData?.companyOverview) {
       data = apiData.companyOverview;
-    }
-    if (!data) {
+      console.log('updateFinancialMetricsSection: Using company overview data');
+    } else {
       data = companyOverviewCache.get(ticker.toLowerCase());
+      console.log('updateFinancialMetricsSection: Using cached company overview data');
     }
     
     if (!data) {
@@ -647,42 +671,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     console.log('Financial values:', { revenue, netIncome, grossProfit, operatingIncome });
 
-    // Update the key financials section - try multiple selectors
-    let financialSection = document.querySelector('.bg-gray-800 .space-y-4');
-    
-    if (!financialSection) {
-      // Fallback selector - find section that contains Revenue (TTM)
-      const allSections = document.querySelectorAll('.space-y-4');
-      for (let section of allSections) {
-        if (section.textContent.includes('Revenue (TTM)')) {
-          financialSection = section;
-          console.log('updateFinancialMetricsSection: Found section with fallback selector');
-          break;
-        }
-      }
-    }
-    
-    if (!financialSection) {
-      console.warn('updateFinancialMetricsSection: Could not find financial section');
-      return;
-    }
-    
-    console.log('updateFinancialMetricsSection: Found section:', financialSection);
-
     // Convert to billions for display - handle both raw numbers and already-formatted billions
     const formatFinancial = (value) => {
-      if (!value || value === 0 || value === '0' || value === 'None' || value === '') return '0.0';
+      if (!value || value === 0 || value === '0' || value === 'None' || value === '' || value === null || value === undefined) return '0.0';
       
-      const num = parseFloat(value);
+      // Remove any non-numeric characters except decimal point and negative sign
+      const cleanValue = String(value).replace(/[^0-9.-]/g, '');
+      const num = parseFloat(cleanValue);
       if (isNaN(num)) return '0.0';
       
-      // If value is already in billions format (< 1000), use as-is
-      if (num < 1000 && num > 0) return num.toFixed(1);
-      // Otherwise convert from raw dollars to billions
-      if (num >= 1e9) return (num / 1e9).toFixed(1);
-      if (num >= 1e6) return (num / 1e6 / 1000).toFixed(1); // Convert millions to billions
-      if (num >= 1e3) return (num / 1e6).toFixed(1); // Convert thousands to millions and then to billions
-      return (num / 1e9).toFixed(1); // Handle smaller numbers
+      // Convert from raw dollars to billions
+      return (num / 1e9).toFixed(1);
     };
 
     const revenueB = formatFinancial(revenue);
@@ -696,24 +695,33 @@ document.addEventListener('DOMContentLoaded', () => {
     const netIncomeNum = parseFloat(netIncome) || 0;
     const operatingIncomeNum = parseFloat(operatingIncome) || 0;
 
-    const metrics = [
-      { label: 'Revenue (TTM)', value: `$${revenueB}B`, width: '100%', color: 'bg-blue-500' },
-      { label: 'Gross Profit', value: `$${grossProfitB}B`, width: revenueNum > 0 ? `${Math.max(0, Math.min(100, (grossProfitNum / revenueNum * 100))).toFixed(0)}%` : '0%', color: 'bg-green-500' },
-      { label: 'Net Income', value: `$${netIncomeB}B`, width: revenueNum > 0 ? `${Math.max(0, Math.min(100, (Math.abs(netIncomeNum) / revenueNum * 100))).toFixed(0)}%` : '0%', color: 'bg-purple-500' },
-      { label: 'Operating Income', value: `$${operatingIncomeB}B`, width: revenueNum > 0 ? `${Math.max(0, Math.min(100, (Math.abs(operatingIncomeNum) / revenueNum * 100))).toFixed(0)}%` : '0%', color: 'bg-yellow-500' }
-    ];
+    // Update individual elements using IDs
+    const revenueValueEl = document.getElementById('revenue-value');
+    const grossProfitValueEl = document.getElementById('gross-profit-value');
+    const netIncomeValueEl = document.getElementById('net-income-value');
+    const operatingIncomeValueEl = document.getElementById('operating-income-value');
+    
+    const revenueBarEl = document.getElementById('revenue-bar');
+    const grossProfitBarEl = document.getElementById('gross-profit-bar');
+    const netIncomeBarEl = document.getElementById('net-income-bar');
+    const operatingIncomeBarEl = document.getElementById('operating-income-bar');
 
-    financialSection.innerHTML = metrics.map(metric => `
-      <div>
-        <div class="flex justify-between text-sm mb-1">
-          <span class="text-gray-400">${metric.label}</span>
-          <span>${metric.value}</span>
-        </div>
-        <div class="w-full bg-gray-700 rounded-full h-2">
-          <div class="${metric.color} h-2 rounded-full" style="width: ${metric.width}"></div>
-        </div>
-      </div>
-    `).join('');
+    if (revenueValueEl) revenueValueEl.textContent = `$${revenueB}B`;
+    if (grossProfitValueEl) grossProfitValueEl.textContent = `$${grossProfitB}B`;
+    if (netIncomeValueEl) netIncomeValueEl.textContent = `$${netIncomeB}B`;
+    if (operatingIncomeValueEl) operatingIncomeValueEl.textContent = `$${operatingIncomeB}B`;
+    
+    // Update progress bars
+    if (revenueBarEl) revenueBarEl.style.width = '100%';
+    if (grossProfitBarEl && revenueNum > 0) {
+      grossProfitBarEl.style.width = `${Math.max(0, Math.min(100, (grossProfitNum / revenueNum * 100))).toFixed(0)}%`;
+    }
+    if (netIncomeBarEl && revenueNum > 0) {
+      netIncomeBarEl.style.width = `${Math.max(0, Math.min(100, (Math.abs(netIncomeNum) / revenueNum * 100))).toFixed(0)}%`;
+    }
+    if (operatingIncomeBarEl && revenueNum > 0) {
+      operatingIncomeBarEl.style.width = `${Math.max(0, Math.min(100, (Math.abs(operatingIncomeNum) / revenueNum * 100))).toFixed(0)}%`;
+    }
 
     console.log('updateFinancialMetricsSection: Updated financial metrics successfully');
 
@@ -904,6 +912,7 @@ document.addEventListener('DOMContentLoaded', () => {
     current_rows=ticker_map.get(key)||[]; 
     render_candles(current_rows); 
     apply_timeframe(current_rows);
+    renderFinancialCharts(key); // Add financial charts rendering
     updateHeaderQuote(key); // provisional update with existing data while API loads
     await loadCompanyOverviewManifest();
     // Load complete ticker data including income statement for proper financial metrics
@@ -911,10 +920,669 @@ document.addEventListener('DOMContentLoaded', () => {
     updateAllDashboardElements(key, completeData);
   };
 
-  const render_performance=()=>{
-    const c=get_theme_colors(); const x=['q1 2024','q2 2024','q3 2024','q4 2024']; const revenue=[119.6,94.8,81.8,89.5]; const income=[34.6,24.2,19.9,15.0];
-    Plotly.newPlot(el_performance,[{type:'bar',x,y:revenue,name:'revenue (b)',marker:{color:c.accent},yaxis:'y'},{type:'scatter',mode:'lines+markers',x,y:income,name:'net income (b)',line:{width:2},marker:{size:5},yaxis:'y2'}],
-      {paper_bgcolor:c.paper,plot_bgcolor:c.plot,font:{color:c.text},margin:{t:20,r:20,b:30,l:40},xaxis:{gridcolor:c.grid,linecolor:c.border},yaxis:{title:'revenue ($b)',gridcolor:c.grid,linecolor:c.border},yaxis2:{title:'net income ($b)',overlaying:'y',side:'right'},legend:{orientation:'h'}},{responsive:true,displaylogo:false});
+  // Financial Chart Data Processing
+  const processIncomeStatementData = (incomeData, period = 'annual', timeframe = '5y') => {
+    if (!incomeData) return null;
+    
+    const reports = period === 'annual' ? incomeData.annualReports : incomeData.quarterlyReports;
+    if (!reports || reports.length === 0) return null;
+    
+    // Apply timeframe filter (different strategy for annual vs quarterly)
+    let filteredReports = [...reports];
+    if (timeframe !== 'all') {
+      if (period === 'annual') {
+        const count = timeframe === '1y' ? 1 : timeframe === '3y' ? 3 : timeframe === '5y' ? 5 : 10;
+        filteredReports = reports
+          .slice() // copy
+          .sort((a,b)=> new Date(b.fiscalDateEnding) - new Date(a.fiscalDateEnding))
+          .slice(0, count);
+      } else { // quarterly
+        if (timeframe === '1y') {
+          // For 1 year quarterly, use date-based filtering
+          const now = new Date();
+          const oneYearAgo = new Date(now.getFullYear() - 1, now.getMonth(), now.getDate());
+          filteredReports = reports.filter(r => new Date(r.fiscalDateEnding) >= oneYearAgo);
+        } else {
+          // For other timeframes, use count-based approach
+          const quarters = timeframe === '3y' ? 12 : timeframe === '5y' ? 20 : 40;
+          filteredReports = reports
+            .slice()
+            .sort((a,b)=> new Date(b.fiscalDateEnding) - new Date(a.fiscalDateEnding))
+            .slice(0, quarters);
+        }
+      }
+    }
+    
+    // Sort by date (oldest first for trend charts)
+    filteredReports.sort((a, b) => new Date(a.fiscalDateEnding) - new Date(b.fiscalDateEnding));
+    
+    return filteredReports.map(report => ({
+      date: report.fiscalDateEnding,
+      revenue: parseFloat(report.totalRevenue) / 1e9, // Convert to billions
+      netIncome: parseFloat(report.netIncome) / 1e9,
+      grossProfit: parseFloat(report.grossProfit) / 1e9,
+      operatingIncome: parseFloat(report.operatingIncome) / 1e9,
+      operatingExpenses: parseFloat(report.operatingExpenses) / 1e9,
+      rnd: parseFloat(report.researchAndDevelopment || 0) / 1e9,
+      sga: parseFloat(report.sellingGeneralAndAdministrative || 0) / 1e9,
+      grossMargin: ((parseFloat(report.grossProfit) / parseFloat(report.totalRevenue)) * 100) || 0,
+      operatingMargin: ((parseFloat(report.operatingIncome) / parseFloat(report.totalRevenue)) * 100) || 0,
+      netMargin: ((parseFloat(report.netIncome) / parseFloat(report.totalRevenue)) * 100) || 0
+    })).filter(d => !isNaN(d.revenue) && d.revenue > 0);
+  };
+
+  const processBalanceSheetData = (balanceData, period = 'annual', timeframe = '5y') => {
+    if (!balanceData) return null;
+    
+    const reports = period === 'annual' ? balanceData.annualReports : balanceData.quarterlyReports;
+    if (!reports || reports.length === 0) return null;
+    
+    // Apply timeframe filter same logic as income
+    let filteredReports = [...reports];
+    if (timeframe !== 'all') {
+      if (period === 'annual') {
+        const count = timeframe === '1y' ? 1 : timeframe === '3y' ? 3 : timeframe === '5y' ? 5 : 10;
+        filteredReports = reports
+          .slice()
+          .sort((a,b)=> new Date(b.fiscalDateEnding) - new Date(a.fiscalDateEnding))
+          .slice(0, count);
+      } else { // quarterly
+        if (timeframe === '1y') {
+          // For 1 year quarterly, use date-based filtering
+          const now = new Date();
+          const oneYearAgo = new Date(now.getFullYear() - 1, now.getMonth(), now.getDate());
+          filteredReports = reports.filter(r => new Date(r.fiscalDateEnding) >= oneYearAgo);
+        } else {
+          // For other timeframes, use count-based approach
+          const quarters = timeframe === '3y' ? 12 : timeframe === '5y' ? 20 : 40;
+          filteredReports = reports
+            .slice()
+            .sort((a,b)=> new Date(b.fiscalDateEnding) - new Date(a.fiscalDateEnding))
+            .slice(0, quarters);
+        }
+      }
+    }
+    
+    // Sort by date (oldest first for trend charts)
+    filteredReports.sort((a, b) => new Date(a.fiscalDateEnding) - new Date(b.fiscalDateEnding));
+    
+    return filteredReports.map(report => ({
+      date: report.fiscalDateEnding,
+      totalAssets: parseFloat(report.totalAssets) / 1e9,
+      currentAssets: parseFloat(report.totalCurrentAssets) / 1e9,
+      nonCurrentAssets: parseFloat(report.totalNonCurrentAssets) / 1e9,
+      totalLiabilities: parseFloat(report.totalLiabilities) / 1e9,
+      totalEquity: parseFloat(report.totalShareholderEquity) / 1e9,
+      longTermDebt: parseFloat(report.longTermDebt || 0) / 1e9,
+      shortTermDebt: parseFloat(report.shortTermDebt || 0) / 1e9,
+      cash: parseFloat(report.cashAndCashEquivalentsAtCarryingValue || 0) / 1e9,
+      investments: parseFloat(report.longTermInvestments || 0) / 1e9,
+      debtToEquity: (parseFloat(report.longTermDebt || 0) + parseFloat(report.shortTermDebt || 0)) / parseFloat(report.totalShareholderEquity) || 0
+    })).filter(d => !isNaN(d.totalAssets) && d.totalAssets > 0);
+  };
+
+  // Render Revenue & Earnings Chart
+  const renderRevenueEarningsChart = (data) => {
+    if (!el_revenue_earnings || !data || data.length === 0) return;
+    
+    const c = get_theme_colors();
+    const dates = data.map(d => d.date);
+    const revenue = data.map(d => d.revenue);
+    const netIncome = data.map(d => d.netIncome);
+    
+    const showGrowth = el_income_growth && el_income_growth.checked;
+    let revenueGrowth = [], incomeGrowth = [];
+    
+    if (showGrowth && data.length > 1) {
+      for (let i = 1; i < data.length; i++) {
+        const revGrowth = ((data[i].revenue - data[i-1].revenue) / data[i-1].revenue) * 100;
+        const incGrowth = ((data[i].netIncome - data[i-1].netIncome) / data[i-1].netIncome) * 100;
+        revenueGrowth.push(revGrowth);
+        incomeGrowth.push(incGrowth);
+      }
+    }
+    
+    const traces = [
+      {
+        type: 'bar',
+        x: dates,
+        y: revenue,
+        name: 'Revenue ($B)',
+        marker: { color: '#3B82F6' }, // Blue-500 - primary data
+        yaxis: 'y'
+      },
+      {
+        type: 'scatter',
+        mode: 'lines+markers',
+        x: dates,
+        y: netIncome,
+        name: 'Net Income ($B)',
+        line: { width: 3, color: '#10B981' }, // Emerald-500 - success/profit
+        marker: { size: 6, color: '#10B981' },
+        yaxis: 'y2'
+      }
+    ];
+    
+    if (showGrowth && revenueGrowth.length > 0) {
+      traces.push({
+        type: 'scatter',
+        mode: 'lines+markers',
+        x: dates.slice(1),
+        y: revenueGrowth,
+        name: 'Revenue Growth (%)',
+        line: { width: 2, dash: 'dot', color: '#8B5CF6' }, // Violet-500 - secondary metric
+        marker: { size: 4, color: '#8B5CF6' },
+        yaxis: 'y3'
+      });
+    }
+    
+    const layout = {
+      paper_bgcolor: c.paper,
+      plot_bgcolor: c.plot,
+      font: { color: c.text, size: 11, family: 'Inter, system-ui, sans-serif' },
+      margin: { t: 15, r: 50, b: 35, l: 55 },
+      height: 288, // Explicit height constraint
+      autosize: true,
+      xaxis: { 
+        gridcolor: c.grid, 
+        linecolor: c.border,
+        title: { text: '', font: { size: 10 } },
+        tickfont: { size: 9 },
+        showticklabels: true
+      },
+      yaxis: { 
+        title: { text: 'Revenue ($B)', font: { size: 10, color: c.muted } }, 
+        gridcolor: c.grid, 
+        linecolor: c.border,
+        tickfont: { size: 9 },
+        side: 'left'
+      },
+      yaxis2: { 
+        title: { text: 'Net Income ($B)', font: { size: 10, color: c.muted } }, 
+        overlaying: 'y', 
+        side: 'right',
+        tickfont: { size: 9 },
+        gridcolor: 'rgba(0,0,0,0)'
+      },
+      legend: { 
+        orientation: 'h', 
+        y: -0.25, 
+        x: 0,
+        font: { size: 9 },
+        itemwidth: 30,
+        tracegroupgap: 3
+      },
+      hovermode: 'x unified',
+      hoverlabel: { bgcolor: c.plot, bordercolor: c.border, font: { size: 10 } }
+    };
+    
+    if (showGrowth && revenueGrowth.length > 0) {
+      layout.yaxis3 = {
+        title: { text: 'Growth (%)', font: { size: 10, color: c.muted } },
+        overlaying: 'y',
+        side: 'right',
+        position: 0.95,
+        tickfont: { size: 9 },
+        gridcolor: 'rgba(0,0,0,0)'
+      };
+    }
+    
+    const config = { responsive: true, displaylogo: false, displayModeBar: false };
+    Plotly.newPlot(el_revenue_earnings, traces, layout, config);
+  };
+
+  // Render Profit Margins Chart
+  const renderProfitMarginsChart = (data) => {
+    if (!el_profit_margins || !data || data.length === 0) return;
+    
+    const c = get_theme_colors();
+    const dates = data.map(d => d.date);
+    // Extract raw margin series
+    const gross = data.map(d => d.grossMargin);
+    const operating = data.map(d => d.operatingMargin);
+    const net = data.map(d => d.netMargin);
+
+  // Determine bar width in ms (if date axis) so bars appear balanced
+  // Use first interval * 0.35 for slimmer grouped bars
+    let barWidthMs = 24 * 3600 * 1000 * 180; // fallback ~180 days
+    try {
+      if (dates.length > 1) {
+        const firstDiff = (new Date(dates[1]).getTime() - new Date(dates[0]).getTime());
+  if (firstDiff > 0) barWidthMs = firstDiff * 0.35; // 35% of span for slimmer bars
+      }
+    } catch(e) { /* silent fallback */ }
+    const widthArray = new Array(dates.length).fill(barWidthMs);
+
+    // Helper to compute percent change vs previous period
+    const pctChange = (arr) => arr.map((v,i) => {
+      if (i === 0) return null; // no prior period
+      const prev = arr[i-1];
+      if (prev === 0 || prev == null) return null; // avoid div by zero / invalid
+      return ((v - prev) / Math.abs(prev)) * 100;
+    });
+    const grossDelta = pctChange(gross);
+    const operatingDelta = pctChange(operating);
+    const netDelta = pctChange(net);
+    
+    const traces = [
+      {
+        type: 'bar',
+        x: dates,
+        y: gross,
+        name: 'Gross Margin',
+        marker: { 
+          color: '#1E88E5', // Material Blue 600
+          line: { color: '#1565C0', width: 1 }
+        },
+        offsetgroup: 'gross',
+        width: widthArray
+      },
+      {
+        type: 'bar',
+        x: dates,
+        y: operating,
+        name: 'Operating Margin',
+        marker: { 
+          color: '#43A047', // Material Green 600
+          line: { color: '#2E7D32', width: 1 }
+        },
+        offsetgroup: 'operating',
+        width: widthArray
+      },
+      {
+        type: 'bar',
+        x: dates,
+        y: net,
+        name: 'Net Margin',
+        marker: { 
+          color: '#8E24AA', // Material Purple 600
+          line: { color: '#6A1B9A', width: 1 }
+        },
+        offsetgroup: 'net',
+        width: widthArray
+      },
+      // Dotted percent change lines (skip first null point)
+      {
+        type: 'scatter',
+        mode: 'lines+markers',
+        x: dates,
+        y: grossDelta,
+  name: 'Gross Δ %',
+  line: { color: '#1E88E5', dash: 'dot', width: 2 },
+  marker: { size: 5, color: '#1E88E5' },
+        yaxis: 'y2'
+      },
+      {
+        type: 'scatter',
+        mode: 'lines+markers',
+        x: dates,
+        y: operatingDelta,
+  name: 'Operating Δ %',
+  line: { color: '#43A047', dash: 'dot', width: 2 },
+  marker: { size: 5, color: '#43A047' },
+        yaxis: 'y2'
+      },
+      {
+        type: 'scatter',
+        mode: 'lines+markers',
+        x: dates,
+        y: netDelta,
+  name: 'Net Δ %',
+  line: { color: '#8E24AA', dash: 'dot', width: 2 },
+  marker: { size: 5, color: '#8E24AA' },
+        yaxis: 'y2'
+      }
+    ];
+    
+    const layout = {
+      paper_bgcolor: c.paper,
+      plot_bgcolor: c.plot,
+      font: { color: c.text, size: 11, family: 'Inter, system-ui, sans-serif' },
+      margin: { t: 15, r: 25, b: 35, l: 50 },
+      height: 288, // Explicit height constraint
+      autosize: true,
+  barmode: 'group',
+  bargap: 0.25, // slightly wider spacing between groups for slimmer bars
+  bargroupgap: 0.18, // increased spacing within group to reinforce separation
+      xaxis: { 
+        gridcolor: c.grid, 
+        linecolor: c.border,
+        title: { text: '', font: { size: 10 } },
+        tickfont: { size: 9 }
+      },
+      yaxis: { 
+        title: { text: 'Margin (%)', font: { size: 10, color: c.muted } }, 
+        gridcolor: c.grid, 
+        linecolor: c.border,
+        tickfont: { size: 9 }
+      },
+      yaxis2: {
+        title: { text: 'Δ vs Prior (%)', font: { size: 10, color: c.muted } },
+        overlaying: 'y',
+        side: 'right',
+        showgrid: false,
+        tickfont: { size: 9 }
+      },
+      legend: { 
+        orientation: 'h', 
+        y: -0.25, 
+        x: 0,
+        font: { size: 9 },
+        itemwidth: 30,
+        tracegroupgap: 3
+      },
+      hovermode: 'x unified',
+      hoverlabel: { bgcolor: c.plot, bordercolor: c.border, font: { size: 10 } }
+    };
+    
+    const config = { responsive: true, displaylogo: false, displayModeBar: false };
+    Plotly.newPlot(el_profit_margins, traces, layout, config);
+  };
+
+  // Render Operating Expenses Chart
+  const renderOperatingExpensesChart = (data) => {
+    if (!el_operating_expenses || !data || data.length === 0) return;
+    
+    const c = get_theme_colors();
+    const dates = data.map(d => d.date);
+    
+    const traces = [
+      {
+        type: 'bar',
+        x: dates,
+        y: data.map(d => d.rnd),
+        name: 'R&D',
+        marker: { color: '#F59E0B' } // Amber-500 - innovation/investment
+      },
+      {
+        type: 'bar',
+        x: dates,
+        y: data.map(d => d.sga),
+        name: 'SG&A',
+        marker: { color: '#EF4444' } // Red-500 - operational costs
+      }
+    ];
+    
+    const layout = {
+      paper_bgcolor: c.paper,
+      plot_bgcolor: c.plot,
+      font: { color: c.text, size: 11, family: 'Inter, system-ui, sans-serif' },
+      margin: { t: 15, r: 25, b: 35, l: 50 },
+      height: 256, // Explicit height constraint
+      autosize: true,
+      barmode: 'stack',
+      xaxis: { 
+        gridcolor: c.grid, 
+        linecolor: c.border,
+        title: { text: '', font: { size: 10 } },
+        tickfont: { size: 9 }
+      },
+      yaxis: { 
+        title: { text: 'Expenses ($B)', font: { size: 10, color: c.muted } }, 
+        gridcolor: c.grid, 
+        linecolor: c.border,
+        tickfont: { size: 9 }
+      },
+      legend: { 
+        orientation: 'h', 
+        y: -0.25, 
+        x: 0,
+        font: { size: 9 },
+        itemwidth: 30,
+        tracegroupgap: 3
+      },
+      hovermode: 'x unified',
+      hoverlabel: { bgcolor: c.plot, bordercolor: c.border, font: { size: 10 } }
+    };
+    
+    const config = { responsive: true, displaylogo: false, displayModeBar: false };
+    Plotly.newPlot(el_operating_expenses, traces, layout, config);
+  };
+
+  // Render Asset Composition Chart
+  const renderAssetCompositionChart = (data) => {
+    if (!el_asset_composition || !data || data.length === 0) return;
+    
+    const c = get_theme_colors();
+    const dates = data.map(d => d.date);
+    
+    const traces = [
+      {
+        type: 'bar',
+        x: dates,
+        y: data.map(d => d.currentAssets),
+        name: 'Current Assets',
+        marker: { color: '#06B6D4' } // Cyan-500 - liquid/current
+      },
+      {
+        type: 'bar',
+        x: dates,
+        y: data.map(d => d.nonCurrentAssets),
+        name: 'Non-Current Assets',
+        marker: { color: '#3B82F6' } // Blue-500 - long-term/stable
+      }
+    ];
+    
+    const layout = {
+      paper_bgcolor: c.paper,
+      plot_bgcolor: c.plot,
+      font: { color: c.text, size: 11, family: 'Inter, system-ui, sans-serif' },
+      margin: { t: 15, r: 25, b: 35, l: 50 },
+      height: 288, // Explicit height constraint
+      autosize: true,
+      barmode: 'stack',
+      xaxis: { 
+        gridcolor: c.grid, 
+        linecolor: c.border,
+        title: { text: '', font: { size: 10 } },
+        tickfont: { size: 9 }
+      },
+      yaxis: { 
+        title: { text: 'Assets ($B)', font: { size: 10, color: c.muted } }, 
+        gridcolor: c.grid, 
+        linecolor: c.border,
+        tickfont: { size: 9 }
+      },
+      legend: { 
+        orientation: 'h', 
+        y: -0.25, 
+        x: 0,
+        font: { size: 9 },
+        itemwidth: 30,
+        tracegroupgap: 3
+      },
+      hovermode: 'x unified',
+      hoverlabel: { bgcolor: c.plot, bordercolor: c.border, font: { size: 10 } }
+    };
+    
+    const config = { responsive: true, displaylogo: false, displayModeBar: false };
+    Plotly.newPlot(el_asset_composition, traces, layout, config);
+  };
+
+  // Render Debt & Equity Chart
+  const renderDebtEquityChart = (data) => {
+    if (!el_debt_equity || !data || data.length === 0) return;
+    
+    const c = get_theme_colors();
+    const dates = data.map(d => d.date);
+    const showRatios = el_balance_ratios && el_balance_ratios.checked;
+    
+    const traces = [
+      {
+        type: 'bar',
+        x: dates,
+        y: data.map(d => d.totalLiabilities),
+        name: 'Total Liabilities',
+        marker: { color: '#DC2626' }, // Red-600 - debt/obligations
+        yaxis: 'y'
+      },
+      {
+        type: 'bar',
+        x: dates,
+        y: data.map(d => d.totalEquity),
+        name: 'Total Equity',
+        marker: { color: '#059669' }, // Emerald-600 - equity/positive
+        yaxis: 'y'
+      }
+    ];
+    
+    if (showRatios) {
+      traces.push({
+        type: 'scatter',
+        mode: 'lines+markers',
+        x: dates,
+        y: data.map(d => d.debtToEquity),
+        name: 'Debt/Equity Ratio',
+        line: { width: 3, color: '#F59E0B' }, // Amber-500 - ratio/warning indicator
+        marker: { size: 6, color: '#F59E0B' },
+        yaxis: 'y2'
+      });
+    }
+    
+    const layout = {
+      paper_bgcolor: c.paper,
+      plot_bgcolor: c.plot,
+      font: { color: c.text, size: 11, family: 'Inter, system-ui, sans-serif' },
+      margin: { t: 15, r: 50, b: 35, l: 55 },
+      height: 288, // Explicit height constraint
+      autosize: true,
+      barmode: 'group',
+      xaxis: { 
+        gridcolor: c.grid, 
+        linecolor: c.border,
+        title: { text: '', font: { size: 10 } },
+        tickfont: { size: 9 }
+      },
+      yaxis: { 
+        title: { text: 'Amount ($B)', font: { size: 10, color: c.muted } }, 
+        gridcolor: c.grid, 
+        linecolor: c.border,
+        tickfont: { size: 9 }
+      },
+      legend: { 
+        orientation: 'h', 
+        y: -0.25, 
+        x: 0,
+        font: { size: 9 },
+        itemwidth: 30,
+        tracegroupgap: 3
+      },
+      hovermode: 'x unified',
+      hoverlabel: { bgcolor: c.plot, bordercolor: c.border, font: { size: 10 } }
+    };
+    
+    if (showRatios) {
+      layout.yaxis2 = {
+        title: { text: 'Debt/Equity Ratio', font: { size: 10, color: c.muted } },
+        overlaying: 'y',
+        side: 'right',
+        tickfont: { size: 9 },
+        gridcolor: 'rgba(0,0,0,0)'
+      };
+    }
+    
+    const config = { responsive: true, displaylogo: false, displayModeBar: false };
+    Plotly.newPlot(el_debt_equity, traces, layout, config);
+  };
+
+  // Render Liquidity Chart
+  const renderLiquidityChart = (data) => {
+    if (!el_liquidity || !data || data.length === 0) return;
+    
+    const c = get_theme_colors();
+    const dates = data.map(d => d.date);
+    
+    const traces = [
+      {
+        type: 'bar',
+        x: dates,
+        y: data.map(d => d.cash),
+        name: 'Cash & Equivalents',
+        marker: { color: '#10B981' } // Emerald-500 - immediate liquidity
+      },
+      {
+        type: 'bar',
+        x: dates,
+        y: data.map(d => d.investments),
+        name: 'Long-term Investments',
+        marker: { color: '#6366F1' } // Indigo-500 - long-term value
+      }
+    ];
+    
+    const layout = {
+      paper_bgcolor: c.paper,
+      plot_bgcolor: c.plot,
+      font: { color: c.text, size: 11, family: 'Inter, system-ui, sans-serif' },
+      margin: { t: 15, r: 25, b: 35, l: 50 },
+      height: 256, // Explicit height constraint
+      autosize: true,
+      barmode: 'stack',
+      xaxis: { 
+        gridcolor: c.grid, 
+        linecolor: c.border,
+        title: { text: '', font: { size: 10 } },
+        tickfont: { size: 9 }
+      },
+      yaxis: { 
+        title: { text: 'Liquidity ($B)', font: { size: 10, color: c.muted } }, 
+        gridcolor: c.grid, 
+        linecolor: c.border,
+        tickfont: { size: 9 }
+      },
+      legend: { 
+        orientation: 'h', 
+        y: -0.25, 
+        x: 0,
+        font: { size: 9 },
+        itemwidth: 30,
+        tracegroupgap: 3
+      },
+      hovermode: 'x unified',
+      hoverlabel: { bgcolor: c.plot, bordercolor: c.border, font: { size: 10 } }
+    };
+    
+    const config = { responsive: true, displaylogo: false, displayModeBar: false };
+    Plotly.newPlot(el_liquidity, traces, layout, config);
+  };
+
+  // Main function to render all financial charts
+  const renderFinancialCharts = async (ticker) => {
+    if (!ticker) return;
+    
+    try {
+      // Load income statement data
+      const incomeResponse = await fetch(`ticker/income_statement/${ticker.toUpperCase()}.json`);
+      const incomeData = incomeResponse.ok ? await incomeResponse.json() : null;
+      
+      // Load balance sheet data
+      const balanceResponse = await fetch(`ticker/balance_sheet/${ticker.toUpperCase()}.json`);
+      const balanceData = balanceResponse.ok ? await balanceResponse.json() : null;
+      
+      // Process data based on current settings
+      const incomePeriod = el_income_period ? el_income_period.value : 'annual';
+      const incomeTimeframe = el_income_timeframe ? el_income_timeframe.value : '5y';
+      const balancePeriod = el_balance_period ? el_balance_period.value : 'annual';
+      const balanceTimeframe = el_balance_timeframe ? el_balance_timeframe.value : '5y';
+      
+      const processedIncomeData = processIncomeStatementData(incomeData, incomePeriod, incomeTimeframe);
+      const processedBalanceData = processBalanceSheetData(balanceData, balancePeriod, balanceTimeframe);
+      
+      // Render all charts
+      if (processedIncomeData) {
+        renderRevenueEarningsChart(processedIncomeData);
+        renderProfitMarginsChart(processedIncomeData);
+        renderOperatingExpensesChart(processedIncomeData);
+      }
+      
+      if (processedBalanceData) {
+        renderAssetCompositionChart(processedBalanceData);
+        renderDebtEquityChart(processedBalanceData);
+        renderLiquidityChart(processedBalanceData);
+      }
+      
+    } catch (error) {
+      console.error('Error rendering financial charts:', error);
+    }
   };
 
   const boot=async()=>{
@@ -945,7 +1613,7 @@ document.addEventListener('DOMContentLoaded', () => {
     current_rows=ticker_map.get(current_ticker)||[];
     render_candles(current_rows); 
     apply_timeframe(current_rows); 
-    render_performance();
+    renderFinancialCharts(current_ticker);
     // Load manifest & prefetch all overviews so ranking has full denominator on first paint
     console.log('Boot: Starting prefetch of company overviews...');
     await prefetchAllCompanyOverviews();
@@ -1120,7 +1788,26 @@ document.addEventListener('DOMContentLoaded', () => {
   if(el_timeframe) el_timeframe.addEventListener('change',()=>apply_timeframe(current_rows));
   if(el_refresh) el_refresh.addEventListener('click',async()=>{set_status('refreshing file list…'); ticker_map=await fetch_all_from_directory(); const tickers=Array.from(ticker_map.keys()).sort(); all_tickers=tickers; populate_ticker_select(tickers,el_ticker,true); use_ticker(el_ticker.value);});
   if(el_download) el_download.addEventListener('click',()=>download_csv(current_rows,`${(el_ticker?.value||current_ticker||'aapl')}_ohlc.csv`));
-  if(el_theme) el_theme.addEventListener('click',()=>{const body=document.body; const dark=body.classList.toggle('theme-dark'); if(!dark) body.classList.add('theme-light'); else body.classList.remove('theme-light'); render_candles(current_rows); render_performance();});
-  window.addEventListener('resize',debounce(()=>{if(el_chart&&el_chart.parentElement) Plotly.Plots.resize(el_chart); if(el_performance&&el_performance.parentElement) Plotly.Plots.resize(el_performance);},150));
+  if(el_theme) el_theme.addEventListener('click',()=>{const body=document.body; const dark=body.classList.toggle('theme-dark'); if(!dark) body.classList.add('theme-light'); else body.classList.remove('theme-light'); render_candles(current_rows); renderFinancialCharts(current_ticker);});
+  
+  // Add event listeners for new financial chart controls
+  if(el_income_period) el_income_period.addEventListener('change', () => renderFinancialCharts(current_ticker));
+  if(el_income_timeframe) el_income_timeframe.addEventListener('change', () => renderFinancialCharts(current_ticker));
+  if(el_income_growth) el_income_growth.addEventListener('change', () => renderFinancialCharts(current_ticker));
+  if(el_income_refresh) el_income_refresh.addEventListener('click', () => renderFinancialCharts(current_ticker));
+  if(el_balance_period) el_balance_period.addEventListener('change', () => renderFinancialCharts(current_ticker));
+  if(el_balance_timeframe) el_balance_timeframe.addEventListener('change', () => renderFinancialCharts(current_ticker));
+  if(el_balance_ratios) el_balance_ratios.addEventListener('change', () => renderFinancialCharts(current_ticker));
+  if(el_balance_refresh) el_balance_refresh.addEventListener('click', () => renderFinancialCharts(current_ticker));
+  
+  window.addEventListener('resize',debounce(()=>{
+    if(el_chart&&el_chart.parentElement) Plotly.Plots.resize(el_chart);
+    if(el_revenue_earnings&&el_revenue_earnings.parentElement) Plotly.Plots.resize(el_revenue_earnings);
+    if(el_profit_margins&&el_profit_margins.parentElement) Plotly.Plots.resize(el_profit_margins);
+    if(el_operating_expenses&&el_operating_expenses.parentElement) Plotly.Plots.resize(el_operating_expenses);
+    if(el_asset_composition&&el_asset_composition.parentElement) Plotly.Plots.resize(el_asset_composition);
+    if(el_debt_equity&&el_debt_equity.parentElement) Plotly.Plots.resize(el_debt_equity);
+    if(el_liquidity&&el_liquidity.parentElement) Plotly.Plots.resize(el_liquidity);
+  },150));
   boot();
 });
