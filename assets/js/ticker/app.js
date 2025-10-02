@@ -1,4 +1,4 @@
-  // run when dom is ready
+// run when dom is ready
 document.addEventListener('DOMContentLoaded', () => {
   if (window.feather && typeof window.feather.replace === 'function') window.feather.replace();
 
@@ -141,6 +141,9 @@ document.addEventListener('DOMContentLoaded', () => {
   let all_tickers = [];
   let current_rows = [];
   let current_ticker = DEFAULT_TICKER; // always start from default now
+  // Global key financial metrics (set in boot)
+  let globalKeyFinancialMetrics = null; // { revenue:{min,max}, grossProfit:{min,max}, netIncome:{min,max}, operatingIncome:{min,max} }
+  let globalKeyFinancialData = null; // array of {symbol,revenue,gross,net,op}
 
   // Comprehensive ticker data for dynamic dashboard updates
   // Removed hardcoded ticker_data. All company context now sourced dynamically via:
@@ -533,6 +536,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (divDesc) divDesc.textContent = dividendPerShare>0 ? `$${dividendPerShare.toFixed(2)} per share` : 'No dividend';
   };
 
+
   // Helper function to format market cap
   const formatMarketCap = (marketCap) => {
     if (typeof marketCap === 'string' && (marketCap.includes('T') || marketCap.includes('B'))) {
@@ -640,318 +644,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const updateFinancialMetricsSection = (ticker, apiData = null) => {
     console.log('updateFinancialMetricsSection called with ticker:', ticker);
-    
-    // Use income statement data if available, otherwise fall back to company overview
+    // Leave value population for other sections but skip bar width logic (handled by keyf.js global initializer)
     let data = null;
-    
-    // Try to get the most recent annual report from income statement data
     if (apiData?.incomeStatement?.annualReports && Array.isArray(apiData.incomeStatement.annualReports) && apiData.incomeStatement.annualReports.length > 0) {
-      data = apiData.incomeStatement.annualReports[0]; // Most recent annual report
-      console.log('updateFinancialMetricsSection: Using income statement data');
+      data = apiData.incomeStatement.annualReports[0];
     } else if (apiData?.companyOverview) {
       data = apiData.companyOverview;
-      console.log('updateFinancialMetricsSection: Using company overview data');
     } else {
       data = companyOverviewCache.get(ticker.toLowerCase());
-      console.log('updateFinancialMetricsSection: Using cached company overview data');
     }
-    
-    if (!data) {
-      console.warn('updateFinancialMetricsSection: No data found for ticker:', ticker);
-      return;
-    }
-
-    console.log('updateFinancialMetricsSection: Using data:', data);
-
-    // Map API fields to our expected format - try multiple field name variations
+    if(!data) return;
     const revenue = data.totalRevenue || data.revenue || data.RevenueTTM || data.totalRevenueTTM || 0;
     const netIncome = data.netIncome || data.NetIncomeTTM || data.netIncomeTTM || 0;
     const grossProfit = data.grossProfit || data.GrossProfitTTM || data.grossProfitTTM || 0;
     const operatingIncome = data.operatingIncome || data.OperatingIncomeTTM || data.operatingIncomeTTM || 0;
-
-    console.log('Financial values:', { revenue, netIncome, grossProfit, operatingIncome });
-
-    // Convert to billions for display - handle both raw numbers and already-formatted billions
-    const formatFinancial = (value) => {
-      if (!value || value === 0 || value === '0' || value === 'None' || value === '' || value === null || value === undefined) return '0.0';
-      
-      // Remove any non-numeric characters except decimal point and negative sign
-      const cleanValue = String(value).replace(/[^0-9.-]/g, '');
-      const num = parseFloat(cleanValue);
-      if (isNaN(num)) return '0.0';
-      
-      // Convert from raw dollars to billions
-      return (num / 1e9).toFixed(1);
+    const formatFinancial = (v)=>{const n=Number(String(v).replace(/[^0-9.-]/g,''));return isFinite(n)?(n/1e9).toFixed(1):'0.0';};
+    const mapVals = {
+      'revenue-value': '$'+formatFinancial(revenue)+'B',
+      'gross-profit-value': '$'+formatFinancial(grossProfit)+'B',
+      'net-income-value': '$'+formatFinancial(netIncome)+'B',
+      'operating-income-value': '$'+formatFinancial(operatingIncome)+'B'
     };
-
-    const revenueB = formatFinancial(revenue);
-    const netIncomeB = formatFinancial(netIncome);
-    const grossProfitB = formatFinancial(grossProfit);
-    const operatingIncomeB = formatFinancial(operatingIncome);
-    
-    // Calculate relative percentages for progress bars
-    const revenueNum = parseFloat(revenue) || 0;
-    const grossProfitNum = parseFloat(grossProfit) || 0;
-    const netIncomeNum = parseFloat(netIncome) || 0;
-    const operatingIncomeNum = parseFloat(operatingIncome) || 0;
-
-    // Update individual elements using IDs
-    const revenueValueEl = document.getElementById('revenue-value');
-    const grossProfitValueEl = document.getElementById('gross-profit-value');
-    const netIncomeValueEl = document.getElementById('net-income-value');
-    const operatingIncomeValueEl = document.getElementById('operating-income-value');
-    
-    const revenueBarEl = document.getElementById('revenue-bar');
-    const grossProfitBarEl = document.getElementById('gross-profit-bar');
-    const netIncomeBarEl = document.getElementById('net-income-bar');
-    const operatingIncomeBarEl = document.getElementById('operating-income-bar');
-
-    if (revenueValueEl) revenueValueEl.textContent = `$${revenueB}B`;
-    if (grossProfitValueEl) grossProfitValueEl.textContent = `$${grossProfitB}B`;
-    if (netIncomeValueEl) netIncomeValueEl.textContent = `$${netIncomeB}B`;
-    if (operatingIncomeValueEl) operatingIncomeValueEl.textContent = `$${operatingIncomeB}B`;
-    
-    // Update progress bars
-    if (revenueBarEl) revenueBarEl.style.width = '100%';
-    if (grossProfitBarEl && revenueNum > 0) {
-      grossProfitBarEl.style.width = `${Math.max(0, Math.min(100, (grossProfitNum / revenueNum * 100))).toFixed(0)}%`;
-    }
-    if (netIncomeBarEl && revenueNum > 0) {
-      netIncomeBarEl.style.width = `${Math.max(0, Math.min(100, (Math.abs(netIncomeNum) / revenueNum * 100))).toFixed(0)}%`;
-    }
-    if (operatingIncomeBarEl && revenueNum > 0) {
-      operatingIncomeBarEl.style.width = `${Math.max(0, Math.min(100, (Math.abs(operatingIncomeNum) / revenueNum * 100))).toFixed(0)}%`;
-    }
-
-    console.log('updateFinancialMetricsSection: Updated financial metrics successfully');
-
-    // Update valuation ratios section
-    const valuationGrid = document.getElementById('valuation-ratios-grid');
-    if (valuationGrid) {
-      // Use company overview data for ratios, fallback to ticker data
-  const overviewData = apiData?.companyOverview || companyOverviewCache.get(ticker.toLowerCase());
-      if (overviewData) {
-        const peRatio = overviewData.peRatio || parseFloat(overviewData.PERatio) || 0;
-        const pbRatio = overviewData.pbRatio || parseFloat(overviewData.PriceToBookRatio) || 0;
-        const psRatio = overviewData.psRatio || parseFloat(overviewData.PriceToSalesRatioTTM) || 0;
-        const evEbitda = overviewData.evEbitda || parseFloat(overviewData.EVToEBITDA) || 0;
-
-        const ratios = [
-          { label: 'P/E', value: peRatio > 0 ? peRatio.toFixed(2) : '—' },
-          { label: 'P/B', value: pbRatio > 0 ? pbRatio.toFixed(1) : '—' },
-          { label: 'P/S', value: psRatio > 0 ? psRatio.toFixed(2) : '—' },
-          { label: 'EV/EBITDA', value: evEbitda > 0 ? evEbitda.toFixed(2) : '—' }
-        ];
-
-        valuationGrid.innerHTML = ratios.map(ratio => `
-          <div class="bg-gray-700 p-3 rounded-lg">
-            <p class="text-xs text-gray-400">${ratio.label}</p>
-            <p class="font-medium">${ratio.value}</p>
-          </div>
-        `).join('');
-      }
-    }
-  };
-
-  const updateCompanyOverviewSection = (ticker, apiData = null) => {
-    // Use API data if available, otherwise fall back to hardcoded data
-  const data = apiData?.companyOverview || companyOverviewCache.get(ticker.toLowerCase());
-    if (!data) return;
-
-    // Update company description
-    const descEl = document.querySelector('.bg-gray-800 p.text-gray-300');
-    if (descEl) {
-      const description = data.Description || data.description || 'No description available.';
-      descEl.textContent = description;
-    }
-
-    // Update company details grid
-    const detailsGrid = document.querySelector('.grid.grid-cols-2.md\\:grid-cols-4');
-    if (detailsGrid) {
-      const sector = data.Sector || data.sector || 'N/A';
-      const industry = data.Industry || data.industry || 'N/A';
-      const employees = data.FullTimeEmployees || data.employees || 'N/A';
-      const founded = data.Founded || data.founded || 'N/A';
-
-      detailsGrid.innerHTML = `
-        <div class="bg-gray-700 p-3 rounded-lg">
-          <p class="text-xs text-gray-400">Sector</p>
-          <p class="font-medium">${sector.replace(/\b\w/g,c=>c.toUpperCase())}</p>
-        </div>
-        <div class="bg-gray-700 p-3 rounded-lg">
-          <p class="text-xs text-gray-400">Industry</p>
-          <p class="font-medium">${industry.replace(/\b\w/g,c=>c.toUpperCase())}</p>
-        </div>
-        <div class="bg-gray-700 p-3 rounded-lg">
-          <p class="text-xs text-gray-400">Employees</p>
-          <p class="font-medium">${employees}</p>
-        </div>
-        <div class="bg-gray-700 p-3 rounded-lg">
-          <p class="text-xs text-gray-400">Founded</p>
-          <p class="font-medium">${founded}</p>
-        </div>
-      `;
-    }
-  };
-
-  const updateAllDashboardElements = (ticker, apiData = null) => {
-    updateSidebarCompanyInfo(ticker, apiData);
-    updateKeyMetricsCards(ticker, apiData);
-    updateFinancialMetricsSection(ticker, apiData);
-    updateCompanyOverviewSection(ticker, apiData);
-    renderExtendedSections(ticker, apiData);
-    if (window.feather && typeof window.feather.replace === 'function') window.feather.replace();
-  };
-
-  // Update the intrapanel quote header (symbol + OHLC + change)
-  const updateHeaderQuote = (ticker, apiData = null) => {
-    if (!ticker || !current_rows || current_rows.length === 0) return;
-    const rows = current_rows; // already timeframe-filtered where applicable
-    const latest = rows[rows.length - 1];
-    // Find previous close (prior trading day) - scan backwards for first earlier bar with a close
-    let prevClose = null;
-    for (let i = rows.length - 2; i >= 0; i--) { if ((rows[i].c ?? rows[i].close) != null) { prevClose = rows[i].c ?? rows[i].close; break; } }
-    const open = latest.o ?? latest.open ?? 0;
-    const high = latest.h ?? latest.high ?? 0;
-    const low = latest.l ?? latest.low ?? 0;
-    const close = latest.c ?? latest.close ?? 0;
-    const change = (prevClose != null) ? (close - prevClose) : 0;
-    const changePct = (prevClose != null && prevClose !== 0) ? (change / prevClose * 100) : 0;
-  const lower = String(ticker||'').toLowerCase();
-  const company = apiData?.companyOverview?.Name || companyOverviewCache.get(lower)?.Name || companyOverviewCache.get(lower)?.name || ticker.toUpperCase();
-
-    const elSymbol = document.getElementById('quote-symbol');
-    const elCompany = document.getElementById('quote-company');
-    const elOpen = document.getElementById('quote-open');
-    const elHigh = document.getElementById('quote-high');
-    const elLow = document.getElementById('quote-low');
-    const elClose = document.getElementById('quote-close');
-    const elChange = document.getElementById('quote-change');
-
-  if (elSymbol) elSymbol.textContent = ticker.toUpperCase();
-  if (elCompany && company) elCompany.textContent = company.replace(/\b\w/g,c=>c.toUpperCase());
-    if (elOpen) elOpen.textContent = Number(open).toFixed(2);
-    if (elHigh) elHigh.textContent = Number(high).toFixed(2);
-    if (elLow) elLow.textContent = Number(low).toFixed(2);
-    if (elClose) elClose.textContent = Number(close).toFixed(2);
-    if (elChange) {
-      const positive = change > 0;
-      elChange.className = positive ? 'text-green-400' : (change < 0 ? 'text-red-400' : 'text-gray-300');
-      const sign = change > 0 ? '+' : '';
-      elChange.textContent = `${sign}${change.toFixed(2)} (${sign}${changePct.toFixed(2)}%)`;
-    }
-  };
-
-  // Load ticker symbols from manifest for initial filter population
-  const loadTickerListFromManifest = async () => {
-    console.log('loadTickerListFromManifest: Loading ticker list from manifest...');
-    try {
-      const response = await fetch(dir_url + 'manifest.json');
-      if (!response.ok) {
-        console.warn('loadTickerListFromManifest: manifest.json not found, falling back to hardcoded list');
-        return ['aapl', 'abnb', 'adbe', 'adi', 'amgn', 'amzn']; // fallback
-      }
-      
-      const manifest = await response.json();
-      console.log('loadTickerListFromManifest: Loaded manifest:', manifest);
-      
-      let tickerList = [];
-      if (Array.isArray(manifest.files)) {
-        // Extract ticker symbols from filenames (remove .json extension)
-        tickerList = manifest.files
-          .map(filename => filename.replace(/\.json$/i, '').toLowerCase())
-          .filter(ticker => ticker.length > 0)
-          .sort();
-      } else if (Array.isArray(manifest.tickers)) {
-        tickerList = manifest.tickers.map(t => String(t).toLowerCase()).sort();
-      } else if (Array.isArray(manifest)) {
-        tickerList = manifest.map(t => String(t).toLowerCase()).sort();
-      }
-      
-      console.log('loadTickerListFromManifest: Extracted tickers:', tickerList);
-      return tickerList.length > 0 ? tickerList : ['aapl', 'abnb', 'adbe', 'adi', 'amgn', 'amzn'];
-    } catch (error) {
-      console.error('loadTickerListFromManifest: Error loading manifest:', error);
-      return ['aapl', 'abnb', 'adbe', 'adi', 'amgn', 'amzn']; // fallback
-    }
-  };
-
-  // --- discover json files ---
-  const list_json_files=async(dirUrl)=>{
-    console.log('list_json_files: Trying to load from:', dirUrl);
-    const tryManifests=async(name)=>{
-      console.log('tryManifests: Attempting to load:', dirUrl + name);
-      try{const r=await fetch(dirUrl+name); 
-        console.log('tryManifests: Fetch response for', name, '- Status:', r.status, r.ok ? 'OK' : 'FAILED');
-        if(!r.ok) return null; 
-        const m=await r.json();
-        console.log('tryManifests: Parsed JSON for', name, ':', m);
-        if(Array.isArray(m)){const arr=m.map(x=>String(x)); return arr.map(x=>(/\.json$/i.test(x)?x:`${x}.json`));}
-        if(Array.isArray(m.files)) return m.files.map(String);
-        if(Array.isArray(m.tickers)) return m.tickers.map(t=>`${t}.json`);
-        return null;
-      }catch(e){console.error('tryManifests: Error loading', name, ':', e); return null;}
-    };
-    for(const c of ['manifest.json','tickers.json','index.json','files.json']){ 
-      console.log('list_json_files: Trying manifest file:', c);
-      const files=await tryManifests(c); 
-      if(files&&files.length) {
-        console.log('list_json_files: Found files in', c, ':', files);
-        return files;
-      }
-    }
-    try{const r=await fetch(dirUrl); if(r.ok){const html=await r.text(); const doc=new DOMParser().parseFromString(html,'text/html');
-        const hrefs=[...doc.querySelectorAll('a')].map(a=>a.getAttribute('href')||'').filter(h=>/\.json$/i.test(h)); return hrefs.map(h=>h.split('?')[0].split('#')[0]);}}catch(_){}
-    return [];
-  };
-
-  const pMap=async(list,mapper,concurrency=8)=>{const ret=[]; let i=0; const next=async()=>{while(i<list.length){const idx=i++; try{ret[idx]=await mapper(list[idx],idx);}catch(e){ret[idx]={error:e};}}}; await Promise.all(Array.from({length:Math.min(concurrency,Math.max(1,list.length))},next)); return ret;};
-
-  const merge_series=(into,fromMap)=>{for(const [sym,rows] of fromMap){const key=String(sym).toLowerCase(); const existing=into.get(key)||[]; const merged=existing.concat(rows); merged.sort((a,b)=>a.t-b.t);
-      const out=[]; let last=null; for(const r of merged){const k=r.t.toISOString().slice(0,10); if(k!==last){out.push(r); last=k;} else {out[out.length-1]=r;}} into.set(key,out);} return into;};
-
-  const fetch_all_from_directory=async()=>{
-    set_status('discovering data files…');
-    console.log('fetch_all_from_directory: Starting discovery from:', dir_url);
-    const files=await list_json_files(dir_url);
-    if(!files.length){ 
-      console.error('No JSON files discovered. Tried manifest files:', ['manifest.json','tickers.json','index.json','files.json']);
-      console.error('Check if manifest.json exists at:', dir_url + 'manifest.json');
-      set_status('No JSON files found in /ticker/daily. Check manifest.json exists and contains valid file list.'); 
-      return new Map(); 
-    }
-    console.log('fetch_all_from_directory: Found files to load:', files);
-    set_status(`loading ${files.length} file${files.length!==1?'s':''}…`);
-    const results=await pMap(files,async(fname)=>{
-      const url=dir_url+fname;
-      console.log('fetch_all_from_directory: Loading file:', url);
-      try{const res=await fetch(url); 
-        console.log('fetch_all_from_directory: Fetch response for', fname, '- Status:', res.status, res.ok ? 'OK' : 'FAILED');
-        if(!res.ok) throw new Error(`http ${res.status} - ${res.statusText}`); 
-        const j=await res.json();
-        console.log('fetch_all_from_directory: JSON loaded for', fname, '- Records:', Array.isArray(j) ? j.length : 'Not an array');
-        let parsed=parse_daily_json(j);
-        console.log('fetch_all_from_directory: Parsed data for', fname, '- Tickers found:', parsed.size);
-        if(parsed.size===0 && Array.isArray(j)){ const sym=String(fname.replace(/\.json$/i,'')).toLowerCase(); const rows=j.map(normalize_row).filter(Boolean); if(rows.length) parsed.set(sym,rows); }
-        return {fname,parsed};
-      }catch(e){console.error('Failed to load ticker file:', fname, 'Error:', e); return {fname,error:e};}
-    },8);
-    const map=new Map(); for(const r of results){ if(r&&r.parsed instanceof Map) merge_series(map,r.parsed); }
-    return map;
-  };
-
-  const use_ticker=async(sym)=>{
-    const key=String(sym||'').toLowerCase(); 
-    current_ticker=key; 
-    current_rows=ticker_map.get(key)||[]; 
-    render_candles(current_rows); 
-    apply_timeframe(current_rows);
-    renderFinancialCharts(key); // Add financial charts rendering
-    updateHeaderQuote(key); // provisional update with existing data while API loads
-    await loadCompanyOverviewManifest();
-    // Load complete ticker data including income statement for proper financial metrics
-    const completeData = await loadAllTickerData(key);
-    updateAllDashboardElements(key, completeData);
+    for(const [id,val] of Object.entries(mapVals)) { const el=document.getElementById(id); if(el) el.textContent=val; }
+    // Bars intentionally not updated here.
   };
 
   // Financial Chart Data Processing
@@ -1132,6 +847,7 @@ document.addEventListener('DOMContentLoaded', () => {
         side: 'left'
       },
       yaxis2: { 
+        
         title: { text: 'Net Income ($B)', font: { size: 10, color: c.muted } }, 
         overlaying: 'y', 
         side: 'right',
@@ -1662,6 +1378,20 @@ document.addEventListener('DOMContentLoaded', () => {
     render_candles(current_rows); 
     apply_timeframe(current_rows); 
     renderFinancialCharts(current_ticker);
+    // Load global key financial metrics for scaling bars
+    try {
+      if (window.KeyFinancial && typeof window.KeyFinancial.loadData === 'function' && all_tickers.length) {
+        console.log('Boot: Loading global key financial metrics...');
+        const { allData, metrics } = await window.KeyFinancial.loadData(all_tickers.map(t=>t.toUpperCase()), { reportIndex: 0 });
+        globalKeyFinancialMetrics = metrics;
+        globalKeyFinancialData = allData;
+        console.log('Boot: Global key financial metrics loaded', metrics);
+      } else {
+        console.warn('Boot: KeyFinancial module unavailable or no tickers');
+      }
+    } catch(err) {
+      console.error('Boot: Error loading global key financial metrics', err);
+    }
     // Load manifest & prefetch all overviews so ranking has full denominator on first paint
     console.log('Boot: Starting prefetch of company overviews...');
     await prefetchAllCompanyOverviews();
