@@ -52,7 +52,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // Prefetch all company overviews listed in manifest to enable accurate initial ranking totals.
   async function prefetchAllCompanyOverviews(concurrency=6){
     await loadCompanyOverviewManifest();
-    if(!manifestTickers || manifestTickers.length===0) return;
+    if(!manifestTickers || manifestTickers.length===0) {
+      console.warn('prefetchAllCompanyOverviews: No manifest tickers found');
+      return;
+    }
+    console.log(`prefetchAllCompanyOverviews: Starting prefetch of ${manifestTickers.length} tickers`);
     const limiter = async (list, worker, limit) => {
       const ret=[]; let i=0; const running=new Set();
       const launch=()=>{
@@ -68,7 +72,15 @@ document.addEventListener('DOMContentLoaded', () => {
       const launches=[]; for(let j=0;j<starters;j++) launches.push(launch());
       await Promise.all(launches); return ret;
     };
-    await limiter(manifestTickers, async (sym)=>{ if(!companyOverviewCache.has(sym)) await getCompanyOverview(sym); }, concurrency);
+    await limiter(manifestTickers, async (sym)=>{ 
+      if(!companyOverviewCache.has(sym)) {
+        const result = await getCompanyOverview(sym);
+        if(!result) {
+          console.warn(`Failed to load company overview for ${sym}`);
+        }
+      }
+    }, concurrency);
+    console.log(`prefetchAllCompanyOverviews: Completed. Cache now has ${companyOverviewCache.size} entries`);
   }
 
   async function getCompanyOverview(sym){
@@ -535,14 +547,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const computeMarketCapRank = (ticker) => {
     const key = String(ticker||'').toLowerCase();
-    if(!companyOverviewCache || companyOverviewCache.size===0) return null;
+    if(!companyOverviewCache || companyOverviewCache.size===0) {
+      // Fallback: if cache is empty but we have manifest data, use manifest count
+      if(manifestTickers && manifestTickers.length > 0) {
+        console.warn('Market cap ranking: using manifest fallback, cache not populated');
+        return { rank: 1, total: manifestTickers.length };
+      }
+      return null;
+    }
     const list = Array.from(companyOverviewCache.entries())
       .map(([t,obj])=>({t, mc: parseNumericMarketCap(obj.MarketCapitalization || obj.marketCap)}))
       .filter(o=>o.mc>0)
       .sort((a,b)=>b.mc - a.mc);
     const idx = list.findIndex(o=>o.t === key);
-    if(idx===-1) return null;
-    return { rank: idx+1, total: list.length };
+    if(idx===-1) {
+      // If ticker not found in cache but we have manifest data, provide fallback total
+      if(manifestTickers && manifestTickers.length > 0) {
+        console.warn(`Market cap ranking: ticker ${key} not found in cache, using manifest total`);
+        return { rank: 1, total: manifestTickers.length };
+      }
+      return null;
+    }
+    // If the cache seems under-populated compared to manifest, use manifest total as fallback
+    const actualTotal = Math.max(list.length, manifestTickers?.length || 0);
+    return { rank: idx+1, total: actualTotal };
   };
 
   const computeIndustryAveragePERatio = (ticker) => {
@@ -588,8 +616,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const updateFinancialMetricsSection = (ticker, apiData = null) => {
     console.log('updateFinancialMetricsSection called with ticker:', ticker);
     
-    // Use API data if available, otherwise fall back to hardcoded data
-  const data = apiData?.incomeStatement || companyOverviewCache.get(ticker.toLowerCase());
+    // Use income statement data if available, otherwise fall back to company overview
+    let data = apiData?.incomeStatement;
+    if (!data && apiData?.companyOverview) {
+      data = apiData.companyOverview;
+    }
+    if (!data) {
+      data = companyOverviewCache.get(ticker.toLowerCase());
+    }
+    
     if (!data) {
       console.warn('updateFinancialMetricsSection: No data found for ticker:', ticker);
       return;
@@ -597,11 +632,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     console.log('updateFinancialMetricsSection: Using data:', data);
 
-    // Map API fields to our expected format
-    const revenue = data.totalRevenue || data.revenue || 0;
-    const netIncome = data.netIncome || 0;
-    const grossProfit = data.grossProfit || 0;
-    const operatingIncome = data.operatingIncome || 0;
+    // Map API fields to our expected format - try multiple field name variations
+    const revenue = data.totalRevenue || data.revenue || data.RevenueTTM || data.totalRevenueTTM || 0;
+    const netIncome = data.netIncome || data.NetIncomeTTM || data.netIncomeTTM || 0;
+    const grossProfit = data.grossProfit || data.GrossProfitTTM || data.grossProfitTTM || 0;
+    const operatingIncome = data.operatingIncome || data.OperatingIncomeTTM || data.operatingIncomeTTM || 0;
 
     console.log('Financial values:', { revenue, netIncome, grossProfit, operatingIncome });
 
@@ -629,25 +664,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Convert to billions for display - handle both raw numbers and already-formatted billions
     const formatFinancial = (value) => {
+      if (!value || value === 0 || value === '0' || value === 'None' || value === '') return '0.0';
+      
       const num = parseFloat(value);
+      if (isNaN(num)) return '0.0';
+      
       // If value is already in billions format (< 1000), use as-is
-      if (num < 1000) return num.toFixed(1);
+      if (num < 1000 && num > 0) return num.toFixed(1);
       // Otherwise convert from raw dollars to billions
       if (num >= 1e9) return (num / 1e9).toFixed(1);
-      if (num >= 1e6) return (num / 1e6).toFixed(1);
-      return num.toFixed(1);
+      if (num >= 1e6) return (num / 1e6 / 1000).toFixed(1); // Convert millions to billions
+      if (num >= 1e3) return (num / 1e6).toFixed(1); // Convert thousands to millions and then to billions
+      return (num / 1e9).toFixed(1); // Handle smaller numbers
     };
 
     const revenueB = formatFinancial(revenue);
     const netIncomeB = formatFinancial(netIncome);
     const grossProfitB = formatFinancial(grossProfit);
     const operatingIncomeB = formatFinancial(operatingIncome);
+    
+    // Calculate relative percentages for progress bars
+    const revenueNum = parseFloat(revenue) || 0;
+    const grossProfitNum = parseFloat(grossProfit) || 0;
+    const netIncomeNum = parseFloat(netIncome) || 0;
+    const operatingIncomeNum = parseFloat(operatingIncome) || 0;
 
     const metrics = [
       { label: 'Revenue (TTM)', value: `$${revenueB}B`, width: '100%', color: 'bg-blue-500' },
-      { label: 'Gross Profit', value: `$${grossProfitB}B`, width: revenue > 0 ? `${(grossProfit / revenue * 100).toFixed(0)}%` : '0%', color: 'bg-green-500' },
-      { label: 'Net Income', value: `$${netIncomeB}B`, width: revenue > 0 ? `${(netIncome / revenue * 100).toFixed(0)}%` : '0%', color: 'bg-purple-500' },
-      { label: 'Operating Income', value: `$${operatingIncomeB}B`, width: revenue > 0 ? `${(operatingIncome / revenue * 100).toFixed(0)}%` : '0%', color: 'bg-yellow-500' }
+      { label: 'Gross Profit', value: `$${grossProfitB}B`, width: revenueNum > 0 ? `${Math.max(0, Math.min(100, (grossProfitNum / revenueNum * 100))).toFixed(0)}%` : '0%', color: 'bg-green-500' },
+      { label: 'Net Income', value: `$${netIncomeB}B`, width: revenueNum > 0 ? `${Math.max(0, Math.min(100, (Math.abs(netIncomeNum) / revenueNum * 100))).toFixed(0)}%` : '0%', color: 'bg-purple-500' },
+      { label: 'Operating Income', value: `$${operatingIncomeB}B`, width: revenueNum > 0 ? `${Math.max(0, Math.min(100, (Math.abs(operatingIncomeNum) / revenueNum * 100))).toFixed(0)}%` : '0%', color: 'bg-yellow-500' }
     ];
 
     financialSection.innerHTML = metrics.map(metric => `
@@ -853,8 +899,9 @@ document.addEventListener('DOMContentLoaded', () => {
     apply_timeframe(current_rows);
     updateHeaderQuote(key); // provisional update with existing data while API loads
     await loadCompanyOverviewManifest();
-    const overview = await getCompanyOverview(key);
-    updateAllDashboardElements(key, overview ? {companyOverview: overview}: null);
+    // Load complete ticker data including income statement for proper financial metrics
+    const completeData = await loadAllTickerData(key);
+    updateAllDashboardElements(key, completeData);
   };
 
   const render_performance=()=>{
@@ -893,10 +940,15 @@ document.addEventListener('DOMContentLoaded', () => {
     apply_timeframe(current_rows); 
     render_performance();
     // Load manifest & prefetch all overviews so ranking has full denominator on first paint
+    console.log('Boot: Starting prefetch of company overviews...');
     await prefetchAllCompanyOverviews();
-    const initialOverview = companyOverviewCache.get(current_ticker) || await getCompanyOverview(current_ticker);
-    updateHeaderQuote(current_ticker, initialOverview? {companyOverview:initialOverview}: null);
-    updateAllDashboardElements(current_ticker, initialOverview? {companyOverview:initialOverview}: null);
+    console.log(`Boot: Prefetch complete. Cache size: ${companyOverviewCache.size}, Manifest tickers: ${manifestTickers?.length || 0}`);
+    
+    // Load complete ticker data including income statement for proper financial metrics display
+    console.log('Boot: Loading complete ticker data...');
+    const completeTickerData = await loadAllTickerData(current_ticker);
+    updateHeaderQuote(current_ticker, completeTickerData);
+    updateAllDashboardElements(current_ticker, completeTickerData);
   };
 
   /* ================= Extended Sections Rendering ================= */
