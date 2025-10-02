@@ -20,7 +20,7 @@
   "BookValue": "12.7",
   "DividendPerShare": "None",
   "DividendYield": "None",
-  "EPS": "4.09",
+  "EPS": "4.04",
   "RevenuePerShareTTM": "18.59",
   "ProfitMargin": "0.227",
   "OperatingMarginTTM": "0.198",
@@ -28,7 +28,7 @@
   "ReturnOnEquityTTM": "0.333",
   "RevenueTTM": "11580000000",
   "GrossProfitTTM": "9638000000",
-  "DilutedEPSTTM": "4.09",
+  "DilutedEPSTTM": "4.04",
   "QuarterlyEarningsGrowthYOY": "0.016",
   "QuarterlyRevenueGrowthYOY": "0.127",
   "AnalystTargetPrice": "138.14",
@@ -46,8 +46,8 @@
   "Beta": "1.131",
   "52WeekHigh": "163.93",
   "52WeekLow": "99.88",
-  "50DayMovingAverage": "127.54",
-  "200DayMovingAverage": "130.26",
+  "50DayMovingAverage": "127.21",
+  "200DayMovingAverage": "130.18",
   "SharesOutstanding": "429080000",
   "SharesFloat": "412463000",
   "PercentInsiders": "1.501",
@@ -55,5 +55,5 @@
   "DividendDate": "None",
   "ExDividendDate": "None",
   "ticker": "ABNB",
-  "generated_at": "2025-10-01T03:07:30.574202+00:00"
+  "generated_at": "2025-10-02T04:08:56.061174+00:00"
 }
