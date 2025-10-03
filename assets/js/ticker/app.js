@@ -412,13 +412,14 @@ document.addEventListener('DOMContentLoaded', () => {
       loadIncomeStatement(ticker),
       loadBalanceSheet(ticker)
     ]);
-
-    return {
-      ticker: tickerData,
-      companyOverview,
-      incomeStatement,
-      balanceSheet
-    };
+    if(!companyOverview){
+      console.warn('loadAllTickerData: company overview missing for', ticker);
+      const statusEl = document.getElementById('chart-status');
+      if(statusEl && !statusEl.textContent.includes('Data unavailable')){
+        statusEl.textContent = `Partial data loaded for ${ticker.toUpperCase()} (no overview)`;
+      }
+    }
+    return { ticker: tickerData, companyOverview, incomeStatement, balanceSheet };
   };
 
   // --- Dynamic Dashboard Updates ---
@@ -441,7 +442,17 @@ document.addEventListener('DOMContentLoaded', () => {
     if(!ticker) return;
     const key = String(ticker).toLowerCase();
   const data = apiData?.companyOverview || companyOverviewCache.get(key);
-    if(!data) return; // silent fail to avoid console noise in production
+    if(!data){
+      console.warn('updateKeyMetricsCards: no data for', ticker);
+      // Clear loading placeholders so UI does not look frozen
+      const metricsGrid = document.getElementById('metrics-grid');
+      if(metricsGrid){
+        metricsGrid.querySelectorAll('h3').forEach(h=>{
+          if(h.textContent.includes('Loading')) h.textContent='--';
+        });
+      }
+      return;
+    }
 
     // Price: prefer explicit currentPrice then latest candle close
     let currentPrice = Number(data.currentPrice || data.Price) || 0;
@@ -755,42 +766,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const updateCompanyOverviewSection = (ticker, apiData = null) => {
     // Use API data if available, otherwise fall back to hardcoded data
-  const data = apiData?.companyOverview || companyOverviewCache.get(ticker.toLowerCase());
-    if (!data) return;
+    const data = apiData?.companyOverview || companyOverviewCache.get(ticker.toLowerCase());
+    if (!data) {
+      console.warn('updateCompanyOverviewSection: no data for', ticker);
+      // Provide a visible fallback so user does not see infinite "Loading..."
+      const nameEl = document.getElementById('sidebar-company-name');
+      if (nameEl && nameEl.textContent.includes('Loading')) nameEl.textContent = ticker.toUpperCase();
+      const descFallback = document.getElementById('company-description');
+      if (descFallback && descFallback.textContent.includes('Loading')) descFallback.textContent = 'Data unavailable. Please check that JSON files are being served over HTTP (not file://) and manifest paths are correct.';
+      return;
+    }
 
-    // Update company description
-    const descEl = document.querySelector('.bg-gray-800 p.text-gray-300');
+    // Update company description (correct selector uses id "company-description")
+    const descEl = document.getElementById('company-description');
     if (descEl) {
       const description = data.Description || data.description || 'No description available.';
       descEl.textContent = description;
     }
-
-    // Update company details grid
-    const detailsGrid = document.querySelector('.grid.grid-cols-2.md\\:grid-cols-4');
+    // (Optional) If future markup adds a details grid, keep graceful handling
+    const detailsGrid = document.querySelector('[data-company-details-grid]');
     if (detailsGrid) {
-      const sector = data.Sector || data.sector || 'N/A';
-      const industry = data.Industry || data.industry || 'N/A';
-      const employees = data.FullTimeEmployees || data.employees || 'N/A';
-      const founded = data.Founded || data.founded || 'N/A';
-
+      const sector = (data.Sector || data.sector || 'N/A');
+      const industry = (data.Industry || data.industry || 'N/A');
+      const employees = (data.FullTimeEmployees || data.employees || 'N/A');
+      const founded = (data.Founded || data.founded || 'N/A');
       detailsGrid.innerHTML = `
-        <div class="bg-gray-700 p-3 rounded-lg">
-          <p class="text-xs text-gray-400">Sector</p>
-          <p class="font-medium">${sector.replace(/\b\w/g,c=>c.toUpperCase())}</p>
-        </div>
-        <div class="bg-gray-700 p-3 rounded-lg">
-          <p class="text-xs text-gray-400">Industry</p>
-          <p class="font-medium">${industry.replace(/\b\w/g,c=>c.toUpperCase())}</p>
-        </div>
-        <div class="bg-gray-700 p-3 rounded-lg">
-          <p class="text-xs text-gray-400">Employees</p>
-          <p class="font-medium">${employees}</p>
-        </div>
-        <div class="bg-gray-700 p-3 rounded-lg">
-          <p class="text-xs text-gray-400">Founded</p>
-          <p class="font-medium">${founded}</p>
-        </div>
-      `;
+        <div class="bg-gray-700 p-3 rounded-lg"><p class="text-xs text-gray-400">Sector</p><p class="font-medium">${sector.replace(/\b\w/g,c=>c.toUpperCase())}</p></div>
+        <div class="bg-gray-700 p-3 rounded-lg"><p class="text-xs text-gray-400">Industry</p><p class="font-medium">${industry.replace(/\b\w/g,c=>c.toUpperCase())}</p></div>
+        <div class="bg-gray-700 p-3 rounded-lg"><p class="text-xs text-gray-400">Employees</p><p class="font-medium">${employees}</p></div>
+        <div class="bg-gray-700 p-3 rounded-lg"><p class="text-xs text-gray-400">Founded</p><p class="font-medium">${founded}</p></div>`;
     }
   };
 
