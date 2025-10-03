@@ -669,6 +669,76 @@ document.addEventListener('DOMContentLoaded', () => {
     // Bars intentionally not updated here.
   };
 
+  /* ================= Header + Orchestrator (Reintroduced) ================= */
+  function updateHeaderQuote(ticker, apiData = null){
+    const sym = (ticker||'').toUpperCase();
+    const last = current_rows && current_rows.length ? current_rows[current_rows.length-1] : null;
+    const openEl = document.getElementById('quote-open');
+    const highEl = document.getElementById('quote-high');
+    const lowEl = document.getElementById('quote-low');
+    const closeEl = document.getElementById('quote-close');
+    const changeEl = document.getElementById('quote-change');
+    const symbolEl = document.getElementById('quote-symbol');
+    const companyEl = document.getElementById('quote-company');
+    if(last){
+      if(openEl) openEl.textContent = (last.o??last.open)?.toFixed(2) || '--';
+      if(highEl) highEl.textContent = (last.h??last.high)?.toFixed(2) || '--';
+      if(lowEl) lowEl.textContent  = (last.l??last.low)?.toFixed(2) || '--';
+      if(closeEl) closeEl.textContent= (last.c??last.close)?.toFixed(2) || '--';
+    }
+    // change percent via existing helper
+    const chg = computeChangePercentFromRows();
+    if(changeEl){
+      if(chg==null){changeEl.textContent='--'; changeEl.classList.remove('text-green-400','text-red-400');}
+      else {
+        const pos = chg>0; changeEl.textContent = `${pos?'+':''}${chg.toFixed(2)}%`;
+        changeEl.classList.remove('text-green-400','text-red-400');
+        changeEl.classList.add(pos? 'text-green-400':'text-red-400');
+      }
+    }
+    const base = apiData?.companyOverview || companyOverviewCache.get(sym.toLowerCase()) || {};
+    if(symbolEl) symbolEl.textContent = sym;
+    if(companyEl){
+      const name = (base.Name || base.name || sym).toLowerCase().replace(/\b\w/g,c=>c.toUpperCase());
+      companyEl.textContent = name;
+    }
+  }
+
+  function updateAllDashboardElements(ticker, apiData=null){
+    updateSidebarCompanyInfo(ticker, apiData);
+    updateKeyMetricsCards(ticker, apiData);
+    updateFinancialMetricsSection(ticker, apiData);
+    renderExtendedSections(ticker, apiData);
+    // sync key financial bar selection if global scaling loaded
+    if(window.KeyFinancial && window.KeyFinancial.global && typeof window.KeyFinancial.global.setSymbol==='function'){
+      window.KeyFinancial.global.setSymbol(ticker.toUpperCase());
+    }
+  }
+
+  // Expose for debugging (optional)
+  if(typeof window !== 'undefined'){
+    window.updateHeaderQuote = updateHeaderQuote;
+    window.updateAllDashboardElements = updateAllDashboardElements;
+  }
+
+  // Ensure ticker change works even if earlier function removed
+  async function use_ticker(ticker){
+    if(!ticker) return; ticker = ticker.toLowerCase();
+    current_ticker = ticker;
+    current_rows = ticker_map.get(ticker)||[];
+    render_candles(current_rows);
+    apply_timeframe(current_rows);
+    renderFinancialCharts(ticker);
+    try {
+      const full = await loadAllTickerData(ticker);
+      updateHeaderQuote(ticker, full);
+      updateAllDashboardElements(ticker, full);
+    } catch(err){
+      console.error('use_ticker error', err);
+    }
+  }
+  if(typeof window !== 'undefined') window.use_ticker = use_ticker;
+
   // Financial Chart Data Processing
   const processIncomeStatementData = (incomeData, period = 'annual', timeframe = '5y') => {
     if (!incomeData) return null;

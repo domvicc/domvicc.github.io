@@ -9,7 +9,10 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://unpkg.com/feather-icons"></script>
   <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
-  <link rel="stylesheet" href="assets/css/ticker/styles.css" />
+    <!-- Load keyf.js first for Key Financial functionality -->
+  <script defer src="assets/js/ticker/keyf.js"></script>
+  <!-- Then load main app.js -->
+  <script defer src="assets/js/ticker/app.js"></script>ink rel="stylesheet" href="assets/css/ticker/styles.css" />
 </head>
 <body class="theme-dark bg-gray-900 text-gray-100 font-sans">
   <div class="min-h-screen flex flex-col">
