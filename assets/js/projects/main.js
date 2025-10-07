@@ -4,8 +4,16 @@ import { initProjectViewer } from './viewer.js';
 const PROJECTS = {
   dgai:{
     tabs:['Overview','Architecture'],
-    defaultTab:'Architecture',
-    svg:'assets/svg/DGAI.svg'
+    defaultTab:'Overview',
+    svg:'assets/svg/DGAI.svg',
+    media:[
+      {
+        file:'assets/img/Ticker Analysis.png',
+        title:'Ticker Analysis Dashboard',
+        alt:'Screenshot of DomGuardianAI ticker analysis dashboard with candlestick chart and key financials',
+        desc:'High-level view of the interactive market analysis dashboard. Use the links in the DomGuardianAI section to open the live homepage and the full Ticker Analysis experience.'
+      }
+    ]
   },
   'linkedin-scraper':{
     tabs:['Overview','Code'],
