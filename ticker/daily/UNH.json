@@ -1,7 +1,7 @@
 {
   "ticker": "UNH",
-  "generated_at": "2025-10-02T04:38:51.029515+00:00",
-  "count": 6519,
+  "generated_at": "2025-10-09T04:37:24.479050+00:00",
+  "count": 6524,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58672,7 +58672,52 @@
       "high": 348.7,
       "low": 341.63,
       "close": 348.3,
-      "volume": 8767975
+      "volume": 8825487
+    },
+    {
+      "timestamp": "2025-10-02",
+      "ticker": "UNH",
+      "open": 347.29,
+      "high": 355.08,
+      "low": 344.65,
+      "close": 353.72,
+      "volume": 8564187
+    },
+    {
+      "timestamp": "2025-10-03",
+      "ticker": "UNH",
+      "open": 357.25,
+      "high": 368.0,
+      "low": 356.61,
+      "close": 360.2,
+      "volume": 13494786
+    },
+    {
+      "timestamp": "2025-10-06",
+      "ticker": "UNH",
+      "open": 361.025,
+      "high": 362.52,
+      "low": 357.11,
+      "close": 358.77,
+      "volume": 7181663
+    },
+    {
+      "timestamp": "2025-10-07",
+      "ticker": "UNH",
+      "open": 359.41,
+      "high": 364.72,
+      "low": 358.06,
+      "close": 363.66,
+      "volume": 7236242
+    },
+    {
+      "timestamp": "2025-10-08",
+      "ticker": "UNH",
+      "open": 366.93,
+      "high": 374.63,
+      "low": 365.8,
+      "close": 369.92,
+      "volume": 9438333
     }
   ]
 }

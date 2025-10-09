@@ -1,7 +1,7 @@
 {
   "ticker": "WMT",
-  "generated_at": "2025-10-02T04:38:52.466258+00:00",
-  "count": 6519,
+  "generated_at": "2025-10-09T04:37:28.019759+00:00",
+  "count": 6524,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58672,7 +58672,52 @@
       "high": 102.86,
       "low": 100.55,
       "close": 101.96,
-      "volume": 15975003
+      "volume": 16142766
+    },
+    {
+      "timestamp": "2025-10-02",
+      "ticker": "WMT",
+      "open": 101.45,
+      "high": 102.135,
+      "low": 99.87,
+      "close": 101.7,
+      "volume": 15605363
+    },
+    {
+      "timestamp": "2025-10-03",
+      "ticker": "WMT",
+      "open": 101.46,
+      "high": 102.815,
+      "low": 101.2,
+      "close": 102.07,
+      "volume": 11867483
+    },
+    {
+      "timestamp": "2025-10-06",
+      "ticker": "WMT",
+      "open": 101.88,
+      "high": 103.065,
+      "low": 101.58,
+      "close": 102.7,
+      "volume": 13303560
+    },
+    {
+      "timestamp": "2025-10-07",
+      "ticker": "WMT",
+      "open": 102.38,
+      "high": 103.25,
+      "low": 100.95,
+      "close": 103.24,
+      "volume": 15538855
+    },
+    {
+      "timestamp": "2025-10-08",
+      "ticker": "WMT",
+      "open": 103.02,
+      "high": 103.26,
+      "low": 102.15,
+      "close": 102.9,
+      "volume": 13584084
     }
   ]
 }

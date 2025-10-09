@@ -1,7 +1,7 @@
 {
   "ticker": "BA",
-  "generated_at": "2025-10-02T04:38:38.343809+00:00",
-  "count": 6519,
+  "generated_at": "2025-10-09T04:36:31.991207+00:00",
+  "count": 6524,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58673,6 +58673,51 @@
       "low": 213.7,
       "close": 215.2,
       "volume": 7177980
+    },
+    {
+      "timestamp": "2025-10-02",
+      "ticker": "BA",
+      "open": 215.45,
+      "high": 218.86,
+      "low": 215.31,
+      "close": 217.43,
+      "volume": 8281070
+    },
+    {
+      "timestamp": "2025-10-03",
+      "ticker": "BA",
+      "open": 216.75,
+      "high": 218.83,
+      "low": 215.25,
+      "close": 216.3,
+      "volume": 6634085
+    },
+    {
+      "timestamp": "2025-10-06",
+      "ticker": "BA",
+      "open": 217.865,
+      "high": 221.8,
+      "low": 215.9,
+      "close": 219.73,
+      "volume": 7665295
+    },
+    {
+      "timestamp": "2025-10-07",
+      "ticker": "BA",
+      "open": 220.11,
+      "high": 223.95,
+      "low": 219.2,
+      "close": 221.82,
+      "volume": 7610613
+    },
+    {
+      "timestamp": "2025-10-08",
+      "ticker": "BA",
+      "open": 222.73,
+      "high": 226.19,
+      "low": 221.4703,
+      "close": 225.32,
+      "volume": 6189701
     }
   ]
 }

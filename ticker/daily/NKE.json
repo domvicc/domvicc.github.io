@@ -1,7 +1,7 @@
 {
   "ticker": "NKE",
-  "generated_at": "2025-10-02T04:38:49.054953+00:00",
-  "count": 6519,
+  "generated_at": "2025-10-09T04:37:10.744881+00:00",
+  "count": 6524,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58673,6 +58673,51 @@
       "low": 71.61,
       "close": 74.2,
       "volume": 57921886
+    },
+    {
+      "timestamp": "2025-10-02",
+      "ticker": "NKE",
+      "open": 75.0,
+      "high": 76.97,
+      "low": 73.88,
+      "close": 74.57,
+      "volume": 26254376
+    },
+    {
+      "timestamp": "2025-10-03",
+      "ticker": "NKE",
+      "open": 74.78,
+      "high": 74.78,
+      "low": 71.92,
+      "close": 71.93,
+      "volume": 18794866
+    },
+    {
+      "timestamp": "2025-10-06",
+      "ticker": "NKE",
+      "open": 72.02,
+      "high": 72.39,
+      "low": 71.01,
+      "close": 71.17,
+      "volume": 14039587
+    },
+    {
+      "timestamp": "2025-10-07",
+      "ticker": "NKE",
+      "open": 71.23,
+      "high": 71.58,
+      "low": 68.9,
+      "close": 68.91,
+      "volume": 17367985
+    },
+    {
+      "timestamp": "2025-10-08",
+      "ticker": "NKE",
+      "open": 68.91,
+      "high": 69.426,
+      "low": 68.665,
+      "close": 69.09,
+      "volume": 13051753
     }
   ]
 }

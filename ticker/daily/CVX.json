@@ -1,7 +1,7 @@
 {
   "ticker": "CVX",
-  "generated_at": "2025-10-02T04:38:40.667336+00:00",
-  "count": 6519,
+  "generated_at": "2025-10-09T04:36:45.325088+00:00",
+  "count": 6524,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58673,6 +58673,51 @@
       "low": 153.19,
       "close": 154.58,
       "volume": 6768358
+    },
+    {
+      "timestamp": "2025-10-02",
+      "ticker": "CVX",
+      "open": 153.955,
+      "high": 156.6,
+      "low": 153.3238,
+      "close": 153.37,
+      "volume": 7562448
+    },
+    {
+      "timestamp": "2025-10-03",
+      "ticker": "CVX",
+      "open": 153.58,
+      "high": 154.28,
+      "low": 152.23,
+      "close": 153.55,
+      "volume": 7249291
+    },
+    {
+      "timestamp": "2025-10-06",
+      "ticker": "CVX",
+      "open": 153.965,
+      "high": 154.645,
+      "low": 152.92,
+      "close": 154.02,
+      "volume": 4778924
+    },
+    {
+      "timestamp": "2025-10-07",
+      "ticker": "CVX",
+      "open": 153.65,
+      "high": 154.96,
+      "low": 151.28,
+      "close": 154.91,
+      "volume": 5479593
+    },
+    {
+      "timestamp": "2025-10-08",
+      "ticker": "CVX",
+      "open": 154.36,
+      "high": 154.68,
+      "low": 152.84,
+      "close": 153.74,
+      "volume": 5678028
     }
   ]
 }

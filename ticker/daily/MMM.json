@@ -1,7 +1,7 @@
 {
   "ticker": "MMM",
-  "generated_at": "2025-10-02T04:38:47.536063+00:00",
-  "count": 6519,
+  "generated_at": "2025-10-09T04:37:06.405777+00:00",
+  "count": 6524,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58673,6 +58673,51 @@
       "low": 154.2595,
       "close": 156.0,
       "volume": 2298007
+    },
+    {
+      "timestamp": "2025-10-02",
+      "ticker": "MMM",
+      "open": 157.26,
+      "high": 159.5799,
+      "low": 156.535,
+      "close": 158.8,
+      "volume": 2167531
+    },
+    {
+      "timestamp": "2025-10-03",
+      "ticker": "MMM",
+      "open": 158.92,
+      "high": 160.3899,
+      "low": 157.71,
+      "close": 158.66,
+      "volume": 3411657
+    },
+    {
+      "timestamp": "2025-10-06",
+      "ticker": "MMM",
+      "open": 158.7,
+      "high": 159.21,
+      "low": 154.63,
+      "close": 155.93,
+      "volume": 2421544
+    },
+    {
+      "timestamp": "2025-10-07",
+      "ticker": "MMM",
+      "open": 156.83,
+      "high": 157.9356,
+      "low": 155.18,
+      "close": 155.33,
+      "volume": 1696736
+    },
+    {
+      "timestamp": "2025-10-08",
+      "ticker": "MMM",
+      "open": 155.71,
+      "high": 156.09,
+      "low": 152.78,
+      "close": 156.0,
+      "volume": 2084240
     }
   ]
 }

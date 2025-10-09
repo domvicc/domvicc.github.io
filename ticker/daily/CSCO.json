@@ -1,7 +1,7 @@
 {
   "ticker": "CSCO",
-  "generated_at": "2025-10-02T04:38:40.052500+00:00",
-  "count": 6519,
+  "generated_at": "2025-10-09T04:36:42.537621+00:00",
+  "count": 6524,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58673,6 +58673,51 @@
       "low": 67.69,
       "close": 68.75,
       "volume": 15530716
+    },
+    {
+      "timestamp": "2025-10-02",
+      "ticker": "CSCO",
+      "open": 69.175,
+      "high": 69.49,
+      "low": 68.255,
+      "close": 68.31,
+      "volume": 15708257
+    },
+    {
+      "timestamp": "2025-10-03",
+      "ticker": "CSCO",
+      "open": 67.95,
+      "high": 68.585,
+      "low": 67.65,
+      "close": 67.92,
+      "volume": 11113184
+    },
+    {
+      "timestamp": "2025-10-06",
+      "ticker": "CSCO",
+      "open": 68.435,
+      "high": 68.95,
+      "low": 67.81,
+      "close": 68.91,
+      "volume": 21952715
+    },
+    {
+      "timestamp": "2025-10-07",
+      "ticker": "CSCO",
+      "open": 68.915,
+      "high": 69.225,
+      "low": 68.445,
+      "close": 68.985,
+      "volume": 16493157
+    },
+    {
+      "timestamp": "2025-10-08",
+      "ticker": "CSCO",
+      "open": 69.81,
+      "high": 70.755,
+      "low": 69.0,
+      "close": 70.33,
+      "volume": 34246259
     }
   ]
 }

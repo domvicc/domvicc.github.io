@@ -1,7 +1,7 @@
 {
   "ticker": "CRM",
-  "generated_at": "2025-10-02T04:38:39.493399+00:00",
-  "count": 5354,
+  "generated_at": "2025-10-09T04:36:41.586087+00:00",
+  "count": 5359,
   "data": [
     {
       "timestamp": "2004-06-23",
@@ -48188,6 +48188,51 @@
       "low": 233.51,
       "close": 235.69,
       "volume": 10016630
+    },
+    {
+      "timestamp": "2025-10-02",
+      "ticker": "CRM",
+      "open": 235.43,
+      "high": 239.4,
+      "low": 233.6,
+      "close": 238.88,
+      "volume": 7679234
+    },
+    {
+      "timestamp": "2025-10-03",
+      "ticker": "CRM",
+      "open": 238.75,
+      "high": 242.81,
+      "low": 238.5,
+      "close": 240.36,
+      "volume": 8849786
+    },
+    {
+      "timestamp": "2025-10-06",
+      "ticker": "CRM",
+      "open": 239.33,
+      "high": 250.47,
+      "low": 235.41,
+      "close": 245.78,
+      "volume": 13922574
+    },
+    {
+      "timestamp": "2025-10-07",
+      "ticker": "CRM",
+      "open": 246.48,
+      "high": 247.36,
+      "low": 237.55,
+      "close": 239.74,
+      "volume": 8387424
+    },
+    {
+      "timestamp": "2025-10-08",
+      "ticker": "CRM",
+      "open": 239.74,
+      "high": 241.32,
+      "low": 235.645,
+      "close": 240.43,
+      "volume": 7120245
     }
   ]
 }

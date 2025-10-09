@@ -1,7 +1,7 @@
 {
   "ticker": "TRV",
-  "generated_at": "2025-10-02T04:38:50.551270+00:00",
-  "count": 6519,
+  "generated_at": "2025-10-09T04:37:22.054867+00:00",
+  "count": 6524,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58672,7 +58672,52 @@
       "high": 279.62,
       "low": 276.76,
       "close": 277.24,
-      "volume": 763537
+      "volume": 764471
+    },
+    {
+      "timestamp": "2025-10-02",
+      "ticker": "TRV",
+      "open": 276.21,
+      "high": 280.275,
+      "low": 275.52,
+      "close": 280.04,
+      "volume": 839433
+    },
+    {
+      "timestamp": "2025-10-03",
+      "ticker": "TRV",
+      "open": 279.88,
+      "high": 286.17,
+      "low": 279.5,
+      "close": 284.56,
+      "volume": 992735
+    },
+    {
+      "timestamp": "2025-10-06",
+      "ticker": "TRV",
+      "open": 285.01,
+      "high": 285.69,
+      "low": 281.825,
+      "close": 282.73,
+      "volume": 1103994
+    },
+    {
+      "timestamp": "2025-10-07",
+      "ticker": "TRV",
+      "open": 282.79,
+      "high": 286.89,
+      "low": 282.79,
+      "close": 284.97,
+      "volume": 770157
+    },
+    {
+      "timestamp": "2025-10-08",
+      "ticker": "TRV",
+      "open": 287.95,
+      "high": 287.95,
+      "low": 281.86,
+      "close": 282.76,
+      "volume": 904987
     }
   ]
 }

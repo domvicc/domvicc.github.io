@@ -1,7 +1,7 @@
 {
   "ticker": "GS",
-  "generated_at": "2025-10-02T04:38:42.513806+00:00",
-  "count": 6519,
+  "generated_at": "2025-10-09T04:36:52.989215+00:00",
+  "count": 6524,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58673,6 +58673,51 @@
       "low": 783.23,
       "close": 785.51,
       "volume": 1789094
+    },
+    {
+      "timestamp": "2025-10-02",
+      "ticker": "GS",
+      "open": 788.88,
+      "high": 791.0,
+      "low": 772.4447,
+      "close": 779.38,
+      "volume": 1553849
+    },
+    {
+      "timestamp": "2025-10-03",
+      "ticker": "GS",
+      "open": 783.0,
+      "high": 794.92,
+      "low": 777.86,
+      "close": 789.98,
+      "volume": 1470517
+    },
+    {
+      "timestamp": "2025-10-06",
+      "ticker": "GS",
+      "open": 795.0,
+      "high": 802.5,
+      "low": 780.0462,
+      "close": 796.78,
+      "volume": 1632584
+    },
+    {
+      "timestamp": "2025-10-07",
+      "ticker": "GS",
+      "open": 798.0,
+      "high": 805.322,
+      "low": 781.39,
+      "close": 789.65,
+      "volume": 1547401
+    },
+    {
+      "timestamp": "2025-10-08",
+      "ticker": "GS",
+      "open": 791.75,
+      "high": 795.0,
+      "low": 774.34,
+      "close": 776.51,
+      "volume": 1939277
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "ticker": "AXP",
-  "generated_at": "2025-10-02T04:38:37.768241+00:00",
-  "count": 6519,
+  "generated_at": "2025-10-09T04:36:30.221253+00:00",
+  "count": 6524,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58673,6 +58673,51 @@
       "low": 328.4,
       "close": 328.56,
       "volume": 2598775
+    },
+    {
+      "timestamp": "2025-10-02",
+      "ticker": "AXP",
+      "open": 328.45,
+      "high": 331.98,
+      "low": 326.28,
+      "close": 330.48,
+      "volume": 1907642
+    },
+    {
+      "timestamp": "2025-10-03",
+      "ticker": "AXP",
+      "open": 332.0,
+      "high": 332.04,
+      "low": 328.719,
+      "close": 330.24,
+      "volume": 2404341
+    },
+    {
+      "timestamp": "2025-10-06",
+      "ticker": "AXP",
+      "open": 332.0,
+      "high": 334.0,
+      "low": 326.25,
+      "close": 331.99,
+      "volume": 2116299
+    },
+    {
+      "timestamp": "2025-10-07",
+      "ticker": "AXP",
+      "open": 332.65,
+      "high": 334.94,
+      "low": 325.74,
+      "close": 327.97,
+      "volume": 1709101
+    },
+    {
+      "timestamp": "2025-10-08",
+      "ticker": "AXP",
+      "open": 328.67,
+      "high": 329.15,
+      "low": 323.58,
+      "close": 323.82,
+      "volume": 2184682
     }
   ]
 }

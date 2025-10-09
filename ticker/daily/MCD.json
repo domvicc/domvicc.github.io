@@ -1,7 +1,7 @@
 {
   "ticker": "MCD",
-  "generated_at": "2025-10-02T04:38:46.652403+00:00",
-  "count": 6519,
+  "generated_at": "2025-10-09T04:37:03.055401+00:00",
+  "count": 6524,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58673,6 +58673,51 @@
       "low": 298.3,
       "close": 300.52,
       "volume": 3055347
+    },
+    {
+      "timestamp": "2025-10-02",
+      "ticker": "MCD",
+      "open": 299.6,
+      "high": 302.38,
+      "low": 298.95,
+      "close": 299.88,
+      "volume": 2690402
+    },
+    {
+      "timestamp": "2025-10-03",
+      "ticker": "MCD",
+      "open": 298.9,
+      "high": 301.39,
+      "low": 298.663,
+      "close": 300.98,
+      "volume": 2599053
+    },
+    {
+      "timestamp": "2025-10-06",
+      "ticker": "MCD",
+      "open": 299.04,
+      "high": 299.645,
+      "low": 294.91,
+      "close": 296.04,
+      "volume": 3814151
+    },
+    {
+      "timestamp": "2025-10-07",
+      "ticker": "MCD",
+      "open": 295.0,
+      "high": 298.065,
+      "low": 294.1337,
+      "close": 296.32,
+      "volume": 2516057
+    },
+    {
+      "timestamp": "2025-10-08",
+      "ticker": "MCD",
+      "open": 296.38,
+      "high": 296.66,
+      "low": 293.43,
+      "close": 294.4,
+      "volume": 2464566
     }
   ]
 }

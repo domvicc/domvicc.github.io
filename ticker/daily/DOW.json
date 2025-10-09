@@ -1,7 +1,7 @@
 {
   "ticker": "DOW",
-  "generated_at": "2025-10-02T04:38:41.561812+00:00",
-  "count": 1644,
+  "generated_at": "2025-10-09T04:36:47.610910+00:00",
+  "count": 1649,
   "data": [
     {
       "timestamp": "2019-03-20",
@@ -14798,6 +14798,51 @@
       "low": 22.815,
       "close": 23.05,
       "volume": 12531501
+    },
+    {
+      "timestamp": "2025-10-02",
+      "ticker": "DOW",
+      "open": 23.13,
+      "high": 23.9684,
+      "low": 22.95,
+      "close": 23.69,
+      "volume": 17945224
+    },
+    {
+      "timestamp": "2025-10-03",
+      "ticker": "DOW",
+      "open": 23.71,
+      "high": 24.035,
+      "low": 23.4,
+      "close": 23.82,
+      "volume": 8354634
+    },
+    {
+      "timestamp": "2025-10-06",
+      "ticker": "DOW",
+      "open": 23.83,
+      "high": 23.89,
+      "low": 23.3,
+      "close": 23.42,
+      "volume": 9417114
+    },
+    {
+      "timestamp": "2025-10-07",
+      "ticker": "DOW",
+      "open": 23.54,
+      "high": 23.67,
+      "low": 22.25,
+      "close": 22.5,
+      "volume": 19270037
+    },
+    {
+      "timestamp": "2025-10-08",
+      "ticker": "DOW",
+      "open": 22.51,
+      "high": 22.95,
+      "low": 22.44,
+      "close": 22.6,
+      "volume": 10240630
     }
   ]
 }

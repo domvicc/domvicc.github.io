@@ -1,7 +1,7 @@
 {
   "ticker": "DIS",
-  "generated_at": "2025-10-02T04:38:41.169996+00:00",
-  "count": 6519,
+  "generated_at": "2025-10-09T04:36:46.576201+00:00",
+  "count": 6524,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58673,6 +58673,51 @@
       "low": 112.79,
       "close": 112.95,
       "volume": 9736341
+    },
+    {
+      "timestamp": "2025-10-02",
+      "ticker": "DIS",
+      "open": 112.975,
+      "high": 113.17,
+      "low": 110.775,
+      "close": 112.14,
+      "volume": 8695136
+    },
+    {
+      "timestamp": "2025-10-03",
+      "ticker": "DIS",
+      "open": 112.035,
+      "high": 113.57,
+      "low": 111.56,
+      "close": 112.47,
+      "volume": 7148378
+    },
+    {
+      "timestamp": "2025-10-06",
+      "ticker": "DIS",
+      "open": 112.69,
+      "high": 113.105,
+      "low": 111.45,
+      "close": 112.75,
+      "volume": 6141223
+    },
+    {
+      "timestamp": "2025-10-07",
+      "ticker": "DIS",
+      "open": 112.63,
+      "high": 113.4,
+      "low": 111.8,
+      "close": 112.53,
+      "volume": 5409754
+    },
+    {
+      "timestamp": "2025-10-08",
+      "ticker": "DIS",
+      "open": 112.805,
+      "high": 113.2,
+      "low": 111.65,
+      "close": 111.89,
+      "volume": 7074442
     }
   ]
 }

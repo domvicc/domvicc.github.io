@@ -1,7 +1,7 @@
 {
   "ticker": "MSFT",
-  "generated_at": "2025-10-02T04:38:48.581381+00:00",
-  "count": 6519,
+  "generated_at": "2025-10-09T04:37:09.116985+00:00",
+  "count": 6524,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58673,6 +58673,51 @@
       "low": 511.69,
       "close": 519.71,
       "volume": 22632336
+    },
+    {
+      "timestamp": "2025-10-02",
+      "ticker": "MSFT",
+      "open": 517.64,
+      "high": 521.6,
+      "low": 510.6791,
+      "close": 515.74,
+      "volume": 21222886
+    },
+    {
+      "timestamp": "2025-10-03",
+      "ticker": "MSFT",
+      "open": 517.1,
+      "high": 520.49,
+      "low": 515.0,
+      "close": 517.35,
+      "volume": 15112321
+    },
+    {
+      "timestamp": "2025-10-06",
+      "ticker": "MSFT",
+      "open": 518.61,
+      "high": 531.03,
+      "low": 518.2,
+      "close": 528.57,
+      "volume": 21388581
+    },
+    {
+      "timestamp": "2025-10-07",
+      "ticker": "MSFT",
+      "open": 528.285,
+      "high": 529.8,
+      "low": 521.44,
+      "close": 523.98,
+      "volume": 14615208
+    },
+    {
+      "timestamp": "2025-10-08",
+      "ticker": "MSFT",
+      "open": 523.28,
+      "high": 526.95,
+      "low": 523.09,
+      "close": 524.85,
+      "volume": 13363447
     }
   ]
 }

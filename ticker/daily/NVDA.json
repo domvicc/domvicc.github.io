@@ -1,7 +1,7 @@
 {
   "ticker": "NVDA",
-  "generated_at": "2025-10-02T04:38:49.557931+00:00",
-  "count": 6519,
+  "generated_at": "2025-10-09T04:37:11.290511+00:00",
+  "count": 6524,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58672,7 +58672,52 @@
       "high": 188.14,
       "low": 183.9,
       "close": 187.24,
-      "volume": 173055387
+      "volume": 173844901
+    },
+    {
+      "timestamp": "2025-10-02",
+      "ticker": "NVDA",
+      "open": 189.6,
+      "high": 191.05,
+      "low": 188.06,
+      "close": 188.89,
+      "volume": 136805821
+    },
+    {
+      "timestamp": "2025-10-03",
+      "ticker": "NVDA",
+      "open": 189.19,
+      "high": 190.36,
+      "low": 185.38,
+      "close": 187.62,
+      "volume": 137596896
+    },
+    {
+      "timestamp": "2025-10-06",
+      "ticker": "NVDA",
+      "open": 185.5,
+      "high": 187.23,
+      "low": 183.33,
+      "close": 185.54,
+      "volume": 157678104
+    },
+    {
+      "timestamp": "2025-10-07",
+      "ticker": "NVDA",
+      "open": 186.23,
+      "high": 189.06,
+      "low": 184.0,
+      "close": 185.04,
+      "volume": 140088008
+    },
+    {
+      "timestamp": "2025-10-08",
+      "ticker": "NVDA",
+      "open": 186.57,
+      "high": 189.6,
+      "low": 186.54,
+      "close": 189.11,
+      "volume": 130168861
     }
   ]
 }

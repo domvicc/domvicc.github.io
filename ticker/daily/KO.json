@@ -1,7 +1,7 @@
 {
   "ticker": "KO",
-  "generated_at": "2025-10-02T04:38:46.165090+00:00",
-  "count": 6519,
+  "generated_at": "2025-10-09T04:37:00.486259+00:00",
+  "count": 6524,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58673,6 +58673,51 @@
       "low": 66.29,
       "close": 66.78,
       "volume": 14877538
+    },
+    {
+      "timestamp": "2025-10-02",
+      "ticker": "KO",
+      "open": 66.525,
+      "high": 66.65,
+      "low": 65.86,
+      "close": 66.1,
+      "volume": 14350722
+    },
+    {
+      "timestamp": "2025-10-03",
+      "ticker": "KO",
+      "open": 66.1,
+      "high": 66.985,
+      "low": 66.04,
+      "close": 66.65,
+      "volume": 12249240
+    },
+    {
+      "timestamp": "2025-10-06",
+      "ticker": "KO",
+      "open": 66.49,
+      "high": 66.5,
+      "low": 65.84,
+      "close": 66.1,
+      "volume": 14333320
+    },
+    {
+      "timestamp": "2025-10-07",
+      "ticker": "KO",
+      "open": 66.225,
+      "high": 67.26,
+      "low": 65.87,
+      "close": 66.79,
+      "volume": 13328270
+    },
+    {
+      "timestamp": "2025-10-08",
+      "ticker": "KO",
+      "open": 66.665,
+      "high": 66.87,
+      "low": 66.06,
+      "close": 66.12,
+      "volume": 12606677
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "ticker": "MLNK",
-  "generated_at": "2025-10-02T04:38:47.016555+00:00",
-  "count": 1051,
+  "generated_at": "2025-10-09T04:37:05.838418+00:00",
+  "count": 1056,
   "data": [
     {
       "timestamp": "2021-07-27",
@@ -9461,6 +9461,51 @@
       "low": 19.92,
       "close": 19.93,
       "volume": 797243
+    },
+    {
+      "timestamp": "2025-10-02",
+      "ticker": "MLNK",
+      "open": 19.93,
+      "high": 19.96,
+      "low": 19.925,
+      "close": 19.94,
+      "volume": 864087
+    },
+    {
+      "timestamp": "2025-10-03",
+      "ticker": "MLNK",
+      "open": 19.94,
+      "high": 19.96,
+      "low": 19.92,
+      "close": 19.93,
+      "volume": 445164
+    },
+    {
+      "timestamp": "2025-10-06",
+      "ticker": "MLNK",
+      "open": 19.93,
+      "high": 19.96,
+      "low": 19.93,
+      "close": 19.94,
+      "volume": 1112918
+    },
+    {
+      "timestamp": "2025-10-07",
+      "ticker": "MLNK",
+      "open": 19.94,
+      "high": 19.97,
+      "low": 19.93,
+      "close": 19.95,
+      "volume": 547745
+    },
+    {
+      "timestamp": "2025-10-08",
+      "ticker": "MLNK",
+      "open": 19.97,
+      "high": 19.98,
+      "low": 19.95,
+      "close": 19.95,
+      "volume": 736252
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "ticker": "HON",
-  "generated_at": "2025-10-02T04:38:43.526970+00:00",
-  "count": 6519,
+  "generated_at": "2025-10-09T04:36:54.166695+00:00",
+  "count": 6524,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58673,6 +58673,51 @@
       "low": 209.985,
       "close": 210.18,
       "volume": 3887192
+    },
+    {
+      "timestamp": "2025-10-02",
+      "ticker": "HON",
+      "open": 210.5,
+      "high": 213.02,
+      "low": 210.09,
+      "close": 211.01,
+      "volume": 4307627
+    },
+    {
+      "timestamp": "2025-10-03",
+      "ticker": "HON",
+      "open": 210.98,
+      "high": 212.025,
+      "low": 208.42,
+      "close": 209.05,
+      "volume": 4326505
+    },
+    {
+      "timestamp": "2025-10-06",
+      "ticker": "HON",
+      "open": 210.0,
+      "high": 210.5,
+      "low": 207.795,
+      "close": 209.0,
+      "volume": 5157300
+    },
+    {
+      "timestamp": "2025-10-07",
+      "ticker": "HON",
+      "open": 208.63,
+      "high": 209.675,
+      "low": 207.81,
+      "close": 208.98,
+      "volume": 3873402
+    },
+    {
+      "timestamp": "2025-10-08",
+      "ticker": "HON",
+      "open": 208.84,
+      "high": 209.88,
+      "low": 207.9,
+      "close": 209.85,
+      "volume": 2814105
     }
   ]
 }

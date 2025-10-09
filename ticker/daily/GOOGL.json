@@ -1,7 +1,7 @@
 {
   "ticker": "GOOGL",
-  "generated_at": "2025-10-02T04:38:42.019621+00:00",
-  "count": 5314,
+  "generated_at": "2025-10-09T04:36:52.468544+00:00",
+  "count": 5319,
   "data": [
     {
       "timestamp": "2004-08-19",
@@ -47828,6 +47828,51 @@
       "low": 238.61,
       "close": 244.9,
       "volume": 31658234
+    },
+    {
+      "timestamp": "2025-10-02",
+      "ticker": "GOOGL",
+      "open": 245.15,
+      "high": 246.81,
+      "low": 242.3,
+      "close": 245.69,
+      "volume": 25483298
+    },
+    {
+      "timestamp": "2025-10-03",
+      "ticker": "GOOGL",
+      "open": 244.49,
+      "high": 246.3,
+      "low": 241.655,
+      "close": 245.35,
+      "volume": 30249559
+    },
+    {
+      "timestamp": "2025-10-06",
+      "ticker": "GOOGL",
+      "open": 244.78,
+      "high": 251.32,
+      "low": 244.58,
+      "close": 250.43,
+      "volume": 28894653
+    },
+    {
+      "timestamp": "2025-10-07",
+      "ticker": "GOOGL",
+      "open": 248.27,
+      "high": 250.44,
+      "low": 245.52,
+      "close": 245.76,
+      "volume": 23181285
+    },
+    {
+      "timestamp": "2025-10-08",
+      "ticker": "GOOGL",
+      "open": 244.96,
+      "high": 246.005,
+      "low": 243.82,
+      "close": 244.62,
+      "volume": 21307104
     }
   ]
 }

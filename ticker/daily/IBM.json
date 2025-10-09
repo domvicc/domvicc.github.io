@@ -1,7 +1,7 @@
 {
   "ticker": "IBM",
-  "generated_at": "2025-10-02T04:38:44.028102+00:00",
-  "count": 6519,
+  "generated_at": "2025-10-09T04:36:54.710163+00:00",
+  "count": 6524,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58673,6 +58673,51 @@
       "low": 280.15,
       "close": 286.49,
       "volume": 4381338
+    },
+    {
+      "timestamp": "2025-10-02",
+      "ticker": "IBM",
+      "open": 285.79,
+      "high": 288.54,
+      "low": 282.79,
+      "close": 286.72,
+      "volume": 3814232
+    },
+    {
+      "timestamp": "2025-10-03",
+      "ticker": "IBM",
+      "open": 287.5,
+      "high": 293.32,
+      "low": 287.3,
+      "close": 288.37,
+      "volume": 4375082
+    },
+    {
+      "timestamp": "2025-10-06",
+      "ticker": "IBM",
+      "open": 288.61,
+      "high": 291.45,
+      "low": 287.8,
+      "close": 289.42,
+      "volume": 2881947
+    },
+    {
+      "timestamp": "2025-10-07",
+      "ticker": "IBM",
+      "open": 295.55,
+      "high": 301.0425,
+      "low": 293.285,
+      "close": 293.87,
+      "volume": 7190126
+    },
+    {
+      "timestamp": "2025-10-08",
+      "ticker": "IBM",
+      "open": 294.16,
+      "high": 294.2,
+      "low": 286.473,
+      "close": 289.46,
+      "volume": 5297030
     }
   ]
 }
