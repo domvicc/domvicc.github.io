@@ -1,7 +1,7 @@
 {
   "ticker": "ADBE",
-  "generated_at": "2025-10-02T04:38:35.500444+00:00",
-  "count": 6519,
+  "generated_at": "2025-10-09T04:36:20.425848+00:00",
+  "count": 6524,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58673,6 +58673,51 @@
       "low": 340.05,
       "close": 343.72,
       "volume": 6505709
+    },
+    {
+      "timestamp": "2025-10-02",
+      "ticker": "ADBE",
+      "open": 343.76,
+      "high": 351.73,
+      "low": 342.42,
+      "close": 351.48,
+      "volume": 3955434
+    },
+    {
+      "timestamp": "2025-10-03",
+      "ticker": "ADBE",
+      "open": 352.0,
+      "high": 352.5926,
+      "low": 346.305,
+      "close": 346.74,
+      "volume": 3122111
+    },
+    {
+      "timestamp": "2025-10-06",
+      "ticker": "ADBE",
+      "open": 346.93,
+      "high": 357.34,
+      "low": 342.04,
+      "close": 350.14,
+      "volume": 5340202
+    },
+    {
+      "timestamp": "2025-10-07",
+      "ticker": "ADBE",
+      "open": 352.59,
+      "high": 353.33,
+      "low": 344.24,
+      "close": 348.31,
+      "volume": 3275506
+    },
+    {
+      "timestamp": "2025-10-08",
+      "ticker": "ADBE",
+      "open": 350.0,
+      "high": 354.05,
+      "low": 347.52,
+      "close": 348.77,
+      "volume": 3285027
     }
   ]
 }

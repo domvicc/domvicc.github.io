@@ -1,7 +1,7 @@
 {
   "ticker": "ABNB",
-  "generated_at": "2025-10-02T04:38:34.965429+00:00",
-  "count": 1207,
+  "generated_at": "2025-10-09T04:36:19.745928+00:00",
+  "count": 1212,
   "data": [
     {
       "timestamp": "2020-12-10",
@@ -10865,6 +10865,51 @@
       "low": 120.785,
       "close": 122.32,
       "volume": 3443702
+    },
+    {
+      "timestamp": "2025-10-02",
+      "ticker": "ABNB",
+      "open": 122.47,
+      "high": 122.5,
+      "low": 120.02,
+      "close": 121.49,
+      "volume": 4562181
+    },
+    {
+      "timestamp": "2025-10-03",
+      "ticker": "ABNB",
+      "open": 121.65,
+      "high": 122.25,
+      "low": 119.84,
+      "close": 120.22,
+      "volume": 5911349
+    },
+    {
+      "timestamp": "2025-10-06",
+      "ticker": "ABNB",
+      "open": 120.73,
+      "high": 123.1499,
+      "low": 120.05,
+      "close": 120.35,
+      "volume": 5474253
+    },
+    {
+      "timestamp": "2025-10-07",
+      "ticker": "ABNB",
+      "open": 120.49,
+      "high": 121.1,
+      "low": 119.14,
+      "close": 119.85,
+      "volume": 4415874
+    },
+    {
+      "timestamp": "2025-10-08",
+      "ticker": "ABNB",
+      "open": 120.235,
+      "high": 120.77,
+      "low": 118.91,
+      "close": 119.99,
+      "volume": 4407384
     }
   ]
 }

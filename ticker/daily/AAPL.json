@@ -1,7 +1,7 @@
 {
   "ticker": "AAPL",
-  "generated_at": "2025-10-02T04:38:34.548290+00:00",
-  "count": 6519,
+  "generated_at": "2025-10-09T04:36:19.310175+00:00",
+  "count": 6524,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58673,6 +58673,51 @@
       "low": 254.93,
       "close": 255.45,
       "volume": 48713940
+    },
+    {
+      "timestamp": "2025-10-02",
+      "ticker": "AAPL",
+      "open": 256.575,
+      "high": 258.18,
+      "low": 254.15,
+      "close": 257.13,
+      "volume": 42630239
+    },
+    {
+      "timestamp": "2025-10-03",
+      "ticker": "AAPL",
+      "open": 254.665,
+      "high": 259.24,
+      "low": 253.95,
+      "close": 258.02,
+      "volume": 49155614
+    },
+    {
+      "timestamp": "2025-10-06",
+      "ticker": "AAPL",
+      "open": 257.99,
+      "high": 259.07,
+      "low": 255.05,
+      "close": 256.69,
+      "volume": 44664118
+    },
+    {
+      "timestamp": "2025-10-07",
+      "ticker": "AAPL",
+      "open": 256.805,
+      "high": 257.4,
+      "low": 255.43,
+      "close": 256.48,
+      "volume": 31955776
+    },
+    {
+      "timestamp": "2025-10-08",
+      "ticker": "AAPL",
+      "open": 256.52,
+      "high": 258.52,
+      "low": 256.11,
+      "close": 258.06,
+      "volume": 36496895
     }
   ]
 }
