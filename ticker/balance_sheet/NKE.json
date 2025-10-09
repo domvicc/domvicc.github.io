@@ -805,7 +805,7 @@
   "quarterlyReports": [
     {
       "fiscalDateEnding": "2025-08-31",
-      "reportedCurrency": "None",
+      "reportedCurrency": "USD",
       "totalAssets": "37334000000",
       "totalCurrentAssets": "23898000000",
       "cashAndCashEquivalentsAtCarryingValue": "7024000000",
@@ -830,17 +830,17 @@
       "currentDebt": "None",
       "shortTermDebt": "510000000",
       "totalNonCurrentLiabilities": "12955000000",
-      "capitalLeaseObligations": "None",
-      "longTermDebt": "None",
-      "currentLongTermDebt": "None",
+      "capitalLeaseObligations": "3061000000",
+      "longTermDebt": "7996000000",
+      "currentLongTermDebt": "4000000",
       "longTermDebtNoncurrent": "None",
       "shortLongTermDebtTotal": "11061000000",
       "otherCurrentLiabilities": "5923000000",
-      "otherNonCurrentLiabilities": "None",
+      "otherNonCurrentLiabilities": "2404000000",
       "totalShareholderEquity": "13468000000",
       "treasuryStock": "None",
       "retainedEarnings": "-700000000",
-      "commonStock": "None",
+      "commonStock": "3000000",
       "commonStockSharesOutstanding": "1479000000"
     },
     {
@@ -4045,5 +4045,5 @@
     }
   ],
   "ticker": "NKE",
-  "generated_at": "2025-10-02T04:39:49.025386+00:00"
+  "generated_at": "2025-10-09T04:30:27.654365+00:00"
 }
