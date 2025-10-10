@@ -767,6 +767,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const updateCompanyOverviewSection = (ticker, apiData = null) => {
     // Use API data if available, otherwise fall back to hardcoded data
     const data = apiData?.companyOverview || companyOverviewCache.get(ticker.toLowerCase());
+    console.log('updateCompanyOverviewSection called for:', ticker, 'apiData:', !!apiData, 'cachedData:', !!companyOverviewCache.get(ticker.toLowerCase()), 'finalData:', !!data);
+    if (data) {
+      console.log('Company data keys:', Object.keys(data));
+      console.log('Sector:', data.Sector, 'Industry:', data.Industry, 'Employees:', data.FullTimeEmployees);
+    }
     if (!data) {
       console.warn('updateCompanyOverviewSection: no data for', ticker);
       // Provide a visible fallback so user does not see infinite "Loading..."
@@ -783,6 +788,43 @@ document.addEventListener('DOMContentLoaded', () => {
       const description = data.Description || data.description || 'No description available.';
       descEl.textContent = description;
     }
+
+    // --- Company Basics section (Sector / Industry / Employees / Founded) ---
+    // These IDs exist in ticker_analysis.html but were not previously populated.
+    // Accept multiple possible key casings / naming conventions from source JSON.
+    const sectorVal = (data.Sector || data.sector || '').toString();
+    const industryVal = (data.Industry || data.industry || '').toString();
+    // Note: Employee count and Founded date are not available in current data source
+    const employeesVal = (data.FullTimeEmployees || data.Employees || data.employees || '').toString();
+    let foundedVal = (data.Founded || data.founded || '').toString();
+    
+    // If we don't have employee/founded data, try to extract from description or provide N/A
+    if(!foundedVal && data.Description){
+      // Look for founding year in description - common patterns
+      const match = data.Description.match(/Founded\s+in\s+(\d{4})/i) || 
+                   data.Description.match(/established\s+in\s+(\d{4})/i) ||
+                   data.Description.match(/\bfounded\s+(\d{4})/i) ||
+                   data.Description.match(/\b(19|20)\d{2}\b/);
+      if(match) foundedVal = match[1] || match[0];
+    }
+    
+    // Helper to title-case sector/industry (API returns uppercase words sometimes)
+    const tidyCase = str => str ? str.replace(/\b\w+/g, w => w.length>3 ? w[0]+w.slice(1).toLowerCase() : w.toUpperCase()) : '—';
+    const setText = (id, value, transformFn) => {
+      const el = document.getElementById(id);
+      if(el) {
+        const finalValue = value ? (transformFn ? transformFn(value) : value) : 'N/A';
+        el.textContent = finalValue;
+        console.log(`Setting ${id} to:`, finalValue);
+      }
+    };
+    
+    setText('company-sector', sectorVal, tidyCase);
+    setText('company-industry', industryVal, tidyCase);
+    // Employee count - not available in current data, show N/A
+    setText('company-employees', employeesVal || 'N/A');
+    setText('company-founded', foundedVal || 'N/A');
+
     // (Optional) If future markup adds a details grid, keep graceful handling
     const detailsGrid = document.querySelector('[data-company-details-grid]');
     if (detailsGrid) {
