@@ -1,10 +1,14 @@
 # import libraries we need for web scraping and file handling
-import time
+import time # always make time to sleep 
+import os # needed to create file paths
 import csv  # needed to write the certification data to a csv file
 from selenium import webdriver  # controls the web browser automatically
 from selenium.webdriver.common.by import By  # helps find elements on web pages
 from selenium.webdriver.common.keys import Keys  # allows us to press keyboard keys like enter
 from bs4 import BeautifulSoup  # parses html content to extract data
+
+# your linkedin name goes here
+user = "JohnDoe" 
 
 # put your actual linkedin login info here
 username = "xxxxxxxxx"
@@ -21,18 +25,18 @@ driver.find_element(By.ID, "password").send_keys(Keys.RETURN)
 
 time.sleep(3)  # give linkedin a few seconds to process the login
 
-# navigate to the certifications section of dominic's profile
-driver.get("https://www.linkedin.com/in/dominicvicchiollo/details/certifications/")
+# navigate to the certifications section  
+driver.get(f"https://www.linkedin.com/in/{user}/details/certifications/")
 time.sleep(5)  # wait for the page to fully load all the certification cards
 
 # get the html source code of the page and prepare it for data extraction
 soup = BeautifulSoup(driver.page_source, "html.parser")
 
-# find all the certification cards on the page (each cert is in a list item)
+# find all the certification cards on the page  
 certs = soup.find_all("li", {"class": "artdeco-list__item"})
 
 # where to save the csv file on the computer
-output_path = r"C:/Users/dominicvicchiollo/Downloads/credentials.csv"
+output_path = os.path.join(os.path.expanduser("~"), "Downloads", "credentials.csv")
 
 # create a new csv file and start writing certification data to it
 with open(output_path, "w", newline="", encoding="utf-8") as f:
@@ -57,7 +61,7 @@ with open(output_path, "w", newline="", encoding="utf-8") as f:
         # write this certification's data as a new row in the csv file
         writer.writerow([title_text, issuer_text, date_text, credential_text])
 
-# let the user know the scraping is complete and where the file was saved
+# process complete! print file loc 
 print(f" Certifications exported to {output_path}")
 
 # close the browser window

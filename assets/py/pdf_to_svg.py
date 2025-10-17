@@ -1,5 +1,5 @@
 # ------------------------------------------------------------
-# technical notes:
+# notes:
 # - place this script in the same directory as the target pdf
 # - specify the filename in the main block (default: "DGAI.pdf")
 # - output will be generated as an svg file in the same directory

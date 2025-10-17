@@ -1,7 +1,18 @@
-# cc_fraud_nn_openml_viz.py
-# end to end: pull data, train a tiny nn, plot plain defaults, print takeaways
-# zero theme tweaks, no fallbacks, just matplotlib defaults
-
+#----------------------------------------------------------------------------------------------------------------------------------------
+#   credit card fraud detection workflow script
+#----------------------------------------------------------------------------------------------------------------------------------------
+#   description: loads public credit card fraud dataset from openml
+#   features: 
+#               - scales features and splits data preserving class balance
+#               - builds and trains a small dense neural network with dropout and class weights
+#               - evaluates performance with accuracy precision recall auc and other metrics
+#               - selects a starting decision threshold by maximizing f one score
+#               - produces confusion matrix roc curve precision recall curve threshold sweep and calibration reliability plots
+#               - extracts latent embeddings to build a two dimensional umap risk map highlighting fraud clusters
+#               - saves visual artifacts for downstream reporting and operational tuning
+#               - offers practical interpretation guidance and operations playbook ideas for adjusting thresholds and monitoring drift
+#               - designed for clarity reproducibility and quick experimentation
+#-----------------------------------------------------------------------------------------------------------------------------------------
 import os, warnings, numpy as np, pandas as pd, openml, matplotlib.pyplot as plt, tensorflow as tf
 warnings.filterwarnings("ignore")  # kill noisy warnings so the run reads clean
 
