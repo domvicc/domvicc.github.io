@@ -1,7 +1,7 @@
 {
   "ticker": "SMCI",
-  "generated_at": "2025-10-10T02:43:34.328680+00:00",
-  "count": 4664,
+  "generated_at": "2025-10-29T01:23:39.902754+00:00",
+  "count": 4677,
   "data": [
     {
       "timestamp": "2007-03-29",
@@ -41978,6 +41978,123 @@
       "low": 57.258,
       "close": 57.98,
       "volume": 29801486
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "SMCI",
+      "open": 58.24,
+      "high": 58.51,
+      "low": 52.56,
+      "close": 52.86,
+      "volume": 45087764
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "SMCI",
+      "open": 54.805,
+      "high": 55.65,
+      "low": 54.02,
+      "close": 54.75,
+      "volume": 24588862
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "SMCI",
+      "open": 54.13,
+      "high": 55.21,
+      "low": 52.98,
+      "close": 53.11,
+      "volume": 19789133
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "SMCI",
+      "open": 54.5,
+      "high": 55.0699,
+      "low": 52.86,
+      "close": 53.94,
+      "volume": 16646034
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "SMCI",
+      "open": 54.0,
+      "high": 56.225,
+      "low": 53.27,
+      "close": 53.84,
+      "volume": 24656551
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "SMCI",
+      "open": 53.065,
+      "high": 53.63,
+      "low": 51.62,
+      "close": 52.18,
+      "volume": 20681849
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "SMCI",
+      "open": 55.04,
+      "high": 56.6,
+      "low": 54.6,
+      "close": 55.04,
+      "volume": 45553310
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "SMCI",
+      "open": 55.16,
+      "high": 55.3499,
+      "low": 53.91,
+      "close": 54.82,
+      "volume": 29016458
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "SMCI",
+      "open": 54.49,
+      "high": 54.53,
+      "low": 50.03,
+      "close": 52.5,
+      "volume": 34326246
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "SMCI",
+      "open": 51.73,
+      "high": 51.84,
+      "low": 47.38,
+      "close": 47.92,
+      "volume": 57175672
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "SMCI",
+      "open": 48.875,
+      "high": 49.64,
+      "low": 48.21,
+      "close": 48.29,
+      "volume": 25206612
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "SMCI",
+      "open": 49.72,
+      "high": 51.625,
+      "low": 49.72,
+      "close": 51.57,
+      "volume": 27434470
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "SMCI",
+      "open": 51.665,
+      "high": 54.03,
+      "low": 51.37,
+      "close": 52.36,
+      "volume": 27883066
     }
   ]
 }

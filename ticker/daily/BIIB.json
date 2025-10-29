@@ -1,7 +1,7 @@
 {
   "ticker": "BIIB",
-  "generated_at": "2025-10-10T02:42:28.509353+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:19:41.458609+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 148.17,
       "close": 149.61,
       "volume": 1600465
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "BIIB",
+      "open": 150.0,
+      "high": 150.2,
+      "low": 144.74,
+      "close": 146.57,
+      "volume": 1724990
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "BIIB",
+      "open": 146.47,
+      "high": 147.555,
+      "low": 144.65,
+      "close": 144.69,
+      "volume": 1124466
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "BIIB",
+      "open": 144.09,
+      "high": 146.88,
+      "low": 142.195,
+      "close": 145.31,
+      "volume": 1283553
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "BIIB",
+      "open": 144.74,
+      "high": 145.185,
+      "low": 142.29,
+      "close": 143.66,
+      "volume": 1337176
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "BIIB",
+      "open": 144.05,
+      "high": 147.48,
+      "low": 141.7,
+      "close": 142.26,
+      "volume": 1469099
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "BIIB",
+      "open": 142.1,
+      "high": 144.325,
+      "low": 141.67,
+      "close": 143.0,
+      "volume": 1010007
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "BIIB",
+      "open": 143.31,
+      "high": 147.47,
+      "low": 142.41,
+      "close": 146.63,
+      "volume": 1316452
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "BIIB",
+      "open": 146.09,
+      "high": 147.89,
+      "low": 144.29,
+      "close": 146.22,
+      "volume": 895048
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "BIIB",
+      "open": 147.37,
+      "high": 149.1199,
+      "low": 146.25,
+      "close": 147.72,
+      "volume": 1403299
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "BIIB",
+      "open": 148.99,
+      "high": 150.29,
+      "low": 147.57,
+      "close": 150.08,
+      "volume": 1245964
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "BIIB",
+      "open": 151.09,
+      "high": 151.92,
+      "low": 148.98,
+      "close": 149.89,
+      "volume": 1338315
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "BIIB",
+      "open": 150.07,
+      "high": 150.92,
+      "low": 148.1001,
+      "close": 150.43,
+      "volume": 1214395
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "BIIB",
+      "open": 150.01,
+      "high": 150.3,
+      "low": 148.365,
+      "close": 149.13,
+      "volume": 1661655
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "ticker": "KHC",
-  "generated_at": "2025-10-10T02:43:03.158637+00:00",
-  "count": 2583,
+  "generated_at": "2025-10-29T01:22:00.454308+00:00",
+  "count": 2596,
   "data": [
     {
       "timestamp": "2015-07-06",
@@ -23249,6 +23249,123 @@
       "low": 24.85,
       "close": 25.04,
       "volume": 11100621
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "KHC",
+      "open": 25.09,
+      "high": 25.29,
+      "low": 24.98,
+      "close": 25.15,
+      "volume": 9752663
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "KHC",
+      "open": 25.08,
+      "high": 25.17,
+      "low": 24.8,
+      "close": 25.11,
+      "volume": 11558778
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "KHC",
+      "open": 25.055,
+      "high": 25.47,
+      "low": 25.04,
+      "close": 25.44,
+      "volume": 11240017
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "KHC",
+      "open": 25.36,
+      "high": 25.485,
+      "low": 24.985,
+      "close": 25.19,
+      "volume": 12688318
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "KHC",
+      "open": 25.245,
+      "high": 25.44,
+      "low": 25.04,
+      "close": 25.13,
+      "volume": 13798409
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "KHC",
+      "open": 25.23,
+      "high": 25.55,
+      "low": 25.1548,
+      "close": 25.52,
+      "volume": 15967141
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "KHC",
+      "open": 25.58,
+      "high": 25.88,
+      "low": 25.53,
+      "close": 25.71,
+      "volume": 10077559
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "KHC",
+      "open": 25.81,
+      "high": 25.86,
+      "low": 25.54,
+      "close": 25.58,
+      "volume": 12593632
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "KHC",
+      "open": 25.54,
+      "high": 25.95,
+      "low": 25.425,
+      "close": 25.64,
+      "volume": 8860295
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "KHC",
+      "open": 25.62,
+      "high": 25.65,
+      "low": 25.245,
+      "close": 25.41,
+      "volume": 11379601
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "KHC",
+      "open": 25.56,
+      "high": 25.6,
+      "low": 25.21,
+      "close": 25.25,
+      "volume": 8618827
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "KHC",
+      "open": 25.26,
+      "high": 25.63,
+      "low": 25.26,
+      "close": 25.59,
+      "volume": 12261283
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "KHC",
+      "open": 25.49,
+      "high": 25.67,
+      "low": 25.305,
+      "close": 25.52,
+      "volume": 16162164
     }
   ]
 }

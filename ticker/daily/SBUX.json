@@ -1,7 +1,7 @@
 {
   "ticker": "SBUX",
-  "generated_at": "2025-10-10T02:43:33.665023+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:23:34.697068+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 79.4302,
       "close": 79.78,
       "volume": 9075650
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "SBUX",
+      "open": 79.66,
+      "high": 81.21,
+      "low": 78.41,
+      "close": 78.46,
+      "volume": 11129780
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "SBUX",
+      "open": 78.85,
+      "high": 80.44,
+      "low": 78.51,
+      "close": 80.03,
+      "volume": 8052044
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "SBUX",
+      "open": 79.25,
+      "high": 81.48,
+      "low": 79.03,
+      "close": 81.15,
+      "volume": 7510256
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "SBUX",
+      "open": 81.7,
+      "high": 83.32,
+      "low": 81.57,
+      "close": 82.86,
+      "volume": 11094293
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "SBUX",
+      "open": 83.2,
+      "high": 84.89,
+      "low": 83.04,
+      "close": 84.34,
+      "volume": 11552088
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "SBUX",
+      "open": 84.25,
+      "high": 85.94,
+      "low": 84.02,
+      "close": 85.36,
+      "volume": 8527648
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "SBUX",
+      "open": 85.685,
+      "high": 86.34,
+      "low": 84.43,
+      "close": 84.53,
+      "volume": 7679667
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "SBUX",
+      "open": 84.14,
+      "high": 86.51,
+      "low": 83.65,
+      "close": 85.9,
+      "volume": 8262493
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "SBUX",
+      "open": 85.76,
+      "high": 86.0,
+      "low": 84.9,
+      "close": 85.5,
+      "volume": 5286258
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "SBUX",
+      "open": 85.48,
+      "high": 85.9,
+      "low": 84.98,
+      "close": 85.44,
+      "volume": 4565508
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "SBUX",
+      "open": 86.095,
+      "high": 86.84,
+      "low": 85.86,
+      "close": 86.09,
+      "volume": 5844597
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "SBUX",
+      "open": 86.28,
+      "high": 87.4399,
+      "low": 86.11,
+      "close": 87.22,
+      "volume": 7164584
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "SBUX",
+      "open": 86.9,
+      "high": 87.54,
+      "low": 85.31,
+      "close": 85.43,
+      "volume": 11496539
     }
   ]
 }

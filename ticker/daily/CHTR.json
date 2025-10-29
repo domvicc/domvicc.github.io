@@ -1,7 +1,7 @@
 {
   "ticker": "CHTR",
-  "generated_at": "2025-10-10T02:42:33.235115+00:00",
-  "count": 3966,
+  "generated_at": "2025-10-29T01:20:08.383290+00:00",
+  "count": 3979,
   "data": [
     {
       "timestamp": "2010-01-05",
@@ -35696,6 +35696,123 @@
       "low": 264.56,
       "close": 265.0,
       "volume": 2088955
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "CHTR",
+      "open": 264.97,
+      "high": 269.675,
+      "low": 259.16,
+      "close": 259.49,
+      "volume": 1694821
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "CHTR",
+      "open": 259.49,
+      "high": 264.12,
+      "low": 258.2,
+      "close": 258.73,
+      "volume": 1964341
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "CHTR",
+      "open": 258.99,
+      "high": 268.765,
+      "low": 258.88,
+      "close": 266.25,
+      "volume": 1360957
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "CHTR",
+      "open": 266.77,
+      "high": 268.47,
+      "low": 263.675,
+      "close": 264.56,
+      "volume": 1144683
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "CHTR",
+      "open": 265.04,
+      "high": 265.79,
+      "low": 252.59,
+      "close": 255.34,
+      "volume": 2011615
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "CHTR",
+      "open": 254.6,
+      "high": 256.5976,
+      "low": 251.23,
+      "close": 253.16,
+      "volume": 1727607
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "CHTR",
+      "open": 254.41,
+      "high": 254.41,
+      "low": 248.17,
+      "close": 251.51,
+      "volume": 1507372
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "CHTR",
+      "open": 251.37,
+      "high": 255.0,
+      "low": 249.17,
+      "close": 252.52,
+      "volume": 1423241
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "CHTR",
+      "open": 252.68,
+      "high": 252.68,
+      "low": 244.19,
+      "close": 244.94,
+      "volume": 2258766
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "CHTR",
+      "open": 246.11,
+      "high": 246.594,
+      "low": 243.61,
+      "close": 243.92,
+      "volume": 2006086
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "CHTR",
+      "open": 246.22,
+      "high": 247.76,
+      "low": 244.0,
+      "close": 244.2,
+      "volume": 1446382
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "CHTR",
+      "open": 244.77,
+      "high": 247.6559,
+      "low": 243.4399,
+      "close": 245.44,
+      "volume": 2278710
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "CHTR",
+      "open": 245.0,
+      "high": 249.84,
+      "low": 242.81,
+      "close": 248.88,
+      "volume": 1963544
     }
   ]
 }

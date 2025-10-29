@@ -1,7 +1,7 @@
 {
   "ticker": "AMAT",
-  "generated_at": "2025-10-10T02:42:22.347280+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:19:14.577807+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 215.51,
       "close": 220.3,
       "volume": 6701398
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "AMAT",
+      "open": 220.7,
+      "high": 224.4684,
+      "low": 209.73,
+      "close": 209.95,
+      "volume": 12829661
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "AMAT",
+      "open": 220.35,
+      "high": 221.13,
+      "low": 217.03,
+      "close": 219.48,
+      "volume": 7853006
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "AMAT",
+      "open": 213.9,
+      "high": 221.65,
+      "low": 213.71,
+      "close": 218.19,
+      "volume": 8260006
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "AMAT",
+      "open": 223.955,
+      "high": 228.1,
+      "low": 220.52,
+      "close": 227.58,
+      "volume": 8033603
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "AMAT",
+      "open": 230.595,
+      "high": 232.07,
+      "low": 224.03,
+      "close": 227.72,
+      "volume": 7742842
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "AMAT",
+      "open": 226.47,
+      "high": 227.36,
+      "low": 222.7,
+      "close": 224.99,
+      "volume": 5272810
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "AMAT",
+      "open": 227.145,
+      "high": 231.33,
+      "low": 226.53,
+      "close": 228.13,
+      "volume": 5494792
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "AMAT",
+      "open": 225.92,
+      "high": 228.16,
+      "low": 225.21,
+      "close": 226.0,
+      "volume": 4557485
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "AMAT",
+      "open": 226.0,
+      "high": 226.77,
+      "low": 216.065,
+      "close": 220.56,
+      "volume": 7498073
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "AMAT",
+      "open": 218.39,
+      "high": 230.55,
+      "low": 218.12,
+      "close": 228.47,
+      "volume": 7001931
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "AMAT",
+      "open": 229.0,
+      "high": 230.72,
+      "low": 226.29,
+      "close": 228.75,
+      "volume": 5346676
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "AMAT",
+      "open": 233.0,
+      "high": 235.79,
+      "low": 231.13,
+      "close": 231.33,
+      "volume": 7671698
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "AMAT",
+      "open": 229.68,
+      "high": 231.015,
+      "low": 227.08,
+      "close": 227.64,
+      "volume": 6100278
     }
   ]
 }

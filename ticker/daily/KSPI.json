@@ -1,0 +1,4021 @@
+{
+  "ticker": "KSPI",
+  "generated_at": "2025-10-29T01:22:02.763542+00:00",
+  "count": 446,
+  "data": [
+    {
+      "timestamp": "2024-01-19",
+      "ticker": "KSPI",
+      "open": 92.5,
+      "high": 95.97,
+      "low": 90.74,
+      "close": 95.97,
+      "volume": 3410518
+    },
+    {
+      "timestamp": "2024-01-22",
+      "ticker": "KSPI",
+      "open": 91.25,
+      "high": 93.1593,
+      "low": 89.64,
+      "close": 91.14,
+      "volume": 1019573
+    },
+    {
+      "timestamp": "2024-01-23",
+      "ticker": "KSPI",
+      "open": 91.14,
+      "high": 91.98,
+      "low": 90.9675,
+      "close": 91.0,
+      "volume": 340511
+    },
+    {
+      "timestamp": "2024-01-24",
+      "ticker": "KSPI",
+      "open": 92.05,
+      "high": 92.25,
+      "low": 89.99,
+      "close": 91.12,
+      "volume": 380964
+    },
+    {
+      "timestamp": "2024-01-25",
+      "ticker": "KSPI",
+      "open": 91.0,
+      "high": 91.4,
+      "low": 89.99,
+      "close": 90.71,
+      "volume": 120575
+    },
+    {
+      "timestamp": "2024-01-26",
+      "ticker": "KSPI",
+      "open": 91.62,
+      "high": 91.67,
+      "low": 89.89,
+      "close": 90.66,
+      "volume": 262347
+    },
+    {
+      "timestamp": "2024-01-29",
+      "ticker": "KSPI",
+      "open": 89.3,
+      "high": 93.0,
+      "low": 89.0,
+      "close": 92.5,
+      "volume": 695378
+    },
+    {
+      "timestamp": "2024-01-30",
+      "ticker": "KSPI",
+      "open": 91.49,
+      "high": 92.0,
+      "low": 90.4,
+      "close": 91.1,
+      "volume": 235048
+    },
+    {
+      "timestamp": "2024-01-31",
+      "ticker": "KSPI",
+      "open": 90.97,
+      "high": 93.0,
+      "low": 90.97,
+      "close": 91.45,
+      "volume": 511529
+    },
+    {
+      "timestamp": "2024-02-01",
+      "ticker": "KSPI",
+      "open": 91.8,
+      "high": 92.5,
+      "low": 91.77,
+      "close": 91.89,
+      "volume": 182972
+    },
+    {
+      "timestamp": "2024-02-02",
+      "ticker": "KSPI",
+      "open": 91.51,
+      "high": 92.8236,
+      "low": 91.1,
+      "close": 92.1,
+      "volume": 103718
+    },
+    {
+      "timestamp": "2024-02-05",
+      "ticker": "KSPI",
+      "open": 93.0,
+      "high": 93.0,
+      "low": 90.05,
+      "close": 90.87,
+      "volume": 198011
+    },
+    {
+      "timestamp": "2024-02-06",
+      "ticker": "KSPI",
+      "open": 91.78,
+      "high": 92.54,
+      "low": 90.58,
+      "close": 90.95,
+      "volume": 99426
+    },
+    {
+      "timestamp": "2024-02-07",
+      "ticker": "KSPI",
+      "open": 90.4159,
+      "high": 90.59,
+      "low": 89.13,
+      "close": 90.0,
+      "volume": 67832
+    },
+    {
+      "timestamp": "2024-02-08",
+      "ticker": "KSPI",
+      "open": 90.0,
+      "high": 90.0,
+      "low": 86.01,
+      "close": 87.64,
+      "volume": 194724
+    },
+    {
+      "timestamp": "2024-02-09",
+      "ticker": "KSPI",
+      "open": 87.55,
+      "high": 90.69,
+      "low": 86.835,
+      "close": 89.61,
+      "volume": 194510
+    },
+    {
+      "timestamp": "2024-02-12",
+      "ticker": "KSPI",
+      "open": 87.8,
+      "high": 87.88,
+      "low": 85.02,
+      "close": 87.02,
+      "volume": 163654
+    },
+    {
+      "timestamp": "2024-02-13",
+      "ticker": "KSPI",
+      "open": 86.68,
+      "high": 87.84,
+      "low": 86.3673,
+      "close": 87.69,
+      "volume": 141158
+    },
+    {
+      "timestamp": "2024-02-14",
+      "ticker": "KSPI",
+      "open": 89.35,
+      "high": 91.9,
+      "low": 89.01,
+      "close": 91.0,
+      "volume": 1159069
+    },
+    {
+      "timestamp": "2024-02-15",
+      "ticker": "KSPI",
+      "open": 91.9,
+      "high": 94.89,
+      "low": 91.7,
+      "close": 94.34,
+      "volume": 1159078
+    },
+    {
+      "timestamp": "2024-02-16",
+      "ticker": "KSPI",
+      "open": 94.76,
+      "high": 96.15,
+      "low": 94.2345,
+      "close": 95.55,
+      "volume": 126612
+    },
+    {
+      "timestamp": "2024-02-20",
+      "ticker": "KSPI",
+      "open": 95.82,
+      "high": 102.89,
+      "low": 92.77,
+      "close": 100.31,
+      "volume": 281212
+    },
+    {
+      "timestamp": "2024-02-21",
+      "ticker": "KSPI",
+      "open": 99.0,
+      "high": 100.5,
+      "low": 99.0,
+      "close": 99.89,
+      "volume": 242639
+    },
+    {
+      "timestamp": "2024-02-22",
+      "ticker": "KSPI",
+      "open": 100.5,
+      "high": 100.89,
+      "low": 99.89,
+      "close": 100.14,
+      "volume": 72343
+    },
+    {
+      "timestamp": "2024-02-23",
+      "ticker": "KSPI",
+      "open": 101.45,
+      "high": 105.99,
+      "low": 101.45,
+      "close": 103.47,
+      "volume": 143889
+    },
+    {
+      "timestamp": "2024-02-26",
+      "ticker": "KSPI",
+      "open": 104.01,
+      "high": 105.9384,
+      "low": 102.54,
+      "close": 103.33,
+      "volume": 207286
+    },
+    {
+      "timestamp": "2024-02-27",
+      "ticker": "KSPI",
+      "open": 103.51,
+      "high": 104.64,
+      "low": 102.01,
+      "close": 104.23,
+      "volume": 124248
+    },
+    {
+      "timestamp": "2024-02-28",
+      "ticker": "KSPI",
+      "open": 102.8,
+      "high": 104.74,
+      "low": 102.1,
+      "close": 103.49,
+      "volume": 126793
+    },
+    {
+      "timestamp": "2024-02-29",
+      "ticker": "KSPI",
+      "open": 104.33,
+      "high": 106.03,
+      "low": 103.06,
+      "close": 103.99,
+      "volume": 220087
+    },
+    {
+      "timestamp": "2024-03-01",
+      "ticker": "KSPI",
+      "open": 104.09,
+      "high": 106.675,
+      "low": 103.01,
+      "close": 106.23,
+      "volume": 187177
+    },
+    {
+      "timestamp": "2024-03-04",
+      "ticker": "KSPI",
+      "open": 106.39,
+      "high": 109.165,
+      "low": 104.36,
+      "close": 106.59,
+      "volume": 225926
+    },
+    {
+      "timestamp": "2024-03-05",
+      "ticker": "KSPI",
+      "open": 105.59,
+      "high": 106.0,
+      "low": 102.145,
+      "close": 104.3,
+      "volume": 256474
+    },
+    {
+      "timestamp": "2024-03-06",
+      "ticker": "KSPI",
+      "open": 103.9,
+      "high": 110.725,
+      "low": 103.475,
+      "close": 109.12,
+      "volume": 625294
+    },
+    {
+      "timestamp": "2024-03-07",
+      "ticker": "KSPI",
+      "open": 107.6,
+      "high": 107.64,
+      "low": 104.01,
+      "close": 105.68,
+      "volume": 234562
+    },
+    {
+      "timestamp": "2024-03-08",
+      "ticker": "KSPI",
+      "open": 104.91,
+      "high": 108.59,
+      "low": 104.75,
+      "close": 106.32,
+      "volume": 194497
+    },
+    {
+      "timestamp": "2024-03-11",
+      "ticker": "KSPI",
+      "open": 107.09,
+      "high": 108.4,
+      "low": 104.62,
+      "close": 105.16,
+      "volume": 200477
+    },
+    {
+      "timestamp": "2024-03-12",
+      "ticker": "KSPI",
+      "open": 106.0,
+      "high": 110.55,
+      "low": 105.455,
+      "close": 109.84,
+      "volume": 332619
+    },
+    {
+      "timestamp": "2024-03-13",
+      "ticker": "KSPI",
+      "open": 109.8,
+      "high": 112.39,
+      "low": 108.675,
+      "close": 111.115,
+      "volume": 278566
+    },
+    {
+      "timestamp": "2024-03-14",
+      "ticker": "KSPI",
+      "open": 112.0,
+      "high": 115.14,
+      "low": 111.06,
+      "close": 114.87,
+      "volume": 200407
+    },
+    {
+      "timestamp": "2024-03-15",
+      "ticker": "KSPI",
+      "open": 114.7,
+      "high": 114.7,
+      "low": 110.01,
+      "close": 112.65,
+      "volume": 230282
+    },
+    {
+      "timestamp": "2024-03-18",
+      "ticker": "KSPI",
+      "open": 111.1,
+      "high": 114.8685,
+      "low": 111.09,
+      "close": 114.05,
+      "volume": 225926
+    },
+    {
+      "timestamp": "2024-03-19",
+      "ticker": "KSPI",
+      "open": 114.0,
+      "high": 115.0,
+      "low": 113.2307,
+      "close": 114.97,
+      "volume": 141587
+    },
+    {
+      "timestamp": "2024-03-20",
+      "ticker": "KSPI",
+      "open": 114.39,
+      "high": 119.72,
+      "low": 113.95,
+      "close": 119.03,
+      "volume": 239593
+    },
+    {
+      "timestamp": "2024-03-21",
+      "ticker": "KSPI",
+      "open": 119.83,
+      "high": 120.7,
+      "low": 118.1,
+      "close": 120.05,
+      "volume": 418969
+    },
+    {
+      "timestamp": "2024-03-22",
+      "ticker": "KSPI",
+      "open": 119.96,
+      "high": 123.305,
+      "low": 119.02,
+      "close": 121.89,
+      "volume": 408007
+    },
+    {
+      "timestamp": "2024-03-25",
+      "ticker": "KSPI",
+      "open": 123.91,
+      "high": 124.44,
+      "low": 118.815,
+      "close": 120.79,
+      "volume": 446355
+    },
+    {
+      "timestamp": "2024-03-26",
+      "ticker": "KSPI",
+      "open": 121.38,
+      "high": 124.279,
+      "low": 121.38,
+      "close": 123.89,
+      "volume": 668452
+    },
+    {
+      "timestamp": "2024-03-27",
+      "ticker": "KSPI",
+      "open": 124.7,
+      "high": 126.65,
+      "low": 123.68,
+      "close": 125.92,
+      "volume": 464763
+    },
+    {
+      "timestamp": "2024-03-28",
+      "ticker": "KSPI",
+      "open": 126.0,
+      "high": 129.055,
+      "low": 124.465,
+      "close": 128.64,
+      "volume": 574668
+    },
+    {
+      "timestamp": "2024-04-01",
+      "ticker": "KSPI",
+      "open": 129.95,
+      "high": 131.72,
+      "low": 125.96,
+      "close": 130.98,
+      "volume": 969142
+    },
+    {
+      "timestamp": "2024-04-02",
+      "ticker": "KSPI",
+      "open": 129.66,
+      "high": 131.99,
+      "low": 127.52,
+      "close": 131.84,
+      "volume": 968989
+    },
+    {
+      "timestamp": "2024-04-03",
+      "ticker": "KSPI",
+      "open": 132.0,
+      "high": 136.07,
+      "low": 131.14,
+      "close": 135.14,
+      "volume": 573493
+    },
+    {
+      "timestamp": "2024-04-04",
+      "ticker": "KSPI",
+      "open": 135.4,
+      "high": 136.17,
+      "low": 128.095,
+      "close": 131.85,
+      "volume": 1095489
+    },
+    {
+      "timestamp": "2024-04-05",
+      "ticker": "KSPI",
+      "open": 131.75,
+      "high": 134.04,
+      "low": 130.75,
+      "close": 132.76,
+      "volume": 623387
+    },
+    {
+      "timestamp": "2024-04-08",
+      "ticker": "KSPI",
+      "open": 132.88,
+      "high": 132.88,
+      "low": 119.505,
+      "close": 123.5,
+      "volume": 762362
+    },
+    {
+      "timestamp": "2024-04-09",
+      "ticker": "KSPI",
+      "open": 123.66,
+      "high": 124.34,
+      "low": 114.715,
+      "close": 118.16,
+      "volume": 689074
+    },
+    {
+      "timestamp": "2024-04-10",
+      "ticker": "KSPI",
+      "open": 115.42,
+      "high": 120.79,
+      "low": 115.42,
+      "close": 116.16,
+      "volume": 434585
+    },
+    {
+      "timestamp": "2024-04-11",
+      "ticker": "KSPI",
+      "open": 116.17,
+      "high": 119.38,
+      "low": 115.82,
+      "close": 116.1,
+      "volume": 241172
+    },
+    {
+      "timestamp": "2024-04-12",
+      "ticker": "KSPI",
+      "open": 115.0,
+      "high": 115.0,
+      "low": 111.381,
+      "close": 111.91,
+      "volume": 187110
+    },
+    {
+      "timestamp": "2024-04-15",
+      "ticker": "KSPI",
+      "open": 112.99,
+      "high": 113.975,
+      "low": 110.01,
+      "close": 111.23,
+      "volume": 223134
+    },
+    {
+      "timestamp": "2024-04-16",
+      "ticker": "KSPI",
+      "open": 111.0,
+      "high": 114.2,
+      "low": 108.58,
+      "close": 112.2,
+      "volume": 276822
+    },
+    {
+      "timestamp": "2024-04-17",
+      "ticker": "KSPI",
+      "open": 112.59,
+      "high": 117.15,
+      "low": 112.59,
+      "close": 114.06,
+      "volume": 382308
+    },
+    {
+      "timestamp": "2024-04-18",
+      "ticker": "KSPI",
+      "open": 114.84,
+      "high": 116.23,
+      "low": 111.42,
+      "close": 112.23,
+      "volume": 434401
+    },
+    {
+      "timestamp": "2024-04-19",
+      "ticker": "KSPI",
+      "open": 112.23,
+      "high": 116.31,
+      "low": 110.89,
+      "close": 115.72,
+      "volume": 296056
+    },
+    {
+      "timestamp": "2024-04-22",
+      "ticker": "KSPI",
+      "open": 119.1,
+      "high": 122.56,
+      "low": 114.28,
+      "close": 115.18,
+      "volume": 496110
+    },
+    {
+      "timestamp": "2024-04-23",
+      "ticker": "KSPI",
+      "open": 117.5,
+      "high": 123.1735,
+      "low": 114.95,
+      "close": 122.99,
+      "volume": 347861
+    },
+    {
+      "timestamp": "2024-04-24",
+      "ticker": "KSPI",
+      "open": 122.19,
+      "high": 124.08,
+      "low": 115.88,
+      "close": 116.2,
+      "volume": 280547
+    },
+    {
+      "timestamp": "2024-04-25",
+      "ticker": "KSPI",
+      "open": 113.54,
+      "high": 118.34,
+      "low": 111.16,
+      "close": 116.32,
+      "volume": 244418
+    },
+    {
+      "timestamp": "2024-04-26",
+      "ticker": "KSPI",
+      "open": 117.0,
+      "high": 121.72,
+      "low": 116.135,
+      "close": 120.12,
+      "volume": 233461
+    },
+    {
+      "timestamp": "2024-04-29",
+      "ticker": "KSPI",
+      "open": 120.21,
+      "high": 120.36,
+      "low": 115.0,
+      "close": 116.07,
+      "volume": 158178
+    },
+    {
+      "timestamp": "2024-04-30",
+      "ticker": "KSPI",
+      "open": 115.61,
+      "high": 120.0,
+      "low": 115.02,
+      "close": 117.76,
+      "volume": 343200
+    },
+    {
+      "timestamp": "2024-05-01",
+      "ticker": "KSPI",
+      "open": 115.87,
+      "high": 118.83,
+      "low": 114.83,
+      "close": 115.46,
+      "volume": 439582
+    },
+    {
+      "timestamp": "2024-05-02",
+      "ticker": "KSPI",
+      "open": 117.22,
+      "high": 117.97,
+      "low": 115.055,
+      "close": 116.53,
+      "volume": 108851
+    },
+    {
+      "timestamp": "2024-05-03",
+      "ticker": "KSPI",
+      "open": 117.0,
+      "high": 120.54,
+      "low": 116.645,
+      "close": 118.46,
+      "volume": 153136
+    },
+    {
+      "timestamp": "2024-05-06",
+      "ticker": "KSPI",
+      "open": 119.73,
+      "high": 123.01,
+      "low": 119.21,
+      "close": 120.33,
+      "volume": 108659
+    },
+    {
+      "timestamp": "2024-05-07",
+      "ticker": "KSPI",
+      "open": 121.34,
+      "high": 121.8929,
+      "low": 118.01,
+      "close": 120.52,
+      "volume": 122737
+    },
+    {
+      "timestamp": "2024-05-08",
+      "ticker": "KSPI",
+      "open": 120.15,
+      "high": 120.56,
+      "low": 117.82,
+      "close": 118.27,
+      "volume": 87587
+    },
+    {
+      "timestamp": "2024-05-09",
+      "ticker": "KSPI",
+      "open": 118.78,
+      "high": 123.44,
+      "low": 118.755,
+      "close": 122.09,
+      "volume": 185977
+    },
+    {
+      "timestamp": "2024-05-10",
+      "ticker": "KSPI",
+      "open": 123.5,
+      "high": 123.78,
+      "low": 119.73,
+      "close": 120.2,
+      "volume": 102729
+    },
+    {
+      "timestamp": "2024-05-13",
+      "ticker": "KSPI",
+      "open": 120.0,
+      "high": 121.8,
+      "low": 117.96,
+      "close": 118.57,
+      "volume": 136998
+    },
+    {
+      "timestamp": "2024-05-14",
+      "ticker": "KSPI",
+      "open": 119.0,
+      "high": 121.54,
+      "low": 118.4775,
+      "close": 119.97,
+      "volume": 89924
+    },
+    {
+      "timestamp": "2024-05-15",
+      "ticker": "KSPI",
+      "open": 120.0,
+      "high": 121.0,
+      "low": 115.93,
+      "close": 116.215,
+      "volume": 155225
+    },
+    {
+      "timestamp": "2024-05-16",
+      "ticker": "KSPI",
+      "open": 115.42,
+      "high": 120.035,
+      "low": 114.76,
+      "close": 119.02,
+      "volume": 231253
+    },
+    {
+      "timestamp": "2024-05-17",
+      "ticker": "KSPI",
+      "open": 119.78,
+      "high": 119.78,
+      "low": 116.46,
+      "close": 117.62,
+      "volume": 99084
+    },
+    {
+      "timestamp": "2024-05-20",
+      "ticker": "KSPI",
+      "open": 117.55,
+      "high": 118.8,
+      "low": 115.44,
+      "close": 116.1,
+      "volume": 80634
+    },
+    {
+      "timestamp": "2024-05-21",
+      "ticker": "KSPI",
+      "open": 117.22,
+      "high": 117.73,
+      "low": 113.93,
+      "close": 115.8,
+      "volume": 174861
+    },
+    {
+      "timestamp": "2024-05-22",
+      "ticker": "KSPI",
+      "open": 114.08,
+      "high": 119.71,
+      "low": 114.08,
+      "close": 118.08,
+      "volume": 211161
+    },
+    {
+      "timestamp": "2024-05-23",
+      "ticker": "KSPI",
+      "open": 117.19,
+      "high": 123.0,
+      "low": 117.1,
+      "close": 121.62,
+      "volume": 252714
+    },
+    {
+      "timestamp": "2024-05-24",
+      "ticker": "KSPI",
+      "open": 121.62,
+      "high": 126.69,
+      "low": 121.43,
+      "close": 122.2,
+      "volume": 322644
+    },
+    {
+      "timestamp": "2024-05-28",
+      "ticker": "KSPI",
+      "open": 123.28,
+      "high": 124.98,
+      "low": 119.26,
+      "close": 124.36,
+      "volume": 276408
+    },
+    {
+      "timestamp": "2024-05-29",
+      "ticker": "KSPI",
+      "open": 124.0,
+      "high": 126.98,
+      "low": 122.71,
+      "close": 123.9,
+      "volume": 395236
+    },
+    {
+      "timestamp": "2024-05-30",
+      "ticker": "KSPI",
+      "open": 123.9,
+      "high": 125.65,
+      "low": 121.88,
+      "close": 124.99,
+      "volume": 122825
+    },
+    {
+      "timestamp": "2024-05-31",
+      "ticker": "KSPI",
+      "open": 125.37,
+      "high": 128.585,
+      "low": 125.0,
+      "close": 126.4,
+      "volume": 253783
+    },
+    {
+      "timestamp": "2024-06-03",
+      "ticker": "KSPI",
+      "open": 128.39,
+      "high": 129.59,
+      "low": 126.4,
+      "close": 128.34,
+      "volume": 184696
+    },
+    {
+      "timestamp": "2024-06-04",
+      "ticker": "KSPI",
+      "open": 127.98,
+      "high": 128.25,
+      "low": 123.8827,
+      "close": 124.98,
+      "volume": 359378
+    },
+    {
+      "timestamp": "2024-06-05",
+      "ticker": "KSPI",
+      "open": 124.89,
+      "high": 129.65,
+      "low": 124.445,
+      "close": 127.01,
+      "volume": 250373
+    },
+    {
+      "timestamp": "2024-06-06",
+      "ticker": "KSPI",
+      "open": 126.26,
+      "high": 129.05,
+      "low": 125.58,
+      "close": 128.41,
+      "volume": 216807
+    },
+    {
+      "timestamp": "2024-06-07",
+      "ticker": "KSPI",
+      "open": 128.0,
+      "high": 128.46,
+      "low": 125.89,
+      "close": 126.56,
+      "volume": 242004
+    },
+    {
+      "timestamp": "2024-06-10",
+      "ticker": "KSPI",
+      "open": 126.56,
+      "high": 126.56,
+      "low": 121.32,
+      "close": 125.93,
+      "volume": 440940
+    },
+    {
+      "timestamp": "2024-06-11",
+      "ticker": "KSPI",
+      "open": 125.0,
+      "high": 127.8,
+      "low": 123.2225,
+      "close": 126.07,
+      "volume": 154479
+    },
+    {
+      "timestamp": "2024-06-12",
+      "ticker": "KSPI",
+      "open": 127.16,
+      "high": 130.4,
+      "low": 126.1,
+      "close": 129.2,
+      "volume": 364873
+    },
+    {
+      "timestamp": "2024-06-13",
+      "ticker": "KSPI",
+      "open": 130.0,
+      "high": 130.0,
+      "low": 127.25,
+      "close": 129.07,
+      "volume": 296269
+    },
+    {
+      "timestamp": "2024-06-14",
+      "ticker": "KSPI",
+      "open": 127.86,
+      "high": 128.32,
+      "low": 124.41,
+      "close": 126.68,
+      "volume": 263327
+    },
+    {
+      "timestamp": "2024-06-17",
+      "ticker": "KSPI",
+      "open": 125.66,
+      "high": 128.0,
+      "low": 124.91,
+      "close": 127.29,
+      "volume": 193391
+    },
+    {
+      "timestamp": "2024-06-18",
+      "ticker": "KSPI",
+      "open": 127.54,
+      "high": 132.88,
+      "low": 126.5,
+      "close": 129.12,
+      "volume": 544083
+    },
+    {
+      "timestamp": "2024-06-20",
+      "ticker": "KSPI",
+      "open": 129.12,
+      "high": 130.8099,
+      "low": 127.33,
+      "close": 128.99,
+      "volume": 389310
+    },
+    {
+      "timestamp": "2024-06-21",
+      "ticker": "KSPI",
+      "open": 128.99,
+      "high": 130.525,
+      "low": 127.01,
+      "close": 129.46,
+      "volume": 630962
+    },
+    {
+      "timestamp": "2024-06-24",
+      "ticker": "KSPI",
+      "open": 129.5,
+      "high": 131.41,
+      "low": 127.615,
+      "close": 130.26,
+      "volume": 164258
+    },
+    {
+      "timestamp": "2024-06-25",
+      "ticker": "KSPI",
+      "open": 130.6,
+      "high": 134.0,
+      "low": 128.73,
+      "close": 133.03,
+      "volume": 333866
+    },
+    {
+      "timestamp": "2024-06-26",
+      "ticker": "KSPI",
+      "open": 133.03,
+      "high": 136.385,
+      "low": 130.63,
+      "close": 135.92,
+      "volume": 556627
+    },
+    {
+      "timestamp": "2024-06-27",
+      "ticker": "KSPI",
+      "open": 135.92,
+      "high": 136.37,
+      "low": 130.92,
+      "close": 132.28,
+      "volume": 256709
+    },
+    {
+      "timestamp": "2024-06-28",
+      "ticker": "KSPI",
+      "open": 133.46,
+      "high": 135.0,
+      "low": 128.79,
+      "close": 129.01,
+      "volume": 201096
+    },
+    {
+      "timestamp": "2024-07-01",
+      "ticker": "KSPI",
+      "open": 130.01,
+      "high": 131.5114,
+      "low": 127.17,
+      "close": 128.64,
+      "volume": 314119
+    },
+    {
+      "timestamp": "2024-07-02",
+      "ticker": "KSPI",
+      "open": 128.7,
+      "high": 130.0,
+      "low": 127.34,
+      "close": 129.81,
+      "volume": 166531
+    },
+    {
+      "timestamp": "2024-07-03",
+      "ticker": "KSPI",
+      "open": 129.91,
+      "high": 135.06,
+      "low": 127.0,
+      "close": 134.19,
+      "volume": 191109
+    },
+    {
+      "timestamp": "2024-07-05",
+      "ticker": "KSPI",
+      "open": 135.0,
+      "high": 135.61,
+      "low": 131.87,
+      "close": 132.53,
+      "volume": 168107
+    },
+    {
+      "timestamp": "2024-07-08",
+      "ticker": "KSPI",
+      "open": 132.53,
+      "high": 134.54,
+      "low": 130.18,
+      "close": 131.83,
+      "volume": 424725
+    },
+    {
+      "timestamp": "2024-07-09",
+      "ticker": "KSPI",
+      "open": 132.0,
+      "high": 132.6,
+      "low": 126.01,
+      "close": 127.96,
+      "volume": 210357
+    },
+    {
+      "timestamp": "2024-07-10",
+      "ticker": "KSPI",
+      "open": 127.96,
+      "high": 131.21,
+      "low": 127.87,
+      "close": 128.68,
+      "volume": 135042
+    },
+    {
+      "timestamp": "2024-07-11",
+      "ticker": "KSPI",
+      "open": 129.0,
+      "high": 135.0,
+      "low": 128.485,
+      "close": 130.93,
+      "volume": 161557
+    },
+    {
+      "timestamp": "2024-07-12",
+      "ticker": "KSPI",
+      "open": 131.9,
+      "high": 135.09,
+      "low": 131.9,
+      "close": 133.25,
+      "volume": 94579
+    },
+    {
+      "timestamp": "2024-07-15",
+      "ticker": "KSPI",
+      "open": 133.26,
+      "high": 135.6,
+      "low": 131.6501,
+      "close": 134.43,
+      "volume": 194963
+    },
+    {
+      "timestamp": "2024-07-16",
+      "ticker": "KSPI",
+      "open": 135.0,
+      "high": 140.295,
+      "low": 134.58,
+      "close": 138.655,
+      "volume": 343359
+    },
+    {
+      "timestamp": "2024-07-17",
+      "ticker": "KSPI",
+      "open": 138.45,
+      "high": 141.36,
+      "low": 135.225,
+      "close": 136.84,
+      "volume": 197108
+    },
+    {
+      "timestamp": "2024-07-18",
+      "ticker": "KSPI",
+      "open": 137.05,
+      "high": 143.72,
+      "low": 137.0,
+      "close": 138.72,
+      "volume": 259604
+    },
+    {
+      "timestamp": "2024-07-19",
+      "ticker": "KSPI",
+      "open": 138.6,
+      "high": 139.77,
+      "low": 135.0566,
+      "close": 137.8,
+      "volume": 292614
+    },
+    {
+      "timestamp": "2024-07-22",
+      "ticker": "KSPI",
+      "open": 137.34,
+      "high": 139.99,
+      "low": 128.44,
+      "close": 130.45,
+      "volume": 412257
+    },
+    {
+      "timestamp": "2024-07-23",
+      "ticker": "KSPI",
+      "open": 132.83,
+      "high": 138.01,
+      "low": 131.09,
+      "close": 131.71,
+      "volume": 239215
+    },
+    {
+      "timestamp": "2024-07-24",
+      "ticker": "KSPI",
+      "open": 131.7,
+      "high": 135.18,
+      "low": 131.41,
+      "close": 131.52,
+      "volume": 133061
+    },
+    {
+      "timestamp": "2024-07-25",
+      "ticker": "KSPI",
+      "open": 131.0,
+      "high": 133.99,
+      "low": 126.2101,
+      "close": 129.91,
+      "volume": 501955
+    },
+    {
+      "timestamp": "2024-07-26",
+      "ticker": "KSPI",
+      "open": 130.38,
+      "high": 132.0,
+      "low": 127.6201,
+      "close": 130.75,
+      "volume": 109391
+    },
+    {
+      "timestamp": "2024-07-29",
+      "ticker": "KSPI",
+      "open": 131.0,
+      "high": 135.49,
+      "low": 130.77,
+      "close": 131.94,
+      "volume": 135902
+    },
+    {
+      "timestamp": "2024-07-30",
+      "ticker": "KSPI",
+      "open": 131.88,
+      "high": 133.085,
+      "low": 128.59,
+      "close": 129.5,
+      "volume": 142351
+    },
+    {
+      "timestamp": "2024-07-31",
+      "ticker": "KSPI",
+      "open": 132.0,
+      "high": 132.21,
+      "low": 129.27,
+      "close": 130.13,
+      "volume": 104596
+    },
+    {
+      "timestamp": "2024-08-01",
+      "ticker": "KSPI",
+      "open": 129.52,
+      "high": 129.52,
+      "low": 124.0001,
+      "close": 124.32,
+      "volume": 203220
+    },
+    {
+      "timestamp": "2024-08-02",
+      "ticker": "KSPI",
+      "open": 121.49,
+      "high": 122.0,
+      "low": 117.42,
+      "close": 120.0,
+      "volume": 305969
+    },
+    {
+      "timestamp": "2024-08-05",
+      "ticker": "KSPI",
+      "open": 112.32,
+      "high": 117.66,
+      "low": 111.6404,
+      "close": 116.0,
+      "volume": 437067
+    },
+    {
+      "timestamp": "2024-08-06",
+      "ticker": "KSPI",
+      "open": 117.31,
+      "high": 119.91,
+      "low": 116.95,
+      "close": 118.49,
+      "volume": 217797
+    },
+    {
+      "timestamp": "2024-08-07",
+      "ticker": "KSPI",
+      "open": 121.96,
+      "high": 123.0,
+      "low": 118.32,
+      "close": 118.5,
+      "volume": 97671
+    },
+    {
+      "timestamp": "2024-08-08",
+      "ticker": "KSPI",
+      "open": 119.8,
+      "high": 120.6,
+      "low": 118.16,
+      "close": 120.19,
+      "volume": 108316
+    },
+    {
+      "timestamp": "2024-08-09",
+      "ticker": "KSPI",
+      "open": 121.13,
+      "high": 123.5,
+      "low": 120.06,
+      "close": 120.34,
+      "volume": 151570
+    },
+    {
+      "timestamp": "2024-08-12",
+      "ticker": "KSPI",
+      "open": 121.35,
+      "high": 124.0,
+      "low": 120.84,
+      "close": 122.92,
+      "volume": 105081
+    },
+    {
+      "timestamp": "2024-08-13",
+      "ticker": "KSPI",
+      "open": 123.61,
+      "high": 126.0,
+      "low": 123.03,
+      "close": 125.48,
+      "volume": 81355
+    },
+    {
+      "timestamp": "2024-08-14",
+      "ticker": "KSPI",
+      "open": 126.26,
+      "high": 127.0,
+      "low": 124.43,
+      "close": 126.19,
+      "volume": 89963
+    },
+    {
+      "timestamp": "2024-08-15",
+      "ticker": "KSPI",
+      "open": 127.81,
+      "high": 130.28,
+      "low": 126.16,
+      "close": 126.4,
+      "volume": 176144
+    },
+    {
+      "timestamp": "2024-08-16",
+      "ticker": "KSPI",
+      "open": 126.54,
+      "high": 127.37,
+      "low": 124.25,
+      "close": 126.54,
+      "volume": 102779
+    },
+    {
+      "timestamp": "2024-08-19",
+      "ticker": "KSPI",
+      "open": 126.69,
+      "high": 128.45,
+      "low": 125.17,
+      "close": 128.12,
+      "volume": 107412
+    },
+    {
+      "timestamp": "2024-08-20",
+      "ticker": "KSPI",
+      "open": 128.43,
+      "high": 128.7799,
+      "low": 123.51,
+      "close": 124.92,
+      "volume": 135578
+    },
+    {
+      "timestamp": "2024-08-21",
+      "ticker": "KSPI",
+      "open": 125.0,
+      "high": 128.79,
+      "low": 124.37,
+      "close": 127.08,
+      "volume": 115135
+    },
+    {
+      "timestamp": "2024-08-22",
+      "ticker": "KSPI",
+      "open": 126.65,
+      "high": 127.0,
+      "low": 123.94,
+      "close": 124.37,
+      "volume": 174594
+    },
+    {
+      "timestamp": "2024-08-23",
+      "ticker": "KSPI",
+      "open": 124.9,
+      "high": 128.95,
+      "low": 124.11,
+      "close": 127.58,
+      "volume": 161625
+    },
+    {
+      "timestamp": "2024-08-26",
+      "ticker": "KSPI",
+      "open": 127.36,
+      "high": 127.9,
+      "low": 124.55,
+      "close": 125.27,
+      "volume": 155067
+    },
+    {
+      "timestamp": "2024-08-27",
+      "ticker": "KSPI",
+      "open": 125.81,
+      "high": 128.77,
+      "low": 124.03,
+      "close": 127.26,
+      "volume": 80590
+    },
+    {
+      "timestamp": "2024-08-28",
+      "ticker": "KSPI",
+      "open": 126.83,
+      "high": 128.74,
+      "low": 122.6,
+      "close": 122.65,
+      "volume": 87172
+    },
+    {
+      "timestamp": "2024-08-29",
+      "ticker": "KSPI",
+      "open": 123.81,
+      "high": 129.33,
+      "low": 123.71,
+      "close": 129.31,
+      "volume": 207504
+    },
+    {
+      "timestamp": "2024-08-30",
+      "ticker": "KSPI",
+      "open": 129.8,
+      "high": 131.62,
+      "low": 128.61,
+      "close": 130.93,
+      "volume": 168376
+    },
+    {
+      "timestamp": "2024-09-03",
+      "ticker": "KSPI",
+      "open": 130.0,
+      "high": 130.0,
+      "low": 124.85,
+      "close": 125.5,
+      "volume": 201455
+    },
+    {
+      "timestamp": "2024-09-04",
+      "ticker": "KSPI",
+      "open": 125.36,
+      "high": 127.84,
+      "low": 124.955,
+      "close": 126.66,
+      "volume": 119585
+    },
+    {
+      "timestamp": "2024-09-05",
+      "ticker": "KSPI",
+      "open": 126.5,
+      "high": 129.78,
+      "low": 126.5,
+      "close": 128.37,
+      "volume": 154960
+    },
+    {
+      "timestamp": "2024-09-06",
+      "ticker": "KSPI",
+      "open": 128.32,
+      "high": 128.54,
+      "low": 122.5,
+      "close": 123.34,
+      "volume": 459858
+    },
+    {
+      "timestamp": "2024-09-09",
+      "ticker": "KSPI",
+      "open": 124.4,
+      "high": 125.81,
+      "low": 122.59,
+      "close": 123.3,
+      "volume": 113390
+    },
+    {
+      "timestamp": "2024-09-10",
+      "ticker": "KSPI",
+      "open": 123.04,
+      "high": 124.26,
+      "low": 121.3625,
+      "close": 122.92,
+      "volume": 242030
+    },
+    {
+      "timestamp": "2024-09-11",
+      "ticker": "KSPI",
+      "open": 123.19,
+      "high": 123.65,
+      "low": 120.91,
+      "close": 122.05,
+      "volume": 174805
+    },
+    {
+      "timestamp": "2024-09-12",
+      "ticker": "KSPI",
+      "open": 122.78,
+      "high": 125.955,
+      "low": 122.73,
+      "close": 124.87,
+      "volume": 185386
+    },
+    {
+      "timestamp": "2024-09-13",
+      "ticker": "KSPI",
+      "open": 125.55,
+      "high": 126.195,
+      "low": 122.61,
+      "close": 123.95,
+      "volume": 156731
+    },
+    {
+      "timestamp": "2024-09-16",
+      "ticker": "KSPI",
+      "open": 122.93,
+      "high": 125.79,
+      "low": 114.88,
+      "close": 122.22,
+      "volume": 320429
+    },
+    {
+      "timestamp": "2024-09-17",
+      "ticker": "KSPI",
+      "open": 122.4,
+      "high": 125.075,
+      "low": 121.31,
+      "close": 123.52,
+      "volume": 476375
+    },
+    {
+      "timestamp": "2024-09-18",
+      "ticker": "KSPI",
+      "open": 123.94,
+      "high": 124.09,
+      "low": 118.26,
+      "close": 119.01,
+      "volume": 516061
+    },
+    {
+      "timestamp": "2024-09-19",
+      "ticker": "KSPI",
+      "open": 114.0,
+      "high": 116.45,
+      "low": 90.475,
+      "close": 99.81,
+      "volume": 5114694
+    },
+    {
+      "timestamp": "2024-09-20",
+      "ticker": "KSPI",
+      "open": 105.0,
+      "high": 107.93,
+      "low": 93.69,
+      "close": 97.1,
+      "volume": 2282012
+    },
+    {
+      "timestamp": "2024-09-23",
+      "ticker": "KSPI",
+      "open": 99.91,
+      "high": 102.5319,
+      "low": 99.21,
+      "close": 99.345,
+      "volume": 901907
+    },
+    {
+      "timestamp": "2024-09-24",
+      "ticker": "KSPI",
+      "open": 103.36,
+      "high": 107.85,
+      "low": 101.945,
+      "close": 104.47,
+      "volume": 1013221
+    },
+    {
+      "timestamp": "2024-09-25",
+      "ticker": "KSPI",
+      "open": 104.75,
+      "high": 106.985,
+      "low": 103.0,
+      "close": 106.24,
+      "volume": 623863
+    },
+    {
+      "timestamp": "2024-09-26",
+      "ticker": "KSPI",
+      "open": 106.24,
+      "high": 109.29,
+      "low": 102.5,
+      "close": 104.11,
+      "volume": 303185
+    },
+    {
+      "timestamp": "2024-09-27",
+      "ticker": "KSPI",
+      "open": 104.35,
+      "high": 104.5,
+      "low": 101.0001,
+      "close": 102.99,
+      "volume": 548340
+    },
+    {
+      "timestamp": "2024-09-30",
+      "ticker": "KSPI",
+      "open": 102.8,
+      "high": 106.23,
+      "low": 101.01,
+      "close": 105.99,
+      "volume": 349534
+    },
+    {
+      "timestamp": "2024-10-01",
+      "ticker": "KSPI",
+      "open": 105.32,
+      "high": 105.9,
+      "low": 102.905,
+      "close": 103.62,
+      "volume": 270421
+    },
+    {
+      "timestamp": "2024-10-02",
+      "ticker": "KSPI",
+      "open": 103.62,
+      "high": 108.57,
+      "low": 103.47,
+      "close": 108.38,
+      "volume": 392917
+    },
+    {
+      "timestamp": "2024-10-03",
+      "ticker": "KSPI",
+      "open": 107.63,
+      "high": 107.98,
+      "low": 105.75,
+      "close": 106.08,
+      "volume": 174713
+    },
+    {
+      "timestamp": "2024-10-04",
+      "ticker": "KSPI",
+      "open": 107.0,
+      "high": 107.89,
+      "low": 105.0,
+      "close": 105.57,
+      "volume": 142784
+    },
+    {
+      "timestamp": "2024-10-07",
+      "ticker": "KSPI",
+      "open": 106.0,
+      "high": 106.0,
+      "low": 103.01,
+      "close": 103.69,
+      "volume": 213553
+    },
+    {
+      "timestamp": "2024-10-08",
+      "ticker": "KSPI",
+      "open": 104.0,
+      "high": 104.85,
+      "low": 102.6,
+      "close": 102.93,
+      "volume": 154608
+    },
+    {
+      "timestamp": "2024-10-09",
+      "ticker": "KSPI",
+      "open": 102.5,
+      "high": 104.5,
+      "low": 101.55,
+      "close": 103.11,
+      "volume": 208032
+    },
+    {
+      "timestamp": "2024-10-10",
+      "ticker": "KSPI",
+      "open": 104.87,
+      "high": 108.36,
+      "low": 103.04,
+      "close": 108.11,
+      "volume": 342537
+    },
+    {
+      "timestamp": "2024-10-11",
+      "ticker": "KSPI",
+      "open": 107.19,
+      "high": 109.73,
+      "low": 107.08,
+      "close": 108.66,
+      "volume": 324849
+    },
+    {
+      "timestamp": "2024-10-14",
+      "ticker": "KSPI",
+      "open": 109.74,
+      "high": 110.15,
+      "low": 108.083,
+      "close": 108.28,
+      "volume": 189477
+    },
+    {
+      "timestamp": "2024-10-15",
+      "ticker": "KSPI",
+      "open": 108.12,
+      "high": 108.6,
+      "low": 104.85,
+      "close": 104.85,
+      "volume": 153845
+    },
+    {
+      "timestamp": "2024-10-16",
+      "ticker": "KSPI",
+      "open": 106.27,
+      "high": 108.96,
+      "low": 105.8022,
+      "close": 108.39,
+      "volume": 217780
+    },
+    {
+      "timestamp": "2024-10-17",
+      "ticker": "KSPI",
+      "open": 108.57,
+      "high": 109.65,
+      "low": 105.75,
+      "close": 106.88,
+      "volume": 142896
+    },
+    {
+      "timestamp": "2024-10-18",
+      "ticker": "KSPI",
+      "open": 110.0,
+      "high": 115.2,
+      "low": 109.5,
+      "close": 115.2,
+      "volume": 551445
+    },
+    {
+      "timestamp": "2024-10-21",
+      "ticker": "KSPI",
+      "open": 116.84,
+      "high": 116.84,
+      "low": 108.75,
+      "close": 110.95,
+      "volume": 373024
+    },
+    {
+      "timestamp": "2024-10-22",
+      "ticker": "KSPI",
+      "open": 111.18,
+      "high": 112.98,
+      "low": 109.645,
+      "close": 112.73,
+      "volume": 166131
+    },
+    {
+      "timestamp": "2024-10-23",
+      "ticker": "KSPI",
+      "open": 112.56,
+      "high": 114.2,
+      "low": 109.75,
+      "close": 110.0,
+      "volume": 180727
+    },
+    {
+      "timestamp": "2024-10-24",
+      "ticker": "KSPI",
+      "open": 110.01,
+      "high": 110.9,
+      "low": 107.61,
+      "close": 110.22,
+      "volume": 175905
+    },
+    {
+      "timestamp": "2024-10-25",
+      "ticker": "KSPI",
+      "open": 111.07,
+      "high": 111.25,
+      "low": 107.76,
+      "close": 108.44,
+      "volume": 201643
+    },
+    {
+      "timestamp": "2024-10-28",
+      "ticker": "KSPI",
+      "open": 109.32,
+      "high": 112.47,
+      "low": 109.32,
+      "close": 111.61,
+      "volume": 114621
+    },
+    {
+      "timestamp": "2024-10-29",
+      "ticker": "KSPI",
+      "open": 110.75,
+      "high": 111.29,
+      "low": 109.0,
+      "close": 109.0,
+      "volume": 128034
+    },
+    {
+      "timestamp": "2024-10-30",
+      "ticker": "KSPI",
+      "open": 109.19,
+      "high": 113.9,
+      "low": 108.55,
+      "close": 113.67,
+      "volume": 195004
+    },
+    {
+      "timestamp": "2024-10-31",
+      "ticker": "KSPI",
+      "open": 112.16,
+      "high": 113.66,
+      "low": 110.0,
+      "close": 110.14,
+      "volume": 227653
+    },
+    {
+      "timestamp": "2024-11-01",
+      "ticker": "KSPI",
+      "open": 112.94,
+      "high": 113.35,
+      "low": 108.575,
+      "close": 108.83,
+      "volume": 226041
+    },
+    {
+      "timestamp": "2024-11-04",
+      "ticker": "KSPI",
+      "open": 110.0,
+      "high": 111.3,
+      "low": 108.04,
+      "close": 110.11,
+      "volume": 195971
+    },
+    {
+      "timestamp": "2024-11-05",
+      "ticker": "KSPI",
+      "open": 110.25,
+      "high": 112.79,
+      "low": 110.25,
+      "close": 111.0,
+      "volume": 85055
+    },
+    {
+      "timestamp": "2024-11-06",
+      "ticker": "KSPI",
+      "open": 111.0,
+      "high": 116.5492,
+      "low": 110.32,
+      "close": 115.54,
+      "volume": 241581
+    },
+    {
+      "timestamp": "2024-11-07",
+      "ticker": "KSPI",
+      "open": 115.54,
+      "high": 115.78,
+      "low": 112.775,
+      "close": 112.9,
+      "volume": 162961
+    },
+    {
+      "timestamp": "2024-11-08",
+      "ticker": "KSPI",
+      "open": 113.0,
+      "high": 113.0594,
+      "low": 109.33,
+      "close": 110.88,
+      "volume": 201401
+    },
+    {
+      "timestamp": "2024-11-11",
+      "ticker": "KSPI",
+      "open": 110.9,
+      "high": 113.13,
+      "low": 110.1,
+      "close": 112.09,
+      "volume": 323645
+    },
+    {
+      "timestamp": "2024-11-12",
+      "ticker": "KSPI",
+      "open": 111.79,
+      "high": 114.0,
+      "low": 111.2239,
+      "close": 113.85,
+      "volume": 144834
+    },
+    {
+      "timestamp": "2024-11-13",
+      "ticker": "KSPI",
+      "open": 113.5,
+      "high": 114.98,
+      "low": 112.0,
+      "close": 112.52,
+      "volume": 239360
+    },
+    {
+      "timestamp": "2024-11-14",
+      "ticker": "KSPI",
+      "open": 112.5,
+      "high": 112.5,
+      "low": 110.1,
+      "close": 110.24,
+      "volume": 192235
+    },
+    {
+      "timestamp": "2024-11-15",
+      "ticker": "KSPI",
+      "open": 111.33,
+      "high": 111.85,
+      "low": 109.87,
+      "close": 109.98,
+      "volume": 128374
+    },
+    {
+      "timestamp": "2024-11-18",
+      "ticker": "KSPI",
+      "open": 110.15,
+      "high": 111.0692,
+      "low": 108.64,
+      "close": 110.21,
+      "volume": 201772
+    },
+    {
+      "timestamp": "2024-11-19",
+      "ticker": "KSPI",
+      "open": 110.2,
+      "high": 111.0,
+      "low": 108.5,
+      "close": 109.8,
+      "volume": 249626
+    },
+    {
+      "timestamp": "2024-11-20",
+      "ticker": "KSPI",
+      "open": 108.7,
+      "high": 109.75,
+      "low": 106.0,
+      "close": 106.17,
+      "volume": 247751
+    },
+    {
+      "timestamp": "2024-11-21",
+      "ticker": "KSPI",
+      "open": 106.3,
+      "high": 106.3,
+      "low": 102.23,
+      "close": 103.83,
+      "volume": 278869
+    },
+    {
+      "timestamp": "2024-11-22",
+      "ticker": "KSPI",
+      "open": 105.01,
+      "high": 105.4765,
+      "low": 102.51,
+      "close": 104.0,
+      "volume": 248214
+    },
+    {
+      "timestamp": "2024-11-25",
+      "ticker": "KSPI",
+      "open": 104.37,
+      "high": 107.81,
+      "low": 104.37,
+      "close": 106.19,
+      "volume": 184511
+    },
+    {
+      "timestamp": "2024-11-26",
+      "ticker": "KSPI",
+      "open": 106.04,
+      "high": 109.62,
+      "low": 105.2762,
+      "close": 109.62,
+      "volume": 159636
+    },
+    {
+      "timestamp": "2024-11-27",
+      "ticker": "KSPI",
+      "open": 109.67,
+      "high": 110.8332,
+      "low": 107.51,
+      "close": 108.74,
+      "volume": 120665
+    },
+    {
+      "timestamp": "2024-11-29",
+      "ticker": "KSPI",
+      "open": 109.11,
+      "high": 110.05,
+      "low": 106.4,
+      "close": 106.4,
+      "volume": 124952
+    },
+    {
+      "timestamp": "2024-12-02",
+      "ticker": "KSPI",
+      "open": 105.9,
+      "high": 108.115,
+      "low": 105.62,
+      "close": 106.17,
+      "volume": 261895
+    },
+    {
+      "timestamp": "2024-12-03",
+      "ticker": "KSPI",
+      "open": 105.62,
+      "high": 107.1311,
+      "low": 103.97,
+      "close": 105.02,
+      "volume": 278172
+    },
+    {
+      "timestamp": "2024-12-04",
+      "ticker": "KSPI",
+      "open": 105.05,
+      "high": 110.0,
+      "low": 103.5,
+      "close": 109.44,
+      "volume": 184392
+    },
+    {
+      "timestamp": "2024-12-05",
+      "ticker": "KSPI",
+      "open": 109.36,
+      "high": 110.145,
+      "low": 107.53,
+      "close": 108.68,
+      "volume": 137670
+    },
+    {
+      "timestamp": "2024-12-06",
+      "ticker": "KSPI",
+      "open": 109.1,
+      "high": 112.105,
+      "low": 108.98,
+      "close": 110.06,
+      "volume": 169350
+    },
+    {
+      "timestamp": "2024-12-09",
+      "ticker": "KSPI",
+      "open": 112.5,
+      "high": 113.55,
+      "low": 109.72,
+      "close": 110.37,
+      "volume": 375417
+    },
+    {
+      "timestamp": "2024-12-10",
+      "ticker": "KSPI",
+      "open": 110.76,
+      "high": 111.275,
+      "low": 108.27,
+      "close": 108.91,
+      "volume": 142987
+    },
+    {
+      "timestamp": "2024-12-11",
+      "ticker": "KSPI",
+      "open": 109.0,
+      "high": 109.0,
+      "low": 106.9,
+      "close": 107.53,
+      "volume": 107128
+    },
+    {
+      "timestamp": "2024-12-12",
+      "ticker": "KSPI",
+      "open": 107.78,
+      "high": 108.2648,
+      "low": 105.56,
+      "close": 107.08,
+      "volume": 147945
+    },
+    {
+      "timestamp": "2024-12-13",
+      "ticker": "KSPI",
+      "open": 108.19,
+      "high": 109.0,
+      "low": 105.81,
+      "close": 106.0,
+      "volume": 181577
+    },
+    {
+      "timestamp": "2024-12-16",
+      "ticker": "KSPI",
+      "open": 106.0,
+      "high": 106.64,
+      "low": 103.19,
+      "close": 103.22,
+      "volume": 155952
+    },
+    {
+      "timestamp": "2024-12-17",
+      "ticker": "KSPI",
+      "open": 103.0,
+      "high": 103.7,
+      "low": 100.67,
+      "close": 102.5,
+      "volume": 212437
+    },
+    {
+      "timestamp": "2024-12-18",
+      "ticker": "KSPI",
+      "open": 102.8,
+      "high": 102.8,
+      "low": 96.86,
+      "close": 97.08,
+      "volume": 326874
+    },
+    {
+      "timestamp": "2024-12-19",
+      "ticker": "KSPI",
+      "open": 99.72,
+      "high": 100.47,
+      "low": 97.51,
+      "close": 97.76,
+      "volume": 292839
+    },
+    {
+      "timestamp": "2024-12-20",
+      "ticker": "KSPI",
+      "open": 98.84,
+      "high": 99.98,
+      "low": 98.05,
+      "close": 98.7,
+      "volume": 351530
+    },
+    {
+      "timestamp": "2024-12-23",
+      "ticker": "KSPI",
+      "open": 98.89,
+      "high": 99.0,
+      "low": 97.18,
+      "close": 97.82,
+      "volume": 134192
+    },
+    {
+      "timestamp": "2024-12-24",
+      "ticker": "KSPI",
+      "open": 97.66,
+      "high": 99.16,
+      "low": 97.66,
+      "close": 98.23,
+      "volume": 174331
+    },
+    {
+      "timestamp": "2024-12-26",
+      "ticker": "KSPI",
+      "open": 98.0,
+      "high": 99.46,
+      "low": 97.82,
+      "close": 98.25,
+      "volume": 170477
+    },
+    {
+      "timestamp": "2024-12-27",
+      "ticker": "KSPI",
+      "open": 98.39,
+      "high": 98.4,
+      "low": 96.41,
+      "close": 96.71,
+      "volume": 231769
+    },
+    {
+      "timestamp": "2024-12-30",
+      "ticker": "KSPI",
+      "open": 96.9,
+      "high": 97.74,
+      "low": 95.2,
+      "close": 96.0,
+      "volume": 269673
+    },
+    {
+      "timestamp": "2024-12-31",
+      "ticker": "KSPI",
+      "open": 96.34,
+      "high": 96.34,
+      "low": 94.45,
+      "close": 94.71,
+      "volume": 191055
+    },
+    {
+      "timestamp": "2025-01-02",
+      "ticker": "KSPI",
+      "open": 95.93,
+      "high": 99.6,
+      "low": 94.88,
+      "close": 99.6,
+      "volume": 190900
+    },
+    {
+      "timestamp": "2025-01-03",
+      "ticker": "KSPI",
+      "open": 99.75,
+      "high": 100.56,
+      "low": 98.0,
+      "close": 98.87,
+      "volume": 69081
+    },
+    {
+      "timestamp": "2025-01-06",
+      "ticker": "KSPI",
+      "open": 99.7,
+      "high": 100.54,
+      "low": 96.1,
+      "close": 97.69,
+      "volume": 149767
+    },
+    {
+      "timestamp": "2025-01-07",
+      "ticker": "KSPI",
+      "open": 97.7,
+      "high": 98.41,
+      "low": 94.36,
+      "close": 95.51,
+      "volume": 194420
+    },
+    {
+      "timestamp": "2025-01-08",
+      "ticker": "KSPI",
+      "open": 95.1,
+      "high": 96.21,
+      "low": 95.0,
+      "close": 95.7,
+      "volume": 96268
+    },
+    {
+      "timestamp": "2025-01-10",
+      "ticker": "KSPI",
+      "open": 96.0,
+      "high": 97.64,
+      "low": 91.36,
+      "close": 91.63,
+      "volume": 278584
+    },
+    {
+      "timestamp": "2025-01-13",
+      "ticker": "KSPI",
+      "open": 91.57,
+      "high": 91.91,
+      "low": 86.24,
+      "close": 91.5,
+      "volume": 417699
+    },
+    {
+      "timestamp": "2025-01-14",
+      "ticker": "KSPI",
+      "open": 92.8,
+      "high": 92.8,
+      "low": 89.29,
+      "close": 90.42,
+      "volume": 245121
+    },
+    {
+      "timestamp": "2025-01-15",
+      "ticker": "KSPI",
+      "open": 90.54,
+      "high": 92.85,
+      "low": 90.23,
+      "close": 92.0,
+      "volume": 245442
+    },
+    {
+      "timestamp": "2025-01-16",
+      "ticker": "KSPI",
+      "open": 92.1,
+      "high": 92.1,
+      "low": 90.71,
+      "close": 91.83,
+      "volume": 145917
+    },
+    {
+      "timestamp": "2025-01-17",
+      "ticker": "KSPI",
+      "open": 92.25,
+      "high": 94.0,
+      "low": 91.52,
+      "close": 92.87,
+      "volume": 166525
+    },
+    {
+      "timestamp": "2025-01-21",
+      "ticker": "KSPI",
+      "open": 96.54,
+      "high": 98.6,
+      "low": 93.33,
+      "close": 95.53,
+      "volume": 287688
+    },
+    {
+      "timestamp": "2025-01-22",
+      "ticker": "KSPI",
+      "open": 95.92,
+      "high": 98.29,
+      "low": 94.1,
+      "close": 94.78,
+      "volume": 251161
+    },
+    {
+      "timestamp": "2025-01-23",
+      "ticker": "KSPI",
+      "open": 94.78,
+      "high": 96.43,
+      "low": 94.1428,
+      "close": 95.69,
+      "volume": 209763
+    },
+    {
+      "timestamp": "2025-01-24",
+      "ticker": "KSPI",
+      "open": 96.23,
+      "high": 97.36,
+      "low": 94.51,
+      "close": 94.74,
+      "volume": 185161
+    },
+    {
+      "timestamp": "2025-01-27",
+      "ticker": "KSPI",
+      "open": 94.44,
+      "high": 97.21,
+      "low": 93.22,
+      "close": 96.88,
+      "volume": 328621
+    },
+    {
+      "timestamp": "2025-01-28",
+      "ticker": "KSPI",
+      "open": 96.48,
+      "high": 98.0,
+      "low": 95.7,
+      "close": 97.85,
+      "volume": 110894
+    },
+    {
+      "timestamp": "2025-01-29",
+      "ticker": "KSPI",
+      "open": 97.04,
+      "high": 97.937,
+      "low": 96.22,
+      "close": 96.78,
+      "volume": 230451
+    },
+    {
+      "timestamp": "2025-01-30",
+      "ticker": "KSPI",
+      "open": 97.0,
+      "high": 99.364,
+      "low": 97.0,
+      "close": 97.79,
+      "volume": 155390
+    },
+    {
+      "timestamp": "2025-01-31",
+      "ticker": "KSPI",
+      "open": 98.19,
+      "high": 98.19,
+      "low": 93.84,
+      "close": 95.1,
+      "volume": 266772
+    },
+    {
+      "timestamp": "2025-02-03",
+      "ticker": "KSPI",
+      "open": 92.75,
+      "high": 95.67,
+      "low": 92.5101,
+      "close": 95.67,
+      "volume": 252863
+    },
+    {
+      "timestamp": "2025-02-04",
+      "ticker": "KSPI",
+      "open": 94.78,
+      "high": 97.55,
+      "low": 94.78,
+      "close": 97.5,
+      "volume": 180233
+    },
+    {
+      "timestamp": "2025-02-05",
+      "ticker": "KSPI",
+      "open": 97.37,
+      "high": 98.8,
+      "low": 96.63,
+      "close": 97.68,
+      "volume": 328497
+    },
+    {
+      "timestamp": "2025-02-06",
+      "ticker": "KSPI",
+      "open": 98.6,
+      "high": 99.99,
+      "low": 97.28,
+      "close": 98.0,
+      "volume": 271937
+    },
+    {
+      "timestamp": "2025-02-07",
+      "ticker": "KSPI",
+      "open": 98.02,
+      "high": 99.19,
+      "low": 96.76,
+      "close": 97.04,
+      "volume": 172321
+    },
+    {
+      "timestamp": "2025-02-10",
+      "ticker": "KSPI",
+      "open": 98.5,
+      "high": 98.5,
+      "low": 96.38,
+      "close": 96.84,
+      "volume": 271709
+    },
+    {
+      "timestamp": "2025-02-11",
+      "ticker": "KSPI",
+      "open": 96.0,
+      "high": 96.79,
+      "low": 94.25,
+      "close": 95.49,
+      "volume": 381388
+    },
+    {
+      "timestamp": "2025-02-12",
+      "ticker": "KSPI",
+      "open": 95.67,
+      "high": 103.93,
+      "low": 95.67,
+      "close": 102.62,
+      "volume": 379167
+    },
+    {
+      "timestamp": "2025-02-13",
+      "ticker": "KSPI",
+      "open": 103.5,
+      "high": 109.8,
+      "low": 103.36,
+      "close": 109.23,
+      "volume": 492057
+    },
+    {
+      "timestamp": "2025-02-14",
+      "ticker": "KSPI",
+      "open": 110.4,
+      "high": 111.0,
+      "low": 108.505,
+      "close": 109.19,
+      "volume": 470445
+    },
+    {
+      "timestamp": "2025-02-18",
+      "ticker": "KSPI",
+      "open": 109.9,
+      "high": 111.45,
+      "low": 108.9775,
+      "close": 109.65,
+      "volume": 497388
+    },
+    {
+      "timestamp": "2025-02-19",
+      "ticker": "KSPI",
+      "open": 109.27,
+      "high": 109.27,
+      "low": 103.32,
+      "close": 104.22,
+      "volume": 464029
+    },
+    {
+      "timestamp": "2025-02-20",
+      "ticker": "KSPI",
+      "open": 104.65,
+      "high": 105.92,
+      "low": 102.88,
+      "close": 104.0,
+      "volume": 558052
+    },
+    {
+      "timestamp": "2025-02-21",
+      "ticker": "KSPI",
+      "open": 104.56,
+      "high": 105.4,
+      "low": 100.615,
+      "close": 102.15,
+      "volume": 272558
+    },
+    {
+      "timestamp": "2025-02-24",
+      "ticker": "KSPI",
+      "open": 104.2,
+      "high": 105.8,
+      "low": 98.655,
+      "close": 103.0,
+      "volume": 610464
+    },
+    {
+      "timestamp": "2025-02-25",
+      "ticker": "KSPI",
+      "open": 105.0,
+      "high": 105.0,
+      "low": 101.92,
+      "close": 103.13,
+      "volume": 483519
+    },
+    {
+      "timestamp": "2025-02-26",
+      "ticker": "KSPI",
+      "open": 102.52,
+      "high": 103.74,
+      "low": 101.0,
+      "close": 103.33,
+      "volume": 278574
+    },
+    {
+      "timestamp": "2025-02-27",
+      "ticker": "KSPI",
+      "open": 103.33,
+      "high": 104.9956,
+      "low": 101.52,
+      "close": 103.88,
+      "volume": 426215
+    },
+    {
+      "timestamp": "2025-02-28",
+      "ticker": "KSPI",
+      "open": 102.82,
+      "high": 104.97,
+      "low": 101.51,
+      "close": 104.74,
+      "volume": 464035
+    },
+    {
+      "timestamp": "2025-03-03",
+      "ticker": "KSPI",
+      "open": 105.0,
+      "high": 105.85,
+      "low": 102.0,
+      "close": 103.1,
+      "volume": 757774
+    },
+    {
+      "timestamp": "2025-03-04",
+      "ticker": "KSPI",
+      "open": 101.07,
+      "high": 103.92,
+      "low": 99.91,
+      "close": 102.79,
+      "volume": 389361
+    },
+    {
+      "timestamp": "2025-03-05",
+      "ticker": "KSPI",
+      "open": 103.0,
+      "high": 105.0,
+      "low": 100.2,
+      "close": 102.27,
+      "volume": 223512
+    },
+    {
+      "timestamp": "2025-03-06",
+      "ticker": "KSPI",
+      "open": 100.98,
+      "high": 102.52,
+      "low": 98.67,
+      "close": 100.82,
+      "volume": 245760
+    },
+    {
+      "timestamp": "2025-03-07",
+      "ticker": "KSPI",
+      "open": 100.07,
+      "high": 101.53,
+      "low": 97.15,
+      "close": 101.53,
+      "volume": 394007
+    },
+    {
+      "timestamp": "2025-03-10",
+      "ticker": "KSPI",
+      "open": 99.85,
+      "high": 99.964,
+      "low": 96.45,
+      "close": 97.5,
+      "volume": 532075
+    },
+    {
+      "timestamp": "2025-03-11",
+      "ticker": "KSPI",
+      "open": 97.51,
+      "high": 98.76,
+      "low": 96.45,
+      "close": 97.59,
+      "volume": 640852
+    },
+    {
+      "timestamp": "2025-03-12",
+      "ticker": "KSPI",
+      "open": 98.15,
+      "high": 98.9467,
+      "low": 95.115,
+      "close": 95.17,
+      "volume": 536535
+    },
+    {
+      "timestamp": "2025-03-13",
+      "ticker": "KSPI",
+      "open": 95.36,
+      "high": 97.79,
+      "low": 94.89,
+      "close": 94.99,
+      "volume": 282225
+    },
+    {
+      "timestamp": "2025-03-14",
+      "ticker": "KSPI",
+      "open": 97.0,
+      "high": 97.21,
+      "low": 95.39,
+      "close": 95.62,
+      "volume": 247693
+    },
+    {
+      "timestamp": "2025-03-17",
+      "ticker": "KSPI",
+      "open": 95.91,
+      "high": 99.92,
+      "low": 95.91,
+      "close": 99.59,
+      "volume": 620021
+    },
+    {
+      "timestamp": "2025-03-18",
+      "ticker": "KSPI",
+      "open": 99.59,
+      "high": 99.59,
+      "low": 96.71,
+      "close": 96.94,
+      "volume": 184360
+    },
+    {
+      "timestamp": "2025-03-19",
+      "ticker": "KSPI",
+      "open": 96.15,
+      "high": 97.225,
+      "low": 95.41,
+      "close": 96.305,
+      "volume": 353881
+    },
+    {
+      "timestamp": "2025-03-20",
+      "ticker": "KSPI",
+      "open": 97.12,
+      "high": 98.11,
+      "low": 95.61,
+      "close": 95.81,
+      "volume": 141138
+    },
+    {
+      "timestamp": "2025-03-21",
+      "ticker": "KSPI",
+      "open": 95.85,
+      "high": 96.44,
+      "low": 93.83,
+      "close": 94.98,
+      "volume": 292051
+    },
+    {
+      "timestamp": "2025-03-24",
+      "ticker": "KSPI",
+      "open": 96.1,
+      "high": 98.464,
+      "low": 95.33,
+      "close": 96.4,
+      "volume": 198281
+    },
+    {
+      "timestamp": "2025-03-25",
+      "ticker": "KSPI",
+      "open": 96.44,
+      "high": 96.875,
+      "low": 95.05,
+      "close": 96.26,
+      "volume": 212869
+    },
+    {
+      "timestamp": "2025-03-26",
+      "ticker": "KSPI",
+      "open": 96.0,
+      "high": 96.37,
+      "low": 93.81,
+      "close": 94.255,
+      "volume": 166697
+    },
+    {
+      "timestamp": "2025-03-27",
+      "ticker": "KSPI",
+      "open": 93.9,
+      "high": 95.68,
+      "low": 92.6914,
+      "close": 92.81,
+      "volume": 178692
+    },
+    {
+      "timestamp": "2025-03-28",
+      "ticker": "KSPI",
+      "open": 92.81,
+      "high": 95.01,
+      "low": 92.01,
+      "close": 94.04,
+      "volume": 332377
+    },
+    {
+      "timestamp": "2025-03-31",
+      "ticker": "KSPI",
+      "open": 92.77,
+      "high": 93.65,
+      "low": 91.33,
+      "close": 92.85,
+      "volume": 307043
+    },
+    {
+      "timestamp": "2025-04-01",
+      "ticker": "KSPI",
+      "open": 92.8,
+      "high": 95.08,
+      "low": 92.5793,
+      "close": 94.33,
+      "volume": 222607
+    },
+    {
+      "timestamp": "2025-04-02",
+      "ticker": "KSPI",
+      "open": 93.1,
+      "high": 94.935,
+      "low": 93.1,
+      "close": 94.54,
+      "volume": 166855
+    },
+    {
+      "timestamp": "2025-04-03",
+      "ticker": "KSPI",
+      "open": 91.47,
+      "high": 93.707,
+      "low": 90.41,
+      "close": 90.43,
+      "volume": 314795
+    },
+    {
+      "timestamp": "2025-04-04",
+      "ticker": "KSPI",
+      "open": 86.13,
+      "high": 86.35,
+      "low": 81.96,
+      "close": 83.12,
+      "volume": 374239
+    },
+    {
+      "timestamp": "2025-04-07",
+      "ticker": "KSPI",
+      "open": 82.11,
+      "high": 85.9,
+      "low": 79.99,
+      "close": 83.28,
+      "volume": 470634
+    },
+    {
+      "timestamp": "2025-04-08",
+      "ticker": "KSPI",
+      "open": 86.5,
+      "high": 87.47,
+      "low": 79.78,
+      "close": 81.23,
+      "volume": 843415
+    },
+    {
+      "timestamp": "2025-04-09",
+      "ticker": "KSPI",
+      "open": 80.775,
+      "high": 88.88,
+      "low": 77.8,
+      "close": 88.4,
+      "volume": 680977
+    },
+    {
+      "timestamp": "2025-04-10",
+      "ticker": "KSPI",
+      "open": 86.24,
+      "high": 87.9,
+      "low": 82.3,
+      "close": 83.38,
+      "volume": 355932
+    },
+    {
+      "timestamp": "2025-04-11",
+      "ticker": "KSPI",
+      "open": 83.73,
+      "high": 84.75,
+      "low": 81.53,
+      "close": 83.95,
+      "volume": 255525
+    },
+    {
+      "timestamp": "2025-04-14",
+      "ticker": "KSPI",
+      "open": 86.74,
+      "high": 87.67,
+      "low": 85.1,
+      "close": 86.17,
+      "volume": 235073
+    },
+    {
+      "timestamp": "2025-04-15",
+      "ticker": "KSPI",
+      "open": 86.86,
+      "high": 88.0,
+      "low": 85.6,
+      "close": 86.25,
+      "volume": 414295
+    },
+    {
+      "timestamp": "2025-04-16",
+      "ticker": "KSPI",
+      "open": 86.0,
+      "high": 86.01,
+      "low": 82.1,
+      "close": 82.59,
+      "volume": 258120
+    },
+    {
+      "timestamp": "2025-04-17",
+      "ticker": "KSPI",
+      "open": 83.4,
+      "high": 85.785,
+      "low": 83.1,
+      "close": 85.58,
+      "volume": 329281
+    },
+    {
+      "timestamp": "2025-04-21",
+      "ticker": "KSPI",
+      "open": 85.18,
+      "high": 85.39,
+      "low": 81.47,
+      "close": 82.02,
+      "volume": 171018
+    },
+    {
+      "timestamp": "2025-04-22",
+      "ticker": "KSPI",
+      "open": 84.46,
+      "high": 85.94,
+      "low": 83.1,
+      "close": 84.92,
+      "volume": 198067
+    },
+    {
+      "timestamp": "2025-04-23",
+      "ticker": "KSPI",
+      "open": 86.63,
+      "high": 90.42,
+      "low": 86.045,
+      "close": 88.37,
+      "volume": 321160
+    },
+    {
+      "timestamp": "2025-04-24",
+      "ticker": "KSPI",
+      "open": 88.5,
+      "high": 90.0,
+      "low": 88.05,
+      "close": 88.38,
+      "volume": 145923
+    },
+    {
+      "timestamp": "2025-04-25",
+      "ticker": "KSPI",
+      "open": 89.38,
+      "high": 91.83,
+      "low": 89.03,
+      "close": 89.66,
+      "volume": 239654
+    },
+    {
+      "timestamp": "2025-04-28",
+      "ticker": "KSPI",
+      "open": 90.94,
+      "high": 91.43,
+      "low": 88.02,
+      "close": 89.26,
+      "volume": 283372
+    },
+    {
+      "timestamp": "2025-04-29",
+      "ticker": "KSPI",
+      "open": 88.0,
+      "high": 89.71,
+      "low": 87.4,
+      "close": 88.22,
+      "volume": 190068
+    },
+    {
+      "timestamp": "2025-04-30",
+      "ticker": "KSPI",
+      "open": 86.88,
+      "high": 88.365,
+      "low": 85.64,
+      "close": 87.89,
+      "volume": 189639
+    },
+    {
+      "timestamp": "2025-05-01",
+      "ticker": "KSPI",
+      "open": 88.52,
+      "high": 90.19,
+      "low": 87.58,
+      "close": 89.15,
+      "volume": 255755
+    },
+    {
+      "timestamp": "2025-05-02",
+      "ticker": "KSPI",
+      "open": 89.6,
+      "high": 90.615,
+      "low": 89.5929,
+      "close": 90.26,
+      "volume": 125945
+    },
+    {
+      "timestamp": "2025-05-05",
+      "ticker": "KSPI",
+      "open": 90.61,
+      "high": 91.76,
+      "low": 89.83,
+      "close": 90.36,
+      "volume": 135391
+    },
+    {
+      "timestamp": "2025-05-06",
+      "ticker": "KSPI",
+      "open": 90.4,
+      "high": 90.63,
+      "low": 88.72,
+      "close": 89.19,
+      "volume": 193737
+    },
+    {
+      "timestamp": "2025-05-07",
+      "ticker": "KSPI",
+      "open": 88.98,
+      "high": 91.3,
+      "low": 88.865,
+      "close": 90.86,
+      "volume": 280394
+    },
+    {
+      "timestamp": "2025-05-08",
+      "ticker": "KSPI",
+      "open": 92.0,
+      "high": 92.92,
+      "low": 90.51,
+      "close": 92.15,
+      "volume": 294556
+    },
+    {
+      "timestamp": "2025-05-09",
+      "ticker": "KSPI",
+      "open": 93.01,
+      "high": 94.3499,
+      "low": 90.05,
+      "close": 90.11,
+      "volume": 277368
+    },
+    {
+      "timestamp": "2025-05-12",
+      "ticker": "KSPI",
+      "open": 87.7,
+      "high": 88.39,
+      "low": 80.6,
+      "close": 83.2,
+      "volume": 993857
+    },
+    {
+      "timestamp": "2025-05-13",
+      "ticker": "KSPI",
+      "open": 85.25,
+      "high": 85.82,
+      "low": 80.43,
+      "close": 80.74,
+      "volume": 673027
+    },
+    {
+      "timestamp": "2025-05-14",
+      "ticker": "KSPI",
+      "open": 81.24,
+      "high": 83.0,
+      "low": 80.88,
+      "close": 82.05,
+      "volume": 592188
+    },
+    {
+      "timestamp": "2025-05-15",
+      "ticker": "KSPI",
+      "open": 81.76,
+      "high": 83.0999,
+      "low": 80.92,
+      "close": 82.04,
+      "volume": 257509
+    },
+    {
+      "timestamp": "2025-05-16",
+      "ticker": "KSPI",
+      "open": 82.57,
+      "high": 84.2472,
+      "low": 82.0,
+      "close": 83.42,
+      "volume": 315827
+    },
+    {
+      "timestamp": "2025-05-19",
+      "ticker": "KSPI",
+      "open": 83.0,
+      "high": 86.43,
+      "low": 83.0,
+      "close": 85.51,
+      "volume": 272995
+    },
+    {
+      "timestamp": "2025-05-20",
+      "ticker": "KSPI",
+      "open": 85.56,
+      "high": 85.8445,
+      "low": 82.0,
+      "close": 82.3,
+      "volume": 517842
+    },
+    {
+      "timestamp": "2025-05-21",
+      "ticker": "KSPI",
+      "open": 82.3,
+      "high": 82.79,
+      "low": 80.335,
+      "close": 80.85,
+      "volume": 224869
+    },
+    {
+      "timestamp": "2025-05-22",
+      "ticker": "KSPI",
+      "open": 81.3,
+      "high": 82.43,
+      "low": 80.4,
+      "close": 80.91,
+      "volume": 314630
+    },
+    {
+      "timestamp": "2025-05-23",
+      "ticker": "KSPI",
+      "open": 80.78,
+      "high": 81.49,
+      "low": 80.4,
+      "close": 80.69,
+      "volume": 155994
+    },
+    {
+      "timestamp": "2025-05-27",
+      "ticker": "KSPI",
+      "open": 81.09,
+      "high": 82.71,
+      "low": 80.3241,
+      "close": 82.51,
+      "volume": 250061
+    },
+    {
+      "timestamp": "2025-05-28",
+      "ticker": "KSPI",
+      "open": 83.2,
+      "high": 84.6,
+      "low": 81.5145,
+      "close": 81.76,
+      "volume": 207432
+    },
+    {
+      "timestamp": "2025-05-29",
+      "ticker": "KSPI",
+      "open": 81.91,
+      "high": 82.18,
+      "low": 81.09,
+      "close": 81.19,
+      "volume": 267313
+    },
+    {
+      "timestamp": "2025-05-30",
+      "ticker": "KSPI",
+      "open": 81.0,
+      "high": 81.54,
+      "low": 78.59,
+      "close": 79.765,
+      "volume": 418924
+    },
+    {
+      "timestamp": "2025-06-02",
+      "ticker": "KSPI",
+      "open": 79.93,
+      "high": 82.865,
+      "low": 79.11,
+      "close": 82.795,
+      "volume": 187276
+    },
+    {
+      "timestamp": "2025-06-03",
+      "ticker": "KSPI",
+      "open": 82.78,
+      "high": 83.0,
+      "low": 81.38,
+      "close": 82.56,
+      "volume": 143670
+    },
+    {
+      "timestamp": "2025-06-04",
+      "ticker": "KSPI",
+      "open": 83.05,
+      "high": 84.62,
+      "low": 83.01,
+      "close": 83.06,
+      "volume": 139368
+    },
+    {
+      "timestamp": "2025-06-05",
+      "ticker": "KSPI",
+      "open": 83.2,
+      "high": 85.1,
+      "low": 83.01,
+      "close": 84.79,
+      "volume": 199341
+    },
+    {
+      "timestamp": "2025-06-06",
+      "ticker": "KSPI",
+      "open": 85.68,
+      "high": 86.32,
+      "low": 84.425,
+      "close": 85.93,
+      "volume": 223160
+    },
+    {
+      "timestamp": "2025-06-09",
+      "ticker": "KSPI",
+      "open": 86.53,
+      "high": 87.35,
+      "low": 85.3367,
+      "close": 85.62,
+      "volume": 251553
+    },
+    {
+      "timestamp": "2025-06-10",
+      "ticker": "KSPI",
+      "open": 85.72,
+      "high": 88.33,
+      "low": 85.0156,
+      "close": 87.26,
+      "volume": 284702
+    },
+    {
+      "timestamp": "2025-06-11",
+      "ticker": "KSPI",
+      "open": 87.89,
+      "high": 87.89,
+      "low": 85.905,
+      "close": 87.03,
+      "volume": 238570
+    },
+    {
+      "timestamp": "2025-06-12",
+      "ticker": "KSPI",
+      "open": 86.81,
+      "high": 88.8,
+      "low": 86.32,
+      "close": 88.22,
+      "volume": 396592
+    },
+    {
+      "timestamp": "2025-06-13",
+      "ticker": "KSPI",
+      "open": 86.77,
+      "high": 87.7208,
+      "low": 85.795,
+      "close": 86.03,
+      "volume": 201340
+    },
+    {
+      "timestamp": "2025-06-16",
+      "ticker": "KSPI",
+      "open": 86.26,
+      "high": 87.6162,
+      "low": 85.0,
+      "close": 86.4,
+      "volume": 145332
+    },
+    {
+      "timestamp": "2025-06-17",
+      "ticker": "KSPI",
+      "open": 85.19,
+      "high": 86.35,
+      "low": 83.5,
+      "close": 84.965,
+      "volume": 267774
+    },
+    {
+      "timestamp": "2025-06-18",
+      "ticker": "KSPI",
+      "open": 85.01,
+      "high": 86.05,
+      "low": 82.91,
+      "close": 82.95,
+      "volume": 425245
+    },
+    {
+      "timestamp": "2025-06-20",
+      "ticker": "KSPI",
+      "open": 83.06,
+      "high": 83.565,
+      "low": 79.66,
+      "close": 81.2,
+      "volume": 610867
+    },
+    {
+      "timestamp": "2025-06-23",
+      "ticker": "KSPI",
+      "open": 80.85,
+      "high": 81.94,
+      "low": 78.84,
+      "close": 79.72,
+      "volume": 367210
+    },
+    {
+      "timestamp": "2025-06-24",
+      "ticker": "KSPI",
+      "open": 81.12,
+      "high": 82.2,
+      "low": 80.5,
+      "close": 81.54,
+      "volume": 350725
+    },
+    {
+      "timestamp": "2025-06-25",
+      "ticker": "KSPI",
+      "open": 82.1,
+      "high": 82.9192,
+      "low": 82.0,
+      "close": 82.14,
+      "volume": 311559
+    },
+    {
+      "timestamp": "2025-06-26",
+      "ticker": "KSPI",
+      "open": 82.165,
+      "high": 84.28,
+      "low": 82.0,
+      "close": 83.61,
+      "volume": 326059
+    },
+    {
+      "timestamp": "2025-06-27",
+      "ticker": "KSPI",
+      "open": 84.26,
+      "high": 86.28,
+      "low": 84.03,
+      "close": 86.17,
+      "volume": 382540
+    },
+    {
+      "timestamp": "2025-06-30",
+      "ticker": "KSPI",
+      "open": 86.01,
+      "high": 86.12,
+      "low": 83.01,
+      "close": 84.89,
+      "volume": 260654
+    },
+    {
+      "timestamp": "2025-07-01",
+      "ticker": "KSPI",
+      "open": 84.5,
+      "high": 85.0879,
+      "low": 83.24,
+      "close": 84.43,
+      "volume": 270408
+    },
+    {
+      "timestamp": "2025-07-02",
+      "ticker": "KSPI",
+      "open": 84.75,
+      "high": 85.74,
+      "low": 84.21,
+      "close": 84.38,
+      "volume": 159496
+    },
+    {
+      "timestamp": "2025-07-03",
+      "ticker": "KSPI",
+      "open": 84.9,
+      "high": 85.282,
+      "low": 83.74,
+      "close": 84.64,
+      "volume": 119258
+    },
+    {
+      "timestamp": "2025-07-07",
+      "ticker": "KSPI",
+      "open": 84.6,
+      "high": 84.67,
+      "low": 82.47,
+      "close": 82.5,
+      "volume": 234550
+    },
+    {
+      "timestamp": "2025-07-08",
+      "ticker": "KSPI",
+      "open": 82.82,
+      "high": 84.17,
+      "low": 81.42,
+      "close": 83.58,
+      "volume": 488203
+    },
+    {
+      "timestamp": "2025-07-09",
+      "ticker": "KSPI",
+      "open": 83.81,
+      "high": 84.43,
+      "low": 82.449,
+      "close": 82.845,
+      "volume": 192248
+    },
+    {
+      "timestamp": "2025-07-10",
+      "ticker": "KSPI",
+      "open": 82.99,
+      "high": 84.0,
+      "low": 82.0,
+      "close": 83.37,
+      "volume": 221998
+    },
+    {
+      "timestamp": "2025-07-11",
+      "ticker": "KSPI",
+      "open": 83.2,
+      "high": 83.2,
+      "low": 80.85,
+      "close": 81.47,
+      "volume": 171014
+    },
+    {
+      "timestamp": "2025-07-14",
+      "ticker": "KSPI",
+      "open": 81.64,
+      "high": 82.14,
+      "low": 80.6126,
+      "close": 80.87,
+      "volume": 190001
+    },
+    {
+      "timestamp": "2025-07-15",
+      "ticker": "KSPI",
+      "open": 81.37,
+      "high": 85.46,
+      "low": 81.37,
+      "close": 84.08,
+      "volume": 637745
+    },
+    {
+      "timestamp": "2025-07-16",
+      "ticker": "KSPI",
+      "open": 85.29,
+      "high": 86.57,
+      "low": 83.9326,
+      "close": 85.02,
+      "volume": 213485
+    },
+    {
+      "timestamp": "2025-07-17",
+      "ticker": "KSPI",
+      "open": 85.0,
+      "high": 86.92,
+      "low": 85.0,
+      "close": 86.63,
+      "volume": 194912
+    },
+    {
+      "timestamp": "2025-07-18",
+      "ticker": "KSPI",
+      "open": 87.0,
+      "high": 87.25,
+      "low": 85.52,
+      "close": 85.955,
+      "volume": 178737
+    },
+    {
+      "timestamp": "2025-07-21",
+      "ticker": "KSPI",
+      "open": 86.85,
+      "high": 89.9,
+      "low": 86.77,
+      "close": 87.8,
+      "volume": 222581
+    },
+    {
+      "timestamp": "2025-07-22",
+      "ticker": "KSPI",
+      "open": 88.26,
+      "high": 89.24,
+      "low": 86.52,
+      "close": 87.44,
+      "volume": 232140
+    },
+    {
+      "timestamp": "2025-07-23",
+      "ticker": "KSPI",
+      "open": 88.2,
+      "high": 89.315,
+      "low": 87.4401,
+      "close": 89.1,
+      "volume": 146985
+    },
+    {
+      "timestamp": "2025-07-24",
+      "ticker": "KSPI",
+      "open": 88.81,
+      "high": 88.9,
+      "low": 85.57,
+      "close": 85.68,
+      "volume": 249491
+    },
+    {
+      "timestamp": "2025-07-25",
+      "ticker": "KSPI",
+      "open": 86.57,
+      "high": 86.65,
+      "low": 85.0,
+      "close": 85.0,
+      "volume": 123587
+    },
+    {
+      "timestamp": "2025-07-28",
+      "ticker": "KSPI",
+      "open": 85.36,
+      "high": 86.725,
+      "low": 85.0,
+      "close": 85.895,
+      "volume": 190756
+    },
+    {
+      "timestamp": "2025-07-29",
+      "ticker": "KSPI",
+      "open": 85.91,
+      "high": 87.26,
+      "low": 85.24,
+      "close": 85.96,
+      "volume": 308958
+    },
+    {
+      "timestamp": "2025-07-30",
+      "ticker": "KSPI",
+      "open": 85.66,
+      "high": 85.725,
+      "low": 81.22,
+      "close": 81.98,
+      "volume": 498381
+    },
+    {
+      "timestamp": "2025-07-31",
+      "ticker": "KSPI",
+      "open": 82.35,
+      "high": 82.9,
+      "low": 78.825,
+      "close": 78.9,
+      "volume": 623173
+    },
+    {
+      "timestamp": "2025-08-01",
+      "ticker": "KSPI",
+      "open": 78.97,
+      "high": 79.032,
+      "low": 75.9,
+      "close": 76.16,
+      "volume": 468963
+    },
+    {
+      "timestamp": "2025-08-04",
+      "ticker": "KSPI",
+      "open": 83.51,
+      "high": 86.8,
+      "low": 81.0,
+      "close": 86.67,
+      "volume": 688236
+    },
+    {
+      "timestamp": "2025-08-05",
+      "ticker": "KSPI",
+      "open": 87.45,
+      "high": 89.5,
+      "low": 85.78,
+      "close": 89.11,
+      "volume": 395463
+    },
+    {
+      "timestamp": "2025-08-06",
+      "ticker": "KSPI",
+      "open": 88.79,
+      "high": 88.97,
+      "low": 87.08,
+      "close": 88.77,
+      "volume": 326077
+    },
+    {
+      "timestamp": "2025-08-07",
+      "ticker": "KSPI",
+      "open": 88.75,
+      "high": 91.86,
+      "low": 88.55,
+      "close": 91.77,
+      "volume": 612007
+    },
+    {
+      "timestamp": "2025-08-08",
+      "ticker": "KSPI",
+      "open": 91.31,
+      "high": 95.92,
+      "low": 90.6476,
+      "close": 94.96,
+      "volume": 599125
+    },
+    {
+      "timestamp": "2025-08-11",
+      "ticker": "KSPI",
+      "open": 94.81,
+      "high": 97.3,
+      "low": 93.947,
+      "close": 95.83,
+      "volume": 481213
+    },
+    {
+      "timestamp": "2025-08-12",
+      "ticker": "KSPI",
+      "open": 96.16,
+      "high": 97.83,
+      "low": 94.5242,
+      "close": 97.17,
+      "volume": 312276
+    },
+    {
+      "timestamp": "2025-08-13",
+      "ticker": "KSPI",
+      "open": 97.76,
+      "high": 99.2,
+      "low": 96.834,
+      "close": 97.71,
+      "volume": 266070
+    },
+    {
+      "timestamp": "2025-08-14",
+      "ticker": "KSPI",
+      "open": 96.88,
+      "high": 97.15,
+      "low": 95.125,
+      "close": 95.91,
+      "volume": 264412
+    },
+    {
+      "timestamp": "2025-08-15",
+      "ticker": "KSPI",
+      "open": 95.35,
+      "high": 96.42,
+      "low": 94.95,
+      "close": 95.24,
+      "volume": 204847
+    },
+    {
+      "timestamp": "2025-08-18",
+      "ticker": "KSPI",
+      "open": 95.0,
+      "high": 95.7725,
+      "low": 93.5,
+      "close": 93.67,
+      "volume": 391853
+    },
+    {
+      "timestamp": "2025-08-19",
+      "ticker": "KSPI",
+      "open": 94.0,
+      "high": 95.6237,
+      "low": 92.3,
+      "close": 94.07,
+      "volume": 244878
+    },
+    {
+      "timestamp": "2025-08-20",
+      "ticker": "KSPI",
+      "open": 92.73,
+      "high": 93.024,
+      "low": 90.1,
+      "close": 90.31,
+      "volume": 242662
+    },
+    {
+      "timestamp": "2025-08-21",
+      "ticker": "KSPI",
+      "open": 90.5,
+      "high": 91.6331,
+      "low": 89.79,
+      "close": 91.38,
+      "volume": 174204
+    },
+    {
+      "timestamp": "2025-08-22",
+      "ticker": "KSPI",
+      "open": 91.39,
+      "high": 92.9238,
+      "low": 90.37,
+      "close": 92.54,
+      "volume": 145137
+    },
+    {
+      "timestamp": "2025-08-25",
+      "ticker": "KSPI",
+      "open": 92.54,
+      "high": 93.715,
+      "low": 91.9,
+      "close": 92.52,
+      "volume": 116729
+    },
+    {
+      "timestamp": "2025-08-26",
+      "ticker": "KSPI",
+      "open": 92.45,
+      "high": 93.265,
+      "low": 91.33,
+      "close": 91.33,
+      "volume": 483866
+    },
+    {
+      "timestamp": "2025-08-27",
+      "ticker": "KSPI",
+      "open": 91.6,
+      "high": 92.49,
+      "low": 90.44,
+      "close": 92.48,
+      "volume": 210396
+    },
+    {
+      "timestamp": "2025-08-28",
+      "ticker": "KSPI",
+      "open": 92.96,
+      "high": 93.6,
+      "low": 91.63,
+      "close": 93.0,
+      "volume": 263761
+    },
+    {
+      "timestamp": "2025-08-29",
+      "ticker": "KSPI",
+      "open": 92.8,
+      "high": 94.19,
+      "low": 91.725,
+      "close": 93.96,
+      "volume": 180269
+    },
+    {
+      "timestamp": "2025-09-02",
+      "ticker": "KSPI",
+      "open": 92.88,
+      "high": 93.405,
+      "low": 90.5,
+      "close": 91.01,
+      "volume": 537194
+    },
+    {
+      "timestamp": "2025-09-03",
+      "ticker": "KSPI",
+      "open": 91.81,
+      "high": 92.18,
+      "low": 88.91,
+      "close": 90.17,
+      "volume": 238639
+    },
+    {
+      "timestamp": "2025-09-04",
+      "ticker": "KSPI",
+      "open": 89.53,
+      "high": 91.54,
+      "low": 89.25,
+      "close": 91.09,
+      "volume": 155276
+    },
+    {
+      "timestamp": "2025-09-05",
+      "ticker": "KSPI",
+      "open": 91.19,
+      "high": 92.135,
+      "low": 88.5,
+      "close": 88.62,
+      "volume": 281758
+    },
+    {
+      "timestamp": "2025-09-08",
+      "ticker": "KSPI",
+      "open": 88.88,
+      "high": 89.4439,
+      "low": 86.69,
+      "close": 86.96,
+      "volume": 285005
+    },
+    {
+      "timestamp": "2025-09-09",
+      "ticker": "KSPI",
+      "open": 87.05,
+      "high": 87.7,
+      "low": 86.32,
+      "close": 87.24,
+      "volume": 304545
+    },
+    {
+      "timestamp": "2025-09-10",
+      "ticker": "KSPI",
+      "open": 84.25,
+      "high": 85.495,
+      "low": 83.005,
+      "close": 85.06,
+      "volume": 864250
+    },
+    {
+      "timestamp": "2025-09-11",
+      "ticker": "KSPI",
+      "open": 85.25,
+      "high": 86.4978,
+      "low": 84.38,
+      "close": 84.91,
+      "volume": 630866
+    },
+    {
+      "timestamp": "2025-09-12",
+      "ticker": "KSPI",
+      "open": 85.33,
+      "high": 86.0,
+      "low": 84.0,
+      "close": 84.41,
+      "volume": 265897
+    },
+    {
+      "timestamp": "2025-09-15",
+      "ticker": "KSPI",
+      "open": 85.02,
+      "high": 85.5,
+      "low": 84.135,
+      "close": 84.61,
+      "volume": 299667
+    },
+    {
+      "timestamp": "2025-09-16",
+      "ticker": "KSPI",
+      "open": 85.0,
+      "high": 85.75,
+      "low": 84.0,
+      "close": 84.73,
+      "volume": 460435
+    },
+    {
+      "timestamp": "2025-09-17",
+      "ticker": "KSPI",
+      "open": 85.5,
+      "high": 90.28,
+      "low": 85.01,
+      "close": 89.14,
+      "volume": 408246
+    },
+    {
+      "timestamp": "2025-09-18",
+      "ticker": "KSPI",
+      "open": 90.1,
+      "high": 92.99,
+      "low": 89.6,
+      "close": 90.08,
+      "volume": 628507
+    },
+    {
+      "timestamp": "2025-09-19",
+      "ticker": "KSPI",
+      "open": 90.08,
+      "high": 90.1,
+      "low": 87.73,
+      "close": 88.0,
+      "volume": 254290
+    },
+    {
+      "timestamp": "2025-09-22",
+      "ticker": "KSPI",
+      "open": 87.11,
+      "high": 87.11,
+      "low": 85.0,
+      "close": 86.26,
+      "volume": 641147
+    },
+    {
+      "timestamp": "2025-09-23",
+      "ticker": "KSPI",
+      "open": 86.46,
+      "high": 87.15,
+      "low": 84.3,
+      "close": 84.555,
+      "volume": 405237
+    },
+    {
+      "timestamp": "2025-09-24",
+      "ticker": "KSPI",
+      "open": 84.7,
+      "high": 85.255,
+      "low": 83.86,
+      "close": 84.38,
+      "volume": 491258
+    },
+    {
+      "timestamp": "2025-09-25",
+      "ticker": "KSPI",
+      "open": 84.0,
+      "high": 84.965,
+      "low": 83.17,
+      "close": 84.0,
+      "volume": 260067
+    },
+    {
+      "timestamp": "2025-09-26",
+      "ticker": "KSPI",
+      "open": 84.24,
+      "high": 85.02,
+      "low": 83.75,
+      "close": 84.0,
+      "volume": 410486
+    },
+    {
+      "timestamp": "2025-09-29",
+      "ticker": "KSPI",
+      "open": 85.0,
+      "high": 85.0,
+      "low": 81.68,
+      "close": 81.82,
+      "volume": 492242
+    },
+    {
+      "timestamp": "2025-09-30",
+      "ticker": "KSPI",
+      "open": 82.12,
+      "high": 82.77,
+      "low": 81.26,
+      "close": 81.68,
+      "volume": 572098
+    },
+    {
+      "timestamp": "2025-10-01",
+      "ticker": "KSPI",
+      "open": 82.0,
+      "high": 82.95,
+      "low": 79.48,
+      "close": 79.6,
+      "volume": 725058
+    },
+    {
+      "timestamp": "2025-10-02",
+      "ticker": "KSPI",
+      "open": 80.0,
+      "high": 80.5,
+      "low": 78.89,
+      "close": 79.08,
+      "volume": 716044
+    },
+    {
+      "timestamp": "2025-10-03",
+      "ticker": "KSPI",
+      "open": 80.16,
+      "high": 80.65,
+      "low": 79.3,
+      "close": 79.98,
+      "volume": 632169
+    },
+    {
+      "timestamp": "2025-10-06",
+      "ticker": "KSPI",
+      "open": 80.38,
+      "high": 80.7,
+      "low": 77.5,
+      "close": 77.61,
+      "volume": 527635
+    },
+    {
+      "timestamp": "2025-10-07",
+      "ticker": "KSPI",
+      "open": 78.38,
+      "high": 78.5,
+      "low": 76.7,
+      "close": 76.85,
+      "volume": 963107
+    },
+    {
+      "timestamp": "2025-10-08",
+      "ticker": "KSPI",
+      "open": 78.255,
+      "high": 78.94,
+      "low": 76.19,
+      "close": 77.24,
+      "volume": 2219698
+    },
+    {
+      "timestamp": "2025-10-09",
+      "ticker": "KSPI",
+      "open": 77.24,
+      "high": 77.78,
+      "low": 75.4,
+      "close": 75.7,
+      "volume": 1120760
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "KSPI",
+      "open": 76.0,
+      "high": 76.4224,
+      "low": 73.345,
+      "close": 73.72,
+      "volume": 723232
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "KSPI",
+      "open": 74.5,
+      "high": 75.56,
+      "low": 73.81,
+      "close": 75.18,
+      "volume": 670273
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "KSPI",
+      "open": 75.0,
+      "high": 75.25,
+      "low": 74.07,
+      "close": 74.36,
+      "volume": 571930
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "KSPI",
+      "open": 75.5,
+      "high": 75.82,
+      "low": 73.99,
+      "close": 74.595,
+      "volume": 1627474
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "KSPI",
+      "open": 75.31,
+      "high": 75.81,
+      "low": 72.22,
+      "close": 73.92,
+      "volume": 1128452
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "KSPI",
+      "open": 73.25,
+      "high": 75.2799,
+      "low": 73.13,
+      "close": 73.32,
+      "volume": 825130
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "KSPI",
+      "open": 74.0,
+      "high": 75.53,
+      "low": 73.8,
+      "close": 74.85,
+      "volume": 619968
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "KSPI",
+      "open": 74.56,
+      "high": 75.077,
+      "low": 73.38,
+      "close": 74.58,
+      "volume": 527690
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "KSPI",
+      "open": 74.29,
+      "high": 75.26,
+      "low": 73.912,
+      "close": 74.59,
+      "volume": 476145
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "KSPI",
+      "open": 74.08,
+      "high": 75.35,
+      "low": 73.66,
+      "close": 74.52,
+      "volume": 313992
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "KSPI",
+      "open": 75.05,
+      "high": 76.56,
+      "low": 75.02,
+      "close": 75.1,
+      "volume": 385890
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "KSPI",
+      "open": 77.05,
+      "high": 77.25,
+      "low": 76.3101,
+      "close": 76.8,
+      "volume": 628161
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "KSPI",
+      "open": 76.73,
+      "high": 77.368,
+      "low": 74.85,
+      "close": 74.97,
+      "volume": 702058
+    }
+  ]
+}

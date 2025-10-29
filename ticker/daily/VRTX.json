@@ -1,7 +1,7 @@
 {
   "ticker": "VRTX",
-  "generated_at": "2025-10-10T02:43:43.100188+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:24:21.757960+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 414.28,
       "close": 414.86,
       "volume": 880586
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "VRTX",
+      "open": 413.33,
+      "high": 414.22,
+      "low": 406.095,
+      "close": 407.79,
+      "volume": 1148580
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "VRTX",
+      "open": 404.21,
+      "high": 409.4699,
+      "low": 402.58,
+      "close": 407.37,
+      "volume": 880933
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "VRTX",
+      "open": 406.08,
+      "high": 415.55,
+      "low": 405.455,
+      "close": 412.22,
+      "volume": 1048332
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "VRTX",
+      "open": 412.17,
+      "high": 413.57,
+      "low": 407.05,
+      "close": 407.9,
+      "volume": 1273273
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "VRTX",
+      "open": 409.92,
+      "high": 413.31,
+      "low": 405.535,
+      "close": 408.61,
+      "volume": 1314376
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "VRTX",
+      "open": 407.36,
+      "high": 419.37,
+      "low": 406.76,
+      "close": 416.81,
+      "volume": 1054386
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "VRTX",
+      "open": 418.17,
+      "high": 420.5,
+      "low": 414.524,
+      "close": 419.1,
+      "volume": 1083498
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "VRTX",
+      "open": 417.57,
+      "high": 426.97,
+      "low": 417.57,
+      "close": 426.27,
+      "volume": 1075953
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "VRTX",
+      "open": 426.27,
+      "high": 431.81,
+      "low": 421.94,
+      "close": 426.44,
+      "volume": 1697244
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "VRTX",
+      "open": 427.85,
+      "high": 432.76,
+      "low": 421.26,
+      "close": 422.63,
+      "volume": 1760904
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "VRTX",
+      "open": 423.41,
+      "high": 425.86,
+      "low": 420.6,
+      "close": 421.39,
+      "volume": 1004920
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "VRTX",
+      "open": 422.0,
+      "high": 423.605,
+      "low": 418.76,
+      "close": 420.17,
+      "volume": 1261917
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "VRTX",
+      "open": 418.0,
+      "high": 422.57,
+      "low": 417.365,
+      "close": 422.39,
+      "volume": 1219052
     }
   ]
 }

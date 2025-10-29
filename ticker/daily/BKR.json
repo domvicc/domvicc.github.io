@@ -1,7 +1,7 @@
 {
   "ticker": "BKR",
-  "generated_at": "2025-10-10T02:42:29.371189+00:00",
-  "count": 2079,
+  "generated_at": "2025-10-29T01:19:45.000341+00:00",
+  "count": 2092,
   "data": [
     {
       "timestamp": "2017-07-05",
@@ -18713,6 +18713,123 @@
       "low": 47.0876,
       "close": 47.89,
       "volume": 5456954
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "BKR",
+      "open": 47.475,
+      "high": 47.69,
+      "low": 44.99,
+      "close": 45.04,
+      "volume": 7467021
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "BKR",
+      "open": 45.94,
+      "high": 45.94,
+      "low": 45.04,
+      "close": 45.49,
+      "volume": 11108272
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "BKR",
+      "open": 44.92,
+      "high": 45.36,
+      "low": 43.92,
+      "close": 44.83,
+      "volume": 9227848
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "BKR",
+      "open": 45.29,
+      "high": 45.67,
+      "low": 44.22,
+      "close": 44.47,
+      "volume": 7972270
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "BKR",
+      "open": 44.87,
+      "high": 45.12,
+      "low": 44.245,
+      "close": 44.64,
+      "volume": 8097365
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "BKR",
+      "open": 44.93,
+      "high": 45.5,
+      "low": 44.42,
+      "close": 45.18,
+      "volume": 8216428
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "BKR",
+      "open": 45.42,
+      "high": 46.39,
+      "low": 45.2,
+      "close": 46.28,
+      "volume": 6772217
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "BKR",
+      "open": 46.54,
+      "high": 47.41,
+      "low": 45.63,
+      "close": 46.75,
+      "volume": 11386588
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "BKR",
+      "open": 47.0,
+      "high": 48.33,
+      "low": 46.72,
+      "close": 47.3,
+      "volume": 8747506
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "BKR",
+      "open": 48.175,
+      "high": 49.08,
+      "low": 48.0,
+      "close": 48.89,
+      "volume": 9548833
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "BKR",
+      "open": 47.92,
+      "high": 50.42,
+      "low": 46.845,
+      "close": 47.3,
+      "volume": 13058724
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "BKR",
+      "open": 47.78,
+      "high": 48.2,
+      "low": 46.12,
+      "close": 46.6,
+      "volume": 8754034
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "BKR",
+      "open": 46.39,
+      "high": 47.98,
+      "low": 46.39,
+      "close": 47.86,
+      "volume": 9166058
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "ticker": "PAYX",
-  "generated_at": "2025-10-10T02:43:26.606776+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:23:05.660715+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 124.545,
       "close": 125.21,
       "volume": 2325090
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "PAYX",
+      "open": 125.81,
+      "high": 126.34,
+      "low": 124.93,
+      "close": 125.55,
+      "volume": 2711778
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "PAYX",
+      "open": 125.69,
+      "high": 127.72,
+      "low": 125.25,
+      "close": 127.42,
+      "volume": 2867530
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "PAYX",
+      "open": 127.55,
+      "high": 129.2,
+      "low": 127.08,
+      "close": 128.59,
+      "volume": 2444218
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "PAYX",
+      "open": 128.28,
+      "high": 129.24,
+      "low": 127.3375,
+      "close": 127.52,
+      "volume": 2546019
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "PAYX",
+      "open": 127.75,
+      "high": 128.255,
+      "low": 125.88,
+      "close": 126.49,
+      "volume": 2860609
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "PAYX",
+      "open": 126.87,
+      "high": 127.26,
+      "low": 125.51,
+      "close": 126.56,
+      "volume": 2461137
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "PAYX",
+      "open": 126.75,
+      "high": 127.93,
+      "low": 125.3,
+      "close": 126.59,
+      "volume": 2388069
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "PAYX",
+      "open": 126.66,
+      "high": 128.78,
+      "low": 125.71,
+      "close": 127.54,
+      "volume": 2380348
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "PAYX",
+      "open": 127.22,
+      "high": 128.57,
+      "low": 126.51,
+      "close": 126.61,
+      "volume": 2218389
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "PAYX",
+      "open": 126.37,
+      "high": 126.96,
+      "low": 124.45,
+      "close": 124.75,
+      "volume": 1993600
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "PAYX",
+      "open": 125.11,
+      "high": 125.56,
+      "low": 124.21,
+      "close": 124.6,
+      "volume": 4436857
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "PAYX",
+      "open": 124.59,
+      "high": 125.29,
+      "low": 124.14,
+      "close": 125.01,
+      "volume": 2646312
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "PAYX",
+      "open": 124.51,
+      "high": 124.725,
+      "low": 123.02,
+      "close": 124.05,
+      "volume": 2762872
     }
   ]
 }

@@ -1,0 +1,8998 @@
+{
+  "ticker": "ARIS",
+  "generated_at": "2025-10-29T01:19:22.063797+00:00",
+  "count": 999,
+  "data": [
+    {
+      "timestamp": "2021-10-22",
+      "ticker": "ARIS",
+      "open": 15.85,
+      "high": 15.89,
+      "low": 13.67,
+      "close": 14.3,
+      "volume": 4278874
+    },
+    {
+      "timestamp": "2021-10-25",
+      "ticker": "ARIS",
+      "open": 14.8,
+      "high": 14.8,
+      "low": 13.01,
+      "close": 13.57,
+      "volume": 833247
+    },
+    {
+      "timestamp": "2021-10-26",
+      "ticker": "ARIS",
+      "open": 13.42,
+      "high": 14.09,
+      "low": 13.0,
+      "close": 13.59,
+      "volume": 716303
+    },
+    {
+      "timestamp": "2021-10-27",
+      "ticker": "ARIS",
+      "open": 13.32,
+      "high": 13.78,
+      "low": 13.05,
+      "close": 13.56,
+      "volume": 451716
+    },
+    {
+      "timestamp": "2021-10-28",
+      "ticker": "ARIS",
+      "open": 13.5,
+      "high": 13.9,
+      "low": 13.03,
+      "close": 13.75,
+      "volume": 204227
+    },
+    {
+      "timestamp": "2021-10-29",
+      "ticker": "ARIS",
+      "open": 14.09,
+      "high": 14.3894,
+      "low": 13.08,
+      "close": 13.67,
+      "volume": 248493
+    },
+    {
+      "timestamp": "2021-11-01",
+      "ticker": "ARIS",
+      "open": 13.52,
+      "high": 13.52,
+      "low": 12.3,
+      "close": 13.2,
+      "volume": 309560
+    },
+    {
+      "timestamp": "2021-11-02",
+      "ticker": "ARIS",
+      "open": 13.12,
+      "high": 13.54,
+      "low": 13.02,
+      "close": 13.38,
+      "volume": 105869
+    },
+    {
+      "timestamp": "2021-11-03",
+      "ticker": "ARIS",
+      "open": 13.2,
+      "high": 13.54,
+      "low": 13.2,
+      "close": 13.47,
+      "volume": 226871
+    },
+    {
+      "timestamp": "2021-11-04",
+      "ticker": "ARIS",
+      "open": 13.33,
+      "high": 13.52,
+      "low": 13.23,
+      "close": 13.5,
+      "volume": 220764
+    },
+    {
+      "timestamp": "2021-11-05",
+      "ticker": "ARIS",
+      "open": 13.42,
+      "high": 13.87,
+      "low": 13.21,
+      "close": 13.51,
+      "volume": 145280
+    },
+    {
+      "timestamp": "2021-11-08",
+      "ticker": "ARIS",
+      "open": 13.34,
+      "high": 14.38,
+      "low": 13.25,
+      "close": 14.19,
+      "volume": 354057
+    },
+    {
+      "timestamp": "2021-11-09",
+      "ticker": "ARIS",
+      "open": 14.03,
+      "high": 14.85,
+      "low": 14.0,
+      "close": 14.53,
+      "volume": 343720
+    },
+    {
+      "timestamp": "2021-11-10",
+      "ticker": "ARIS",
+      "open": 14.05,
+      "high": 14.14,
+      "low": 13.34,
+      "close": 13.56,
+      "volume": 235480
+    },
+    {
+      "timestamp": "2021-11-11",
+      "ticker": "ARIS",
+      "open": 13.38,
+      "high": 14.25,
+      "low": 13.0,
+      "close": 13.94,
+      "volume": 355552
+    },
+    {
+      "timestamp": "2021-11-12",
+      "ticker": "ARIS",
+      "open": 13.89,
+      "high": 14.42,
+      "low": 13.02,
+      "close": 13.49,
+      "volume": 384162
+    },
+    {
+      "timestamp": "2021-11-15",
+      "ticker": "ARIS",
+      "open": 13.23,
+      "high": 13.92,
+      "low": 13.23,
+      "close": 13.74,
+      "volume": 250931
+    },
+    {
+      "timestamp": "2021-11-16",
+      "ticker": "ARIS",
+      "open": 14.15,
+      "high": 14.72,
+      "low": 13.31,
+      "close": 13.66,
+      "volume": 518696
+    },
+    {
+      "timestamp": "2021-11-17",
+      "ticker": "ARIS",
+      "open": 13.86,
+      "high": 14.25,
+      "low": 13.3211,
+      "close": 14.08,
+      "volume": 752213
+    },
+    {
+      "timestamp": "2021-11-18",
+      "ticker": "ARIS",
+      "open": 14.04,
+      "high": 14.49,
+      "low": 13.77,
+      "close": 14.21,
+      "volume": 273526
+    },
+    {
+      "timestamp": "2021-11-19",
+      "ticker": "ARIS",
+      "open": 14.07,
+      "high": 14.33,
+      "low": 13.59,
+      "close": 13.99,
+      "volume": 301020
+    },
+    {
+      "timestamp": "2021-11-22",
+      "ticker": "ARIS",
+      "open": 14.07,
+      "high": 14.07,
+      "low": 13.5901,
+      "close": 13.98,
+      "volume": 234690
+    },
+    {
+      "timestamp": "2021-11-23",
+      "ticker": "ARIS",
+      "open": 14.1,
+      "high": 14.1,
+      "low": 13.66,
+      "close": 13.86,
+      "volume": 250056
+    },
+    {
+      "timestamp": "2021-11-24",
+      "ticker": "ARIS",
+      "open": 14.31,
+      "high": 14.48,
+      "low": 13.76,
+      "close": 13.92,
+      "volume": 256811
+    },
+    {
+      "timestamp": "2021-11-26",
+      "ticker": "ARIS",
+      "open": 13.79,
+      "high": 14.11,
+      "low": 13.23,
+      "close": 14.06,
+      "volume": 195554
+    },
+    {
+      "timestamp": "2021-11-29",
+      "ticker": "ARIS",
+      "open": 14.02,
+      "high": 14.23,
+      "low": 13.53,
+      "close": 14.23,
+      "volume": 236643
+    },
+    {
+      "timestamp": "2021-11-30",
+      "ticker": "ARIS",
+      "open": 14.18,
+      "high": 14.75,
+      "low": 13.97,
+      "close": 14.5,
+      "volume": 179827
+    },
+    {
+      "timestamp": "2021-12-01",
+      "ticker": "ARIS",
+      "open": 14.39,
+      "high": 14.74,
+      "low": 13.45,
+      "close": 13.78,
+      "volume": 187769
+    },
+    {
+      "timestamp": "2021-12-02",
+      "ticker": "ARIS",
+      "open": 13.5,
+      "high": 14.5,
+      "low": 13.5,
+      "close": 14.43,
+      "volume": 121171
+    },
+    {
+      "timestamp": "2021-12-03",
+      "ticker": "ARIS",
+      "open": 14.65,
+      "high": 14.73,
+      "low": 13.74,
+      "close": 14.36,
+      "volume": 257033
+    },
+    {
+      "timestamp": "2021-12-06",
+      "ticker": "ARIS",
+      "open": 14.49,
+      "high": 14.79,
+      "low": 13.46,
+      "close": 13.89,
+      "volume": 169173
+    },
+    {
+      "timestamp": "2021-12-07",
+      "ticker": "ARIS",
+      "open": 13.88,
+      "high": 14.62,
+      "low": 13.88,
+      "close": 14.05,
+      "volume": 195147
+    },
+    {
+      "timestamp": "2021-12-08",
+      "ticker": "ARIS",
+      "open": 13.93,
+      "high": 14.26,
+      "low": 13.6,
+      "close": 14.09,
+      "volume": 127032
+    },
+    {
+      "timestamp": "2021-12-09",
+      "ticker": "ARIS",
+      "open": 14.09,
+      "high": 14.09,
+      "low": 13.05,
+      "close": 13.26,
+      "volume": 381314
+    },
+    {
+      "timestamp": "2021-12-10",
+      "ticker": "ARIS",
+      "open": 13.24,
+      "high": 13.45,
+      "low": 12.72,
+      "close": 12.97,
+      "volume": 172419
+    },
+    {
+      "timestamp": "2021-12-13",
+      "ticker": "ARIS",
+      "open": 13.0,
+      "high": 13.0,
+      "low": 12.3,
+      "close": 12.47,
+      "volume": 339712
+    },
+    {
+      "timestamp": "2021-12-14",
+      "ticker": "ARIS",
+      "open": 12.47,
+      "high": 12.68,
+      "low": 12.26,
+      "close": 12.57,
+      "volume": 329991
+    },
+    {
+      "timestamp": "2021-12-15",
+      "ticker": "ARIS",
+      "open": 12.66,
+      "high": 12.73,
+      "low": 11.65,
+      "close": 12.14,
+      "volume": 513103
+    },
+    {
+      "timestamp": "2021-12-16",
+      "ticker": "ARIS",
+      "open": 12.2,
+      "high": 12.25,
+      "low": 10.66,
+      "close": 11.5,
+      "volume": 848859
+    },
+    {
+      "timestamp": "2021-12-17",
+      "ticker": "ARIS",
+      "open": 11.36,
+      "high": 11.42,
+      "low": 10.33,
+      "close": 10.62,
+      "volume": 2974165
+    },
+    {
+      "timestamp": "2021-12-20",
+      "ticker": "ARIS",
+      "open": 10.45,
+      "high": 11.18,
+      "low": 10.06,
+      "close": 10.48,
+      "volume": 472465
+    },
+    {
+      "timestamp": "2021-12-21",
+      "ticker": "ARIS",
+      "open": 10.55,
+      "high": 11.12,
+      "low": 10.41,
+      "close": 10.94,
+      "volume": 369280
+    },
+    {
+      "timestamp": "2021-12-22",
+      "ticker": "ARIS",
+      "open": 10.77,
+      "high": 11.0,
+      "low": 10.4,
+      "close": 10.5,
+      "volume": 190296
+    },
+    {
+      "timestamp": "2021-12-23",
+      "ticker": "ARIS",
+      "open": 10.4,
+      "high": 12.17,
+      "low": 10.4,
+      "close": 12.11,
+      "volume": 170142
+    },
+    {
+      "timestamp": "2021-12-27",
+      "ticker": "ARIS",
+      "open": 12.11,
+      "high": 12.34,
+      "low": 11.52,
+      "close": 11.83,
+      "volume": 116472
+    },
+    {
+      "timestamp": "2021-12-28",
+      "ticker": "ARIS",
+      "open": 11.77,
+      "high": 13.05,
+      "low": 11.77,
+      "close": 12.94,
+      "volume": 138191
+    },
+    {
+      "timestamp": "2021-12-29",
+      "ticker": "ARIS",
+      "open": 12.94,
+      "high": 13.3,
+      "low": 12.59,
+      "close": 12.75,
+      "volume": 197012
+    },
+    {
+      "timestamp": "2021-12-30",
+      "ticker": "ARIS",
+      "open": 12.65,
+      "high": 13.16,
+      "low": 12.5984,
+      "close": 13.04,
+      "volume": 466700
+    },
+    {
+      "timestamp": "2021-12-31",
+      "ticker": "ARIS",
+      "open": 12.77,
+      "high": 13.23,
+      "low": 12.67,
+      "close": 12.95,
+      "volume": 199817
+    },
+    {
+      "timestamp": "2022-01-03",
+      "ticker": "ARIS",
+      "open": 13.13,
+      "high": 13.55,
+      "low": 12.813,
+      "close": 13.27,
+      "volume": 123504
+    },
+    {
+      "timestamp": "2022-01-04",
+      "ticker": "ARIS",
+      "open": 13.23,
+      "high": 13.64,
+      "low": 13.2,
+      "close": 13.27,
+      "volume": 292491
+    },
+    {
+      "timestamp": "2022-01-05",
+      "ticker": "ARIS",
+      "open": 13.01,
+      "high": 13.17,
+      "low": 12.25,
+      "close": 12.35,
+      "volume": 83659
+    },
+    {
+      "timestamp": "2022-01-06",
+      "ticker": "ARIS",
+      "open": 12.38,
+      "high": 12.38,
+      "low": 11.58,
+      "close": 12.21,
+      "volume": 125899
+    },
+    {
+      "timestamp": "2022-01-07",
+      "ticker": "ARIS",
+      "open": 12.14,
+      "high": 12.26,
+      "low": 11.8311,
+      "close": 12.03,
+      "volume": 78140
+    },
+    {
+      "timestamp": "2022-01-10",
+      "ticker": "ARIS",
+      "open": 11.94,
+      "high": 12.61,
+      "low": 11.68,
+      "close": 12.55,
+      "volume": 104832
+    },
+    {
+      "timestamp": "2022-01-11",
+      "ticker": "ARIS",
+      "open": 12.51,
+      "high": 13.21,
+      "low": 12.36,
+      "close": 12.77,
+      "volume": 78790
+    },
+    {
+      "timestamp": "2022-01-12",
+      "ticker": "ARIS",
+      "open": 12.88,
+      "high": 13.11,
+      "low": 12.42,
+      "close": 12.85,
+      "volume": 198967
+    },
+    {
+      "timestamp": "2022-01-13",
+      "ticker": "ARIS",
+      "open": 12.81,
+      "high": 13.1,
+      "low": 12.49,
+      "close": 12.71,
+      "volume": 152203
+    },
+    {
+      "timestamp": "2022-01-14",
+      "ticker": "ARIS",
+      "open": 12.63,
+      "high": 13.02,
+      "low": 12.57,
+      "close": 12.79,
+      "volume": 175610
+    },
+    {
+      "timestamp": "2022-01-18",
+      "ticker": "ARIS",
+      "open": 12.52,
+      "high": 12.85,
+      "low": 12.42,
+      "close": 12.72,
+      "volume": 101932
+    },
+    {
+      "timestamp": "2022-01-19",
+      "ticker": "ARIS",
+      "open": 12.89,
+      "high": 13.34,
+      "low": 12.46,
+      "close": 12.79,
+      "volume": 270635
+    },
+    {
+      "timestamp": "2022-01-20",
+      "ticker": "ARIS",
+      "open": 12.92,
+      "high": 13.47,
+      "low": 12.67,
+      "close": 13.23,
+      "volume": 303526
+    },
+    {
+      "timestamp": "2022-01-21",
+      "ticker": "ARIS",
+      "open": 13.16,
+      "high": 13.49,
+      "low": 12.89,
+      "close": 13.05,
+      "volume": 508998
+    },
+    {
+      "timestamp": "2022-01-24",
+      "ticker": "ARIS",
+      "open": 12.72,
+      "high": 12.7602,
+      "low": 11.6,
+      "close": 12.41,
+      "volume": 148096
+    },
+    {
+      "timestamp": "2022-01-25",
+      "ticker": "ARIS",
+      "open": 12.15,
+      "high": 12.195,
+      "low": 11.76,
+      "close": 11.98,
+      "volume": 240274
+    },
+    {
+      "timestamp": "2022-01-26",
+      "ticker": "ARIS",
+      "open": 12.24,
+      "high": 12.56,
+      "low": 11.91,
+      "close": 12.11,
+      "volume": 345517
+    },
+    {
+      "timestamp": "2022-01-27",
+      "ticker": "ARIS",
+      "open": 12.26,
+      "high": 12.39,
+      "low": 11.22,
+      "close": 11.54,
+      "volume": 211466
+    },
+    {
+      "timestamp": "2022-01-28",
+      "ticker": "ARIS",
+      "open": 11.55,
+      "high": 11.55,
+      "low": 10.63,
+      "close": 11.08,
+      "volume": 148739
+    },
+    {
+      "timestamp": "2022-01-31",
+      "ticker": "ARIS",
+      "open": 11.1,
+      "high": 11.58,
+      "low": 10.69,
+      "close": 11.57,
+      "volume": 204108
+    },
+    {
+      "timestamp": "2022-02-01",
+      "ticker": "ARIS",
+      "open": 11.67,
+      "high": 12.67,
+      "low": 11.4,
+      "close": 12.54,
+      "volume": 188143
+    },
+    {
+      "timestamp": "2022-02-02",
+      "ticker": "ARIS",
+      "open": 12.51,
+      "high": 12.51,
+      "low": 12.04,
+      "close": 12.2,
+      "volume": 111046
+    },
+    {
+      "timestamp": "2022-02-03",
+      "ticker": "ARIS",
+      "open": 12.03,
+      "high": 12.83,
+      "low": 11.88,
+      "close": 12.17,
+      "volume": 235177
+    },
+    {
+      "timestamp": "2022-02-04",
+      "ticker": "ARIS",
+      "open": 11.99,
+      "high": 12.41,
+      "low": 11.93,
+      "close": 12.33,
+      "volume": 229241
+    },
+    {
+      "timestamp": "2022-02-07",
+      "ticker": "ARIS",
+      "open": 12.23,
+      "high": 12.45,
+      "low": 11.83,
+      "close": 12.18,
+      "volume": 156512
+    },
+    {
+      "timestamp": "2022-02-08",
+      "ticker": "ARIS",
+      "open": 12.11,
+      "high": 12.18,
+      "low": 11.75,
+      "close": 12.04,
+      "volume": 126891
+    },
+    {
+      "timestamp": "2022-02-09",
+      "ticker": "ARIS",
+      "open": 12.01,
+      "high": 12.345,
+      "low": 11.96,
+      "close": 12.19,
+      "volume": 87747
+    },
+    {
+      "timestamp": "2022-02-10",
+      "ticker": "ARIS",
+      "open": 11.86,
+      "high": 12.37,
+      "low": 11.84,
+      "close": 11.94,
+      "volume": 138400
+    },
+    {
+      "timestamp": "2022-02-11",
+      "ticker": "ARIS",
+      "open": 11.9,
+      "high": 12.69,
+      "low": 11.86,
+      "close": 12.58,
+      "volume": 182050
+    },
+    {
+      "timestamp": "2022-02-14",
+      "ticker": "ARIS",
+      "open": 12.65,
+      "high": 12.82,
+      "low": 12.33,
+      "close": 12.7,
+      "volume": 156360
+    },
+    {
+      "timestamp": "2022-02-15",
+      "ticker": "ARIS",
+      "open": 12.86,
+      "high": 13.0,
+      "low": 12.58,
+      "close": 12.73,
+      "volume": 85969
+    },
+    {
+      "timestamp": "2022-02-16",
+      "ticker": "ARIS",
+      "open": 12.77,
+      "high": 13.07,
+      "low": 12.77,
+      "close": 13.0,
+      "volume": 94183
+    },
+    {
+      "timestamp": "2022-02-17",
+      "ticker": "ARIS",
+      "open": 12.94,
+      "high": 13.4,
+      "low": 12.92,
+      "close": 13.37,
+      "volume": 194208
+    },
+    {
+      "timestamp": "2022-02-18",
+      "ticker": "ARIS",
+      "open": 13.15,
+      "high": 13.72,
+      "low": 13.15,
+      "close": 13.61,
+      "volume": 140802
+    },
+    {
+      "timestamp": "2022-02-22",
+      "ticker": "ARIS",
+      "open": 13.65,
+      "high": 13.72,
+      "low": 13.38,
+      "close": 13.53,
+      "volume": 175820
+    },
+    {
+      "timestamp": "2022-02-23",
+      "ticker": "ARIS",
+      "open": 13.54,
+      "high": 14.04,
+      "low": 13.52,
+      "close": 13.91,
+      "volume": 490745
+    },
+    {
+      "timestamp": "2022-02-24",
+      "ticker": "ARIS",
+      "open": 13.71,
+      "high": 13.97,
+      "low": 13.09,
+      "close": 13.59,
+      "volume": 221661
+    },
+    {
+      "timestamp": "2022-02-25",
+      "ticker": "ARIS",
+      "open": 13.56,
+      "high": 14.3,
+      "low": 13.51,
+      "close": 14.17,
+      "volume": 206317
+    },
+    {
+      "timestamp": "2022-02-28",
+      "ticker": "ARIS",
+      "open": 14.1,
+      "high": 14.63,
+      "low": 13.98,
+      "close": 14.61,
+      "volume": 355102
+    },
+    {
+      "timestamp": "2022-03-01",
+      "ticker": "ARIS",
+      "open": 14.78,
+      "high": 16.9,
+      "low": 14.42,
+      "close": 16.86,
+      "volume": 985849
+    },
+    {
+      "timestamp": "2022-03-02",
+      "ticker": "ARIS",
+      "open": 16.99,
+      "high": 17.56,
+      "low": 16.74,
+      "close": 16.99,
+      "volume": 222239
+    },
+    {
+      "timestamp": "2022-03-03",
+      "ticker": "ARIS",
+      "open": 16.59,
+      "high": 16.59,
+      "low": 14.84,
+      "close": 15.48,
+      "volume": 314584
+    },
+    {
+      "timestamp": "2022-03-04",
+      "ticker": "ARIS",
+      "open": 14.75,
+      "high": 15.78,
+      "low": 14.75,
+      "close": 15.65,
+      "volume": 309493
+    },
+    {
+      "timestamp": "2022-03-07",
+      "ticker": "ARIS",
+      "open": 15.65,
+      "high": 15.935,
+      "low": 15.31,
+      "close": 15.76,
+      "volume": 256568
+    },
+    {
+      "timestamp": "2022-03-08",
+      "ticker": "ARIS",
+      "open": 15.97,
+      "high": 17.31,
+      "low": 15.71,
+      "close": 17.21,
+      "volume": 504525
+    },
+    {
+      "timestamp": "2022-03-09",
+      "ticker": "ARIS",
+      "open": 17.13,
+      "high": 17.9299,
+      "low": 16.83,
+      "close": 17.24,
+      "volume": 323907
+    },
+    {
+      "timestamp": "2022-03-10",
+      "ticker": "ARIS",
+      "open": 17.07,
+      "high": 18.29,
+      "low": 17.0032,
+      "close": 18.04,
+      "volume": 697961
+    },
+    {
+      "timestamp": "2022-03-11",
+      "ticker": "ARIS",
+      "open": 17.76,
+      "high": 18.205,
+      "low": 17.36,
+      "close": 17.8,
+      "volume": 115571
+    },
+    {
+      "timestamp": "2022-03-14",
+      "ticker": "ARIS",
+      "open": 17.8,
+      "high": 17.8,
+      "low": 16.0501,
+      "close": 16.87,
+      "volume": 190768
+    },
+    {
+      "timestamp": "2022-03-15",
+      "ticker": "ARIS",
+      "open": 16.32,
+      "high": 17.16,
+      "low": 16.18,
+      "close": 16.86,
+      "volume": 81139
+    },
+    {
+      "timestamp": "2022-03-16",
+      "ticker": "ARIS",
+      "open": 16.91,
+      "high": 17.125,
+      "low": 16.32,
+      "close": 16.89,
+      "volume": 116494
+    },
+    {
+      "timestamp": "2022-03-17",
+      "ticker": "ARIS",
+      "open": 17.24,
+      "high": 18.285,
+      "low": 17.24,
+      "close": 17.9,
+      "volume": 114867
+    },
+    {
+      "timestamp": "2022-03-18",
+      "ticker": "ARIS",
+      "open": 17.8,
+      "high": 18.29,
+      "low": 17.8,
+      "close": 18.28,
+      "volume": 210280
+    },
+    {
+      "timestamp": "2022-03-21",
+      "ticker": "ARIS",
+      "open": 18.36,
+      "high": 19.1,
+      "low": 18.23,
+      "close": 18.62,
+      "volume": 164385
+    },
+    {
+      "timestamp": "2022-03-22",
+      "ticker": "ARIS",
+      "open": 18.77,
+      "high": 19.16,
+      "low": 17.78,
+      "close": 18.45,
+      "volume": 199478
+    },
+    {
+      "timestamp": "2022-03-23",
+      "ticker": "ARIS",
+      "open": 18.27,
+      "high": 18.75,
+      "low": 18.01,
+      "close": 18.43,
+      "volume": 208812
+    },
+    {
+      "timestamp": "2022-03-24",
+      "ticker": "ARIS",
+      "open": 18.51,
+      "high": 18.92,
+      "low": 18.4,
+      "close": 18.55,
+      "volume": 40786
+    },
+    {
+      "timestamp": "2022-03-25",
+      "ticker": "ARIS",
+      "open": 18.98,
+      "high": 19.07,
+      "low": 18.0,
+      "close": 18.65,
+      "volume": 289810
+    },
+    {
+      "timestamp": "2022-03-28",
+      "ticker": "ARIS",
+      "open": 18.61,
+      "high": 18.88,
+      "low": 18.22,
+      "close": 18.54,
+      "volume": 136889
+    },
+    {
+      "timestamp": "2022-03-29",
+      "ticker": "ARIS",
+      "open": 18.58,
+      "high": 19.07,
+      "low": 18.3,
+      "close": 18.86,
+      "volume": 123247
+    },
+    {
+      "timestamp": "2022-03-30",
+      "ticker": "ARIS",
+      "open": 19.11,
+      "high": 19.2,
+      "low": 18.15,
+      "close": 18.37,
+      "volume": 206782
+    },
+    {
+      "timestamp": "2022-03-31",
+      "ticker": "ARIS",
+      "open": 18.23,
+      "high": 18.64,
+      "low": 18.01,
+      "close": 18.2,
+      "volume": 97657
+    },
+    {
+      "timestamp": "2022-04-01",
+      "ticker": "ARIS",
+      "open": 18.11,
+      "high": 18.28,
+      "low": 17.59,
+      "close": 18.16,
+      "volume": 111524
+    },
+    {
+      "timestamp": "2022-04-04",
+      "ticker": "ARIS",
+      "open": 18.31,
+      "high": 18.56,
+      "low": 17.92,
+      "close": 18.08,
+      "volume": 80204
+    },
+    {
+      "timestamp": "2022-04-05",
+      "ticker": "ARIS",
+      "open": 18.16,
+      "high": 18.41,
+      "low": 17.17,
+      "close": 17.27,
+      "volume": 123111
+    },
+    {
+      "timestamp": "2022-04-06",
+      "ticker": "ARIS",
+      "open": 17.24,
+      "high": 17.39,
+      "low": 16.34,
+      "close": 16.39,
+      "volume": 239810
+    },
+    {
+      "timestamp": "2022-04-07",
+      "ticker": "ARIS",
+      "open": 16.5,
+      "high": 16.87,
+      "low": 16.15,
+      "close": 16.8,
+      "volume": 144409
+    },
+    {
+      "timestamp": "2022-04-08",
+      "ticker": "ARIS",
+      "open": 16.96,
+      "high": 18.2,
+      "low": 16.61,
+      "close": 18.1,
+      "volume": 186457
+    },
+    {
+      "timestamp": "2022-04-11",
+      "ticker": "ARIS",
+      "open": 18.33,
+      "high": 18.33,
+      "low": 16.93,
+      "close": 17.42,
+      "volume": 122839
+    },
+    {
+      "timestamp": "2022-04-12",
+      "ticker": "ARIS",
+      "open": 17.68,
+      "high": 18.08,
+      "low": 17.46,
+      "close": 17.7,
+      "volume": 227972
+    },
+    {
+      "timestamp": "2022-04-13",
+      "ticker": "ARIS",
+      "open": 17.54,
+      "high": 18.18,
+      "low": 17.0549,
+      "close": 18.14,
+      "volume": 166472
+    },
+    {
+      "timestamp": "2022-04-14",
+      "ticker": "ARIS",
+      "open": 18.22,
+      "high": 19.2,
+      "low": 18.19,
+      "close": 19.16,
+      "volume": 701361
+    },
+    {
+      "timestamp": "2022-04-18",
+      "ticker": "ARIS",
+      "open": 19.39,
+      "high": 19.68,
+      "low": 18.35,
+      "close": 18.79,
+      "volume": 167308
+    },
+    {
+      "timestamp": "2022-04-19",
+      "ticker": "ARIS",
+      "open": 18.53,
+      "high": 19.35,
+      "low": 18.53,
+      "close": 18.81,
+      "volume": 99169
+    },
+    {
+      "timestamp": "2022-04-20",
+      "ticker": "ARIS",
+      "open": 19.23,
+      "high": 19.53,
+      "low": 18.77,
+      "close": 18.89,
+      "volume": 221785
+    },
+    {
+      "timestamp": "2022-04-21",
+      "ticker": "ARIS",
+      "open": 18.97,
+      "high": 19.1165,
+      "low": 18.01,
+      "close": 18.3,
+      "volume": 205114
+    },
+    {
+      "timestamp": "2022-04-22",
+      "ticker": "ARIS",
+      "open": 18.25,
+      "high": 18.6,
+      "low": 17.05,
+      "close": 17.37,
+      "volume": 175735
+    },
+    {
+      "timestamp": "2022-04-25",
+      "ticker": "ARIS",
+      "open": 17.2,
+      "high": 18.1,
+      "low": 16.455,
+      "close": 17.99,
+      "volume": 261600
+    },
+    {
+      "timestamp": "2022-04-26",
+      "ticker": "ARIS",
+      "open": 18.2,
+      "high": 18.56,
+      "low": 17.76,
+      "close": 18.08,
+      "volume": 168612
+    },
+    {
+      "timestamp": "2022-04-27",
+      "ticker": "ARIS",
+      "open": 18.17,
+      "high": 18.28,
+      "low": 17.12,
+      "close": 17.43,
+      "volume": 142741
+    },
+    {
+      "timestamp": "2022-04-28",
+      "ticker": "ARIS",
+      "open": 17.69,
+      "high": 18.1,
+      "low": 17.31,
+      "close": 18.02,
+      "volume": 156737
+    },
+    {
+      "timestamp": "2022-04-29",
+      "ticker": "ARIS",
+      "open": 18.05,
+      "high": 18.1,
+      "low": 16.76,
+      "close": 16.94,
+      "volume": 182593
+    },
+    {
+      "timestamp": "2022-05-02",
+      "ticker": "ARIS",
+      "open": 16.9,
+      "high": 17.28,
+      "low": 16.65,
+      "close": 17.02,
+      "volume": 190099
+    },
+    {
+      "timestamp": "2022-05-03",
+      "ticker": "ARIS",
+      "open": 17.01,
+      "high": 18.01,
+      "low": 17.01,
+      "close": 17.45,
+      "volume": 130849
+    },
+    {
+      "timestamp": "2022-05-04",
+      "ticker": "ARIS",
+      "open": 17.65,
+      "high": 17.65,
+      "low": 16.72,
+      "close": 17.0,
+      "volume": 441751
+    },
+    {
+      "timestamp": "2022-05-05",
+      "ticker": "ARIS",
+      "open": 16.9,
+      "high": 17.2447,
+      "low": 15.41,
+      "close": 15.8,
+      "volume": 277267
+    },
+    {
+      "timestamp": "2022-05-06",
+      "ticker": "ARIS",
+      "open": 16.0,
+      "high": 16.93,
+      "low": 15.8105,
+      "close": 16.44,
+      "volume": 697463
+    },
+    {
+      "timestamp": "2022-05-09",
+      "ticker": "ARIS",
+      "open": 16.36,
+      "high": 16.36,
+      "low": 15.03,
+      "close": 15.4,
+      "volume": 215643
+    },
+    {
+      "timestamp": "2022-05-10",
+      "ticker": "ARIS",
+      "open": 16.12,
+      "high": 16.93,
+      "low": 15.1501,
+      "close": 15.99,
+      "volume": 224216
+    },
+    {
+      "timestamp": "2022-05-11",
+      "ticker": "ARIS",
+      "open": 16.25,
+      "high": 17.43,
+      "low": 16.24,
+      "close": 16.72,
+      "volume": 231559
+    },
+    {
+      "timestamp": "2022-05-12",
+      "ticker": "ARIS",
+      "open": 16.61,
+      "high": 16.645,
+      "low": 15.3,
+      "close": 16.07,
+      "volume": 406834
+    },
+    {
+      "timestamp": "2022-05-13",
+      "ticker": "ARIS",
+      "open": 16.25,
+      "high": 17.09,
+      "low": 16.01,
+      "close": 16.96,
+      "volume": 254330
+    },
+    {
+      "timestamp": "2022-05-16",
+      "ticker": "ARIS",
+      "open": 17.09,
+      "high": 18.73,
+      "low": 17.09,
+      "close": 17.91,
+      "volume": 290178
+    },
+    {
+      "timestamp": "2022-05-17",
+      "ticker": "ARIS",
+      "open": 18.22,
+      "high": 18.4944,
+      "low": 17.65,
+      "close": 17.83,
+      "volume": 162550
+    },
+    {
+      "timestamp": "2022-05-18",
+      "ticker": "ARIS",
+      "open": 17.64,
+      "high": 17.65,
+      "low": 17.18,
+      "close": 17.36,
+      "volume": 238009
+    },
+    {
+      "timestamp": "2022-05-19",
+      "ticker": "ARIS",
+      "open": 17.27,
+      "high": 17.71,
+      "low": 16.95,
+      "close": 17.63,
+      "volume": 233744
+    },
+    {
+      "timestamp": "2022-05-20",
+      "ticker": "ARIS",
+      "open": 17.86,
+      "high": 18.15,
+      "low": 17.085,
+      "close": 17.57,
+      "volume": 166229
+    },
+    {
+      "timestamp": "2022-05-23",
+      "ticker": "ARIS",
+      "open": 17.89,
+      "high": 19.18,
+      "low": 17.54,
+      "close": 19.1,
+      "volume": 505222
+    },
+    {
+      "timestamp": "2022-05-24",
+      "ticker": "ARIS",
+      "open": 19.09,
+      "high": 19.47,
+      "low": 18.3,
+      "close": 18.83,
+      "volume": 394092
+    },
+    {
+      "timestamp": "2022-05-25",
+      "ticker": "ARIS",
+      "open": 18.79,
+      "high": 19.325,
+      "low": 18.55,
+      "close": 18.79,
+      "volume": 252544
+    },
+    {
+      "timestamp": "2022-05-26",
+      "ticker": "ARIS",
+      "open": 18.76,
+      "high": 19.32,
+      "low": 18.66,
+      "close": 18.91,
+      "volume": 312466
+    },
+    {
+      "timestamp": "2022-05-27",
+      "ticker": "ARIS",
+      "open": 19.3,
+      "high": 20.98,
+      "low": 19.18,
+      "close": 20.73,
+      "volume": 2383969
+    },
+    {
+      "timestamp": "2022-05-31",
+      "ticker": "ARIS",
+      "open": 21.98,
+      "high": 22.0,
+      "low": 20.07,
+      "close": 20.43,
+      "volume": 701591
+    },
+    {
+      "timestamp": "2022-06-01",
+      "ticker": "ARIS",
+      "open": 20.61,
+      "high": 21.44,
+      "low": 20.3,
+      "close": 20.75,
+      "volume": 305983
+    },
+    {
+      "timestamp": "2022-06-02",
+      "ticker": "ARIS",
+      "open": 20.93,
+      "high": 21.3149,
+      "low": 19.6,
+      "close": 20.26,
+      "volume": 403235
+    },
+    {
+      "timestamp": "2022-06-03",
+      "ticker": "ARIS",
+      "open": 20.0,
+      "high": 20.84,
+      "low": 19.61,
+      "close": 20.1,
+      "volume": 261542
+    },
+    {
+      "timestamp": "2022-06-06",
+      "ticker": "ARIS",
+      "open": 20.68,
+      "high": 21.79,
+      "low": 20.18,
+      "close": 21.0,
+      "volume": 876782
+    },
+    {
+      "timestamp": "2022-06-07",
+      "ticker": "ARIS",
+      "open": 21.0,
+      "high": 21.1,
+      "low": 19.83,
+      "close": 20.51,
+      "volume": 433275
+    },
+    {
+      "timestamp": "2022-06-08",
+      "ticker": "ARIS",
+      "open": 20.47,
+      "high": 21.36,
+      "low": 20.02,
+      "close": 20.91,
+      "volume": 365305
+    },
+    {
+      "timestamp": "2022-06-09",
+      "ticker": "ARIS",
+      "open": 20.68,
+      "high": 21.86,
+      "low": 20.29,
+      "close": 21.16,
+      "volume": 731898
+    },
+    {
+      "timestamp": "2022-06-10",
+      "ticker": "ARIS",
+      "open": 20.6,
+      "high": 20.6,
+      "low": 17.1,
+      "close": 19.47,
+      "volume": 1760601
+    },
+    {
+      "timestamp": "2022-06-13",
+      "ticker": "ARIS",
+      "open": 18.09,
+      "high": 18.58,
+      "low": 16.32,
+      "close": 18.32,
+      "volume": 875454
+    },
+    {
+      "timestamp": "2022-06-14",
+      "ticker": "ARIS",
+      "open": 18.56,
+      "high": 19.3,
+      "low": 18.1738,
+      "close": 19.06,
+      "volume": 910103
+    },
+    {
+      "timestamp": "2022-06-15",
+      "ticker": "ARIS",
+      "open": 19.32,
+      "high": 19.72,
+      "low": 18.35,
+      "close": 19.34,
+      "volume": 618784
+    },
+    {
+      "timestamp": "2022-06-16",
+      "ticker": "ARIS",
+      "open": 18.7,
+      "high": 18.81,
+      "low": 16.9001,
+      "close": 18.57,
+      "volume": 720811
+    },
+    {
+      "timestamp": "2022-06-17",
+      "ticker": "ARIS",
+      "open": 18.77,
+      "high": 19.22,
+      "low": 17.94,
+      "close": 18.75,
+      "volume": 931495
+    },
+    {
+      "timestamp": "2022-06-21",
+      "ticker": "ARIS",
+      "open": 19.22,
+      "high": 19.65,
+      "low": 18.18,
+      "close": 18.71,
+      "volume": 397914
+    },
+    {
+      "timestamp": "2022-06-22",
+      "ticker": "ARIS",
+      "open": 18.41,
+      "high": 18.88,
+      "low": 17.9,
+      "close": 18.09,
+      "volume": 394526
+    },
+    {
+      "timestamp": "2022-06-23",
+      "ticker": "ARIS",
+      "open": 18.16,
+      "high": 18.44,
+      "low": 16.22,
+      "close": 16.5,
+      "volume": 453929
+    },
+    {
+      "timestamp": "2022-06-24",
+      "ticker": "ARIS",
+      "open": 16.39,
+      "high": 16.86,
+      "low": 15.55,
+      "close": 16.83,
+      "volume": 1712440
+    },
+    {
+      "timestamp": "2022-06-27",
+      "ticker": "ARIS",
+      "open": 16.84,
+      "high": 17.5,
+      "low": 16.84,
+      "close": 17.1,
+      "volume": 189935
+    },
+    {
+      "timestamp": "2022-06-28",
+      "ticker": "ARIS",
+      "open": 17.24,
+      "high": 17.68,
+      "low": 16.74,
+      "close": 17.2,
+      "volume": 181721
+    },
+    {
+      "timestamp": "2022-06-29",
+      "ticker": "ARIS",
+      "open": 17.46,
+      "high": 17.46,
+      "low": 16.36,
+      "close": 16.9,
+      "volume": 237452
+    },
+    {
+      "timestamp": "2022-06-30",
+      "ticker": "ARIS",
+      "open": 16.58,
+      "high": 16.7,
+      "low": 16.01,
+      "close": 16.68,
+      "volume": 230015
+    },
+    {
+      "timestamp": "2022-07-01",
+      "ticker": "ARIS",
+      "open": 16.71,
+      "high": 17.22,
+      "low": 16.16,
+      "close": 16.75,
+      "volume": 333329
+    },
+    {
+      "timestamp": "2022-07-05",
+      "ticker": "ARIS",
+      "open": 16.5,
+      "high": 16.76,
+      "low": 15.26,
+      "close": 15.94,
+      "volume": 228511
+    },
+    {
+      "timestamp": "2022-07-06",
+      "ticker": "ARIS",
+      "open": 16.05,
+      "high": 16.44,
+      "low": 15.89,
+      "close": 16.22,
+      "volume": 290215
+    },
+    {
+      "timestamp": "2022-07-07",
+      "ticker": "ARIS",
+      "open": 16.58,
+      "high": 17.44,
+      "low": 16.53,
+      "close": 17.29,
+      "volume": 194746
+    },
+    {
+      "timestamp": "2022-07-08",
+      "ticker": "ARIS",
+      "open": 17.37,
+      "high": 17.45,
+      "low": 16.74,
+      "close": 17.07,
+      "volume": 157997
+    },
+    {
+      "timestamp": "2022-07-11",
+      "ticker": "ARIS",
+      "open": 16.99,
+      "high": 17.16,
+      "low": 16.55,
+      "close": 16.94,
+      "volume": 128316
+    },
+    {
+      "timestamp": "2022-07-12",
+      "ticker": "ARIS",
+      "open": 16.7,
+      "high": 16.81,
+      "low": 15.54,
+      "close": 15.85,
+      "volume": 380638
+    },
+    {
+      "timestamp": "2022-07-13",
+      "ticker": "ARIS",
+      "open": 15.63,
+      "high": 16.45,
+      "low": 15.54,
+      "close": 16.39,
+      "volume": 335299
+    },
+    {
+      "timestamp": "2022-07-14",
+      "ticker": "ARIS",
+      "open": 15.79,
+      "high": 16.51,
+      "low": 15.5308,
+      "close": 16.46,
+      "volume": 291564
+    },
+    {
+      "timestamp": "2022-07-15",
+      "ticker": "ARIS",
+      "open": 16.77,
+      "high": 17.61,
+      "low": 16.41,
+      "close": 17.58,
+      "volume": 322170
+    },
+    {
+      "timestamp": "2022-07-18",
+      "ticker": "ARIS",
+      "open": 17.76,
+      "high": 19.05,
+      "low": 17.55,
+      "close": 18.57,
+      "volume": 357836
+    },
+    {
+      "timestamp": "2022-07-19",
+      "ticker": "ARIS",
+      "open": 18.58,
+      "high": 19.67,
+      "low": 18.58,
+      "close": 19.64,
+      "volume": 224350
+    },
+    {
+      "timestamp": "2022-07-20",
+      "ticker": "ARIS",
+      "open": 19.39,
+      "high": 20.96,
+      "low": 19.0833,
+      "close": 20.89,
+      "volume": 527542
+    },
+    {
+      "timestamp": "2022-07-21",
+      "ticker": "ARIS",
+      "open": 20.67,
+      "high": 20.76,
+      "low": 18.19,
+      "close": 18.97,
+      "volume": 358315
+    },
+    {
+      "timestamp": "2022-07-22",
+      "ticker": "ARIS",
+      "open": 19.01,
+      "high": 19.32,
+      "low": 18.37,
+      "close": 18.65,
+      "volume": 293872
+    },
+    {
+      "timestamp": "2022-07-25",
+      "ticker": "ARIS",
+      "open": 18.67,
+      "high": 20.31,
+      "low": 18.55,
+      "close": 19.76,
+      "volume": 349517
+    },
+    {
+      "timestamp": "2022-07-26",
+      "ticker": "ARIS",
+      "open": 19.98,
+      "high": 20.36,
+      "low": 19.18,
+      "close": 19.61,
+      "volume": 215062
+    },
+    {
+      "timestamp": "2022-07-27",
+      "ticker": "ARIS",
+      "open": 19.83,
+      "high": 21.32,
+      "low": 19.75,
+      "close": 21.2,
+      "volume": 329882
+    },
+    {
+      "timestamp": "2022-07-28",
+      "ticker": "ARIS",
+      "open": 21.32,
+      "high": 21.7664,
+      "low": 20.59,
+      "close": 20.77,
+      "volume": 254643
+    },
+    {
+      "timestamp": "2022-07-29",
+      "ticker": "ARIS",
+      "open": 21.0,
+      "high": 21.475,
+      "low": 20.795,
+      "close": 21.17,
+      "volume": 270321
+    },
+    {
+      "timestamp": "2022-08-01",
+      "ticker": "ARIS",
+      "open": 21.25,
+      "high": 21.5,
+      "low": 20.67,
+      "close": 21.16,
+      "volume": 351220
+    },
+    {
+      "timestamp": "2022-08-02",
+      "ticker": "ARIS",
+      "open": 21.27,
+      "high": 23.58,
+      "low": 20.9719,
+      "close": 22.87,
+      "volume": 1023323
+    },
+    {
+      "timestamp": "2022-08-03",
+      "ticker": "ARIS",
+      "open": 23.32,
+      "high": 23.49,
+      "low": 22.22,
+      "close": 22.31,
+      "volume": 598283
+    },
+    {
+      "timestamp": "2022-08-04",
+      "ticker": "ARIS",
+      "open": 18.67,
+      "high": 18.67,
+      "low": 15.64,
+      "close": 17.66,
+      "volume": 2645153
+    },
+    {
+      "timestamp": "2022-08-05",
+      "ticker": "ARIS",
+      "open": 17.01,
+      "high": 17.89,
+      "low": 16.37,
+      "close": 16.65,
+      "volume": 1187477
+    },
+    {
+      "timestamp": "2022-08-08",
+      "ticker": "ARIS",
+      "open": 16.5,
+      "high": 16.67,
+      "low": 15.49,
+      "close": 15.77,
+      "volume": 1313048
+    },
+    {
+      "timestamp": "2022-08-09",
+      "ticker": "ARIS",
+      "open": 15.8001,
+      "high": 16.9,
+      "low": 15.8001,
+      "close": 16.69,
+      "volume": 714118
+    },
+    {
+      "timestamp": "2022-08-10",
+      "ticker": "ARIS",
+      "open": 16.89,
+      "high": 17.96,
+      "low": 16.48,
+      "close": 17.73,
+      "volume": 515782
+    },
+    {
+      "timestamp": "2022-08-11",
+      "ticker": "ARIS",
+      "open": 17.83,
+      "high": 18.38,
+      "low": 17.6,
+      "close": 18.03,
+      "volume": 504101
+    },
+    {
+      "timestamp": "2022-08-12",
+      "ticker": "ARIS",
+      "open": 18.05,
+      "high": 18.66,
+      "low": 17.88,
+      "close": 18.6,
+      "volume": 459040
+    },
+    {
+      "timestamp": "2022-08-15",
+      "ticker": "ARIS",
+      "open": 18.15,
+      "high": 18.58,
+      "low": 17.46,
+      "close": 17.77,
+      "volume": 423096
+    },
+    {
+      "timestamp": "2022-08-16",
+      "ticker": "ARIS",
+      "open": 17.6,
+      "high": 17.8,
+      "low": 16.58,
+      "close": 16.93,
+      "volume": 482789
+    },
+    {
+      "timestamp": "2022-08-17",
+      "ticker": "ARIS",
+      "open": 16.77,
+      "high": 18.15,
+      "low": 16.53,
+      "close": 17.96,
+      "volume": 295851
+    },
+    {
+      "timestamp": "2022-08-18",
+      "ticker": "ARIS",
+      "open": 18.1,
+      "high": 18.99,
+      "low": 18.1,
+      "close": 18.86,
+      "volume": 205644
+    },
+    {
+      "timestamp": "2022-08-19",
+      "ticker": "ARIS",
+      "open": 18.75,
+      "high": 18.85,
+      "low": 17.56,
+      "close": 18.0,
+      "volume": 401435
+    },
+    {
+      "timestamp": "2022-08-22",
+      "ticker": "ARIS",
+      "open": 17.95,
+      "high": 18.15,
+      "low": 16.78,
+      "close": 17.15,
+      "volume": 515355
+    },
+    {
+      "timestamp": "2022-08-23",
+      "ticker": "ARIS",
+      "open": 17.51,
+      "high": 18.32,
+      "low": 17.4,
+      "close": 18.29,
+      "volume": 424863
+    },
+    {
+      "timestamp": "2022-08-24",
+      "ticker": "ARIS",
+      "open": 18.15,
+      "high": 18.4097,
+      "low": 17.94,
+      "close": 18.23,
+      "volume": 223643
+    },
+    {
+      "timestamp": "2022-08-25",
+      "ticker": "ARIS",
+      "open": 18.31,
+      "high": 18.7048,
+      "low": 17.97,
+      "close": 18.0,
+      "volume": 239147
+    },
+    {
+      "timestamp": "2022-08-26",
+      "ticker": "ARIS",
+      "open": 18.11,
+      "high": 18.11,
+      "low": 16.97,
+      "close": 17.22,
+      "volume": 283353
+    },
+    {
+      "timestamp": "2022-08-29",
+      "ticker": "ARIS",
+      "open": 17.05,
+      "high": 17.44,
+      "low": 16.67,
+      "close": 17.02,
+      "volume": 118431
+    },
+    {
+      "timestamp": "2022-08-30",
+      "ticker": "ARIS",
+      "open": 16.9,
+      "high": 17.055,
+      "low": 16.05,
+      "close": 16.79,
+      "volume": 368168
+    },
+    {
+      "timestamp": "2022-08-31",
+      "ticker": "ARIS",
+      "open": 16.74,
+      "high": 17.41,
+      "low": 16.59,
+      "close": 17.0,
+      "volume": 261625
+    },
+    {
+      "timestamp": "2022-09-01",
+      "ticker": "ARIS",
+      "open": 16.72,
+      "high": 17.12,
+      "low": 15.79,
+      "close": 16.01,
+      "volume": 363310
+    },
+    {
+      "timestamp": "2022-09-02",
+      "ticker": "ARIS",
+      "open": 16.27,
+      "high": 16.3,
+      "low": 15.6363,
+      "close": 16.18,
+      "volume": 195347
+    },
+    {
+      "timestamp": "2022-09-06",
+      "ticker": "ARIS",
+      "open": 16.37,
+      "high": 16.37,
+      "low": 15.95,
+      "close": 16.12,
+      "volume": 156128
+    },
+    {
+      "timestamp": "2022-09-07",
+      "ticker": "ARIS",
+      "open": 16.01,
+      "high": 16.18,
+      "low": 15.4806,
+      "close": 15.83,
+      "volume": 233289
+    },
+    {
+      "timestamp": "2022-09-08",
+      "ticker": "ARIS",
+      "open": 15.79,
+      "high": 16.12,
+      "low": 15.61,
+      "close": 15.89,
+      "volume": 140107
+    },
+    {
+      "timestamp": "2022-09-09",
+      "ticker": "ARIS",
+      "open": 16.2,
+      "high": 16.85,
+      "low": 16.2,
+      "close": 16.54,
+      "volume": 147704
+    },
+    {
+      "timestamp": "2022-09-12",
+      "ticker": "ARIS",
+      "open": 16.7,
+      "high": 16.9227,
+      "low": 16.535,
+      "close": 16.82,
+      "volume": 84107
+    },
+    {
+      "timestamp": "2022-09-13",
+      "ticker": "ARIS",
+      "open": 16.75,
+      "high": 17.02,
+      "low": 15.64,
+      "close": 15.7,
+      "volume": 236747
+    },
+    {
+      "timestamp": "2022-09-14",
+      "ticker": "ARIS",
+      "open": 15.74,
+      "high": 16.02,
+      "low": 15.33,
+      "close": 15.94,
+      "volume": 413847
+    },
+    {
+      "timestamp": "2022-09-15",
+      "ticker": "ARIS",
+      "open": 15.71,
+      "high": 16.04,
+      "low": 15.55,
+      "close": 15.9,
+      "volume": 235606
+    },
+    {
+      "timestamp": "2022-09-16",
+      "ticker": "ARIS",
+      "open": 15.7,
+      "high": 15.98,
+      "low": 15.36,
+      "close": 15.94,
+      "volume": 626921
+    },
+    {
+      "timestamp": "2022-09-19",
+      "ticker": "ARIS",
+      "open": 15.71,
+      "high": 15.88,
+      "low": 15.03,
+      "close": 15.46,
+      "volume": 334059
+    },
+    {
+      "timestamp": "2022-09-20",
+      "ticker": "ARIS",
+      "open": 15.38,
+      "high": 15.38,
+      "low": 14.6,
+      "close": 14.71,
+      "volume": 216122
+    },
+    {
+      "timestamp": "2022-09-21",
+      "ticker": "ARIS",
+      "open": 14.89,
+      "high": 15.04,
+      "low": 13.97,
+      "close": 14.02,
+      "volume": 369176
+    },
+    {
+      "timestamp": "2022-09-22",
+      "ticker": "ARIS",
+      "open": 14.16,
+      "high": 14.65,
+      "low": 13.97,
+      "close": 14.16,
+      "volume": 266690
+    },
+    {
+      "timestamp": "2022-09-23",
+      "ticker": "ARIS",
+      "open": 13.7,
+      "high": 13.7,
+      "low": 12.5,
+      "close": 12.82,
+      "volume": 536237
+    },
+    {
+      "timestamp": "2022-09-26",
+      "ticker": "ARIS",
+      "open": 12.85,
+      "high": 13.25,
+      "low": 11.79,
+      "close": 11.82,
+      "volume": 756694
+    },
+    {
+      "timestamp": "2022-09-27",
+      "ticker": "ARIS",
+      "open": 12.02,
+      "high": 12.625,
+      "low": 11.75,
+      "close": 12.31,
+      "volume": 358908
+    },
+    {
+      "timestamp": "2022-09-28",
+      "ticker": "ARIS",
+      "open": 12.36,
+      "high": 13.38,
+      "low": 12.36,
+      "close": 13.02,
+      "volume": 430020
+    },
+    {
+      "timestamp": "2022-09-29",
+      "ticker": "ARIS",
+      "open": 12.85,
+      "high": 13.05,
+      "low": 12.625,
+      "close": 13.01,
+      "volume": 283649
+    },
+    {
+      "timestamp": "2022-09-30",
+      "ticker": "ARIS",
+      "open": 12.88,
+      "high": 13.12,
+      "low": 12.4,
+      "close": 12.76,
+      "volume": 240708
+    },
+    {
+      "timestamp": "2022-10-03",
+      "ticker": "ARIS",
+      "open": 13.13,
+      "high": 13.53,
+      "low": 12.89,
+      "close": 13.41,
+      "volume": 281606
+    },
+    {
+      "timestamp": "2022-10-04",
+      "ticker": "ARIS",
+      "open": 13.79,
+      "high": 14.1,
+      "low": 13.47,
+      "close": 13.67,
+      "volume": 293516
+    },
+    {
+      "timestamp": "2022-10-05",
+      "ticker": "ARIS",
+      "open": 13.39,
+      "high": 13.66,
+      "low": 13.2,
+      "close": 13.51,
+      "volume": 209795
+    },
+    {
+      "timestamp": "2022-10-06",
+      "ticker": "ARIS",
+      "open": 13.42,
+      "high": 13.62,
+      "low": 13.06,
+      "close": 13.56,
+      "volume": 140818
+    },
+    {
+      "timestamp": "2022-10-07",
+      "ticker": "ARIS",
+      "open": 13.56,
+      "high": 13.68,
+      "low": 13.335,
+      "close": 13.6,
+      "volume": 253643
+    },
+    {
+      "timestamp": "2022-10-10",
+      "ticker": "ARIS",
+      "open": 13.53,
+      "high": 13.87,
+      "low": 13.36,
+      "close": 13.61,
+      "volume": 296050
+    },
+    {
+      "timestamp": "2022-10-11",
+      "ticker": "ARIS",
+      "open": 13.48,
+      "high": 13.8,
+      "low": 13.28,
+      "close": 13.69,
+      "volume": 280048
+    },
+    {
+      "timestamp": "2022-10-12",
+      "ticker": "ARIS",
+      "open": 13.68,
+      "high": 13.72,
+      "low": 13.26,
+      "close": 13.55,
+      "volume": 255740
+    },
+    {
+      "timestamp": "2022-10-13",
+      "ticker": "ARIS",
+      "open": 13.23,
+      "high": 14.21,
+      "low": 13.16,
+      "close": 14.2,
+      "volume": 228784
+    },
+    {
+      "timestamp": "2022-10-14",
+      "ticker": "ARIS",
+      "open": 14.12,
+      "high": 14.32,
+      "low": 13.71,
+      "close": 13.83,
+      "volume": 240021
+    },
+    {
+      "timestamp": "2022-10-17",
+      "ticker": "ARIS",
+      "open": 14.13,
+      "high": 14.495,
+      "low": 13.83,
+      "close": 14.1,
+      "volume": 313776
+    },
+    {
+      "timestamp": "2022-10-18",
+      "ticker": "ARIS",
+      "open": 14.31,
+      "high": 14.47,
+      "low": 13.79,
+      "close": 14.19,
+      "volume": 331351
+    },
+    {
+      "timestamp": "2022-10-19",
+      "ticker": "ARIS",
+      "open": 13.7,
+      "high": 14.21,
+      "low": 13.24,
+      "close": 13.81,
+      "volume": 463274
+    },
+    {
+      "timestamp": "2022-10-20",
+      "ticker": "ARIS",
+      "open": 14.02,
+      "high": 14.06,
+      "low": 13.49,
+      "close": 13.65,
+      "volume": 182395
+    },
+    {
+      "timestamp": "2022-10-21",
+      "ticker": "ARIS",
+      "open": 13.77,
+      "high": 14.1,
+      "low": 13.435,
+      "close": 14.1,
+      "volume": 462035
+    },
+    {
+      "timestamp": "2022-10-24",
+      "ticker": "ARIS",
+      "open": 14.11,
+      "high": 14.88,
+      "low": 13.76,
+      "close": 14.4,
+      "volume": 272430
+    },
+    {
+      "timestamp": "2022-10-25",
+      "ticker": "ARIS",
+      "open": 14.38,
+      "high": 15.09,
+      "low": 14.375,
+      "close": 14.75,
+      "volume": 197320
+    },
+    {
+      "timestamp": "2022-10-26",
+      "ticker": "ARIS",
+      "open": 14.84,
+      "high": 15.69,
+      "low": 14.75,
+      "close": 15.63,
+      "volume": 532837
+    },
+    {
+      "timestamp": "2022-10-27",
+      "ticker": "ARIS",
+      "open": 15.88,
+      "high": 16.39,
+      "low": 15.73,
+      "close": 16.16,
+      "volume": 364727
+    },
+    {
+      "timestamp": "2022-10-28",
+      "ticker": "ARIS",
+      "open": 16.44,
+      "high": 16.82,
+      "low": 15.97,
+      "close": 16.77,
+      "volume": 380597
+    },
+    {
+      "timestamp": "2022-10-31",
+      "ticker": "ARIS",
+      "open": 16.56,
+      "high": 17.35,
+      "low": 16.51,
+      "close": 17.03,
+      "volume": 302324
+    },
+    {
+      "timestamp": "2022-11-01",
+      "ticker": "ARIS",
+      "open": 17.2,
+      "high": 17.21,
+      "low": 16.38,
+      "close": 16.77,
+      "volume": 257506
+    },
+    {
+      "timestamp": "2022-11-02",
+      "ticker": "ARIS",
+      "open": 16.51,
+      "high": 17.06,
+      "low": 16.125,
+      "close": 16.38,
+      "volume": 241894
+    },
+    {
+      "timestamp": "2022-11-03",
+      "ticker": "ARIS",
+      "open": 16.21,
+      "high": 16.675,
+      "low": 16.125,
+      "close": 16.38,
+      "volume": 233892
+    },
+    {
+      "timestamp": "2022-11-04",
+      "ticker": "ARIS",
+      "open": 16.81,
+      "high": 17.03,
+      "low": 16.11,
+      "close": 16.58,
+      "volume": 224827
+    },
+    {
+      "timestamp": "2022-11-07",
+      "ticker": "ARIS",
+      "open": 16.65,
+      "high": 17.01,
+      "low": 16.37,
+      "close": 16.84,
+      "volume": 243801
+    },
+    {
+      "timestamp": "2022-11-08",
+      "ticker": "ARIS",
+      "open": 16.75,
+      "high": 17.13,
+      "low": 16.51,
+      "close": 17.11,
+      "volume": 262132
+    },
+    {
+      "timestamp": "2022-11-09",
+      "ticker": "ARIS",
+      "open": 16.82,
+      "high": 16.86,
+      "low": 15.865,
+      "close": 15.9,
+      "volume": 219236
+    },
+    {
+      "timestamp": "2022-11-10",
+      "ticker": "ARIS",
+      "open": 16.05,
+      "high": 16.735,
+      "low": 15.7077,
+      "close": 16.26,
+      "volume": 527141
+    },
+    {
+      "timestamp": "2022-11-11",
+      "ticker": "ARIS",
+      "open": 16.04,
+      "high": 17.62,
+      "low": 16.04,
+      "close": 17.54,
+      "volume": 242921
+    },
+    {
+      "timestamp": "2022-11-14",
+      "ticker": "ARIS",
+      "open": 17.45,
+      "high": 17.655,
+      "low": 16.95,
+      "close": 17.54,
+      "volume": 399587
+    },
+    {
+      "timestamp": "2022-11-15",
+      "ticker": "ARIS",
+      "open": 17.5,
+      "high": 17.8132,
+      "low": 17.17,
+      "close": 17.49,
+      "volume": 197562
+    },
+    {
+      "timestamp": "2022-11-16",
+      "ticker": "ARIS",
+      "open": 17.15,
+      "high": 17.4,
+      "low": 16.64,
+      "close": 17.11,
+      "volume": 225473
+    },
+    {
+      "timestamp": "2022-11-17",
+      "ticker": "ARIS",
+      "open": 16.73,
+      "high": 17.08,
+      "low": 16.48,
+      "close": 16.85,
+      "volume": 161311
+    },
+    {
+      "timestamp": "2022-11-18",
+      "ticker": "ARIS",
+      "open": 16.93,
+      "high": 16.93,
+      "low": 15.58,
+      "close": 16.05,
+      "volume": 354027
+    },
+    {
+      "timestamp": "2022-11-21",
+      "ticker": "ARIS",
+      "open": 15.15,
+      "high": 16.07,
+      "low": 15.15,
+      "close": 15.99,
+      "volume": 392015
+    },
+    {
+      "timestamp": "2022-11-22",
+      "ticker": "ARIS",
+      "open": 16.0,
+      "high": 16.27,
+      "low": 15.81,
+      "close": 16.0,
+      "volume": 296597
+    },
+    {
+      "timestamp": "2022-11-23",
+      "ticker": "ARIS",
+      "open": 15.98,
+      "high": 16.12,
+      "low": 15.76,
+      "close": 16.08,
+      "volume": 190428
+    },
+    {
+      "timestamp": "2022-11-25",
+      "ticker": "ARIS",
+      "open": 16.2,
+      "high": 16.205,
+      "low": 15.8,
+      "close": 15.81,
+      "volume": 85247
+    },
+    {
+      "timestamp": "2022-11-28",
+      "ticker": "ARIS",
+      "open": 15.59,
+      "high": 15.67,
+      "low": 15.235,
+      "close": 15.61,
+      "volume": 360677
+    },
+    {
+      "timestamp": "2022-11-29",
+      "ticker": "ARIS",
+      "open": 15.82,
+      "high": 15.94,
+      "low": 15.565,
+      "close": 15.87,
+      "volume": 122876
+    },
+    {
+      "timestamp": "2022-11-30",
+      "ticker": "ARIS",
+      "open": 15.95,
+      "high": 16.0,
+      "low": 15.58,
+      "close": 15.82,
+      "volume": 368082
+    },
+    {
+      "timestamp": "2022-12-01",
+      "ticker": "ARIS",
+      "open": 15.94,
+      "high": 16.72,
+      "low": 15.78,
+      "close": 16.36,
+      "volume": 315456
+    },
+    {
+      "timestamp": "2022-12-02",
+      "ticker": "ARIS",
+      "open": 16.16,
+      "high": 16.49,
+      "low": 16.1252,
+      "close": 16.27,
+      "volume": 142105
+    },
+    {
+      "timestamp": "2022-12-05",
+      "ticker": "ARIS",
+      "open": 16.37,
+      "high": 16.3775,
+      "low": 16.0,
+      "close": 16.27,
+      "volume": 540957
+    },
+    {
+      "timestamp": "2022-12-06",
+      "ticker": "ARIS",
+      "open": 16.3,
+      "high": 16.3,
+      "low": 14.92,
+      "close": 15.34,
+      "volume": 270031
+    },
+    {
+      "timestamp": "2022-12-07",
+      "ticker": "ARIS",
+      "open": 15.28,
+      "high": 15.53,
+      "low": 14.57,
+      "close": 14.75,
+      "volume": 373983
+    },
+    {
+      "timestamp": "2022-12-08",
+      "ticker": "ARIS",
+      "open": 14.99,
+      "high": 15.3,
+      "low": 14.74,
+      "close": 15.02,
+      "volume": 290131
+    },
+    {
+      "timestamp": "2022-12-09",
+      "ticker": "ARIS",
+      "open": 15.2,
+      "high": 15.67,
+      "low": 15.11,
+      "close": 15.11,
+      "volume": 184524
+    },
+    {
+      "timestamp": "2022-12-12",
+      "ticker": "ARIS",
+      "open": 15.25,
+      "high": 15.42,
+      "low": 15.04,
+      "close": 15.36,
+      "volume": 167201
+    },
+    {
+      "timestamp": "2022-12-13",
+      "ticker": "ARIS",
+      "open": 15.5,
+      "high": 15.74,
+      "low": 15.36,
+      "close": 15.42,
+      "volume": 504499
+    },
+    {
+      "timestamp": "2022-12-14",
+      "ticker": "ARIS",
+      "open": 15.42,
+      "high": 15.74,
+      "low": 15.3,
+      "close": 15.56,
+      "volume": 199679
+    },
+    {
+      "timestamp": "2022-12-15",
+      "ticker": "ARIS",
+      "open": 15.45,
+      "high": 15.74,
+      "low": 15.32,
+      "close": 15.47,
+      "volume": 253587
+    },
+    {
+      "timestamp": "2022-12-16",
+      "ticker": "ARIS",
+      "open": 14.07,
+      "high": 16.08,
+      "low": 14.02,
+      "close": 15.94,
+      "volume": 994287
+    },
+    {
+      "timestamp": "2022-12-19",
+      "ticker": "ARIS",
+      "open": 15.9,
+      "high": 16.1,
+      "low": 14.84,
+      "close": 15.05,
+      "volume": 427646
+    },
+    {
+      "timestamp": "2022-12-20",
+      "ticker": "ARIS",
+      "open": 14.96,
+      "high": 15.24,
+      "low": 14.59,
+      "close": 14.87,
+      "volume": 275210
+    },
+    {
+      "timestamp": "2022-12-21",
+      "ticker": "ARIS",
+      "open": 15.15,
+      "high": 15.33,
+      "low": 14.72,
+      "close": 15.27,
+      "volume": 127987
+    },
+    {
+      "timestamp": "2022-12-22",
+      "ticker": "ARIS",
+      "open": 15.25,
+      "high": 15.25,
+      "low": 14.55,
+      "close": 14.85,
+      "volume": 175630
+    },
+    {
+      "timestamp": "2022-12-23",
+      "ticker": "ARIS",
+      "open": 14.98,
+      "high": 15.53,
+      "low": 14.98,
+      "close": 15.48,
+      "volume": 134130
+    },
+    {
+      "timestamp": "2022-12-27",
+      "ticker": "ARIS",
+      "open": 15.51,
+      "high": 15.54,
+      "low": 14.59,
+      "close": 14.83,
+      "volume": 140909
+    },
+    {
+      "timestamp": "2022-12-28",
+      "ticker": "ARIS",
+      "open": 14.8,
+      "high": 14.94,
+      "low": 13.91,
+      "close": 13.99,
+      "volume": 188894
+    },
+    {
+      "timestamp": "2022-12-29",
+      "ticker": "ARIS",
+      "open": 14.08,
+      "high": 14.54,
+      "low": 14.08,
+      "close": 14.49,
+      "volume": 97117
+    },
+    {
+      "timestamp": "2022-12-30",
+      "ticker": "ARIS",
+      "open": 14.35,
+      "high": 14.6063,
+      "low": 14.23,
+      "close": 14.41,
+      "volume": 134370
+    },
+    {
+      "timestamp": "2023-01-03",
+      "ticker": "ARIS",
+      "open": 14.58,
+      "high": 14.615,
+      "low": 14.185,
+      "close": 14.5,
+      "volume": 298745
+    },
+    {
+      "timestamp": "2023-01-04",
+      "ticker": "ARIS",
+      "open": 14.49,
+      "high": 14.625,
+      "low": 13.82,
+      "close": 14.19,
+      "volume": 141185
+    },
+    {
+      "timestamp": "2023-01-05",
+      "ticker": "ARIS",
+      "open": 14.2,
+      "high": 14.35,
+      "low": 13.89,
+      "close": 14.17,
+      "volume": 97775
+    },
+    {
+      "timestamp": "2023-01-06",
+      "ticker": "ARIS",
+      "open": 14.42,
+      "high": 14.92,
+      "low": 14.1968,
+      "close": 14.9,
+      "volume": 148752
+    },
+    {
+      "timestamp": "2023-01-09",
+      "ticker": "ARIS",
+      "open": 15.16,
+      "high": 15.34,
+      "low": 14.745,
+      "close": 14.95,
+      "volume": 132514
+    },
+    {
+      "timestamp": "2023-01-10",
+      "ticker": "ARIS",
+      "open": 14.9,
+      "high": 15.4,
+      "low": 14.725,
+      "close": 15.36,
+      "volume": 132578
+    },
+    {
+      "timestamp": "2023-01-11",
+      "ticker": "ARIS",
+      "open": 15.44,
+      "high": 16.07,
+      "low": 15.32,
+      "close": 16.05,
+      "volume": 296083
+    },
+    {
+      "timestamp": "2023-01-12",
+      "ticker": "ARIS",
+      "open": 16.14,
+      "high": 16.29,
+      "low": 15.8,
+      "close": 15.85,
+      "volume": 327079
+    },
+    {
+      "timestamp": "2023-01-13",
+      "ticker": "ARIS",
+      "open": 15.67,
+      "high": 15.84,
+      "low": 15.18,
+      "close": 15.22,
+      "volume": 224291
+    },
+    {
+      "timestamp": "2023-01-17",
+      "ticker": "ARIS",
+      "open": 15.4,
+      "high": 15.725,
+      "low": 15.21,
+      "close": 15.7,
+      "volume": 163065
+    },
+    {
+      "timestamp": "2023-01-18",
+      "ticker": "ARIS",
+      "open": 15.82,
+      "high": 16.13,
+      "low": 15.29,
+      "close": 15.3,
+      "volume": 158858
+    },
+    {
+      "timestamp": "2023-01-19",
+      "ticker": "ARIS",
+      "open": 15.12,
+      "high": 15.48,
+      "low": 14.955,
+      "close": 15.42,
+      "volume": 249021
+    },
+    {
+      "timestamp": "2023-01-20",
+      "ticker": "ARIS",
+      "open": 15.5,
+      "high": 16.2,
+      "low": 15.35,
+      "close": 16.2,
+      "volume": 490147
+    },
+    {
+      "timestamp": "2023-01-23",
+      "ticker": "ARIS",
+      "open": 16.23,
+      "high": 16.75,
+      "low": 16.045,
+      "close": 16.54,
+      "volume": 273566
+    },
+    {
+      "timestamp": "2023-01-24",
+      "ticker": "ARIS",
+      "open": 16.72,
+      "high": 16.86,
+      "low": 15.92,
+      "close": 16.35,
+      "volume": 215588
+    },
+    {
+      "timestamp": "2023-01-25",
+      "ticker": "ARIS",
+      "open": 16.15,
+      "high": 16.425,
+      "low": 15.86,
+      "close": 16.05,
+      "volume": 100822
+    },
+    {
+      "timestamp": "2023-01-26",
+      "ticker": "ARIS",
+      "open": 16.18,
+      "high": 16.18,
+      "low": 15.61,
+      "close": 15.97,
+      "volume": 200573
+    },
+    {
+      "timestamp": "2023-01-27",
+      "ticker": "ARIS",
+      "open": 15.95,
+      "high": 15.95,
+      "low": 15.47,
+      "close": 15.5,
+      "volume": 97393
+    },
+    {
+      "timestamp": "2023-01-30",
+      "ticker": "ARIS",
+      "open": 15.31,
+      "high": 15.6,
+      "low": 15.13,
+      "close": 15.39,
+      "volume": 182774
+    },
+    {
+      "timestamp": "2023-01-31",
+      "ticker": "ARIS",
+      "open": 15.57,
+      "high": 15.75,
+      "low": 15.23,
+      "close": 15.49,
+      "volume": 218852
+    },
+    {
+      "timestamp": "2023-02-01",
+      "ticker": "ARIS",
+      "open": 15.5,
+      "high": 15.5,
+      "low": 14.81,
+      "close": 15.19,
+      "volume": 205213
+    },
+    {
+      "timestamp": "2023-02-02",
+      "ticker": "ARIS",
+      "open": 14.94,
+      "high": 14.95,
+      "low": 12.44,
+      "close": 13.69,
+      "volume": 851629
+    },
+    {
+      "timestamp": "2023-02-03",
+      "ticker": "ARIS",
+      "open": 12.79,
+      "high": 14.35,
+      "low": 12.51,
+      "close": 14.27,
+      "volume": 695529
+    },
+    {
+      "timestamp": "2023-02-06",
+      "ticker": "ARIS",
+      "open": 14.04,
+      "high": 14.89,
+      "low": 14.02,
+      "close": 14.26,
+      "volume": 370093
+    },
+    {
+      "timestamp": "2023-02-07",
+      "ticker": "ARIS",
+      "open": 14.21,
+      "high": 14.45,
+      "low": 13.87,
+      "close": 14.2,
+      "volume": 184246
+    },
+    {
+      "timestamp": "2023-02-08",
+      "ticker": "ARIS",
+      "open": 14.18,
+      "high": 14.27,
+      "low": 13.635,
+      "close": 13.9,
+      "volume": 355309
+    },
+    {
+      "timestamp": "2023-02-09",
+      "ticker": "ARIS",
+      "open": 13.96,
+      "high": 13.96,
+      "low": 13.32,
+      "close": 13.76,
+      "volume": 427283
+    },
+    {
+      "timestamp": "2023-02-10",
+      "ticker": "ARIS",
+      "open": 13.82,
+      "high": 14.475,
+      "low": 13.65,
+      "close": 14.29,
+      "volume": 178392
+    },
+    {
+      "timestamp": "2023-02-13",
+      "ticker": "ARIS",
+      "open": 14.33,
+      "high": 14.69,
+      "low": 14.185,
+      "close": 14.35,
+      "volume": 118442
+    },
+    {
+      "timestamp": "2023-02-14",
+      "ticker": "ARIS",
+      "open": 14.21,
+      "high": 14.78,
+      "low": 14.06,
+      "close": 14.66,
+      "volume": 150497
+    },
+    {
+      "timestamp": "2023-02-15",
+      "ticker": "ARIS",
+      "open": 14.41,
+      "high": 14.72,
+      "low": 14.4074,
+      "close": 14.72,
+      "volume": 141366
+    },
+    {
+      "timestamp": "2023-02-16",
+      "ticker": "ARIS",
+      "open": 14.55,
+      "high": 14.83,
+      "low": 14.4,
+      "close": 14.47,
+      "volume": 95275
+    },
+    {
+      "timestamp": "2023-02-17",
+      "ticker": "ARIS",
+      "open": 14.49,
+      "high": 14.49,
+      "low": 14.02,
+      "close": 14.04,
+      "volume": 87864
+    },
+    {
+      "timestamp": "2023-02-21",
+      "ticker": "ARIS",
+      "open": 13.87,
+      "high": 14.215,
+      "low": 13.53,
+      "close": 13.62,
+      "volume": 137202
+    },
+    {
+      "timestamp": "2023-02-22",
+      "ticker": "ARIS",
+      "open": 13.66,
+      "high": 13.8,
+      "low": 13.1069,
+      "close": 13.69,
+      "volume": 171220
+    },
+    {
+      "timestamp": "2023-02-23",
+      "ticker": "ARIS",
+      "open": 13.89,
+      "high": 13.92,
+      "low": 13.64,
+      "close": 13.76,
+      "volume": 129225
+    },
+    {
+      "timestamp": "2023-02-24",
+      "ticker": "ARIS",
+      "open": 13.53,
+      "high": 13.595,
+      "low": 13.105,
+      "close": 13.47,
+      "volume": 140969
+    },
+    {
+      "timestamp": "2023-02-27",
+      "ticker": "ARIS",
+      "open": 13.63,
+      "high": 14.03,
+      "low": 13.58,
+      "close": 13.98,
+      "volume": 98286
+    },
+    {
+      "timestamp": "2023-02-28",
+      "ticker": "ARIS",
+      "open": 14.02,
+      "high": 14.64,
+      "low": 14.02,
+      "close": 14.16,
+      "volume": 171313
+    },
+    {
+      "timestamp": "2023-03-01",
+      "ticker": "ARIS",
+      "open": 14.05,
+      "high": 14.29,
+      "low": 13.31,
+      "close": 13.58,
+      "volume": 174741
+    },
+    {
+      "timestamp": "2023-03-02",
+      "ticker": "ARIS",
+      "open": 13.47,
+      "high": 14.01,
+      "low": 13.4481,
+      "close": 13.92,
+      "volume": 109494
+    },
+    {
+      "timestamp": "2023-03-03",
+      "ticker": "ARIS",
+      "open": 13.72,
+      "high": 13.96,
+      "low": 13.67,
+      "close": 13.77,
+      "volume": 190835
+    },
+    {
+      "timestamp": "2023-03-06",
+      "ticker": "ARIS",
+      "open": 13.97,
+      "high": 14.1742,
+      "low": 13.08,
+      "close": 13.24,
+      "volume": 324282
+    },
+    {
+      "timestamp": "2023-03-07",
+      "ticker": "ARIS",
+      "open": 12.18,
+      "high": 12.18,
+      "low": 10.035,
+      "close": 11.2,
+      "volume": 2170968
+    },
+    {
+      "timestamp": "2023-03-08",
+      "ticker": "ARIS",
+      "open": 11.02,
+      "high": 11.46,
+      "low": 10.75,
+      "close": 10.94,
+      "volume": 536904
+    },
+    {
+      "timestamp": "2023-03-09",
+      "ticker": "ARIS",
+      "open": 10.91,
+      "high": 11.015,
+      "low": 10.32,
+      "close": 10.43,
+      "volume": 324445
+    },
+    {
+      "timestamp": "2023-03-10",
+      "ticker": "ARIS",
+      "open": 10.41,
+      "high": 10.42,
+      "low": 9.7,
+      "close": 9.89,
+      "volume": 489753
+    },
+    {
+      "timestamp": "2023-03-13",
+      "ticker": "ARIS",
+      "open": 9.58,
+      "high": 10.04,
+      "low": 9.29,
+      "close": 9.61,
+      "volume": 339980
+    },
+    {
+      "timestamp": "2023-03-14",
+      "ticker": "ARIS",
+      "open": 9.87,
+      "high": 10.0,
+      "low": 9.37,
+      "close": 9.56,
+      "volume": 279982
+    },
+    {
+      "timestamp": "2023-03-15",
+      "ticker": "ARIS",
+      "open": 9.08,
+      "high": 9.08,
+      "low": 8.33,
+      "close": 8.6,
+      "volume": 401175
+    },
+    {
+      "timestamp": "2023-03-16",
+      "ticker": "ARIS",
+      "open": 8.51,
+      "high": 8.84,
+      "low": 8.1257,
+      "close": 8.6,
+      "volume": 422071
+    },
+    {
+      "timestamp": "2023-03-17",
+      "ticker": "ARIS",
+      "open": 8.49,
+      "high": 8.69,
+      "low": 8.28,
+      "close": 8.28,
+      "volume": 403299
+    },
+    {
+      "timestamp": "2023-03-20",
+      "ticker": "ARIS",
+      "open": 8.32,
+      "high": 8.599,
+      "low": 8.12,
+      "close": 8.24,
+      "volume": 302460
+    },
+    {
+      "timestamp": "2023-03-21",
+      "ticker": "ARIS",
+      "open": 8.52,
+      "high": 9.07,
+      "low": 8.435,
+      "close": 8.7,
+      "volume": 216241
+    },
+    {
+      "timestamp": "2023-03-22",
+      "ticker": "ARIS",
+      "open": 8.69,
+      "high": 8.725,
+      "low": 8.01,
+      "close": 8.02,
+      "volume": 264882
+    },
+    {
+      "timestamp": "2023-03-23",
+      "ticker": "ARIS",
+      "open": 8.09,
+      "high": 8.3837,
+      "low": 7.89,
+      "close": 7.96,
+      "volume": 342957
+    },
+    {
+      "timestamp": "2023-03-24",
+      "ticker": "ARIS",
+      "open": 7.86,
+      "high": 8.03,
+      "low": 7.505,
+      "close": 8.0,
+      "volume": 289832
+    },
+    {
+      "timestamp": "2023-03-27",
+      "ticker": "ARIS",
+      "open": 8.17,
+      "high": 8.2296,
+      "low": 8.09,
+      "close": 8.13,
+      "volume": 157112
+    },
+    {
+      "timestamp": "2023-03-28",
+      "ticker": "ARIS",
+      "open": 8.06,
+      "high": 8.225,
+      "low": 7.82,
+      "close": 7.94,
+      "volume": 241354
+    },
+    {
+      "timestamp": "2023-03-29",
+      "ticker": "ARIS",
+      "open": 8.03,
+      "high": 8.1121,
+      "low": 7.665,
+      "close": 7.78,
+      "volume": 217122
+    },
+    {
+      "timestamp": "2023-03-30",
+      "ticker": "ARIS",
+      "open": 7.91,
+      "high": 7.96,
+      "low": 7.69,
+      "close": 7.86,
+      "volume": 322234
+    },
+    {
+      "timestamp": "2023-03-31",
+      "ticker": "ARIS",
+      "open": 7.93,
+      "high": 7.97,
+      "low": 7.705,
+      "close": 7.79,
+      "volume": 260179
+    },
+    {
+      "timestamp": "2023-04-03",
+      "ticker": "ARIS",
+      "open": 7.93,
+      "high": 8.15,
+      "low": 7.77,
+      "close": 7.95,
+      "volume": 325722
+    },
+    {
+      "timestamp": "2023-04-04",
+      "ticker": "ARIS",
+      "open": 7.98,
+      "high": 7.98,
+      "low": 7.44,
+      "close": 7.5,
+      "volume": 510555
+    },
+    {
+      "timestamp": "2023-04-05",
+      "ticker": "ARIS",
+      "open": 7.45,
+      "high": 7.68,
+      "low": 7.37,
+      "close": 7.67,
+      "volume": 382049
+    },
+    {
+      "timestamp": "2023-04-06",
+      "ticker": "ARIS",
+      "open": 7.68,
+      "high": 8.2,
+      "low": 7.57,
+      "close": 8.02,
+      "volume": 292720
+    },
+    {
+      "timestamp": "2023-04-10",
+      "ticker": "ARIS",
+      "open": 8.0,
+      "high": 8.235,
+      "low": 7.935,
+      "close": 7.95,
+      "volume": 218833
+    },
+    {
+      "timestamp": "2023-04-11",
+      "ticker": "ARIS",
+      "open": 8.04,
+      "high": 8.04,
+      "low": 7.81,
+      "close": 8.0,
+      "volume": 470443
+    },
+    {
+      "timestamp": "2023-04-12",
+      "ticker": "ARIS",
+      "open": 8.1,
+      "high": 8.11,
+      "low": 7.85,
+      "close": 7.96,
+      "volume": 220401
+    },
+    {
+      "timestamp": "2023-04-13",
+      "ticker": "ARIS",
+      "open": 7.95,
+      "high": 7.98,
+      "low": 7.75,
+      "close": 7.85,
+      "volume": 157107
+    },
+    {
+      "timestamp": "2023-04-14",
+      "ticker": "ARIS",
+      "open": 7.87,
+      "high": 8.0,
+      "low": 7.78,
+      "close": 7.88,
+      "volume": 204990
+    },
+    {
+      "timestamp": "2023-04-17",
+      "ticker": "ARIS",
+      "open": 7.91,
+      "high": 8.26,
+      "low": 7.91,
+      "close": 8.21,
+      "volume": 234295
+    },
+    {
+      "timestamp": "2023-04-18",
+      "ticker": "ARIS",
+      "open": 8.07,
+      "high": 8.2699,
+      "low": 7.58,
+      "close": 7.65,
+      "volume": 234940
+    },
+    {
+      "timestamp": "2023-04-19",
+      "ticker": "ARIS",
+      "open": 7.7,
+      "high": 7.75,
+      "low": 7.35,
+      "close": 7.66,
+      "volume": 174383
+    },
+    {
+      "timestamp": "2023-04-20",
+      "ticker": "ARIS",
+      "open": 7.6,
+      "high": 7.6,
+      "low": 7.24,
+      "close": 7.31,
+      "volume": 168691
+    },
+    {
+      "timestamp": "2023-04-21",
+      "ticker": "ARIS",
+      "open": 7.22,
+      "high": 7.22,
+      "low": 6.96,
+      "close": 7.07,
+      "volume": 297679
+    },
+    {
+      "timestamp": "2023-04-24",
+      "ticker": "ARIS",
+      "open": 7.06,
+      "high": 7.2,
+      "low": 6.965,
+      "close": 7.16,
+      "volume": 116883
+    },
+    {
+      "timestamp": "2023-04-25",
+      "ticker": "ARIS",
+      "open": 7.06,
+      "high": 7.06,
+      "low": 6.735,
+      "close": 6.8,
+      "volume": 161245
+    },
+    {
+      "timestamp": "2023-04-26",
+      "ticker": "ARIS",
+      "open": 6.75,
+      "high": 6.97,
+      "low": 6.6919,
+      "close": 6.81,
+      "volume": 165616
+    },
+    {
+      "timestamp": "2023-04-27",
+      "ticker": "ARIS",
+      "open": 6.86,
+      "high": 7.26,
+      "low": 6.78,
+      "close": 7.26,
+      "volume": 187197
+    },
+    {
+      "timestamp": "2023-04-28",
+      "ticker": "ARIS",
+      "open": 7.24,
+      "high": 7.52,
+      "low": 7.14,
+      "close": 7.27,
+      "volume": 163449
+    },
+    {
+      "timestamp": "2023-05-01",
+      "ticker": "ARIS",
+      "open": 7.26,
+      "high": 7.52,
+      "low": 7.16,
+      "close": 7.49,
+      "volume": 177096
+    },
+    {
+      "timestamp": "2023-05-02",
+      "ticker": "ARIS",
+      "open": 7.44,
+      "high": 7.44,
+      "low": 7.08,
+      "close": 7.23,
+      "volume": 160459
+    },
+    {
+      "timestamp": "2023-05-03",
+      "ticker": "ARIS",
+      "open": 7.29,
+      "high": 7.38,
+      "low": 7.04,
+      "close": 7.24,
+      "volume": 171554
+    },
+    {
+      "timestamp": "2023-05-04",
+      "ticker": "ARIS",
+      "open": 7.2,
+      "high": 7.2,
+      "low": 6.78,
+      "close": 6.85,
+      "volume": 261790
+    },
+    {
+      "timestamp": "2023-05-05",
+      "ticker": "ARIS",
+      "open": 7.07,
+      "high": 7.15,
+      "low": 6.82,
+      "close": 6.85,
+      "volume": 352464
+    },
+    {
+      "timestamp": "2023-05-08",
+      "ticker": "ARIS",
+      "open": 7.0,
+      "high": 7.4299,
+      "low": 6.91,
+      "close": 7.21,
+      "volume": 230399
+    },
+    {
+      "timestamp": "2023-05-09",
+      "ticker": "ARIS",
+      "open": 8.12,
+      "high": 9.6,
+      "low": 8.12,
+      "close": 9.08,
+      "volume": 1027708
+    },
+    {
+      "timestamp": "2023-05-10",
+      "ticker": "ARIS",
+      "open": 9.31,
+      "high": 9.49,
+      "low": 8.97,
+      "close": 9.04,
+      "volume": 323310
+    },
+    {
+      "timestamp": "2023-05-11",
+      "ticker": "ARIS",
+      "open": 8.89,
+      "high": 9.09,
+      "low": 8.73,
+      "close": 8.91,
+      "volume": 168289
+    },
+    {
+      "timestamp": "2023-05-12",
+      "ticker": "ARIS",
+      "open": 8.95,
+      "high": 9.2899,
+      "low": 8.95,
+      "close": 9.09,
+      "volume": 168796
+    },
+    {
+      "timestamp": "2023-05-15",
+      "ticker": "ARIS",
+      "open": 9.04,
+      "high": 9.49,
+      "low": 9.03,
+      "close": 9.25,
+      "volume": 220830
+    },
+    {
+      "timestamp": "2023-05-16",
+      "ticker": "ARIS",
+      "open": 9.12,
+      "high": 9.245,
+      "low": 8.84,
+      "close": 8.87,
+      "volume": 166368
+    },
+    {
+      "timestamp": "2023-05-17",
+      "ticker": "ARIS",
+      "open": 8.97,
+      "high": 9.295,
+      "low": 8.965,
+      "close": 9.18,
+      "volume": 168773
+    },
+    {
+      "timestamp": "2023-05-18",
+      "ticker": "ARIS",
+      "open": 9.1,
+      "high": 9.4,
+      "low": 8.96,
+      "close": 9.38,
+      "volume": 137759
+    },
+    {
+      "timestamp": "2023-05-19",
+      "ticker": "ARIS",
+      "open": 9.56,
+      "high": 9.63,
+      "low": 9.27,
+      "close": 9.39,
+      "volume": 133167
+    },
+    {
+      "timestamp": "2023-05-22",
+      "ticker": "ARIS",
+      "open": 9.45,
+      "high": 9.77,
+      "low": 9.3952,
+      "close": 9.61,
+      "volume": 170717
+    },
+    {
+      "timestamp": "2023-05-23",
+      "ticker": "ARIS",
+      "open": 9.6,
+      "high": 9.95,
+      "low": 9.6,
+      "close": 9.7,
+      "volume": 253415
+    },
+    {
+      "timestamp": "2023-05-24",
+      "ticker": "ARIS",
+      "open": 9.6,
+      "high": 9.84,
+      "low": 9.575,
+      "close": 9.61,
+      "volume": 209456
+    },
+    {
+      "timestamp": "2023-05-25",
+      "ticker": "ARIS",
+      "open": 9.56,
+      "high": 9.56,
+      "low": 9.25,
+      "close": 9.43,
+      "volume": 146464
+    },
+    {
+      "timestamp": "2023-05-26",
+      "ticker": "ARIS",
+      "open": 9.42,
+      "high": 9.63,
+      "low": 9.38,
+      "close": 9.63,
+      "volume": 121684
+    },
+    {
+      "timestamp": "2023-05-30",
+      "ticker": "ARIS",
+      "open": 9.67,
+      "high": 9.75,
+      "low": 9.07,
+      "close": 9.29,
+      "volume": 136202
+    },
+    {
+      "timestamp": "2023-05-31",
+      "ticker": "ARIS",
+      "open": 9.27,
+      "high": 9.275,
+      "low": 8.86,
+      "close": 9.19,
+      "volume": 132768
+    },
+    {
+      "timestamp": "2023-06-01",
+      "ticker": "ARIS",
+      "open": 9.22,
+      "high": 9.5,
+      "low": 9.14,
+      "close": 9.16,
+      "volume": 230619
+    },
+    {
+      "timestamp": "2023-06-02",
+      "ticker": "ARIS",
+      "open": 9.36,
+      "high": 9.4568,
+      "low": 9.06,
+      "close": 9.13,
+      "volume": 352001
+    },
+    {
+      "timestamp": "2023-06-05",
+      "ticker": "ARIS",
+      "open": 9.19,
+      "high": 9.24,
+      "low": 9.085,
+      "close": 9.17,
+      "volume": 135467
+    },
+    {
+      "timestamp": "2023-06-06",
+      "ticker": "ARIS",
+      "open": 9.09,
+      "high": 9.47,
+      "low": 9.0,
+      "close": 9.43,
+      "volume": 347960
+    },
+    {
+      "timestamp": "2023-06-07",
+      "ticker": "ARIS",
+      "open": 9.52,
+      "high": 9.94,
+      "low": 9.48,
+      "close": 9.9,
+      "volume": 260667
+    },
+    {
+      "timestamp": "2023-06-08",
+      "ticker": "ARIS",
+      "open": 9.86,
+      "high": 9.9384,
+      "low": 9.37,
+      "close": 9.43,
+      "volume": 203648
+    },
+    {
+      "timestamp": "2023-06-09",
+      "ticker": "ARIS",
+      "open": 9.43,
+      "high": 9.43,
+      "low": 9.17,
+      "close": 9.22,
+      "volume": 155261
+    },
+    {
+      "timestamp": "2023-06-12",
+      "ticker": "ARIS",
+      "open": 9.25,
+      "high": 9.55,
+      "low": 9.135,
+      "close": 9.55,
+      "volume": 236393
+    },
+    {
+      "timestamp": "2023-06-13",
+      "ticker": "ARIS",
+      "open": 9.62,
+      "high": 9.835,
+      "low": 9.5,
+      "close": 9.54,
+      "volume": 191808
+    },
+    {
+      "timestamp": "2023-06-14",
+      "ticker": "ARIS",
+      "open": 9.62,
+      "high": 9.65,
+      "low": 9.14,
+      "close": 9.16,
+      "volume": 182727
+    },
+    {
+      "timestamp": "2023-06-15",
+      "ticker": "ARIS",
+      "open": 8.96,
+      "high": 9.5,
+      "low": 8.85,
+      "close": 9.39,
+      "volume": 365194
+    },
+    {
+      "timestamp": "2023-06-16",
+      "ticker": "ARIS",
+      "open": 9.49,
+      "high": 9.66,
+      "low": 9.11,
+      "close": 9.59,
+      "volume": 536772
+    },
+    {
+      "timestamp": "2023-06-20",
+      "ticker": "ARIS",
+      "open": 9.45,
+      "high": 9.55,
+      "low": 9.19,
+      "close": 9.51,
+      "volume": 229642
+    },
+    {
+      "timestamp": "2023-06-21",
+      "ticker": "ARIS",
+      "open": 9.43,
+      "high": 9.8,
+      "low": 9.32,
+      "close": 9.63,
+      "volume": 190407
+    },
+    {
+      "timestamp": "2023-06-22",
+      "ticker": "ARIS",
+      "open": 9.58,
+      "high": 9.63,
+      "low": 9.26,
+      "close": 9.36,
+      "volume": 150891
+    },
+    {
+      "timestamp": "2023-06-23",
+      "ticker": "ARIS",
+      "open": 9.15,
+      "high": 9.37,
+      "low": 9.1,
+      "close": 9.2,
+      "volume": 1856193
+    },
+    {
+      "timestamp": "2023-06-26",
+      "ticker": "ARIS",
+      "open": 9.19,
+      "high": 9.54,
+      "low": 9.12,
+      "close": 9.43,
+      "volume": 206433
+    },
+    {
+      "timestamp": "2023-06-27",
+      "ticker": "ARIS",
+      "open": 9.46,
+      "high": 9.585,
+      "low": 9.2,
+      "close": 9.57,
+      "volume": 189530
+    },
+    {
+      "timestamp": "2023-06-28",
+      "ticker": "ARIS",
+      "open": 9.56,
+      "high": 10.25,
+      "low": 9.4,
+      "close": 10.23,
+      "volume": 201855
+    },
+    {
+      "timestamp": "2023-06-29",
+      "ticker": "ARIS",
+      "open": 10.33,
+      "high": 10.77,
+      "low": 10.24,
+      "close": 10.59,
+      "volume": 251812
+    },
+    {
+      "timestamp": "2023-06-30",
+      "ticker": "ARIS",
+      "open": 10.71,
+      "high": 10.71,
+      "low": 10.18,
+      "close": 10.32,
+      "volume": 174381
+    },
+    {
+      "timestamp": "2023-07-03",
+      "ticker": "ARIS",
+      "open": 10.23,
+      "high": 10.58,
+      "low": 10.21,
+      "close": 10.52,
+      "volume": 132466
+    },
+    {
+      "timestamp": "2023-07-05",
+      "ticker": "ARIS",
+      "open": 10.52,
+      "high": 10.52,
+      "low": 10.19,
+      "close": 10.24,
+      "volume": 150702
+    },
+    {
+      "timestamp": "2023-07-06",
+      "ticker": "ARIS",
+      "open": 10.07,
+      "high": 10.145,
+      "low": 9.36,
+      "close": 9.97,
+      "volume": 353355
+    },
+    {
+      "timestamp": "2023-07-07",
+      "ticker": "ARIS",
+      "open": 9.95,
+      "high": 10.64,
+      "low": 9.95,
+      "close": 10.45,
+      "volume": 270321
+    },
+    {
+      "timestamp": "2023-07-10",
+      "ticker": "ARIS",
+      "open": 10.45,
+      "high": 10.75,
+      "low": 10.365,
+      "close": 10.61,
+      "volume": 162604
+    },
+    {
+      "timestamp": "2023-07-11",
+      "ticker": "ARIS",
+      "open": 10.63,
+      "high": 10.91,
+      "low": 10.46,
+      "close": 10.71,
+      "volume": 472406
+    },
+    {
+      "timestamp": "2023-07-12",
+      "ticker": "ARIS",
+      "open": 10.81,
+      "high": 10.81,
+      "low": 10.53,
+      "close": 10.71,
+      "volume": 138457
+    },
+    {
+      "timestamp": "2023-07-13",
+      "ticker": "ARIS",
+      "open": 10.73,
+      "high": 11.245,
+      "low": 10.68,
+      "close": 10.85,
+      "volume": 223444
+    },
+    {
+      "timestamp": "2023-07-14",
+      "ticker": "ARIS",
+      "open": 10.76,
+      "high": 10.76,
+      "low": 9.8,
+      "close": 9.81,
+      "volume": 191288
+    },
+    {
+      "timestamp": "2023-07-17",
+      "ticker": "ARIS",
+      "open": 9.81,
+      "high": 10.43,
+      "low": 9.81,
+      "close": 9.9,
+      "volume": 259095
+    },
+    {
+      "timestamp": "2023-07-18",
+      "ticker": "ARIS",
+      "open": 9.91,
+      "high": 10.65,
+      "low": 9.91,
+      "close": 10.6,
+      "volume": 141182
+    },
+    {
+      "timestamp": "2023-07-19",
+      "ticker": "ARIS",
+      "open": 10.63,
+      "high": 10.8,
+      "low": 10.225,
+      "close": 10.32,
+      "volume": 452253
+    },
+    {
+      "timestamp": "2023-07-20",
+      "ticker": "ARIS",
+      "open": 10.37,
+      "high": 11.14,
+      "low": 10.36,
+      "close": 11.14,
+      "volume": 210494
+    },
+    {
+      "timestamp": "2023-07-21",
+      "ticker": "ARIS",
+      "open": 11.21,
+      "high": 11.31,
+      "low": 10.7,
+      "close": 10.77,
+      "volume": 551541
+    },
+    {
+      "timestamp": "2023-07-24",
+      "ticker": "ARIS",
+      "open": 10.74,
+      "high": 11.04,
+      "low": 10.53,
+      "close": 10.88,
+      "volume": 264847
+    },
+    {
+      "timestamp": "2023-07-25",
+      "ticker": "ARIS",
+      "open": 10.84,
+      "high": 11.03,
+      "low": 10.63,
+      "close": 11.01,
+      "volume": 142103
+    },
+    {
+      "timestamp": "2023-07-26",
+      "ticker": "ARIS",
+      "open": 10.93,
+      "high": 10.99,
+      "low": 10.76,
+      "close": 10.9,
+      "volume": 124096
+    },
+    {
+      "timestamp": "2023-07-27",
+      "ticker": "ARIS",
+      "open": 11.0,
+      "high": 11.0,
+      "low": 10.55,
+      "close": 10.61,
+      "volume": 121060
+    },
+    {
+      "timestamp": "2023-07-28",
+      "ticker": "ARIS",
+      "open": 10.77,
+      "high": 10.96,
+      "low": 10.7,
+      "close": 10.76,
+      "volume": 101097
+    },
+    {
+      "timestamp": "2023-07-31",
+      "ticker": "ARIS",
+      "open": 10.8,
+      "high": 11.05,
+      "low": 10.8,
+      "close": 10.93,
+      "volume": 99077
+    },
+    {
+      "timestamp": "2023-08-01",
+      "ticker": "ARIS",
+      "open": 10.92,
+      "high": 11.13,
+      "low": 10.744,
+      "close": 10.94,
+      "volume": 124010
+    },
+    {
+      "timestamp": "2023-08-02",
+      "ticker": "ARIS",
+      "open": 10.87,
+      "high": 11.04,
+      "low": 10.65,
+      "close": 10.75,
+      "volume": 99126
+    },
+    {
+      "timestamp": "2023-08-03",
+      "ticker": "ARIS",
+      "open": 11.82,
+      "high": 12.92,
+      "low": 10.94,
+      "close": 11.01,
+      "volume": 388199
+    },
+    {
+      "timestamp": "2023-08-04",
+      "ticker": "ARIS",
+      "open": 11.02,
+      "high": 11.96,
+      "low": 11.02,
+      "close": 11.64,
+      "volume": 816187
+    },
+    {
+      "timestamp": "2023-08-07",
+      "ticker": "ARIS",
+      "open": 11.74,
+      "high": 11.84,
+      "low": 11.4,
+      "close": 11.58,
+      "volume": 244059
+    },
+    {
+      "timestamp": "2023-08-08",
+      "ticker": "ARIS",
+      "open": 11.28,
+      "high": 11.4633,
+      "low": 10.92,
+      "close": 11.2,
+      "volume": 214479
+    },
+    {
+      "timestamp": "2023-08-09",
+      "ticker": "ARIS",
+      "open": 11.26,
+      "high": 11.665,
+      "low": 11.26,
+      "close": 11.62,
+      "volume": 175831
+    },
+    {
+      "timestamp": "2023-08-10",
+      "ticker": "ARIS",
+      "open": 11.65,
+      "high": 11.7202,
+      "low": 11.3101,
+      "close": 11.35,
+      "volume": 186362
+    },
+    {
+      "timestamp": "2023-08-11",
+      "ticker": "ARIS",
+      "open": 11.28,
+      "high": 11.38,
+      "low": 11.21,
+      "close": 11.33,
+      "volume": 259644
+    },
+    {
+      "timestamp": "2023-08-14",
+      "ticker": "ARIS",
+      "open": 11.31,
+      "high": 11.94,
+      "low": 11.225,
+      "close": 11.6,
+      "volume": 236123
+    },
+    {
+      "timestamp": "2023-08-15",
+      "ticker": "ARIS",
+      "open": 11.44,
+      "high": 11.57,
+      "low": 11.27,
+      "close": 11.37,
+      "volume": 217468
+    },
+    {
+      "timestamp": "2023-08-16",
+      "ticker": "ARIS",
+      "open": 11.39,
+      "high": 11.58,
+      "low": 11.11,
+      "close": 11.14,
+      "volume": 138954
+    },
+    {
+      "timestamp": "2023-08-17",
+      "ticker": "ARIS",
+      "open": 11.18,
+      "high": 11.47,
+      "low": 10.97,
+      "close": 11.37,
+      "volume": 265922
+    },
+    {
+      "timestamp": "2023-08-18",
+      "ticker": "ARIS",
+      "open": 11.3,
+      "high": 11.7,
+      "low": 11.3,
+      "close": 11.61,
+      "volume": 125590
+    },
+    {
+      "timestamp": "2023-08-21",
+      "ticker": "ARIS",
+      "open": 11.66,
+      "high": 11.66,
+      "low": 11.23,
+      "close": 11.24,
+      "volume": 97034
+    },
+    {
+      "timestamp": "2023-08-22",
+      "ticker": "ARIS",
+      "open": 11.25,
+      "high": 11.325,
+      "low": 10.825,
+      "close": 10.95,
+      "volume": 102875
+    },
+    {
+      "timestamp": "2023-08-23",
+      "ticker": "ARIS",
+      "open": 11.0,
+      "high": 11.055,
+      "low": 10.63,
+      "close": 10.63,
+      "volume": 148333
+    },
+    {
+      "timestamp": "2023-08-24",
+      "ticker": "ARIS",
+      "open": 10.57,
+      "high": 10.695,
+      "low": 10.51,
+      "close": 10.6,
+      "volume": 126028
+    },
+    {
+      "timestamp": "2023-08-25",
+      "ticker": "ARIS",
+      "open": 10.6,
+      "high": 10.77,
+      "low": 10.52,
+      "close": 10.65,
+      "volume": 214570
+    },
+    {
+      "timestamp": "2023-08-28",
+      "ticker": "ARIS",
+      "open": 10.68,
+      "high": 10.87,
+      "low": 10.59,
+      "close": 10.61,
+      "volume": 105604
+    },
+    {
+      "timestamp": "2023-08-29",
+      "ticker": "ARIS",
+      "open": 10.64,
+      "high": 10.68,
+      "low": 10.53,
+      "close": 10.66,
+      "volume": 112652
+    },
+    {
+      "timestamp": "2023-08-30",
+      "ticker": "ARIS",
+      "open": 10.66,
+      "high": 10.7236,
+      "low": 10.55,
+      "close": 10.62,
+      "volume": 117453
+    },
+    {
+      "timestamp": "2023-08-31",
+      "ticker": "ARIS",
+      "open": 10.62,
+      "high": 10.645,
+      "low": 10.2,
+      "close": 10.24,
+      "volume": 138407
+    },
+    {
+      "timestamp": "2023-09-01",
+      "ticker": "ARIS",
+      "open": 10.36,
+      "high": 10.59,
+      "low": 10.32,
+      "close": 10.45,
+      "volume": 265089
+    },
+    {
+      "timestamp": "2023-09-05",
+      "ticker": "ARIS",
+      "open": 10.48,
+      "high": 10.53,
+      "low": 10.23,
+      "close": 10.26,
+      "volume": 138197
+    },
+    {
+      "timestamp": "2023-09-06",
+      "ticker": "ARIS",
+      "open": 10.25,
+      "high": 10.28,
+      "low": 9.921,
+      "close": 10.02,
+      "volume": 176629
+    },
+    {
+      "timestamp": "2023-09-07",
+      "ticker": "ARIS",
+      "open": 9.98,
+      "high": 10.04,
+      "low": 9.705,
+      "close": 9.92,
+      "volume": 249056
+    },
+    {
+      "timestamp": "2023-09-08",
+      "ticker": "ARIS",
+      "open": 9.95,
+      "high": 10.03,
+      "low": 9.77,
+      "close": 9.85,
+      "volume": 113043
+    },
+    {
+      "timestamp": "2023-09-11",
+      "ticker": "ARIS",
+      "open": 9.93,
+      "high": 9.93,
+      "low": 9.76,
+      "close": 9.85,
+      "volume": 143788
+    },
+    {
+      "timestamp": "2023-09-12",
+      "ticker": "ARIS",
+      "open": 9.83,
+      "high": 10.16,
+      "low": 9.83,
+      "close": 10.06,
+      "volume": 205709
+    },
+    {
+      "timestamp": "2023-09-13",
+      "ticker": "ARIS",
+      "open": 10.55,
+      "high": 10.59,
+      "low": 10.1,
+      "close": 10.19,
+      "volume": 365327
+    },
+    {
+      "timestamp": "2023-09-14",
+      "ticker": "ARIS",
+      "open": 10.39,
+      "high": 11.03,
+      "low": 10.35,
+      "close": 10.89,
+      "volume": 284542
+    },
+    {
+      "timestamp": "2023-09-15",
+      "ticker": "ARIS",
+      "open": 10.86,
+      "high": 11.0,
+      "low": 10.72,
+      "close": 10.82,
+      "volume": 451923
+    },
+    {
+      "timestamp": "2023-09-18",
+      "ticker": "ARIS",
+      "open": 10.96,
+      "high": 11.049,
+      "low": 10.77,
+      "close": 10.87,
+      "volume": 185008
+    },
+    {
+      "timestamp": "2023-09-19",
+      "ticker": "ARIS",
+      "open": 10.93,
+      "high": 10.9761,
+      "low": 10.49,
+      "close": 10.51,
+      "volume": 116774
+    },
+    {
+      "timestamp": "2023-09-20",
+      "ticker": "ARIS",
+      "open": 10.51,
+      "high": 10.69,
+      "low": 10.4,
+      "close": 10.41,
+      "volume": 93056
+    },
+    {
+      "timestamp": "2023-09-21",
+      "ticker": "ARIS",
+      "open": 10.38,
+      "high": 10.38,
+      "low": 10.09,
+      "close": 10.12,
+      "volume": 77170
+    },
+    {
+      "timestamp": "2023-09-22",
+      "ticker": "ARIS",
+      "open": 10.16,
+      "high": 10.2797,
+      "low": 10.0923,
+      "close": 10.17,
+      "volume": 105730
+    },
+    {
+      "timestamp": "2023-09-25",
+      "ticker": "ARIS",
+      "open": 10.15,
+      "high": 10.41,
+      "low": 10.07,
+      "close": 10.39,
+      "volume": 124540
+    },
+    {
+      "timestamp": "2023-09-26",
+      "ticker": "ARIS",
+      "open": 10.27,
+      "high": 10.36,
+      "low": 9.87,
+      "close": 9.87,
+      "volume": 165151
+    },
+    {
+      "timestamp": "2023-09-27",
+      "ticker": "ARIS",
+      "open": 9.96,
+      "high": 10.115,
+      "low": 9.93,
+      "close": 9.95,
+      "volume": 151792
+    },
+    {
+      "timestamp": "2023-09-28",
+      "ticker": "ARIS",
+      "open": 9.94,
+      "high": 10.52,
+      "low": 9.87,
+      "close": 10.11,
+      "volume": 244908
+    },
+    {
+      "timestamp": "2023-09-29",
+      "ticker": "ARIS",
+      "open": 10.18,
+      "high": 10.18,
+      "low": 9.97,
+      "close": 9.98,
+      "volume": 174997
+    },
+    {
+      "timestamp": "2023-10-02",
+      "ticker": "ARIS",
+      "open": 9.94,
+      "high": 10.0,
+      "low": 9.57,
+      "close": 9.69,
+      "volume": 170212
+    },
+    {
+      "timestamp": "2023-10-03",
+      "ticker": "ARIS",
+      "open": 9.63,
+      "high": 9.86,
+      "low": 9.55,
+      "close": 9.76,
+      "volume": 202364
+    },
+    {
+      "timestamp": "2023-10-04",
+      "ticker": "ARIS",
+      "open": 9.73,
+      "high": 10.03,
+      "low": 9.575,
+      "close": 9.99,
+      "volume": 212694
+    },
+    {
+      "timestamp": "2023-10-05",
+      "ticker": "ARIS",
+      "open": 9.91,
+      "high": 10.05,
+      "low": 9.7401,
+      "close": 9.89,
+      "volume": 238410
+    },
+    {
+      "timestamp": "2023-10-06",
+      "ticker": "ARIS",
+      "open": 10.05,
+      "high": 10.32,
+      "low": 9.98,
+      "close": 10.01,
+      "volume": 296240
+    },
+    {
+      "timestamp": "2023-10-09",
+      "ticker": "ARIS",
+      "open": 10.12,
+      "high": 10.315,
+      "low": 9.97,
+      "close": 10.07,
+      "volume": 192055
+    },
+    {
+      "timestamp": "2023-10-10",
+      "ticker": "ARIS",
+      "open": 10.18,
+      "high": 10.37,
+      "low": 9.991,
+      "close": 10.17,
+      "volume": 237038
+    },
+    {
+      "timestamp": "2023-10-11",
+      "ticker": "ARIS",
+      "open": 10.13,
+      "high": 10.35,
+      "low": 10.06,
+      "close": 10.09,
+      "volume": 152379
+    },
+    {
+      "timestamp": "2023-10-12",
+      "ticker": "ARIS",
+      "open": 10.12,
+      "high": 10.12,
+      "low": 9.74,
+      "close": 9.97,
+      "volume": 214851
+    },
+    {
+      "timestamp": "2023-10-13",
+      "ticker": "ARIS",
+      "open": 10.06,
+      "high": 10.16,
+      "low": 8.65,
+      "close": 9.1,
+      "volume": 851791
+    },
+    {
+      "timestamp": "2023-10-16",
+      "ticker": "ARIS",
+      "open": 9.25,
+      "high": 9.465,
+      "low": 9.08,
+      "close": 9.43,
+      "volume": 372758
+    },
+    {
+      "timestamp": "2023-10-17",
+      "ticker": "ARIS",
+      "open": 9.39,
+      "high": 9.68,
+      "low": 9.37,
+      "close": 9.45,
+      "volume": 232751
+    },
+    {
+      "timestamp": "2023-10-18",
+      "ticker": "ARIS",
+      "open": 9.41,
+      "high": 9.51,
+      "low": 9.0,
+      "close": 9.24,
+      "volume": 348039
+    },
+    {
+      "timestamp": "2023-10-19",
+      "ticker": "ARIS",
+      "open": 9.16,
+      "high": 9.38,
+      "low": 8.81,
+      "close": 8.82,
+      "volume": 351398
+    },
+    {
+      "timestamp": "2023-10-20",
+      "ticker": "ARIS",
+      "open": 8.8,
+      "high": 8.88,
+      "low": 8.32,
+      "close": 8.34,
+      "volume": 784376
+    },
+    {
+      "timestamp": "2023-10-23",
+      "ticker": "ARIS",
+      "open": 8.25,
+      "high": 8.62,
+      "low": 8.2,
+      "close": 8.3,
+      "volume": 480383
+    },
+    {
+      "timestamp": "2023-10-24",
+      "ticker": "ARIS",
+      "open": 8.35,
+      "high": 8.42,
+      "low": 8.09,
+      "close": 8.21,
+      "volume": 354995
+    },
+    {
+      "timestamp": "2023-10-25",
+      "ticker": "ARIS",
+      "open": 8.15,
+      "high": 8.3,
+      "low": 8.11,
+      "close": 8.15,
+      "volume": 212701
+    },
+    {
+      "timestamp": "2023-10-26",
+      "ticker": "ARIS",
+      "open": 8.08,
+      "high": 8.24,
+      "low": 7.83,
+      "close": 8.0,
+      "volume": 291071
+    },
+    {
+      "timestamp": "2023-10-27",
+      "ticker": "ARIS",
+      "open": 8.0,
+      "high": 8.3,
+      "low": 7.835,
+      "close": 8.24,
+      "volume": 245237
+    },
+    {
+      "timestamp": "2023-10-30",
+      "ticker": "ARIS",
+      "open": 8.27,
+      "high": 8.295,
+      "low": 7.85,
+      "close": 8.07,
+      "volume": 277090
+    },
+    {
+      "timestamp": "2023-10-31",
+      "ticker": "ARIS",
+      "open": 8.04,
+      "high": 8.51,
+      "low": 8.03,
+      "close": 8.35,
+      "volume": 186815
+    },
+    {
+      "timestamp": "2023-11-01",
+      "ticker": "ARIS",
+      "open": 8.29,
+      "high": 8.47,
+      "low": 8.08,
+      "close": 8.26,
+      "volume": 273328
+    },
+    {
+      "timestamp": "2023-11-02",
+      "ticker": "ARIS",
+      "open": 8.66,
+      "high": 9.23,
+      "low": 8.46,
+      "close": 9.09,
+      "volume": 674548
+    },
+    {
+      "timestamp": "2023-11-03",
+      "ticker": "ARIS",
+      "open": 9.27,
+      "high": 10.0,
+      "low": 9.19,
+      "close": 9.58,
+      "volume": 530369
+    },
+    {
+      "timestamp": "2023-11-06",
+      "ticker": "ARIS",
+      "open": 9.6,
+      "high": 9.6,
+      "low": 9.27,
+      "close": 9.36,
+      "volume": 268696
+    },
+    {
+      "timestamp": "2023-11-07",
+      "ticker": "ARIS",
+      "open": 9.28,
+      "high": 9.32,
+      "low": 8.76,
+      "close": 8.81,
+      "volume": 306393
+    },
+    {
+      "timestamp": "2023-11-08",
+      "ticker": "ARIS",
+      "open": 8.8,
+      "high": 8.835,
+      "low": 8.39,
+      "close": 8.58,
+      "volume": 262362
+    },
+    {
+      "timestamp": "2023-11-09",
+      "ticker": "ARIS",
+      "open": 8.7,
+      "high": 8.74,
+      "low": 8.3951,
+      "close": 8.42,
+      "volume": 240817
+    },
+    {
+      "timestamp": "2023-11-10",
+      "ticker": "ARIS",
+      "open": 8.42,
+      "high": 8.87,
+      "low": 8.4,
+      "close": 8.87,
+      "volume": 335210
+    },
+    {
+      "timestamp": "2023-11-13",
+      "ticker": "ARIS",
+      "open": 8.77,
+      "high": 8.89,
+      "low": 8.61,
+      "close": 8.66,
+      "volume": 173545
+    },
+    {
+      "timestamp": "2023-11-14",
+      "ticker": "ARIS",
+      "open": 8.95,
+      "high": 9.11,
+      "low": 8.69,
+      "close": 8.9,
+      "volume": 347463
+    },
+    {
+      "timestamp": "2023-11-15",
+      "ticker": "ARIS",
+      "open": 8.92,
+      "high": 9.13,
+      "low": 8.5,
+      "close": 8.57,
+      "volume": 439769
+    },
+    {
+      "timestamp": "2023-11-16",
+      "ticker": "ARIS",
+      "open": 8.58,
+      "high": 8.65,
+      "low": 8.15,
+      "close": 8.23,
+      "volume": 306333
+    },
+    {
+      "timestamp": "2023-11-17",
+      "ticker": "ARIS",
+      "open": 8.36,
+      "high": 8.4,
+      "low": 8.14,
+      "close": 8.27,
+      "volume": 360291
+    },
+    {
+      "timestamp": "2023-11-20",
+      "ticker": "ARIS",
+      "open": 8.32,
+      "high": 8.4,
+      "low": 8.14,
+      "close": 8.16,
+      "volume": 342966
+    },
+    {
+      "timestamp": "2023-11-21",
+      "ticker": "ARIS",
+      "open": 8.19,
+      "high": 8.25,
+      "low": 7.9,
+      "close": 7.92,
+      "volume": 249448
+    },
+    {
+      "timestamp": "2023-11-22",
+      "ticker": "ARIS",
+      "open": 7.92,
+      "high": 8.07,
+      "low": 7.8,
+      "close": 8.04,
+      "volume": 187548
+    },
+    {
+      "timestamp": "2023-11-24",
+      "ticker": "ARIS",
+      "open": 8.08,
+      "high": 8.35,
+      "low": 8.07,
+      "close": 8.32,
+      "volume": 113986
+    },
+    {
+      "timestamp": "2023-11-27",
+      "ticker": "ARIS",
+      "open": 8.29,
+      "high": 8.3,
+      "low": 8.0,
+      "close": 8.06,
+      "volume": 172467
+    },
+    {
+      "timestamp": "2023-11-28",
+      "ticker": "ARIS",
+      "open": 8.04,
+      "high": 8.09,
+      "low": 7.9,
+      "close": 8.05,
+      "volume": 161229
+    },
+    {
+      "timestamp": "2023-11-29",
+      "ticker": "ARIS",
+      "open": 8.1,
+      "high": 8.24,
+      "low": 8.02,
+      "close": 8.14,
+      "volume": 205774
+    },
+    {
+      "timestamp": "2023-11-30",
+      "ticker": "ARIS",
+      "open": 8.16,
+      "high": 8.25,
+      "low": 8.045,
+      "close": 8.08,
+      "volume": 163808
+    },
+    {
+      "timestamp": "2023-12-01",
+      "ticker": "ARIS",
+      "open": 8.08,
+      "high": 8.47,
+      "low": 8.05,
+      "close": 8.4,
+      "volume": 271330
+    },
+    {
+      "timestamp": "2023-12-04",
+      "ticker": "ARIS",
+      "open": 8.36,
+      "high": 8.57,
+      "low": 8.05,
+      "close": 8.26,
+      "volume": 404976
+    },
+    {
+      "timestamp": "2023-12-05",
+      "ticker": "ARIS",
+      "open": 8.24,
+      "high": 8.3,
+      "low": 7.74,
+      "close": 7.79,
+      "volume": 310798
+    },
+    {
+      "timestamp": "2023-12-06",
+      "ticker": "ARIS",
+      "open": 7.79,
+      "high": 8.05,
+      "low": 7.64,
+      "close": 7.71,
+      "volume": 276609
+    },
+    {
+      "timestamp": "2023-12-07",
+      "ticker": "ARIS",
+      "open": 7.73,
+      "high": 7.7675,
+      "low": 7.53,
+      "close": 7.63,
+      "volume": 168355
+    },
+    {
+      "timestamp": "2023-12-08",
+      "ticker": "ARIS",
+      "open": 7.6,
+      "high": 7.81,
+      "low": 7.53,
+      "close": 7.7,
+      "volume": 157359
+    },
+    {
+      "timestamp": "2023-12-11",
+      "ticker": "ARIS",
+      "open": 7.63,
+      "high": 7.69,
+      "low": 7.522,
+      "close": 7.6,
+      "volume": 212803
+    },
+    {
+      "timestamp": "2023-12-12",
+      "ticker": "ARIS",
+      "open": 7.61,
+      "high": 7.61,
+      "low": 7.22,
+      "close": 7.29,
+      "volume": 274933
+    },
+    {
+      "timestamp": "2023-12-13",
+      "ticker": "ARIS",
+      "open": 7.45,
+      "high": 7.99,
+      "low": 7.3,
+      "close": 7.99,
+      "volume": 782781
+    },
+    {
+      "timestamp": "2023-12-14",
+      "ticker": "ARIS",
+      "open": 8.23,
+      "high": 8.63,
+      "low": 8.19,
+      "close": 8.31,
+      "volume": 436052
+    },
+    {
+      "timestamp": "2023-12-15",
+      "ticker": "ARIS",
+      "open": 8.35,
+      "high": 8.44,
+      "low": 7.86,
+      "close": 7.88,
+      "volume": 498361
+    },
+    {
+      "timestamp": "2023-12-18",
+      "ticker": "ARIS",
+      "open": 7.97,
+      "high": 8.1,
+      "low": 7.85,
+      "close": 7.94,
+      "volume": 175976
+    },
+    {
+      "timestamp": "2023-12-19",
+      "ticker": "ARIS",
+      "open": 7.93,
+      "high": 8.44,
+      "low": 7.93,
+      "close": 8.37,
+      "volume": 239404
+    },
+    {
+      "timestamp": "2023-12-20",
+      "ticker": "ARIS",
+      "open": 8.31,
+      "high": 8.6599,
+      "low": 8.18,
+      "close": 8.21,
+      "volume": 261860
+    },
+    {
+      "timestamp": "2023-12-21",
+      "ticker": "ARIS",
+      "open": 8.3,
+      "high": 8.56,
+      "low": 8.13,
+      "close": 8.33,
+      "volume": 412821
+    },
+    {
+      "timestamp": "2023-12-22",
+      "ticker": "ARIS",
+      "open": 8.48,
+      "high": 8.745,
+      "low": 8.36,
+      "close": 8.37,
+      "volume": 241823
+    },
+    {
+      "timestamp": "2023-12-26",
+      "ticker": "ARIS",
+      "open": 8.49,
+      "high": 8.59,
+      "low": 8.45,
+      "close": 8.52,
+      "volume": 228965
+    },
+    {
+      "timestamp": "2023-12-27",
+      "ticker": "ARIS",
+      "open": 8.52,
+      "high": 8.59,
+      "low": 8.4,
+      "close": 8.54,
+      "volume": 272718
+    },
+    {
+      "timestamp": "2023-12-28",
+      "ticker": "ARIS",
+      "open": 8.52,
+      "high": 8.68,
+      "low": 8.38,
+      "close": 8.66,
+      "volume": 447398
+    },
+    {
+      "timestamp": "2023-12-29",
+      "ticker": "ARIS",
+      "open": 8.67,
+      "high": 8.69,
+      "low": 8.32,
+      "close": 8.39,
+      "volume": 213600
+    },
+    {
+      "timestamp": "2024-01-02",
+      "ticker": "ARIS",
+      "open": 8.36,
+      "high": 8.95,
+      "low": 8.25,
+      "close": 8.69,
+      "volume": 330129
+    },
+    {
+      "timestamp": "2024-01-03",
+      "ticker": "ARIS",
+      "open": 8.61,
+      "high": 9.02,
+      "low": 8.475,
+      "close": 8.7,
+      "volume": 369625
+    },
+    {
+      "timestamp": "2024-01-04",
+      "ticker": "ARIS",
+      "open": 8.76,
+      "high": 8.76,
+      "low": 8.19,
+      "close": 8.26,
+      "volume": 259766
+    },
+    {
+      "timestamp": "2024-01-05",
+      "ticker": "ARIS",
+      "open": 8.3,
+      "high": 8.5,
+      "low": 8.09,
+      "close": 8.33,
+      "volume": 285510
+    },
+    {
+      "timestamp": "2024-01-08",
+      "ticker": "ARIS",
+      "open": 8.3,
+      "high": 8.36,
+      "low": 8.02,
+      "close": 8.34,
+      "volume": 246403
+    },
+    {
+      "timestamp": "2024-01-09",
+      "ticker": "ARIS",
+      "open": 8.26,
+      "high": 8.26,
+      "low": 8.0769,
+      "close": 8.13,
+      "volume": 154003
+    },
+    {
+      "timestamp": "2024-01-10",
+      "ticker": "ARIS",
+      "open": 8.1,
+      "high": 8.14,
+      "low": 7.95,
+      "close": 8.14,
+      "volume": 192598
+    },
+    {
+      "timestamp": "2024-01-11",
+      "ticker": "ARIS",
+      "open": 8.13,
+      "high": 8.1383,
+      "low": 7.88,
+      "close": 8.07,
+      "volume": 99744
+    },
+    {
+      "timestamp": "2024-01-12",
+      "ticker": "ARIS",
+      "open": 8.22,
+      "high": 8.3,
+      "low": 8.06,
+      "close": 8.07,
+      "volume": 100971
+    },
+    {
+      "timestamp": "2024-01-16",
+      "ticker": "ARIS",
+      "open": 8.01,
+      "high": 8.02,
+      "low": 7.86,
+      "close": 7.88,
+      "volume": 166829
+    },
+    {
+      "timestamp": "2024-01-17",
+      "ticker": "ARIS",
+      "open": 7.82,
+      "high": 7.98,
+      "low": 7.755,
+      "close": 7.94,
+      "volume": 186237
+    },
+    {
+      "timestamp": "2024-01-18",
+      "ticker": "ARIS",
+      "open": 7.97,
+      "high": 8.02,
+      "low": 7.81,
+      "close": 7.99,
+      "volume": 163043
+    },
+    {
+      "timestamp": "2024-01-19",
+      "ticker": "ARIS",
+      "open": 8.04,
+      "high": 8.04,
+      "low": 7.74,
+      "close": 7.99,
+      "volume": 331384
+    },
+    {
+      "timestamp": "2024-01-22",
+      "ticker": "ARIS",
+      "open": 8.05,
+      "high": 8.09,
+      "low": 7.87,
+      "close": 8.06,
+      "volume": 164360
+    },
+    {
+      "timestamp": "2024-01-23",
+      "ticker": "ARIS",
+      "open": 8.16,
+      "high": 8.265,
+      "low": 8.01,
+      "close": 8.12,
+      "volume": 157645
+    },
+    {
+      "timestamp": "2024-01-24",
+      "ticker": "ARIS",
+      "open": 8.26,
+      "high": 8.32,
+      "low": 8.08,
+      "close": 8.14,
+      "volume": 128052
+    },
+    {
+      "timestamp": "2024-01-25",
+      "ticker": "ARIS",
+      "open": 8.25,
+      "high": 8.52,
+      "low": 8.205,
+      "close": 8.51,
+      "volume": 150349
+    },
+    {
+      "timestamp": "2024-01-26",
+      "ticker": "ARIS",
+      "open": 8.57,
+      "high": 8.74,
+      "low": 8.52,
+      "close": 8.71,
+      "volume": 131887
+    },
+    {
+      "timestamp": "2024-01-29",
+      "ticker": "ARIS",
+      "open": 8.73,
+      "high": 8.8,
+      "low": 8.53,
+      "close": 8.77,
+      "volume": 104111
+    },
+    {
+      "timestamp": "2024-01-30",
+      "ticker": "ARIS",
+      "open": 8.61,
+      "high": 8.86,
+      "low": 8.61,
+      "close": 8.8,
+      "volume": 156258
+    },
+    {
+      "timestamp": "2024-01-31",
+      "ticker": "ARIS",
+      "open": 8.73,
+      "high": 8.96,
+      "low": 8.65,
+      "close": 8.7,
+      "volume": 190673
+    },
+    {
+      "timestamp": "2024-02-01",
+      "ticker": "ARIS",
+      "open": 8.75,
+      "high": 8.94,
+      "low": 8.6375,
+      "close": 8.76,
+      "volume": 159206
+    },
+    {
+      "timestamp": "2024-02-02",
+      "ticker": "ARIS",
+      "open": 8.68,
+      "high": 8.76,
+      "low": 8.45,
+      "close": 8.63,
+      "volume": 197534
+    },
+    {
+      "timestamp": "2024-02-05",
+      "ticker": "ARIS",
+      "open": 8.5,
+      "high": 8.592,
+      "low": 8.37,
+      "close": 8.5,
+      "volume": 239444
+    },
+    {
+      "timestamp": "2024-02-06",
+      "ticker": "ARIS",
+      "open": 8.48,
+      "high": 8.64,
+      "low": 8.31,
+      "close": 8.51,
+      "volume": 305134
+    },
+    {
+      "timestamp": "2024-02-07",
+      "ticker": "ARIS",
+      "open": 8.58,
+      "high": 8.75,
+      "low": 8.42,
+      "close": 8.66,
+      "volume": 217999
+    },
+    {
+      "timestamp": "2024-02-08",
+      "ticker": "ARIS",
+      "open": 8.62,
+      "high": 8.815,
+      "low": 8.62,
+      "close": 8.75,
+      "volume": 136137
+    },
+    {
+      "timestamp": "2024-02-09",
+      "ticker": "ARIS",
+      "open": 8.73,
+      "high": 8.86,
+      "low": 8.63,
+      "close": 8.69,
+      "volume": 199276
+    },
+    {
+      "timestamp": "2024-02-12",
+      "ticker": "ARIS",
+      "open": 8.78,
+      "high": 9.05,
+      "low": 8.78,
+      "close": 8.94,
+      "volume": 228095
+    },
+    {
+      "timestamp": "2024-02-13",
+      "ticker": "ARIS",
+      "open": 8.67,
+      "high": 8.82,
+      "low": 8.46,
+      "close": 8.54,
+      "volume": 267102
+    },
+    {
+      "timestamp": "2024-02-14",
+      "ticker": "ARIS",
+      "open": 8.67,
+      "high": 9.05,
+      "low": 8.67,
+      "close": 9.02,
+      "volume": 266353
+    },
+    {
+      "timestamp": "2024-02-15",
+      "ticker": "ARIS",
+      "open": 9.19,
+      "high": 9.5,
+      "low": 9.17,
+      "close": 9.37,
+      "volume": 294021
+    },
+    {
+      "timestamp": "2024-02-16",
+      "ticker": "ARIS",
+      "open": 9.34,
+      "high": 9.53,
+      "low": 9.2,
+      "close": 9.44,
+      "volume": 227345
+    },
+    {
+      "timestamp": "2024-02-20",
+      "ticker": "ARIS",
+      "open": 9.36,
+      "high": 9.645,
+      "low": 9.27,
+      "close": 9.46,
+      "volume": 164677
+    },
+    {
+      "timestamp": "2024-02-21",
+      "ticker": "ARIS",
+      "open": 9.44,
+      "high": 9.85,
+      "low": 9.44,
+      "close": 9.76,
+      "volume": 195114
+    },
+    {
+      "timestamp": "2024-02-22",
+      "ticker": "ARIS",
+      "open": 9.79,
+      "high": 9.9172,
+      "low": 9.52,
+      "close": 9.55,
+      "volume": 231823
+    },
+    {
+      "timestamp": "2024-02-23",
+      "ticker": "ARIS",
+      "open": 9.49,
+      "high": 9.72,
+      "low": 9.38,
+      "close": 9.66,
+      "volume": 154603
+    },
+    {
+      "timestamp": "2024-02-26",
+      "ticker": "ARIS",
+      "open": 9.66,
+      "high": 9.7999,
+      "low": 9.5,
+      "close": 9.65,
+      "volume": 238175
+    },
+    {
+      "timestamp": "2024-02-27",
+      "ticker": "ARIS",
+      "open": 9.78,
+      "high": 9.95,
+      "low": 9.755,
+      "close": 9.86,
+      "volume": 209448
+    },
+    {
+      "timestamp": "2024-02-28",
+      "ticker": "ARIS",
+      "open": 9.82,
+      "high": 10.17,
+      "low": 9.76,
+      "close": 9.9,
+      "volume": 296016
+    },
+    {
+      "timestamp": "2024-02-29",
+      "ticker": "ARIS",
+      "open": 10.8,
+      "high": 12.19,
+      "low": 10.56,
+      "close": 12.04,
+      "volume": 766335
+    },
+    {
+      "timestamp": "2024-03-01",
+      "ticker": "ARIS",
+      "open": 12.05,
+      "high": 12.32,
+      "low": 11.84,
+      "close": 12.18,
+      "volume": 451498
+    },
+    {
+      "timestamp": "2024-03-04",
+      "ticker": "ARIS",
+      "open": 12.3,
+      "high": 12.37,
+      "low": 11.65,
+      "close": 11.82,
+      "volume": 370090
+    },
+    {
+      "timestamp": "2024-03-05",
+      "ticker": "ARIS",
+      "open": 11.68,
+      "high": 12.0,
+      "low": 11.66,
+      "close": 11.74,
+      "volume": 392138
+    },
+    {
+      "timestamp": "2024-03-06",
+      "ticker": "ARIS",
+      "open": 11.65,
+      "high": 11.68,
+      "low": 11.32,
+      "close": 11.48,
+      "volume": 294451
+    },
+    {
+      "timestamp": "2024-03-07",
+      "ticker": "ARIS",
+      "open": 11.5,
+      "high": 11.81,
+      "low": 11.39,
+      "close": 11.73,
+      "volume": 236146
+    },
+    {
+      "timestamp": "2024-03-08",
+      "ticker": "ARIS",
+      "open": 11.8,
+      "high": 12.0,
+      "low": 11.75,
+      "close": 11.99,
+      "volume": 205631
+    },
+    {
+      "timestamp": "2024-03-11",
+      "ticker": "ARIS",
+      "open": 11.99,
+      "high": 12.9,
+      "low": 11.89,
+      "close": 12.87,
+      "volume": 541726
+    },
+    {
+      "timestamp": "2024-03-12",
+      "ticker": "ARIS",
+      "open": 13.23,
+      "high": 13.3799,
+      "low": 12.6218,
+      "close": 12.92,
+      "volume": 457486
+    },
+    {
+      "timestamp": "2024-03-13",
+      "ticker": "ARIS",
+      "open": 12.92,
+      "high": 13.42,
+      "low": 12.69,
+      "close": 13.27,
+      "volume": 542403
+    },
+    {
+      "timestamp": "2024-03-14",
+      "ticker": "ARIS",
+      "open": 13.27,
+      "high": 13.3545,
+      "low": 13.02,
+      "close": 13.2,
+      "volume": 250638
+    },
+    {
+      "timestamp": "2024-03-15",
+      "ticker": "ARIS",
+      "open": 13.0,
+      "high": 13.7,
+      "low": 12.87,
+      "close": 13.6,
+      "volume": 599171
+    },
+    {
+      "timestamp": "2024-03-18",
+      "ticker": "ARIS",
+      "open": 13.6,
+      "high": 13.98,
+      "low": 13.26,
+      "close": 13.46,
+      "volume": 437513
+    },
+    {
+      "timestamp": "2024-03-19",
+      "ticker": "ARIS",
+      "open": 13.38,
+      "high": 13.8,
+      "low": 13.35,
+      "close": 13.66,
+      "volume": 271336
+    },
+    {
+      "timestamp": "2024-03-20",
+      "ticker": "ARIS",
+      "open": 13.69,
+      "high": 13.7738,
+      "low": 13.37,
+      "close": 13.55,
+      "volume": 264732
+    },
+    {
+      "timestamp": "2024-03-21",
+      "ticker": "ARIS",
+      "open": 13.36,
+      "high": 13.72,
+      "low": 13.07,
+      "close": 13.64,
+      "volume": 422313
+    },
+    {
+      "timestamp": "2024-03-22",
+      "ticker": "ARIS",
+      "open": 13.67,
+      "high": 13.69,
+      "low": 13.38,
+      "close": 13.49,
+      "volume": 171902
+    },
+    {
+      "timestamp": "2024-03-25",
+      "ticker": "ARIS",
+      "open": 13.5,
+      "high": 14.25,
+      "low": 13.41,
+      "close": 13.94,
+      "volume": 538755
+    },
+    {
+      "timestamp": "2024-03-26",
+      "ticker": "ARIS",
+      "open": 14.0,
+      "high": 14.18,
+      "low": 13.64,
+      "close": 13.76,
+      "volume": 494940
+    },
+    {
+      "timestamp": "2024-03-27",
+      "ticker": "ARIS",
+      "open": 13.89,
+      "high": 14.1,
+      "low": 13.73,
+      "close": 14.06,
+      "volume": 250962
+    },
+    {
+      "timestamp": "2024-03-28",
+      "ticker": "ARIS",
+      "open": 14.11,
+      "high": 14.38,
+      "low": 13.874,
+      "close": 14.15,
+      "volume": 475824
+    },
+    {
+      "timestamp": "2024-04-01",
+      "ticker": "ARIS",
+      "open": 14.24,
+      "high": 14.29,
+      "low": 13.93,
+      "close": 14.12,
+      "volume": 231230
+    },
+    {
+      "timestamp": "2024-04-02",
+      "ticker": "ARIS",
+      "open": 14.1,
+      "high": 14.42,
+      "low": 13.9275,
+      "close": 14.32,
+      "volume": 223671
+    },
+    {
+      "timestamp": "2024-04-03",
+      "ticker": "ARIS",
+      "open": 14.37,
+      "high": 14.58,
+      "low": 14.25,
+      "close": 14.56,
+      "volume": 199788
+    },
+    {
+      "timestamp": "2024-04-04",
+      "ticker": "ARIS",
+      "open": 14.66,
+      "high": 14.83,
+      "low": 14.44,
+      "close": 14.45,
+      "volume": 230090
+    },
+    {
+      "timestamp": "2024-04-05",
+      "ticker": "ARIS",
+      "open": 14.54,
+      "high": 15.08,
+      "low": 14.4,
+      "close": 15.0,
+      "volume": 390979
+    },
+    {
+      "timestamp": "2024-04-08",
+      "ticker": "ARIS",
+      "open": 15.11,
+      "high": 15.16,
+      "low": 14.6548,
+      "close": 15.08,
+      "volume": 237021
+    },
+    {
+      "timestamp": "2024-04-09",
+      "ticker": "ARIS",
+      "open": 15.12,
+      "high": 15.31,
+      "low": 14.96,
+      "close": 15.15,
+      "volume": 241503
+    },
+    {
+      "timestamp": "2024-04-10",
+      "ticker": "ARIS",
+      "open": 14.91,
+      "high": 14.91,
+      "low": 12.44,
+      "close": 14.74,
+      "volume": 1079095
+    },
+    {
+      "timestamp": "2024-04-11",
+      "ticker": "ARIS",
+      "open": 14.77,
+      "high": 14.92,
+      "low": 14.48,
+      "close": 14.78,
+      "volume": 200320
+    },
+    {
+      "timestamp": "2024-04-12",
+      "ticker": "ARIS",
+      "open": 14.75,
+      "high": 14.9,
+      "low": 14.21,
+      "close": 14.28,
+      "volume": 204266
+    },
+    {
+      "timestamp": "2024-04-15",
+      "ticker": "ARIS",
+      "open": 14.36,
+      "high": 14.36,
+      "low": 13.92,
+      "close": 14.07,
+      "volume": 291050
+    },
+    {
+      "timestamp": "2024-04-16",
+      "ticker": "ARIS",
+      "open": 13.93,
+      "high": 14.17,
+      "low": 13.725,
+      "close": 13.95,
+      "volume": 246047
+    },
+    {
+      "timestamp": "2024-04-17",
+      "ticker": "ARIS",
+      "open": 14.04,
+      "high": 14.07,
+      "low": 13.41,
+      "close": 13.48,
+      "volume": 211171
+    },
+    {
+      "timestamp": "2024-04-18",
+      "ticker": "ARIS",
+      "open": 13.55,
+      "high": 13.69,
+      "low": 13.24,
+      "close": 13.45,
+      "volume": 250550
+    },
+    {
+      "timestamp": "2024-04-19",
+      "ticker": "ARIS",
+      "open": 13.36,
+      "high": 13.98,
+      "low": 13.36,
+      "close": 13.93,
+      "volume": 347101
+    },
+    {
+      "timestamp": "2024-04-22",
+      "ticker": "ARIS",
+      "open": 13.85,
+      "high": 14.2,
+      "low": 13.71,
+      "close": 14.06,
+      "volume": 274317
+    },
+    {
+      "timestamp": "2024-04-23",
+      "ticker": "ARIS",
+      "open": 14.03,
+      "high": 14.48,
+      "low": 13.92,
+      "close": 14.41,
+      "volume": 234805
+    },
+    {
+      "timestamp": "2024-04-24",
+      "ticker": "ARIS",
+      "open": 14.41,
+      "high": 14.71,
+      "low": 14.35,
+      "close": 14.66,
+      "volume": 320896
+    },
+    {
+      "timestamp": "2024-04-25",
+      "ticker": "ARIS",
+      "open": 14.49,
+      "high": 14.86,
+      "low": 14.3,
+      "close": 14.65,
+      "volume": 351244
+    },
+    {
+      "timestamp": "2024-04-26",
+      "ticker": "ARIS",
+      "open": 14.6,
+      "high": 14.84,
+      "low": 14.31,
+      "close": 14.81,
+      "volume": 275629
+    },
+    {
+      "timestamp": "2024-04-29",
+      "ticker": "ARIS",
+      "open": 14.85,
+      "high": 15.0,
+      "low": 14.65,
+      "close": 14.65,
+      "volume": 277205
+    },
+    {
+      "timestamp": "2024-04-30",
+      "ticker": "ARIS",
+      "open": 14.6,
+      "high": 14.6,
+      "low": 14.03,
+      "close": 14.03,
+      "volume": 346629
+    },
+    {
+      "timestamp": "2024-05-01",
+      "ticker": "ARIS",
+      "open": 14.0,
+      "high": 14.16,
+      "low": 13.68,
+      "close": 13.73,
+      "volume": 266296
+    },
+    {
+      "timestamp": "2024-05-02",
+      "ticker": "ARIS",
+      "open": 13.99,
+      "high": 14.32,
+      "low": 13.88,
+      "close": 14.22,
+      "volume": 321236
+    },
+    {
+      "timestamp": "2024-05-03",
+      "ticker": "ARIS",
+      "open": 14.46,
+      "high": 14.82,
+      "low": 14.26,
+      "close": 14.64,
+      "volume": 450691
+    },
+    {
+      "timestamp": "2024-05-06",
+      "ticker": "ARIS",
+      "open": 14.91,
+      "high": 15.33,
+      "low": 14.91,
+      "close": 15.01,
+      "volume": 647117
+    },
+    {
+      "timestamp": "2024-05-07",
+      "ticker": "ARIS",
+      "open": 15.07,
+      "high": 15.765,
+      "low": 15.07,
+      "close": 15.6,
+      "volume": 1093213
+    },
+    {
+      "timestamp": "2024-05-08",
+      "ticker": "ARIS",
+      "open": 16.0,
+      "high": 17.2719,
+      "low": 15.96,
+      "close": 17.05,
+      "volume": 1302288
+    },
+    {
+      "timestamp": "2024-05-09",
+      "ticker": "ARIS",
+      "open": 17.13,
+      "high": 17.22,
+      "low": 16.7,
+      "close": 16.87,
+      "volume": 609109
+    },
+    {
+      "timestamp": "2024-05-10",
+      "ticker": "ARIS",
+      "open": 17.21,
+      "high": 17.27,
+      "low": 16.42,
+      "close": 16.84,
+      "volume": 766031
+    },
+    {
+      "timestamp": "2024-05-13",
+      "ticker": "ARIS",
+      "open": 17.0,
+      "high": 17.15,
+      "low": 16.21,
+      "close": 16.3,
+      "volume": 576613
+    },
+    {
+      "timestamp": "2024-05-14",
+      "ticker": "ARIS",
+      "open": 16.57,
+      "high": 16.79,
+      "low": 16.47,
+      "close": 16.7,
+      "volume": 617987
+    },
+    {
+      "timestamp": "2024-05-15",
+      "ticker": "ARIS",
+      "open": 16.53,
+      "high": 16.7,
+      "low": 16.1501,
+      "close": 16.7,
+      "volume": 540043
+    },
+    {
+      "timestamp": "2024-05-16",
+      "ticker": "ARIS",
+      "open": 16.75,
+      "high": 16.75,
+      "low": 16.39,
+      "close": 16.42,
+      "volume": 394924
+    },
+    {
+      "timestamp": "2024-05-17",
+      "ticker": "ARIS",
+      "open": 16.5,
+      "high": 16.62,
+      "low": 16.33,
+      "close": 16.62,
+      "volume": 266443
+    },
+    {
+      "timestamp": "2024-05-20",
+      "ticker": "ARIS",
+      "open": 16.62,
+      "high": 16.73,
+      "low": 16.23,
+      "close": 16.29,
+      "volume": 359976
+    },
+    {
+      "timestamp": "2024-05-21",
+      "ticker": "ARIS",
+      "open": 16.2,
+      "high": 16.44,
+      "low": 15.86,
+      "close": 15.99,
+      "volume": 433314
+    },
+    {
+      "timestamp": "2024-05-22",
+      "ticker": "ARIS",
+      "open": 15.9,
+      "high": 15.9,
+      "low": 14.75,
+      "close": 14.92,
+      "volume": 605281
+    },
+    {
+      "timestamp": "2024-05-23",
+      "ticker": "ARIS",
+      "open": 15.08,
+      "high": 15.21,
+      "low": 14.68,
+      "close": 14.83,
+      "volume": 450957
+    },
+    {
+      "timestamp": "2024-05-24",
+      "ticker": "ARIS",
+      "open": 14.98,
+      "high": 15.29,
+      "low": 14.84,
+      "close": 15.23,
+      "volume": 253593
+    },
+    {
+      "timestamp": "2024-05-28",
+      "ticker": "ARIS",
+      "open": 15.33,
+      "high": 15.48,
+      "low": 14.88,
+      "close": 15.19,
+      "volume": 307202
+    },
+    {
+      "timestamp": "2024-05-29",
+      "ticker": "ARIS",
+      "open": 15.02,
+      "high": 15.17,
+      "low": 14.82,
+      "close": 14.9,
+      "volume": 225907
+    },
+    {
+      "timestamp": "2024-05-30",
+      "ticker": "ARIS",
+      "open": 14.88,
+      "high": 15.04,
+      "low": 14.8304,
+      "close": 14.9,
+      "volume": 212506
+    },
+    {
+      "timestamp": "2024-05-31",
+      "ticker": "ARIS",
+      "open": 14.9,
+      "high": 15.39,
+      "low": 14.87,
+      "close": 15.37,
+      "volume": 281653
+    },
+    {
+      "timestamp": "2024-06-03",
+      "ticker": "ARIS",
+      "open": 15.42,
+      "high": 15.5,
+      "low": 14.74,
+      "close": 14.86,
+      "volume": 356539
+    },
+    {
+      "timestamp": "2024-06-04",
+      "ticker": "ARIS",
+      "open": 15.1,
+      "high": 15.22,
+      "low": 14.77,
+      "close": 14.95,
+      "volume": 318543
+    },
+    {
+      "timestamp": "2024-06-05",
+      "ticker": "ARIS",
+      "open": 15.14,
+      "high": 15.24,
+      "low": 14.98,
+      "close": 15.21,
+      "volume": 348424
+    },
+    {
+      "timestamp": "2024-06-06",
+      "ticker": "ARIS",
+      "open": 15.04,
+      "high": 15.0892,
+      "low": 14.79,
+      "close": 14.92,
+      "volume": 187497
+    },
+    {
+      "timestamp": "2024-06-07",
+      "ticker": "ARIS",
+      "open": 14.76,
+      "high": 14.96,
+      "low": 14.67,
+      "close": 14.68,
+      "volume": 202183
+    },
+    {
+      "timestamp": "2024-06-10",
+      "ticker": "ARIS",
+      "open": 14.57,
+      "high": 15.21,
+      "low": 14.31,
+      "close": 15.0,
+      "volume": 367711
+    },
+    {
+      "timestamp": "2024-06-11",
+      "ticker": "ARIS",
+      "open": 14.83,
+      "high": 15.0,
+      "low": 14.68,
+      "close": 14.9,
+      "volume": 184065
+    },
+    {
+      "timestamp": "2024-06-12",
+      "ticker": "ARIS",
+      "open": 15.21,
+      "high": 15.23,
+      "low": 14.79,
+      "close": 14.85,
+      "volume": 217329
+    },
+    {
+      "timestamp": "2024-06-13",
+      "ticker": "ARIS",
+      "open": 14.76,
+      "high": 14.94,
+      "low": 14.4,
+      "close": 14.49,
+      "volume": 382503
+    },
+    {
+      "timestamp": "2024-06-14",
+      "ticker": "ARIS",
+      "open": 14.3,
+      "high": 14.395,
+      "low": 14.016,
+      "close": 14.06,
+      "volume": 208011
+    },
+    {
+      "timestamp": "2024-06-17",
+      "ticker": "ARIS",
+      "open": 13.99,
+      "high": 14.2799,
+      "low": 13.9,
+      "close": 14.27,
+      "volume": 215097
+    },
+    {
+      "timestamp": "2024-06-18",
+      "ticker": "ARIS",
+      "open": 14.27,
+      "high": 14.46,
+      "low": 14.2201,
+      "close": 14.27,
+      "volume": 165407
+    },
+    {
+      "timestamp": "2024-06-20",
+      "ticker": "ARIS",
+      "open": 14.24,
+      "high": 14.781,
+      "low": 14.18,
+      "close": 14.72,
+      "volume": 289984
+    },
+    {
+      "timestamp": "2024-06-21",
+      "ticker": "ARIS",
+      "open": 14.71,
+      "high": 14.71,
+      "low": 14.27,
+      "close": 14.56,
+      "volume": 468753
+    },
+    {
+      "timestamp": "2024-06-24",
+      "ticker": "ARIS",
+      "open": 14.55,
+      "high": 15.02,
+      "low": 14.5,
+      "close": 14.88,
+      "volume": 280765
+    },
+    {
+      "timestamp": "2024-06-25",
+      "ticker": "ARIS",
+      "open": 14.82,
+      "high": 15.085,
+      "low": 14.72,
+      "close": 15.07,
+      "volume": 201626
+    },
+    {
+      "timestamp": "2024-06-26",
+      "ticker": "ARIS",
+      "open": 15.0,
+      "high": 15.12,
+      "low": 14.865,
+      "close": 14.94,
+      "volume": 206656
+    },
+    {
+      "timestamp": "2024-06-27",
+      "ticker": "ARIS",
+      "open": 14.99,
+      "high": 15.08,
+      "low": 14.89,
+      "close": 15.04,
+      "volume": 258360
+    },
+    {
+      "timestamp": "2024-06-28",
+      "ticker": "ARIS",
+      "open": 15.25,
+      "high": 15.98,
+      "low": 15.16,
+      "close": 15.67,
+      "volume": 1167008
+    },
+    {
+      "timestamp": "2024-07-01",
+      "ticker": "ARIS",
+      "open": 15.75,
+      "high": 15.82,
+      "low": 15.11,
+      "close": 15.51,
+      "volume": 341321
+    },
+    {
+      "timestamp": "2024-07-02",
+      "ticker": "ARIS",
+      "open": 15.54,
+      "high": 15.6999,
+      "low": 15.32,
+      "close": 15.41,
+      "volume": 314943
+    },
+    {
+      "timestamp": "2024-07-03",
+      "ticker": "ARIS",
+      "open": 15.52,
+      "high": 16.31,
+      "low": 15.49,
+      "close": 15.84,
+      "volume": 384136
+    },
+    {
+      "timestamp": "2024-07-05",
+      "ticker": "ARIS",
+      "open": 15.8,
+      "high": 15.81,
+      "low": 15.29,
+      "close": 15.48,
+      "volume": 260067
+    },
+    {
+      "timestamp": "2024-07-08",
+      "ticker": "ARIS",
+      "open": 15.57,
+      "high": 15.66,
+      "low": 15.33,
+      "close": 15.58,
+      "volume": 181464
+    },
+    {
+      "timestamp": "2024-07-09",
+      "ticker": "ARIS",
+      "open": 15.5,
+      "high": 15.61,
+      "low": 15.1005,
+      "close": 15.53,
+      "volume": 279682
+    },
+    {
+      "timestamp": "2024-07-10",
+      "ticker": "ARIS",
+      "open": 15.54,
+      "high": 15.88,
+      "low": 15.36,
+      "close": 15.88,
+      "volume": 214356
+    },
+    {
+      "timestamp": "2024-07-11",
+      "ticker": "ARIS",
+      "open": 16.16,
+      "high": 16.31,
+      "low": 15.84,
+      "close": 16.15,
+      "volume": 427075
+    },
+    {
+      "timestamp": "2024-07-12",
+      "ticker": "ARIS",
+      "open": 16.45,
+      "high": 16.57,
+      "low": 16.02,
+      "close": 16.05,
+      "volume": 341563
+    },
+    {
+      "timestamp": "2024-07-15",
+      "ticker": "ARIS",
+      "open": 16.22,
+      "high": 16.87,
+      "low": 16.15,
+      "close": 16.46,
+      "volume": 674178
+    },
+    {
+      "timestamp": "2024-07-16",
+      "ticker": "ARIS",
+      "open": 16.52,
+      "high": 16.97,
+      "low": 16.43,
+      "close": 16.97,
+      "volume": 512127
+    },
+    {
+      "timestamp": "2024-07-17",
+      "ticker": "ARIS",
+      "open": 16.89,
+      "high": 17.27,
+      "low": 16.575,
+      "close": 16.66,
+      "volume": 404252
+    },
+    {
+      "timestamp": "2024-07-18",
+      "ticker": "ARIS",
+      "open": 16.63,
+      "high": 16.66,
+      "low": 16.07,
+      "close": 16.17,
+      "volume": 270170
+    },
+    {
+      "timestamp": "2024-07-19",
+      "ticker": "ARIS",
+      "open": 16.18,
+      "high": 16.42,
+      "low": 15.99,
+      "close": 16.02,
+      "volume": 497838
+    },
+    {
+      "timestamp": "2024-07-22",
+      "ticker": "ARIS",
+      "open": 16.11,
+      "high": 16.42,
+      "low": 15.8,
+      "close": 16.4,
+      "volume": 252957
+    },
+    {
+      "timestamp": "2024-07-23",
+      "ticker": "ARIS",
+      "open": 16.3,
+      "high": 16.85,
+      "low": 16.11,
+      "close": 16.78,
+      "volume": 345035
+    },
+    {
+      "timestamp": "2024-07-24",
+      "ticker": "ARIS",
+      "open": 16.74,
+      "high": 16.886,
+      "low": 16.24,
+      "close": 16.29,
+      "volume": 246420
+    },
+    {
+      "timestamp": "2024-07-25",
+      "ticker": "ARIS",
+      "open": 16.39,
+      "high": 16.44,
+      "low": 16.02,
+      "close": 16.15,
+      "volume": 245419
+    },
+    {
+      "timestamp": "2024-07-26",
+      "ticker": "ARIS",
+      "open": 16.4,
+      "high": 16.4714,
+      "low": 16.03,
+      "close": 16.23,
+      "volume": 198427
+    },
+    {
+      "timestamp": "2024-07-29",
+      "ticker": "ARIS",
+      "open": 16.72,
+      "high": 17.1,
+      "low": 16.23,
+      "close": 16.65,
+      "volume": 482538
+    },
+    {
+      "timestamp": "2024-07-30",
+      "ticker": "ARIS",
+      "open": 16.71,
+      "high": 17.3103,
+      "low": 16.71,
+      "close": 17.11,
+      "volume": 508609
+    },
+    {
+      "timestamp": "2024-07-31",
+      "ticker": "ARIS",
+      "open": 17.27,
+      "high": 17.91,
+      "low": 16.96,
+      "close": 17.71,
+      "volume": 470395
+    },
+    {
+      "timestamp": "2024-08-01",
+      "ticker": "ARIS",
+      "open": 17.75,
+      "high": 17.9,
+      "low": 16.83,
+      "close": 16.85,
+      "volume": 474962
+    },
+    {
+      "timestamp": "2024-08-02",
+      "ticker": "ARIS",
+      "open": 16.38,
+      "high": 16.38,
+      "low": 14.93,
+      "close": 15.2,
+      "volume": 744803
+    },
+    {
+      "timestamp": "2024-08-05",
+      "ticker": "ARIS",
+      "open": 14.09,
+      "high": 14.34,
+      "low": 13.74,
+      "close": 14.31,
+      "volume": 435525
+    },
+    {
+      "timestamp": "2024-08-06",
+      "ticker": "ARIS",
+      "open": 14.27,
+      "high": 15.11,
+      "low": 14.22,
+      "close": 14.91,
+      "volume": 549001
+    },
+    {
+      "timestamp": "2024-08-07",
+      "ticker": "ARIS",
+      "open": 14.57,
+      "high": 14.91,
+      "low": 13.3436,
+      "close": 14.25,
+      "volume": 1392265
+    },
+    {
+      "timestamp": "2024-08-08",
+      "ticker": "ARIS",
+      "open": 14.38,
+      "high": 14.63,
+      "low": 14.01,
+      "close": 14.4,
+      "volume": 780943
+    },
+    {
+      "timestamp": "2024-08-09",
+      "ticker": "ARIS",
+      "open": 14.5,
+      "high": 15.16,
+      "low": 14.4,
+      "close": 15.16,
+      "volume": 444974
+    },
+    {
+      "timestamp": "2024-08-12",
+      "ticker": "ARIS",
+      "open": 15.22,
+      "high": 15.44,
+      "low": 14.74,
+      "close": 15.01,
+      "volume": 576830
+    },
+    {
+      "timestamp": "2024-08-13",
+      "ticker": "ARIS",
+      "open": 14.95,
+      "high": 15.56,
+      "low": 14.95,
+      "close": 15.46,
+      "volume": 403004
+    },
+    {
+      "timestamp": "2024-08-14",
+      "ticker": "ARIS",
+      "open": 15.58,
+      "high": 15.83,
+      "low": 15.405,
+      "close": 15.63,
+      "volume": 322200
+    },
+    {
+      "timestamp": "2024-08-15",
+      "ticker": "ARIS",
+      "open": 15.97,
+      "high": 16.63,
+      "low": 15.97,
+      "close": 16.21,
+      "volume": 535291
+    },
+    {
+      "timestamp": "2024-08-16",
+      "ticker": "ARIS",
+      "open": 16.13,
+      "high": 16.37,
+      "low": 16.11,
+      "close": 16.23,
+      "volume": 560759
+    },
+    {
+      "timestamp": "2024-08-19",
+      "ticker": "ARIS",
+      "open": 16.3,
+      "high": 16.91,
+      "low": 16.28,
+      "close": 16.71,
+      "volume": 376888
+    },
+    {
+      "timestamp": "2024-08-20",
+      "ticker": "ARIS",
+      "open": 16.71,
+      "high": 16.74,
+      "low": 16.16,
+      "close": 16.25,
+      "volume": 418432
+    },
+    {
+      "timestamp": "2024-08-21",
+      "ticker": "ARIS",
+      "open": 16.39,
+      "high": 16.41,
+      "low": 15.901,
+      "close": 16.32,
+      "volume": 241778
+    },
+    {
+      "timestamp": "2024-08-22",
+      "ticker": "ARIS",
+      "open": 16.3,
+      "high": 16.67,
+      "low": 16.25,
+      "close": 16.35,
+      "volume": 189144
+    },
+    {
+      "timestamp": "2024-08-23",
+      "ticker": "ARIS",
+      "open": 16.52,
+      "high": 17.09,
+      "low": 16.43,
+      "close": 16.96,
+      "volume": 444184
+    },
+    {
+      "timestamp": "2024-08-26",
+      "ticker": "ARIS",
+      "open": 17.1,
+      "high": 17.24,
+      "low": 16.7,
+      "close": 17.11,
+      "volume": 353651
+    },
+    {
+      "timestamp": "2024-08-27",
+      "ticker": "ARIS",
+      "open": 17.11,
+      "high": 17.1499,
+      "low": 16.69,
+      "close": 16.77,
+      "volume": 169522
+    },
+    {
+      "timestamp": "2024-08-28",
+      "ticker": "ARIS",
+      "open": 16.62,
+      "high": 16.66,
+      "low": 16.34,
+      "close": 16.34,
+      "volume": 216073
+    },
+    {
+      "timestamp": "2024-08-29",
+      "ticker": "ARIS",
+      "open": 16.56,
+      "high": 16.75,
+      "low": 16.26,
+      "close": 16.74,
+      "volume": 201674
+    },
+    {
+      "timestamp": "2024-08-30",
+      "ticker": "ARIS",
+      "open": 16.72,
+      "high": 16.82,
+      "low": 16.51,
+      "close": 16.82,
+      "volume": 202501
+    },
+    {
+      "timestamp": "2024-09-03",
+      "ticker": "ARIS",
+      "open": 16.51,
+      "high": 16.52,
+      "low": 15.66,
+      "close": 16.01,
+      "volume": 385508
+    },
+    {
+      "timestamp": "2024-09-04",
+      "ticker": "ARIS",
+      "open": 16.02,
+      "high": 16.28,
+      "low": 15.935,
+      "close": 16.16,
+      "volume": 306325
+    },
+    {
+      "timestamp": "2024-09-05",
+      "ticker": "ARIS",
+      "open": 16.18,
+      "high": 16.3,
+      "low": 16.04,
+      "close": 16.09,
+      "volume": 187471
+    },
+    {
+      "timestamp": "2024-09-06",
+      "ticker": "ARIS",
+      "open": 16.12,
+      "high": 16.205,
+      "low": 15.11,
+      "close": 15.13,
+      "volume": 241613
+    },
+    {
+      "timestamp": "2024-09-09",
+      "ticker": "ARIS",
+      "open": 15.16,
+      "high": 15.38,
+      "low": 14.92,
+      "close": 14.96,
+      "volume": 229083
+    },
+    {
+      "timestamp": "2024-09-10",
+      "ticker": "ARIS",
+      "open": 14.89,
+      "high": 15.18,
+      "low": 14.66,
+      "close": 15.07,
+      "volume": 258875
+    },
+    {
+      "timestamp": "2024-09-11",
+      "ticker": "ARIS",
+      "open": 15.14,
+      "high": 15.48,
+      "low": 14.97,
+      "close": 15.38,
+      "volume": 187507
+    },
+    {
+      "timestamp": "2024-09-12",
+      "ticker": "ARIS",
+      "open": 15.47,
+      "high": 15.955,
+      "low": 15.385,
+      "close": 15.86,
+      "volume": 167612
+    },
+    {
+      "timestamp": "2024-09-13",
+      "ticker": "ARIS",
+      "open": 16.13,
+      "high": 16.35,
+      "low": 15.88,
+      "close": 16.34,
+      "volume": 173317
+    },
+    {
+      "timestamp": "2024-09-16",
+      "ticker": "ARIS",
+      "open": 16.49,
+      "high": 16.88,
+      "low": 16.49,
+      "close": 16.63,
+      "volume": 250735
+    },
+    {
+      "timestamp": "2024-09-17",
+      "ticker": "ARIS",
+      "open": 16.81,
+      "high": 17.07,
+      "low": 16.72,
+      "close": 16.95,
+      "volume": 259588
+    },
+    {
+      "timestamp": "2024-09-18",
+      "ticker": "ARIS",
+      "open": 17.12,
+      "high": 17.26,
+      "low": 16.64,
+      "close": 16.77,
+      "volume": 214918
+    },
+    {
+      "timestamp": "2024-09-19",
+      "ticker": "ARIS",
+      "open": 17.35,
+      "high": 17.35,
+      "low": 16.79,
+      "close": 16.86,
+      "volume": 173707
+    },
+    {
+      "timestamp": "2024-09-20",
+      "ticker": "ARIS",
+      "open": 16.78,
+      "high": 17.25,
+      "low": 16.56,
+      "close": 17.13,
+      "volume": 556574
+    },
+    {
+      "timestamp": "2024-09-23",
+      "ticker": "ARIS",
+      "open": 17.14,
+      "high": 17.95,
+      "low": 16.94,
+      "close": 17.69,
+      "volume": 477415
+    },
+    {
+      "timestamp": "2024-09-24",
+      "ticker": "ARIS",
+      "open": 18.14,
+      "high": 18.99,
+      "low": 18.04,
+      "close": 18.83,
+      "volume": 817799
+    },
+    {
+      "timestamp": "2024-09-25",
+      "ticker": "ARIS",
+      "open": 18.85,
+      "high": 18.85,
+      "low": 17.67,
+      "close": 17.74,
+      "volume": 562636
+    },
+    {
+      "timestamp": "2024-09-26",
+      "ticker": "ARIS",
+      "open": 17.54,
+      "high": 17.8,
+      "low": 15.86,
+      "close": 16.21,
+      "volume": 739939
+    },
+    {
+      "timestamp": "2024-09-27",
+      "ticker": "ARIS",
+      "open": 16.26,
+      "high": 16.61,
+      "low": 15.78,
+      "close": 16.47,
+      "volume": 387238
+    },
+    {
+      "timestamp": "2024-09-30",
+      "ticker": "ARIS",
+      "open": 16.35,
+      "high": 16.89,
+      "low": 16.2594,
+      "close": 16.87,
+      "volume": 291825
+    },
+    {
+      "timestamp": "2024-10-01",
+      "ticker": "ARIS",
+      "open": 16.78,
+      "high": 17.11,
+      "low": 16.59,
+      "close": 16.86,
+      "volume": 251248
+    },
+    {
+      "timestamp": "2024-10-02",
+      "ticker": "ARIS",
+      "open": 16.93,
+      "high": 17.31,
+      "low": 16.875,
+      "close": 17.12,
+      "volume": 205293
+    },
+    {
+      "timestamp": "2024-10-03",
+      "ticker": "ARIS",
+      "open": 17.16,
+      "high": 17.35,
+      "low": 17.0,
+      "close": 17.22,
+      "volume": 157870
+    },
+    {
+      "timestamp": "2024-10-04",
+      "ticker": "ARIS",
+      "open": 17.49,
+      "high": 17.49,
+      "low": 17.08,
+      "close": 17.42,
+      "volume": 240764
+    },
+    {
+      "timestamp": "2024-10-07",
+      "ticker": "ARIS",
+      "open": 17.43,
+      "high": 17.48,
+      "low": 17.11,
+      "close": 17.22,
+      "volume": 136732
+    },
+    {
+      "timestamp": "2024-10-08",
+      "ticker": "ARIS",
+      "open": 17.21,
+      "high": 17.32,
+      "low": 16.87,
+      "close": 17.0,
+      "volume": 138639
+    },
+    {
+      "timestamp": "2024-10-09",
+      "ticker": "ARIS",
+      "open": 16.94,
+      "high": 17.205,
+      "low": 16.9,
+      "close": 17.08,
+      "volume": 119654
+    },
+    {
+      "timestamp": "2024-10-10",
+      "ticker": "ARIS",
+      "open": 16.99,
+      "high": 17.2,
+      "low": 16.74,
+      "close": 17.06,
+      "volume": 158694
+    },
+    {
+      "timestamp": "2024-10-11",
+      "ticker": "ARIS",
+      "open": 17.06,
+      "high": 17.515,
+      "low": 17.06,
+      "close": 17.4,
+      "volume": 177430
+    },
+    {
+      "timestamp": "2024-10-14",
+      "ticker": "ARIS",
+      "open": 17.26,
+      "high": 17.36,
+      "low": 16.98,
+      "close": 17.02,
+      "volume": 114403
+    },
+    {
+      "timestamp": "2024-10-15",
+      "ticker": "ARIS",
+      "open": 16.75,
+      "high": 16.815,
+      "low": 16.34,
+      "close": 16.45,
+      "volume": 344018
+    },
+    {
+      "timestamp": "2024-10-16",
+      "ticker": "ARIS",
+      "open": 16.39,
+      "high": 16.42,
+      "low": 15.37,
+      "close": 15.54,
+      "volume": 501246
+    },
+    {
+      "timestamp": "2024-10-17",
+      "ticker": "ARIS",
+      "open": 15.7,
+      "high": 16.38,
+      "low": 15.69,
+      "close": 16.36,
+      "volume": 430819
+    },
+    {
+      "timestamp": "2024-10-18",
+      "ticker": "ARIS",
+      "open": 16.38,
+      "high": 16.58,
+      "low": 15.94,
+      "close": 16.12,
+      "volume": 1289579
+    },
+    {
+      "timestamp": "2024-10-21",
+      "ticker": "ARIS",
+      "open": 16.22,
+      "high": 16.41,
+      "low": 15.885,
+      "close": 16.26,
+      "volume": 444499
+    },
+    {
+      "timestamp": "2024-10-22",
+      "ticker": "ARIS",
+      "open": 16.2,
+      "high": 16.415,
+      "low": 16.07,
+      "close": 16.08,
+      "volume": 268817
+    },
+    {
+      "timestamp": "2024-10-23",
+      "ticker": "ARIS",
+      "open": 15.94,
+      "high": 16.1099,
+      "low": 15.27,
+      "close": 15.38,
+      "volume": 295470
+    },
+    {
+      "timestamp": "2024-10-24",
+      "ticker": "ARIS",
+      "open": 15.39,
+      "high": 15.48,
+      "low": 15.012,
+      "close": 15.29,
+      "volume": 329326
+    },
+    {
+      "timestamp": "2024-10-25",
+      "ticker": "ARIS",
+      "open": 15.4,
+      "high": 15.57,
+      "low": 14.95,
+      "close": 15.05,
+      "volume": 380558
+    },
+    {
+      "timestamp": "2024-10-28",
+      "ticker": "ARIS",
+      "open": 15.06,
+      "high": 15.23,
+      "low": 14.46,
+      "close": 15.14,
+      "volume": 456734
+    },
+    {
+      "timestamp": "2024-10-29",
+      "ticker": "ARIS",
+      "open": 15.25,
+      "high": 15.89,
+      "low": 15.24,
+      "close": 15.74,
+      "volume": 328022
+    },
+    {
+      "timestamp": "2024-10-30",
+      "ticker": "ARIS",
+      "open": 15.69,
+      "high": 16.38,
+      "low": 15.69,
+      "close": 16.31,
+      "volume": 340469
+    },
+    {
+      "timestamp": "2024-10-31",
+      "ticker": "ARIS",
+      "open": 16.47,
+      "high": 16.82,
+      "low": 16.32,
+      "close": 16.5,
+      "volume": 324370
+    },
+    {
+      "timestamp": "2024-11-01",
+      "ticker": "ARIS",
+      "open": 16.74,
+      "high": 16.8,
+      "low": 16.12,
+      "close": 16.29,
+      "volume": 263715
+    },
+    {
+      "timestamp": "2024-11-04",
+      "ticker": "ARIS",
+      "open": 16.38,
+      "high": 17.4,
+      "low": 16.38,
+      "close": 16.56,
+      "volume": 344554
+    },
+    {
+      "timestamp": "2024-11-05",
+      "ticker": "ARIS",
+      "open": 17.51,
+      "high": 22.03,
+      "low": 17.506,
+      "close": 20.98,
+      "volume": 1995275
+    },
+    {
+      "timestamp": "2024-11-06",
+      "ticker": "ARIS",
+      "open": 21.16,
+      "high": 22.36,
+      "low": 20.98,
+      "close": 22.17,
+      "volume": 1167780
+    },
+    {
+      "timestamp": "2024-11-07",
+      "ticker": "ARIS",
+      "open": 21.2,
+      "high": 22.33,
+      "low": 21.17,
+      "close": 22.22,
+      "volume": 666906
+    },
+    {
+      "timestamp": "2024-11-08",
+      "ticker": "ARIS",
+      "open": 22.28,
+      "high": 23.71,
+      "low": 21.63,
+      "close": 23.65,
+      "volume": 786082
+    },
+    {
+      "timestamp": "2024-11-11",
+      "ticker": "ARIS",
+      "open": 24.39,
+      "high": 25.62,
+      "low": 24.0861,
+      "close": 25.26,
+      "volume": 1018009
+    },
+    {
+      "timestamp": "2024-11-12",
+      "ticker": "ARIS",
+      "open": 25.16,
+      "high": 26.34,
+      "low": 25.08,
+      "close": 25.11,
+      "volume": 663293
+    },
+    {
+      "timestamp": "2024-11-13",
+      "ticker": "ARIS",
+      "open": 25.32,
+      "high": 25.38,
+      "low": 24.46,
+      "close": 24.51,
+      "volume": 380158
+    },
+    {
+      "timestamp": "2024-11-14",
+      "ticker": "ARIS",
+      "open": 24.75,
+      "high": 25.1,
+      "low": 24.29,
+      "close": 24.55,
+      "volume": 356202
+    },
+    {
+      "timestamp": "2024-11-15",
+      "ticker": "ARIS",
+      "open": 24.74,
+      "high": 24.74,
+      "low": 23.91,
+      "close": 23.93,
+      "volume": 286204
+    },
+    {
+      "timestamp": "2024-11-18",
+      "ticker": "ARIS",
+      "open": 24.19,
+      "high": 24.88,
+      "low": 23.93,
+      "close": 24.68,
+      "volume": 326486
+    },
+    {
+      "timestamp": "2024-11-19",
+      "ticker": "ARIS",
+      "open": 24.34,
+      "high": 25.06,
+      "low": 24.34,
+      "close": 24.87,
+      "volume": 314455
+    },
+    {
+      "timestamp": "2024-11-20",
+      "ticker": "ARIS",
+      "open": 24.97,
+      "high": 26.39,
+      "low": 24.75,
+      "close": 26.37,
+      "volume": 512538
+    },
+    {
+      "timestamp": "2024-11-21",
+      "ticker": "ARIS",
+      "open": 26.85,
+      "high": 27.58,
+      "low": 25.99,
+      "close": 27.43,
+      "volume": 628225
+    },
+    {
+      "timestamp": "2024-11-22",
+      "ticker": "ARIS",
+      "open": 27.43,
+      "high": 27.43,
+      "low": 26.73,
+      "close": 26.99,
+      "volume": 568704
+    },
+    {
+      "timestamp": "2024-11-25",
+      "ticker": "ARIS",
+      "open": 27.34,
+      "high": 27.6367,
+      "low": 26.54,
+      "close": 27.03,
+      "volume": 482216
+    },
+    {
+      "timestamp": "2024-11-26",
+      "ticker": "ARIS",
+      "open": 26.81,
+      "high": 27.6299,
+      "low": 26.81,
+      "close": 27.23,
+      "volume": 324154
+    },
+    {
+      "timestamp": "2024-11-27",
+      "ticker": "ARIS",
+      "open": 27.28,
+      "high": 27.9,
+      "low": 26.68,
+      "close": 26.86,
+      "volume": 242406
+    },
+    {
+      "timestamp": "2024-11-29",
+      "ticker": "ARIS",
+      "open": 27.17,
+      "high": 27.441,
+      "low": 26.55,
+      "close": 26.9,
+      "volume": 126600
+    },
+    {
+      "timestamp": "2024-12-02",
+      "ticker": "ARIS",
+      "open": 27.11,
+      "high": 27.25,
+      "low": 26.26,
+      "close": 26.85,
+      "volume": 341367
+    },
+    {
+      "timestamp": "2024-12-03",
+      "ticker": "ARIS",
+      "open": 26.73,
+      "high": 27.57,
+      "low": 26.73,
+      "close": 27.52,
+      "volume": 232848
+    },
+    {
+      "timestamp": "2024-12-04",
+      "ticker": "ARIS",
+      "open": 27.6,
+      "high": 27.94,
+      "low": 26.2603,
+      "close": 26.47,
+      "volume": 354302
+    },
+    {
+      "timestamp": "2024-12-05",
+      "ticker": "ARIS",
+      "open": 26.26,
+      "high": 26.48,
+      "low": 25.63,
+      "close": 25.71,
+      "volume": 351153
+    },
+    {
+      "timestamp": "2024-12-06",
+      "ticker": "ARIS",
+      "open": 25.8,
+      "high": 25.92,
+      "low": 25.1,
+      "close": 25.53,
+      "volume": 372498
+    },
+    {
+      "timestamp": "2024-12-09",
+      "ticker": "ARIS",
+      "open": 25.77,
+      "high": 25.89,
+      "low": 24.8,
+      "close": 25.3,
+      "volume": 286751
+    },
+    {
+      "timestamp": "2024-12-10",
+      "ticker": "ARIS",
+      "open": 25.49,
+      "high": 26.185,
+      "low": 24.5,
+      "close": 25.47,
+      "volume": 344524
+    },
+    {
+      "timestamp": "2024-12-11",
+      "ticker": "ARIS",
+      "open": 25.94,
+      "high": 26.42,
+      "low": 25.53,
+      "close": 26.37,
+      "volume": 387628
+    },
+    {
+      "timestamp": "2024-12-12",
+      "ticker": "ARIS",
+      "open": 26.1,
+      "high": 26.7,
+      "low": 25.695,
+      "close": 25.8,
+      "volume": 255933
+    },
+    {
+      "timestamp": "2024-12-13",
+      "ticker": "ARIS",
+      "open": 25.78,
+      "high": 26.29,
+      "low": 25.2816,
+      "close": 25.81,
+      "volume": 441795
+    },
+    {
+      "timestamp": "2024-12-16",
+      "ticker": "ARIS",
+      "open": 25.73,
+      "high": 25.91,
+      "low": 24.83,
+      "close": 25.07,
+      "volume": 569661
+    },
+    {
+      "timestamp": "2024-12-17",
+      "ticker": "ARIS",
+      "open": 25.07,
+      "high": 25.07,
+      "low": 23.9523,
+      "close": 24.79,
+      "volume": 444008
+    },
+    {
+      "timestamp": "2024-12-18",
+      "ticker": "ARIS",
+      "open": 24.8,
+      "high": 25.15,
+      "low": 23.18,
+      "close": 23.33,
+      "volume": 444983
+    },
+    {
+      "timestamp": "2024-12-19",
+      "ticker": "ARIS",
+      "open": 24.28,
+      "high": 24.875,
+      "low": 23.6217,
+      "close": 23.91,
+      "volume": 406286
+    },
+    {
+      "timestamp": "2024-12-20",
+      "ticker": "ARIS",
+      "open": 23.27,
+      "high": 24.91,
+      "low": 23.27,
+      "close": 24.1,
+      "volume": 772984
+    },
+    {
+      "timestamp": "2024-12-23",
+      "ticker": "ARIS",
+      "open": 24.07,
+      "high": 25.02,
+      "low": 23.77,
+      "close": 24.61,
+      "volume": 357173
+    },
+    {
+      "timestamp": "2024-12-24",
+      "ticker": "ARIS",
+      "open": 24.76,
+      "high": 25.79,
+      "low": 24.43,
+      "close": 25.24,
+      "volume": 904411
+    },
+    {
+      "timestamp": "2024-12-26",
+      "ticker": "ARIS",
+      "open": 25.5,
+      "high": 25.7,
+      "low": 24.8563,
+      "close": 25.34,
+      "volume": 708176
+    },
+    {
+      "timestamp": "2024-12-27",
+      "ticker": "ARIS",
+      "open": 25.0,
+      "high": 25.49,
+      "low": 23.84,
+      "close": 24.07,
+      "volume": 486416
+    },
+    {
+      "timestamp": "2024-12-30",
+      "ticker": "ARIS",
+      "open": 23.79,
+      "high": 24.43,
+      "low": 23.28,
+      "close": 24.36,
+      "volume": 535257
+    },
+    {
+      "timestamp": "2024-12-31",
+      "ticker": "ARIS",
+      "open": 24.36,
+      "high": 24.5599,
+      "low": 23.76,
+      "close": 23.95,
+      "volume": 600135
+    },
+    {
+      "timestamp": "2025-01-02",
+      "ticker": "ARIS",
+      "open": 24.35,
+      "high": 24.8873,
+      "low": 24.14,
+      "close": 24.44,
+      "volume": 343451
+    },
+    {
+      "timestamp": "2025-01-03",
+      "ticker": "ARIS",
+      "open": 24.55,
+      "high": 25.185,
+      "low": 24.51,
+      "close": 24.69,
+      "volume": 697888
+    },
+    {
+      "timestamp": "2025-01-06",
+      "ticker": "ARIS",
+      "open": 25.05,
+      "high": 25.75,
+      "low": 24.75,
+      "close": 24.94,
+      "volume": 1717775
+    },
+    {
+      "timestamp": "2025-01-07",
+      "ticker": "ARIS",
+      "open": 25.04,
+      "high": 25.23,
+      "low": 23.46,
+      "close": 23.67,
+      "volume": 908026
+    },
+    {
+      "timestamp": "2025-01-08",
+      "ticker": "ARIS",
+      "open": 23.22,
+      "high": 23.5,
+      "low": 21.93,
+      "close": 23.34,
+      "volume": 969640
+    },
+    {
+      "timestamp": "2025-01-10",
+      "ticker": "ARIS",
+      "open": 23.5,
+      "high": 25.1075,
+      "low": 23.5,
+      "close": 24.69,
+      "volume": 1174733
+    },
+    {
+      "timestamp": "2025-01-13",
+      "ticker": "ARIS",
+      "open": 24.79,
+      "high": 27.208,
+      "low": 24.61,
+      "close": 27.19,
+      "volume": 1097639
+    },
+    {
+      "timestamp": "2025-01-14",
+      "ticker": "ARIS",
+      "open": 27.17,
+      "high": 28.16,
+      "low": 26.8692,
+      "close": 27.4,
+      "volume": 850881
+    },
+    {
+      "timestamp": "2025-01-15",
+      "ticker": "ARIS",
+      "open": 27.85,
+      "high": 29.39,
+      "low": 27.37,
+      "close": 28.88,
+      "volume": 888364
+    },
+    {
+      "timestamp": "2025-01-16",
+      "ticker": "ARIS",
+      "open": 28.7,
+      "high": 29.8999,
+      "low": 28.52,
+      "close": 28.64,
+      "volume": 1629366
+    },
+    {
+      "timestamp": "2025-01-17",
+      "ticker": "ARIS",
+      "open": 28.9,
+      "high": 30.16,
+      "low": 28.9,
+      "close": 29.8,
+      "volume": 2365194
+    },
+    {
+      "timestamp": "2025-01-21",
+      "ticker": "ARIS",
+      "open": 30.2,
+      "high": 30.4,
+      "low": 27.7708,
+      "close": 28.98,
+      "volume": 1374266
+    },
+    {
+      "timestamp": "2025-01-22",
+      "ticker": "ARIS",
+      "open": 29.0,
+      "high": 29.43,
+      "low": 28.575,
+      "close": 28.85,
+      "volume": 529712
+    },
+    {
+      "timestamp": "2025-01-23",
+      "ticker": "ARIS",
+      "open": 28.82,
+      "high": 29.55,
+      "low": 28.5,
+      "close": 29.41,
+      "volume": 754447
+    },
+    {
+      "timestamp": "2025-01-24",
+      "ticker": "ARIS",
+      "open": 29.12,
+      "high": 29.835,
+      "low": 29.01,
+      "close": 29.72,
+      "volume": 634147
+    },
+    {
+      "timestamp": "2025-01-27",
+      "ticker": "ARIS",
+      "open": 28.0,
+      "high": 28.42,
+      "low": 26.32,
+      "close": 27.0,
+      "volume": 935774
+    },
+    {
+      "timestamp": "2025-01-28",
+      "ticker": "ARIS",
+      "open": 27.29,
+      "high": 27.29,
+      "low": 26.35,
+      "close": 26.99,
+      "volume": 1151345
+    },
+    {
+      "timestamp": "2025-01-29",
+      "ticker": "ARIS",
+      "open": 27.09,
+      "high": 27.74,
+      "low": 26.9,
+      "close": 27.72,
+      "volume": 502502
+    },
+    {
+      "timestamp": "2025-01-30",
+      "ticker": "ARIS",
+      "open": 27.98,
+      "high": 28.65,
+      "low": 27.44,
+      "close": 27.75,
+      "volume": 1927415
+    },
+    {
+      "timestamp": "2025-01-31",
+      "ticker": "ARIS",
+      "open": 27.85,
+      "high": 27.87,
+      "low": 24.9025,
+      "close": 25.53,
+      "volume": 1156039
+    },
+    {
+      "timestamp": "2025-02-03",
+      "ticker": "ARIS",
+      "open": 24.82,
+      "high": 25.75,
+      "low": 24.5774,
+      "close": 25.73,
+      "volume": 525123
+    },
+    {
+      "timestamp": "2025-02-04",
+      "ticker": "ARIS",
+      "open": 25.55,
+      "high": 26.46,
+      "low": 25.44,
+      "close": 25.96,
+      "volume": 694009
+    },
+    {
+      "timestamp": "2025-02-05",
+      "ticker": "ARIS",
+      "open": 25.99,
+      "high": 26.23,
+      "low": 25.16,
+      "close": 25.94,
+      "volume": 670035
+    },
+    {
+      "timestamp": "2025-02-06",
+      "ticker": "ARIS",
+      "open": 26.2,
+      "high": 27.91,
+      "low": 25.88,
+      "close": 27.89,
+      "volume": 947042
+    },
+    {
+      "timestamp": "2025-02-07",
+      "ticker": "ARIS",
+      "open": 28.0,
+      "high": 28.37,
+      "low": 26.76,
+      "close": 27.0,
+      "volume": 695789
+    },
+    {
+      "timestamp": "2025-02-10",
+      "ticker": "ARIS",
+      "open": 27.53,
+      "high": 28.57,
+      "low": 27.5124,
+      "close": 28.05,
+      "volume": 512286
+    },
+    {
+      "timestamp": "2025-02-11",
+      "ticker": "ARIS",
+      "open": 28.06,
+      "high": 28.93,
+      "low": 27.5238,
+      "close": 28.88,
+      "volume": 615544
+    },
+    {
+      "timestamp": "2025-02-12",
+      "ticker": "ARIS",
+      "open": 28.19,
+      "high": 28.6239,
+      "low": 27.72,
+      "close": 28.06,
+      "volume": 696178
+    },
+    {
+      "timestamp": "2025-02-13",
+      "ticker": "ARIS",
+      "open": 28.11,
+      "high": 28.82,
+      "low": 26.95,
+      "close": 27.09,
+      "volume": 528570
+    },
+    {
+      "timestamp": "2025-02-14",
+      "ticker": "ARIS",
+      "open": 27.14,
+      "high": 27.8,
+      "low": 27.14,
+      "close": 27.69,
+      "volume": 354749
+    },
+    {
+      "timestamp": "2025-02-18",
+      "ticker": "ARIS",
+      "open": 27.87,
+      "high": 28.61,
+      "low": 27.335,
+      "close": 28.15,
+      "volume": 458493
+    },
+    {
+      "timestamp": "2025-02-19",
+      "ticker": "ARIS",
+      "open": 28.1,
+      "high": 29.1031,
+      "low": 27.945,
+      "close": 28.71,
+      "volume": 635671
+    },
+    {
+      "timestamp": "2025-02-20",
+      "ticker": "ARIS",
+      "open": 28.5,
+      "high": 29.015,
+      "low": 27.845,
+      "close": 28.84,
+      "volume": 661997
+    },
+    {
+      "timestamp": "2025-02-21",
+      "ticker": "ARIS",
+      "open": 29.14,
+      "high": 29.98,
+      "low": 26.57,
+      "close": 26.61,
+      "volume": 1744371
+    },
+    {
+      "timestamp": "2025-02-24",
+      "ticker": "ARIS",
+      "open": 26.78,
+      "high": 27.07,
+      "low": 25.69,
+      "close": 26.5,
+      "volume": 666765
+    },
+    {
+      "timestamp": "2025-02-25",
+      "ticker": "ARIS",
+      "open": 26.31,
+      "high": 26.36,
+      "low": 25.06,
+      "close": 25.81,
+      "volume": 595460
+    },
+    {
+      "timestamp": "2025-02-26",
+      "ticker": "ARIS",
+      "open": 26.09,
+      "high": 26.6863,
+      "low": 25.45,
+      "close": 25.66,
+      "volume": 708878
+    },
+    {
+      "timestamp": "2025-02-27",
+      "ticker": "ARIS",
+      "open": 26.88,
+      "high": 32.0,
+      "low": 26.87,
+      "close": 30.98,
+      "volume": 1875562
+    },
+    {
+      "timestamp": "2025-02-28",
+      "ticker": "ARIS",
+      "open": 30.37,
+      "high": 31.705,
+      "low": 29.19,
+      "close": 31.46,
+      "volume": 1200102
+    },
+    {
+      "timestamp": "2025-03-03",
+      "ticker": "ARIS",
+      "open": 31.44,
+      "high": 32.56,
+      "low": 29.94,
+      "close": 30.25,
+      "volume": 1066366
+    },
+    {
+      "timestamp": "2025-03-04",
+      "ticker": "ARIS",
+      "open": 29.13,
+      "high": 29.475,
+      "low": 27.8839,
+      "close": 28.77,
+      "volume": 578997
+    },
+    {
+      "timestamp": "2025-03-05",
+      "ticker": "ARIS",
+      "open": 28.33,
+      "high": 28.74,
+      "low": 27.55,
+      "close": 28.73,
+      "volume": 882307
+    },
+    {
+      "timestamp": "2025-03-06",
+      "ticker": "ARIS",
+      "open": 27.98,
+      "high": 28.395,
+      "low": 26.1,
+      "close": 26.56,
+      "volume": 996793
+    },
+    {
+      "timestamp": "2025-03-07",
+      "ticker": "ARIS",
+      "open": 26.87,
+      "high": 27.41,
+      "low": 25.59,
+      "close": 26.73,
+      "volume": 619613
+    },
+    {
+      "timestamp": "2025-03-10",
+      "ticker": "ARIS",
+      "open": 26.18,
+      "high": 28.14,
+      "low": 26.09,
+      "close": 28.04,
+      "volume": 1191116
+    },
+    {
+      "timestamp": "2025-03-11",
+      "ticker": "ARIS",
+      "open": 27.79,
+      "high": 30.87,
+      "low": 27.745,
+      "close": 30.56,
+      "volume": 1205331
+    },
+    {
+      "timestamp": "2025-03-12",
+      "ticker": "ARIS",
+      "open": 30.64,
+      "high": 30.95,
+      "low": 29.17,
+      "close": 29.8,
+      "volume": 832127
+    },
+    {
+      "timestamp": "2025-03-13",
+      "ticker": "ARIS",
+      "open": 29.71,
+      "high": 29.8,
+      "low": 28.69,
+      "close": 29.05,
+      "volume": 463293
+    },
+    {
+      "timestamp": "2025-03-14",
+      "ticker": "ARIS",
+      "open": 29.42,
+      "high": 29.86,
+      "low": 28.75,
+      "close": 29.12,
+      "volume": 568750
+    },
+    {
+      "timestamp": "2025-03-17",
+      "ticker": "ARIS",
+      "open": 28.94,
+      "high": 30.35,
+      "low": 28.74,
+      "close": 28.99,
+      "volume": 1513634
+    },
+    {
+      "timestamp": "2025-03-18",
+      "ticker": "ARIS",
+      "open": 28.94,
+      "high": 30.3,
+      "low": 28.83,
+      "close": 29.47,
+      "volume": 1188432
+    },
+    {
+      "timestamp": "2025-03-19",
+      "ticker": "ARIS",
+      "open": 29.17,
+      "high": 32.33,
+      "low": 29.15,
+      "close": 31.85,
+      "volume": 1247556
+    },
+    {
+      "timestamp": "2025-03-20",
+      "ticker": "ARIS",
+      "open": 31.52,
+      "high": 32.72,
+      "low": 30.82,
+      "close": 32.03,
+      "volume": 1164349
+    },
+    {
+      "timestamp": "2025-03-21",
+      "ticker": "ARIS",
+      "open": 31.5,
+      "high": 32.19,
+      "low": 30.64,
+      "close": 31.9,
+      "volume": 1195331
+    },
+    {
+      "timestamp": "2025-03-24",
+      "ticker": "ARIS",
+      "open": 32.63,
+      "high": 33.3377,
+      "low": 31.91,
+      "close": 32.53,
+      "volume": 674472
+    },
+    {
+      "timestamp": "2025-03-25",
+      "ticker": "ARIS",
+      "open": 32.4,
+      "high": 33.9055,
+      "low": 32.4,
+      "close": 33.33,
+      "volume": 1063843
+    },
+    {
+      "timestamp": "2025-03-26",
+      "ticker": "ARIS",
+      "open": 33.83,
+      "high": 33.95,
+      "low": 32.27,
+      "close": 32.64,
+      "volume": 818258
+    },
+    {
+      "timestamp": "2025-03-27",
+      "ticker": "ARIS",
+      "open": 32.57,
+      "high": 33.25,
+      "low": 31.7,
+      "close": 33.07,
+      "volume": 1110882
+    },
+    {
+      "timestamp": "2025-03-28",
+      "ticker": "ARIS",
+      "open": 32.63,
+      "high": 33.0811,
+      "low": 31.26,
+      "close": 31.78,
+      "volume": 922577
+    },
+    {
+      "timestamp": "2025-03-31",
+      "ticker": "ARIS",
+      "open": 31.5,
+      "high": 32.67,
+      "low": 30.92,
+      "close": 32.04,
+      "volume": 829587
+    },
+    {
+      "timestamp": "2025-04-01",
+      "ticker": "ARIS",
+      "open": 31.93,
+      "high": 32.95,
+      "low": 31.3,
+      "close": 32.59,
+      "volume": 800558
+    },
+    {
+      "timestamp": "2025-04-02",
+      "ticker": "ARIS",
+      "open": 31.97,
+      "high": 33.9229,
+      "low": 31.935,
+      "close": 33.53,
+      "volume": 1236416
+    },
+    {
+      "timestamp": "2025-04-03",
+      "ticker": "ARIS",
+      "open": 30.25,
+      "high": 30.43,
+      "low": 27.605,
+      "close": 28.82,
+      "volume": 1257421
+    },
+    {
+      "timestamp": "2025-04-04",
+      "ticker": "ARIS",
+      "open": 26.83,
+      "high": 27.36,
+      "low": 24.87,
+      "close": 25.35,
+      "volume": 1133183
+    },
+    {
+      "timestamp": "2025-04-07",
+      "ticker": "ARIS",
+      "open": 24.16,
+      "high": 27.13,
+      "low": 23.02,
+      "close": 25.99,
+      "volume": 1463308
+    },
+    {
+      "timestamp": "2025-04-08",
+      "ticker": "ARIS",
+      "open": 27.04,
+      "high": 27.455,
+      "low": 23.86,
+      "close": 24.57,
+      "volume": 1127942
+    },
+    {
+      "timestamp": "2025-04-09",
+      "ticker": "ARIS",
+      "open": 24.0,
+      "high": 27.715,
+      "low": 23.4101,
+      "close": 26.94,
+      "volume": 874976
+    },
+    {
+      "timestamp": "2025-04-10",
+      "ticker": "ARIS",
+      "open": 26.27,
+      "high": 26.27,
+      "low": 24.21,
+      "close": 24.62,
+      "volume": 512442
+    },
+    {
+      "timestamp": "2025-04-11",
+      "ticker": "ARIS",
+      "open": 24.67,
+      "high": 24.98,
+      "low": 23.775,
+      "close": 24.7,
+      "volume": 588157
+    },
+    {
+      "timestamp": "2025-04-14",
+      "ticker": "ARIS",
+      "open": 25.48,
+      "high": 25.48,
+      "low": 24.14,
+      "close": 24.44,
+      "volume": 729979
+    },
+    {
+      "timestamp": "2025-04-15",
+      "ticker": "ARIS",
+      "open": 24.71,
+      "high": 25.355,
+      "low": 24.465,
+      "close": 24.58,
+      "volume": 494942
+    },
+    {
+      "timestamp": "2025-04-16",
+      "ticker": "ARIS",
+      "open": 24.4,
+      "high": 25.96,
+      "low": 24.28,
+      "close": 25.56,
+      "volume": 1055275
+    },
+    {
+      "timestamp": "2025-04-17",
+      "ticker": "ARIS",
+      "open": 25.74,
+      "high": 26.88,
+      "low": 25.32,
+      "close": 25.91,
+      "volume": 1438502
+    },
+    {
+      "timestamp": "2025-04-21",
+      "ticker": "ARIS",
+      "open": 25.48,
+      "high": 25.55,
+      "low": 23.72,
+      "close": 23.86,
+      "volume": 551246
+    },
+    {
+      "timestamp": "2025-04-22",
+      "ticker": "ARIS",
+      "open": 24.35,
+      "high": 24.87,
+      "low": 24.12,
+      "close": 24.59,
+      "volume": 406191
+    },
+    {
+      "timestamp": "2025-04-23",
+      "ticker": "ARIS",
+      "open": 25.2,
+      "high": 25.93,
+      "low": 24.33,
+      "close": 24.56,
+      "volume": 552959
+    },
+    {
+      "timestamp": "2025-04-24",
+      "ticker": "ARIS",
+      "open": 24.76,
+      "high": 25.47,
+      "low": 24.715,
+      "close": 25.39,
+      "volume": 362637
+    },
+    {
+      "timestamp": "2025-04-25",
+      "ticker": "ARIS",
+      "open": 24.96,
+      "high": 25.63,
+      "low": 24.79,
+      "close": 25.6,
+      "volume": 418674
+    },
+    {
+      "timestamp": "2025-04-28",
+      "ticker": "ARIS",
+      "open": 25.29,
+      "high": 26.36,
+      "low": 25.29,
+      "close": 26.26,
+      "volume": 361728
+    },
+    {
+      "timestamp": "2025-04-29",
+      "ticker": "ARIS",
+      "open": 26.4,
+      "high": 26.4,
+      "low": 25.51,
+      "close": 25.83,
+      "volume": 419983
+    },
+    {
+      "timestamp": "2025-04-30",
+      "ticker": "ARIS",
+      "open": 25.23,
+      "high": 25.23,
+      "low": 24.3,
+      "close": 24.96,
+      "volume": 530327
+    },
+    {
+      "timestamp": "2025-05-01",
+      "ticker": "ARIS",
+      "open": 24.88,
+      "high": 25.84,
+      "low": 24.84,
+      "close": 25.37,
+      "volume": 389395
+    },
+    {
+      "timestamp": "2025-05-02",
+      "ticker": "ARIS",
+      "open": 26.0,
+      "high": 26.75,
+      "low": 25.55,
+      "close": 26.54,
+      "volume": 397109
+    },
+    {
+      "timestamp": "2025-05-05",
+      "ticker": "ARIS",
+      "open": 26.0,
+      "high": 26.23,
+      "low": 25.41,
+      "close": 25.52,
+      "volume": 394847
+    },
+    {
+      "timestamp": "2025-05-06",
+      "ticker": "ARIS",
+      "open": 25.51,
+      "high": 25.78,
+      "low": 25.3,
+      "close": 25.45,
+      "volume": 449381
+    },
+    {
+      "timestamp": "2025-05-07",
+      "ticker": "ARIS",
+      "open": 24.36,
+      "high": 24.36,
+      "low": 19.7,
+      "close": 19.97,
+      "volume": 2450859
+    },
+    {
+      "timestamp": "2025-05-08",
+      "ticker": "ARIS",
+      "open": 20.21,
+      "high": 21.24,
+      "low": 20.05,
+      "close": 20.81,
+      "volume": 1455465
+    },
+    {
+      "timestamp": "2025-05-09",
+      "ticker": "ARIS",
+      "open": 21.25,
+      "high": 22.05,
+      "low": 20.755,
+      "close": 21.54,
+      "volume": 735573
+    },
+    {
+      "timestamp": "2025-05-12",
+      "ticker": "ARIS",
+      "open": 22.56,
+      "high": 23.88,
+      "low": 22.22,
+      "close": 23.68,
+      "volume": 948076
+    },
+    {
+      "timestamp": "2025-05-13",
+      "ticker": "ARIS",
+      "open": 23.62,
+      "high": 24.76,
+      "low": 23.455,
+      "close": 24.33,
+      "volume": 801703
+    },
+    {
+      "timestamp": "2025-05-14",
+      "ticker": "ARIS",
+      "open": 24.03,
+      "high": 24.38,
+      "low": 23.39,
+      "close": 23.65,
+      "volume": 759008
+    },
+    {
+      "timestamp": "2025-05-15",
+      "ticker": "ARIS",
+      "open": 23.18,
+      "high": 23.52,
+      "low": 22.85,
+      "close": 23.31,
+      "volume": 653527
+    },
+    {
+      "timestamp": "2025-05-16",
+      "ticker": "ARIS",
+      "open": 23.38,
+      "high": 23.9215,
+      "low": 22.6525,
+      "close": 23.06,
+      "volume": 1220481
+    },
+    {
+      "timestamp": "2025-05-19",
+      "ticker": "ARIS",
+      "open": 22.66,
+      "high": 22.96,
+      "low": 22.07,
+      "close": 22.85,
+      "volume": 562336
+    },
+    {
+      "timestamp": "2025-05-20",
+      "ticker": "ARIS",
+      "open": 22.94,
+      "high": 24.72,
+      "low": 22.7,
+      "close": 23.65,
+      "volume": 1288993
+    },
+    {
+      "timestamp": "2025-05-21",
+      "ticker": "ARIS",
+      "open": 23.62,
+      "high": 23.87,
+      "low": 22.78,
+      "close": 23.03,
+      "volume": 832372
+    },
+    {
+      "timestamp": "2025-05-22",
+      "ticker": "ARIS",
+      "open": 22.94,
+      "high": 23.5,
+      "low": 22.3299,
+      "close": 23.4,
+      "volume": 993436
+    },
+    {
+      "timestamp": "2025-05-23",
+      "ticker": "ARIS",
+      "open": 22.71,
+      "high": 23.68,
+      "low": 22.71,
+      "close": 23.35,
+      "volume": 624352
+    },
+    {
+      "timestamp": "2025-05-27",
+      "ticker": "ARIS",
+      "open": 23.63,
+      "high": 24.22,
+      "low": 23.345,
+      "close": 23.85,
+      "volume": 632610
+    },
+    {
+      "timestamp": "2025-05-28",
+      "ticker": "ARIS",
+      "open": 24.11,
+      "high": 24.23,
+      "low": 23.38,
+      "close": 23.61,
+      "volume": 567759
+    },
+    {
+      "timestamp": "2025-05-29",
+      "ticker": "ARIS",
+      "open": 23.69,
+      "high": 23.8031,
+      "low": 22.32,
+      "close": 22.61,
+      "volume": 758155
+    },
+    {
+      "timestamp": "2025-05-30",
+      "ticker": "ARIS",
+      "open": 22.27,
+      "high": 22.625,
+      "low": 21.84,
+      "close": 22.04,
+      "volume": 977919
+    },
+    {
+      "timestamp": "2025-06-02",
+      "ticker": "ARIS",
+      "open": 22.71,
+      "high": 23.03,
+      "low": 22.07,
+      "close": 22.82,
+      "volume": 795045
+    },
+    {
+      "timestamp": "2025-06-03",
+      "ticker": "ARIS",
+      "open": 22.78,
+      "high": 24.73,
+      "low": 22.55,
+      "close": 24.12,
+      "volume": 805025
+    },
+    {
+      "timestamp": "2025-06-04",
+      "ticker": "ARIS",
+      "open": 24.0,
+      "high": 24.14,
+      "low": 23.15,
+      "close": 23.47,
+      "volume": 445255
+    },
+    {
+      "timestamp": "2025-06-05",
+      "ticker": "ARIS",
+      "open": 23.72,
+      "high": 24.57,
+      "low": 23.335,
+      "close": 23.85,
+      "volume": 672634
+    },
+    {
+      "timestamp": "2025-06-06",
+      "ticker": "ARIS",
+      "open": 24.5,
+      "high": 25.09,
+      "low": 23.82,
+      "close": 24.69,
+      "volume": 537714
+    },
+    {
+      "timestamp": "2025-06-09",
+      "ticker": "ARIS",
+      "open": 24.96,
+      "high": 25.0568,
+      "low": 24.33,
+      "close": 24.57,
+      "volume": 446104
+    },
+    {
+      "timestamp": "2025-06-10",
+      "ticker": "ARIS",
+      "open": 25.03,
+      "high": 25.21,
+      "low": 24.14,
+      "close": 24.54,
+      "volume": 519393
+    },
+    {
+      "timestamp": "2025-06-11",
+      "ticker": "ARIS",
+      "open": 24.73,
+      "high": 25.435,
+      "low": 24.41,
+      "close": 25.2,
+      "volume": 511414
+    },
+    {
+      "timestamp": "2025-06-12",
+      "ticker": "ARIS",
+      "open": 24.77,
+      "high": 25.59,
+      "low": 24.55,
+      "close": 25.52,
+      "volume": 438816
+    },
+    {
+      "timestamp": "2025-06-13",
+      "ticker": "ARIS",
+      "open": 26.27,
+      "high": 26.82,
+      "low": 25.69,
+      "close": 26.09,
+      "volume": 1302759
+    },
+    {
+      "timestamp": "2025-06-16",
+      "ticker": "ARIS",
+      "open": 26.16,
+      "high": 26.61,
+      "low": 25.13,
+      "close": 25.22,
+      "volume": 565283
+    },
+    {
+      "timestamp": "2025-06-17",
+      "ticker": "ARIS",
+      "open": 25.96,
+      "high": 26.36,
+      "low": 25.66,
+      "close": 25.87,
+      "volume": 500597
+    },
+    {
+      "timestamp": "2025-06-18",
+      "ticker": "ARIS",
+      "open": 25.85,
+      "high": 26.02,
+      "low": 25.385,
+      "close": 25.53,
+      "volume": 286510
+    },
+    {
+      "timestamp": "2025-06-20",
+      "ticker": "ARIS",
+      "open": 25.66,
+      "high": 25.88,
+      "low": 25.27,
+      "close": 25.35,
+      "volume": 464019
+    },
+    {
+      "timestamp": "2025-06-23",
+      "ticker": "ARIS",
+      "open": 25.515,
+      "high": 25.515,
+      "low": 23.905,
+      "close": 24.09,
+      "volume": 501654
+    },
+    {
+      "timestamp": "2025-06-24",
+      "ticker": "ARIS",
+      "open": 23.76,
+      "high": 24.86,
+      "low": 23.65,
+      "close": 24.55,
+      "volume": 623484
+    },
+    {
+      "timestamp": "2025-06-25",
+      "ticker": "ARIS",
+      "open": 24.56,
+      "high": 24.68,
+      "low": 23.41,
+      "close": 23.49,
+      "volume": 839430
+    },
+    {
+      "timestamp": "2025-06-26",
+      "ticker": "ARIS",
+      "open": 23.77,
+      "high": 24.12,
+      "low": 23.19,
+      "close": 23.9,
+      "volume": 1495628
+    },
+    {
+      "timestamp": "2025-06-27",
+      "ticker": "ARIS",
+      "open": 24.25,
+      "high": 24.4,
+      "low": 23.24,
+      "close": 23.43,
+      "volume": 1815957
+    },
+    {
+      "timestamp": "2025-06-30",
+      "ticker": "ARIS",
+      "open": 23.84,
+      "high": 23.94,
+      "low": 23.3,
+      "close": 23.65,
+      "volume": 1059019
+    },
+    {
+      "timestamp": "2025-07-01",
+      "ticker": "ARIS",
+      "open": 23.5,
+      "high": 24.56,
+      "low": 22.7982,
+      "close": 23.87,
+      "volume": 824777
+    },
+    {
+      "timestamp": "2025-07-02",
+      "ticker": "ARIS",
+      "open": 24.4,
+      "high": 24.649,
+      "low": 23.195,
+      "close": 24.59,
+      "volume": 644088
+    },
+    {
+      "timestamp": "2025-07-03",
+      "ticker": "ARIS",
+      "open": 24.39,
+      "high": 24.71,
+      "low": 24.14,
+      "close": 24.38,
+      "volume": 283126
+    },
+    {
+      "timestamp": "2025-07-07",
+      "ticker": "ARIS",
+      "open": 24.4,
+      "high": 24.4,
+      "low": 23.1,
+      "close": 23.31,
+      "volume": 714848
+    },
+    {
+      "timestamp": "2025-07-08",
+      "ticker": "ARIS",
+      "open": 23.75,
+      "high": 24.68,
+      "low": 23.5,
+      "close": 24.31,
+      "volume": 639485
+    },
+    {
+      "timestamp": "2025-07-09",
+      "ticker": "ARIS",
+      "open": 24.18,
+      "high": 24.37,
+      "low": 23.34,
+      "close": 23.53,
+      "volume": 591536
+    },
+    {
+      "timestamp": "2025-07-10",
+      "ticker": "ARIS",
+      "open": 23.23,
+      "high": 23.385,
+      "low": 22.62,
+      "close": 22.95,
+      "volume": 814677
+    },
+    {
+      "timestamp": "2025-07-11",
+      "ticker": "ARIS",
+      "open": 23.12,
+      "high": 23.75,
+      "low": 22.88,
+      "close": 23.03,
+      "volume": 691134
+    },
+    {
+      "timestamp": "2025-07-14",
+      "ticker": "ARIS",
+      "open": 23.12,
+      "high": 23.19,
+      "low": 22.52,
+      "close": 23.03,
+      "volume": 1147632
+    },
+    {
+      "timestamp": "2025-07-15",
+      "ticker": "ARIS",
+      "open": 23.06,
+      "high": 23.15,
+      "low": 22.11,
+      "close": 22.22,
+      "volume": 520318
+    },
+    {
+      "timestamp": "2025-07-16",
+      "ticker": "ARIS",
+      "open": 22.3,
+      "high": 22.814,
+      "low": 21.78,
+      "close": 22.01,
+      "volume": 689160
+    },
+    {
+      "timestamp": "2025-07-17",
+      "ticker": "ARIS",
+      "open": 21.74,
+      "high": 22.4165,
+      "low": 21.63,
+      "close": 22.17,
+      "volume": 1537903
+    },
+    {
+      "timestamp": "2025-07-18",
+      "ticker": "ARIS",
+      "open": 22.68,
+      "high": 22.8,
+      "low": 22.1,
+      "close": 22.13,
+      "volume": 552744
+    },
+    {
+      "timestamp": "2025-07-21",
+      "ticker": "ARIS",
+      "open": 22.28,
+      "high": 22.3637,
+      "low": 21.2,
+      "close": 21.29,
+      "volume": 538182
+    },
+    {
+      "timestamp": "2025-07-22",
+      "ticker": "ARIS",
+      "open": 21.58,
+      "high": 21.58,
+      "low": 20.68,
+      "close": 20.93,
+      "volume": 590870
+    },
+    {
+      "timestamp": "2025-07-23",
+      "ticker": "ARIS",
+      "open": 21.28,
+      "high": 21.5323,
+      "low": 21.11,
+      "close": 21.36,
+      "volume": 502098
+    },
+    {
+      "timestamp": "2025-07-24",
+      "ticker": "ARIS",
+      "open": 21.27,
+      "high": 21.46,
+      "low": 21.0,
+      "close": 21.17,
+      "volume": 596711
+    },
+    {
+      "timestamp": "2025-07-25",
+      "ticker": "ARIS",
+      "open": 21.37,
+      "high": 21.475,
+      "low": 21.13,
+      "close": 21.39,
+      "volume": 458779
+    },
+    {
+      "timestamp": "2025-07-28",
+      "ticker": "ARIS",
+      "open": 21.76,
+      "high": 21.8288,
+      "low": 21.27,
+      "close": 21.33,
+      "volume": 474496
+    },
+    {
+      "timestamp": "2025-07-29",
+      "ticker": "ARIS",
+      "open": 21.11,
+      "high": 21.325,
+      "low": 20.82,
+      "close": 21.06,
+      "volume": 450351
+    },
+    {
+      "timestamp": "2025-07-30",
+      "ticker": "ARIS",
+      "open": 20.76,
+      "high": 21.53,
+      "low": 20.55,
+      "close": 21.16,
+      "volume": 490291
+    },
+    {
+      "timestamp": "2025-07-31",
+      "ticker": "ARIS",
+      "open": 21.06,
+      "high": 21.605,
+      "low": 21.06,
+      "close": 21.27,
+      "volume": 355228
+    },
+    {
+      "timestamp": "2025-08-01",
+      "ticker": "ARIS",
+      "open": 20.85,
+      "high": 20.955,
+      "low": 19.6,
+      "close": 19.69,
+      "volume": 597069
+    },
+    {
+      "timestamp": "2025-08-04",
+      "ticker": "ARIS",
+      "open": 19.76,
+      "high": 19.9138,
+      "low": 19.47,
+      "close": 19.75,
+      "volume": 604895
+    },
+    {
+      "timestamp": "2025-08-05",
+      "ticker": "ARIS",
+      "open": 20.12,
+      "high": 20.225,
+      "low": 19.75,
+      "close": 20.18,
+      "volume": 444911
+    },
+    {
+      "timestamp": "2025-08-06",
+      "ticker": "ARIS",
+      "open": 20.46,
+      "high": 20.54,
+      "low": 19.69,
+      "close": 19.93,
+      "volume": 509510
+    },
+    {
+      "timestamp": "2025-08-07",
+      "ticker": "ARIS",
+      "open": 24.41,
+      "high": 24.78,
+      "low": 23.775,
+      "close": 23.78,
+      "volume": 6812455
+    },
+    {
+      "timestamp": "2025-08-08",
+      "ticker": "ARIS",
+      "open": 23.9,
+      "high": 24.21,
+      "low": 23.57,
+      "close": 23.62,
+      "volume": 3984914
+    },
+    {
+      "timestamp": "2025-08-11",
+      "ticker": "ARIS",
+      "open": 23.56,
+      "high": 23.8,
+      "low": 23.31,
+      "close": 23.34,
+      "volume": 2792810
+    },
+    {
+      "timestamp": "2025-08-12",
+      "ticker": "ARIS",
+      "open": 23.82,
+      "high": 24.1,
+      "low": 23.4,
+      "close": 23.73,
+      "volume": 2436215
+    },
+    {
+      "timestamp": "2025-08-13",
+      "ticker": "ARIS",
+      "open": 23.73,
+      "high": 24.1,
+      "low": 23.58,
+      "close": 24.0,
+      "volume": 1344499
+    },
+    {
+      "timestamp": "2025-08-14",
+      "ticker": "ARIS",
+      "open": 23.83,
+      "high": 24.19,
+      "low": 23.75,
+      "close": 23.99,
+      "volume": 1200820
+    },
+    {
+      "timestamp": "2025-08-15",
+      "ticker": "ARIS",
+      "open": 23.99,
+      "high": 24.14,
+      "low": 23.85,
+      "close": 23.93,
+      "volume": 936174
+    },
+    {
+      "timestamp": "2025-08-18",
+      "ticker": "ARIS",
+      "open": 23.74,
+      "high": 24.04,
+      "low": 23.68,
+      "close": 23.69,
+      "volume": 2025498
+    },
+    {
+      "timestamp": "2025-08-19",
+      "ticker": "ARIS",
+      "open": 23.74,
+      "high": 23.88,
+      "low": 23.62,
+      "close": 23.74,
+      "volume": 1717900
+    },
+    {
+      "timestamp": "2025-08-20",
+      "ticker": "ARIS",
+      "open": 23.74,
+      "high": 23.87,
+      "low": 23.6,
+      "close": 23.67,
+      "volume": 1596159
+    },
+    {
+      "timestamp": "2025-08-21",
+      "ticker": "ARIS",
+      "open": 23.62,
+      "high": 23.91,
+      "low": 23.62,
+      "close": 23.74,
+      "volume": 1025036
+    },
+    {
+      "timestamp": "2025-08-22",
+      "ticker": "ARIS",
+      "open": 23.81,
+      "high": 24.135,
+      "low": 23.81,
+      "close": 23.93,
+      "volume": 589679
+    },
+    {
+      "timestamp": "2025-08-25",
+      "ticker": "ARIS",
+      "open": 23.9,
+      "high": 23.94,
+      "low": 23.73,
+      "close": 23.86,
+      "volume": 681699
+    },
+    {
+      "timestamp": "2025-08-26",
+      "ticker": "ARIS",
+      "open": 23.8,
+      "high": 23.865,
+      "low": 23.51,
+      "close": 23.7,
+      "volume": 1454000
+    },
+    {
+      "timestamp": "2025-08-27",
+      "ticker": "ARIS",
+      "open": 23.63,
+      "high": 24.0199,
+      "low": 23.57,
+      "close": 23.86,
+      "volume": 990695
+    },
+    {
+      "timestamp": "2025-08-28",
+      "ticker": "ARIS",
+      "open": 23.77,
+      "high": 24.01,
+      "low": 23.74,
+      "close": 23.99,
+      "volume": 666143
+    },
+    {
+      "timestamp": "2025-08-29",
+      "ticker": "ARIS",
+      "open": 23.94,
+      "high": 24.32,
+      "low": 23.94,
+      "close": 24.27,
+      "volume": 714168
+    },
+    {
+      "timestamp": "2025-09-02",
+      "ticker": "ARIS",
+      "open": 24.12,
+      "high": 24.25,
+      "low": 23.94,
+      "close": 24.04,
+      "volume": 829572
+    },
+    {
+      "timestamp": "2025-09-03",
+      "ticker": "ARIS",
+      "open": 24.0,
+      "high": 24.13,
+      "low": 23.761,
+      "close": 23.79,
+      "volume": 868615
+    },
+    {
+      "timestamp": "2025-09-04",
+      "ticker": "ARIS",
+      "open": 23.7,
+      "high": 24.14,
+      "low": 23.67,
+      "close": 24.03,
+      "volume": 1112256
+    },
+    {
+      "timestamp": "2025-09-05",
+      "ticker": "ARIS",
+      "open": 23.88,
+      "high": 24.02,
+      "low": 23.69,
+      "close": 23.78,
+      "volume": 920236
+    },
+    {
+      "timestamp": "2025-09-08",
+      "ticker": "ARIS",
+      "open": 23.78,
+      "high": 23.88,
+      "low": 23.74,
+      "close": 23.79,
+      "volume": 554346
+    },
+    {
+      "timestamp": "2025-09-09",
+      "ticker": "ARIS",
+      "open": 23.95,
+      "high": 24.03,
+      "low": 23.77,
+      "close": 23.79,
+      "volume": 1321597
+    },
+    {
+      "timestamp": "2025-09-10",
+      "ticker": "ARIS",
+      "open": 23.89,
+      "high": 24.28,
+      "low": 23.825,
+      "close": 24.13,
+      "volume": 1121296
+    },
+    {
+      "timestamp": "2025-09-11",
+      "ticker": "ARIS",
+      "open": 23.88,
+      "high": 24.1,
+      "low": 23.87,
+      "close": 24.08,
+      "volume": 671261
+    },
+    {
+      "timestamp": "2025-09-12",
+      "ticker": "ARIS",
+      "open": 24.17,
+      "high": 24.35,
+      "low": 24.06,
+      "close": 24.06,
+      "volume": 957239
+    },
+    {
+      "timestamp": "2025-09-15",
+      "ticker": "ARIS",
+      "open": 24.08,
+      "high": 24.21,
+      "low": 23.93,
+      "close": 23.94,
+      "volume": 1022027
+    },
+    {
+      "timestamp": "2025-09-16",
+      "ticker": "ARIS",
+      "open": 23.99,
+      "high": 24.16,
+      "low": 23.895,
+      "close": 24.1,
+      "volume": 1296016
+    },
+    {
+      "timestamp": "2025-09-17",
+      "ticker": "ARIS",
+      "open": 24.06,
+      "high": 24.32,
+      "low": 24.005,
+      "close": 24.12,
+      "volume": 858277
+    },
+    {
+      "timestamp": "2025-09-18",
+      "ticker": "ARIS",
+      "open": 24.24,
+      "high": 24.24,
+      "low": 24.06,
+      "close": 24.2,
+      "volume": 837807
+    },
+    {
+      "timestamp": "2025-09-19",
+      "ticker": "ARIS",
+      "open": 24.24,
+      "high": 24.24,
+      "low": 23.91,
+      "close": 24.03,
+      "volume": 1452457
+    },
+    {
+      "timestamp": "2025-09-22",
+      "ticker": "ARIS",
+      "open": 23.97,
+      "high": 24.175,
+      "low": 23.96,
+      "close": 24.14,
+      "volume": 589315
+    },
+    {
+      "timestamp": "2025-09-23",
+      "ticker": "ARIS",
+      "open": 24.18,
+      "high": 24.33,
+      "low": 24.14,
+      "close": 24.2,
+      "volume": 1680426
+    },
+    {
+      "timestamp": "2025-09-24",
+      "ticker": "ARIS",
+      "open": 24.29,
+      "high": 24.57,
+      "low": 24.25,
+      "close": 24.53,
+      "volume": 817388
+    },
+    {
+      "timestamp": "2025-09-25",
+      "ticker": "ARIS",
+      "open": 24.53,
+      "high": 24.65,
+      "low": 24.44,
+      "close": 24.65,
+      "volume": 910277
+    },
+    {
+      "timestamp": "2025-09-26",
+      "ticker": "ARIS",
+      "open": 24.71,
+      "high": 24.9,
+      "low": 24.64,
+      "close": 24.66,
+      "volume": 1268899
+    },
+    {
+      "timestamp": "2025-09-29",
+      "ticker": "ARIS",
+      "open": 24.68,
+      "high": 24.76,
+      "low": 24.18,
+      "close": 24.18,
+      "volume": 2980636
+    },
+    {
+      "timestamp": "2025-09-30",
+      "ticker": "ARIS",
+      "open": 24.15,
+      "high": 24.72,
+      "low": 24.14,
+      "close": 24.66,
+      "volume": 3279960
+    },
+    {
+      "timestamp": "2025-10-01",
+      "ticker": "ARIS",
+      "open": 24.46,
+      "high": 24.85,
+      "low": 24.46,
+      "close": 24.62,
+      "volume": 2338670
+    },
+    {
+      "timestamp": "2025-10-02",
+      "ticker": "ARIS",
+      "open": 24.6,
+      "high": 24.73,
+      "low": 24.4,
+      "close": 24.4,
+      "volume": 1949295
+    },
+    {
+      "timestamp": "2025-10-03",
+      "ticker": "ARIS",
+      "open": 24.58,
+      "high": 24.58,
+      "low": 24.24,
+      "close": 24.32,
+      "volume": 1143505
+    },
+    {
+      "timestamp": "2025-10-06",
+      "ticker": "ARIS",
+      "open": 24.32,
+      "high": 24.365,
+      "low": 23.87,
+      "close": 23.88,
+      "volume": 2554014
+    },
+    {
+      "timestamp": "2025-10-07",
+      "ticker": "ARIS",
+      "open": 23.88,
+      "high": 24.36,
+      "low": 23.84,
+      "close": 24.34,
+      "volume": 2316855
+    },
+    {
+      "timestamp": "2025-10-08",
+      "ticker": "ARIS",
+      "open": 24.41,
+      "high": 24.7,
+      "low": 24.4098,
+      "close": 24.57,
+      "volume": 887638
+    },
+    {
+      "timestamp": "2025-10-09",
+      "ticker": "ARIS",
+      "open": 24.49,
+      "high": 24.61,
+      "low": 23.85,
+      "close": 23.87,
+      "volume": 1218941
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "ARIS",
+      "open": 23.76,
+      "high": 23.9,
+      "low": 23.25,
+      "close": 23.26,
+      "volume": 1380665
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "ARIS",
+      "open": 23.53,
+      "high": 23.53,
+      "low": 23.175,
+      "close": 23.45,
+      "volume": 1735250
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "ARIS",
+      "open": 23.29,
+      "high": 23.69,
+      "low": 23.15,
+      "close": 23.69,
+      "volume": 10651829
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "ARIS",
+      "open": 23.69,
+      "high": 23.69,
+      "low": 23.69,
+      "close": 23.69,
+      "volume": 297
+    }
+  ]
+}

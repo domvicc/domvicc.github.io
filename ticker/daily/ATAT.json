@@ -1,0 +1,6685 @@
+{
+  "ticker": "ATAT",
+  "generated_at": "2025-10-29T01:19:24.485946+00:00",
+  "count": 742,
+  "data": [
+    {
+      "timestamp": "2022-11-11",
+      "ticker": "ATAT",
+      "open": 15.5,
+      "high": 17.05,
+      "low": 12.0,
+      "close": 12.88,
+      "volume": 1841104
+    },
+    {
+      "timestamp": "2022-11-14",
+      "ticker": "ATAT",
+      "open": 14.68,
+      "high": 14.95,
+      "low": 12.6,
+      "close": 13.35,
+      "volume": 1490329
+    },
+    {
+      "timestamp": "2022-11-15",
+      "ticker": "ATAT",
+      "open": 14.4,
+      "high": 15.27,
+      "low": 13.74,
+      "close": 14.11,
+      "volume": 1678006
+    },
+    {
+      "timestamp": "2022-11-16",
+      "ticker": "ATAT",
+      "open": 13.61,
+      "high": 13.9,
+      "low": 11.0166,
+      "close": 11.39,
+      "volume": 468853
+    },
+    {
+      "timestamp": "2022-11-17",
+      "ticker": "ATAT",
+      "open": 12.01,
+      "high": 15.7,
+      "low": 11.8,
+      "close": 14.92,
+      "volume": 1942930
+    },
+    {
+      "timestamp": "2022-11-18",
+      "ticker": "ATAT",
+      "open": 15.01,
+      "high": 15.36,
+      "low": 12.6,
+      "close": 13.13,
+      "volume": 1038183
+    },
+    {
+      "timestamp": "2022-11-21",
+      "ticker": "ATAT",
+      "open": 12.6,
+      "high": 13.16,
+      "low": 12.2,
+      "close": 12.44,
+      "volume": 298809
+    },
+    {
+      "timestamp": "2022-11-22",
+      "ticker": "ATAT",
+      "open": 12.0,
+      "high": 12.26,
+      "low": 11.2386,
+      "close": 11.35,
+      "volume": 423158
+    },
+    {
+      "timestamp": "2022-11-23",
+      "ticker": "ATAT",
+      "open": 12.0,
+      "high": 12.1,
+      "low": 11.15,
+      "close": 11.47,
+      "volume": 293498
+    },
+    {
+      "timestamp": "2022-11-25",
+      "ticker": "ATAT",
+      "open": 11.6,
+      "high": 11.88,
+      "low": 11.19,
+      "close": 11.64,
+      "volume": 124310
+    },
+    {
+      "timestamp": "2022-11-28",
+      "ticker": "ATAT",
+      "open": 12.22,
+      "high": 12.8,
+      "low": 12.02,
+      "close": 12.4,
+      "volume": 607744
+    },
+    {
+      "timestamp": "2022-11-29",
+      "ticker": "ATAT",
+      "open": 13.5,
+      "high": 13.79,
+      "low": 12.02,
+      "close": 12.75,
+      "volume": 1110666
+    },
+    {
+      "timestamp": "2022-11-30",
+      "ticker": "ATAT",
+      "open": 13.9799,
+      "high": 15.8,
+      "low": 13.2,
+      "close": 15.23,
+      "volume": 1493067
+    },
+    {
+      "timestamp": "2022-12-01",
+      "ticker": "ATAT",
+      "open": 14.79,
+      "high": 16.12,
+      "low": 14.65,
+      "close": 15.83,
+      "volume": 960789
+    },
+    {
+      "timestamp": "2022-12-02",
+      "ticker": "ATAT",
+      "open": 15.22,
+      "high": 18.88,
+      "low": 14.85,
+      "close": 17.69,
+      "volume": 2141755
+    },
+    {
+      "timestamp": "2022-12-05",
+      "ticker": "ATAT",
+      "open": 18.6,
+      "high": 18.61,
+      "low": 15.1,
+      "close": 15.37,
+      "volume": 1154121
+    },
+    {
+      "timestamp": "2022-12-06",
+      "ticker": "ATAT",
+      "open": 15.62,
+      "high": 16.0,
+      "low": 14.381,
+      "close": 15.88,
+      "volume": 580774
+    },
+    {
+      "timestamp": "2022-12-07",
+      "ticker": "ATAT",
+      "open": 15.2,
+      "high": 15.38,
+      "low": 14.33,
+      "close": 14.89,
+      "volume": 381723
+    },
+    {
+      "timestamp": "2022-12-08",
+      "ticker": "ATAT",
+      "open": 16.0,
+      "high": 17.2,
+      "low": 15.79,
+      "close": 16.6,
+      "volume": 1029239
+    },
+    {
+      "timestamp": "2022-12-09",
+      "ticker": "ATAT",
+      "open": 16.37,
+      "high": 16.58,
+      "low": 16.21,
+      "close": 16.54,
+      "volume": 141950
+    },
+    {
+      "timestamp": "2022-12-12",
+      "ticker": "ATAT",
+      "open": 15.4,
+      "high": 16.59,
+      "low": 15.35,
+      "close": 16.59,
+      "volume": 336078
+    },
+    {
+      "timestamp": "2022-12-13",
+      "ticker": "ATAT",
+      "open": 16.89,
+      "high": 17.755,
+      "low": 16.6,
+      "close": 17.4,
+      "volume": 365850
+    },
+    {
+      "timestamp": "2022-12-14",
+      "ticker": "ATAT",
+      "open": 17.28,
+      "high": 17.49,
+      "low": 16.4964,
+      "close": 16.78,
+      "volume": 299576
+    },
+    {
+      "timestamp": "2022-12-15",
+      "ticker": "ATAT",
+      "open": 16.83,
+      "high": 17.3,
+      "low": 16.09,
+      "close": 16.51,
+      "volume": 261407
+    },
+    {
+      "timestamp": "2022-12-16",
+      "ticker": "ATAT",
+      "open": 16.68,
+      "high": 16.89,
+      "low": 16.0,
+      "close": 16.68,
+      "volume": 187445
+    },
+    {
+      "timestamp": "2022-12-19",
+      "ticker": "ATAT",
+      "open": 15.9,
+      "high": 16.66,
+      "low": 15.69,
+      "close": 16.64,
+      "volume": 283778
+    },
+    {
+      "timestamp": "2022-12-20",
+      "ticker": "ATAT",
+      "open": 16.21,
+      "high": 17.5,
+      "low": 16.02,
+      "close": 17.44,
+      "volume": 317610
+    },
+    {
+      "timestamp": "2022-12-21",
+      "ticker": "ATAT",
+      "open": 17.45,
+      "high": 18.8,
+      "low": 17.2278,
+      "close": 18.72,
+      "volume": 354143
+    },
+    {
+      "timestamp": "2022-12-22",
+      "ticker": "ATAT",
+      "open": 18.4,
+      "high": 18.67,
+      "low": 17.7,
+      "close": 18.11,
+      "volume": 203800
+    },
+    {
+      "timestamp": "2022-12-23",
+      "ticker": "ATAT",
+      "open": 18.41,
+      "high": 18.8095,
+      "low": 18.1,
+      "close": 18.5,
+      "volume": 117529
+    },
+    {
+      "timestamp": "2022-12-27",
+      "ticker": "ATAT",
+      "open": 18.73,
+      "high": 18.91,
+      "low": 17.51,
+      "close": 17.85,
+      "volume": 559814
+    },
+    {
+      "timestamp": "2022-12-28",
+      "ticker": "ATAT",
+      "open": 18.16,
+      "high": 18.4,
+      "low": 16.36,
+      "close": 16.55,
+      "volume": 705438
+    },
+    {
+      "timestamp": "2022-12-29",
+      "ticker": "ATAT",
+      "open": 16.5,
+      "high": 18.195,
+      "low": 16.49,
+      "close": 18.01,
+      "volume": 386057
+    },
+    {
+      "timestamp": "2022-12-30",
+      "ticker": "ATAT",
+      "open": 17.35,
+      "high": 18.15,
+      "low": 17.35,
+      "close": 18.02,
+      "volume": 292221
+    },
+    {
+      "timestamp": "2023-01-03",
+      "ticker": "ATAT",
+      "open": 18.11,
+      "high": 19.57,
+      "low": 17.8,
+      "close": 19.33,
+      "volume": 482015
+    },
+    {
+      "timestamp": "2023-01-04",
+      "ticker": "ATAT",
+      "open": 19.89,
+      "high": 20.0,
+      "low": 19.0,
+      "close": 19.34,
+      "volume": 449310
+    },
+    {
+      "timestamp": "2023-01-05",
+      "ticker": "ATAT",
+      "open": 19.04,
+      "high": 19.7,
+      "low": 18.58,
+      "close": 19.35,
+      "volume": 411341
+    },
+    {
+      "timestamp": "2023-01-06",
+      "ticker": "ATAT",
+      "open": 18.75,
+      "high": 19.3,
+      "low": 18.34,
+      "close": 18.36,
+      "volume": 204773
+    },
+    {
+      "timestamp": "2023-01-09",
+      "ticker": "ATAT",
+      "open": 19.419,
+      "high": 20.5,
+      "low": 18.91,
+      "close": 20.45,
+      "volume": 680211
+    },
+    {
+      "timestamp": "2023-01-10",
+      "ticker": "ATAT",
+      "open": 20.29,
+      "high": 21.445,
+      "low": 20.05,
+      "close": 21.11,
+      "volume": 240760
+    },
+    {
+      "timestamp": "2023-01-11",
+      "ticker": "ATAT",
+      "open": 21.37,
+      "high": 22.37,
+      "low": 20.2349,
+      "close": 22.02,
+      "volume": 180611
+    },
+    {
+      "timestamp": "2023-01-12",
+      "ticker": "ATAT",
+      "open": 22.0,
+      "high": 22.17,
+      "low": 20.23,
+      "close": 20.35,
+      "volume": 173769
+    },
+    {
+      "timestamp": "2023-01-13",
+      "ticker": "ATAT",
+      "open": 20.37,
+      "high": 25.5,
+      "low": 20.37,
+      "close": 25.4,
+      "volume": 580858
+    },
+    {
+      "timestamp": "2023-01-17",
+      "ticker": "ATAT",
+      "open": 24.5,
+      "high": 24.5,
+      "low": 22.04,
+      "close": 22.21,
+      "volume": 436099
+    },
+    {
+      "timestamp": "2023-01-18",
+      "ticker": "ATAT",
+      "open": 22.3,
+      "high": 23.5,
+      "low": 21.7,
+      "close": 21.87,
+      "volume": 447302
+    },
+    {
+      "timestamp": "2023-01-19",
+      "ticker": "ATAT",
+      "open": 21.74,
+      "high": 25.34,
+      "low": 21.74,
+      "close": 25.28,
+      "volume": 298466
+    },
+    {
+      "timestamp": "2023-01-20",
+      "ticker": "ATAT",
+      "open": 25.3,
+      "high": 27.35,
+      "low": 24.51,
+      "close": 27.09,
+      "volume": 274276
+    },
+    {
+      "timestamp": "2023-01-23",
+      "ticker": "ATAT",
+      "open": 27.43,
+      "high": 27.43,
+      "low": 25.81,
+      "close": 26.55,
+      "volume": 133968
+    },
+    {
+      "timestamp": "2023-01-24",
+      "ticker": "ATAT",
+      "open": 26.64,
+      "high": 29.4,
+      "low": 26.01,
+      "close": 29.08,
+      "volume": 167034
+    },
+    {
+      "timestamp": "2023-01-25",
+      "ticker": "ATAT",
+      "open": 28.285,
+      "high": 29.124,
+      "low": 26.81,
+      "close": 27.13,
+      "volume": 276271
+    },
+    {
+      "timestamp": "2023-01-26",
+      "ticker": "ATAT",
+      "open": 27.35,
+      "high": 28.42,
+      "low": 23.8,
+      "close": 24.66,
+      "volume": 763495
+    },
+    {
+      "timestamp": "2023-01-27",
+      "ticker": "ATAT",
+      "open": 25.3,
+      "high": 26.22,
+      "low": 24.9,
+      "close": 25.0,
+      "volume": 326529
+    },
+    {
+      "timestamp": "2023-01-30",
+      "ticker": "ATAT",
+      "open": 24.5,
+      "high": 28.69,
+      "low": 23.5,
+      "close": 27.87,
+      "volume": 742140
+    },
+    {
+      "timestamp": "2023-01-31",
+      "ticker": "ATAT",
+      "open": 26.82,
+      "high": 27.2,
+      "low": 26.02,
+      "close": 26.9,
+      "volume": 206365
+    },
+    {
+      "timestamp": "2023-02-01",
+      "ticker": "ATAT",
+      "open": 26.89,
+      "high": 27.07,
+      "low": 25.12,
+      "close": 25.6,
+      "volume": 146721
+    },
+    {
+      "timestamp": "2023-02-02",
+      "ticker": "ATAT",
+      "open": 25.61,
+      "high": 26.69,
+      "low": 24.8,
+      "close": 26.63,
+      "volume": 250099
+    },
+    {
+      "timestamp": "2023-02-03",
+      "ticker": "ATAT",
+      "open": 25.01,
+      "high": 26.36,
+      "low": 25.01,
+      "close": 25.03,
+      "volume": 92486
+    },
+    {
+      "timestamp": "2023-02-06",
+      "ticker": "ATAT",
+      "open": 24.83,
+      "high": 25.4,
+      "low": 22.79,
+      "close": 23.14,
+      "volume": 324819
+    },
+    {
+      "timestamp": "2023-02-07",
+      "ticker": "ATAT",
+      "open": 24.42,
+      "high": 25.69,
+      "low": 24.28,
+      "close": 25.64,
+      "volume": 279334
+    },
+    {
+      "timestamp": "2023-02-08",
+      "ticker": "ATAT",
+      "open": 25.91,
+      "high": 26.11,
+      "low": 24.06,
+      "close": 26.08,
+      "volume": 150319
+    },
+    {
+      "timestamp": "2023-02-09",
+      "ticker": "ATAT",
+      "open": 26.51,
+      "high": 28.18,
+      "low": 25.355,
+      "close": 26.09,
+      "volume": 297084
+    },
+    {
+      "timestamp": "2023-02-10",
+      "ticker": "ATAT",
+      "open": 25.0,
+      "high": 25.8744,
+      "low": 25.0,
+      "close": 25.28,
+      "volume": 68266
+    },
+    {
+      "timestamp": "2023-02-13",
+      "ticker": "ATAT",
+      "open": 25.68,
+      "high": 27.7733,
+      "low": 25.68,
+      "close": 27.21,
+      "volume": 170640
+    },
+    {
+      "timestamp": "2023-02-14",
+      "ticker": "ATAT",
+      "open": 26.69,
+      "high": 27.2299,
+      "low": 25.34,
+      "close": 26.64,
+      "volume": 89369
+    },
+    {
+      "timestamp": "2023-02-15",
+      "ticker": "ATAT",
+      "open": 26.19,
+      "high": 26.348,
+      "low": 25.25,
+      "close": 25.71,
+      "volume": 58247
+    },
+    {
+      "timestamp": "2023-02-16",
+      "ticker": "ATAT",
+      "open": 25.57,
+      "high": 25.95,
+      "low": 24.5,
+      "close": 24.88,
+      "volume": 110633
+    },
+    {
+      "timestamp": "2023-02-17",
+      "ticker": "ATAT",
+      "open": 24.77,
+      "high": 24.9592,
+      "low": 23.28,
+      "close": 23.8,
+      "volume": 131904
+    },
+    {
+      "timestamp": "2023-02-21",
+      "ticker": "ATAT",
+      "open": 23.75,
+      "high": 25.19,
+      "low": 23.75,
+      "close": 24.81,
+      "volume": 96363
+    },
+    {
+      "timestamp": "2023-02-22",
+      "ticker": "ATAT",
+      "open": 24.81,
+      "high": 25.4,
+      "low": 23.07,
+      "close": 23.21,
+      "volume": 143777
+    },
+    {
+      "timestamp": "2023-02-23",
+      "ticker": "ATAT",
+      "open": 23.65,
+      "high": 26.88,
+      "low": 23.65,
+      "close": 26.45,
+      "volume": 348512
+    },
+    {
+      "timestamp": "2023-02-24",
+      "ticker": "ATAT",
+      "open": 25.6,
+      "high": 25.6,
+      "low": 23.7,
+      "close": 24.07,
+      "volume": 247356
+    },
+    {
+      "timestamp": "2023-02-27",
+      "ticker": "ATAT",
+      "open": 24.6,
+      "high": 24.8799,
+      "low": 24.28,
+      "close": 24.5,
+      "volume": 62112
+    },
+    {
+      "timestamp": "2023-02-28",
+      "ticker": "ATAT",
+      "open": 24.6,
+      "high": 27.4399,
+      "low": 24.6,
+      "close": 26.43,
+      "volume": 263611
+    },
+    {
+      "timestamp": "2023-03-01",
+      "ticker": "ATAT",
+      "open": 27.13,
+      "high": 27.499,
+      "low": 26.46,
+      "close": 27.21,
+      "volume": 104088
+    },
+    {
+      "timestamp": "2023-03-02",
+      "ticker": "ATAT",
+      "open": 27.0,
+      "high": 27.31,
+      "low": 25.84,
+      "close": 26.08,
+      "volume": 71372
+    },
+    {
+      "timestamp": "2023-03-03",
+      "ticker": "ATAT",
+      "open": 26.29,
+      "high": 26.9,
+      "low": 25.15,
+      "close": 26.26,
+      "volume": 88292
+    },
+    {
+      "timestamp": "2023-03-06",
+      "ticker": "ATAT",
+      "open": 26.45,
+      "high": 27.2457,
+      "low": 25.6,
+      "close": 27.03,
+      "volume": 84274
+    },
+    {
+      "timestamp": "2023-03-07",
+      "ticker": "ATAT",
+      "open": 26.85,
+      "high": 27.0,
+      "low": 24.82,
+      "close": 26.75,
+      "volume": 179679
+    },
+    {
+      "timestamp": "2023-03-08",
+      "ticker": "ATAT",
+      "open": 26.37,
+      "high": 26.4,
+      "low": 24.47,
+      "close": 25.1,
+      "volume": 140751
+    },
+    {
+      "timestamp": "2023-03-09",
+      "ticker": "ATAT",
+      "open": 24.56,
+      "high": 24.92,
+      "low": 22.99,
+      "close": 24.01,
+      "volume": 253944
+    },
+    {
+      "timestamp": "2023-03-10",
+      "ticker": "ATAT",
+      "open": 23.94,
+      "high": 24.36,
+      "low": 23.0,
+      "close": 23.49,
+      "volume": 92685
+    },
+    {
+      "timestamp": "2023-03-13",
+      "ticker": "ATAT",
+      "open": 23.49,
+      "high": 26.228,
+      "low": 23.15,
+      "close": 24.76,
+      "volume": 104453
+    },
+    {
+      "timestamp": "2023-03-14",
+      "ticker": "ATAT",
+      "open": 24.8,
+      "high": 24.8,
+      "low": 23.2,
+      "close": 23.47,
+      "volume": 69644
+    },
+    {
+      "timestamp": "2023-03-15",
+      "ticker": "ATAT",
+      "open": 23.6,
+      "high": 23.6,
+      "low": 20.204,
+      "close": 22.4,
+      "volume": 471757
+    },
+    {
+      "timestamp": "2023-03-16",
+      "ticker": "ATAT",
+      "open": 22.6,
+      "high": 24.31,
+      "low": 21.09,
+      "close": 24.08,
+      "volume": 149125
+    },
+    {
+      "timestamp": "2023-03-17",
+      "ticker": "ATAT",
+      "open": 24.49,
+      "high": 25.2,
+      "low": 23.37,
+      "close": 24.02,
+      "volume": 155743
+    },
+    {
+      "timestamp": "2023-03-20",
+      "ticker": "ATAT",
+      "open": 23.6,
+      "high": 24.57,
+      "low": 23.1,
+      "close": 23.86,
+      "volume": 62349
+    },
+    {
+      "timestamp": "2023-03-21",
+      "ticker": "ATAT",
+      "open": 24.18,
+      "high": 24.18,
+      "low": 21.5,
+      "close": 23.19,
+      "volume": 202416
+    },
+    {
+      "timestamp": "2023-03-22",
+      "ticker": "ATAT",
+      "open": 23.3,
+      "high": 23.3,
+      "low": 22.23,
+      "close": 22.7,
+      "volume": 86941
+    },
+    {
+      "timestamp": "2023-03-23",
+      "ticker": "ATAT",
+      "open": 23.0,
+      "high": 24.29,
+      "low": 22.97,
+      "close": 23.87,
+      "volume": 102577
+    },
+    {
+      "timestamp": "2023-03-24",
+      "ticker": "ATAT",
+      "open": 23.19,
+      "high": 23.99,
+      "low": 22.7517,
+      "close": 23.28,
+      "volume": 47041
+    },
+    {
+      "timestamp": "2023-03-27",
+      "ticker": "ATAT",
+      "open": 23.17,
+      "high": 25.58,
+      "low": 23.1427,
+      "close": 24.43,
+      "volume": 185372
+    },
+    {
+      "timestamp": "2023-03-28",
+      "ticker": "ATAT",
+      "open": 24.83,
+      "high": 24.93,
+      "low": 23.81,
+      "close": 24.6,
+      "volume": 77815
+    },
+    {
+      "timestamp": "2023-03-29",
+      "ticker": "ATAT",
+      "open": 24.9,
+      "high": 25.14,
+      "low": 23.635,
+      "close": 24.63,
+      "volume": 125046
+    },
+    {
+      "timestamp": "2023-03-30",
+      "ticker": "ATAT",
+      "open": 25.12,
+      "high": 25.12,
+      "low": 23.3,
+      "close": 23.6,
+      "volume": 249090
+    },
+    {
+      "timestamp": "2023-03-31",
+      "ticker": "ATAT",
+      "open": 23.93,
+      "high": 27.0,
+      "low": 23.7987,
+      "close": 26.21,
+      "volume": 468353
+    },
+    {
+      "timestamp": "2023-04-03",
+      "ticker": "ATAT",
+      "open": 26.0,
+      "high": 27.5,
+      "low": 25.24,
+      "close": 26.63,
+      "volume": 280566
+    },
+    {
+      "timestamp": "2023-04-04",
+      "ticker": "ATAT",
+      "open": 26.515,
+      "high": 26.515,
+      "low": 24.46,
+      "close": 24.7,
+      "volume": 198684
+    },
+    {
+      "timestamp": "2023-04-05",
+      "ticker": "ATAT",
+      "open": 24.8,
+      "high": 24.96,
+      "low": 23.8,
+      "close": 24.18,
+      "volume": 70012
+    },
+    {
+      "timestamp": "2023-04-06",
+      "ticker": "ATAT",
+      "open": 24.58,
+      "high": 26.2,
+      "low": 24.24,
+      "close": 26.2,
+      "volume": 111806
+    },
+    {
+      "timestamp": "2023-04-10",
+      "ticker": "ATAT",
+      "open": 26.05,
+      "high": 26.98,
+      "low": 25.05,
+      "close": 26.83,
+      "volume": 72202
+    },
+    {
+      "timestamp": "2023-04-11",
+      "ticker": "ATAT",
+      "open": 26.8,
+      "high": 27.1,
+      "low": 25.8,
+      "close": 26.02,
+      "volume": 46482
+    },
+    {
+      "timestamp": "2023-04-12",
+      "ticker": "ATAT",
+      "open": 25.76,
+      "high": 26.16,
+      "low": 24.165,
+      "close": 24.7,
+      "volume": 262697
+    },
+    {
+      "timestamp": "2023-04-13",
+      "ticker": "ATAT",
+      "open": 25.06,
+      "high": 25.4,
+      "low": 22.33,
+      "close": 22.58,
+      "volume": 295481
+    },
+    {
+      "timestamp": "2023-04-14",
+      "ticker": "ATAT",
+      "open": 23.2,
+      "high": 23.275,
+      "low": 22.58,
+      "close": 22.83,
+      "volume": 151506
+    },
+    {
+      "timestamp": "2023-04-17",
+      "ticker": "ATAT",
+      "open": 23.12,
+      "high": 24.44,
+      "low": 22.74,
+      "close": 23.48,
+      "volume": 121177
+    },
+    {
+      "timestamp": "2023-04-18",
+      "ticker": "ATAT",
+      "open": 23.61,
+      "high": 23.67,
+      "low": 22.975,
+      "close": 23.16,
+      "volume": 67724
+    },
+    {
+      "timestamp": "2023-04-19",
+      "ticker": "ATAT",
+      "open": 22.83,
+      "high": 24.96,
+      "low": 22.8,
+      "close": 24.74,
+      "volume": 124391
+    },
+    {
+      "timestamp": "2023-04-20",
+      "ticker": "ATAT",
+      "open": 24.51,
+      "high": 25.18,
+      "low": 24.02,
+      "close": 24.15,
+      "volume": 100013
+    },
+    {
+      "timestamp": "2023-04-21",
+      "ticker": "ATAT",
+      "open": 24.41,
+      "high": 24.41,
+      "low": 22.69,
+      "close": 23.02,
+      "volume": 172824
+    },
+    {
+      "timestamp": "2023-04-24",
+      "ticker": "ATAT",
+      "open": 23.02,
+      "high": 23.31,
+      "low": 21.34,
+      "close": 21.59,
+      "volume": 207953
+    },
+    {
+      "timestamp": "2023-04-25",
+      "ticker": "ATAT",
+      "open": 21.21,
+      "high": 21.32,
+      "low": 20.1,
+      "close": 20.33,
+      "volume": 258217
+    },
+    {
+      "timestamp": "2023-04-26",
+      "ticker": "ATAT",
+      "open": 21.68,
+      "high": 22.49,
+      "low": 21.0,
+      "close": 21.57,
+      "volume": 342678
+    },
+    {
+      "timestamp": "2023-04-27",
+      "ticker": "ATAT",
+      "open": 21.3,
+      "high": 21.77,
+      "low": 20.5,
+      "close": 21.43,
+      "volume": 473142
+    },
+    {
+      "timestamp": "2023-04-28",
+      "ticker": "ATAT",
+      "open": 21.55,
+      "high": 21.775,
+      "low": 21.2191,
+      "close": 21.44,
+      "volume": 66753
+    },
+    {
+      "timestamp": "2023-05-01",
+      "ticker": "ATAT",
+      "open": 21.55,
+      "high": 21.68,
+      "low": 21.0401,
+      "close": 21.5,
+      "volume": 103779
+    },
+    {
+      "timestamp": "2023-05-02",
+      "ticker": "ATAT",
+      "open": 21.47,
+      "high": 21.47,
+      "low": 20.21,
+      "close": 20.21,
+      "volume": 80319
+    },
+    {
+      "timestamp": "2023-05-03",
+      "ticker": "ATAT",
+      "open": 20.23,
+      "high": 20.64,
+      "low": 19.5323,
+      "close": 20.38,
+      "volume": 127711
+    },
+    {
+      "timestamp": "2023-05-04",
+      "ticker": "ATAT",
+      "open": 20.01,
+      "high": 21.07,
+      "low": 20.0,
+      "close": 20.14,
+      "volume": 102317
+    },
+    {
+      "timestamp": "2023-05-05",
+      "ticker": "ATAT",
+      "open": 20.11,
+      "high": 20.26,
+      "low": 19.51,
+      "close": 19.72,
+      "volume": 105757
+    },
+    {
+      "timestamp": "2023-05-08",
+      "ticker": "ATAT",
+      "open": 19.84,
+      "high": 19.96,
+      "low": 19.09,
+      "close": 19.72,
+      "volume": 168818
+    },
+    {
+      "timestamp": "2023-05-09",
+      "ticker": "ATAT",
+      "open": 19.3,
+      "high": 19.63,
+      "low": 18.43,
+      "close": 18.49,
+      "volume": 353421
+    },
+    {
+      "timestamp": "2023-05-10",
+      "ticker": "ATAT",
+      "open": 18.41,
+      "high": 18.74,
+      "low": 17.3,
+      "close": 17.3,
+      "volume": 290672
+    },
+    {
+      "timestamp": "2023-05-11",
+      "ticker": "ATAT",
+      "open": 17.3,
+      "high": 18.14,
+      "low": 16.86,
+      "close": 17.82,
+      "volume": 336077
+    },
+    {
+      "timestamp": "2023-05-12",
+      "ticker": "ATAT",
+      "open": 18.0,
+      "high": 18.32,
+      "low": 17.54,
+      "close": 17.78,
+      "volume": 65526
+    },
+    {
+      "timestamp": "2023-05-15",
+      "ticker": "ATAT",
+      "open": 18.1,
+      "high": 19.48,
+      "low": 17.75,
+      "close": 19.27,
+      "volume": 149334
+    },
+    {
+      "timestamp": "2023-05-16",
+      "ticker": "ATAT",
+      "open": 19.27,
+      "high": 19.68,
+      "low": 18.86,
+      "close": 19.63,
+      "volume": 106336
+    },
+    {
+      "timestamp": "2023-05-17",
+      "ticker": "ATAT",
+      "open": 19.14,
+      "high": 19.72,
+      "low": 18.91,
+      "close": 19.33,
+      "volume": 111287
+    },
+    {
+      "timestamp": "2023-05-18",
+      "ticker": "ATAT",
+      "open": 19.17,
+      "high": 19.94,
+      "low": 17.52,
+      "close": 18.2,
+      "volume": 274596
+    },
+    {
+      "timestamp": "2023-05-19",
+      "ticker": "ATAT",
+      "open": 18.59,
+      "high": 18.98,
+      "low": 17.81,
+      "close": 18.7,
+      "volume": 225990
+    },
+    {
+      "timestamp": "2023-05-22",
+      "ticker": "ATAT",
+      "open": 19.01,
+      "high": 19.08,
+      "low": 17.775,
+      "close": 17.85,
+      "volume": 358156
+    },
+    {
+      "timestamp": "2023-05-23",
+      "ticker": "ATAT",
+      "open": 17.56,
+      "high": 18.48,
+      "low": 16.865,
+      "close": 17.54,
+      "volume": 409337
+    },
+    {
+      "timestamp": "2023-05-24",
+      "ticker": "ATAT",
+      "open": 17.18,
+      "high": 17.83,
+      "low": 16.22,
+      "close": 17.74,
+      "volume": 335655
+    },
+    {
+      "timestamp": "2023-05-25",
+      "ticker": "ATAT",
+      "open": 17.27,
+      "high": 17.64,
+      "low": 16.96,
+      "close": 16.96,
+      "volume": 97589
+    },
+    {
+      "timestamp": "2023-05-26",
+      "ticker": "ATAT",
+      "open": 17.22,
+      "high": 18.15,
+      "low": 17.2,
+      "close": 18.0,
+      "volume": 591267
+    },
+    {
+      "timestamp": "2023-05-30",
+      "ticker": "ATAT",
+      "open": 18.27,
+      "high": 18.27,
+      "low": 16.95,
+      "close": 16.96,
+      "volume": 210057
+    },
+    {
+      "timestamp": "2023-05-31",
+      "ticker": "ATAT",
+      "open": 17.08,
+      "high": 17.43,
+      "low": 16.16,
+      "close": 16.16,
+      "volume": 326876
+    },
+    {
+      "timestamp": "2023-06-01",
+      "ticker": "ATAT",
+      "open": 16.48,
+      "high": 18.08,
+      "low": 16.41,
+      "close": 17.8,
+      "volume": 236665
+    },
+    {
+      "timestamp": "2023-06-02",
+      "ticker": "ATAT",
+      "open": 18.24,
+      "high": 18.5,
+      "low": 17.86,
+      "close": 17.88,
+      "volume": 159821
+    },
+    {
+      "timestamp": "2023-06-05",
+      "ticker": "ATAT",
+      "open": 17.97,
+      "high": 18.0,
+      "low": 16.89,
+      "close": 17.02,
+      "volume": 98922
+    },
+    {
+      "timestamp": "2023-06-06",
+      "ticker": "ATAT",
+      "open": 16.17,
+      "high": 16.87,
+      "low": 14.8,
+      "close": 15.76,
+      "volume": 905276
+    },
+    {
+      "timestamp": "2023-06-07",
+      "ticker": "ATAT",
+      "open": 16.1,
+      "high": 16.6,
+      "low": 15.3,
+      "close": 15.67,
+      "volume": 1088993
+    },
+    {
+      "timestamp": "2023-06-08",
+      "ticker": "ATAT",
+      "open": 15.25,
+      "high": 15.7,
+      "low": 15.02,
+      "close": 15.44,
+      "volume": 3252336
+    },
+    {
+      "timestamp": "2023-06-09",
+      "ticker": "ATAT",
+      "open": 15.5,
+      "high": 16.295,
+      "low": 15.42,
+      "close": 15.76,
+      "volume": 921046
+    },
+    {
+      "timestamp": "2023-06-12",
+      "ticker": "ATAT",
+      "open": 15.78,
+      "high": 16.43,
+      "low": 15.78,
+      "close": 16.04,
+      "volume": 678189
+    },
+    {
+      "timestamp": "2023-06-13",
+      "ticker": "ATAT",
+      "open": 16.32,
+      "high": 17.76,
+      "low": 16.055,
+      "close": 16.88,
+      "volume": 1009180
+    },
+    {
+      "timestamp": "2023-06-14",
+      "ticker": "ATAT",
+      "open": 16.91,
+      "high": 17.85,
+      "low": 16.83,
+      "close": 17.47,
+      "volume": 452781
+    },
+    {
+      "timestamp": "2023-06-15",
+      "ticker": "ATAT",
+      "open": 17.65,
+      "high": 18.4,
+      "low": 17.47,
+      "close": 18.08,
+      "volume": 1028125
+    },
+    {
+      "timestamp": "2023-06-16",
+      "ticker": "ATAT",
+      "open": 18.13,
+      "high": 18.755,
+      "low": 16.83,
+      "close": 17.26,
+      "volume": 924760
+    },
+    {
+      "timestamp": "2023-06-20",
+      "ticker": "ATAT",
+      "open": 17.02,
+      "high": 17.02,
+      "low": 16.08,
+      "close": 16.11,
+      "volume": 636648
+    },
+    {
+      "timestamp": "2023-06-21",
+      "ticker": "ATAT",
+      "open": 15.99,
+      "high": 16.64,
+      "low": 15.99,
+      "close": 16.32,
+      "volume": 145845
+    },
+    {
+      "timestamp": "2023-06-22",
+      "ticker": "ATAT",
+      "open": 15.99,
+      "high": 16.35,
+      "low": 15.61,
+      "close": 15.9,
+      "volume": 177992
+    },
+    {
+      "timestamp": "2023-06-23",
+      "ticker": "ATAT",
+      "open": 15.73,
+      "high": 15.99,
+      "low": 15.5,
+      "close": 15.73,
+      "volume": 184170
+    },
+    {
+      "timestamp": "2023-06-26",
+      "ticker": "ATAT",
+      "open": 15.81,
+      "high": 16.47,
+      "low": 15.78,
+      "close": 15.8,
+      "volume": 318621
+    },
+    {
+      "timestamp": "2023-06-27",
+      "ticker": "ATAT",
+      "open": 16.1,
+      "high": 16.68,
+      "low": 16.0,
+      "close": 16.56,
+      "volume": 297199
+    },
+    {
+      "timestamp": "2023-06-28",
+      "ticker": "ATAT",
+      "open": 16.58,
+      "high": 16.69,
+      "low": 15.89,
+      "close": 16.18,
+      "volume": 220286
+    },
+    {
+      "timestamp": "2023-06-29",
+      "ticker": "ATAT",
+      "open": 16.1,
+      "high": 16.27,
+      "low": 15.75,
+      "close": 16.22,
+      "volume": 251952
+    },
+    {
+      "timestamp": "2023-06-30",
+      "ticker": "ATAT",
+      "open": 16.43,
+      "high": 16.43,
+      "low": 16.05,
+      "close": 16.24,
+      "volume": 474011
+    },
+    {
+      "timestamp": "2023-07-03",
+      "ticker": "ATAT",
+      "open": 16.68,
+      "high": 18.28,
+      "low": 16.68,
+      "close": 18.12,
+      "volume": 502612
+    },
+    {
+      "timestamp": "2023-07-05",
+      "ticker": "ATAT",
+      "open": 17.95,
+      "high": 18.45,
+      "low": 17.06,
+      "close": 17.33,
+      "volume": 453718
+    },
+    {
+      "timestamp": "2023-07-06",
+      "ticker": "ATAT",
+      "open": 17.03,
+      "high": 17.41,
+      "low": 16.85,
+      "close": 17.26,
+      "volume": 284813
+    },
+    {
+      "timestamp": "2023-07-07",
+      "ticker": "ATAT",
+      "open": 17.42,
+      "high": 17.7574,
+      "low": 17.1,
+      "close": 17.36,
+      "volume": 216465
+    },
+    {
+      "timestamp": "2023-07-10",
+      "ticker": "ATAT",
+      "open": 17.4,
+      "high": 18.28,
+      "low": 17.4,
+      "close": 18.05,
+      "volume": 289267
+    },
+    {
+      "timestamp": "2023-07-11",
+      "ticker": "ATAT",
+      "open": 18.18,
+      "high": 18.29,
+      "low": 17.95,
+      "close": 18.19,
+      "volume": 355003
+    },
+    {
+      "timestamp": "2023-07-12",
+      "ticker": "ATAT",
+      "open": 18.71,
+      "high": 19.26,
+      "low": 18.7,
+      "close": 18.93,
+      "volume": 417527
+    },
+    {
+      "timestamp": "2023-07-13",
+      "ticker": "ATAT",
+      "open": 19.3,
+      "high": 20.24,
+      "low": 19.2,
+      "close": 19.67,
+      "volume": 733230
+    },
+    {
+      "timestamp": "2023-07-14",
+      "ticker": "ATAT",
+      "open": 19.5,
+      "high": 19.81,
+      "low": 19.15,
+      "close": 19.31,
+      "volume": 322020
+    },
+    {
+      "timestamp": "2023-07-17",
+      "ticker": "ATAT",
+      "open": 19.19,
+      "high": 19.53,
+      "low": 19.0432,
+      "close": 19.49,
+      "volume": 286299
+    },
+    {
+      "timestamp": "2023-07-18",
+      "ticker": "ATAT",
+      "open": 19.38,
+      "high": 19.71,
+      "low": 18.8,
+      "close": 19.02,
+      "volume": 283498
+    },
+    {
+      "timestamp": "2023-07-19",
+      "ticker": "ATAT",
+      "open": 19.14,
+      "high": 19.6,
+      "low": 19.11,
+      "close": 19.46,
+      "volume": 126956
+    },
+    {
+      "timestamp": "2023-07-20",
+      "ticker": "ATAT",
+      "open": 19.21,
+      "high": 19.37,
+      "low": 18.8148,
+      "close": 18.97,
+      "volume": 245304
+    },
+    {
+      "timestamp": "2023-07-21",
+      "ticker": "ATAT",
+      "open": 19.1,
+      "high": 19.235,
+      "low": 18.56,
+      "close": 18.61,
+      "volume": 159229
+    },
+    {
+      "timestamp": "2023-07-24",
+      "ticker": "ATAT",
+      "open": 18.55,
+      "high": 19.5,
+      "low": 18.14,
+      "close": 19.24,
+      "volume": 245293
+    },
+    {
+      "timestamp": "2023-07-25",
+      "ticker": "ATAT",
+      "open": 19.7,
+      "high": 20.1,
+      "low": 19.1,
+      "close": 19.43,
+      "volume": 320981
+    },
+    {
+      "timestamp": "2023-07-26",
+      "ticker": "ATAT",
+      "open": 19.31,
+      "high": 19.84,
+      "low": 19.31,
+      "close": 19.57,
+      "volume": 312660
+    },
+    {
+      "timestamp": "2023-07-27",
+      "ticker": "ATAT",
+      "open": 19.92,
+      "high": 19.97,
+      "low": 19.06,
+      "close": 19.09,
+      "volume": 243068
+    },
+    {
+      "timestamp": "2023-07-28",
+      "ticker": "ATAT",
+      "open": 20.1,
+      "high": 21.0,
+      "low": 19.11,
+      "close": 20.54,
+      "volume": 968870
+    },
+    {
+      "timestamp": "2023-07-31",
+      "ticker": "ATAT",
+      "open": 21.0,
+      "high": 21.21,
+      "low": 20.03,
+      "close": 20.26,
+      "volume": 502550
+    },
+    {
+      "timestamp": "2023-08-01",
+      "ticker": "ATAT",
+      "open": 20.01,
+      "high": 20.42,
+      "low": 19.81,
+      "close": 20.07,
+      "volume": 291513
+    },
+    {
+      "timestamp": "2023-08-02",
+      "ticker": "ATAT",
+      "open": 19.68,
+      "high": 20.29,
+      "low": 19.54,
+      "close": 20.06,
+      "volume": 401898
+    },
+    {
+      "timestamp": "2023-08-03",
+      "ticker": "ATAT",
+      "open": 20.29,
+      "high": 21.41,
+      "low": 20.28,
+      "close": 21.0,
+      "volume": 998635
+    },
+    {
+      "timestamp": "2023-08-04",
+      "ticker": "ATAT",
+      "open": 21.2,
+      "high": 21.2,
+      "low": 20.5,
+      "close": 21.04,
+      "volume": 497686
+    },
+    {
+      "timestamp": "2023-08-07",
+      "ticker": "ATAT",
+      "open": 21.04,
+      "high": 21.04,
+      "low": 20.51,
+      "close": 21.0,
+      "volume": 401897
+    },
+    {
+      "timestamp": "2023-08-08",
+      "ticker": "ATAT",
+      "open": 20.77,
+      "high": 21.03,
+      "low": 20.4,
+      "close": 21.03,
+      "volume": 290537
+    },
+    {
+      "timestamp": "2023-08-09",
+      "ticker": "ATAT",
+      "open": 21.03,
+      "high": 21.21,
+      "low": 20.33,
+      "close": 21.16,
+      "volume": 668870
+    },
+    {
+      "timestamp": "2023-08-10",
+      "ticker": "ATAT",
+      "open": 21.21,
+      "high": 21.45,
+      "low": 20.87,
+      "close": 21.26,
+      "volume": 806250
+    },
+    {
+      "timestamp": "2023-08-11",
+      "ticker": "ATAT",
+      "open": 20.76,
+      "high": 21.005,
+      "low": 20.71,
+      "close": 20.94,
+      "volume": 209753
+    },
+    {
+      "timestamp": "2023-08-14",
+      "ticker": "ATAT",
+      "open": 20.7,
+      "high": 20.92,
+      "low": 19.975,
+      "close": 20.86,
+      "volume": 251643
+    },
+    {
+      "timestamp": "2023-08-15",
+      "ticker": "ATAT",
+      "open": 20.86,
+      "high": 21.0,
+      "low": 20.6401,
+      "close": 20.91,
+      "volume": 275048
+    },
+    {
+      "timestamp": "2023-08-16",
+      "ticker": "ATAT",
+      "open": 20.5,
+      "high": 20.95,
+      "low": 19.98,
+      "close": 20.76,
+      "volume": 441923
+    },
+    {
+      "timestamp": "2023-08-17",
+      "ticker": "ATAT",
+      "open": 21.89,
+      "high": 23.0,
+      "low": 20.67,
+      "close": 22.0,
+      "volume": 1430739
+    },
+    {
+      "timestamp": "2023-08-18",
+      "ticker": "ATAT",
+      "open": 21.0,
+      "high": 21.14,
+      "low": 19.71,
+      "close": 20.15,
+      "volume": 1174734
+    },
+    {
+      "timestamp": "2023-08-21",
+      "ticker": "ATAT",
+      "open": 20.16,
+      "high": 20.7699,
+      "low": 19.85,
+      "close": 20.31,
+      "volume": 622280
+    },
+    {
+      "timestamp": "2023-08-22",
+      "ticker": "ATAT",
+      "open": 20.81,
+      "high": 20.89,
+      "low": 20.36,
+      "close": 20.5,
+      "volume": 593159
+    },
+    {
+      "timestamp": "2023-08-23",
+      "ticker": "ATAT",
+      "open": 20.62,
+      "high": 20.85,
+      "low": 20.36,
+      "close": 20.7,
+      "volume": 482363
+    },
+    {
+      "timestamp": "2023-08-24",
+      "ticker": "ATAT",
+      "open": 21.02,
+      "high": 21.02,
+      "low": 20.41,
+      "close": 20.43,
+      "volume": 1019730
+    },
+    {
+      "timestamp": "2023-08-25",
+      "ticker": "ATAT",
+      "open": 20.79,
+      "high": 20.79,
+      "low": 19.32,
+      "close": 19.35,
+      "volume": 616089
+    },
+    {
+      "timestamp": "2023-08-28",
+      "ticker": "ATAT",
+      "open": 19.47,
+      "high": 19.68,
+      "low": 19.325,
+      "close": 19.48,
+      "volume": 435627
+    },
+    {
+      "timestamp": "2023-08-29",
+      "ticker": "ATAT",
+      "open": 19.68,
+      "high": 20.1,
+      "low": 19.6,
+      "close": 19.78,
+      "volume": 1058056
+    },
+    {
+      "timestamp": "2023-08-30",
+      "ticker": "ATAT",
+      "open": 20.19,
+      "high": 20.88,
+      "low": 19.46,
+      "close": 19.5,
+      "volume": 793138
+    },
+    {
+      "timestamp": "2023-08-31",
+      "ticker": "ATAT",
+      "open": 19.5,
+      "high": 19.6,
+      "low": 18.82,
+      "close": 19.42,
+      "volume": 530783
+    },
+    {
+      "timestamp": "2023-09-01",
+      "ticker": "ATAT",
+      "open": 19.77,
+      "high": 19.8968,
+      "low": 19.27,
+      "close": 19.62,
+      "volume": 599933
+    },
+    {
+      "timestamp": "2023-09-05",
+      "ticker": "ATAT",
+      "open": 19.23,
+      "high": 19.25,
+      "low": 18.9,
+      "close": 19.17,
+      "volume": 453040
+    },
+    {
+      "timestamp": "2023-09-06",
+      "ticker": "ATAT",
+      "open": 19.18,
+      "high": 19.52,
+      "low": 19.17,
+      "close": 19.46,
+      "volume": 358240
+    },
+    {
+      "timestamp": "2023-09-07",
+      "ticker": "ATAT",
+      "open": 19.16,
+      "high": 19.16,
+      "low": 17.95,
+      "close": 18.24,
+      "volume": 453054
+    },
+    {
+      "timestamp": "2023-09-08",
+      "ticker": "ATAT",
+      "open": 18.28,
+      "high": 18.63,
+      "low": 18.28,
+      "close": 18.46,
+      "volume": 237762
+    },
+    {
+      "timestamp": "2023-09-11",
+      "ticker": "ATAT",
+      "open": 18.72,
+      "high": 19.32,
+      "low": 18.51,
+      "close": 19.11,
+      "volume": 352534
+    },
+    {
+      "timestamp": "2023-09-12",
+      "ticker": "ATAT",
+      "open": 18.94,
+      "high": 19.83,
+      "low": 18.94,
+      "close": 19.55,
+      "volume": 711195
+    },
+    {
+      "timestamp": "2023-09-13",
+      "ticker": "ATAT",
+      "open": 19.54,
+      "high": 19.58,
+      "low": 19.24,
+      "close": 19.28,
+      "volume": 297482
+    },
+    {
+      "timestamp": "2023-09-14",
+      "ticker": "ATAT",
+      "open": 19.41,
+      "high": 19.57,
+      "low": 19.35,
+      "close": 19.44,
+      "volume": 244397
+    },
+    {
+      "timestamp": "2023-09-15",
+      "ticker": "ATAT",
+      "open": 19.5,
+      "high": 19.575,
+      "low": 19.35,
+      "close": 19.5,
+      "volume": 260674
+    },
+    {
+      "timestamp": "2023-09-18",
+      "ticker": "ATAT",
+      "open": 19.8,
+      "high": 19.8,
+      "low": 19.21,
+      "close": 19.54,
+      "volume": 307443
+    },
+    {
+      "timestamp": "2023-09-19",
+      "ticker": "ATAT",
+      "open": 19.53,
+      "high": 19.53,
+      "low": 18.91,
+      "close": 19.35,
+      "volume": 220955
+    },
+    {
+      "timestamp": "2023-09-20",
+      "ticker": "ATAT",
+      "open": 19.33,
+      "high": 19.49,
+      "low": 19.01,
+      "close": 19.23,
+      "volume": 238162
+    },
+    {
+      "timestamp": "2023-09-21",
+      "ticker": "ATAT",
+      "open": 18.9,
+      "high": 19.06,
+      "low": 18.19,
+      "close": 18.19,
+      "volume": 173514
+    },
+    {
+      "timestamp": "2023-09-22",
+      "ticker": "ATAT",
+      "open": 18.89,
+      "high": 18.99,
+      "low": 18.55,
+      "close": 18.6,
+      "volume": 229316
+    },
+    {
+      "timestamp": "2023-09-25",
+      "ticker": "ATAT",
+      "open": 18.36,
+      "high": 18.58,
+      "low": 18.01,
+      "close": 18.39,
+      "volume": 1349034
+    },
+    {
+      "timestamp": "2023-09-26",
+      "ticker": "ATAT",
+      "open": 18.46,
+      "high": 18.98,
+      "low": 18.07,
+      "close": 18.68,
+      "volume": 422422
+    },
+    {
+      "timestamp": "2023-09-27",
+      "ticker": "ATAT",
+      "open": 18.75,
+      "high": 18.75,
+      "low": 18.14,
+      "close": 18.46,
+      "volume": 158723
+    },
+    {
+      "timestamp": "2023-09-28",
+      "ticker": "ATAT",
+      "open": 18.27,
+      "high": 18.8,
+      "low": 18.26,
+      "close": 18.75,
+      "volume": 1046274
+    },
+    {
+      "timestamp": "2023-09-29",
+      "ticker": "ATAT",
+      "open": 19.15,
+      "high": 19.25,
+      "low": 18.78,
+      "close": 18.85,
+      "volume": 333042
+    },
+    {
+      "timestamp": "2023-10-02",
+      "ticker": "ATAT",
+      "open": 18.9,
+      "high": 19.25,
+      "low": 18.51,
+      "close": 18.6,
+      "volume": 650765
+    },
+    {
+      "timestamp": "2023-10-03",
+      "ticker": "ATAT",
+      "open": 18.29,
+      "high": 18.57,
+      "low": 18.22,
+      "close": 18.24,
+      "volume": 100047
+    },
+    {
+      "timestamp": "2023-10-04",
+      "ticker": "ATAT",
+      "open": 18.24,
+      "high": 18.57,
+      "low": 18.1,
+      "close": 18.16,
+      "volume": 143497
+    },
+    {
+      "timestamp": "2023-10-05",
+      "ticker": "ATAT",
+      "open": 18.16,
+      "high": 18.18,
+      "low": 17.66,
+      "close": 17.73,
+      "volume": 203275
+    },
+    {
+      "timestamp": "2023-10-06",
+      "ticker": "ATAT",
+      "open": 17.7,
+      "high": 18.24,
+      "low": 17.65,
+      "close": 17.8,
+      "volume": 589881
+    },
+    {
+      "timestamp": "2023-10-09",
+      "ticker": "ATAT",
+      "open": 17.65,
+      "high": 17.65,
+      "low": 16.34,
+      "close": 17.14,
+      "volume": 580282
+    },
+    {
+      "timestamp": "2023-10-10",
+      "ticker": "ATAT",
+      "open": 17.38,
+      "high": 18.19,
+      "low": 17.36,
+      "close": 18.04,
+      "volume": 314266
+    },
+    {
+      "timestamp": "2023-10-11",
+      "ticker": "ATAT",
+      "open": 18.15,
+      "high": 18.465,
+      "low": 17.88,
+      "close": 18.16,
+      "volume": 465934
+    },
+    {
+      "timestamp": "2023-10-12",
+      "ticker": "ATAT",
+      "open": 18.27,
+      "high": 18.27,
+      "low": 17.63,
+      "close": 17.87,
+      "volume": 169069
+    },
+    {
+      "timestamp": "2023-10-13",
+      "ticker": "ATAT",
+      "open": 17.9,
+      "high": 18.14,
+      "low": 17.72,
+      "close": 18.11,
+      "volume": 230234
+    },
+    {
+      "timestamp": "2023-10-16",
+      "ticker": "ATAT",
+      "open": 18.1,
+      "high": 18.99,
+      "low": 17.8201,
+      "close": 18.71,
+      "volume": 426950
+    },
+    {
+      "timestamp": "2023-10-17",
+      "ticker": "ATAT",
+      "open": 18.5,
+      "high": 19.29,
+      "low": 18.5,
+      "close": 19.07,
+      "volume": 206042
+    },
+    {
+      "timestamp": "2023-10-18",
+      "ticker": "ATAT",
+      "open": 18.81,
+      "high": 19.225,
+      "low": 18.75,
+      "close": 18.8,
+      "volume": 129474
+    },
+    {
+      "timestamp": "2023-10-19",
+      "ticker": "ATAT",
+      "open": 18.51,
+      "high": 18.56,
+      "low": 17.93,
+      "close": 18.3,
+      "volume": 149674
+    },
+    {
+      "timestamp": "2023-10-20",
+      "ticker": "ATAT",
+      "open": 18.24,
+      "high": 18.48,
+      "low": 17.78,
+      "close": 18.18,
+      "volume": 209045
+    },
+    {
+      "timestamp": "2023-10-23",
+      "ticker": "ATAT",
+      "open": 17.99,
+      "high": 18.95,
+      "low": 17.79,
+      "close": 18.84,
+      "volume": 246478
+    },
+    {
+      "timestamp": "2023-10-24",
+      "ticker": "ATAT",
+      "open": 18.72,
+      "high": 19.5,
+      "low": 18.72,
+      "close": 19.02,
+      "volume": 491217
+    },
+    {
+      "timestamp": "2023-10-25",
+      "ticker": "ATAT",
+      "open": 18.99,
+      "high": 18.99,
+      "low": 17.86,
+      "close": 17.98,
+      "volume": 129318
+    },
+    {
+      "timestamp": "2023-10-26",
+      "ticker": "ATAT",
+      "open": 17.91,
+      "high": 18.15,
+      "low": 17.81,
+      "close": 17.93,
+      "volume": 93797
+    },
+    {
+      "timestamp": "2023-10-27",
+      "ticker": "ATAT",
+      "open": 18.23,
+      "high": 18.5,
+      "low": 17.995,
+      "close": 18.47,
+      "volume": 438897
+    },
+    {
+      "timestamp": "2023-10-30",
+      "ticker": "ATAT",
+      "open": 18.76,
+      "high": 19.5,
+      "low": 18.59,
+      "close": 19.4,
+      "volume": 544777
+    },
+    {
+      "timestamp": "2023-10-31",
+      "ticker": "ATAT",
+      "open": 19.27,
+      "high": 19.5,
+      "low": 18.93,
+      "close": 19.06,
+      "volume": 218742
+    },
+    {
+      "timestamp": "2023-11-01",
+      "ticker": "ATAT",
+      "open": 18.97,
+      "high": 19.5,
+      "low": 18.7001,
+      "close": 19.43,
+      "volume": 191878
+    },
+    {
+      "timestamp": "2023-11-02",
+      "ticker": "ATAT",
+      "open": 19.5,
+      "high": 19.5,
+      "low": 18.84,
+      "close": 19.0,
+      "volume": 133934
+    },
+    {
+      "timestamp": "2023-11-03",
+      "ticker": "ATAT",
+      "open": 19.25,
+      "high": 19.58,
+      "low": 19.2,
+      "close": 19.45,
+      "volume": 244996
+    },
+    {
+      "timestamp": "2023-11-06",
+      "ticker": "ATAT",
+      "open": 19.6,
+      "high": 19.6,
+      "low": 18.65,
+      "close": 18.8,
+      "volume": 202154
+    },
+    {
+      "timestamp": "2023-11-07",
+      "ticker": "ATAT",
+      "open": 18.65,
+      "high": 18.92,
+      "low": 18.35,
+      "close": 18.71,
+      "volume": 128696
+    },
+    {
+      "timestamp": "2023-11-08",
+      "ticker": "ATAT",
+      "open": 18.75,
+      "high": 19.45,
+      "low": 18.75,
+      "close": 19.2,
+      "volume": 164401
+    },
+    {
+      "timestamp": "2023-11-09",
+      "ticker": "ATAT",
+      "open": 19.1,
+      "high": 19.1,
+      "low": 18.23,
+      "close": 18.25,
+      "volume": 169838
+    },
+    {
+      "timestamp": "2023-11-10",
+      "ticker": "ATAT",
+      "open": 18.16,
+      "high": 18.88,
+      "low": 18.11,
+      "close": 18.64,
+      "volume": 147864
+    },
+    {
+      "timestamp": "2023-11-13",
+      "ticker": "ATAT",
+      "open": 18.66,
+      "high": 19.6,
+      "low": 18.66,
+      "close": 19.43,
+      "volume": 265486
+    },
+    {
+      "timestamp": "2023-11-14",
+      "ticker": "ATAT",
+      "open": 19.5,
+      "high": 19.6,
+      "low": 18.9,
+      "close": 18.99,
+      "volume": 468477
+    },
+    {
+      "timestamp": "2023-11-15",
+      "ticker": "ATAT",
+      "open": 19.17,
+      "high": 19.7,
+      "low": 19.17,
+      "close": 19.61,
+      "volume": 758868
+    },
+    {
+      "timestamp": "2023-11-16",
+      "ticker": "ATAT",
+      "open": 19.04,
+      "high": 19.3,
+      "low": 18.31,
+      "close": 19.12,
+      "volume": 844637
+    },
+    {
+      "timestamp": "2023-11-17",
+      "ticker": "ATAT",
+      "open": 19.35,
+      "high": 19.68,
+      "low": 18.54,
+      "close": 18.63,
+      "volume": 419521
+    },
+    {
+      "timestamp": "2023-11-20",
+      "ticker": "ATAT",
+      "open": 19.09,
+      "high": 19.505,
+      "low": 18.72,
+      "close": 19.14,
+      "volume": 422107
+    },
+    {
+      "timestamp": "2023-11-21",
+      "ticker": "ATAT",
+      "open": 18.91,
+      "high": 18.985,
+      "low": 18.39,
+      "close": 18.54,
+      "volume": 513589
+    },
+    {
+      "timestamp": "2023-11-22",
+      "ticker": "ATAT",
+      "open": 18.58,
+      "high": 18.99,
+      "low": 18.58,
+      "close": 18.76,
+      "volume": 416296
+    },
+    {
+      "timestamp": "2023-11-24",
+      "ticker": "ATAT",
+      "open": 18.77,
+      "high": 19.07,
+      "low": 18.47,
+      "close": 18.96,
+      "volume": 367511
+    },
+    {
+      "timestamp": "2023-11-27",
+      "ticker": "ATAT",
+      "open": 18.99,
+      "high": 18.99,
+      "low": 18.57,
+      "close": 18.6,
+      "volume": 363539
+    },
+    {
+      "timestamp": "2023-11-28",
+      "ticker": "ATAT",
+      "open": 18.63,
+      "high": 19.07,
+      "low": 18.4,
+      "close": 18.85,
+      "volume": 391895
+    },
+    {
+      "timestamp": "2023-11-29",
+      "ticker": "ATAT",
+      "open": 18.47,
+      "high": 18.56,
+      "low": 17.715,
+      "close": 17.88,
+      "volume": 480765
+    },
+    {
+      "timestamp": "2023-11-30",
+      "ticker": "ATAT",
+      "open": 17.88,
+      "high": 18.035,
+      "low": 17.69,
+      "close": 17.81,
+      "volume": 392238
+    },
+    {
+      "timestamp": "2023-12-01",
+      "ticker": "ATAT",
+      "open": 17.8,
+      "high": 18.04,
+      "low": 17.79,
+      "close": 18.0,
+      "volume": 314600
+    },
+    {
+      "timestamp": "2023-12-04",
+      "ticker": "ATAT",
+      "open": 18.01,
+      "high": 18.01,
+      "low": 16.72,
+      "close": 16.87,
+      "volume": 235310
+    },
+    {
+      "timestamp": "2023-12-05",
+      "ticker": "ATAT",
+      "open": 15.81,
+      "high": 16.55,
+      "low": 15.06,
+      "close": 15.89,
+      "volume": 1474509
+    },
+    {
+      "timestamp": "2023-12-06",
+      "ticker": "ATAT",
+      "open": 16.76,
+      "high": 16.78,
+      "low": 16.0,
+      "close": 16.23,
+      "volume": 3135566
+    },
+    {
+      "timestamp": "2023-12-07",
+      "ticker": "ATAT",
+      "open": 16.4,
+      "high": 16.625,
+      "low": 16.26,
+      "close": 16.52,
+      "volume": 1637564
+    },
+    {
+      "timestamp": "2023-12-08",
+      "ticker": "ATAT",
+      "open": 16.4,
+      "high": 17.02,
+      "low": 16.4,
+      "close": 16.81,
+      "volume": 442934
+    },
+    {
+      "timestamp": "2023-12-11",
+      "ticker": "ATAT",
+      "open": 16.88,
+      "high": 17.04,
+      "low": 16.46,
+      "close": 16.7,
+      "volume": 1406647
+    },
+    {
+      "timestamp": "2023-12-12",
+      "ticker": "ATAT",
+      "open": 16.58,
+      "high": 17.12,
+      "low": 16.5,
+      "close": 16.71,
+      "volume": 708599
+    },
+    {
+      "timestamp": "2023-12-13",
+      "ticker": "ATAT",
+      "open": 16.56,
+      "high": 17.1,
+      "low": 16.5,
+      "close": 17.06,
+      "volume": 519550
+    },
+    {
+      "timestamp": "2023-12-14",
+      "ticker": "ATAT",
+      "open": 17.15,
+      "high": 17.43,
+      "low": 16.925,
+      "close": 16.98,
+      "volume": 690645
+    },
+    {
+      "timestamp": "2023-12-15",
+      "ticker": "ATAT",
+      "open": 17.09,
+      "high": 17.27,
+      "low": 16.77,
+      "close": 17.11,
+      "volume": 501184
+    },
+    {
+      "timestamp": "2023-12-18",
+      "ticker": "ATAT",
+      "open": 17.17,
+      "high": 17.37,
+      "low": 17.05,
+      "close": 17.11,
+      "volume": 411151
+    },
+    {
+      "timestamp": "2023-12-19",
+      "ticker": "ATAT",
+      "open": 17.29,
+      "high": 17.385,
+      "low": 17.19,
+      "close": 17.36,
+      "volume": 228678
+    },
+    {
+      "timestamp": "2023-12-20",
+      "ticker": "ATAT",
+      "open": 17.32,
+      "high": 17.5,
+      "low": 16.93,
+      "close": 16.94,
+      "volume": 385361
+    },
+    {
+      "timestamp": "2023-12-21",
+      "ticker": "ATAT",
+      "open": 17.29,
+      "high": 17.39,
+      "low": 16.785,
+      "close": 17.32,
+      "volume": 339164
+    },
+    {
+      "timestamp": "2023-12-22",
+      "ticker": "ATAT",
+      "open": 17.19,
+      "high": 17.31,
+      "low": 16.67,
+      "close": 17.14,
+      "volume": 470974
+    },
+    {
+      "timestamp": "2023-12-26",
+      "ticker": "ATAT",
+      "open": 17.19,
+      "high": 17.47,
+      "low": 17.01,
+      "close": 17.09,
+      "volume": 579623
+    },
+    {
+      "timestamp": "2023-12-27",
+      "ticker": "ATAT",
+      "open": 17.02,
+      "high": 17.13,
+      "low": 16.75,
+      "close": 17.0,
+      "volume": 657645
+    },
+    {
+      "timestamp": "2023-12-28",
+      "ticker": "ATAT",
+      "open": 17.11,
+      "high": 17.49,
+      "low": 17.06,
+      "close": 17.12,
+      "volume": 622837
+    },
+    {
+      "timestamp": "2023-12-29",
+      "ticker": "ATAT",
+      "open": 17.18,
+      "high": 17.74,
+      "low": 17.18,
+      "close": 17.36,
+      "volume": 318598
+    },
+    {
+      "timestamp": "2024-01-02",
+      "ticker": "ATAT",
+      "open": 17.25,
+      "high": 17.33,
+      "low": 16.69,
+      "close": 16.82,
+      "volume": 331006
+    },
+    {
+      "timestamp": "2024-01-03",
+      "ticker": "ATAT",
+      "open": 16.67,
+      "high": 17.1,
+      "low": 16.62,
+      "close": 16.94,
+      "volume": 435379
+    },
+    {
+      "timestamp": "2024-01-04",
+      "ticker": "ATAT",
+      "open": 16.96,
+      "high": 17.02,
+      "low": 16.25,
+      "close": 16.9,
+      "volume": 967467
+    },
+    {
+      "timestamp": "2024-01-05",
+      "ticker": "ATAT",
+      "open": 16.79,
+      "high": 16.97,
+      "low": 16.56,
+      "close": 16.88,
+      "volume": 524835
+    },
+    {
+      "timestamp": "2024-01-08",
+      "ticker": "ATAT",
+      "open": 16.55,
+      "high": 17.1,
+      "low": 16.31,
+      "close": 16.9,
+      "volume": 514380
+    },
+    {
+      "timestamp": "2024-01-09",
+      "ticker": "ATAT",
+      "open": 16.51,
+      "high": 17.03,
+      "low": 16.5,
+      "close": 16.99,
+      "volume": 750486
+    },
+    {
+      "timestamp": "2024-01-10",
+      "ticker": "ATAT",
+      "open": 16.99,
+      "high": 17.33,
+      "low": 16.94,
+      "close": 16.97,
+      "volume": 322575
+    },
+    {
+      "timestamp": "2024-01-11",
+      "ticker": "ATAT",
+      "open": 16.98,
+      "high": 17.195,
+      "low": 16.955,
+      "close": 17.07,
+      "volume": 229159
+    },
+    {
+      "timestamp": "2024-01-12",
+      "ticker": "ATAT",
+      "open": 17.08,
+      "high": 17.84,
+      "low": 17.08,
+      "close": 17.84,
+      "volume": 308277
+    },
+    {
+      "timestamp": "2024-01-16",
+      "ticker": "ATAT",
+      "open": 17.73,
+      "high": 18.23,
+      "low": 17.5,
+      "close": 17.52,
+      "volume": 577415
+    },
+    {
+      "timestamp": "2024-01-17",
+      "ticker": "ATAT",
+      "open": 16.97,
+      "high": 17.64,
+      "low": 16.53,
+      "close": 17.48,
+      "volume": 614676
+    },
+    {
+      "timestamp": "2024-01-18",
+      "ticker": "ATAT",
+      "open": 17.55,
+      "high": 18.21,
+      "low": 17.55,
+      "close": 18.05,
+      "volume": 547722
+    },
+    {
+      "timestamp": "2024-01-19",
+      "ticker": "ATAT",
+      "open": 18.0,
+      "high": 18.38,
+      "low": 17.72,
+      "close": 18.02,
+      "volume": 291565
+    },
+    {
+      "timestamp": "2024-01-22",
+      "ticker": "ATAT",
+      "open": 17.71,
+      "high": 17.79,
+      "low": 16.7,
+      "close": 17.08,
+      "volume": 678971
+    },
+    {
+      "timestamp": "2024-01-23",
+      "ticker": "ATAT",
+      "open": 17.55,
+      "high": 18.14,
+      "low": 17.495,
+      "close": 17.99,
+      "volume": 577076
+    },
+    {
+      "timestamp": "2024-01-24",
+      "ticker": "ATAT",
+      "open": 18.25,
+      "high": 18.46,
+      "low": 17.97,
+      "close": 18.09,
+      "volume": 420207
+    },
+    {
+      "timestamp": "2024-01-25",
+      "ticker": "ATAT",
+      "open": 18.36,
+      "high": 18.47,
+      "low": 17.94,
+      "close": 17.99,
+      "volume": 194619
+    },
+    {
+      "timestamp": "2024-01-26",
+      "ticker": "ATAT",
+      "open": 17.92,
+      "high": 18.05,
+      "low": 17.74,
+      "close": 17.98,
+      "volume": 188250
+    },
+    {
+      "timestamp": "2024-01-29",
+      "ticker": "ATAT",
+      "open": 18.0,
+      "high": 18.04,
+      "low": 17.27,
+      "close": 17.75,
+      "volume": 235382
+    },
+    {
+      "timestamp": "2024-01-30",
+      "ticker": "ATAT",
+      "open": 17.56,
+      "high": 17.69,
+      "low": 17.11,
+      "close": 17.19,
+      "volume": 231093
+    },
+    {
+      "timestamp": "2024-01-31",
+      "ticker": "ATAT",
+      "open": 17.11,
+      "high": 17.555,
+      "low": 16.89,
+      "close": 17.31,
+      "volume": 249207
+    },
+    {
+      "timestamp": "2024-02-01",
+      "ticker": "ATAT",
+      "open": 17.5,
+      "high": 18.0,
+      "low": 17.44,
+      "close": 18.0,
+      "volume": 173899
+    },
+    {
+      "timestamp": "2024-02-02",
+      "ticker": "ATAT",
+      "open": 17.93,
+      "high": 17.93,
+      "low": 17.57,
+      "close": 17.84,
+      "volume": 432299
+    },
+    {
+      "timestamp": "2024-02-05",
+      "ticker": "ATAT",
+      "open": 17.99,
+      "high": 18.0,
+      "low": 17.66,
+      "close": 17.81,
+      "volume": 346788
+    },
+    {
+      "timestamp": "2024-02-06",
+      "ticker": "ATAT",
+      "open": 18.34,
+      "high": 18.46,
+      "low": 18.03,
+      "close": 18.21,
+      "volume": 426644
+    },
+    {
+      "timestamp": "2024-02-07",
+      "ticker": "ATAT",
+      "open": 17.95,
+      "high": 18.11,
+      "low": 17.68,
+      "close": 18.06,
+      "volume": 198753
+    },
+    {
+      "timestamp": "2024-02-08",
+      "ticker": "ATAT",
+      "open": 18.01,
+      "high": 18.185,
+      "low": 17.895,
+      "close": 18.04,
+      "volume": 105983
+    },
+    {
+      "timestamp": "2024-02-09",
+      "ticker": "ATAT",
+      "open": 18.02,
+      "high": 18.03,
+      "low": 17.665,
+      "close": 18.0,
+      "volume": 264656
+    },
+    {
+      "timestamp": "2024-02-12",
+      "ticker": "ATAT",
+      "open": 18.0,
+      "high": 18.3,
+      "low": 17.93,
+      "close": 18.01,
+      "volume": 143520
+    },
+    {
+      "timestamp": "2024-02-13",
+      "ticker": "ATAT",
+      "open": 17.86,
+      "high": 18.1,
+      "low": 17.69,
+      "close": 17.88,
+      "volume": 326826
+    },
+    {
+      "timestamp": "2024-02-14",
+      "ticker": "ATAT",
+      "open": 18.0,
+      "high": 18.29,
+      "low": 17.98,
+      "close": 18.28,
+      "volume": 182288
+    },
+    {
+      "timestamp": "2024-02-15",
+      "ticker": "ATAT",
+      "open": 18.26,
+      "high": 18.47,
+      "low": 18.19,
+      "close": 18.34,
+      "volume": 309478
+    },
+    {
+      "timestamp": "2024-02-16",
+      "ticker": "ATAT",
+      "open": 18.89,
+      "high": 19.69,
+      "low": 18.72,
+      "close": 19.28,
+      "volume": 1909430
+    },
+    {
+      "timestamp": "2024-02-20",
+      "ticker": "ATAT",
+      "open": 19.26,
+      "high": 19.26,
+      "low": 18.31,
+      "close": 18.57,
+      "volume": 937006
+    },
+    {
+      "timestamp": "2024-02-21",
+      "ticker": "ATAT",
+      "open": 18.85,
+      "high": 19.35,
+      "low": 18.8,
+      "close": 18.98,
+      "volume": 664700
+    },
+    {
+      "timestamp": "2024-02-22",
+      "ticker": "ATAT",
+      "open": 19.11,
+      "high": 19.5,
+      "low": 19.07,
+      "close": 19.4,
+      "volume": 948075
+    },
+    {
+      "timestamp": "2024-02-23",
+      "ticker": "ATAT",
+      "open": 19.59,
+      "high": 19.8,
+      "low": 19.48,
+      "close": 19.58,
+      "volume": 1255567
+    },
+    {
+      "timestamp": "2024-02-26",
+      "ticker": "ATAT",
+      "open": 19.6,
+      "high": 19.7,
+      "low": 19.18,
+      "close": 19.55,
+      "volume": 722864
+    },
+    {
+      "timestamp": "2024-02-27",
+      "ticker": "ATAT",
+      "open": 19.39,
+      "high": 19.7,
+      "low": 19.29,
+      "close": 19.5,
+      "volume": 370568
+    },
+    {
+      "timestamp": "2024-02-28",
+      "ticker": "ATAT",
+      "open": 19.21,
+      "high": 19.5,
+      "low": 19.17,
+      "close": 19.43,
+      "volume": 254101
+    },
+    {
+      "timestamp": "2024-02-29",
+      "ticker": "ATAT",
+      "open": 19.51,
+      "high": 19.56,
+      "low": 19.18,
+      "close": 19.38,
+      "volume": 544601
+    },
+    {
+      "timestamp": "2024-03-01",
+      "ticker": "ATAT",
+      "open": 19.45,
+      "high": 19.55,
+      "low": 19.34,
+      "close": 19.49,
+      "volume": 456424
+    },
+    {
+      "timestamp": "2024-03-04",
+      "ticker": "ATAT",
+      "open": 19.49,
+      "high": 19.49,
+      "low": 19.04,
+      "close": 19.17,
+      "volume": 384680
+    },
+    {
+      "timestamp": "2024-03-05",
+      "ticker": "ATAT",
+      "open": 18.89,
+      "high": 19.0393,
+      "low": 18.0,
+      "close": 18.94,
+      "volume": 331216
+    },
+    {
+      "timestamp": "2024-03-06",
+      "ticker": "ATAT",
+      "open": 19.2,
+      "high": 19.5,
+      "low": 18.8,
+      "close": 18.88,
+      "volume": 406462
+    },
+    {
+      "timestamp": "2024-03-07",
+      "ticker": "ATAT",
+      "open": 18.78,
+      "high": 19.03,
+      "low": 18.09,
+      "close": 18.22,
+      "volume": 370843
+    },
+    {
+      "timestamp": "2024-03-08",
+      "ticker": "ATAT",
+      "open": 18.23,
+      "high": 18.5,
+      "low": 18.01,
+      "close": 18.16,
+      "volume": 263341
+    },
+    {
+      "timestamp": "2024-03-11",
+      "ticker": "ATAT",
+      "open": 18.4,
+      "high": 19.0,
+      "low": 18.3,
+      "close": 18.71,
+      "volume": 223000
+    },
+    {
+      "timestamp": "2024-03-12",
+      "ticker": "ATAT",
+      "open": 19.01,
+      "high": 19.467,
+      "low": 19.0,
+      "close": 19.3,
+      "volume": 357180
+    },
+    {
+      "timestamp": "2024-03-13",
+      "ticker": "ATAT",
+      "open": 19.41,
+      "high": 19.8,
+      "low": 19.245,
+      "close": 19.79,
+      "volume": 665627
+    },
+    {
+      "timestamp": "2024-03-14",
+      "ticker": "ATAT",
+      "open": 19.8,
+      "high": 19.8,
+      "low": 19.355,
+      "close": 19.43,
+      "volume": 897857
+    },
+    {
+      "timestamp": "2024-03-15",
+      "ticker": "ATAT",
+      "open": 19.4,
+      "high": 19.5,
+      "low": 19.17,
+      "close": 19.4,
+      "volume": 2588692
+    },
+    {
+      "timestamp": "2024-03-18",
+      "ticker": "ATAT",
+      "open": 19.39,
+      "high": 19.68,
+      "low": 19.38,
+      "close": 19.68,
+      "volume": 578167
+    },
+    {
+      "timestamp": "2024-03-19",
+      "ticker": "ATAT",
+      "open": 19.43,
+      "high": 19.63,
+      "low": 19.21,
+      "close": 19.31,
+      "volume": 225721
+    },
+    {
+      "timestamp": "2024-03-20",
+      "ticker": "ATAT",
+      "open": 19.48,
+      "high": 19.73,
+      "low": 19.31,
+      "close": 19.45,
+      "volume": 723956
+    },
+    {
+      "timestamp": "2024-03-21",
+      "ticker": "ATAT",
+      "open": 19.4,
+      "high": 19.4,
+      "low": 18.71,
+      "close": 19.09,
+      "volume": 1025528
+    },
+    {
+      "timestamp": "2024-03-22",
+      "ticker": "ATAT",
+      "open": 18.96,
+      "high": 19.08,
+      "low": 18.77,
+      "close": 19.0,
+      "volume": 558277
+    },
+    {
+      "timestamp": "2024-03-25",
+      "ticker": "ATAT",
+      "open": 19.17,
+      "high": 19.34,
+      "low": 19.0,
+      "close": 19.27,
+      "volume": 360450
+    },
+    {
+      "timestamp": "2024-03-26",
+      "ticker": "ATAT",
+      "open": 19.4,
+      "high": 19.5,
+      "low": 19.1,
+      "close": 19.18,
+      "volume": 421450
+    },
+    {
+      "timestamp": "2024-03-27",
+      "ticker": "ATAT",
+      "open": 19.12,
+      "high": 19.28,
+      "low": 18.91,
+      "close": 19.0,
+      "volume": 623311
+    },
+    {
+      "timestamp": "2024-03-28",
+      "ticker": "ATAT",
+      "open": 19.2,
+      "high": 19.4,
+      "low": 17.56,
+      "close": 17.94,
+      "volume": 1600302
+    },
+    {
+      "timestamp": "2024-04-01",
+      "ticker": "ATAT",
+      "open": 18.09,
+      "high": 18.65,
+      "low": 17.79,
+      "close": 18.57,
+      "volume": 1255081
+    },
+    {
+      "timestamp": "2024-04-02",
+      "ticker": "ATAT",
+      "open": 18.66,
+      "high": 19.02,
+      "low": 18.57,
+      "close": 18.98,
+      "volume": 638528
+    },
+    {
+      "timestamp": "2024-04-03",
+      "ticker": "ATAT",
+      "open": 18.9,
+      "high": 19.0,
+      "low": 18.75,
+      "close": 18.98,
+      "volume": 299517
+    },
+    {
+      "timestamp": "2024-04-04",
+      "ticker": "ATAT",
+      "open": 18.86,
+      "high": 18.915,
+      "low": 18.08,
+      "close": 18.21,
+      "volume": 311730
+    },
+    {
+      "timestamp": "2024-04-05",
+      "ticker": "ATAT",
+      "open": 18.46,
+      "high": 18.59,
+      "low": 18.17,
+      "close": 18.37,
+      "volume": 142313
+    },
+    {
+      "timestamp": "2024-04-08",
+      "ticker": "ATAT",
+      "open": 18.5,
+      "high": 18.8,
+      "low": 18.32,
+      "close": 18.43,
+      "volume": 563497
+    },
+    {
+      "timestamp": "2024-04-09",
+      "ticker": "ATAT",
+      "open": 18.5,
+      "high": 18.615,
+      "low": 18.3083,
+      "close": 18.58,
+      "volume": 633877
+    },
+    {
+      "timestamp": "2024-04-10",
+      "ticker": "ATAT",
+      "open": 18.6,
+      "high": 18.65,
+      "low": 18.0,
+      "close": 18.11,
+      "volume": 996526
+    },
+    {
+      "timestamp": "2024-04-11",
+      "ticker": "ATAT",
+      "open": 18.19,
+      "high": 18.42,
+      "low": 18.0,
+      "close": 18.24,
+      "volume": 681550
+    },
+    {
+      "timestamp": "2024-04-12",
+      "ticker": "ATAT",
+      "open": 18.08,
+      "high": 18.08,
+      "low": 17.66,
+      "close": 17.75,
+      "volume": 1334155
+    },
+    {
+      "timestamp": "2024-04-15",
+      "ticker": "ATAT",
+      "open": 17.86,
+      "high": 18.09,
+      "low": 17.22,
+      "close": 17.4,
+      "volume": 547324
+    },
+    {
+      "timestamp": "2024-04-16",
+      "ticker": "ATAT",
+      "open": 17.32,
+      "high": 17.36,
+      "low": 16.78,
+      "close": 17.28,
+      "volume": 1388718
+    },
+    {
+      "timestamp": "2024-04-17",
+      "ticker": "ATAT",
+      "open": 17.36,
+      "high": 17.36,
+      "low": 16.83,
+      "close": 17.02,
+      "volume": 1120995
+    },
+    {
+      "timestamp": "2024-04-18",
+      "ticker": "ATAT",
+      "open": 17.15,
+      "high": 17.72,
+      "low": 17.14,
+      "close": 17.39,
+      "volume": 687863
+    },
+    {
+      "timestamp": "2024-04-19",
+      "ticker": "ATAT",
+      "open": 17.18,
+      "high": 17.4927,
+      "low": 17.16,
+      "close": 17.24,
+      "volume": 541016
+    },
+    {
+      "timestamp": "2024-04-22",
+      "ticker": "ATAT",
+      "open": 17.42,
+      "high": 17.77,
+      "low": 17.4,
+      "close": 17.5,
+      "volume": 328566
+    },
+    {
+      "timestamp": "2024-04-23",
+      "ticker": "ATAT",
+      "open": 17.74,
+      "high": 18.04,
+      "low": 17.74,
+      "close": 17.76,
+      "volume": 828994
+    },
+    {
+      "timestamp": "2024-04-24",
+      "ticker": "ATAT",
+      "open": 18.02,
+      "high": 18.53,
+      "low": 18.0,
+      "close": 18.43,
+      "volume": 1251245
+    },
+    {
+      "timestamp": "2024-04-25",
+      "ticker": "ATAT",
+      "open": 18.4,
+      "high": 18.65,
+      "low": 18.0,
+      "close": 18.41,
+      "volume": 2438215
+    },
+    {
+      "timestamp": "2024-04-26",
+      "ticker": "ATAT",
+      "open": 18.55,
+      "high": 18.86,
+      "low": 18.55,
+      "close": 18.66,
+      "volume": 770928
+    },
+    {
+      "timestamp": "2024-04-29",
+      "ticker": "ATAT",
+      "open": 18.69,
+      "high": 18.69,
+      "low": 17.88,
+      "close": 18.0,
+      "volume": 448632
+    },
+    {
+      "timestamp": "2024-04-30",
+      "ticker": "ATAT",
+      "open": 17.9,
+      "high": 18.06,
+      "low": 17.69,
+      "close": 17.83,
+      "volume": 809016
+    },
+    {
+      "timestamp": "2024-05-01",
+      "ticker": "ATAT",
+      "open": 17.81,
+      "high": 17.92,
+      "low": 17.705,
+      "close": 17.86,
+      "volume": 825125
+    },
+    {
+      "timestamp": "2024-05-02",
+      "ticker": "ATAT",
+      "open": 18.39,
+      "high": 18.96,
+      "low": 18.12,
+      "close": 18.75,
+      "volume": 1129648
+    },
+    {
+      "timestamp": "2024-05-03",
+      "ticker": "ATAT",
+      "open": 18.85,
+      "high": 19.38,
+      "low": 18.56,
+      "close": 19.25,
+      "volume": 711438
+    },
+    {
+      "timestamp": "2024-05-06",
+      "ticker": "ATAT",
+      "open": 19.42,
+      "high": 19.49,
+      "low": 18.83,
+      "close": 19.0,
+      "volume": 742081
+    },
+    {
+      "timestamp": "2024-05-07",
+      "ticker": "ATAT",
+      "open": 18.65,
+      "high": 18.8,
+      "low": 18.4,
+      "close": 18.78,
+      "volume": 933828
+    },
+    {
+      "timestamp": "2024-05-08",
+      "ticker": "ATAT",
+      "open": 18.58,
+      "high": 18.79,
+      "low": 18.19,
+      "close": 18.3,
+      "volume": 779432
+    },
+    {
+      "timestamp": "2024-05-09",
+      "ticker": "ATAT",
+      "open": 18.6,
+      "high": 18.78,
+      "low": 18.35,
+      "close": 18.41,
+      "volume": 532821
+    },
+    {
+      "timestamp": "2024-05-10",
+      "ticker": "ATAT",
+      "open": 18.59,
+      "high": 18.84,
+      "low": 17.87,
+      "close": 17.99,
+      "volume": 826270
+    },
+    {
+      "timestamp": "2024-05-13",
+      "ticker": "ATAT",
+      "open": 18.06,
+      "high": 18.37,
+      "low": 17.95,
+      "close": 18.19,
+      "volume": 592195
+    },
+    {
+      "timestamp": "2024-05-14",
+      "ticker": "ATAT",
+      "open": 18.21,
+      "high": 18.235,
+      "low": 17.92,
+      "close": 18.11,
+      "volume": 564795
+    },
+    {
+      "timestamp": "2024-05-15",
+      "ticker": "ATAT",
+      "open": 18.21,
+      "high": 18.39,
+      "low": 18.01,
+      "close": 18.26,
+      "volume": 366808
+    },
+    {
+      "timestamp": "2024-05-16",
+      "ticker": "ATAT",
+      "open": 18.4,
+      "high": 18.76,
+      "low": 18.15,
+      "close": 18.53,
+      "volume": 501971
+    },
+    {
+      "timestamp": "2024-05-17",
+      "ticker": "ATAT",
+      "open": 18.65,
+      "high": 18.8,
+      "low": 18.22,
+      "close": 18.58,
+      "volume": 463428
+    },
+    {
+      "timestamp": "2024-05-20",
+      "ticker": "ATAT",
+      "open": 18.6,
+      "high": 18.86,
+      "low": 18.17,
+      "close": 18.28,
+      "volume": 500172
+    },
+    {
+      "timestamp": "2024-05-21",
+      "ticker": "ATAT",
+      "open": 18.15,
+      "high": 18.15,
+      "low": 17.61,
+      "close": 17.68,
+      "volume": 765497
+    },
+    {
+      "timestamp": "2024-05-22",
+      "ticker": "ATAT",
+      "open": 17.63,
+      "high": 17.88,
+      "low": 17.45,
+      "close": 17.56,
+      "volume": 986540
+    },
+    {
+      "timestamp": "2024-05-23",
+      "ticker": "ATAT",
+      "open": 17.61,
+      "high": 17.84,
+      "low": 17.07,
+      "close": 17.51,
+      "volume": 1685781
+    },
+    {
+      "timestamp": "2024-05-24",
+      "ticker": "ATAT",
+      "open": 17.5,
+      "high": 17.62,
+      "low": 17.11,
+      "close": 17.59,
+      "volume": 717443
+    },
+    {
+      "timestamp": "2024-05-28",
+      "ticker": "ATAT",
+      "open": 17.6,
+      "high": 17.97,
+      "low": 17.5,
+      "close": 17.86,
+      "volume": 885370
+    },
+    {
+      "timestamp": "2024-05-29",
+      "ticker": "ATAT",
+      "open": 17.72,
+      "high": 17.86,
+      "low": 17.62,
+      "close": 17.8,
+      "volume": 598403
+    },
+    {
+      "timestamp": "2024-05-30",
+      "ticker": "ATAT",
+      "open": 17.73,
+      "high": 17.835,
+      "low": 17.49,
+      "close": 17.62,
+      "volume": 1091844
+    },
+    {
+      "timestamp": "2024-05-31",
+      "ticker": "ATAT",
+      "open": 17.32,
+      "high": 17.89,
+      "low": 17.27,
+      "close": 17.81,
+      "volume": 948609
+    },
+    {
+      "timestamp": "2024-06-03",
+      "ticker": "ATAT",
+      "open": 17.95,
+      "high": 18.13,
+      "low": 17.79,
+      "close": 17.97,
+      "volume": 964241
+    },
+    {
+      "timestamp": "2024-06-04",
+      "ticker": "ATAT",
+      "open": 17.93,
+      "high": 17.99,
+      "low": 17.78,
+      "close": 17.94,
+      "volume": 537660
+    },
+    {
+      "timestamp": "2024-06-05",
+      "ticker": "ATAT",
+      "open": 17.88,
+      "high": 18.05,
+      "low": 17.77,
+      "close": 17.93,
+      "volume": 1076902
+    },
+    {
+      "timestamp": "2024-06-06",
+      "ticker": "ATAT",
+      "open": 17.7,
+      "high": 18.25,
+      "low": 17.7,
+      "close": 18.14,
+      "volume": 509476
+    },
+    {
+      "timestamp": "2024-06-07",
+      "ticker": "ATAT",
+      "open": 18.04,
+      "high": 18.25,
+      "low": 17.82,
+      "close": 17.82,
+      "volume": 425329
+    },
+    {
+      "timestamp": "2024-06-10",
+      "ticker": "ATAT",
+      "open": 17.83,
+      "high": 18.02,
+      "low": 17.8,
+      "close": 17.88,
+      "volume": 326652
+    },
+    {
+      "timestamp": "2024-06-11",
+      "ticker": "ATAT",
+      "open": 17.0,
+      "high": 17.34,
+      "low": 16.86,
+      "close": 17.13,
+      "volume": 2096816
+    },
+    {
+      "timestamp": "2024-06-12",
+      "ticker": "ATAT",
+      "open": 17.2,
+      "high": 17.69,
+      "low": 17.09,
+      "close": 17.41,
+      "volume": 4467866
+    },
+    {
+      "timestamp": "2024-06-13",
+      "ticker": "ATAT",
+      "open": 17.51,
+      "high": 18.02,
+      "low": 17.41,
+      "close": 17.75,
+      "volume": 2809536
+    },
+    {
+      "timestamp": "2024-06-14",
+      "ticker": "ATAT",
+      "open": 17.7,
+      "high": 17.7,
+      "low": 17.04,
+      "close": 17.08,
+      "volume": 1924167
+    },
+    {
+      "timestamp": "2024-06-17",
+      "ticker": "ATAT",
+      "open": 17.21,
+      "high": 18.34,
+      "low": 17.15,
+      "close": 18.31,
+      "volume": 2883500
+    },
+    {
+      "timestamp": "2024-06-18",
+      "ticker": "ATAT",
+      "open": 18.13,
+      "high": 18.27,
+      "low": 17.91,
+      "close": 18.0,
+      "volume": 498814
+    },
+    {
+      "timestamp": "2024-06-20",
+      "ticker": "ATAT",
+      "open": 18.0,
+      "high": 18.45,
+      "low": 17.925,
+      "close": 18.41,
+      "volume": 2037891
+    },
+    {
+      "timestamp": "2024-06-21",
+      "ticker": "ATAT",
+      "open": 18.46,
+      "high": 18.7,
+      "low": 18.13,
+      "close": 18.67,
+      "volume": 1869211
+    },
+    {
+      "timestamp": "2024-06-24",
+      "ticker": "ATAT",
+      "open": 18.66,
+      "high": 18.74,
+      "low": 18.12,
+      "close": 18.23,
+      "volume": 820801
+    },
+    {
+      "timestamp": "2024-06-25",
+      "ticker": "ATAT",
+      "open": 18.22,
+      "high": 18.29,
+      "low": 17.87,
+      "close": 18.01,
+      "volume": 934892
+    },
+    {
+      "timestamp": "2024-06-26",
+      "ticker": "ATAT",
+      "open": 17.93,
+      "high": 18.15,
+      "low": 17.66,
+      "close": 18.07,
+      "volume": 335406
+    },
+    {
+      "timestamp": "2024-06-27",
+      "ticker": "ATAT",
+      "open": 18.05,
+      "high": 18.12,
+      "low": 17.71,
+      "close": 18.02,
+      "volume": 355295
+    },
+    {
+      "timestamp": "2024-06-28",
+      "ticker": "ATAT",
+      "open": 17.93,
+      "high": 18.445,
+      "low": 17.93,
+      "close": 18.35,
+      "volume": 881355
+    },
+    {
+      "timestamp": "2024-07-01",
+      "ticker": "ATAT",
+      "open": 18.65,
+      "high": 19.05,
+      "low": 18.42,
+      "close": 18.67,
+      "volume": 904158
+    },
+    {
+      "timestamp": "2024-07-02",
+      "ticker": "ATAT",
+      "open": 18.83,
+      "high": 18.95,
+      "low": 18.59,
+      "close": 18.82,
+      "volume": 576068
+    },
+    {
+      "timestamp": "2024-07-03",
+      "ticker": "ATAT",
+      "open": 18.82,
+      "high": 19.01,
+      "low": 18.8,
+      "close": 18.82,
+      "volume": 525904
+    },
+    {
+      "timestamp": "2024-07-05",
+      "ticker": "ATAT",
+      "open": 18.66,
+      "high": 18.73,
+      "low": 18.41,
+      "close": 18.64,
+      "volume": 559301
+    },
+    {
+      "timestamp": "2024-07-08",
+      "ticker": "ATAT",
+      "open": 18.72,
+      "high": 18.99,
+      "low": 18.38,
+      "close": 18.82,
+      "volume": 902789
+    },
+    {
+      "timestamp": "2024-07-09",
+      "ticker": "ATAT",
+      "open": 18.76,
+      "high": 18.97,
+      "low": 18.67,
+      "close": 18.89,
+      "volume": 1512052
+    },
+    {
+      "timestamp": "2024-07-10",
+      "ticker": "ATAT",
+      "open": 18.87,
+      "high": 18.98,
+      "low": 18.75,
+      "close": 18.89,
+      "volume": 2654123
+    },
+    {
+      "timestamp": "2024-07-11",
+      "ticker": "ATAT",
+      "open": 18.99,
+      "high": 19.21,
+      "low": 18.84,
+      "close": 18.95,
+      "volume": 2060646
+    },
+    {
+      "timestamp": "2024-07-12",
+      "ticker": "ATAT",
+      "open": 19.0,
+      "high": 19.1,
+      "low": 18.85,
+      "close": 18.98,
+      "volume": 955364
+    },
+    {
+      "timestamp": "2024-07-15",
+      "ticker": "ATAT",
+      "open": 18.98,
+      "high": 18.98,
+      "low": 17.842,
+      "close": 18.09,
+      "volume": 1185206
+    },
+    {
+      "timestamp": "2024-07-16",
+      "ticker": "ATAT",
+      "open": 17.98,
+      "high": 18.25,
+      "low": 17.52,
+      "close": 17.73,
+      "volume": 1030138
+    },
+    {
+      "timestamp": "2024-07-17",
+      "ticker": "ATAT",
+      "open": 17.65,
+      "high": 17.995,
+      "low": 17.58,
+      "close": 17.76,
+      "volume": 645004
+    },
+    {
+      "timestamp": "2024-07-18",
+      "ticker": "ATAT",
+      "open": 17.77,
+      "high": 17.95,
+      "low": 17.35,
+      "close": 17.44,
+      "volume": 834917
+    },
+    {
+      "timestamp": "2024-07-19",
+      "ticker": "ATAT",
+      "open": 17.34,
+      "high": 17.535,
+      "low": 16.9,
+      "close": 16.93,
+      "volume": 914039
+    },
+    {
+      "timestamp": "2024-07-22",
+      "ticker": "ATAT",
+      "open": 17.1,
+      "high": 17.53,
+      "low": 16.965,
+      "close": 17.42,
+      "volume": 891279
+    },
+    {
+      "timestamp": "2024-07-23",
+      "ticker": "ATAT",
+      "open": 17.18,
+      "high": 17.21,
+      "low": 17.01,
+      "close": 17.09,
+      "volume": 571811
+    },
+    {
+      "timestamp": "2024-07-24",
+      "ticker": "ATAT",
+      "open": 17.1,
+      "high": 17.268,
+      "low": 16.73,
+      "close": 16.8,
+      "volume": 683526
+    },
+    {
+      "timestamp": "2024-07-25",
+      "ticker": "ATAT",
+      "open": 16.83,
+      "high": 17.04,
+      "low": 16.61,
+      "close": 16.61,
+      "volume": 570992
+    },
+    {
+      "timestamp": "2024-07-26",
+      "ticker": "ATAT",
+      "open": 16.56,
+      "high": 16.93,
+      "low": 16.56,
+      "close": 16.8,
+      "volume": 409521
+    },
+    {
+      "timestamp": "2024-07-29",
+      "ticker": "ATAT",
+      "open": 16.8,
+      "high": 17.2,
+      "low": 16.65,
+      "close": 16.76,
+      "volume": 668590
+    },
+    {
+      "timestamp": "2024-07-30",
+      "ticker": "ATAT",
+      "open": 16.73,
+      "high": 16.83,
+      "low": 16.3002,
+      "close": 16.49,
+      "volume": 1221051
+    },
+    {
+      "timestamp": "2024-07-31",
+      "ticker": "ATAT",
+      "open": 17.0,
+      "high": 17.0,
+      "low": 16.68,
+      "close": 16.74,
+      "volume": 806714
+    },
+    {
+      "timestamp": "2024-08-01",
+      "ticker": "ATAT",
+      "open": 16.6,
+      "high": 16.6,
+      "low": 15.63,
+      "close": 15.72,
+      "volume": 914385
+    },
+    {
+      "timestamp": "2024-08-02",
+      "ticker": "ATAT",
+      "open": 15.72,
+      "high": 16.09,
+      "low": 15.53,
+      "close": 15.84,
+      "volume": 608406
+    },
+    {
+      "timestamp": "2024-08-05",
+      "ticker": "ATAT",
+      "open": 15.27,
+      "high": 16.21,
+      "low": 15.22,
+      "close": 16.16,
+      "volume": 1076399
+    },
+    {
+      "timestamp": "2024-08-06",
+      "ticker": "ATAT",
+      "open": 16.04,
+      "high": 16.86,
+      "low": 16.04,
+      "close": 16.68,
+      "volume": 588427
+    },
+    {
+      "timestamp": "2024-08-07",
+      "ticker": "ATAT",
+      "open": 16.83,
+      "high": 16.96,
+      "low": 16.08,
+      "close": 16.17,
+      "volume": 272673
+    },
+    {
+      "timestamp": "2024-08-08",
+      "ticker": "ATAT",
+      "open": 16.23,
+      "high": 16.78,
+      "low": 16.112,
+      "close": 16.77,
+      "volume": 674085
+    },
+    {
+      "timestamp": "2024-08-09",
+      "ticker": "ATAT",
+      "open": 16.61,
+      "high": 16.95,
+      "low": 16.53,
+      "close": 16.69,
+      "volume": 203601
+    },
+    {
+      "timestamp": "2024-08-12",
+      "ticker": "ATAT",
+      "open": 16.69,
+      "high": 17.105,
+      "low": 16.62,
+      "close": 17.03,
+      "volume": 459128
+    },
+    {
+      "timestamp": "2024-08-13",
+      "ticker": "ATAT",
+      "open": 17.21,
+      "high": 17.54,
+      "low": 17.175,
+      "close": 17.5,
+      "volume": 1350877
+    },
+    {
+      "timestamp": "2024-08-14",
+      "ticker": "ATAT",
+      "open": 17.5,
+      "high": 17.56,
+      "low": 16.79,
+      "close": 17.08,
+      "volume": 386101
+    },
+    {
+      "timestamp": "2024-08-15",
+      "ticker": "ATAT",
+      "open": 17.2,
+      "high": 17.34,
+      "low": 16.965,
+      "close": 17.17,
+      "volume": 580533
+    },
+    {
+      "timestamp": "2024-08-16",
+      "ticker": "ATAT",
+      "open": 17.17,
+      "high": 17.36,
+      "low": 17.08,
+      "close": 17.27,
+      "volume": 1041198
+    },
+    {
+      "timestamp": "2024-08-19",
+      "ticker": "ATAT",
+      "open": 17.4,
+      "high": 17.86,
+      "low": 17.365,
+      "close": 17.8,
+      "volume": 584884
+    },
+    {
+      "timestamp": "2024-08-20",
+      "ticker": "ATAT",
+      "open": 17.72,
+      "high": 17.72,
+      "low": 17.16,
+      "close": 17.34,
+      "volume": 985700
+    },
+    {
+      "timestamp": "2024-08-21",
+      "ticker": "ATAT",
+      "open": 17.37,
+      "high": 17.68,
+      "low": 17.37,
+      "close": 17.57,
+      "volume": 889562
+    },
+    {
+      "timestamp": "2024-08-22",
+      "ticker": "ATAT",
+      "open": 17.57,
+      "high": 17.81,
+      "low": 17.39,
+      "close": 17.41,
+      "volume": 437649
+    },
+    {
+      "timestamp": "2024-08-23",
+      "ticker": "ATAT",
+      "open": 17.48,
+      "high": 17.59,
+      "low": 17.4032,
+      "close": 17.52,
+      "volume": 313534
+    },
+    {
+      "timestamp": "2024-08-26",
+      "ticker": "ATAT",
+      "open": 17.25,
+      "high": 17.48,
+      "low": 16.79,
+      "close": 16.84,
+      "volume": 1001354
+    },
+    {
+      "timestamp": "2024-08-27",
+      "ticker": "ATAT",
+      "open": 17.0,
+      "high": 17.175,
+      "low": 16.84,
+      "close": 17.07,
+      "volume": 253546
+    },
+    {
+      "timestamp": "2024-08-28",
+      "ticker": "ATAT",
+      "open": 16.87,
+      "high": 16.985,
+      "low": 16.17,
+      "close": 16.52,
+      "volume": 1045576
+    },
+    {
+      "timestamp": "2024-08-29",
+      "ticker": "ATAT",
+      "open": 17.4,
+      "high": 18.87,
+      "low": 17.4,
+      "close": 18.72,
+      "volume": 2049251
+    },
+    {
+      "timestamp": "2024-08-30",
+      "ticker": "ATAT",
+      "open": 18.81,
+      "high": 19.2,
+      "low": 18.37,
+      "close": 19.02,
+      "volume": 2486591
+    },
+    {
+      "timestamp": "2024-09-03",
+      "ticker": "ATAT",
+      "open": 19.0,
+      "high": 19.1,
+      "low": 18.825,
+      "close": 18.95,
+      "volume": 1574980
+    },
+    {
+      "timestamp": "2024-09-04",
+      "ticker": "ATAT",
+      "open": 18.98,
+      "high": 19.2,
+      "low": 18.89,
+      "close": 19.04,
+      "volume": 937758
+    },
+    {
+      "timestamp": "2024-09-05",
+      "ticker": "ATAT",
+      "open": 19.06,
+      "high": 19.5,
+      "low": 18.8103,
+      "close": 19.36,
+      "volume": 1635127
+    },
+    {
+      "timestamp": "2024-09-06",
+      "ticker": "ATAT",
+      "open": 19.49,
+      "high": 19.77,
+      "low": 19.32,
+      "close": 19.45,
+      "volume": 3256455
+    },
+    {
+      "timestamp": "2024-09-09",
+      "ticker": "ATAT",
+      "open": 19.39,
+      "high": 19.6,
+      "low": 18.95,
+      "close": 19.0,
+      "volume": 1217938
+    },
+    {
+      "timestamp": "2024-09-10",
+      "ticker": "ATAT",
+      "open": 19.11,
+      "high": 19.5,
+      "low": 19.105,
+      "close": 19.49,
+      "volume": 1708118
+    },
+    {
+      "timestamp": "2024-09-11",
+      "ticker": "ATAT",
+      "open": 19.56,
+      "high": 20.27,
+      "low": 19.5331,
+      "close": 20.05,
+      "volume": 1927282
+    },
+    {
+      "timestamp": "2024-09-12",
+      "ticker": "ATAT",
+      "open": 20.0,
+      "high": 20.31,
+      "low": 19.83,
+      "close": 20.29,
+      "volume": 908527
+    },
+    {
+      "timestamp": "2024-09-13",
+      "ticker": "ATAT",
+      "open": 20.35,
+      "high": 20.35,
+      "low": 19.5426,
+      "close": 19.65,
+      "volume": 544475
+    },
+    {
+      "timestamp": "2024-09-16",
+      "ticker": "ATAT",
+      "open": 19.91,
+      "high": 20.24,
+      "low": 19.7,
+      "close": 20.19,
+      "volume": 729248
+    },
+    {
+      "timestamp": "2024-09-17",
+      "ticker": "ATAT",
+      "open": 19.99,
+      "high": 20.46,
+      "low": 19.85,
+      "close": 20.4,
+      "volume": 647170
+    },
+    {
+      "timestamp": "2024-09-18",
+      "ticker": "ATAT",
+      "open": 20.4,
+      "high": 20.47,
+      "low": 20.04,
+      "close": 20.35,
+      "volume": 764791
+    },
+    {
+      "timestamp": "2024-09-19",
+      "ticker": "ATAT",
+      "open": 20.8,
+      "high": 21.35,
+      "low": 20.535,
+      "close": 21.25,
+      "volume": 2222911
+    },
+    {
+      "timestamp": "2024-09-20",
+      "ticker": "ATAT",
+      "open": 21.22,
+      "high": 21.5,
+      "low": 20.995,
+      "close": 21.22,
+      "volume": 1030583
+    },
+    {
+      "timestamp": "2024-09-23",
+      "ticker": "ATAT",
+      "open": 21.4,
+      "high": 21.44,
+      "low": 21.0,
+      "close": 21.31,
+      "volume": 2570735
+    },
+    {
+      "timestamp": "2024-09-24",
+      "ticker": "ATAT",
+      "open": 22.72,
+      "high": 22.72,
+      "low": 21.8,
+      "close": 22.37,
+      "volume": 1687886
+    },
+    {
+      "timestamp": "2024-09-25",
+      "ticker": "ATAT",
+      "open": 21.96,
+      "high": 22.54,
+      "low": 21.94,
+      "close": 22.54,
+      "volume": 726142
+    },
+    {
+      "timestamp": "2024-09-26",
+      "ticker": "ATAT",
+      "open": 24.8,
+      "high": 26.16,
+      "low": 24.485,
+      "close": 25.34,
+      "volume": 3744878
+    },
+    {
+      "timestamp": "2024-09-27",
+      "ticker": "ATAT",
+      "open": 25.52,
+      "high": 26.09,
+      "low": 25.11,
+      "close": 25.38,
+      "volume": 2405399
+    },
+    {
+      "timestamp": "2024-09-30",
+      "ticker": "ATAT",
+      "open": 26.88,
+      "high": 26.9,
+      "low": 25.61,
+      "close": 25.94,
+      "volume": 2435470
+    },
+    {
+      "timestamp": "2024-10-01",
+      "ticker": "ATAT",
+      "open": 25.86,
+      "high": 26.13,
+      "low": 25.35,
+      "close": 26.04,
+      "volume": 2668884
+    },
+    {
+      "timestamp": "2024-10-02",
+      "ticker": "ATAT",
+      "open": 26.76,
+      "high": 27.65,
+      "low": 26.645,
+      "close": 27.65,
+      "volume": 2821502
+    },
+    {
+      "timestamp": "2024-10-03",
+      "ticker": "ATAT",
+      "open": 26.57,
+      "high": 27.57,
+      "low": 26.52,
+      "close": 27.29,
+      "volume": 1325860
+    },
+    {
+      "timestamp": "2024-10-04",
+      "ticker": "ATAT",
+      "open": 27.8,
+      "high": 27.9878,
+      "low": 27.47,
+      "close": 27.89,
+      "volume": 1085414
+    },
+    {
+      "timestamp": "2024-10-07",
+      "ticker": "ATAT",
+      "open": 28.49,
+      "high": 29.15,
+      "low": 28.1075,
+      "close": 29.08,
+      "volume": 2057011
+    },
+    {
+      "timestamp": "2024-10-08",
+      "ticker": "ATAT",
+      "open": 26.28,
+      "high": 28.02,
+      "low": 25.572,
+      "close": 27.99,
+      "volume": 1986469
+    },
+    {
+      "timestamp": "2024-10-09",
+      "ticker": "ATAT",
+      "open": 26.85,
+      "high": 27.91,
+      "low": 26.295,
+      "close": 27.86,
+      "volume": 1094781
+    },
+    {
+      "timestamp": "2024-10-10",
+      "ticker": "ATAT",
+      "open": 27.77,
+      "high": 28.08,
+      "low": 27.595,
+      "close": 27.83,
+      "volume": 1004085
+    },
+    {
+      "timestamp": "2024-10-11",
+      "ticker": "ATAT",
+      "open": 27.23,
+      "high": 28.065,
+      "low": 26.79,
+      "close": 27.43,
+      "volume": 854569
+    },
+    {
+      "timestamp": "2024-10-14",
+      "ticker": "ATAT",
+      "open": 27.09,
+      "high": 28.07,
+      "low": 27.02,
+      "close": 27.95,
+      "volume": 1245462
+    },
+    {
+      "timestamp": "2024-10-15",
+      "ticker": "ATAT",
+      "open": 27.3,
+      "high": 27.3,
+      "low": 26.29,
+      "close": 26.97,
+      "volume": 1395527
+    },
+    {
+      "timestamp": "2024-10-16",
+      "ticker": "ATAT",
+      "open": 27.05,
+      "high": 27.72,
+      "low": 26.925,
+      "close": 26.94,
+      "volume": 798370
+    },
+    {
+      "timestamp": "2024-10-17",
+      "ticker": "ATAT",
+      "open": 26.48,
+      "high": 26.93,
+      "low": 25.94,
+      "close": 26.03,
+      "volume": 734946
+    },
+    {
+      "timestamp": "2024-10-18",
+      "ticker": "ATAT",
+      "open": 27.33,
+      "high": 27.7,
+      "low": 26.7212,
+      "close": 26.93,
+      "volume": 871764
+    },
+    {
+      "timestamp": "2024-10-21",
+      "ticker": "ATAT",
+      "open": 26.8,
+      "high": 27.25,
+      "low": 26.67,
+      "close": 26.92,
+      "volume": 581983
+    },
+    {
+      "timestamp": "2024-10-22",
+      "ticker": "ATAT",
+      "open": 27.02,
+      "high": 28.42,
+      "low": 26.87,
+      "close": 26.96,
+      "volume": 1882191
+    },
+    {
+      "timestamp": "2024-10-23",
+      "ticker": "ATAT",
+      "open": 27.0,
+      "high": 27.07,
+      "low": 26.24,
+      "close": 26.46,
+      "volume": 1095848
+    },
+    {
+      "timestamp": "2024-10-24",
+      "ticker": "ATAT",
+      "open": 26.5,
+      "high": 26.55,
+      "low": 26.06,
+      "close": 26.17,
+      "volume": 665158
+    },
+    {
+      "timestamp": "2024-10-25",
+      "ticker": "ATAT",
+      "open": 26.24,
+      "high": 26.36,
+      "low": 25.68,
+      "close": 25.97,
+      "volume": 799165
+    },
+    {
+      "timestamp": "2024-10-28",
+      "ticker": "ATAT",
+      "open": 26.79,
+      "high": 27.6799,
+      "low": 26.24,
+      "close": 27.36,
+      "volume": 1018820
+    },
+    {
+      "timestamp": "2024-10-29",
+      "ticker": "ATAT",
+      "open": 27.8,
+      "high": 27.81,
+      "low": 27.27,
+      "close": 27.5,
+      "volume": 538277
+    },
+    {
+      "timestamp": "2024-10-30",
+      "ticker": "ATAT",
+      "open": 27.12,
+      "high": 27.435,
+      "low": 26.125,
+      "close": 26.47,
+      "volume": 963493
+    },
+    {
+      "timestamp": "2024-10-31",
+      "ticker": "ATAT",
+      "open": 26.47,
+      "high": 26.62,
+      "low": 25.81,
+      "close": 26.2,
+      "volume": 748048
+    },
+    {
+      "timestamp": "2024-11-01",
+      "ticker": "ATAT",
+      "open": 26.26,
+      "high": 26.53,
+      "low": 25.8,
+      "close": 26.07,
+      "volume": 648154
+    },
+    {
+      "timestamp": "2024-11-04",
+      "ticker": "ATAT",
+      "open": 26.1,
+      "high": 27.48,
+      "low": 26.1,
+      "close": 26.29,
+      "volume": 716915
+    },
+    {
+      "timestamp": "2024-11-05",
+      "ticker": "ATAT",
+      "open": 26.8,
+      "high": 27.19,
+      "low": 26.22,
+      "close": 26.68,
+      "volume": 554662
+    },
+    {
+      "timestamp": "2024-11-06",
+      "ticker": "ATAT",
+      "open": 26.16,
+      "high": 26.55,
+      "low": 24.69,
+      "close": 26.4,
+      "volume": 1125283
+    },
+    {
+      "timestamp": "2024-11-07",
+      "ticker": "ATAT",
+      "open": 27.56,
+      "high": 27.8799,
+      "low": 26.66,
+      "close": 26.7,
+      "volume": 1341089
+    },
+    {
+      "timestamp": "2024-11-08",
+      "ticker": "ATAT",
+      "open": 25.95,
+      "high": 26.67,
+      "low": 25.82,
+      "close": 26.55,
+      "volume": 872385
+    },
+    {
+      "timestamp": "2024-11-11",
+      "ticker": "ATAT",
+      "open": 26.96,
+      "high": 27.18,
+      "low": 26.47,
+      "close": 26.79,
+      "volume": 557990
+    },
+    {
+      "timestamp": "2024-11-12",
+      "ticker": "ATAT",
+      "open": 26.23,
+      "high": 27.68,
+      "low": 26.05,
+      "close": 27.22,
+      "volume": 1624490
+    },
+    {
+      "timestamp": "2024-11-13",
+      "ticker": "ATAT",
+      "open": 27.22,
+      "high": 27.3,
+      "low": 25.97,
+      "close": 26.65,
+      "volume": 2017060
+    },
+    {
+      "timestamp": "2024-11-14",
+      "ticker": "ATAT",
+      "open": 26.73,
+      "high": 26.7809,
+      "low": 26.06,
+      "close": 26.11,
+      "volume": 1221709
+    },
+    {
+      "timestamp": "2024-11-15",
+      "ticker": "ATAT",
+      "open": 26.08,
+      "high": 26.42,
+      "low": 25.58,
+      "close": 26.0,
+      "volume": 983194
+    },
+    {
+      "timestamp": "2024-11-18",
+      "ticker": "ATAT",
+      "open": 26.35,
+      "high": 27.24,
+      "low": 26.26,
+      "close": 27.09,
+      "volume": 1818886
+    },
+    {
+      "timestamp": "2024-11-19",
+      "ticker": "ATAT",
+      "open": 27.7,
+      "high": 27.9,
+      "low": 24.8101,
+      "close": 25.55,
+      "volume": 1669739
+    },
+    {
+      "timestamp": "2024-11-20",
+      "ticker": "ATAT",
+      "open": 26.27,
+      "high": 26.89,
+      "low": 25.1891,
+      "close": 25.82,
+      "volume": 1185224
+    },
+    {
+      "timestamp": "2024-11-21",
+      "ticker": "ATAT",
+      "open": 25.99,
+      "high": 25.99,
+      "low": 25.03,
+      "close": 25.35,
+      "volume": 1103019
+    },
+    {
+      "timestamp": "2024-11-22",
+      "ticker": "ATAT",
+      "open": 24.75,
+      "high": 25.52,
+      "low": 24.074,
+      "close": 25.27,
+      "volume": 1393553
+    },
+    {
+      "timestamp": "2024-11-25",
+      "ticker": "ATAT",
+      "open": 24.68,
+      "high": 25.95,
+      "low": 24.65,
+      "close": 25.92,
+      "volume": 1761257
+    },
+    {
+      "timestamp": "2024-11-26",
+      "ticker": "ATAT",
+      "open": 26.08,
+      "high": 26.125,
+      "low": 24.84,
+      "close": 25.0,
+      "volume": 981368
+    },
+    {
+      "timestamp": "2024-11-27",
+      "ticker": "ATAT",
+      "open": 25.3,
+      "high": 25.77,
+      "low": 24.78,
+      "close": 24.83,
+      "volume": 2527755
+    },
+    {
+      "timestamp": "2024-11-29",
+      "ticker": "ATAT",
+      "open": 24.83,
+      "high": 25.63,
+      "low": 24.49,
+      "close": 25.15,
+      "volume": 1461412
+    },
+    {
+      "timestamp": "2024-12-02",
+      "ticker": "ATAT",
+      "open": 25.19,
+      "high": 25.65,
+      "low": 25.02,
+      "close": 25.21,
+      "volume": 1333936
+    },
+    {
+      "timestamp": "2024-12-03",
+      "ticker": "ATAT",
+      "open": 25.4,
+      "high": 26.68,
+      "low": 25.36,
+      "close": 25.96,
+      "volume": 2450398
+    },
+    {
+      "timestamp": "2024-12-04",
+      "ticker": "ATAT",
+      "open": 26.21,
+      "high": 26.59,
+      "low": 25.68,
+      "close": 26.55,
+      "volume": 1280395
+    },
+    {
+      "timestamp": "2024-12-05",
+      "ticker": "ATAT",
+      "open": 26.98,
+      "high": 27.05,
+      "low": 26.11,
+      "close": 26.29,
+      "volume": 1589246
+    },
+    {
+      "timestamp": "2024-12-06",
+      "ticker": "ATAT",
+      "open": 26.43,
+      "high": 27.2499,
+      "low": 26.25,
+      "close": 26.49,
+      "volume": 655333
+    },
+    {
+      "timestamp": "2024-12-09",
+      "ticker": "ATAT",
+      "open": 28.19,
+      "high": 29.9,
+      "low": 27.315,
+      "close": 29.45,
+      "volume": 3829762
+    },
+    {
+      "timestamp": "2024-12-10",
+      "ticker": "ATAT",
+      "open": 28.63,
+      "high": 28.72,
+      "low": 26.75,
+      "close": 27.32,
+      "volume": 2239872
+    },
+    {
+      "timestamp": "2024-12-11",
+      "ticker": "ATAT",
+      "open": 27.77,
+      "high": 27.91,
+      "low": 26.77,
+      "close": 27.78,
+      "volume": 2058983
+    },
+    {
+      "timestamp": "2024-12-12",
+      "ticker": "ATAT",
+      "open": 27.9,
+      "high": 28.85,
+      "low": 27.41,
+      "close": 27.985,
+      "volume": 1339078
+    },
+    {
+      "timestamp": "2024-12-13",
+      "ticker": "ATAT",
+      "open": 28.0,
+      "high": 28.0,
+      "low": 26.84,
+      "close": 27.01,
+      "volume": 1743203
+    },
+    {
+      "timestamp": "2024-12-16",
+      "ticker": "ATAT",
+      "open": 26.94,
+      "high": 27.67,
+      "low": 26.5,
+      "close": 26.97,
+      "volume": 678757
+    },
+    {
+      "timestamp": "2024-12-17",
+      "ticker": "ATAT",
+      "open": 26.95,
+      "high": 28.66,
+      "low": 26.95,
+      "close": 28.21,
+      "volume": 1454598
+    },
+    {
+      "timestamp": "2024-12-18",
+      "ticker": "ATAT",
+      "open": 28.11,
+      "high": 28.78,
+      "low": 27.24,
+      "close": 27.31,
+      "volume": 911340
+    },
+    {
+      "timestamp": "2024-12-19",
+      "ticker": "ATAT",
+      "open": 27.45,
+      "high": 27.92,
+      "low": 27.17,
+      "close": 27.32,
+      "volume": 1178246
+    },
+    {
+      "timestamp": "2024-12-20",
+      "ticker": "ATAT",
+      "open": 27.32,
+      "high": 28.14,
+      "low": 27.08,
+      "close": 27.99,
+      "volume": 837982
+    },
+    {
+      "timestamp": "2024-12-23",
+      "ticker": "ATAT",
+      "open": 28.41,
+      "high": 28.59,
+      "low": 27.6,
+      "close": 28.09,
+      "volume": 1205926
+    },
+    {
+      "timestamp": "2024-12-24",
+      "ticker": "ATAT",
+      "open": 28.28,
+      "high": 29.79,
+      "low": 28.0,
+      "close": 29.09,
+      "volume": 1301469
+    },
+    {
+      "timestamp": "2024-12-26",
+      "ticker": "ATAT",
+      "open": 29.2,
+      "high": 29.65,
+      "low": 28.66,
+      "close": 28.77,
+      "volume": 687937
+    },
+    {
+      "timestamp": "2024-12-27",
+      "ticker": "ATAT",
+      "open": 28.55,
+      "high": 28.67,
+      "low": 26.87,
+      "close": 27.0,
+      "volume": 1208871
+    },
+    {
+      "timestamp": "2024-12-30",
+      "ticker": "ATAT",
+      "open": 26.55,
+      "high": 26.65,
+      "low": 25.68,
+      "close": 26.56,
+      "volume": 874874
+    },
+    {
+      "timestamp": "2024-12-31",
+      "ticker": "ATAT",
+      "open": 26.71,
+      "high": 27.0,
+      "low": 26.5153,
+      "close": 26.89,
+      "volume": 1086178
+    },
+    {
+      "timestamp": "2025-01-02",
+      "ticker": "ATAT",
+      "open": 26.59,
+      "high": 27.38,
+      "low": 26.5,
+      "close": 27.02,
+      "volume": 747986
+    },
+    {
+      "timestamp": "2025-01-03",
+      "ticker": "ATAT",
+      "open": 27.5,
+      "high": 27.76,
+      "low": 26.53,
+      "close": 26.55,
+      "volume": 701100
+    },
+    {
+      "timestamp": "2025-01-06",
+      "ticker": "ATAT",
+      "open": 26.88,
+      "high": 26.93,
+      "low": 25.35,
+      "close": 25.53,
+      "volume": 1257020
+    },
+    {
+      "timestamp": "2025-01-07",
+      "ticker": "ATAT",
+      "open": 25.11,
+      "high": 25.39,
+      "low": 24.83,
+      "close": 25.2,
+      "volume": 1385671
+    },
+    {
+      "timestamp": "2025-01-08",
+      "ticker": "ATAT",
+      "open": 25.2,
+      "high": 26.03,
+      "low": 25.035,
+      "close": 25.83,
+      "volume": 1119289
+    },
+    {
+      "timestamp": "2025-01-10",
+      "ticker": "ATAT",
+      "open": 25.59,
+      "high": 25.71,
+      "low": 25.0,
+      "close": 25.26,
+      "volume": 565067
+    },
+    {
+      "timestamp": "2025-01-13",
+      "ticker": "ATAT",
+      "open": 25.15,
+      "high": 25.36,
+      "low": 24.86,
+      "close": 24.99,
+      "volume": 384098
+    },
+    {
+      "timestamp": "2025-01-14",
+      "ticker": "ATAT",
+      "open": 25.32,
+      "high": 26.04,
+      "low": 25.0,
+      "close": 25.2,
+      "volume": 789352
+    },
+    {
+      "timestamp": "2025-01-15",
+      "ticker": "ATAT",
+      "open": 25.24,
+      "high": 25.9,
+      "low": 25.19,
+      "close": 25.35,
+      "volume": 496374
+    },
+    {
+      "timestamp": "2025-01-16",
+      "ticker": "ATAT",
+      "open": 25.5,
+      "high": 25.54,
+      "low": 24.92,
+      "close": 25.33,
+      "volume": 578041
+    },
+    {
+      "timestamp": "2025-01-17",
+      "ticker": "ATAT",
+      "open": 25.51,
+      "high": 26.385,
+      "low": 25.33,
+      "close": 25.85,
+      "volume": 685579
+    },
+    {
+      "timestamp": "2025-01-21",
+      "ticker": "ATAT",
+      "open": 26.35,
+      "high": 26.94,
+      "low": 25.61,
+      "close": 26.44,
+      "volume": 687003
+    },
+    {
+      "timestamp": "2025-01-22",
+      "ticker": "ATAT",
+      "open": 26.65,
+      "high": 26.65,
+      "low": 25.81,
+      "close": 26.22,
+      "volume": 471698
+    },
+    {
+      "timestamp": "2025-01-23",
+      "ticker": "ATAT",
+      "open": 26.0,
+      "high": 26.42,
+      "low": 25.85,
+      "close": 26.15,
+      "volume": 613645
+    },
+    {
+      "timestamp": "2025-01-24",
+      "ticker": "ATAT",
+      "open": 26.25,
+      "high": 27.58,
+      "low": 25.92,
+      "close": 27.31,
+      "volume": 1148945
+    },
+    {
+      "timestamp": "2025-01-27",
+      "ticker": "ATAT",
+      "open": 26.99,
+      "high": 27.63,
+      "low": 26.805,
+      "close": 27.09,
+      "volume": 859907
+    },
+    {
+      "timestamp": "2025-01-28",
+      "ticker": "ATAT",
+      "open": 26.97,
+      "high": 27.58,
+      "low": 26.55,
+      "close": 27.49,
+      "volume": 662461
+    },
+    {
+      "timestamp": "2025-01-29",
+      "ticker": "ATAT",
+      "open": 27.85,
+      "high": 28.2122,
+      "low": 27.02,
+      "close": 27.31,
+      "volume": 471403
+    },
+    {
+      "timestamp": "2025-01-30",
+      "ticker": "ATAT",
+      "open": 27.49,
+      "high": 28.82,
+      "low": 27.49,
+      "close": 28.2,
+      "volume": 902013
+    },
+    {
+      "timestamp": "2025-01-31",
+      "ticker": "ATAT",
+      "open": 28.2,
+      "high": 28.4,
+      "low": 27.035,
+      "close": 27.41,
+      "volume": 898169
+    },
+    {
+      "timestamp": "2025-02-03",
+      "ticker": "ATAT",
+      "open": 26.96,
+      "high": 27.52,
+      "low": 26.005,
+      "close": 27.11,
+      "volume": 601250
+    },
+    {
+      "timestamp": "2025-02-04",
+      "ticker": "ATAT",
+      "open": 27.42,
+      "high": 28.3,
+      "low": 27.2301,
+      "close": 27.6,
+      "volume": 708502
+    },
+    {
+      "timestamp": "2025-02-05",
+      "ticker": "ATAT",
+      "open": 27.08,
+      "high": 27.28,
+      "low": 25.72,
+      "close": 26.16,
+      "volume": 1434558
+    },
+    {
+      "timestamp": "2025-02-06",
+      "ticker": "ATAT",
+      "open": 26.76,
+      "high": 27.13,
+      "low": 26.36,
+      "close": 26.9,
+      "volume": 693632
+    },
+    {
+      "timestamp": "2025-02-07",
+      "ticker": "ATAT",
+      "open": 27.27,
+      "high": 28.55,
+      "low": 27.19,
+      "close": 27.47,
+      "volume": 799864
+    },
+    {
+      "timestamp": "2025-02-10",
+      "ticker": "ATAT",
+      "open": 28.11,
+      "high": 28.1923,
+      "low": 27.19,
+      "close": 27.9,
+      "volume": 629913
+    },
+    {
+      "timestamp": "2025-02-11",
+      "ticker": "ATAT",
+      "open": 27.62,
+      "high": 29.74,
+      "low": 27.06,
+      "close": 29.0,
+      "volume": 1288615
+    },
+    {
+      "timestamp": "2025-02-12",
+      "ticker": "ATAT",
+      "open": 29.4,
+      "high": 30.856,
+      "low": 28.64,
+      "close": 29.26,
+      "volume": 1899905
+    },
+    {
+      "timestamp": "2025-02-13",
+      "ticker": "ATAT",
+      "open": 29.36,
+      "high": 29.79,
+      "low": 28.85,
+      "close": 29.57,
+      "volume": 1392613
+    },
+    {
+      "timestamp": "2025-02-14",
+      "ticker": "ATAT",
+      "open": 30.99,
+      "high": 31.23,
+      "low": 30.04,
+      "close": 30.8,
+      "volume": 2006277
+    },
+    {
+      "timestamp": "2025-02-18",
+      "ticker": "ATAT",
+      "open": 32.2,
+      "high": 32.76,
+      "low": 31.61,
+      "close": 31.96,
+      "volume": 3154451
+    },
+    {
+      "timestamp": "2025-02-19",
+      "ticker": "ATAT",
+      "open": 32.42,
+      "high": 32.42,
+      "low": 31.01,
+      "close": 32.17,
+      "volume": 1551565
+    },
+    {
+      "timestamp": "2025-02-20",
+      "ticker": "ATAT",
+      "open": 32.8,
+      "high": 33.315,
+      "low": 31.36,
+      "close": 31.92,
+      "volume": 1699065
+    },
+    {
+      "timestamp": "2025-02-21",
+      "ticker": "ATAT",
+      "open": 32.3,
+      "high": 32.3,
+      "low": 31.01,
+      "close": 31.26,
+      "volume": 1530742
+    },
+    {
+      "timestamp": "2025-02-24",
+      "ticker": "ATAT",
+      "open": 30.75,
+      "high": 30.8,
+      "low": 28.71,
+      "close": 29.75,
+      "volume": 2595567
+    },
+    {
+      "timestamp": "2025-02-25",
+      "ticker": "ATAT",
+      "open": 29.8,
+      "high": 30.17,
+      "low": 28.81,
+      "close": 29.42,
+      "volume": 1400196
+    },
+    {
+      "timestamp": "2025-02-26",
+      "ticker": "ATAT",
+      "open": 30.64,
+      "high": 31.575,
+      "low": 30.48,
+      "close": 30.63,
+      "volume": 1152382
+    },
+    {
+      "timestamp": "2025-02-27",
+      "ticker": "ATAT",
+      "open": 30.34,
+      "high": 30.83,
+      "low": 29.29,
+      "close": 29.66,
+      "volume": 1097479
+    },
+    {
+      "timestamp": "2025-02-28",
+      "ticker": "ATAT",
+      "open": 28.72,
+      "high": 31.025,
+      "low": 28.7,
+      "close": 30.71,
+      "volume": 1876537
+    },
+    {
+      "timestamp": "2025-03-03",
+      "ticker": "ATAT",
+      "open": 30.96,
+      "high": 31.0,
+      "low": 28.95,
+      "close": 29.2,
+      "volume": 1183051
+    },
+    {
+      "timestamp": "2025-03-04",
+      "ticker": "ATAT",
+      "open": 29.39,
+      "high": 29.78,
+      "low": 28.8,
+      "close": 29.4,
+      "volume": 981324
+    },
+    {
+      "timestamp": "2025-03-05",
+      "ticker": "ATAT",
+      "open": 29.92,
+      "high": 31.3,
+      "low": 29.92,
+      "close": 30.99,
+      "volume": 1695895
+    },
+    {
+      "timestamp": "2025-03-06",
+      "ticker": "ATAT",
+      "open": 31.73,
+      "high": 32.31,
+      "low": 30.4201,
+      "close": 30.59,
+      "volume": 1385338
+    },
+    {
+      "timestamp": "2025-03-07",
+      "ticker": "ATAT",
+      "open": 31.0,
+      "high": 31.0,
+      "low": 29.53,
+      "close": 30.11,
+      "volume": 753807
+    },
+    {
+      "timestamp": "2025-03-10",
+      "ticker": "ATAT",
+      "open": 29.8,
+      "high": 29.82,
+      "low": 28.23,
+      "close": 28.79,
+      "volume": 1162078
+    },
+    {
+      "timestamp": "2025-03-11",
+      "ticker": "ATAT",
+      "open": 29.08,
+      "high": 30.46,
+      "low": 28.83,
+      "close": 30.36,
+      "volume": 1505168
+    },
+    {
+      "timestamp": "2025-03-12",
+      "ticker": "ATAT",
+      "open": 30.165,
+      "high": 30.49,
+      "low": 29.86,
+      "close": 30.3,
+      "volume": 973901
+    },
+    {
+      "timestamp": "2025-03-13",
+      "ticker": "ATAT",
+      "open": 29.69,
+      "high": 29.95,
+      "low": 29.16,
+      "close": 29.62,
+      "volume": 971500
+    },
+    {
+      "timestamp": "2025-03-14",
+      "ticker": "ATAT",
+      "open": 30.56,
+      "high": 31.58,
+      "low": 30.46,
+      "close": 31.25,
+      "volume": 967594
+    },
+    {
+      "timestamp": "2025-03-17",
+      "ticker": "ATAT",
+      "open": 31.3,
+      "high": 31.75,
+      "low": 30.84,
+      "close": 31.29,
+      "volume": 1362559
+    },
+    {
+      "timestamp": "2025-03-18",
+      "ticker": "ATAT",
+      "open": 31.645,
+      "high": 31.69,
+      "low": 30.3,
+      "close": 30.92,
+      "volume": 954655
+    },
+    {
+      "timestamp": "2025-03-19",
+      "ticker": "ATAT",
+      "open": 31.0,
+      "high": 31.04,
+      "low": 30.26,
+      "close": 30.91,
+      "volume": 534139
+    },
+    {
+      "timestamp": "2025-03-20",
+      "ticker": "ATAT",
+      "open": 29.59,
+      "high": 30.7819,
+      "low": 29.3,
+      "close": 30.21,
+      "volume": 733483
+    },
+    {
+      "timestamp": "2025-03-21",
+      "ticker": "ATAT",
+      "open": 29.75,
+      "high": 30.45,
+      "low": 28.82,
+      "close": 30.27,
+      "volume": 846264
+    },
+    {
+      "timestamp": "2025-03-24",
+      "ticker": "ATAT",
+      "open": 30.6,
+      "high": 30.95,
+      "low": 30.12,
+      "close": 30.24,
+      "volume": 1100843
+    },
+    {
+      "timestamp": "2025-03-25",
+      "ticker": "ATAT",
+      "open": 29.0,
+      "high": 30.0,
+      "low": 26.67,
+      "close": 28.96,
+      "volume": 1999348
+    },
+    {
+      "timestamp": "2025-03-26",
+      "ticker": "ATAT",
+      "open": 29.47,
+      "high": 29.65,
+      "low": 28.335,
+      "close": 28.57,
+      "volume": 1201607
+    },
+    {
+      "timestamp": "2025-03-27",
+      "ticker": "ATAT",
+      "open": 28.6,
+      "high": 29.9,
+      "low": 28.21,
+      "close": 29.11,
+      "volume": 1012580
+    },
+    {
+      "timestamp": "2025-03-28",
+      "ticker": "ATAT",
+      "open": 29.1,
+      "high": 29.39,
+      "low": 28.1,
+      "close": 28.45,
+      "volume": 1098067
+    },
+    {
+      "timestamp": "2025-03-31",
+      "ticker": "ATAT",
+      "open": 27.785,
+      "high": 28.7,
+      "low": 27.05,
+      "close": 28.35,
+      "volume": 1067714
+    },
+    {
+      "timestamp": "2025-04-01",
+      "ticker": "ATAT",
+      "open": 28.75,
+      "high": 28.93,
+      "low": 28.31,
+      "close": 28.61,
+      "volume": 615248
+    },
+    {
+      "timestamp": "2025-04-02",
+      "ticker": "ATAT",
+      "open": 28.62,
+      "high": 29.615,
+      "low": 28.47,
+      "close": 29.41,
+      "volume": 677242
+    },
+    {
+      "timestamp": "2025-04-03",
+      "ticker": "ATAT",
+      "open": 28.0,
+      "high": 28.67,
+      "low": 27.66,
+      "close": 28.54,
+      "volume": 788646
+    },
+    {
+      "timestamp": "2025-04-04",
+      "ticker": "ATAT",
+      "open": 27.0,
+      "high": 27.5,
+      "low": 25.4,
+      "close": 26.15,
+      "volume": 1477260
+    },
+    {
+      "timestamp": "2025-04-07",
+      "ticker": "ATAT",
+      "open": 24.73,
+      "high": 27.085,
+      "low": 24.33,
+      "close": 25.68,
+      "volume": 1577256
+    },
+    {
+      "timestamp": "2025-04-08",
+      "ticker": "ATAT",
+      "open": 26.3,
+      "high": 26.3,
+      "low": 23.51,
+      "close": 24.02,
+      "volume": 1836820
+    },
+    {
+      "timestamp": "2025-04-09",
+      "ticker": "ATAT",
+      "open": 23.74,
+      "high": 24.67,
+      "low": 22.56,
+      "close": 23.0,
+      "volume": 4448624
+    },
+    {
+      "timestamp": "2025-04-10",
+      "ticker": "ATAT",
+      "open": 23.76,
+      "high": 24.15,
+      "low": 22.36,
+      "close": 23.07,
+      "volume": 2635792
+    },
+    {
+      "timestamp": "2025-04-11",
+      "ticker": "ATAT",
+      "open": 22.57,
+      "high": 23.49,
+      "low": 21.5,
+      "close": 22.21,
+      "volume": 4603435
+    },
+    {
+      "timestamp": "2025-04-14",
+      "ticker": "ATAT",
+      "open": 22.85,
+      "high": 24.76,
+      "low": 22.78,
+      "close": 23.84,
+      "volume": 2992745
+    },
+    {
+      "timestamp": "2025-04-15",
+      "ticker": "ATAT",
+      "open": 23.96,
+      "high": 24.5,
+      "low": 23.38,
+      "close": 23.4,
+      "volume": 2248870
+    },
+    {
+      "timestamp": "2025-04-16",
+      "ticker": "ATAT",
+      "open": 23.86,
+      "high": 24.99,
+      "low": 23.8575,
+      "close": 23.93,
+      "volume": 2719013
+    },
+    {
+      "timestamp": "2025-04-17",
+      "ticker": "ATAT",
+      "open": 24.57,
+      "high": 25.41,
+      "low": 23.59,
+      "close": 23.94,
+      "volume": 2862308
+    },
+    {
+      "timestamp": "2025-04-21",
+      "ticker": "ATAT",
+      "open": 23.82,
+      "high": 23.82,
+      "low": 22.425,
+      "close": 23.27,
+      "volume": 1421300
+    },
+    {
+      "timestamp": "2025-04-22",
+      "ticker": "ATAT",
+      "open": 23.55,
+      "high": 24.47,
+      "low": 23.44,
+      "close": 23.82,
+      "volume": 1014438
+    },
+    {
+      "timestamp": "2025-04-23",
+      "ticker": "ATAT",
+      "open": 24.59,
+      "high": 25.16,
+      "low": 24.12,
+      "close": 24.34,
+      "volume": 1010369
+    },
+    {
+      "timestamp": "2025-04-24",
+      "ticker": "ATAT",
+      "open": 24.4,
+      "high": 24.42,
+      "low": 23.19,
+      "close": 23.77,
+      "volume": 809412
+    },
+    {
+      "timestamp": "2025-04-25",
+      "ticker": "ATAT",
+      "open": 23.53,
+      "high": 24.05,
+      "low": 23.375,
+      "close": 23.92,
+      "volume": 536559
+    },
+    {
+      "timestamp": "2025-04-28",
+      "ticker": "ATAT",
+      "open": 23.85,
+      "high": 24.57,
+      "low": 23.48,
+      "close": 23.63,
+      "volume": 1336895
+    },
+    {
+      "timestamp": "2025-04-29",
+      "ticker": "ATAT",
+      "open": 23.86,
+      "high": 24.34,
+      "low": 23.63,
+      "close": 24.18,
+      "volume": 1773739
+    },
+    {
+      "timestamp": "2025-04-30",
+      "ticker": "ATAT",
+      "open": 24.36,
+      "high": 24.5,
+      "low": 23.99,
+      "close": 24.44,
+      "volume": 859558
+    },
+    {
+      "timestamp": "2025-05-01",
+      "ticker": "ATAT",
+      "open": 24.7,
+      "high": 24.99,
+      "low": 24.2134,
+      "close": 24.7,
+      "volume": 708904
+    },
+    {
+      "timestamp": "2025-05-02",
+      "ticker": "ATAT",
+      "open": 25.235,
+      "high": 25.48,
+      "low": 24.38,
+      "close": 24.56,
+      "volume": 1028569
+    },
+    {
+      "timestamp": "2025-05-05",
+      "ticker": "ATAT",
+      "open": 24.29,
+      "high": 25.35,
+      "low": 24.29,
+      "close": 25.07,
+      "volume": 1474103
+    },
+    {
+      "timestamp": "2025-05-06",
+      "ticker": "ATAT",
+      "open": 25.05,
+      "high": 25.72,
+      "low": 25.02,
+      "close": 25.57,
+      "volume": 1222740
+    },
+    {
+      "timestamp": "2025-05-07",
+      "ticker": "ATAT",
+      "open": 25.04,
+      "high": 26.88,
+      "low": 25.04,
+      "close": 26.59,
+      "volume": 1540859
+    },
+    {
+      "timestamp": "2025-05-08",
+      "ticker": "ATAT",
+      "open": 27.16,
+      "high": 28.49,
+      "low": 26.86,
+      "close": 28.41,
+      "volume": 1856142
+    },
+    {
+      "timestamp": "2025-05-09",
+      "ticker": "ATAT",
+      "open": 28.35,
+      "high": 29.56,
+      "low": 28.295,
+      "close": 28.46,
+      "volume": 1492340
+    },
+    {
+      "timestamp": "2025-05-12",
+      "ticker": "ATAT",
+      "open": 29.58,
+      "high": 30.08,
+      "low": 29.415,
+      "close": 29.67,
+      "volume": 1127971
+    },
+    {
+      "timestamp": "2025-05-13",
+      "ticker": "ATAT",
+      "open": 29.5,
+      "high": 29.89,
+      "low": 29.21,
+      "close": 29.62,
+      "volume": 510493
+    },
+    {
+      "timestamp": "2025-05-14",
+      "ticker": "ATAT",
+      "open": 29.47,
+      "high": 29.6,
+      "low": 28.9,
+      "close": 29.2,
+      "volume": 1303331
+    },
+    {
+      "timestamp": "2025-05-15",
+      "ticker": "ATAT",
+      "open": 29.1,
+      "high": 29.879,
+      "low": 28.965,
+      "close": 29.83,
+      "volume": 1151834
+    },
+    {
+      "timestamp": "2025-05-16",
+      "ticker": "ATAT",
+      "open": 29.69,
+      "high": 30.19,
+      "low": 29.56,
+      "close": 29.63,
+      "volume": 1163606
+    },
+    {
+      "timestamp": "2025-05-19",
+      "ticker": "ATAT",
+      "open": 29.44,
+      "high": 30.73,
+      "low": 29.02,
+      "close": 30.64,
+      "volume": 1351258
+    },
+    {
+      "timestamp": "2025-05-20",
+      "ticker": "ATAT",
+      "open": 30.5,
+      "high": 30.99,
+      "low": 30.14,
+      "close": 30.82,
+      "volume": 908350
+    },
+    {
+      "timestamp": "2025-05-21",
+      "ticker": "ATAT",
+      "open": 30.35,
+      "high": 30.59,
+      "low": 29.895,
+      "close": 30.18,
+      "volume": 1412208
+    },
+    {
+      "timestamp": "2025-05-22",
+      "ticker": "ATAT",
+      "open": 30.49,
+      "high": 34.2302,
+      "low": 30.1,
+      "close": 32.86,
+      "volume": 4328464
+    },
+    {
+      "timestamp": "2025-05-23",
+      "ticker": "ATAT",
+      "open": 32.1,
+      "high": 32.7994,
+      "low": 31.82,
+      "close": 32.47,
+      "volume": 1573319
+    },
+    {
+      "timestamp": "2025-05-27",
+      "ticker": "ATAT",
+      "open": 32.5,
+      "high": 32.5576,
+      "low": 30.7002,
+      "close": 31.02,
+      "volume": 1510008
+    },
+    {
+      "timestamp": "2025-05-28",
+      "ticker": "ATAT",
+      "open": 31.19,
+      "high": 31.81,
+      "low": 31.0105,
+      "close": 31.4,
+      "volume": 2792620
+    },
+    {
+      "timestamp": "2025-05-29",
+      "ticker": "ATAT",
+      "open": 31.77,
+      "high": 32.16,
+      "low": 31.44,
+      "close": 31.89,
+      "volume": 1407174
+    },
+    {
+      "timestamp": "2025-05-30",
+      "ticker": "ATAT",
+      "open": 31.18,
+      "high": 31.585,
+      "low": 30.2,
+      "close": 31.31,
+      "volume": 2319338
+    },
+    {
+      "timestamp": "2025-06-02",
+      "ticker": "ATAT",
+      "open": 30.9,
+      "high": 31.11,
+      "low": 30.5,
+      "close": 30.83,
+      "volume": 803410
+    },
+    {
+      "timestamp": "2025-06-03",
+      "ticker": "ATAT",
+      "open": 31.21,
+      "high": 31.32,
+      "low": 30.6,
+      "close": 30.9,
+      "volume": 1283051
+    },
+    {
+      "timestamp": "2025-06-04",
+      "ticker": "ATAT",
+      "open": 31.18,
+      "high": 31.98,
+      "low": 30.42,
+      "close": 31.43,
+      "volume": 1448426
+    },
+    {
+      "timestamp": "2025-06-05",
+      "ticker": "ATAT",
+      "open": 31.5,
+      "high": 31.63,
+      "low": 31.045,
+      "close": 31.26,
+      "volume": 705968
+    },
+    {
+      "timestamp": "2025-06-06",
+      "ticker": "ATAT",
+      "open": 31.3,
+      "high": 31.56,
+      "low": 30.5,
+      "close": 31.03,
+      "volume": 943572
+    },
+    {
+      "timestamp": "2025-06-09",
+      "ticker": "ATAT",
+      "open": 31.31,
+      "high": 31.89,
+      "low": 30.78,
+      "close": 31.46,
+      "volume": 1412068
+    },
+    {
+      "timestamp": "2025-06-10",
+      "ticker": "ATAT",
+      "open": 31.35,
+      "high": 31.38,
+      "low": 30.46,
+      "close": 30.78,
+      "volume": 670443
+    },
+    {
+      "timestamp": "2025-06-11",
+      "ticker": "ATAT",
+      "open": 31.14,
+      "high": 31.92,
+      "low": 30.79,
+      "close": 30.96,
+      "volume": 913976
+    },
+    {
+      "timestamp": "2025-06-12",
+      "ticker": "ATAT",
+      "open": 31.35,
+      "high": 33.4,
+      "low": 31.085,
+      "close": 32.45,
+      "volume": 2450033
+    },
+    {
+      "timestamp": "2025-06-13",
+      "ticker": "ATAT",
+      "open": 32.1,
+      "high": 33.05,
+      "low": 32.01,
+      "close": 32.3,
+      "volume": 1150281
+    },
+    {
+      "timestamp": "2025-06-16",
+      "ticker": "ATAT",
+      "open": 32.55,
+      "high": 32.8,
+      "low": 31.56,
+      "close": 31.64,
+      "volume": 942393
+    },
+    {
+      "timestamp": "2025-06-17",
+      "ticker": "ATAT",
+      "open": 31.42,
+      "high": 32.305,
+      "low": 30.622,
+      "close": 30.95,
+      "volume": 1088077
+    },
+    {
+      "timestamp": "2025-06-18",
+      "ticker": "ATAT",
+      "open": 30.74,
+      "high": 31.42,
+      "low": 30.47,
+      "close": 30.75,
+      "volume": 831844
+    },
+    {
+      "timestamp": "2025-06-20",
+      "ticker": "ATAT",
+      "open": 30.8,
+      "high": 31.13,
+      "low": 29.81,
+      "close": 30.67,
+      "volume": 2563032
+    },
+    {
+      "timestamp": "2025-06-23",
+      "ticker": "ATAT",
+      "open": 30.61,
+      "high": 31.315,
+      "low": 30.5,
+      "close": 31.11,
+      "volume": 690912
+    },
+    {
+      "timestamp": "2025-06-24",
+      "ticker": "ATAT",
+      "open": 32.15,
+      "high": 33.0,
+      "low": 31.89,
+      "close": 32.4,
+      "volume": 1849551
+    },
+    {
+      "timestamp": "2025-06-25",
+      "ticker": "ATAT",
+      "open": 32.33,
+      "high": 33.08,
+      "low": 31.7,
+      "close": 32.08,
+      "volume": 979647
+    },
+    {
+      "timestamp": "2025-06-26",
+      "ticker": "ATAT",
+      "open": 32.33,
+      "high": 32.57,
+      "low": 31.52,
+      "close": 32.43,
+      "volume": 949105
+    },
+    {
+      "timestamp": "2025-06-27",
+      "ticker": "ATAT",
+      "open": 32.51,
+      "high": 32.8,
+      "low": 31.88,
+      "close": 32.75,
+      "volume": 664094
+    },
+    {
+      "timestamp": "2025-06-30",
+      "ticker": "ATAT",
+      "open": 32.75,
+      "high": 33.07,
+      "low": 31.93,
+      "close": 32.51,
+      "volume": 1446457
+    },
+    {
+      "timestamp": "2025-07-01",
+      "ticker": "ATAT",
+      "open": 32.48,
+      "high": 32.96,
+      "low": 32.06,
+      "close": 32.71,
+      "volume": 688204
+    },
+    {
+      "timestamp": "2025-07-02",
+      "ticker": "ATAT",
+      "open": 32.7,
+      "high": 34.0,
+      "low": 32.7,
+      "close": 33.0,
+      "volume": 2499407
+    },
+    {
+      "timestamp": "2025-07-03",
+      "ticker": "ATAT",
+      "open": 33.145,
+      "high": 34.05,
+      "low": 32.57,
+      "close": 33.79,
+      "volume": 1276752
+    },
+    {
+      "timestamp": "2025-07-07",
+      "ticker": "ATAT",
+      "open": 33.94,
+      "high": 35.8,
+      "low": 33.43,
+      "close": 35.54,
+      "volume": 3180962
+    },
+    {
+      "timestamp": "2025-07-08",
+      "ticker": "ATAT",
+      "open": 35.85,
+      "high": 35.9399,
+      "low": 35.1,
+      "close": 35.25,
+      "volume": 2934439
+    },
+    {
+      "timestamp": "2025-07-09",
+      "ticker": "ATAT",
+      "open": 35.48,
+      "high": 36.24,
+      "low": 35.0526,
+      "close": 36.21,
+      "volume": 1131476
+    },
+    {
+      "timestamp": "2025-07-10",
+      "ticker": "ATAT",
+      "open": 36.6,
+      "high": 37.46,
+      "low": 35.54,
+      "close": 36.03,
+      "volume": 2901855
+    },
+    {
+      "timestamp": "2025-07-11",
+      "ticker": "ATAT",
+      "open": 35.795,
+      "high": 35.98,
+      "low": 35.1701,
+      "close": 35.46,
+      "volume": 1533763
+    },
+    {
+      "timestamp": "2025-07-14",
+      "ticker": "ATAT",
+      "open": 35.3,
+      "high": 35.82,
+      "low": 34.7,
+      "close": 35.51,
+      "volume": 1123039
+    },
+    {
+      "timestamp": "2025-07-15",
+      "ticker": "ATAT",
+      "open": 35.5,
+      "high": 36.02,
+      "low": 35.485,
+      "close": 35.93,
+      "volume": 792867
+    },
+    {
+      "timestamp": "2025-07-16",
+      "ticker": "ATAT",
+      "open": 35.915,
+      "high": 35.915,
+      "low": 35.1,
+      "close": 35.53,
+      "volume": 1302151
+    },
+    {
+      "timestamp": "2025-07-17",
+      "ticker": "ATAT",
+      "open": 35.5,
+      "high": 36.6,
+      "low": 35.16,
+      "close": 36.09,
+      "volume": 1615017
+    },
+    {
+      "timestamp": "2025-07-18",
+      "ticker": "ATAT",
+      "open": 36.56,
+      "high": 36.86,
+      "low": 35.84,
+      "close": 35.93,
+      "volume": 531049
+    },
+    {
+      "timestamp": "2025-07-21",
+      "ticker": "ATAT",
+      "open": 36.37,
+      "high": 37.24,
+      "low": 35.87,
+      "close": 36.5,
+      "volume": 1619033
+    },
+    {
+      "timestamp": "2025-07-22",
+      "ticker": "ATAT",
+      "open": 36.4,
+      "high": 36.5,
+      "low": 35.26,
+      "close": 36.26,
+      "volume": 998843
+    },
+    {
+      "timestamp": "2025-07-23",
+      "ticker": "ATAT",
+      "open": 36.65,
+      "high": 37.0,
+      "low": 36.24,
+      "close": 36.26,
+      "volume": 1050759
+    },
+    {
+      "timestamp": "2025-07-24",
+      "ticker": "ATAT",
+      "open": 36.4,
+      "high": 37.2399,
+      "low": 35.4,
+      "close": 35.68,
+      "volume": 1239041
+    },
+    {
+      "timestamp": "2025-07-25",
+      "ticker": "ATAT",
+      "open": 35.34,
+      "high": 35.89,
+      "low": 34.35,
+      "close": 35.69,
+      "volume": 1086634
+    },
+    {
+      "timestamp": "2025-07-28",
+      "ticker": "ATAT",
+      "open": 35.39,
+      "high": 35.58,
+      "low": 34.5124,
+      "close": 35.5,
+      "volume": 908986
+    },
+    {
+      "timestamp": "2025-07-29",
+      "ticker": "ATAT",
+      "open": 35.59,
+      "high": 35.7,
+      "low": 34.7,
+      "close": 34.88,
+      "volume": 544564
+    },
+    {
+      "timestamp": "2025-07-30",
+      "ticker": "ATAT",
+      "open": 34.52,
+      "high": 35.08,
+      "low": 34.11,
+      "close": 34.43,
+      "volume": 921718
+    },
+    {
+      "timestamp": "2025-07-31",
+      "ticker": "ATAT",
+      "open": 34.1,
+      "high": 34.18,
+      "low": 33.5,
+      "close": 33.82,
+      "volume": 1608304
+    },
+    {
+      "timestamp": "2025-08-01",
+      "ticker": "ATAT",
+      "open": 33.5,
+      "high": 33.85,
+      "low": 32.97,
+      "close": 33.46,
+      "volume": 1142982
+    },
+    {
+      "timestamp": "2025-08-04",
+      "ticker": "ATAT",
+      "open": 33.79,
+      "high": 34.7,
+      "low": 33.645,
+      "close": 34.63,
+      "volume": 988376
+    },
+    {
+      "timestamp": "2025-08-05",
+      "ticker": "ATAT",
+      "open": 35.0,
+      "high": 35.22,
+      "low": 33.125,
+      "close": 33.18,
+      "volume": 1509386
+    },
+    {
+      "timestamp": "2025-08-06",
+      "ticker": "ATAT",
+      "open": 33.5,
+      "high": 34.765,
+      "low": 33.295,
+      "close": 33.72,
+      "volume": 1469770
+    },
+    {
+      "timestamp": "2025-08-07",
+      "ticker": "ATAT",
+      "open": 33.86,
+      "high": 35.05,
+      "low": 33.74,
+      "close": 34.94,
+      "volume": 1264637
+    },
+    {
+      "timestamp": "2025-08-08",
+      "ticker": "ATAT",
+      "open": 35.06,
+      "high": 35.6899,
+      "low": 34.615,
+      "close": 35.37,
+      "volume": 821080
+    },
+    {
+      "timestamp": "2025-08-11",
+      "ticker": "ATAT",
+      "open": 35.4,
+      "high": 35.525,
+      "low": 34.36,
+      "close": 34.96,
+      "volume": 591186
+    },
+    {
+      "timestamp": "2025-08-12",
+      "ticker": "ATAT",
+      "open": 35.23,
+      "high": 35.68,
+      "low": 34.82,
+      "close": 35.38,
+      "volume": 804843
+    },
+    {
+      "timestamp": "2025-08-13",
+      "ticker": "ATAT",
+      "open": 35.7,
+      "high": 36.37,
+      "low": 34.97,
+      "close": 35.28,
+      "volume": 1074371
+    },
+    {
+      "timestamp": "2025-08-14",
+      "ticker": "ATAT",
+      "open": 35.0,
+      "high": 35.525,
+      "low": 34.365,
+      "close": 34.48,
+      "volume": 651689
+    },
+    {
+      "timestamp": "2025-08-15",
+      "ticker": "ATAT",
+      "open": 34.52,
+      "high": 35.2199,
+      "low": 34.4,
+      "close": 34.88,
+      "volume": 516100
+    },
+    {
+      "timestamp": "2025-08-18",
+      "ticker": "ATAT",
+      "open": 35.03,
+      "high": 35.3,
+      "low": 34.69,
+      "close": 34.87,
+      "volume": 641393
+    },
+    {
+      "timestamp": "2025-08-19",
+      "ticker": "ATAT",
+      "open": 34.89,
+      "high": 35.1,
+      "low": 34.47,
+      "close": 34.56,
+      "volume": 775849
+    },
+    {
+      "timestamp": "2025-08-20",
+      "ticker": "ATAT",
+      "open": 34.65,
+      "high": 34.99,
+      "low": 33.89,
+      "close": 33.96,
+      "volume": 1098306
+    },
+    {
+      "timestamp": "2025-08-21",
+      "ticker": "ATAT",
+      "open": 34.0,
+      "high": 34.88,
+      "low": 33.905,
+      "close": 34.49,
+      "volume": 1821419
+    },
+    {
+      "timestamp": "2025-08-22",
+      "ticker": "ATAT",
+      "open": 34.92,
+      "high": 36.06,
+      "low": 34.71,
+      "close": 35.73,
+      "volume": 1302558
+    },
+    {
+      "timestamp": "2025-08-25",
+      "ticker": "ATAT",
+      "open": 35.97,
+      "high": 36.29,
+      "low": 34.875,
+      "close": 35.1,
+      "volume": 1679906
+    },
+    {
+      "timestamp": "2025-08-26",
+      "ticker": "ATAT",
+      "open": 36.7,
+      "high": 38.7,
+      "low": 35.7,
+      "close": 37.15,
+      "volume": 3414999
+    },
+    {
+      "timestamp": "2025-08-27",
+      "ticker": "ATAT",
+      "open": 36.81,
+      "high": 37.88,
+      "low": 36.63,
+      "close": 37.28,
+      "volume": 1486696
+    },
+    {
+      "timestamp": "2025-08-28",
+      "ticker": "ATAT",
+      "open": 37.43,
+      "high": 39.37,
+      "low": 36.85,
+      "close": 39.0,
+      "volume": 3055239
+    },
+    {
+      "timestamp": "2025-08-29",
+      "ticker": "ATAT",
+      "open": 39.47,
+      "high": 39.84,
+      "low": 38.77,
+      "close": 38.92,
+      "volume": 2174316
+    },
+    {
+      "timestamp": "2025-09-02",
+      "ticker": "ATAT",
+      "open": 38.93,
+      "high": 39.655,
+      "low": 38.1,
+      "close": 38.63,
+      "volume": 1353563
+    },
+    {
+      "timestamp": "2025-09-03",
+      "ticker": "ATAT",
+      "open": 38.51,
+      "high": 39.23,
+      "low": 38.51,
+      "close": 39.04,
+      "volume": 1183617
+    },
+    {
+      "timestamp": "2025-09-04",
+      "ticker": "ATAT",
+      "open": 38.56,
+      "high": 39.23,
+      "low": 38.49,
+      "close": 38.9,
+      "volume": 1161387
+    },
+    {
+      "timestamp": "2025-09-05",
+      "ticker": "ATAT",
+      "open": 39.64,
+      "high": 39.64,
+      "low": 38.735,
+      "close": 39.04,
+      "volume": 1579973
+    },
+    {
+      "timestamp": "2025-09-08",
+      "ticker": "ATAT",
+      "open": 39.53,
+      "high": 40.255,
+      "low": 39.04,
+      "close": 40.03,
+      "volume": 1724205
+    },
+    {
+      "timestamp": "2025-09-09",
+      "ticker": "ATAT",
+      "open": 40.0,
+      "high": 40.3696,
+      "low": 39.47,
+      "close": 39.98,
+      "volume": 1671884
+    },
+    {
+      "timestamp": "2025-09-10",
+      "ticker": "ATAT",
+      "open": 39.6,
+      "high": 39.86,
+      "low": 38.93,
+      "close": 39.19,
+      "volume": 1047497
+    },
+    {
+      "timestamp": "2025-09-11",
+      "ticker": "ATAT",
+      "open": 39.07,
+      "high": 40.24,
+      "low": 39.07,
+      "close": 39.99,
+      "volume": 1128724
+    },
+    {
+      "timestamp": "2025-09-12",
+      "ticker": "ATAT",
+      "open": 39.59,
+      "high": 39.99,
+      "low": 39.3202,
+      "close": 39.67,
+      "volume": 686264
+    },
+    {
+      "timestamp": "2025-09-15",
+      "ticker": "ATAT",
+      "open": 39.78,
+      "high": 40.178,
+      "low": 39.64,
+      "close": 39.75,
+      "volume": 703728
+    },
+    {
+      "timestamp": "2025-09-16",
+      "ticker": "ATAT",
+      "open": 39.94,
+      "high": 40.39,
+      "low": 39.35,
+      "close": 39.5,
+      "volume": 684997
+    },
+    {
+      "timestamp": "2025-09-17",
+      "ticker": "ATAT",
+      "open": 39.62,
+      "high": 40.39,
+      "low": 39.52,
+      "close": 39.83,
+      "volume": 1574668
+    },
+    {
+      "timestamp": "2025-09-18",
+      "ticker": "ATAT",
+      "open": 39.7,
+      "high": 39.94,
+      "low": 39.25,
+      "close": 39.47,
+      "volume": 838669
+    },
+    {
+      "timestamp": "2025-09-19",
+      "ticker": "ATAT",
+      "open": 39.91,
+      "high": 40.386,
+      "low": 39.25,
+      "close": 40.08,
+      "volume": 1086971
+    },
+    {
+      "timestamp": "2025-09-22",
+      "ticker": "ATAT",
+      "open": 39.5,
+      "high": 40.37,
+      "low": 39.3,
+      "close": 39.68,
+      "volume": 735318
+    },
+    {
+      "timestamp": "2025-09-23",
+      "ticker": "ATAT",
+      "open": 39.64,
+      "high": 39.76,
+      "low": 37.35,
+      "close": 37.74,
+      "volume": 1415833
+    },
+    {
+      "timestamp": "2025-09-24",
+      "ticker": "ATAT",
+      "open": 38.44,
+      "high": 39.7,
+      "low": 38.255,
+      "close": 39.45,
+      "volume": 1445119
+    },
+    {
+      "timestamp": "2025-09-25",
+      "ticker": "ATAT",
+      "open": 39.26,
+      "high": 39.37,
+      "low": 38.0173,
+      "close": 38.2,
+      "volume": 1067206
+    },
+    {
+      "timestamp": "2025-09-26",
+      "ticker": "ATAT",
+      "open": 38.12,
+      "high": 38.5,
+      "low": 37.53,
+      "close": 37.76,
+      "volume": 802689
+    },
+    {
+      "timestamp": "2025-09-29",
+      "ticker": "ATAT",
+      "open": 38.59,
+      "high": 38.91,
+      "low": 37.65,
+      "close": 37.74,
+      "volume": 1172117
+    },
+    {
+      "timestamp": "2025-09-30",
+      "ticker": "ATAT",
+      "open": 38.04,
+      "high": 38.25,
+      "low": 37.28,
+      "close": 37.59,
+      "volume": 992542
+    },
+    {
+      "timestamp": "2025-10-01",
+      "ticker": "ATAT",
+      "open": 37.64,
+      "high": 37.89,
+      "low": 36.4,
+      "close": 36.46,
+      "volume": 1257827
+    },
+    {
+      "timestamp": "2025-10-02",
+      "ticker": "ATAT",
+      "open": 36.47,
+      "high": 36.84,
+      "low": 36.11,
+      "close": 36.63,
+      "volume": 1063192
+    },
+    {
+      "timestamp": "2025-10-03",
+      "ticker": "ATAT",
+      "open": 36.4,
+      "high": 36.455,
+      "low": 35.61,
+      "close": 36.04,
+      "volume": 883084
+    },
+    {
+      "timestamp": "2025-10-06",
+      "ticker": "ATAT",
+      "open": 35.96,
+      "high": 36.59,
+      "low": 35.6051,
+      "close": 36.18,
+      "volume": 1019073
+    },
+    {
+      "timestamp": "2025-10-07",
+      "ticker": "ATAT",
+      "open": 36.18,
+      "high": 36.3,
+      "low": 35.27,
+      "close": 35.59,
+      "volume": 1001132
+    },
+    {
+      "timestamp": "2025-10-08",
+      "ticker": "ATAT",
+      "open": 35.66,
+      "high": 36.3,
+      "low": 34.55,
+      "close": 35.49,
+      "volume": 1495851
+    },
+    {
+      "timestamp": "2025-10-09",
+      "ticker": "ATAT",
+      "open": 35.7,
+      "high": 36.51,
+      "low": 35.4,
+      "close": 35.75,
+      "volume": 1202254
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "ATAT",
+      "open": 35.79,
+      "high": 36.81,
+      "low": 34.49,
+      "close": 34.87,
+      "volume": 1807136
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "ATAT",
+      "open": 35.43,
+      "high": 36.28,
+      "low": 35.33,
+      "close": 35.34,
+      "volume": 995977
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "ATAT",
+      "open": 34.91,
+      "high": 35.48,
+      "low": 34.47,
+      "close": 35.39,
+      "volume": 680840
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "ATAT",
+      "open": 36.995,
+      "high": 37.28,
+      "low": 36.015,
+      "close": 36.56,
+      "volume": 1735490
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "ATAT",
+      "open": 36.57,
+      "high": 37.37,
+      "low": 36.52,
+      "close": 37.27,
+      "volume": 1109647
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "ATAT",
+      "open": 36.8,
+      "high": 37.89,
+      "low": 36.5,
+      "close": 37.31,
+      "volume": 1271319
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "ATAT",
+      "open": 37.51,
+      "high": 38.08,
+      "low": 36.79,
+      "close": 37.81,
+      "volume": 1123953
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "ATAT",
+      "open": 37.94,
+      "high": 38.24,
+      "low": 37.31,
+      "close": 38.2,
+      "volume": 931136
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "ATAT",
+      "open": 38.1,
+      "high": 38.697,
+      "low": 38.06,
+      "close": 38.6,
+      "volume": 807272
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "ATAT",
+      "open": 39.38,
+      "high": 39.89,
+      "low": 38.78,
+      "close": 39.36,
+      "volume": 2695247
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "ATAT",
+      "open": 39.5,
+      "high": 39.99,
+      "low": 39.22,
+      "close": 39.8,
+      "volume": 1744756
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "ATAT",
+      "open": 40.195,
+      "high": 40.5757,
+      "low": 38.92,
+      "close": 38.96,
+      "volume": 1301793
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "ATAT",
+      "open": 38.4,
+      "high": 38.47,
+      "low": 37.1,
+      "close": 37.79,
+      "volume": 1268281
+    }
+  ]
+}

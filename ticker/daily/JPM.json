@@ -1,7 +1,7 @@
 {
   "ticker": "JPM",
-  "generated_at": "2025-10-10T02:43:01.767886+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:21:56.178591+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 303.3947,
       "close": 305.53,
       "volume": 7060332
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "JPM",
+      "open": 305.66,
+      "high": 310.47,
+      "low": 300.81,
+      "close": 300.89,
+      "volume": 8597384
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "JPM",
+      "open": 305.6,
+      "high": 309.46,
+      "low": 305.45,
+      "close": 307.97,
+      "volume": 10788680
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "JPM",
+      "open": 305.84,
+      "high": 307.0,
+      "low": 294.21,
+      "close": 302.08,
+      "volume": 16178755
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "JPM",
+      "open": 306.39,
+      "high": 312.1199,
+      "low": 305.44,
+      "close": 305.69,
+      "volume": 11354778
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "JPM",
+      "open": 305.35,
+      "high": 308.6799,
+      "low": 297.07,
+      "close": 298.54,
+      "volume": 10549447
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "JPM",
+      "open": 299.16,
+      "high": 299.55,
+      "low": 294.2,
+      "close": 297.56,
+      "volume": 10153454
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "JPM",
+      "open": 298.5,
+      "high": 303.69,
+      "low": 298.1601,
+      "close": 302.36,
+      "volume": 6894943
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "JPM",
+      "open": 301.66,
+      "high": 304.05,
+      "low": 297.0,
+      "close": 297.09,
+      "volume": 7372671
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "JPM",
+      "open": 297.77,
+      "high": 298.0599,
+      "low": 290.5448,
+      "close": 294.11,
+      "volume": 8054115
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "JPM",
+      "open": 294.38,
+      "high": 296.3699,
+      "low": 292.51,
+      "close": 294.54,
+      "volume": 5438810
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "JPM",
+      "open": 296.08,
+      "high": 302.6,
+      "low": 295.45,
+      "close": 300.44,
+      "volume": 7228330
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "JPM",
+      "open": 302.16,
+      "high": 304.53,
+      "low": 301.01,
+      "close": 304.15,
+      "volume": 5642222
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "JPM",
+      "open": 304.86,
+      "high": 307.9674,
+      "low": 303.16,
+      "close": 305.36,
+      "volume": 6286668
     }
   ]
 }

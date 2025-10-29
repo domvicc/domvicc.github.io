@@ -1,7 +1,7 @@
 {
   "ticker": "MDLZ",
-  "generated_at": "2025-10-10T02:43:11.528615+00:00",
-  "count": 6118,
+  "generated_at": "2025-10-29T01:22:20.181413+00:00",
+  "count": 6131,
   "data": [
     {
       "timestamp": "2001-06-13",
@@ -55064,6 +55064,123 @@
       "low": 60.88,
       "close": 61.0,
       "volume": 6642873
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "MDLZ",
+      "open": 61.2,
+      "high": 62.34,
+      "low": 60.87,
+      "close": 61.45,
+      "volume": 7697779
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "MDLZ",
+      "open": 60.79,
+      "high": 61.29,
+      "low": 60.41,
+      "close": 61.17,
+      "volume": 6417576
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "MDLZ",
+      "open": 61.31,
+      "high": 62.19,
+      "low": 60.84,
+      "close": 62.13,
+      "volume": 5631971
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "MDLZ",
+      "open": 61.64,
+      "high": 62.37,
+      "low": 61.27,
+      "close": 61.66,
+      "volume": 5712093
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "MDLZ",
+      "open": 62.2,
+      "high": 62.74,
+      "low": 61.31,
+      "close": 61.6,
+      "volume": 7346452
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "MDLZ",
+      "open": 61.97,
+      "high": 62.7,
+      "low": 61.56,
+      "close": 62.46,
+      "volume": 5991845
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "MDLZ",
+      "open": 62.82,
+      "high": 62.96,
+      "low": 62.5,
+      "close": 62.81,
+      "volume": 4069063
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "MDLZ",
+      "open": 62.88,
+      "high": 63.24,
+      "low": 61.542,
+      "close": 61.75,
+      "volume": 9149843
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "MDLZ",
+      "open": 61.84,
+      "high": 62.54,
+      "low": 60.94,
+      "close": 61.97,
+      "volume": 7148597
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "MDLZ",
+      "open": 61.83,
+      "high": 61.895,
+      "low": 60.98,
+      "close": 61.01,
+      "volume": 5212549
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "MDLZ",
+      "open": 61.25,
+      "high": 61.37,
+      "low": 60.5545,
+      "close": 60.77,
+      "volume": 5401464
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "MDLZ",
+      "open": 60.655,
+      "high": 61.715,
+      "low": 60.44,
+      "close": 61.66,
+      "volume": 7063658
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "MDLZ",
+      "open": 61.6,
+      "high": 62.43,
+      "low": 60.21,
+      "close": 60.21,
+      "volume": 14833557
     }
   ]
 }

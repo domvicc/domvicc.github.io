@@ -1,7 +1,7 @@
 {
   "ticker": "PCAR",
-  "generated_at": "2025-10-10T02:43:27.324611+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:23:06.217743+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 95.02,
       "close": 95.22,
       "volume": 2101831
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "PCAR",
+      "open": 95.51,
+      "high": 95.655,
+      "low": 92.82,
+      "close": 93.0,
+      "volume": 2673176
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "PCAR",
+      "open": 93.7,
+      "high": 94.15,
+      "low": 92.7001,
+      "close": 93.23,
+      "volume": 2092795
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "PCAR",
+      "open": 92.44,
+      "high": 95.775,
+      "low": 92.25,
+      "close": 95.11,
+      "volume": 2196508
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "PCAR",
+      "open": 95.86,
+      "high": 96.1999,
+      "low": 94.415,
+      "close": 95.23,
+      "volume": 1939486
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "PCAR",
+      "open": 95.86,
+      "high": 96.5,
+      "low": 94.01,
+      "close": 95.16,
+      "volume": 2620339
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "PCAR",
+      "open": 94.32,
+      "high": 94.97,
+      "low": 93.19,
+      "close": 94.69,
+      "volume": 4287278
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "PCAR",
+      "open": 95.51,
+      "high": 97.85,
+      "low": 95.0,
+      "close": 97.48,
+      "volume": 5070907
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "PCAR",
+      "open": 98.71,
+      "high": 101.56,
+      "low": 97.01,
+      "close": 99.85,
+      "volume": 5682965
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "PCAR",
+      "open": 99.99,
+      "high": 102.415,
+      "low": 99.2,
+      "close": 99.8,
+      "volume": 4326389
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "PCAR",
+      "open": 100.47,
+      "high": 101.685,
+      "low": 98.25,
+      "close": 99.38,
+      "volume": 3275416
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "PCAR",
+      "open": 100.07,
+      "high": 100.68,
+      "low": 99.1,
+      "close": 100.13,
+      "volume": 2562841
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "PCAR",
+      "open": 100.86,
+      "high": 101.29,
+      "low": 99.985,
+      "close": 101.08,
+      "volume": 2978919
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "PCAR",
+      "open": 100.35,
+      "high": 100.85,
+      "low": 98.93,
+      "close": 99.17,
+      "volume": 2684935
     }
   ]
 }

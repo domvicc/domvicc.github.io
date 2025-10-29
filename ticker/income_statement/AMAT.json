@@ -811,8 +811,8 @@
       "interestAndDebtExpense": "None",
       "netIncomeFromContinuingOperations": "1560000000",
       "comprehensiveIncomeNetOfTax": "None",
-      "ebit": "1862000000",
-      "ebitda": "1998000000",
+      "ebit": "1866000000",
+      "ebitda": "2002000000",
       "netIncome": "1560000000"
     },
     {
@@ -2833,5 +2833,5 @@
     }
   ],
   "ticker": "AMAT",
-  "generated_at": "2025-10-10T02:34:02.316968+00:00"
+  "generated_at": "2025-10-28T05:21:07.884484+00:00"
 }

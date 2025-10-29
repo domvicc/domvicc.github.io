@@ -1,7 +1,7 @@
 {
   "ticker": "WBD",
-  "generated_at": "2025-10-10T02:43:45.197736+00:00",
-  "count": 5095,
+  "generated_at": "2025-10-29T01:24:28.583767+00:00",
+  "count": 5108,
   "data": [
     {
       "timestamp": "2005-07-08",
@@ -45857,6 +45857,123 @@
       "low": 17.25,
       "close": 17.67,
       "volume": 35429715
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "WBD",
+      "open": 17.72,
+      "high": 18.51,
+      "low": 17.075,
+      "close": 17.1,
+      "volume": 44142714
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "WBD",
+      "open": 17.995,
+      "high": 18.1,
+      "low": 17.66,
+      "close": 17.78,
+      "volume": 25900634
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "WBD",
+      "open": 17.33,
+      "high": 18.17,
+      "low": 17.33,
+      "close": 17.98,
+      "volume": 19789231
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "WBD",
+      "open": 18.43,
+      "high": 18.76,
+      "low": 18.21,
+      "close": 18.45,
+      "volume": 20987815
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "WBD",
+      "open": 18.63,
+      "high": 18.645,
+      "low": 18.055,
+      "close": 18.29,
+      "volume": 15391042
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "WBD",
+      "open": 18.21,
+      "high": 18.6,
+      "low": 18.17,
+      "close": 18.19,
+      "volume": 21258784
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "WBD",
+      "open": 18.46,
+      "high": 18.5,
+      "low": 17.995,
+      "close": 18.32,
+      "volume": 23995292
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "WBD",
+      "open": 19.68,
+      "high": 20.58,
+      "low": 19.55,
+      "close": 20.33,
+      "volume": 71364479
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "WBD",
+      "open": 20.68,
+      "high": 21.22,
+      "low": 20.2,
+      "close": 20.53,
+      "volume": 52225314
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "WBD",
+      "open": 21.0,
+      "high": 21.56,
+      "low": 20.83,
+      "close": 21.25,
+      "volume": 31796932
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "WBD",
+      "open": 21.37,
+      "high": 21.57,
+      "low": 21.01,
+      "close": 21.15,
+      "volume": 24584192
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "WBD",
+      "open": 21.05,
+      "high": 21.44,
+      "low": 20.86,
+      "close": 21.04,
+      "volume": 24011714
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "WBD",
+      "open": 21.37,
+      "high": 21.37,
+      "low": 20.82,
+      "close": 20.99,
+      "volume": 25516484
     }
   ]
 }

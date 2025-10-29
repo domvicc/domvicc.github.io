@@ -1,7 +1,7 @@
 {
   "ticker": "MRVL",
-  "generated_at": "2025-10-10T02:43:17.521095+00:00",
-  "count": 6357,
+  "generated_at": "2025-10-29T01:22:30.885161+00:00",
+  "count": 6370,
   "data": [
     {
       "timestamp": "2000-06-30",
@@ -57215,6 +57215,123 @@
       "low": 90.52,
       "close": 90.68,
       "volume": 14868445
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "MRVL",
+      "open": 92.97,
+      "high": 94.66,
+      "low": 85.36,
+      "close": 85.61,
+      "volume": 30545695
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "MRVL",
+      "open": 89.47,
+      "high": 89.87,
+      "low": 86.64,
+      "close": 89.39,
+      "volume": 20563473
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "MRVL",
+      "open": 86.8,
+      "high": 88.82,
+      "low": 85.3301,
+      "close": 86.22,
+      "volume": 15447586
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "MRVL",
+      "open": 88.165,
+      "high": 89.46,
+      "low": 86.5945,
+      "close": 88.89,
+      "volume": 15202200
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "MRVL",
+      "open": 89.71,
+      "high": 91.1997,
+      "low": 87.03,
+      "close": 88.23,
+      "volume": 12988901
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "MRVL",
+      "open": 86.825,
+      "high": 88.95,
+      "low": 85.71,
+      "close": 87.95,
+      "volume": 13243996
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "MRVL",
+      "open": 86.64,
+      "high": 88.72,
+      "low": 85.45,
+      "close": 85.84,
+      "volume": 16137494
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "MRVL",
+      "open": 85.69,
+      "high": 85.9299,
+      "low": 83.1001,
+      "close": 84.26,
+      "volume": 13242086
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "MRVL",
+      "open": 81.23,
+      "high": 83.5727,
+      "low": 79.06,
+      "close": 81.05,
+      "volume": 19218616
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "MRVL",
+      "open": 81.0,
+      "high": 83.45,
+      "low": 80.5301,
+      "close": 82.77,
+      "volume": 10335818
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "MRVL",
+      "open": 83.875,
+      "high": 85.79,
+      "low": 82.7,
+      "close": 84.13,
+      "volume": 11661440
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "MRVL",
+      "open": 86.04,
+      "high": 89.3807,
+      "low": 85.2001,
+      "close": 88.71,
+      "volume": 16331571
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "MRVL",
+      "open": 88.955,
+      "high": 89.98,
+      "low": 87.79,
+      "close": 88.46,
+      "volume": 12997466
     }
   ]
 }

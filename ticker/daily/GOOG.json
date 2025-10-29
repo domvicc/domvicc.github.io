@@ -1,7 +1,7 @@
 {
   "ticker": "GOOG",
-  "generated_at": "2025-10-10T02:42:53.008113+00:00",
-  "count": 2903,
+  "generated_at": "2025-10-29T01:21:32.561531+00:00",
+  "count": 2916,
   "data": [
     {
       "timestamp": "2014-03-27",
@@ -26129,6 +26129,123 @@
       "low": 239.6801,
       "close": 242.21,
       "volume": 19375722
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "GOOG",
+      "open": 242.16,
+      "high": 244.84,
+      "low": 236.685,
+      "close": 237.49,
+      "volume": 22449083
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "GOOG",
+      "open": 241.03,
+      "high": 244.99,
+      "low": 240.75,
+      "close": 244.64,
+      "volume": 12464965
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "GOOG",
+      "open": 241.755,
+      "high": 248.025,
+      "low": 241.1775,
+      "close": 246.19,
+      "volume": 17705370
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "GOOG",
+      "open": 248.085,
+      "high": 252.76,
+      "low": 246.79,
+      "close": 251.71,
+      "volume": 16048087
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "GOOG",
+      "open": 252.465,
+      "high": 257.58,
+      "low": 250.67,
+      "close": 251.88,
+      "volume": 18945987
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "GOOG",
+      "open": 251.35,
+      "high": 254.88,
+      "low": 248.59,
+      "close": 253.79,
+      "volume": 17653826
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "GOOG",
+      "open": 255.23,
+      "high": 257.88,
+      "low": 254.6,
+      "close": 257.02,
+      "volume": 13726831
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "GOOG",
+      "open": 255.25,
+      "high": 255.38,
+      "low": 244.67,
+      "close": 251.34,
+      "volume": 27836425
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "GOOG",
+      "open": 255.01,
+      "high": 257.18,
+      "low": 250.451,
+      "close": 252.53,
+      "volume": 19650244
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "GOOG",
+      "open": 253.7,
+      "high": 255.86,
+      "low": 252.7683,
+      "close": 253.73,
+      "volume": 13241319
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "GOOG",
+      "open": 257.3,
+      "high": 262.51,
+      "low": 256.1,
+      "close": 260.51,
+      "volume": 18405966
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "GOOG",
+      "open": 265.36,
+      "high": 270.8,
+      "low": 264.94,
+      "close": 269.93,
+      "volume": 22987660
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "GOOG",
+      "open": 270.2,
+      "high": 271.38,
+      "low": 267.17,
+      "close": 268.43,
+      "volume": 19873847
     }
   ]
 }

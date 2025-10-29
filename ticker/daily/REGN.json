@@ -1,7 +1,7 @@
 {
   "ticker": "REGN",
-  "generated_at": "2025-10-10T02:43:31.506434+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:23:22.839068+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 563.51,
       "close": 569.9,
       "volume": 853522
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "REGN",
+      "open": 569.29,
+      "high": 577.17,
+      "low": 555.545,
+      "close": 564.63,
+      "volume": 1495028
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "REGN",
+      "open": 551.5,
+      "high": 563.77,
+      "low": 541.0,
+      "close": 557.73,
+      "volume": 1426513
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "REGN",
+      "open": 556.92,
+      "high": 576.18,
+      "low": 553.865,
+      "close": 572.6,
+      "volume": 1010700
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "REGN",
+      "open": 575.03,
+      "high": 584.865,
+      "low": 569.02,
+      "close": 576.42,
+      "volume": 927747
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "REGN",
+      "open": 583.01,
+      "high": 589.08,
+      "low": 564.0,
+      "close": 569.17,
+      "volume": 842249
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "REGN",
+      "open": 570.35,
+      "high": 579.045,
+      "low": 566.11,
+      "close": 578.05,
+      "volume": 745708
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "REGN",
+      "open": 579.41,
+      "high": 582.645,
+      "low": 574.23,
+      "close": 576.77,
+      "volume": 639173
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "REGN",
+      "open": 574.6,
+      "high": 582.405,
+      "low": 572.82,
+      "close": 579.34,
+      "volume": 651765
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "REGN",
+      "open": 580.21,
+      "high": 588.705,
+      "low": 578.6,
+      "close": 584.74,
+      "volume": 691262
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "REGN",
+      "open": 579.68,
+      "high": 584.001,
+      "low": 572.7454,
+      "close": 575.69,
+      "volume": 779106
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "REGN",
+      "open": 579.65,
+      "high": 582.7,
+      "low": 576.2,
+      "close": 577.95,
+      "volume": 875474
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "REGN",
+      "open": 580.5,
+      "high": 586.145,
+      "low": 575.93,
+      "close": 585.31,
+      "volume": 1246122
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "REGN",
+      "open": 612.02,
+      "high": 655.7,
+      "low": 605.03,
+      "close": 654.48,
+      "volume": 2124708
     }
   ]
 }

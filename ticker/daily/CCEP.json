@@ -1,7 +1,7 @@
 {
   "ticker": "CCEP",
-  "generated_at": "2025-10-10T02:42:31.038253+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:19:57.485122+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 87.15,
       "close": 87.63,
       "volume": 1689004
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "CCEP",
+      "open": 88.41,
+      "high": 88.74,
+      "low": 87.58,
+      "close": 87.9,
+      "volume": 1967561
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "CCEP",
+      "open": 88.28,
+      "high": 89.38,
+      "low": 87.68,
+      "close": 87.89,
+      "volume": 1569361
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "CCEP",
+      "open": 87.86,
+      "high": 89.88,
+      "low": 87.59,
+      "close": 89.8,
+      "volume": 1507621
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "CCEP",
+      "open": 89.61,
+      "high": 89.96,
+      "low": 88.65,
+      "close": 88.78,
+      "volume": 1590087
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "CCEP",
+      "open": 89.64,
+      "high": 90.0,
+      "low": 88.31,
+      "close": 89.28,
+      "volume": 1990088
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "CCEP",
+      "open": 89.76,
+      "high": 91.195,
+      "low": 89.33,
+      "close": 90.54,
+      "volume": 1973634
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "CCEP",
+      "open": 90.57,
+      "high": 91.01,
+      "low": 89.75,
+      "close": 90.78,
+      "volume": 1192612
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "CCEP",
+      "open": 90.82,
+      "high": 91.94,
+      "low": 89.95,
+      "close": 91.78,
+      "volume": 1594406
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "CCEP",
+      "open": 91.96,
+      "high": 92.92,
+      "low": 91.38,
+      "close": 92.52,
+      "volume": 1387652
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "CCEP",
+      "open": 92.505,
+      "high": 93.03,
+      "low": 91.23,
+      "close": 91.29,
+      "volume": 1262556
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "CCEP",
+      "open": 91.04,
+      "high": 91.725,
+      "low": 90.95,
+      "close": 91.45,
+      "volume": 1163396
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "CCEP",
+      "open": 91.74,
+      "high": 91.78,
+      "low": 90.91,
+      "close": 91.53,
+      "volume": 1258495
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "CCEP",
+      "open": 91.36,
+      "high": 92.65,
+      "low": 91.045,
+      "close": 91.89,
+      "volume": 1080864
     }
   ]
 }

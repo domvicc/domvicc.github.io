@@ -1,0 +1,232 @@
+{
+  "ticker": "SWI",
+  "generated_at": "2025-10-29T01:23:47.893546+00:00",
+  "count": 25,
+  "data": [
+    {
+      "timestamp": "2016-01-04",
+      "ticker": "SWI",
+      "open": 58.81,
+      "high": 58.81,
+      "low": 58.33,
+      "close": 58.51,
+      "volume": 1269364
+    },
+    {
+      "timestamp": "2016-01-05",
+      "ticker": "SWI",
+      "open": 58.65,
+      "high": 58.85,
+      "low": 58.595,
+      "close": 58.79,
+      "volume": 847014
+    },
+    {
+      "timestamp": "2016-01-06",
+      "ticker": "SWI",
+      "open": 58.47,
+      "high": 59.03,
+      "low": 58.46,
+      "close": 58.8,
+      "volume": 1218419
+    },
+    {
+      "timestamp": "2016-01-07",
+      "ticker": "SWI",
+      "open": 58.47,
+      "high": 58.75,
+      "low": 58.36,
+      "close": 58.67,
+      "volume": 1052118
+    },
+    {
+      "timestamp": "2016-01-08",
+      "ticker": "SWI",
+      "open": 58.92,
+      "high": 59.17,
+      "low": 58.6,
+      "close": 58.6,
+      "volume": 2038451
+    },
+    {
+      "timestamp": "2016-01-11",
+      "ticker": "SWI",
+      "open": 58.74,
+      "high": 58.95,
+      "low": 58.6,
+      "close": 58.64,
+      "volume": 804879
+    },
+    {
+      "timestamp": "2016-01-12",
+      "ticker": "SWI",
+      "open": 58.8,
+      "high": 59.02,
+      "low": 58.69,
+      "close": 59.0,
+      "volume": 1383288
+    },
+    {
+      "timestamp": "2016-01-13",
+      "ticker": "SWI",
+      "open": 59.02,
+      "high": 59.2,
+      "low": 58.85,
+      "close": 59.05,
+      "volume": 1691188
+    },
+    {
+      "timestamp": "2016-01-14",
+      "ticker": "SWI",
+      "open": 59.0,
+      "high": 59.2,
+      "low": 58.94,
+      "close": 59.06,
+      "volume": 1918567
+    },
+    {
+      "timestamp": "2016-01-15",
+      "ticker": "SWI",
+      "open": 58.75,
+      "high": 58.96,
+      "low": 58.53,
+      "close": 58.96,
+      "volume": 1017866
+    },
+    {
+      "timestamp": "2016-01-19",
+      "ticker": "SWI",
+      "open": 58.96,
+      "high": 59.11,
+      "low": 58.58,
+      "close": 58.7,
+      "volume": 730045
+    },
+    {
+      "timestamp": "2016-01-20",
+      "ticker": "SWI",
+      "open": 58.45,
+      "high": 58.53,
+      "low": 57.4001,
+      "close": 58.0,
+      "volume": 2767136
+    },
+    {
+      "timestamp": "2016-01-21",
+      "ticker": "SWI",
+      "open": 57.96,
+      "high": 59.05,
+      "low": 57.91,
+      "close": 58.4,
+      "volume": 1744598
+    },
+    {
+      "timestamp": "2016-01-22",
+      "ticker": "SWI",
+      "open": 58.62,
+      "high": 58.99,
+      "low": 58.1,
+      "close": 58.3,
+      "volume": 1412384
+    },
+    {
+      "timestamp": "2016-01-25",
+      "ticker": "SWI",
+      "open": 58.25,
+      "high": 58.51,
+      "low": 57.95,
+      "close": 57.99,
+      "volume": 1070573
+    },
+    {
+      "timestamp": "2016-01-26",
+      "ticker": "SWI",
+      "open": 58.1,
+      "high": 59.04,
+      "low": 58.07,
+      "close": 59.02,
+      "volume": 1076720
+    },
+    {
+      "timestamp": "2016-01-27",
+      "ticker": "SWI",
+      "open": 58.99,
+      "high": 59.8,
+      "low": 58.81,
+      "close": 59.51,
+      "volume": 1586481
+    },
+    {
+      "timestamp": "2016-01-28",
+      "ticker": "SWI",
+      "open": 59.7,
+      "high": 59.95,
+      "low": 59.52,
+      "close": 59.86,
+      "volume": 1857177
+    },
+    {
+      "timestamp": "2016-01-29",
+      "ticker": "SWI",
+      "open": 59.9,
+      "high": 59.97,
+      "low": 59.46,
+      "close": 59.95,
+      "volume": 2414353
+    },
+    {
+      "timestamp": "2016-02-01",
+      "ticker": "SWI",
+      "open": 59.82,
+      "high": 60.0,
+      "low": 59.8,
+      "close": 59.98,
+      "volume": 948964
+    },
+    {
+      "timestamp": "2016-02-02",
+      "ticker": "SWI",
+      "open": 59.92,
+      "high": 60.0,
+      "low": 59.88,
+      "close": 59.94,
+      "volume": 1189807
+    },
+    {
+      "timestamp": "2016-02-03",
+      "ticker": "SWI",
+      "open": 59.98,
+      "high": 60.0,
+      "low": 59.85,
+      "close": 60.0,
+      "volume": 2043653
+    },
+    {
+      "timestamp": "2016-02-04",
+      "ticker": "SWI",
+      "open": 59.93,
+      "high": 60.02,
+      "low": 59.93,
+      "close": 59.98,
+      "volume": 1450154
+    },
+    {
+      "timestamp": "2016-02-05",
+      "ticker": "SWI",
+      "open": 59.98,
+      "high": 59.98,
+      "low": 59.98,
+      "close": 59.98,
+      "volume": 10200
+    },
+    {
+      "timestamp": "2025-04-17",
+      "ticker": "SWI",
+      "open": 18.49,
+      "high": 18.49,
+      "low": 18.49,
+      "close": 18.49,
+      "volume": 0
+    }
+  ]
+}

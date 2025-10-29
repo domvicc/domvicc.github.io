@@ -1,7 +1,7 @@
 {
   "ticker": "CDW",
-  "generated_at": "2025-10-10T02:42:32.308956+00:00",
-  "count": 3091,
+  "generated_at": "2025-10-29T01:20:02.207878+00:00",
+  "count": 3104,
   "data": [
     {
       "timestamp": "2013-06-27",
@@ -27821,6 +27821,123 @@
       "low": 150.98,
       "close": 151.79,
       "volume": 1150879
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "CDW",
+      "open": 151.86,
+      "high": 152.44,
+      "low": 144.9,
+      "close": 145.04,
+      "volume": 1458809
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "CDW",
+      "open": 148.01,
+      "high": 148.335,
+      "low": 145.205,
+      "close": 147.51,
+      "volume": 1350031
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "CDW",
+      "open": 145.83,
+      "high": 151.07,
+      "low": 145.83,
+      "close": 150.33,
+      "volume": 1336718
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "CDW",
+      "open": 151.72,
+      "high": 152.38,
+      "low": 148.59,
+      "close": 148.83,
+      "volume": 966912
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "CDW",
+      "open": 150.05,
+      "high": 151.4,
+      "low": 146.805,
+      "close": 151.1,
+      "volume": 1546138
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "CDW",
+      "open": 150.64,
+      "high": 153.405,
+      "low": 150.23,
+      "close": 152.45,
+      "volume": 1431495
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "CDW",
+      "open": 153.12,
+      "high": 155.66,
+      "low": 153.12,
+      "close": 155.38,
+      "volume": 1058372
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "CDW",
+      "open": 153.8,
+      "high": 157.37,
+      "low": 153.8,
+      "close": 156.53,
+      "volume": 1090771
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "CDW",
+      "open": 157.33,
+      "high": 161.1,
+      "low": 156.25,
+      "close": 156.36,
+      "volume": 2284487
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "CDW",
+      "open": 156.32,
+      "high": 159.37,
+      "low": 154.85,
+      "close": 158.48,
+      "volume": 1047520
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "CDW",
+      "open": 160.49,
+      "high": 161.06,
+      "low": 157.45,
+      "close": 158.16,
+      "volume": 1141374
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "CDW",
+      "open": 159.0,
+      "high": 160.83,
+      "low": 156.38,
+      "close": 159.23,
+      "volume": 1832734
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "CDW",
+      "open": 158.66,
+      "high": 158.905,
+      "low": 154.66,
+      "close": 156.16,
+      "volume": 932066
     }
   ]
 }

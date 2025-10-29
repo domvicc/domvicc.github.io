@@ -1,7 +1,7 @@
 {
   "ticker": "TTD",
-  "generated_at": "2025-10-10T02:43:38.878210+00:00",
-  "count": 2276,
+  "generated_at": "2025-10-29T01:24:04.905612+00:00",
+  "count": 2289,
   "data": [
     {
       "timestamp": "2016-09-21",
@@ -20486,6 +20486,123 @@
       "low": 52.89,
       "close": 54.09,
       "volume": 9949080
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "TTD",
+      "open": 54.19,
+      "high": 54.99,
+      "low": 51.414,
+      "close": 52.36,
+      "volume": 12452871
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "TTD",
+      "open": 52.595,
+      "high": 53.41,
+      "low": 50.94,
+      "close": 51.275,
+      "volume": 10294648
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "TTD",
+      "open": 50.3,
+      "high": 51.26,
+      "low": 49.45,
+      "close": 50.73,
+      "volume": 8133825
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "TTD",
+      "open": 51.165,
+      "high": 51.67,
+      "low": 50.21,
+      "close": 51.1,
+      "volume": 7470317
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "TTD",
+      "open": 51.11,
+      "high": 51.88,
+      "low": 49.6,
+      "close": 49.9,
+      "volume": 8541309
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "TTD",
+      "open": 49.17,
+      "high": 50.82,
+      "low": 48.48,
+      "close": 49.98,
+      "volume": 9224197
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "TTD",
+      "open": 50.37,
+      "high": 53.08,
+      "low": 50.3,
+      "close": 52.495,
+      "volume": 8558789
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "TTD",
+      "open": 52.88,
+      "high": 54.705,
+      "low": 52.45,
+      "close": 53.92,
+      "volume": 13123216
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "TTD",
+      "open": 53.46,
+      "high": 54.26,
+      "low": 52.65,
+      "close": 53.89,
+      "volume": 7354479
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "TTD",
+      "open": 53.79,
+      "high": 54.63,
+      "low": 53.27,
+      "close": 54.13,
+      "volume": 5152528
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "TTD",
+      "open": 54.79,
+      "high": 55.11,
+      "low": 51.12,
+      "close": 52.0,
+      "volume": 12294513
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "TTD",
+      "open": 52.69,
+      "high": 54.045,
+      "low": 52.045,
+      "close": 53.61,
+      "volume": 10851135
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "TTD",
+      "open": 53.6,
+      "high": 53.94,
+      "low": 51.41,
+      "close": 51.67,
+      "volume": 6910785
     }
   ]
 }

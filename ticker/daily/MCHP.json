@@ -1,7 +1,7 @@
 {
   "ticker": "MCHP",
-  "generated_at": "2025-10-10T02:43:09.814521+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:22:18.558870+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 65.08,
       "close": 65.86,
       "volume": 3842859
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "MCHP",
+      "open": 65.98,
+      "high": 66.29,
+      "low": 60.2,
+      "close": 60.41,
+      "volume": 12554647
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "MCHP",
+      "open": 62.8,
+      "high": 64.92,
+      "low": 62.18,
+      "close": 64.39,
+      "volume": 8316555
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "MCHP",
+      "open": 62.22,
+      "high": 66.61,
+      "low": 62.22,
+      "close": 64.6,
+      "volume": 9058386
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "MCHP",
+      "open": 65.5,
+      "high": 65.75,
+      "low": 63.655,
+      "close": 65.21,
+      "volume": 10045634
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "MCHP",
+      "open": 65.97,
+      "high": 66.405,
+      "low": 64.39,
+      "close": 65.35,
+      "volume": 5193203
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "MCHP",
+      "open": 64.81,
+      "high": 65.63,
+      "low": 64.26,
+      "close": 65.135,
+      "volume": 4582855
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "MCHP",
+      "open": 66.07,
+      "high": 67.665,
+      "low": 65.65,
+      "close": 67.07,
+      "volume": 5562062
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "MCHP",
+      "open": 66.96,
+      "high": 68.0,
+      "low": 66.305,
+      "close": 67.52,
+      "volume": 5611928
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "MCHP",
+      "open": 65.21,
+      "high": 66.06,
+      "low": 63.3,
+      "close": 64.5,
+      "volume": 9989802
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "MCHP",
+      "open": 62.93,
+      "high": 65.29,
+      "low": 62.93,
+      "close": 65.09,
+      "volume": 7224565
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "MCHP",
+      "open": 65.99,
+      "high": 66.05,
+      "low": 63.12,
+      "close": 63.17,
+      "volume": 7533177
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "MCHP",
+      "open": 63.96,
+      "high": 65.17,
+      "low": 63.49,
+      "close": 64.55,
+      "volume": 7362043
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "MCHP",
+      "open": 64.51,
+      "high": 64.61,
+      "low": 63.0,
+      "close": 63.64,
+      "volume": 4798400
     }
   ]
 }

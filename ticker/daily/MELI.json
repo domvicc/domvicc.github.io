@@ -1,7 +1,7 @@
 {
   "ticker": "MELI",
-  "generated_at": "2025-10-10T02:43:12.145681+00:00",
-  "count": 4571,
+  "generated_at": "2025-10-29T01:22:21.429311+00:00",
+  "count": 4584,
   "data": [
     {
       "timestamp": "2007-08-10",
@@ -41141,6 +41141,123 @@
       "low": 2170.0,
       "close": 2275.0,
       "volume": 523234
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "MELI",
+      "open": 2271.01,
+      "high": 2280.0,
+      "low": 2120.0,
+      "close": 2133.67,
+      "volume": 731154
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "MELI",
+      "open": 2150.01,
+      "high": 2207.91,
+      "low": 2146.0,
+      "close": 2175.91,
+      "volume": 352689
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "MELI",
+      "open": 2150.0,
+      "high": 2183.9499,
+      "low": 2121.41,
+      "close": 2157.82,
+      "volume": 315811
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "MELI",
+      "open": 2181.92,
+      "high": 2181.92,
+      "low": 2033.0,
+      "close": 2048.35,
+      "volume": 756996
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "MELI",
+      "open": 2050.51,
+      "high": 2071.7787,
+      "low": 2025.25,
+      "close": 2043.06,
+      "volume": 818296
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "MELI",
+      "open": 2061.9,
+      "high": 2061.9,
+      "low": 2020.0,
+      "close": 2024.98,
+      "volume": 742277
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "MELI",
+      "open": 2039.73,
+      "high": 2105.0,
+      "low": 2033.09,
+      "close": 2102.11,
+      "volume": 361246
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "MELI",
+      "open": 2105.0,
+      "high": 2163.24,
+      "low": 2096.0,
+      "close": 2142.05,
+      "volume": 349419
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "MELI",
+      "open": 2129.56,
+      "high": 2131.4438,
+      "low": 2088.45,
+      "close": 2095.21,
+      "volume": 283279
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "MELI",
+      "open": 2108.69,
+      "high": 2149.98,
+      "low": 2095.0,
+      "close": 2148.32,
+      "volume": 296386
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "MELI",
+      "open": 2171.82,
+      "high": 2185.0,
+      "low": 2140.0211,
+      "close": 2161.11,
+      "volume": 367718
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "MELI",
+      "open": 2300.0,
+      "high": 2304.0873,
+      "low": 2220.0001,
+      "close": 2282.32,
+      "volume": 640426
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "MELI",
+      "open": 2290.54,
+      "high": 2298.05,
+      "low": 2250.05,
+      "close": 2290.14,
+      "volume": 384621
     }
   ]
 }

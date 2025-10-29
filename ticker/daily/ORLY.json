@@ -1,7 +1,7 @@
 {
   "ticker": "ORLY",
-  "generated_at": "2025-10-10T02:43:25.205874+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:22:56.325619+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 99.625,
       "close": 99.72,
       "volume": 3832552
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "ORLY",
+      "open": 99.92,
+      "high": 102.64,
+      "low": 99.68,
+      "close": 102.15,
+      "volume": 5487685
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "ORLY",
+      "open": 101.82,
+      "high": 102.98,
+      "low": 101.62,
+      "close": 102.88,
+      "volume": 4088993
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "ORLY",
+      "open": 103.14,
+      "high": 104.06,
+      "low": 102.305,
+      "close": 103.05,
+      "volume": 4008615
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "ORLY",
+      "open": 103.04,
+      "high": 103.82,
+      "low": 101.88,
+      "close": 102.12,
+      "volume": 3958948
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "ORLY",
+      "open": 102.18,
+      "high": 102.7144,
+      "low": 101.0,
+      "close": 101.17,
+      "volume": 5148389
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "ORLY",
+      "open": 101.42,
+      "high": 101.701,
+      "low": 100.5,
+      "close": 101.6,
+      "volume": 4359165
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "ORLY",
+      "open": 102.02,
+      "high": 102.02,
+      "low": 99.6,
+      "close": 100.97,
+      "volume": 4888407
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "ORLY",
+      "open": 100.95,
+      "high": 101.56,
+      "low": 100.48,
+      "close": 101.31,
+      "volume": 5042465
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "ORLY",
+      "open": 101.48,
+      "high": 101.735,
+      "low": 100.0764,
+      "close": 101.21,
+      "volume": 4836218
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "ORLY",
+      "open": 99.5,
+      "high": 101.43,
+      "low": 94.02,
+      "close": 98.27,
+      "volume": 11597455
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "ORLY",
+      "open": 99.47,
+      "high": 99.49,
+      "low": 97.175,
+      "close": 97.27,
+      "volume": 5234692
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "ORLY",
+      "open": 96.805,
+      "high": 97.02,
+      "low": 95.29,
+      "close": 95.79,
+      "volume": 6512003
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "ORLY",
+      "open": 95.67,
+      "high": 97.92,
+      "low": 95.62,
+      "close": 96.3,
+      "volume": 5792350
     }
   ]
 }

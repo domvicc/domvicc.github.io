@@ -1,7 +1,7 @@
 {
   "ticker": "INTU",
-  "generated_at": "2025-10-10T02:42:59.509641+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:21:51.251669+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 643.16,
       "close": 644.92,
       "volume": 1698742
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "INTU",
+      "open": 645.4,
+      "high": 653.18,
+      "low": 641.23,
+      "close": 641.79,
+      "volume": 3059279
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "INTU",
+      "open": 643.2,
+      "high": 656.47,
+      "low": 642.64,
+      "close": 655.68,
+      "volume": 1345134
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "INTU",
+      "open": 645.82,
+      "high": 660.71,
+      "low": 644.45,
+      "close": 657.16,
+      "volume": 1243673
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "INTU",
+      "open": 657.1,
+      "high": 657.42,
+      "low": 647.76,
+      "close": 652.69,
+      "volume": 1693137
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "INTU",
+      "open": 659.21,
+      "high": 659.4,
+      "low": 642.74,
+      "close": 646.99,
+      "volume": 1248245
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "INTU",
+      "open": 647.57,
+      "high": 662.2725,
+      "low": 646.835,
+      "close": 661.39,
+      "volume": 1812852
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "INTU",
+      "open": 663.28,
+      "high": 668.86,
+      "low": 658.485,
+      "close": 664.77,
+      "volume": 1205806
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "INTU",
+      "open": 665.67,
+      "high": 676.88,
+      "low": 661.0,
+      "close": 675.04,
+      "volume": 1201672
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "INTU",
+      "open": 674.2,
+      "high": 682.47,
+      "low": 670.43,
+      "close": 670.77,
+      "volume": 1272115
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "INTU",
+      "open": 671.46,
+      "high": 680.98,
+      "low": 669.56,
+      "close": 677.72,
+      "volume": 1474344
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "INTU",
+      "open": 684.26,
+      "high": 688.0,
+      "low": 680.215,
+      "close": 683.09,
+      "volume": 1027750
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "INTU",
+      "open": 686.97,
+      "high": 689.17,
+      "low": 677.29,
+      "close": 683.39,
+      "volume": 1318458
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "INTU",
+      "open": 684.73,
+      "high": 688.8987,
+      "low": 678.245,
+      "close": 678.93,
+      "volume": 1092080
     }
   ]
 }

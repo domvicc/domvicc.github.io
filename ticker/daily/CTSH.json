@@ -1,7 +1,7 @@
 {
   "ticker": "CTSH",
-  "generated_at": "2025-10-10T02:42:41.132504+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:20:34.068211+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 68.03,
       "close": 68.61,
       "volume": 3366667
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "CTSH",
+      "open": 68.77,
+      "high": 69.0,
+      "low": 65.755,
+      "close": 65.8,
+      "volume": 3851540
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "CTSH",
+      "open": 66.3,
+      "high": 66.75,
+      "low": 65.615,
+      "close": 66.34,
+      "volume": 4062936
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "CTSH",
+      "open": 65.8,
+      "high": 67.69,
+      "low": 65.6,
+      "close": 67.27,
+      "volume": 4092322
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "CTSH",
+      "open": 67.83,
+      "high": 67.83,
+      "low": 66.5,
+      "close": 66.75,
+      "volume": 2678603
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "CTSH",
+      "open": 66.95,
+      "high": 66.95,
+      "low": 65.15,
+      "close": 65.47,
+      "volume": 4004461
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "CTSH",
+      "open": 65.58,
+      "high": 66.27,
+      "low": 65.33,
+      "close": 66.08,
+      "volume": 3416265
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "CTSH",
+      "open": 66.3,
+      "high": 67.11,
+      "low": 66.12,
+      "close": 66.7,
+      "volume": 2350358
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "CTSH",
+      "open": 66.83,
+      "high": 68.99,
+      "low": 66.81,
+      "close": 68.77,
+      "volume": 3402580
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "CTSH",
+      "open": 68.74,
+      "high": 69.43,
+      "low": 68.33,
+      "close": 68.355,
+      "volume": 3555934
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "CTSH",
+      "open": 68.325,
+      "high": 68.38,
+      "low": 67.11,
+      "close": 68.03,
+      "volume": 4770827
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "CTSH",
+      "open": 68.52,
+      "high": 68.84,
+      "low": 67.81,
+      "close": 67.86,
+      "volume": 4241963
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "CTSH",
+      "open": 67.86,
+      "high": 68.19,
+      "low": 67.42,
+      "close": 68.05,
+      "volume": 4201784
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "CTSH",
+      "open": 67.83,
+      "high": 68.395,
+      "low": 67.42,
+      "close": 67.82,
+      "volume": 6158185
     }
   ]
 }

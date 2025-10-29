@@ -1,7 +1,7 @@
 {
   "ticker": "KLAC",
-  "generated_at": "2025-10-10T02:43:03.808105+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:22:00.978669+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 1037.24,
       "close": 1053.47,
       "volume": 1247921
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "KLAC",
+      "open": 1052.29,
+      "high": 1054.2737,
+      "low": 980.97,
+      "close": 982.75,
+      "volume": 1576002
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "KLAC",
+      "open": 1016.25,
+      "high": 1033.9,
+      "low": 1014.9,
+      "close": 1025.0,
+      "volume": 1227091
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "KLAC",
+      "open": 998.55,
+      "high": 1042.465,
+      "low": 998.55,
+      "close": 1025.71,
+      "volume": 1056057
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "KLAC",
+      "open": 1057.08,
+      "high": 1092.8924,
+      "low": 1053.94,
+      "close": 1087.01,
+      "volume": 1313727
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "KLAC",
+      "open": 1100.15,
+      "high": 1117.0,
+      "low": 1079.79,
+      "close": 1098.8,
+      "volume": 1031363
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "KLAC",
+      "open": 1098.35,
+      "high": 1109.48,
+      "low": 1084.085,
+      "close": 1106.66,
+      "volume": 879191
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "KLAC",
+      "open": 1130.06,
+      "high": 1161.18,
+      "low": 1126.5,
+      "close": 1152.885,
+      "volume": 1078652
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "KLAC",
+      "open": 1140.81,
+      "high": 1156.32,
+      "low": 1138.59,
+      "close": 1147.43,
+      "volume": 744829
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "KLAC",
+      "open": 1147.43,
+      "high": 1147.43,
+      "low": 1090.335,
+      "close": 1114.32,
+      "volume": 1361765
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "KLAC",
+      "open": 1106.66,
+      "high": 1163.1,
+      "low": 1106.66,
+      "close": 1159.0,
+      "volume": 946795
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "KLAC",
+      "open": 1166.0,
+      "high": 1191.26,
+      "low": 1160.6,
+      "close": 1182.82,
+      "volume": 825488
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "KLAC",
+      "open": 1200.0,
+      "high": 1221.195,
+      "low": 1200.0,
+      "close": 1215.13,
+      "volume": 971274
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "KLAC",
+      "open": 1206.68,
+      "high": 1209.6558,
+      "low": 1195.79,
+      "close": 1206.04,
+      "volume": 664768
     }
   ]
 }

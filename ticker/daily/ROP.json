@@ -1,7 +1,7 @@
 {
   "ticker": "ROP",
-  "generated_at": "2025-10-10T02:43:32.263814+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:23:27.228814+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 511.4501,
       "close": 518.07,
       "volume": 776956
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "ROP",
+      "open": 520.72,
+      "high": 520.85,
+      "low": 503.9,
+      "close": 509.0,
+      "volume": 1290927
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "ROP",
+      "open": 507.35,
+      "high": 513.85,
+      "low": 504.105,
+      "close": 512.73,
+      "volume": 731376
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "ROP",
+      "open": 508.4,
+      "high": 515.32,
+      "low": 506.7943,
+      "close": 513.82,
+      "volume": 712829
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "ROP",
+      "open": 507.8,
+      "high": 515.57,
+      "low": 499.16,
+      "close": 499.73,
+      "volume": 1057482
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "ROP",
+      "open": 500.17,
+      "high": 503.325,
+      "low": 497.57,
+      "close": 500.08,
+      "volume": 837068
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "ROP",
+      "open": 500.04,
+      "high": 505.04,
+      "low": 498.42,
+      "close": 504.52,
+      "volume": 716308
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "ROP",
+      "open": 504.51,
+      "high": 506.965,
+      "low": 501.52,
+      "close": 505.89,
+      "volume": 887184
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "ROP",
+      "open": 507.28,
+      "high": 517.5,
+      "low": 505.895,
+      "close": 514.52,
+      "volume": 622343
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "ROP",
+      "open": 510.98,
+      "high": 519.1,
+      "low": 508.57,
+      "close": 508.95,
+      "volume": 1147927
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "ROP",
+      "open": 467.06,
+      "high": 481.48,
+      "low": 456.985,
+      "close": 479.96,
+      "volume": 2230249
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "ROP",
+      "open": 482.59,
+      "high": 483.355,
+      "low": 474.795,
+      "close": 478.8,
+      "volume": 1059278
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "ROP",
+      "open": 476.52,
+      "high": 476.525,
+      "low": 458.92,
+      "close": 463.73,
+      "volume": 1631106
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "ROP",
+      "open": 463.73,
+      "high": 464.98,
+      "low": 455.71,
+      "close": 456.16,
+      "volume": 1494990
     }
   ]
 }

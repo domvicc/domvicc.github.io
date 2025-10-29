@@ -1,7 +1,7 @@
 {
   "ticker": "CAT",
-  "generated_at": "2025-10-10T02:42:30.199340+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:19:56.311435+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 497.14,
       "close": 500.36,
       "volume": 3114119
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "CAT",
+      "open": 503.115,
+      "high": 511.5,
+      "low": 491.3,
+      "close": 491.3,
+      "volume": 3889116
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "CAT",
+      "open": 502.15,
+      "high": 506.38,
+      "low": 495.45,
+      "close": 504.76,
+      "volume": 2618593
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "CAT",
+      "open": 500.58,
+      "high": 531.56,
+      "low": 499.01,
+      "close": 527.47,
+      "volume": 5459830
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "CAT",
+      "open": 534.2,
+      "high": 538.449,
+      "low": 527.2109,
+      "close": 534.05,
+      "volume": 3447104
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "CAT",
+      "open": 538.06,
+      "high": 544.9899,
+      "low": 534.7,
+      "close": 540.96,
+      "volume": 3463082
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "CAT",
+      "open": 537.375,
+      "high": 542.21,
+      "low": 526.97,
+      "close": 527.08,
+      "volume": 2814681
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "CAT",
+      "open": 529.56,
+      "high": 534.2,
+      "low": 526.94,
+      "close": 531.18,
+      "volume": 2170839
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "CAT",
+      "open": 525.07,
+      "high": 533.38,
+      "low": 522.04,
+      "close": 524.65,
+      "volume": 2259080
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "CAT",
+      "open": 525.73,
+      "high": 525.8,
+      "low": 510.21,
+      "close": 513.91,
+      "volume": 4149408
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "CAT",
+      "open": 518.33,
+      "high": 522.89,
+      "low": 513.01,
+      "close": 520.5,
+      "volume": 2619367
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "CAT",
+      "open": 522.86,
+      "high": 527.23,
+      "low": 521.0201,
+      "close": 522.73,
+      "volume": 2392328
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "CAT",
+      "open": 527.05,
+      "high": 529.472,
+      "low": 521.43,
+      "close": 527.07,
+      "volume": 2493765
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "CAT",
+      "open": 525.96,
+      "high": 530.29,
+      "low": 521.6744,
+      "close": 524.47,
+      "volume": 2750147
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "ticker": "ARM",
-  "generated_at": "2025-10-10T02:42:25.173432+00:00",
-  "count": 520,
+  "generated_at": "2025-10-29T01:19:22.386838+00:00",
+  "count": 533,
   "data": [
     {
       "timestamp": "2023-09-14",
@@ -4682,6 +4682,123 @@
       "low": 161.21,
       "close": 170.66,
       "volume": 8685569
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "ARM",
+      "open": 170.6,
+      "high": 171.59,
+      "low": 153.22,
+      "close": 154.81,
+      "volume": 8383969
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "ARM",
+      "open": 160.805,
+      "high": 175.0,
+      "low": 157.0,
+      "close": 171.94,
+      "volume": 11188193
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "ARM",
+      "open": 171.595,
+      "high": 180.34,
+      "low": 167.54,
+      "close": 168.16,
+      "volume": 12821187
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "ARM",
+      "open": 172.06,
+      "high": 174.0,
+      "low": 167.1,
+      "close": 170.67,
+      "volume": 7692830
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "ARM",
+      "open": 173.58,
+      "high": 175.97,
+      "low": 168.6264,
+      "close": 171.19,
+      "volume": 4581189
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "ARM",
+      "open": 169.73,
+      "high": 169.73,
+      "low": 163.61,
+      "close": 165.61,
+      "volume": 4645269
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "ARM",
+      "open": 167.5,
+      "high": 173.04,
+      "low": 167.415,
+      "close": 171.5,
+      "volume": 3654095
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "ARM",
+      "open": 170.53,
+      "high": 173.845,
+      "low": 167.06,
+      "close": 169.38,
+      "volume": 4776145
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "ARM",
+      "open": 168.06,
+      "high": 170.835,
+      "low": 160.8524,
+      "close": 165.71,
+      "volume": 4302283
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "ARM",
+      "open": 164.56,
+      "high": 169.29,
+      "low": 164.07,
+      "close": 166.6,
+      "volume": 2775737
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "ARM",
+      "open": 170.19,
+      "high": 174.4499,
+      "low": 169.66,
+      "close": 170.68,
+      "volume": 3665243
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "ARM",
+      "open": 174.485,
+      "high": 183.16,
+      "low": 174.27,
+      "close": 178.62,
+      "volume": 6552357
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "ARM",
+      "open": 178.01,
+      "high": 179.12,
+      "low": 172.93,
+      "close": 173.09,
+      "volume": 3317508
     }
   ]
 }

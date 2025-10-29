@@ -1,7 +1,7 @@
 {
   "ticker": "KO",
-  "generated_at": "2025-10-10T02:43:04.446964+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:22:02.040824+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 66.12,
       "close": 66.37,
       "volume": 12705190
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "KO",
+      "open": 66.52,
+      "high": 67.395,
+      "low": 66.375,
+      "close": 67.04,
+      "volume": 17991744
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "KO",
+      "open": 66.23,
+      "high": 66.8,
+      "low": 66.0,
+      "close": 66.8,
+      "volume": 13690029
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "KO",
+      "open": 66.87,
+      "high": 67.57,
+      "low": 66.745,
+      "close": 67.51,
+      "volume": 14245564
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "KO",
+      "open": 67.265,
+      "high": 67.72,
+      "low": 66.92,
+      "close": 67.08,
+      "volume": 11193715
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "KO",
+      "open": 67.175,
+      "high": 68.105,
+      "low": 67.16,
+      "close": 67.59,
+      "volume": 15707226
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "KO",
+      "open": 68.0,
+      "high": 68.495,
+      "low": 67.8,
+      "close": 68.44,
+      "volume": 15541769
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "KO",
+      "open": 68.425,
+      "high": 68.64,
+      "low": 67.92,
+      "close": 68.44,
+      "volume": 17786778
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "KO",
+      "open": 70.565,
+      "high": 71.39,
+      "low": 70.23,
+      "close": 71.22,
+      "volume": 33651302
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "KO",
+      "open": 71.36,
+      "high": 71.615,
+      "low": 70.51,
+      "close": 70.81,
+      "volume": 18292950
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "KO",
+      "open": 70.81,
+      "high": 70.9287,
+      "low": 69.72,
+      "close": 69.94,
+      "volume": 13989414
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "KO",
+      "open": 69.91,
+      "high": 70.05,
+      "low": 69.645,
+      "close": 69.71,
+      "volume": 15688202
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "KO",
+      "open": 69.78,
+      "high": 70.115,
+      "low": 69.25,
+      "close": 70.06,
+      "volume": 13800049
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "KO",
+      "open": 70.045,
+      "high": 70.9,
+      "low": 69.95,
+      "close": 70.16,
+      "volume": 12705392
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "ticker": "MAR",
-  "generated_at": "2025-10-10T02:43:07.692094+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:22:17.285535+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 265.93,
       "close": 266.14,
       "volume": 1300873
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "MAR",
+      "open": 266.33,
+      "high": 270.22,
+      "low": 259.86,
+      "close": 260.2,
+      "volume": 1728208
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "MAR",
+      "open": 263.61,
+      "high": 265.29,
+      "low": 261.32,
+      "close": 263.26,
+      "volume": 1421682
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "MAR",
+      "open": 260.89,
+      "high": 269.64,
+      "low": 260.42,
+      "close": 267.97,
+      "volume": 1305774
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "MAR",
+      "open": 267.8,
+      "high": 269.79,
+      "low": 263.44,
+      "close": 266.19,
+      "volume": 1187499
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "MAR",
+      "open": 267.38,
+      "high": 267.72,
+      "low": 257.92,
+      "close": 259.04,
+      "volume": 1369991
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "MAR",
+      "open": 259.0,
+      "high": 263.07,
+      "low": 258.62,
+      "close": 260.85,
+      "volume": 1646033
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "MAR",
+      "open": 262.3,
+      "high": 263.81,
+      "low": 259.93,
+      "close": 260.0,
+      "volume": 1650241
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "MAR",
+      "open": 263.01,
+      "high": 269.575,
+      "low": 262.035,
+      "close": 268.43,
+      "volume": 1529014
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "MAR",
+      "open": 268.0,
+      "high": 276.8,
+      "low": 268.0,
+      "close": 272.07,
+      "volume": 1548188
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "MAR",
+      "open": 272.12,
+      "high": 273.04,
+      "low": 268.85,
+      "close": 269.7,
+      "volume": 1393216
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "MAR",
+      "open": 271.39,
+      "high": 273.31,
+      "low": 269.815,
+      "close": 271.32,
+      "volume": 1077703
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "MAR",
+      "open": 272.42,
+      "high": 274.94,
+      "low": 270.05,
+      "close": 271.21,
+      "volume": 995474
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "MAR",
+      "open": 269.88,
+      "high": 271.19,
+      "low": 265.32,
+      "close": 265.455,
+      "volume": 1085659
     }
   ]
 }

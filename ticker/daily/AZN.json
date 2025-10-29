@@ -1,7 +1,7 @@
 {
   "ticker": "AZN",
-  "generated_at": "2025-10-10T02:42:27.131595+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:19:32.307529+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 84.99,
       "close": 85.04,
       "volume": 9093484
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "AZN",
+      "open": 85.63,
+      "high": 85.88,
+      "low": 83.845,
+      "close": 84.53,
+      "volume": 14476330
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "AZN",
+      "open": 84.35,
+      "high": 84.92,
+      "low": 84.05,
+      "close": 84.51,
+      "volume": 5979944
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "AZN",
+      "open": 84.58,
+      "high": 85.17,
+      "low": 84.3,
+      "close": 85.12,
+      "volume": 4902168
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "AZN",
+      "open": 83.55,
+      "high": 85.04,
+      "low": 83.53,
+      "close": 84.83,
+      "volume": 4070016
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "AZN",
+      "open": 83.52,
+      "high": 84.415,
+      "low": 83.095,
+      "close": 83.83,
+      "volume": 4326064
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "AZN",
+      "open": 83.835,
+      "high": 85.06,
+      "low": 83.6505,
+      "close": 84.69,
+      "volume": 3125960
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "AZN",
+      "open": 84.86,
+      "high": 85.18,
+      "low": 83.775,
+      "close": 83.87,
+      "volume": 5016376
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "AZN",
+      "open": 83.84,
+      "high": 83.91,
+      "low": 83.12,
+      "close": 83.22,
+      "volume": 5616670
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "AZN",
+      "open": 83.45,
+      "high": 84.21,
+      "low": 83.278,
+      "close": 83.43,
+      "volume": 3313353
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "AZN",
+      "open": 83.17,
+      "high": 83.81,
+      "low": 83.12,
+      "close": 83.4,
+      "volume": 2149848
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "AZN",
+      "open": 83.45,
+      "high": 83.515,
+      "low": 82.92,
+      "close": 83.29,
+      "volume": 2380453
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "AZN",
+      "open": 83.46,
+      "high": 84.21,
+      "low": 83.235,
+      "close": 84.06,
+      "volume": 6247961
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "AZN",
+      "open": 84.04,
+      "high": 84.22,
+      "low": 81.78,
+      "close": 82.61,
+      "volume": 3660803
     }
   ]
 }

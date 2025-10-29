@@ -1,7 +1,7 @@
 {
   "ticker": "CEG",
-  "generated_at": "2025-10-10T02:42:32.649280+00:00",
-  "count": 925,
+  "generated_at": "2025-10-29T01:20:03.543625+00:00",
+  "count": 938,
   "data": [
     {
       "timestamp": "2022-02-02",
@@ -8327,6 +8327,123 @@
       "low": 372.75,
       "close": 383.23,
       "volume": 2888770
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "CEG",
+      "open": 381.0,
+      "high": 392.18,
+      "low": 367.38,
+      "close": 368.49,
+      "volume": 3084565
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "CEG",
+      "open": 376.32,
+      "high": 387.0,
+      "low": 375.25,
+      "close": 380.91,
+      "volume": 3270521
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "CEG",
+      "open": 374.7,
+      "high": 395.14,
+      "low": 366.1595,
+      "close": 389.56,
+      "volume": 3110937
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "CEG",
+      "open": 396.975,
+      "high": 412.7,
+      "low": 395.7001,
+      "close": 403.95,
+      "volume": 3537707
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "CEG",
+      "open": 406.9,
+      "high": 411.69,
+      "low": 394.72,
+      "close": 396.53,
+      "volume": 3062349
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "CEG",
+      "open": 391.3,
+      "high": 402.01,
+      "low": 382.83,
+      "close": 386.5,
+      "volume": 2882895
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "CEG",
+      "open": 395.94,
+      "high": 398.5,
+      "low": 368.1301,
+      "close": 370.0,
+      "volume": 3072907
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "CEG",
+      "open": 369.365,
+      "high": 369.5483,
+      "low": 355.2,
+      "close": 358.79,
+      "volume": 2753661
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "CEG",
+      "open": 361.0,
+      "high": 362.9396,
+      "low": 343.47,
+      "close": 350.06,
+      "volume": 3571753
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "CEG",
+      "open": 354.0,
+      "high": 367.535,
+      "low": 353.79,
+      "close": 365.8,
+      "volume": 2317537
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "CEG",
+      "open": 376.43,
+      "high": 391.1159,
+      "low": 373.6,
+      "close": 389.19,
+      "volume": 2999903
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "CEG",
+      "open": 392.75,
+      "high": 395.6331,
+      "low": 384.15,
+      "close": 391.15,
+      "volume": 2642284
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "CEG",
+      "open": 397.03,
+      "high": 401.0,
+      "low": 375.5,
+      "close": 384.95,
+      "volume": 2821952
     }
   ]
 }

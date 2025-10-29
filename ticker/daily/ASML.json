@@ -1,7 +1,7 @@
 {
   "ticker": "ASML",
-  "generated_at": "2025-10-10T02:42:25.704539+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:19:24.093326+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 971.51,
       "close": 980.54,
       "volume": 1496016
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "ASML",
+      "open": 970.69,
+      "high": 976.2,
+      "low": 935.41,
+      "close": 936.19,
+      "volume": 2933917
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "ASML",
+      "open": 971.73,
+      "high": 985.18,
+      "low": 966.9677,
+      "close": 984.66,
+      "volume": 2223867
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "ASML",
+      "open": 967.46,
+      "high": 993.48,
+      "low": 966.0,
+      "close": 983.18,
+      "volume": 2422053
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "ASML",
+      "open": 1030.13,
+      "high": 1033.0,
+      "low": 993.54,
+      "close": 1009.81,
+      "volume": 2900314
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "ASML",
+      "open": 1037.165,
+      "high": 1049.38,
+      "low": 1011.1,
+      "close": 1019.59,
+      "volume": 1938400
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "ASML",
+      "open": 1020.59,
+      "high": 1032.765,
+      "low": 1015.0,
+      "close": 1029.27,
+      "volume": 1663654
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "ASML",
+      "open": 1031.75,
+      "high": 1052.17,
+      "low": 1031.49,
+      "close": 1042.15,
+      "volume": 1271713
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "ASML",
+      "open": 1036.305,
+      "high": 1037.475,
+      "low": 1024.15,
+      "close": 1025.02,
+      "volume": 1072158
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "ASML",
+      "open": 1026.45,
+      "high": 1033.18,
+      "low": 997.67,
+      "close": 1011.565,
+      "volume": 1328598
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "ASML",
+      "open": 1004.52,
+      "high": 1040.5,
+      "low": 1004.5,
+      "close": 1036.41,
+      "volume": 1318221
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "ASML",
+      "open": 1037.93,
+      "high": 1043.4,
+      "low": 1032.18,
+      "close": 1033.1,
+      "volume": 1032742
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "ASML",
+      "open": 1050.01,
+      "high": 1060.73,
+      "low": 1049.3644,
+      "close": 1059.98,
+      "volume": 1265556
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "ASML",
+      "open": 1056.8,
+      "high": 1060.64,
+      "low": 1051.73,
+      "close": 1052.48,
+      "volume": 853608
     }
   ]
 }

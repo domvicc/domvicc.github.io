@@ -1,7 +1,7 @@
 {
   "ticker": "EXC",
-  "generated_at": "2025-10-10T02:42:48.734584+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:21:06.133103+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 46.5211,
       "close": 46.66,
       "volume": 4504782
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "EXC",
+      "open": 46.74,
+      "high": 47.345,
+      "low": 46.645,
+      "close": 47.07,
+      "volume": 5979699
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "EXC",
+      "open": 46.98,
+      "high": 47.1,
+      "low": 46.5,
+      "close": 46.85,
+      "volume": 5192454
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "EXC",
+      "open": 47.32,
+      "high": 47.63,
+      "low": 47.17,
+      "close": 47.38,
+      "volume": 5195761
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "EXC",
+      "open": 47.46,
+      "high": 47.88,
+      "low": 47.38,
+      "close": 47.83,
+      "volume": 5960629
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "EXC",
+      "open": 47.73,
+      "high": 48.0699,
+      "low": 47.26,
+      "close": 47.36,
+      "volume": 5269070
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "EXC",
+      "open": 47.545,
+      "high": 48.065,
+      "low": 47.36,
+      "close": 47.78,
+      "volume": 7553644
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "EXC",
+      "open": 48.05,
+      "high": 48.29,
+      "low": 47.685,
+      "close": 48.24,
+      "volume": 4466701
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "EXC",
+      "open": 48.25,
+      "high": 48.39,
+      "low": 47.57,
+      "close": 48.0,
+      "volume": 5343539
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "EXC",
+      "open": 47.94,
+      "high": 48.505,
+      "low": 47.775,
+      "close": 48.11,
+      "volume": 6652358
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "EXC",
+      "open": 48.28,
+      "high": 48.395,
+      "low": 47.42,
+      "close": 47.6,
+      "volume": 11514883
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "EXC",
+      "open": 47.85,
+      "high": 48.11,
+      "low": 47.54,
+      "close": 48.035,
+      "volume": 6296154
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "EXC",
+      "open": 47.89,
+      "high": 48.09,
+      "low": 47.595,
+      "close": 48.07,
+      "volume": 7681318
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "EXC",
+      "open": 48.19,
+      "high": 48.19,
+      "low": 47.56,
+      "close": 47.7,
+      "volume": 7730257
     }
   ]
 }

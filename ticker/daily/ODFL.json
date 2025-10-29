@@ -1,7 +1,7 @@
 {
   "ticker": "ODFL",
-  "generated_at": "2025-10-10T02:43:23.657782+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:22:50.133516+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 140.1,
       "close": 141.28,
       "volume": 2049442
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "ODFL",
+      "open": 141.85,
+      "high": 142.6885,
+      "low": 134.2,
+      "close": 134.31,
+      "volume": 2136267
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "ODFL",
+      "open": 135.56,
+      "high": 137.895,
+      "low": 135.25,
+      "close": 136.18,
+      "volume": 1282433
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "ODFL",
+      "open": 134.71,
+      "high": 137.48,
+      "low": 134.03,
+      "close": 135.43,
+      "volume": 2628589
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "ODFL",
+      "open": 135.46,
+      "high": 137.87,
+      "low": 134.78,
+      "close": 135.04,
+      "volume": 1884587
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "ODFL",
+      "open": 139.89,
+      "high": 140.49,
+      "low": 135.5,
+      "close": 138.1,
+      "volume": 2326768
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "ODFL",
+      "open": 138.73,
+      "high": 138.945,
+      "low": 136.0001,
+      "close": 138.04,
+      "volume": 1870246
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "ODFL",
+      "open": 138.58,
+      "high": 142.31,
+      "low": 137.68,
+      "close": 140.71,
+      "volume": 2009063
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "ODFL",
+      "open": 140.14,
+      "high": 145.0,
+      "low": 139.74,
+      "close": 144.36,
+      "volume": 1862729
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "ODFL",
+      "open": 143.09,
+      "high": 144.91,
+      "low": 140.72,
+      "close": 141.02,
+      "volume": 1603177
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "ODFL",
+      "open": 140.55,
+      "high": 141.25,
+      "low": 134.425,
+      "close": 135.86,
+      "volume": 2090731
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "ODFL",
+      "open": 137.85,
+      "high": 138.14,
+      "low": 135.86,
+      "close": 136.12,
+      "volume": 1145638
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "ODFL",
+      "open": 136.26,
+      "high": 137.7399,
+      "low": 134.34,
+      "close": 136.73,
+      "volume": 2082611
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "ODFL",
+      "open": 138.0,
+      "high": 138.24,
+      "low": 135.765,
+      "close": 136.09,
+      "volume": 2062476
     }
   ]
 }

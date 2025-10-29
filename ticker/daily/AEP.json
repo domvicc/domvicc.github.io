@@ -1,7 +1,7 @@
 {
   "ticker": "AEP",
-  "generated_at": "2025-10-10T02:42:21.487553+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:19:09.967491+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 116.39,
       "close": 116.91,
       "volume": 2916139
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "AEP",
+      "open": 117.52,
+      "high": 117.75,
+      "low": 115.65,
+      "close": 117.04,
+      "volume": 3890017
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "AEP",
+      "open": 116.96,
+      "high": 117.8199,
+      "low": 116.21,
+      "close": 116.8,
+      "volume": 2253600
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "AEP",
+      "open": 117.23,
+      "high": 118.685,
+      "low": 117.0,
+      "close": 118.38,
+      "volume": 3190010
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "AEP",
+      "open": 119.4,
+      "high": 119.4,
+      "low": 117.78,
+      "close": 118.53,
+      "volume": 2495344
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "AEP",
+      "open": 119.89,
+      "high": 120.46,
+      "low": 117.36,
+      "close": 117.53,
+      "volume": 4072008
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "AEP",
+      "open": 118.1,
+      "high": 118.195,
+      "low": 116.7601,
+      "close": 117.53,
+      "volume": 2762125
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "AEP",
+      "open": 118.13,
+      "high": 118.19,
+      "low": 116.87,
+      "close": 117.82,
+      "volume": 2989387
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "AEP",
+      "open": 117.97,
+      "high": 118.0,
+      "low": 116.54,
+      "close": 117.43,
+      "volume": 2395640
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "AEP",
+      "open": 117.43,
+      "high": 118.17,
+      "low": 117.07,
+      "close": 117.27,
+      "volume": 2461705
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "AEP",
+      "open": 117.63,
+      "high": 117.7095,
+      "low": 115.43,
+      "close": 116.18,
+      "volume": 2284459
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "AEP",
+      "open": 116.47,
+      "high": 117.12,
+      "low": 115.85,
+      "close": 115.98,
+      "volume": 1888346
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "AEP",
+      "open": 115.48,
+      "high": 116.71,
+      "low": 115.12,
+      "close": 116.39,
+      "volume": 2811348
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "AEP",
+      "open": 116.52,
+      "high": 116.6129,
+      "low": 114.67,
+      "close": 115.11,
+      "volume": 3885348
     }
   ]
 }

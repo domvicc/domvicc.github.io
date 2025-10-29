@@ -1,7 +1,7 @@
 {
   "ticker": "MRK",
-  "generated_at": "2025-10-10T02:43:16.018798+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:22:29.909541+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 86.64,
       "close": 87.5,
       "volume": 10938196
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "MRK",
+      "open": 87.935,
+      "high": 88.24,
+      "low": 85.92,
+      "close": 85.99,
+      "volume": 11230694
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "MRK",
+      "open": 85.655,
+      "high": 86.46,
+      "low": 85.24,
+      "close": 85.7,
+      "volume": 6553942
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "MRK",
+      "open": 85.38,
+      "high": 85.68,
+      "low": 84.15,
+      "close": 84.7,
+      "volume": 9675036
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "MRK",
+      "open": 84.19,
+      "high": 84.69,
+      "low": 83.61,
+      "close": 84.11,
+      "volume": 9168705
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "MRK",
+      "open": 84.41,
+      "high": 85.5,
+      "low": 83.6,
+      "close": 83.92,
+      "volume": 11709057
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "MRK",
+      "open": 83.275,
+      "high": 84.89,
+      "low": 83.1632,
+      "close": 84.79,
+      "volume": 10758923
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "MRK",
+      "open": 85.245,
+      "high": 87.0,
+      "low": 85.03,
+      "close": 86.32,
+      "volume": 8611782
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "MRK",
+      "open": 86.96,
+      "high": 87.67,
+      "low": 86.23,
+      "close": 87.62,
+      "volume": 9852403
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "MRK",
+      "open": 87.68,
+      "high": 88.7898,
+      "low": 87.0139,
+      "close": 87.61,
+      "volume": 10926343
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "MRK",
+      "open": 87.56,
+      "high": 88.105,
+      "low": 86.91,
+      "close": 87.18,
+      "volume": 7687450
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "MRK",
+      "open": 87.33,
+      "high": 88.06,
+      "low": 87.1083,
+      "close": 87.49,
+      "volume": 7902072
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "MRK",
+      "open": 87.51,
+      "high": 88.295,
+      "low": 87.0301,
+      "close": 88.0,
+      "volume": 7226555
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "MRK",
+      "open": 88.105,
+      "high": 88.105,
+      "low": 86.93,
+      "close": 87.03,
+      "volume": 8298134
     }
   ]
 }

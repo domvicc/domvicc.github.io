@@ -1,7 +1,7 @@
 {
   "ticker": "ADSK",
-  "generated_at": "2025-10-10T02:42:20.919343+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:19:07.281887+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 305.81,
       "close": 310.32,
       "volume": 1357055
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "ADSK",
+      "open": 309.08,
+      "high": 312.29,
+      "low": 302.43,
+      "close": 303.5,
+      "volume": 1480604
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "ADSK",
+      "open": 303.63,
+      "high": 308.7,
+      "low": 302.6569,
+      "close": 307.97,
+      "volume": 982664
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "ADSK",
+      "open": 304.58,
+      "high": 308.46,
+      "low": 303.11,
+      "close": 306.59,
+      "volume": 1338585
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "ADSK",
+      "open": 308.65,
+      "high": 310.0,
+      "low": 303.18,
+      "close": 305.08,
+      "volume": 992934
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "ADSK",
+      "open": 307.76,
+      "high": 308.91,
+      "low": 298.8,
+      "close": 299.82,
+      "volume": 1066453
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "ADSK",
+      "open": 299.32,
+      "high": 305.26,
+      "low": 298.91,
+      "close": 303.66,
+      "volume": 2202107
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "ADSK",
+      "open": 305.0,
+      "high": 308.08,
+      "low": 304.32,
+      "close": 307.95,
+      "volume": 885207
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "ADSK",
+      "open": 307.95,
+      "high": 311.47,
+      "low": 306.975,
+      "close": 310.57,
+      "volume": 710356
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "ADSK",
+      "open": 309.82,
+      "high": 311.28,
+      "low": 305.12,
+      "close": 308.15,
+      "volume": 1471746
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "ADSK",
+      "open": 304.0,
+      "high": 310.1,
+      "low": 304.0,
+      "close": 309.84,
+      "volume": 1006935
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "ADSK",
+      "open": 313.01,
+      "high": 314.51,
+      "low": 311.15,
+      "close": 312.88,
+      "volume": 953311
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "ADSK",
+      "open": 313.35,
+      "high": 314.1689,
+      "low": 311.134,
+      "close": 313.53,
+      "volume": 938161
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "ADSK",
+      "open": 312.87,
+      "high": 315.0,
+      "low": 310.73,
+      "close": 311.08,
+      "volume": 918271
     }
   ]
 }

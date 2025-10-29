@@ -1,7 +1,7 @@
 {
   "ticker": "VZ",
-  "generated_at": "2025-10-10T02:43:43.735996+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:24:24.572855+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 40.73,
       "close": 40.83,
       "volume": 34868202
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "VZ",
+      "open": 40.25,
+      "high": 40.6056,
+      "low": 39.815,
+      "close": 39.85,
+      "volume": 38107731
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "VZ",
+      "open": 39.75,
+      "high": 40.155,
+      "low": 39.405,
+      "close": 39.75,
+      "volume": 26453704
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "VZ",
+      "open": 39.8,
+      "high": 40.58,
+      "low": 39.76,
+      "close": 40.55,
+      "volume": 22346065
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "VZ",
+      "open": 40.42,
+      "high": 40.555,
+      "low": 40.24,
+      "close": 40.38,
+      "volume": 18233202
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "VZ",
+      "open": 40.415,
+      "high": 40.57,
+      "low": 40.18,
+      "close": 40.36,
+      "volume": 16751223
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "VZ",
+      "open": 40.5,
+      "high": 40.655,
+      "low": 40.21,
+      "close": 40.55,
+      "volume": 20523461
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "VZ",
+      "open": 40.7,
+      "high": 40.87,
+      "low": 40.35,
+      "close": 40.8,
+      "volume": 28079204
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "VZ",
+      "open": 40.63,
+      "high": 40.78,
+      "low": 40.13,
+      "close": 40.3,
+      "volume": 29881679
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "VZ",
+      "open": 39.57,
+      "high": 40.21,
+      "low": 38.92,
+      "close": 39.8,
+      "volume": 31009461
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "VZ",
+      "open": 39.785,
+      "high": 39.86,
+      "low": 38.39,
+      "close": 38.4,
+      "volume": 52663607
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "VZ",
+      "open": 38.595,
+      "high": 38.92,
+      "low": 38.54,
+      "close": 38.82,
+      "volume": 27485693
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "VZ",
+      "open": 38.805,
+      "high": 39.285,
+      "low": 38.765,
+      "close": 39.23,
+      "volume": 27487203
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "VZ",
+      "open": 39.15,
+      "high": 39.52,
+      "low": 38.95,
+      "close": 39.32,
+      "volume": 30300885
     }
   ]
 }

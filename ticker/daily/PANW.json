@@ -1,7 +1,7 @@
 {
   "ticker": "PANW",
-  "generated_at": "2025-10-10T02:43:25.874344+00:00",
-  "count": 3325,
+  "generated_at": "2025-10-29T01:23:04.525979+00:00",
+  "count": 3338,
   "data": [
     {
       "timestamp": "2012-07-20",
@@ -29927,6 +29927,123 @@
       "low": 214.19,
       "close": 215.17,
       "volume": 4548755
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "PANW",
+      "open": 216.0,
+      "high": 217.29,
+      "low": 208.31,
+      "close": 208.55,
+      "volume": 5425045
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "PANW",
+      "open": 213.42,
+      "high": 214.72,
+      "low": 211.69,
+      "close": 213.28,
+      "volume": 4449204
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "PANW",
+      "open": 209.765,
+      "high": 210.8,
+      "low": 206.7,
+      "close": 207.56,
+      "volume": 4381695
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "PANW",
+      "open": 208.08,
+      "high": 210.6,
+      "low": 203.3801,
+      "close": 206.7,
+      "volume": 4992297
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "PANW",
+      "open": 208.0,
+      "high": 210.44,
+      "low": 204.63,
+      "close": 205.51,
+      "volume": 3675599
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "PANW",
+      "open": 204.09,
+      "high": 208.98,
+      "low": 203.62,
+      "close": 207.89,
+      "volume": 4626840
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "PANW",
+      "open": 209.555,
+      "high": 212.605,
+      "low": 209.53,
+      "close": 211.82,
+      "volume": 4086411
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "PANW",
+      "open": 212.04,
+      "high": 215.09,
+      "low": 211.19,
+      "close": 214.4,
+      "volume": 3835806
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "PANW",
+      "open": 214.0,
+      "high": 215.17,
+      "low": 210.99,
+      "close": 212.42,
+      "volume": 4591459
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "PANW",
+      "open": 212.05,
+      "high": 216.5069,
+      "low": 211.62,
+      "close": 215.02,
+      "volume": 4001693
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "PANW",
+      "open": 217.0,
+      "high": 218.225,
+      "low": 215.8661,
+      "close": 217.11,
+      "volume": 3437151
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "PANW",
+      "open": 219.79,
+      "high": 221.09,
+      "low": 218.0,
+      "close": 220.29,
+      "volume": 5439642
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "PANW",
+      "open": 221.18,
+      "high": 223.61,
+      "low": 219.68,
+      "close": 221.38,
+      "volume": 4463168
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "ticker": "WMT",
-  "generated_at": "2025-10-10T02:43:45.867645+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:24:37.397049+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 100.37,
       "close": 101.77,
       "volume": 19508017
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "WMT",
+      "open": 102.05,
+      "high": 103.6291,
+      "low": 101.52,
+      "close": 101.84,
+      "volume": 18519435
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "WMT",
+      "open": 101.37,
+      "high": 102.45,
+      "low": 101.07,
+      "close": 102.12,
+      "volume": 10871182
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "WMT",
+      "open": 104.05,
+      "high": 107.92,
+      "low": 102.8921,
+      "close": 107.21,
+      "volume": 30859504
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "WMT",
+      "open": 107.32,
+      "high": 109.555,
+      "low": 107.3,
+      "close": 109.03,
+      "volume": 21416294
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "WMT",
+      "open": 109.2,
+      "high": 109.575,
+      "low": 105.66,
+      "close": 106.47,
+      "volume": 16366166
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "WMT",
+      "open": 107.17,
+      "high": 108.2,
+      "low": 106.22,
+      "close": 107.73,
+      "volume": 13735594
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "WMT",
+      "open": 107.85,
+      "high": 108.25,
+      "low": 106.61,
+      "close": 107.05,
+      "volume": 10581220
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "WMT",
+      "open": 107.33,
+      "high": 107.48,
+      "low": 106.18,
+      "close": 106.22,
+      "volume": 10899733
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "WMT",
+      "open": 106.55,
+      "high": 107.765,
+      "low": 105.655,
+      "close": 107.14,
+      "volume": 12296490
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "WMT",
+      "open": 107.35,
+      "high": 107.57,
+      "low": 105.78,
+      "close": 106.86,
+      "volume": 11408241
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "WMT",
+      "open": 107.07,
+      "high": 107.165,
+      "low": 105.51,
+      "close": 106.17,
+      "volume": 10317959
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "WMT",
+      "open": 106.34,
+      "high": 106.36,
+      "low": 104.15,
+      "close": 104.47,
+      "volume": 16375860
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "WMT",
+      "open": 104.06,
+      "high": 104.14,
+      "low": 103.05,
+      "close": 103.17,
+      "volume": 13194661
     }
   ]
 }

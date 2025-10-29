@@ -1,7 +1,7 @@
 {
   "ticker": "NVDA",
-  "generated_at": "2025-10-10T02:43:21.964138+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:22:43.151975+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 191.06,
       "close": 192.57,
       "volume": 182997234
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "NVDA",
+      "open": 193.505,
+      "high": 195.62,
+      "low": 182.05,
+      "close": 183.16,
+      "volume": 268774359
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "NVDA",
+      "open": 187.965,
+      "high": 190.1099,
+      "low": 185.96,
+      "close": 188.32,
+      "volume": 153482755
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "NVDA",
+      "open": 184.77,
+      "high": 184.8,
+      "low": 179.7,
+      "close": 180.03,
+      "volume": 205641380
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "NVDA",
+      "open": 184.8,
+      "high": 184.87,
+      "low": 177.29,
+      "close": 179.83,
+      "volume": 214450482
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "NVDA",
+      "open": 182.23,
+      "high": 183.28,
+      "low": 179.77,
+      "close": 181.81,
+      "volume": 179723309
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "NVDA",
+      "open": 180.18,
+      "high": 184.1,
+      "low": 179.75,
+      "close": 183.22,
+      "volume": 173135217
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "NVDA",
+      "open": 183.13,
+      "high": 185.2,
+      "low": 181.73,
+      "close": 182.64,
+      "volume": 128544711
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "NVDA",
+      "open": 182.785,
+      "high": 182.785,
+      "low": 179.8,
+      "close": 181.16,
+      "volume": 124240168
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "NVDA",
+      "open": 181.14,
+      "high": 183.44,
+      "low": 176.76,
+      "close": 180.28,
+      "volume": 162249552
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "NVDA",
+      "open": 180.42,
+      "high": 183.03,
+      "low": 179.7901,
+      "close": 182.16,
+      "volume": 111363718
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "NVDA",
+      "open": 183.835,
+      "high": 187.47,
+      "low": 183.5,
+      "close": 186.26,
+      "volume": 131296677
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "NVDA",
+      "open": 189.99,
+      "high": 192.0,
+      "low": 188.4318,
+      "close": 191.49,
+      "volume": 153452704
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "NVDA",
+      "open": 193.05,
+      "high": 203.15,
+      "low": 191.91,
+      "close": 201.03,
+      "volume": 289125859
     }
   ]
 }

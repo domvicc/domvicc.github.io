@@ -1,7 +1,7 @@
 {
   "ticker": "PEP",
-  "generated_at": "2025-10-10T02:43:28.502189+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:23:08.636464+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 138.59,
       "close": 144.71,
       "volume": 13706629
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "PEP",
+      "open": 145.63,
+      "high": 150.815,
+      "low": 145.0,
+      "close": 150.08,
+      "volume": 17545164
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "PEP",
+      "open": 148.65,
+      "high": 149.98,
+      "low": 147.34,
+      "close": 148.89,
+      "volume": 7271983
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "PEP",
+      "open": 148.69,
+      "high": 151.62,
+      "low": 148.5,
+      "close": 151.54,
+      "volume": 8371136
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "PEP",
+      "open": 151.33,
+      "high": 152.39,
+      "low": 149.17,
+      "close": 151.16,
+      "volume": 6101096
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "PEP",
+      "open": 152.38,
+      "high": 154.375,
+      "low": 152.29,
+      "close": 152.67,
+      "volume": 8532889
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "PEP",
+      "open": 153.77,
+      "high": 153.91,
+      "low": 151.735,
+      "close": 153.71,
+      "volume": 6710141
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "PEP",
+      "open": 154.42,
+      "high": 154.42,
+      "low": 152.715,
+      "close": 153.64,
+      "volume": 4810592
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "PEP",
+      "open": 154.7,
+      "high": 155.19,
+      "low": 152.84,
+      "close": 153.18,
+      "volume": 5614266
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "PEP",
+      "open": 153.15,
+      "high": 155.18,
+      "low": 152.71,
+      "close": 153.03,
+      "volume": 6485959
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "PEP",
+      "open": 153.17,
+      "high": 153.4,
+      "low": 151.03,
+      "close": 151.51,
+      "volume": 6091762
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "PEP",
+      "open": 152.04,
+      "high": 152.415,
+      "low": 151.265,
+      "close": 151.55,
+      "volume": 3580182
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "PEP",
+      "open": 151.01,
+      "high": 152.87,
+      "low": 150.96,
+      "close": 152.63,
+      "volume": 4744578
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "PEP",
+      "open": 151.41,
+      "high": 153.2105,
+      "low": 149.92,
+      "close": 150.12,
+      "volume": 5588652
     }
   ]
 }

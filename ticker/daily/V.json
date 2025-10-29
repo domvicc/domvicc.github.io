@@ -1,7 +1,7 @@
 {
   "ticker": "V",
-  "generated_at": "2025-10-10T02:43:41.686820+00:00",
-  "count": 4419,
+  "generated_at": "2025-10-29T01:24:15.991656+00:00",
+  "count": 4432,
   "data": [
     {
       "timestamp": "2008-03-19",
@@ -39773,6 +39773,123 @@
       "low": 345.582,
       "close": 347.04,
       "volume": 4434799
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "V",
+      "open": 347.63,
+      "high": 350.4,
+      "low": 343.25,
+      "close": 343.65,
+      "volume": 6296169
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "V",
+      "open": 343.72,
+      "high": 347.66,
+      "low": 340.73,
+      "close": 343.3,
+      "volume": 4030682
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "V",
+      "open": 341.0,
+      "high": 350.01,
+      "low": 340.22,
+      "close": 348.38,
+      "volume": 5731348
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "V",
+      "open": 348.38,
+      "high": 350.075,
+      "low": 344.0,
+      "close": 345.69,
+      "volume": 3778198
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "V",
+      "open": 345.0,
+      "high": 345.69,
+      "low": 334.17,
+      "close": 335.4,
+      "volume": 6241506
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "V",
+      "open": 337.77,
+      "high": 343.45,
+      "low": 337.0,
+      "close": 341.89,
+      "volume": 6267130
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "V",
+      "open": 341.9,
+      "high": 344.96,
+      "low": 338.94,
+      "close": 344.41,
+      "volume": 4665032
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "V",
+      "open": 343.12,
+      "high": 349.65,
+      "low": 343.0,
+      "close": 347.21,
+      "volume": 4121756
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "V",
+      "open": 347.82,
+      "high": 348.17,
+      "low": 344.5,
+      "close": 345.36,
+      "volume": 5074406
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "V",
+      "open": 346.2,
+      "high": 347.147,
+      "low": 344.46,
+      "close": 345.96,
+      "volume": 7217225
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "V",
+      "open": 348.2,
+      "high": 349.08,
+      "low": 345.32,
+      "close": 347.38,
+      "volume": 3576694
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "V",
+      "open": 349.0,
+      "high": 349.52,
+      "low": 345.01,
+      "close": 347.82,
+      "volume": 5400264
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "V",
+      "open": 348.58,
+      "high": 349.89,
+      "low": 346.5,
+      "close": 346.9,
+      "volume": 6955737
     }
   ]
 }

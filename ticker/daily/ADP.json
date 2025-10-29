@@ -1,7 +1,7 @@
 {
   "ticker": "ADP",
-  "generated_at": "2025-10-10T02:42:20.103299+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:19:06.680447+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 285.405,
       "close": 285.89,
       "volume": 1340900
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "ADP",
+      "open": 286.85,
+      "high": 287.7999,
+      "low": 284.65,
+      "close": 285.19,
+      "volume": 2717739
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "ADP",
+      "open": 285.21,
+      "high": 286.8299,
+      "low": 282.89,
+      "close": 284.35,
+      "volume": 2041818
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "ADP",
+      "open": 283.66,
+      "high": 286.795,
+      "low": 283.62,
+      "close": 285.92,
+      "volume": 1299516
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "ADP",
+      "open": 286.7,
+      "high": 287.69,
+      "low": 283.01,
+      "close": 284.21,
+      "volume": 1568313
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "ADP",
+      "open": 284.26,
+      "high": 284.475,
+      "low": 279.4201,
+      "close": 280.16,
+      "volume": 1494358
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "ADP",
+      "open": 280.98,
+      "high": 282.9,
+      "low": 280.0,
+      "close": 281.27,
+      "volume": 1301110
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "ADP",
+      "open": 281.61,
+      "high": 283.7416,
+      "low": 281.18,
+      "close": 283.03,
+      "volume": 1395789
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "ADP",
+      "open": 283.46,
+      "high": 285.41,
+      "low": 282.29,
+      "close": 283.98,
+      "volume": 1748209
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "ADP",
+      "open": 283.61,
+      "high": 287.4,
+      "low": 282.93,
+      "close": 283.95,
+      "volume": 1234089
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "ADP",
+      "open": 282.7,
+      "high": 284.2325,
+      "low": 280.66,
+      "close": 281.55,
+      "volume": 1338448
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "ADP",
+      "open": 282.25,
+      "high": 282.86,
+      "low": 280.68,
+      "close": 280.94,
+      "volume": 1263253
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "ADP",
+      "open": 280.97,
+      "high": 282.89,
+      "low": 280.09,
+      "close": 280.53,
+      "volume": 1980093
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "ADP",
+      "open": 280.0,
+      "high": 282.93,
+      "low": 279.308,
+      "close": 279.63,
+      "volume": 2348150
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "ticker": "LRCX",
-  "generated_at": "2025-10-10T02:43:05.954321+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:22:13.253053+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 140.58,
       "close": 141.0,
       "volume": 8102517
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "LRCX",
+      "open": 140.6,
+      "high": 141.8,
+      "low": 131.02,
+      "close": 131.37,
+      "volume": 18748964
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "LRCX",
+      "open": 138.09,
+      "high": 138.9,
+      "low": 136.58,
+      "close": 137.81,
+      "volume": 10048074
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "LRCX",
+      "open": 134.1,
+      "high": 140.92,
+      "low": 134.04,
+      "close": 138.31,
+      "volume": 10509662
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "LRCX",
+      "open": 144.0,
+      "high": 145.22,
+      "low": 141.1,
+      "close": 144.78,
+      "volume": 9722650
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "LRCX",
+      "open": 147.58,
+      "high": 147.58,
+      "low": 140.37,
+      "close": 142.37,
+      "volume": 11650296
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "LRCX",
+      "open": 142.26,
+      "high": 142.65,
+      "low": 139.82,
+      "close": 141.51,
+      "volume": 6389799
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "LRCX",
+      "open": 143.49,
+      "high": 146.4771,
+      "low": 143.425,
+      "close": 144.05,
+      "volume": 8919374
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "LRCX",
+      "open": 143.98,
+      "high": 145.435,
+      "low": 142.4703,
+      "close": 145.04,
+      "volume": 8855592
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "LRCX",
+      "open": 144.895,
+      "high": 145.745,
+      "low": 136.86,
+      "close": 141.25,
+      "volume": 16927780
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "LRCX",
+      "open": 138.0,
+      "high": 148.46,
+      "low": 137.37,
+      "close": 147.54,
+      "volume": 13336572
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "LRCX",
+      "open": 149.91,
+      "high": 153.21,
+      "low": 148.0,
+      "close": 151.68,
+      "volume": 10966392
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "LRCX",
+      "open": 156.14,
+      "high": 158.245,
+      "low": 155.74,
+      "close": 156.9,
+      "volume": 13313095
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "LRCX",
+      "open": 155.52,
+      "high": 156.125,
+      "low": 154.28,
+      "close": 155.62,
+      "volume": 7893796
     }
   ]
 }

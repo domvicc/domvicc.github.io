@@ -1,7 +1,7 @@
 {
   "ticker": "LIN",
-  "generated_at": "2025-10-10T02:43:04.986832+00:00",
-  "count": 1766,
+  "generated_at": "2025-10-29T01:22:09.769848+00:00",
+  "count": 1779,
   "data": [
     {
       "timestamp": "2018-10-01",
@@ -15896,6 +15896,123 @@
       "low": 457.51,
       "close": 458.16,
       "volume": 1500040
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "LIN",
+      "open": 458.07,
+      "high": 463.04,
+      "low": 452.92,
+      "close": 453.82,
+      "volume": 2038864
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "LIN",
+      "open": 456.56,
+      "high": 459.795,
+      "low": 455.0,
+      "close": 456.64,
+      "volume": 1287387
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "LIN",
+      "open": 453.25,
+      "high": 462.07,
+      "low": 453.0675,
+      "close": 459.25,
+      "volume": 1664829
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "LIN",
+      "open": 459.03,
+      "high": 461.53,
+      "low": 450.79,
+      "close": 451.42,
+      "volume": 1838094
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "LIN",
+      "open": 452.04,
+      "high": 452.47,
+      "low": 440.95,
+      "close": 444.24,
+      "volume": 3034026
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "LIN",
+      "open": 444.2,
+      "high": 451.33,
+      "low": 442.89,
+      "close": 450.89,
+      "volume": 2365290
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "LIN",
+      "open": 452.36,
+      "high": 455.24,
+      "low": 449.71,
+      "close": 451.56,
+      "volume": 1895917
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "LIN",
+      "open": 450.55,
+      "high": 452.4531,
+      "low": 448.38,
+      "close": 450.08,
+      "volume": 1766104
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "LIN",
+      "open": 450.33,
+      "high": 455.075,
+      "low": 447.75,
+      "close": 449.92,
+      "volume": 1856806
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "LIN",
+      "open": 452.58,
+      "high": 452.67,
+      "low": 448.66,
+      "close": 450.08,
+      "volume": 1526952
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "LIN",
+      "open": 449.54,
+      "high": 450.4,
+      "low": 445.59,
+      "close": 446.0,
+      "volume": 1593424
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "LIN",
+      "open": 447.65,
+      "high": 450.145,
+      "low": 444.26,
+      "close": 444.82,
+      "volume": 2337828
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "LIN",
+      "open": 445.465,
+      "high": 447.22,
+      "low": 441.99,
+      "close": 442.72,
+      "volume": 2069792
     }
   ]
 }

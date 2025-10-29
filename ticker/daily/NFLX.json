@@ -1,7 +1,7 @@
 {
   "ticker": "NFLX",
-  "generated_at": "2025-10-10T02:43:19.883153+00:00",
-  "count": 5884,
+  "generated_at": "2025-10-29T01:22:37.630470+00:00",
+  "count": 5897,
   "data": [
     {
       "timestamp": "2002-05-23",
@@ -52958,6 +52958,123 @@
       "low": 1211.82,
       "close": 1231.07,
       "volume": 2824077
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "NFLX",
+      "open": 1229.0,
+      "high": 1247.0,
+      "low": 1219.1,
+      "close": 1220.08,
+      "volume": 4279776
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "NFLX",
+      "open": 1221.35,
+      "high": 1231.12,
+      "low": 1206.81,
+      "close": 1219.03,
+      "volume": 2460783
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "NFLX",
+      "open": 1214.75,
+      "high": 1224.2899,
+      "low": 1203.1,
+      "close": 1215.35,
+      "volume": 2362446
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "NFLX",
+      "open": 1213.01,
+      "high": 1219.62,
+      "low": 1201.61,
+      "close": 1203.29,
+      "volume": 2025194
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "NFLX",
+      "open": 1212.15,
+      "high": 1216.71,
+      "low": 1176.0,
+      "close": 1183.59,
+      "volume": 2832619
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "NFLX",
+      "open": 1183.6,
+      "high": 1203.12,
+      "low": 1178.95,
+      "close": 1199.36,
+      "volume": 2957101
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "NFLX",
+      "open": 1207.875,
+      "high": 1247.76,
+      "low": 1206.9,
+      "close": 1238.56,
+      "volume": 3986235
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "NFLX",
+      "open": 1242.83,
+      "high": 1248.5999,
+      "low": 1231.76,
+      "close": 1241.35,
+      "volume": 6508234
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "NFLX",
+      "open": 1142.9,
+      "high": 1157.6,
+      "low": 1112.51,
+      "close": 1116.37,
+      "volume": 14789025
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "NFLX",
+      "open": 1126.9,
+      "high": 1127.8285,
+      "low": 1099.73,
+      "close": 1113.59,
+      "volume": 6849722
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "NFLX",
+      "open": 1111.0,
+      "high": 1114.51,
+      "low": 1094.41,
+      "close": 1094.69,
+      "volume": 6028025
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "NFLX",
+      "open": 1100.67,
+      "high": 1102.28,
+      "low": 1087.3,
+      "close": 1094.56,
+      "volume": 4691114
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "NFLX",
+      "open": 1094.0,
+      "high": 1116.9799,
+      "low": 1093.0083,
+      "close": 1102.5,
+      "volume": 4005128
     }
   ]
 }

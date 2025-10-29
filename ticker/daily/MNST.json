@@ -1,7 +1,7 @@
 {
   "ticker": "MNST",
-  "generated_at": "2025-10-10T02:43:15.398712+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:22:28.092875+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 68.5,
       "close": 69.03,
       "volume": 3797736
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "MNST",
+      "open": 69.34,
+      "high": 70.06,
+      "low": 69.2,
+      "close": 69.62,
+      "volume": 6769353
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "MNST",
+      "open": 68.99,
+      "high": 69.495,
+      "low": 66.94,
+      "close": 67.15,
+      "volume": 6425434
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "MNST",
+      "open": 67.15,
+      "high": 68.9,
+      "low": 67.01,
+      "close": 68.61,
+      "volume": 6203723
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "MNST",
+      "open": 68.47,
+      "high": 69.19,
+      "low": 67.845,
+      "close": 68.65,
+      "volume": 4414747
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "MNST",
+      "open": 69.06,
+      "high": 70.51,
+      "low": 68.77,
+      "close": 70.16,
+      "volume": 6355845
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "MNST",
+      "open": 70.57,
+      "high": 70.65,
+      "low": 69.88,
+      "close": 70.22,
+      "volume": 4723065
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "MNST",
+      "open": 70.65,
+      "high": 70.72,
+      "low": 69.315,
+      "close": 69.76,
+      "volume": 4675683
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "MNST",
+      "open": 69.83,
+      "high": 69.99,
+      "low": 68.59,
+      "close": 68.9,
+      "volume": 5866820
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "MNST",
+      "open": 68.69,
+      "high": 70.46,
+      "low": 68.69,
+      "close": 69.72,
+      "volume": 5132419
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "MNST",
+      "open": 69.59,
+      "high": 69.97,
+      "low": 69.13,
+      "close": 69.89,
+      "volume": 3043095
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "MNST",
+      "open": 70.26,
+      "high": 70.38,
+      "low": 69.45,
+      "close": 69.69,
+      "volume": 2401324
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "MNST",
+      "open": 70.16,
+      "high": 70.16,
+      "low": 69.59,
+      "close": 69.68,
+      "volume": 3936845
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "MNST",
+      "open": 69.1579,
+      "high": 69.54,
+      "low": 68.47,
+      "close": 69.32,
+      "volume": 3471292
     }
   ]
 }

@@ -312,6 +312,34 @@
   ],
   "quarterlyReports": [
     {
+      "fiscalDateEnding": "2025-09-30",
+      "reportedCurrency": "None",
+      "grossProfit": "1701000000",
+      "totalRevenue": "7010000000",
+      "costOfRevenue": "5309000000",
+      "costofGoodsAndServicesSold": "5309000000",
+      "operatingIncome": "948000000",
+      "sellingGeneralAndAdministrative": "None",
+      "researchAndDevelopment": "146000000",
+      "operatingExpenses": "753000000",
+      "investmentIncomeNet": "None",
+      "netInterestIncome": "None",
+      "interestIncome": "None",
+      "interestExpense": "56000000",
+      "nonInterestIncome": "None",
+      "otherNonOperatingIncome": "None",
+      "depreciation": "None",
+      "depreciationAndAmortization": "282000000",
+      "incomeBeforeTax": "821000000",
+      "incomeTaxExpense": "204000000",
+      "interestAndDebtExpense": "None",
+      "netIncomeFromContinuingOperations": "None",
+      "comprehensiveIncomeNetOfTax": "None",
+      "ebit": "877000000",
+      "ebitda": "1159000000",
+      "netIncome": "609000000"
+    },
+    {
       "fiscalDateEnding": "2025-06-30",
       "reportedCurrency": "USD",
       "grossProfit": "1615000000",
@@ -1377,5 +1405,5 @@
     }
   ],
   "ticker": "BKR",
-  "generated_at": "2025-10-10T02:34:06.639270+00:00"
+  "generated_at": "2025-10-28T05:21:25.986988+00:00"
 }

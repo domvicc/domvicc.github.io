@@ -1,7 +1,7 @@
 {
   "ticker": "JNJ",
-  "generated_at": "2025-10-10T02:43:01.115208+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:21:54.977469+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 189.73,
       "close": 191.08,
       "volume": 7484764
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "JNJ",
+      "open": 192.01,
+      "high": 192.07,
+      "low": 189.85,
+      "close": 190.72,
+      "volume": 9598019
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "JNJ",
+      "open": 189.83,
+      "high": 191.3,
+      "low": 189.28,
+      "close": 190.9,
+      "volume": 7979476
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "JNJ",
+      "open": 192.92,
+      "high": 194.4,
+      "low": 185.88,
+      "close": 190.85,
+      "volume": 13613340
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "JNJ",
+      "open": 191.48,
+      "high": 193.57,
+      "low": 189.3,
+      "close": 191.17,
+      "volume": 9472995
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "JNJ",
+      "open": 191.335,
+      "high": 193.05,
+      "low": 190.43,
+      "close": 192.12,
+      "volume": 10611760
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "JNJ",
+      "open": 192.5,
+      "high": 193.6,
+      "low": 191.6774,
+      "close": 193.22,
+      "volume": 7764449
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "JNJ",
+      "open": 193.5,
+      "high": 194.48,
+      "low": 192.3346,
+      "close": 193.72,
+      "volume": 8034740
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "JNJ",
+      "open": 193.01,
+      "high": 193.55,
+      "low": 191.77,
+      "close": 191.88,
+      "volume": 6716360
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "JNJ",
+      "open": 192.0,
+      "high": 193.45,
+      "low": 191.775,
+      "close": 192.94,
+      "volume": 6343472
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "JNJ",
+      "open": 192.56,
+      "high": 194.0,
+      "low": 191.54,
+      "close": 192.47,
+      "volume": 8882491
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "JNJ",
+      "open": 192.2,
+      "high": 192.31,
+      "low": 189.42,
+      "close": 190.4,
+      "volume": 6903379
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "JNJ",
+      "open": 189.99,
+      "high": 190.8,
+      "low": 189.53,
+      "close": 190.3,
+      "volume": 7125956
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "JNJ",
+      "open": 189.26,
+      "high": 189.505,
+      "low": 186.62,
+      "close": 186.93,
+      "volume": 8246576
     }
   ]
 }

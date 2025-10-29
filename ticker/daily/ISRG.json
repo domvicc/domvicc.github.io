@@ -1,7 +1,7 @@
 {
   "ticker": "ISRG",
-  "generated_at": "2025-10-10T02:43:00.413085+00:00",
-  "count": 6367,
+  "generated_at": "2025-10-29T01:21:51.892417+00:00",
+  "count": 6380,
   "data": [
     {
       "timestamp": "2000-06-16",
@@ -57305,6 +57305,123 @@
       "low": 443.26,
       "close": 443.76,
       "volume": 1583787
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "ISRG",
+      "open": 444.06,
+      "high": 446.99,
+      "low": 429.25,
+      "close": 429.59,
+      "volume": 2773352
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "ISRG",
+      "open": 432.43,
+      "high": 438.1,
+      "low": 430.0,
+      "close": 435.73,
+      "volume": 1863239
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "ISRG",
+      "open": 430.3,
+      "high": 439.205,
+      "low": 427.836,
+      "close": 436.39,
+      "volume": 2086064
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "ISRG",
+      "open": 437.0,
+      "high": 440.82,
+      "low": 432.78,
+      "close": 435.61,
+      "volume": 1910711
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "ISRG",
+      "open": 438.47,
+      "high": 439.49,
+      "low": 433.81,
+      "close": 434.62,
+      "volume": 1966367
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "ISRG",
+      "open": 437.17,
+      "high": 449.09,
+      "low": 434.57,
+      "close": 446.13,
+      "volume": 2209171
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "ISRG",
+      "open": 452.5,
+      "high": 461.83,
+      "low": 451.35,
+      "close": 458.47,
+      "volume": 3409962
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "ISRG",
+      "open": 459.47,
+      "high": 466.9799,
+      "low": 456.31,
+      "close": 462.74,
+      "volume": 4779628
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "ISRG",
+      "open": 543.0,
+      "high": 549.85,
+      "low": 522.1656,
+      "close": 527.03,
+      "volume": 8347517
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "ISRG",
+      "open": 525.37,
+      "high": 552.5,
+      "low": 525.0845,
+      "close": 551.3,
+      "volume": 4011322
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "ISRG",
+      "open": 547.625,
+      "high": 552.45,
+      "low": 541.46,
+      "close": 546.51,
+      "volume": 2692341
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "ISRG",
+      "open": 544.75,
+      "high": 551.63,
+      "low": 538.75,
+      "close": 551.25,
+      "volume": 2135936
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "ISRG",
+      "open": 546.62,
+      "high": 552.2,
+      "low": 539.0,
+      "close": 545.39,
+      "volume": 1575660
     }
   ]
 }

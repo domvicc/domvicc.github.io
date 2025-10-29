@@ -1,7 +1,7 @@
 {
   "ticker": "DASH",
-  "generated_at": "2025-10-10T02:42:42.762910+00:00",
-  "count": 1214,
+  "generated_at": "2025-10-29T01:20:40.520270+00:00",
+  "count": 1227,
   "data": [
     {
       "timestamp": "2020-12-09",
@@ -10928,6 +10928,123 @@
       "low": 275.05,
       "close": 275.44,
       "volume": 2121580
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "DASH",
+      "open": 274.39,
+      "high": 277.26,
+      "low": 265.7,
+      "close": 266.02,
+      "volume": 2434349
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "DASH",
+      "open": 269.01,
+      "high": 274.07,
+      "low": 268.5401,
+      "close": 273.52,
+      "volume": 2253019
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "DASH",
+      "open": 272.91,
+      "high": 275.55,
+      "low": 266.99,
+      "close": 270.54,
+      "volume": 1983434
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "DASH",
+      "open": 272.59,
+      "high": 277.84,
+      "low": 271.39,
+      "close": 272.61,
+      "volume": 1920856
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "DASH",
+      "open": 279.0,
+      "high": 285.5,
+      "low": 264.34,
+      "close": 266.67,
+      "volume": 3755928
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "DASH",
+      "open": 263.86,
+      "high": 265.38,
+      "low": 257.7142,
+      "close": 263.06,
+      "volume": 3440346
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "DASH",
+      "open": 263.86,
+      "high": 267.2,
+      "low": 262.6902,
+      "close": 265.37,
+      "volume": 2376178
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "DASH",
+      "open": 266.62,
+      "high": 267.25,
+      "low": 259.86,
+      "close": 261.97,
+      "volume": 2029644
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "DASH",
+      "open": 261.52,
+      "high": 262.83,
+      "low": 250.38,
+      "close": 252.31,
+      "volume": 4247910
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "DASH",
+      "open": 251.0,
+      "high": 258.94,
+      "low": 246.72,
+      "close": 254.59,
+      "volume": 4772296
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "DASH",
+      "open": 255.63,
+      "high": 261.675,
+      "low": 253.24,
+      "close": 258.15,
+      "volume": 2720037
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "DASH",
+      "open": 265.4,
+      "high": 269.0,
+      "low": 262.35,
+      "close": 263.35,
+      "volume": 3706619
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "DASH",
+      "open": 263.16,
+      "high": 265.59,
+      "low": 259.83,
+      "close": 261.42,
+      "volume": 2772750
     }
   ]
 }

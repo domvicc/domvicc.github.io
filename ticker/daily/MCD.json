@@ -1,7 +1,7 @@
 {
   "ticker": "MCD",
-  "generated_at": "2025-10-10T02:43:08.787094+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:22:17.957720+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 292.04,
       "close": 293.81,
       "volume": 2802739
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "MCD",
+      "open": 294.7,
+      "high": 297.9483,
+      "low": 292.89,
+      "close": 297.01,
+      "volume": 4016226
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "MCD",
+      "open": 294.6,
+      "high": 300.42,
+      "low": 294.0,
+      "close": 300.11,
+      "volume": 3369584
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "MCD",
+      "open": 300.16,
+      "high": 305.52,
+      "low": 300.1101,
+      "close": 304.56,
+      "volume": 2992849
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "MCD",
+      "open": 303.63,
+      "high": 309.1,
+      "low": 303.63,
+      "close": 305.25,
+      "volume": 2522103
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "MCD",
+      "open": 305.79,
+      "high": 307.28,
+      "low": 304.715,
+      "close": 305.33,
+      "volume": 2021608
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "MCD",
+      "open": 306.8,
+      "high": 308.33,
+      "low": 306.3075,
+      "close": 308.09,
+      "volume": 2194185
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "MCD",
+      "open": 307.95,
+      "high": 308.6999,
+      "low": 305.84,
+      "close": 307.77,
+      "volume": 2329755
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "MCD",
+      "open": 308.55,
+      "high": 308.55,
+      "low": 306.39,
+      "close": 307.48,
+      "volume": 2461407
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "MCD",
+      "open": 308.22,
+      "high": 312.79,
+      "low": 307.145,
+      "close": 310.11,
+      "volume": 2735723
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "MCD",
+      "open": 311.97,
+      "high": 311.97,
+      "low": 306.22,
+      "close": 306.97,
+      "volume": 2081527
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "MCD",
+      "open": 307.63,
+      "high": 307.7,
+      "low": 305.0152,
+      "close": 305.79,
+      "volume": 1994545
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "MCD",
+      "open": 305.9,
+      "high": 310.09,
+      "low": 305.34,
+      "close": 310.0,
+      "volume": 2139674
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "MCD",
+      "open": 308.54,
+      "high": 310.58,
+      "low": 306.325,
+      "close": 306.4,
+      "volume": 2328417
     }
   ]
 }

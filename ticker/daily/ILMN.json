@@ -1,7 +1,7 @@
 {
   "ticker": "ILMN",
-  "generated_at": "2025-10-10T02:42:58.222430+00:00",
-  "count": 6338,
+  "generated_at": "2025-10-29T01:21:47.721607+00:00",
+  "count": 6351,
   "data": [
     {
       "timestamp": "2000-07-28",
@@ -57044,6 +57044,123 @@
       "low": 96.34,
       "close": 96.45,
       "volume": 911007
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "ILMN",
+      "open": 96.49,
+      "high": 96.49,
+      "low": 91.65,
+      "close": 93.86,
+      "volume": 1571814
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "ILMN",
+      "open": 95.0,
+      "high": 96.43,
+      "low": 93.59,
+      "close": 95.03,
+      "volume": 775038
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "ILMN",
+      "open": 92.75,
+      "high": 93.8,
+      "low": 88.0,
+      "close": 91.0,
+      "volume": 2558644
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "ILMN",
+      "open": 90.71,
+      "high": 95.61,
+      "low": 90.1,
+      "close": 93.0,
+      "volume": 2762287
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "ILMN",
+      "open": 94.05,
+      "high": 98.7,
+      "low": 93.5,
+      "close": 95.91,
+      "volume": 2160066
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "ILMN",
+      "open": 95.2,
+      "high": 96.8,
+      "low": 94.81,
+      "close": 95.46,
+      "volume": 1165825
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "ILMN",
+      "open": 95.61,
+      "high": 100.94,
+      "low": 95.61,
+      "close": 99.5,
+      "volume": 1750387
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "ILMN",
+      "open": 100.41,
+      "high": 102.305,
+      "low": 98.505,
+      "close": 98.96,
+      "volume": 1319040
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "ILMN",
+      "open": 98.39,
+      "high": 99.54,
+      "low": 95.815,
+      "close": 97.23,
+      "volume": 1651760
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "ILMN",
+      "open": 97.23,
+      "high": 100.24,
+      "low": 97.07,
+      "close": 99.97,
+      "volume": 1298481
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "ILMN",
+      "open": 101.44,
+      "high": 101.93,
+      "low": 100.06,
+      "close": 100.11,
+      "volume": 948726
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "ILMN",
+      "open": 101.0,
+      "high": 101.0,
+      "low": 98.86,
+      "close": 100.35,
+      "volume": 1319094
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "ILMN",
+      "open": 100.0,
+      "high": 100.18,
+      "low": 97.64,
+      "close": 97.8,
+      "volume": 1046021
     }
   ]
 }

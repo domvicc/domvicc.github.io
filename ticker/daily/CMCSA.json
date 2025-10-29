@@ -1,7 +1,7 @@
 {
   "ticker": "CMCSA",
-  "generated_at": "2025-10-10T02:42:33.988685+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:20:11.543298+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 30.06,
       "close": 30.08,
       "volume": 22555005
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "CMCSA",
+      "open": 30.19,
+      "high": 30.38,
+      "low": 29.425,
+      "close": 29.46,
+      "volume": 22896841
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "CMCSA",
+      "open": 29.53,
+      "high": 29.77,
+      "low": 29.39,
+      "close": 29.41,
+      "volume": 16844066
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "CMCSA",
+      "open": 29.45,
+      "high": 30.11,
+      "low": 29.41,
+      "close": 29.99,
+      "volume": 23398665
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "CMCSA",
+      "open": 29.93,
+      "high": 30.115,
+      "low": 29.45,
+      "close": 29.72,
+      "volume": 20536648
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "CMCSA",
+      "open": 29.66,
+      "high": 29.83,
+      "low": 29.15,
+      "close": 29.26,
+      "volume": 20378550
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "CMCSA",
+      "open": 29.3,
+      "high": 29.64,
+      "low": 29.16,
+      "close": 29.54,
+      "volume": 20680912
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "CMCSA",
+      "open": 29.55,
+      "high": 29.63,
+      "low": 29.315,
+      "close": 29.57,
+      "volume": 16881392
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "CMCSA",
+      "open": 29.65,
+      "high": 29.99,
+      "low": 29.49,
+      "close": 29.97,
+      "volume": 30082960
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "CMCSA",
+      "open": 29.94,
+      "high": 30.0,
+      "low": 29.38,
+      "close": 29.4,
+      "volume": 22015764
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "CMCSA",
+      "open": 29.615,
+      "high": 29.65,
+      "low": 29.25,
+      "close": 29.3,
+      "volume": 21198148
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "CMCSA",
+      "open": 29.465,
+      "high": 29.62,
+      "low": 29.25,
+      "close": 29.28,
+      "volume": 18001536
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "CMCSA",
+      "open": 29.405,
+      "high": 29.7151,
+      "low": 29.2944,
+      "close": 29.42,
+      "volume": 24107408
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "CMCSA",
+      "open": 29.31,
+      "high": 29.42,
+      "low": 29.125,
+      "close": 29.28,
+      "volume": 26977198
     }
   ]
 }

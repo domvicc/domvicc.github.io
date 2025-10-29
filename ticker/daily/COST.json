@@ -1,7 +1,7 @@
 {
   "ticker": "COST",
-  "generated_at": "2025-10-10T02:42:34.765740+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:20:18.527344+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 927.2801,
       "close": 942.89,
       "volume": 3742871
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "COST",
+      "open": 944.42,
+      "high": 945.45,
+      "low": 929.0,
+      "close": 930.01,
+      "volume": 3142539
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "COST",
+      "open": 929.0,
+      "high": 935.98,
+      "low": 923.0,
+      "close": 935.56,
+      "volume": 2169648
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "COST",
+      "open": 940.26,
+      "high": 947.42,
+      "low": 935.9501,
+      "close": 946.51,
+      "volume": 1925863
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "COST",
+      "open": 946.0,
+      "high": 964.0,
+      "low": 945.2601,
+      "close": 954.99,
+      "volume": 2009832
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "COST",
+      "open": 955.54,
+      "high": 957.9,
+      "low": 921.16,
+      "close": 925.62,
+      "volume": 2721426
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "COST",
+      "open": 929.58,
+      "high": 938.8194,
+      "low": 928.15,
+      "close": 936.33,
+      "volume": 2502164
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "COST",
+      "open": 936.185,
+      "high": 939.8,
+      "low": 931.5,
+      "close": 936.11,
+      "volume": 1523704
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "COST",
+      "open": 936.11,
+      "high": 943.37,
+      "low": 935.0,
+      "close": 937.5,
+      "volume": 1448215
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "COST",
+      "open": 940.0,
+      "high": 952.9999,
+      "low": 932.5,
+      "close": 944.68,
+      "volume": 2372365
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "COST",
+      "open": 945.47,
+      "high": 945.47,
+      "low": 934.49,
+      "close": 942.05,
+      "volume": 1974780
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "COST",
+      "open": 940.0,
+      "high": 943.0,
+      "low": 930.15,
+      "close": 932.14,
+      "volume": 1639373
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "COST",
+      "open": 930.21,
+      "high": 933.2,
+      "low": 925.1201,
+      "close": 929.85,
+      "volume": 1967623
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "COST",
+      "open": 926.87,
+      "high": 930.72,
+      "low": 920.2,
+      "close": 924.16,
+      "volume": 2084637
     }
   ]
 }

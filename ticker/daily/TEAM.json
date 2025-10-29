@@ -1,7 +1,7 @@
 {
   "ticker": "TEAM",
-  "generated_at": "2025-10-10T02:43:36.254661+00:00",
-  "count": 2472,
+  "generated_at": "2025-10-29T01:23:51.731903+00:00",
+  "count": 2485,
   "data": [
     {
       "timestamp": "2015-12-10",
@@ -22250,6 +22250,123 @@
       "low": 147.61,
       "close": 147.74,
       "volume": 2297564
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "TEAM",
+      "open": 149.21,
+      "high": 149.55,
+      "low": 144.32,
+      "close": 144.56,
+      "volume": 2528015
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "TEAM",
+      "open": 145.45,
+      "high": 149.41,
+      "low": 144.8,
+      "close": 149.39,
+      "volume": 2579381
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "TEAM",
+      "open": 147.595,
+      "high": 157.44,
+      "low": 147.33,
+      "close": 156.37,
+      "volume": 3907742
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "TEAM",
+      "open": 159.34,
+      "high": 159.8799,
+      "low": 149.73,
+      "close": 149.84,
+      "volume": 3918132
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "TEAM",
+      "open": 152.77,
+      "high": 155.94,
+      "low": 148.31,
+      "close": 150.13,
+      "volume": 2726124
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "TEAM",
+      "open": 150.0,
+      "high": 152.14,
+      "low": 149.21,
+      "close": 151.95,
+      "volume": 2228875
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "TEAM",
+      "open": 153.67,
+      "high": 159.32,
+      "low": 152.895,
+      "close": 158.79,
+      "volume": 2530051
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "TEAM",
+      "open": 158.51,
+      "high": 169.32,
+      "low": 158.4,
+      "close": 168.71,
+      "volume": 4319069
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "TEAM",
+      "open": 170.56,
+      "high": 171.3,
+      "low": 167.18,
+      "close": 167.89,
+      "volume": 4269280
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "TEAM",
+      "open": 167.335,
+      "high": 168.34,
+      "low": 163.2318,
+      "close": 165.01,
+      "volume": 2580316
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "TEAM",
+      "open": 167.3,
+      "high": 168.6525,
+      "low": 162.15,
+      "close": 162.64,
+      "volume": 1977820
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "TEAM",
+      "open": 164.75,
+      "high": 167.1,
+      "low": 163.77,
+      "close": 164.26,
+      "volume": 2297650
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "TEAM",
+      "open": 163.9,
+      "high": 164.8804,
+      "low": 162.06,
+      "close": 163.96,
+      "volume": 2772128
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "ticker": "ROST",
-  "generated_at": "2025-10-10T02:43:32.988136+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:23:27.925108+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 149.08,
       "close": 149.98,
       "volume": 1466898
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "ROST",
+      "open": 150.67,
+      "high": 151.64,
+      "low": 147.494,
+      "close": 147.71,
+      "volume": 2365758
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "ROST",
+      "open": 148.97,
+      "high": 155.4096,
+      "low": 148.58,
+      "close": 154.77,
+      "volume": 3214647
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "ROST",
+      "open": 154.66,
+      "high": 156.555,
+      "low": 154.17,
+      "close": 155.26,
+      "volume": 2077846
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "ROST",
+      "open": 155.57,
+      "high": 157.91,
+      "low": 155.5,
+      "close": 156.99,
+      "volume": 1851336
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "ROST",
+      "open": 157.3,
+      "high": 157.48,
+      "low": 154.691,
+      "close": 155.21,
+      "volume": 1793865
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "ROST",
+      "open": 156.12,
+      "high": 157.355,
+      "low": 155.16,
+      "close": 156.31,
+      "volume": 2896132
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "ROST",
+      "open": 157.32,
+      "high": 157.785,
+      "low": 156.355,
+      "close": 157.45,
+      "volume": 1691436
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "ROST",
+      "open": 156.63,
+      "high": 157.5975,
+      "low": 156.37,
+      "close": 156.41,
+      "volume": 1456979
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "ROST",
+      "open": 156.91,
+      "high": 158.03,
+      "low": 155.89,
+      "close": 156.05,
+      "volume": 1312084
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "ROST",
+      "open": 155.19,
+      "high": 156.89,
+      "low": 154.872,
+      "close": 156.66,
+      "volume": 1337977
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "ROST",
+      "open": 156.98,
+      "high": 157.83,
+      "low": 156.41,
+      "close": 156.75,
+      "volume": 1598137
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "ROST",
+      "open": 159.47,
+      "high": 161.95,
+      "low": 159.23,
+      "close": 160.73,
+      "volume": 3812370
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "ROST",
+      "open": 160.12,
+      "high": 161.31,
+      "low": 158.65,
+      "close": 160.7,
+      "volume": 1534067
     }
   ]
 }

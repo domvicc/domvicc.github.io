@@ -1,7 +1,7 @@
 {
   "ticker": "AMD",
-  "generated_at": "2025-10-10T02:42:22.944460+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:19:15.192122+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 229.53,
       "close": 232.89,
       "volume": 94290740
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "AMD",
+      "open": 232.77,
+      "high": 234.22,
+      "low": 213.2001,
+      "close": 214.9,
+      "volume": 118656636
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "AMD",
+      "open": 220.2,
+      "high": 224.1899,
+      "low": 214.9,
+      "close": 216.42,
+      "volume": 63104021
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "AMD",
+      "open": 219.2,
+      "high": 224.98,
+      "low": 215.9,
+      "close": 218.09,
+      "volume": 71216269
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "AMD",
+      "open": 222.705,
+      "high": 239.24,
+      "low": 220.7601,
+      "close": 238.6,
+      "volume": 108480962
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "AMD",
+      "open": 236.285,
+      "high": 241.2,
+      "low": 232.24,
+      "close": 234.56,
+      "volume": 69726437
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "AMD",
+      "open": 233.26,
+      "high": 235.38,
+      "low": 227.91,
+      "close": 233.08,
+      "volume": 55804203
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "AMD",
+      "open": 236.465,
+      "high": 242.88,
+      "low": 234.4,
+      "close": 240.56,
+      "volume": 56741695
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "AMD",
+      "open": 239.39,
+      "high": 242.26,
+      "low": 234.02,
+      "close": 238.03,
+      "volume": 47122393
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "AMD",
+      "open": 236.85,
+      "high": 240.1324,
+      "low": 224.88,
+      "close": 230.23,
+      "volume": 59668778
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "AMD",
+      "open": 230.16,
+      "high": 235.9,
+      "low": 228.54,
+      "close": 234.99,
+      "volume": 39024429
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "AMD",
+      "open": 243.36,
+      "high": 253.39,
+      "low": 241.95,
+      "close": 252.92,
+      "volume": 71221144
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "AMD",
+      "open": 257.88,
+      "high": 260.42,
+      "low": 249.8001,
+      "close": 259.67,
+      "volume": 65613111
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "AMD",
+      "open": 259.14,
+      "high": 264.58,
+      "low": 257.0,
+      "close": 258.01,
+      "volume": 47059209
     }
   ]
 }

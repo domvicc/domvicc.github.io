@@ -1,7 +1,7 @@
 {
   "ticker": "SNPS",
-  "generated_at": "2025-10-10T02:43:34.999536+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:23:41.555365+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 480.69,
       "close": 484.41,
       "volume": 1727503
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "SNPS",
+      "open": 484.41,
+      "high": 487.58,
+      "low": 437.2675,
+      "close": 438.92,
+      "volume": 3588204
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "SNPS",
+      "open": 449.475,
+      "high": 453.8,
+      "low": 440.0,
+      "close": 448.0,
+      "volume": 2260571
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "SNPS",
+      "open": 436.41,
+      "high": 452.8,
+      "low": 433.36,
+      "close": 443.76,
+      "volume": 2937588
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "SNPS",
+      "open": 446.26,
+      "high": 448.8936,
+      "low": 432.0,
+      "close": 435.9,
+      "volume": 3109662
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "SNPS",
+      "open": 439.53,
+      "high": 445.54,
+      "low": 435.58,
+      "close": 440.2,
+      "volume": 1931270
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "SNPS",
+      "open": 435.64,
+      "high": 456.84,
+      "low": 435.26,
+      "close": 447.64,
+      "volume": 2510448
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "SNPS",
+      "open": 450.66,
+      "high": 457.82,
+      "low": 449.0,
+      "close": 453.35,
+      "volume": 1539868
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "SNPS",
+      "open": 448.25,
+      "high": 459.69,
+      "low": 445.01,
+      "close": 459.04,
+      "volume": 1356252
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "SNPS",
+      "open": 456.48,
+      "high": 465.7527,
+      "low": 444.36,
+      "close": 454.3,
+      "volume": 2755264
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "SNPS",
+      "open": 452.0,
+      "high": 460.41,
+      "low": 450.5,
+      "close": 456.09,
+      "volume": 1384061
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "SNPS",
+      "open": 461.65,
+      "high": 473.49,
+      "low": 458.13,
+      "close": 464.18,
+      "volume": 1294614
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "SNPS",
+      "open": 471.28,
+      "high": 475.42,
+      "low": 461.49,
+      "close": 465.41,
+      "volume": 1720491
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "SNPS",
+      "open": 461.68,
+      "high": 462.4,
+      "low": 445.0,
+      "close": 456.83,
+      "volume": 2152372
     }
   ]
 }

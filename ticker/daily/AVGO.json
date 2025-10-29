@@ -1,7 +1,7 @@
 {
   "ticker": "AVGO",
-  "generated_at": "2025-10-10T02:42:26.141710+00:00",
-  "count": 4070,
+  "generated_at": "2025-10-29T01:19:27.993239+00:00",
+  "count": 4083,
   "data": [
     {
       "timestamp": "2009-08-06",
@@ -36632,6 +36632,123 @@
       "low": 340.4,
       "close": 345.02,
       "volume": 17643744
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "AVGO",
+      "open": 345.39,
+      "high": 350.6,
+      "low": 324.05,
+      "close": 324.63,
+      "volume": 28941011
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "AVGO",
+      "open": 352.77,
+      "high": 359.38,
+      "low": 343.5201,
+      "close": 356.7,
+      "volume": 45984259
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "AVGO",
+      "open": 350.125,
+      "high": 350.67,
+      "low": 339.6532,
+      "close": 344.13,
+      "volume": 22078000
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "AVGO",
+      "open": 354.47,
+      "high": 359.4,
+      "low": 347.5,
+      "close": 351.33,
+      "volume": 23918539
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "AVGO",
+      "open": 356.8,
+      "high": 363.24,
+      "low": 349.485,
+      "close": 354.15,
+      "volume": 20317222
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "AVGO",
+      "open": 349.61,
+      "high": 350.97,
+      "low": 340.78,
+      "close": 349.33,
+      "volume": 20937936
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "AVGO",
+      "open": 353.8,
+      "high": 356.59,
+      "low": 347.84,
+      "close": 349.24,
+      "volume": 15640229
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "AVGO",
+      "open": 350.0,
+      "high": 351.1,
+      "low": 341.31,
+      "close": 342.66,
+      "volume": 16092578
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "AVGO",
+      "open": 347.3,
+      "high": 348.01,
+      "low": 335.51,
+      "close": 340.3,
+      "volume": 19268825
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "AVGO",
+      "open": 340.4,
+      "high": 346.57,
+      "low": 340.4,
+      "close": 344.29,
+      "volume": 12859162
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "AVGO",
+      "open": 352.51,
+      "high": 358.3,
+      "low": 350.875,
+      "close": 354.13,
+      "volume": 16143739
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "AVGO",
+      "open": 361.54,
+      "high": 362.75,
+      "low": 355.08,
+      "close": 362.05,
+      "volume": 20065771
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "AVGO",
+      "open": 362.62,
+      "high": 374.06,
+      "low": 362.53,
+      "close": 372.97,
+      "volume": 20095959
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "ticker": "CDNS",
-  "generated_at": "2025-10-10T02:42:31.729886+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:20:01.459060+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 343.58,
       "close": 348.67,
       "volume": 1227307
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "CDNS",
+      "open": 348.1,
+      "high": 350.26,
+      "low": 325.86,
+      "close": 327.0,
+      "volume": 2156104
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "CDNS",
+      "open": 329.75,
+      "high": 334.2,
+      "low": 324.944,
+      "close": 332.23,
+      "volume": 1724191
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "CDNS",
+      "open": 324.5,
+      "high": 329.85,
+      "low": 318.0201,
+      "close": 325.75,
+      "volume": 1602928
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "CDNS",
+      "open": 330.65,
+      "high": 330.65,
+      "low": 321.39,
+      "close": 324.1,
+      "volume": 1599584
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "CDNS",
+      "open": 326.175,
+      "high": 327.05,
+      "low": 320.08,
+      "close": 324.25,
+      "volume": 1788568
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "CDNS",
+      "open": 322.59,
+      "high": 328.21,
+      "low": 320.0,
+      "close": 326.12,
+      "volume": 1481818
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "CDNS",
+      "open": 327.79,
+      "high": 331.1188,
+      "low": 326.39,
+      "close": 329.64,
+      "volume": 1458433
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "CDNS",
+      "open": 327.53,
+      "high": 335.12,
+      "low": 327.11,
+      "close": 333.45,
+      "volume": 1258822
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "CDNS",
+      "open": 333.44,
+      "high": 336.495,
+      "low": 326.16,
+      "close": 330.51,
+      "volume": 1996692
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "CDNS",
+      "open": 329.3,
+      "high": 338.18,
+      "low": 327.62,
+      "close": 337.27,
+      "volume": 1533685
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "CDNS",
+      "open": 339.76,
+      "high": 351.13,
+      "low": 339.76,
+      "close": 345.1,
+      "volume": 1856352
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "CDNS",
+      "open": 357.525,
+      "high": 357.525,
+      "low": 346.0,
+      "close": 351.4,
+      "volume": 4236538
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "CDNS",
+      "open": 339.01,
+      "high": 348.08,
+      "low": 327.165,
+      "close": 341.3,
+      "volume": 3202753
     }
   ]
 }

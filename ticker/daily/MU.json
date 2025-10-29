@@ -1,7 +1,7 @@
 {
   "ticker": "MU",
-  "generated_at": "2025-10-10T02:43:19.077239+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:22:33.804671+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 189.5,
       "close": 192.33,
       "volume": 19721480
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "MU",
+      "open": 192.96,
+      "high": 193.44,
+      "low": 179.61,
+      "close": 181.6,
+      "volume": 26990253
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "MU",
+      "open": 190.79,
+      "high": 193.3995,
+      "low": 187.99,
+      "close": 192.77,
+      "volume": 20928376
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "MU",
+      "open": 186.96,
+      "high": 192.46,
+      "low": 186.25,
+      "close": 187.06,
+      "volume": 15912423
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "MU",
+      "open": 192.475,
+      "high": 192.88,
+      "low": 187.4235,
+      "close": 191.94,
+      "volume": 17793126
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "MU",
+      "open": 199.96,
+      "high": 206.34,
+      "low": 195.2,
+      "close": 202.53,
+      "volume": 42041348
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "MU",
+      "open": 199.28,
+      "high": 203.39,
+      "low": 195.55,
+      "close": 202.38,
+      "volume": 23283075
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "MU",
+      "open": 209.655,
+      "high": 214.75,
+      "low": 205.5,
+      "close": 206.77,
+      "volume": 23268429
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "MU",
+      "open": 204.3,
+      "high": 205.87,
+      "low": 200.8401,
+      "close": 202.29,
+      "volume": 13717259
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "MU",
+      "open": 202.25,
+      "high": 205.5764,
+      "low": 192.4,
+      "close": 198.47,
+      "volume": 21949776
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "MU",
+      "open": 196.7,
+      "high": 209.0,
+      "low": 195.2,
+      "close": 206.71,
+      "volume": 19397915
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "MU",
+      "open": 212.39,
+      "high": 219.82,
+      "low": 209.98,
+      "close": 219.02,
+      "volume": 25821756
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "MU",
+      "open": 224.81,
+      "high": 224.98,
+      "low": 215.74,
+      "close": 220.1,
+      "volume": 23873072
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "MU",
+      "open": 218.93,
+      "high": 222.9,
+      "low": 217.56,
+      "close": 221.91,
+      "volume": 14780380
     }
   ]
 }

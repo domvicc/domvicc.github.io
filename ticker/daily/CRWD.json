@@ -1,7 +1,7 @@
 {
   "ticker": "CRWD",
-  "generated_at": "2025-10-10T02:42:37.210364+00:00",
-  "count": 1592,
+  "generated_at": "2025-10-29T01:20:27.780413+00:00",
+  "count": 1605,
   "data": [
     {
       "timestamp": "2019-06-12",
@@ -14330,6 +14330,123 @@
       "low": 501.9,
       "close": 509.13,
       "volume": 2203791
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "CRWD",
+      "open": 509.0,
+      "high": 517.41,
+      "low": 493.287,
+      "close": 493.66,
+      "volume": 3142612
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "CRWD",
+      "open": 501.15,
+      "high": 511.18,
+      "low": 497.5,
+      "close": 508.61,
+      "volume": 2340568
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "CRWD",
+      "open": 500.095,
+      "high": 500.54,
+      "low": 487.59,
+      "close": 488.94,
+      "volume": 2768511
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "CRWD",
+      "open": 494.0,
+      "high": 495.5,
+      "low": 484.78,
+      "close": 489.02,
+      "volume": 1730819
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "CRWD",
+      "open": 489.73,
+      "high": 498.31,
+      "low": 475.388,
+      "close": 482.23,
+      "volume": 2174003
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "CRWD",
+      "open": 478.015,
+      "high": 486.0,
+      "low": 475.42,
+      "close": 484.65,
+      "volume": 1926820
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "CRWD",
+      "open": 486.53,
+      "high": 504.445,
+      "low": 486.45,
+      "close": 503.61,
+      "volume": 2820084
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "CRWD",
+      "open": 501.24,
+      "high": 507.6,
+      "low": 498.35,
+      "close": 503.95,
+      "volume": 1440884
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "CRWD",
+      "open": 502.68,
+      "high": 505.36,
+      "low": 491.67,
+      "close": 500.11,
+      "volume": 1682027
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "CRWD",
+      "open": 499.98,
+      "high": 522.43,
+      "low": 499.98,
+      "close": 521.98,
+      "volume": 3147287
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "CRWD",
+      "open": 528.8,
+      "high": 535.52,
+      "low": 521.87,
+      "close": 527.32,
+      "volume": 2550453
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "CRWD",
+      "open": 532.54,
+      "high": 534.34,
+      "low": 525.24,
+      "close": 529.7,
+      "volume": 1932155
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "CRWD",
+      "open": 536.81,
+      "high": 553.64,
+      "low": 535.98,
+      "close": 546.94,
+      "volume": 3360036
     }
   ]
 }

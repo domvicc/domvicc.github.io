@@ -1,7 +1,7 @@
 {
   "ticker": "CTAS",
-  "generated_at": "2025-10-10T02:42:40.423900+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:20:32.024058+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 191.37,
       "close": 191.75,
       "volume": 2600735
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "CTAS",
+      "open": 191.21,
+      "high": 192.06,
+      "low": 187.29,
+      "close": 187.96,
+      "volume": 3428216
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "CTAS",
+      "open": 187.47,
+      "high": 189.44,
+      "low": 186.945,
+      "close": 187.94,
+      "volume": 2094800
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "CTAS",
+      "open": 186.97,
+      "high": 189.475,
+      "low": 185.52,
+      "close": 188.23,
+      "volume": 2702481
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "CTAS",
+      "open": 188.33,
+      "high": 189.57,
+      "low": 186.975,
+      "close": 187.45,
+      "volume": 1506775
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "CTAS",
+      "open": 187.98,
+      "high": 187.98,
+      "low": 183.95,
+      "close": 184.36,
+      "volume": 1593886
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "CTAS",
+      "open": 184.93,
+      "high": 189.4,
+      "low": 184.875,
+      "close": 188.1,
+      "volume": 2511652
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "CTAS",
+      "open": 188.26,
+      "high": 193.81,
+      "low": 188.1863,
+      "close": 192.33,
+      "volume": 3569281
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "CTAS",
+      "open": 192.29,
+      "high": 197.62,
+      "low": 191.59,
+      "close": 196.49,
+      "volume": 3360187
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "CTAS",
+      "open": 196.56,
+      "high": 197.0,
+      "low": 193.3,
+      "close": 193.54,
+      "volume": 1322597
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "CTAS",
+      "open": 194.0,
+      "high": 195.73,
+      "low": 192.185,
+      "close": 192.34,
+      "volume": 1842323
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "CTAS",
+      "open": 192.76,
+      "high": 192.95,
+      "low": 190.57,
+      "close": 190.83,
+      "volume": 1309149
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "CTAS",
+      "open": 190.61,
+      "high": 191.25,
+      "low": 188.22,
+      "close": 188.68,
+      "volume": 2021944
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "CTAS",
+      "open": 188.11,
+      "high": 190.61,
+      "low": 187.1575,
+      "close": 189.89,
+      "volume": 1527660
     }
   ]
 }

@@ -1091,7 +1091,7 @@
       "cashAndCashEquivalentsAtCarryingValue": "6132000000",
       "cashAndShortTermInvestments": "6132000000",
       "inventory": "5725000000",
-      "currentNetReceivables": "5165000000",
+      "currentNetReceivables": "5439000000",
       "totalNonCurrentAssets": "11582000000",
       "propertyPlantEquipment": "2723000000",
       "accumulatedDepreciationAmortizationPPE": "None",
@@ -1101,7 +1101,7 @@
       "investments": "None",
       "longTermInvestments": "2281000000",
       "shortTermInvestments": "737000000",
-      "otherCurrentAssets": "1388000000",
+      "otherCurrentAssets": "1114000000",
       "otherNonCurrentAssets": "None",
       "totalLiabilities": "14380000000",
       "totalCurrentLiabilities": "7372000000",
@@ -1115,7 +1115,7 @@
       "currentLongTermDebt": "100000000",
       "longTermDebtNoncurrent": "None",
       "shortLongTermDebtTotal": "5999000000",
-      "otherCurrentLiabilities": "2351000000",
+      "otherCurrentLiabilities": "2286000000",
       "otherNonCurrentLiabilities": "714000000",
       "totalShareholderEquity": "16349000000",
       "treasuryStock": "None",
@@ -1131,7 +1131,7 @@
       "cashAndCashEquivalentsAtCarryingValue": "6025000000",
       "cashAndShortTermInvestments": "6025000000",
       "inventory": "5809000000",
-      "currentNetReceivables": "5443000000",
+      "currentNetReceivables": "5648000000",
       "totalNonCurrentAssets": "11531000000",
       "propertyPlantEquipment": "2604000000",
       "accumulatedDepreciationAmortizationPPE": "None",
@@ -1141,7 +1141,7 @@
       "investments": "None",
       "longTermInvestments": "2177000000",
       "shortTermInvestments": "510000000",
-      "otherCurrentAssets": "1092000000",
+      "otherCurrentAssets": "887000000",
       "otherNonCurrentAssets": "None",
       "totalLiabilities": "15317000000",
       "totalCurrentLiabilities": "8224000000",
@@ -1155,13 +1155,13 @@
       "currentLongTermDebt": "199000000",
       "longTermDebtNoncurrent": "None",
       "shortLongTermDebtTotal": "6099000000",
-      "otherCurrentLiabilities": "2069000000",
+      "otherCurrentLiabilities": "2714000000",
       "otherNonCurrentLiabilities": "815000000",
       "totalShareholderEquity": "15093000000",
       "treasuryStock": "-35594000000",
       "retainedEarnings": "41988000000",
       "commonStock": "8000000",
-      "commonStockSharesOutstanding": "843000000"
+      "commonStockSharesOutstanding": "842000000"
     },
     {
       "fiscalDateEnding": "2023-04-30",
@@ -4045,5 +4045,5 @@
     }
   ],
   "ticker": "AMAT",
-  "generated_at": "2025-10-10T02:33:00.610613+00:00"
+  "generated_at": "2025-10-28T01:28:38.013964+00:00"
 }

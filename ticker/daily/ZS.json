@@ -1,7 +1,7 @@
 {
   "ticker": "ZS",
-  "generated_at": "2025-10-10T02:43:46.397388+00:00",
-  "count": 1903,
+  "generated_at": "2025-10-29T01:24:45.159912+00:00",
+  "count": 1916,
   "data": [
     {
       "timestamp": "2018-03-16",
@@ -17129,6 +17129,123 @@
       "low": 309.7,
       "close": 315.21,
       "volume": 1026060
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "ZS",
+      "open": 315.44,
+      "high": 319.89,
+      "low": 309.5209,
+      "close": 309.88,
+      "volume": 1510978
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "ZS",
+      "open": 315.0,
+      "high": 319.89,
+      "low": 312.42,
+      "close": 313.04,
+      "volume": 1125614
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "ZS",
+      "open": 306.66,
+      "high": 307.3288,
+      "low": 299.48,
+      "close": 301.8,
+      "volume": 1537546
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "ZS",
+      "open": 305.8,
+      "high": 306.205,
+      "low": 298.64,
+      "close": 302.35,
+      "volume": 1103533
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "ZS",
+      "open": 303.78,
+      "high": 309.67,
+      "low": 296.22,
+      "close": 299.24,
+      "volume": 1090892
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "ZS",
+      "open": 296.97,
+      "high": 301.12,
+      "low": 295.24,
+      "close": 300.25,
+      "volume": 837142
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "ZS",
+      "open": 301.27,
+      "high": 307.19,
+      "low": 301.27,
+      "close": 305.9,
+      "volume": 880671
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "ZS",
+      "open": 305.74,
+      "high": 311.29,
+      "low": 303.78,
+      "close": 310.37,
+      "volume": 748628
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "ZS",
+      "open": 308.98,
+      "high": 311.3399,
+      "low": 302.58,
+      "close": 307.92,
+      "volume": 1171413
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "ZS",
+      "open": 308.0,
+      "high": 319.206,
+      "low": 307.995,
+      "close": 318.77,
+      "volume": 1397055
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "ZS",
+      "open": 321.38,
+      "high": 327.395,
+      "low": 321.0,
+      "close": 323.0,
+      "volume": 1063855
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "ZS",
+      "open": 325.8,
+      "high": 327.71,
+      "low": 321.74,
+      "close": 326.33,
+      "volume": 1296181
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "ZS",
+      "open": 327.095,
+      "high": 329.3,
+      "low": 323.799,
+      "close": 328.98,
+      "volume": 1086161
     }
   ]
 }

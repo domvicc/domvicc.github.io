@@ -1,7 +1,7 @@
 {
   "ticker": "VRSK",
-  "generated_at": "2025-10-10T02:43:42.478454+00:00",
-  "count": 4027,
+  "generated_at": "2025-10-29T01:24:20.726565+00:00",
+  "count": 4040,
   "data": [
     {
       "timestamp": "2009-10-07",
@@ -36245,6 +36245,123 @@
       "low": 240.43,
       "close": 241.27,
       "volume": 765488
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "VRSK",
+      "open": 241.73,
+      "high": 248.215,
+      "low": 241.12,
+      "close": 243.06,
+      "volume": 1143550
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "VRSK",
+      "open": 241.43,
+      "high": 244.485,
+      "low": 239.78,
+      "close": 242.08,
+      "volume": 739189
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "VRSK",
+      "open": 242.89,
+      "high": 245.685,
+      "low": 241.9,
+      "close": 243.36,
+      "volume": 905040
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "VRSK",
+      "open": 242.23,
+      "high": 244.4114,
+      "low": 240.36,
+      "close": 243.98,
+      "volume": 1349121
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "VRSK",
+      "open": 240.05,
+      "high": 242.1,
+      "low": 228.09,
+      "close": 229.06,
+      "volume": 1891793
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "VRSK",
+      "open": 231.03,
+      "high": 234.38,
+      "low": 229.29,
+      "close": 232.34,
+      "volume": 2256033
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "VRSK",
+      "open": 232.89,
+      "high": 235.54,
+      "low": 232.1,
+      "close": 235.29,
+      "volume": 953435
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "VRSK",
+      "open": 235.03,
+      "high": 238.22,
+      "low": 234.63,
+      "close": 237.03,
+      "volume": 954507
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "VRSK",
+      "open": 237.19,
+      "high": 239.47,
+      "low": 235.845,
+      "close": 237.47,
+      "volume": 1006885
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "VRSK",
+      "open": 237.21,
+      "high": 237.85,
+      "low": 234.1,
+      "close": 234.79,
+      "volume": 1045166
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "VRSK",
+      "open": 236.54,
+      "high": 236.54,
+      "low": 233.805,
+      "close": 234.94,
+      "volume": 943641
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "VRSK",
+      "open": 234.06,
+      "high": 235.37,
+      "low": 232.66,
+      "close": 233.68,
+      "volume": 1193473
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "VRSK",
+      "open": 233.44,
+      "high": 235.89,
+      "low": 231.84,
+      "close": 232.13,
+      "volume": 1751298
     }
   ]
 }

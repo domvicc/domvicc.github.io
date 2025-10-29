@@ -1,7 +1,7 @@
 {
   "ticker": "MDB",
-  "generated_at": "2025-10-10T02:43:10.580090+00:00",
-  "count": 2004,
+  "generated_at": "2025-10-29T01:22:19.612787+00:00",
+  "count": 2017,
   "data": [
     {
       "timestamp": "2017-10-19",
@@ -18038,6 +18038,123 @@
       "low": 325.0,
       "close": 331.48,
       "volume": 1489195
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "MDB",
+      "open": 334.35,
+      "high": 337.95,
+      "low": 313.11,
+      "close": 314.44,
+      "volume": 1960786
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "MDB",
+      "open": 323.01,
+      "high": 323.28,
+      "low": 313.8,
+      "close": 319.21,
+      "volume": 886347
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "MDB",
+      "open": 312.32,
+      "high": 317.91,
+      "low": 307.205,
+      "close": 313.81,
+      "volume": 973645
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "MDB",
+      "open": 315.94,
+      "high": 319.98,
+      "low": 314.0,
+      "close": 317.83,
+      "volume": 886247
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "MDB",
+      "open": 320.0,
+      "high": 329.66,
+      "low": 311.03,
+      "close": 314.35,
+      "volume": 1643577
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "MDB",
+      "open": 311.77,
+      "high": 320.91,
+      "low": 310.3,
+      "close": 318.53,
+      "volume": 997912
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "MDB",
+      "open": 321.39,
+      "high": 330.29,
+      "low": 321.14,
+      "close": 327.41,
+      "volume": 1120680
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "MDB",
+      "open": 326.705,
+      "high": 335.3899,
+      "low": 325.35,
+      "close": 325.76,
+      "volume": 917354
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "MDB",
+      "open": 324.3,
+      "high": 330.0,
+      "low": 318.0,
+      "close": 325.1,
+      "volume": 1783449
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "MDB",
+      "open": 321.23,
+      "high": 331.32,
+      "low": 321.0,
+      "close": 330.01,
+      "volume": 694048
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "MDB",
+      "open": 335.05,
+      "high": 340.981,
+      "low": 333.54,
+      "close": 333.57,
+      "volume": 1139523
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "MDB",
+      "open": 339.29,
+      "high": 346.86,
+      "low": 338.0,
+      "close": 340.17,
+      "volume": 953118
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "MDB",
+      "open": 343.0,
+      "high": 343.82,
+      "low": 335.8795,
+      "close": 336.46,
+      "volume": 883697
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "ticker": "PDD",
-  "generated_at": "2025-10-10T02:43:27.862262+00:00",
-  "count": 1812,
+  "generated_at": "2025-10-29T01:23:07.339226+00:00",
+  "count": 1825,
   "data": [
     {
       "timestamp": "2018-07-26",
@@ -16310,6 +16310,123 @@
       "low": 130.055,
       "close": 131.25,
       "volume": 8466657
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "PDD",
+      "open": 130.26,
+      "high": 132.33,
+      "low": 122.92,
+      "close": 124.27,
+      "volume": 21804407
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "PDD",
+      "open": 128.0,
+      "high": 129.59,
+      "low": 126.81,
+      "close": 127.55,
+      "volume": 9960513
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "PDD",
+      "open": 125.12,
+      "high": 128.045,
+      "low": 124.905,
+      "close": 127.1,
+      "volume": 5366532
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "PDD",
+      "open": 128.555,
+      "high": 129.31,
+      "low": 126.51,
+      "close": 127.58,
+      "volume": 4506867
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "PDD",
+      "open": 128.06,
+      "high": 128.24,
+      "low": 126.223,
+      "close": 127.35,
+      "volume": 3630421
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "PDD",
+      "open": 125.535,
+      "high": 130.23,
+      "low": 125.53,
+      "close": 128.48,
+      "volume": 6300891
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "PDD",
+      "open": 129.3,
+      "high": 132.42,
+      "low": 128.53,
+      "close": 131.56,
+      "volume": 8050425
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "PDD",
+      "open": 131.47,
+      "high": 131.84,
+      "low": 129.12,
+      "close": 130.71,
+      "volume": 3611616
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "PDD",
+      "open": 130.69,
+      "high": 132.39,
+      "low": 128.6,
+      "close": 130.06,
+      "volume": 4672547
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "PDD",
+      "open": 131.22,
+      "high": 133.955,
+      "low": 130.615,
+      "close": 133.29,
+      "volume": 7771937
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "PDD",
+      "open": 134.35,
+      "high": 134.96,
+      "low": 133.35,
+      "close": 133.96,
+      "volume": 5985202
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "PDD",
+      "open": 136.615,
+      "high": 138.745,
+      "low": 135.81,
+      "close": 137.76,
+      "volume": 8860340
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "PDD",
+      "open": 136.85,
+      "high": 138.255,
+      "low": 136.06,
+      "close": 138.03,
+      "volume": 4661691
     }
   ]
 }

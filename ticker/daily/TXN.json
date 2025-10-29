@@ -1,7 +1,7 @@
 {
   "ticker": "TXN",
-  "generated_at": "2025-10-10T02:43:40.409635+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:24:07.148619+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 177.62,
       "close": 178.96,
       "volume": 5006072
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "TXN",
+      "open": 179.62,
+      "high": 181.57,
+      "low": 171.5,
+      "close": 171.7,
+      "volume": 9630248
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "TXN",
+      "open": 172.83,
+      "high": 176.1,
+      "low": 172.4001,
+      "close": 175.11,
+      "volume": 8610309
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "TXN",
+      "open": 171.97,
+      "high": 176.2725,
+      "low": 171.45,
+      "close": 173.94,
+      "volume": 9919396
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "TXN",
+      "open": 174.02,
+      "high": 176.16,
+      "low": 171.13,
+      "close": 175.27,
+      "volume": 9416750
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "TXN",
+      "open": 175.39,
+      "high": 177.5,
+      "low": 174.0633,
+      "close": 175.48,
+      "volume": 7188169
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "TXN",
+      "open": 175.05,
+      "high": 177.625,
+      "low": 174.5654,
+      "close": 176.58,
+      "volume": 5082644
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "TXN",
+      "open": 172.51,
+      "high": 181.11,
+      "low": 172.51,
+      "close": 179.585,
+      "volume": 6620176
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "TXN",
+      "open": 179.47,
+      "high": 181.84,
+      "low": 178.84,
+      "close": 180.84,
+      "volume": 10301501
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "TXN",
+      "open": 163.96,
+      "high": 173.08,
+      "low": 163.04,
+      "close": 170.71,
+      "volume": 25834509
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "TXN",
+      "open": 170.0,
+      "high": 173.76,
+      "low": 169.75,
+      "close": 172.19,
+      "volume": 8412529
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "TXN",
+      "open": 174.01,
+      "high": 174.148,
+      "low": 168.785,
+      "close": 169.13,
+      "volume": 7691766
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "TXN",
+      "open": 169.82,
+      "high": 170.3675,
+      "low": 168.68,
+      "close": 169.41,
+      "volume": 8606261
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "TXN",
+      "open": 169.14,
+      "high": 169.51,
+      "low": 166.49,
+      "close": 166.91,
+      "volume": 9620327
     }
   ]
 }

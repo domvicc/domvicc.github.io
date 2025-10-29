@@ -1,7 +1,7 @@
 {
   "ticker": "AMGN",
-  "generated_at": "2025-10-10T02:42:23.419152+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:19:16.225839+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 293.7,
       "close": 295.43,
       "volume": 1369162
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "AMGN",
+      "open": 296.16,
+      "high": 297.0899,
+      "low": 289.58,
+      "close": 290.13,
+      "volume": 2660454
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "AMGN",
+      "open": 291.745,
+      "high": 296.13,
+      "low": 289.4414,
+      "close": 292.405,
+      "volume": 1838558
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "AMGN",
+      "open": 291.745,
+      "high": 296.87,
+      "low": 290.97,
+      "close": 293.85,
+      "volume": 1975949
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "AMGN",
+      "open": 292.815,
+      "high": 298.21,
+      "low": 292.43,
+      "close": 297.32,
+      "volume": 2502083
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "AMGN",
+      "open": 298.07,
+      "high": 302.265,
+      "low": 294.44,
+      "close": 295.81,
+      "volume": 1715049
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "AMGN",
+      "open": 295.24,
+      "high": 299.37,
+      "low": 293.14,
+      "close": 298.81,
+      "volume": 1959530
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "AMGN",
+      "open": 299.48,
+      "high": 303.66,
+      "low": 297.75,
+      "close": 303.33,
+      "volume": 1613514
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "AMGN",
+      "open": 302.6,
+      "high": 303.85,
+      "low": 298.03,
+      "close": 301.14,
+      "volume": 1533558
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "AMGN",
+      "open": 301.29,
+      "high": 302.815,
+      "low": 295.6,
+      "close": 295.98,
+      "volume": 1698899
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "AMGN",
+      "open": 296.01,
+      "high": 296.46,
+      "low": 291.9075,
+      "close": 292.89,
+      "volume": 1496922
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "AMGN",
+      "open": 292.89,
+      "high": 293.94,
+      "low": 290.66,
+      "close": 291.76,
+      "volume": 1376330
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "AMGN",
+      "open": 291.21,
+      "high": 291.9999,
+      "low": 288.26,
+      "close": 291.16,
+      "volume": 1794617
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "AMGN",
+      "open": 288.93,
+      "high": 292.63,
+      "low": 288.26,
+      "close": 292.09,
+      "volume": 2157149
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "ticker": "INTC",
-  "generated_at": "2025-10-10T02:42:58.846056+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:21:50.642751+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 36.86,
       "close": 37.8,
       "volume": 89884658
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "INTC",
+      "open": 38.46,
+      "high": 39.65,
+      "low": 36.3,
+      "close": 36.37,
+      "volume": 183063296
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "INTC",
+      "open": 36.44,
+      "high": 37.51,
+      "low": 36.28,
+      "close": 37.22,
+      "volume": 104020679
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "INTC",
+      "open": 36.0,
+      "high": 36.545,
+      "low": 34.69,
+      "close": 35.63,
+      "volume": 117908345
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "INTC",
+      "open": 36.4,
+      "high": 37.485,
+      "low": 35.64,
+      "close": 37.15,
+      "volume": 99242706
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "INTC",
+      "open": 37.15,
+      "high": 38.02,
+      "low": 36.41,
+      "close": 36.84,
+      "volume": 83357846
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "INTC",
+      "open": 36.36,
+      "high": 38.38,
+      "low": 36.08,
+      "close": 37.01,
+      "volume": 119394707
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "INTC",
+      "open": 37.57,
+      "high": 38.5198,
+      "low": 37.56,
+      "close": 38.1,
+      "volume": 80230234
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "INTC",
+      "open": 38.14,
+      "high": 38.35,
+      "low": 37.67,
+      "close": 38.12,
+      "volume": 73134908
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "INTC",
+      "open": 37.835,
+      "high": 37.93,
+      "low": 36.0401,
+      "close": 36.92,
+      "volume": 87099905
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "INTC",
+      "open": 36.6,
+      "high": 38.4,
+      "low": 36.4301,
+      "close": 38.16,
+      "volume": 121974238
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "INTC",
+      "open": 40.02,
+      "high": 41.12,
+      "low": 37.83,
+      "close": 38.28,
+      "volume": 246379974
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "INTC",
+      "open": 38.39,
+      "high": 40.67,
+      "low": 38.23,
+      "close": 39.54,
+      "volume": 160007604
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "INTC",
+      "open": 39.59,
+      "high": 42.48,
+      "low": 39.54,
+      "close": 41.53,
+      "volume": 180141696
     }
   ]
 }

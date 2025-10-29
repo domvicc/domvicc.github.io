@@ -1,7 +1,7 @@
 {
   "ticker": "PYPL",
-  "generated_at": "2025-10-10T02:43:29.724380+00:00",
-  "count": 2573,
+  "generated_at": "2025-10-29T01:23:18.108688+00:00",
+  "count": 2586,
   "data": [
     {
       "timestamp": "2015-07-20",
@@ -23159,6 +23159,123 @@
       "low": 75.033,
       "close": 75.75,
       "volume": 15774431
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "PYPL",
+      "open": 76.11,
+      "high": 76.9,
+      "low": 69.76,
+      "close": 69.84,
+      "volume": 22326459
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "PYPL",
+      "open": 70.72,
+      "high": 70.9295,
+      "low": 68.1617,
+      "close": 68.86,
+      "volume": 20036796
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "PYPL",
+      "open": 67.41,
+      "high": 69.71,
+      "low": 66.77,
+      "close": 69.15,
+      "volume": 12968477
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "PYPL",
+      "open": 69.385,
+      "high": 69.875,
+      "low": 67.84,
+      "close": 67.98,
+      "volume": 11247306
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "PYPL",
+      "open": 68.13,
+      "high": 68.6,
+      "low": 65.42,
+      "close": 66.05,
+      "volume": 19258506
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "PYPL",
+      "open": 65.535,
+      "high": 67.71,
+      "low": 65.45,
+      "close": 67.41,
+      "volume": 11151457
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "PYPL",
+      "open": 67.675,
+      "high": 69.47,
+      "low": 67.65,
+      "close": 69.2,
+      "volume": 10016105
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "PYPL",
+      "open": 69.02,
+      "high": 70.36,
+      "low": 68.83,
+      "close": 70.05,
+      "volume": 9031987
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "PYPL",
+      "open": 69.17,
+      "high": 69.37,
+      "low": 67.91,
+      "close": 68.07,
+      "volume": 8173415
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "PYPL",
+      "open": 68.07,
+      "high": 70.06,
+      "low": 68.0501,
+      "close": 69.66,
+      "volume": 8199006
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "PYPL",
+      "open": 70.15,
+      "high": 71.25,
+      "low": 69.74,
+      "close": 69.77,
+      "volume": 8638209
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "PYPL",
+      "open": 70.855,
+      "high": 71.87,
+      "low": 70.13,
+      "close": 70.25,
+      "volume": 18821307
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "PYPL",
+      "open": 76.21,
+      "high": 79.215,
+      "low": 72.83,
+      "close": 73.02,
+      "volume": 83065869
     }
   ]
 }

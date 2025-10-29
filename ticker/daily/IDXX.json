@@ -1,7 +1,7 @@
 {
   "ticker": "IDXX",
-  "generated_at": "2025-10-10T02:42:57.501180+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:21:47.028247+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 619.945,
       "close": 628.75,
       "volume": 384922
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "IDXX",
+      "open": 628.75,
+      "high": 628.75,
+      "low": 615.0002,
+      "close": 616.15,
+      "volume": 410774
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "IDXX",
+      "open": 622.66,
+      "high": 634.285,
+      "low": 621.83,
+      "close": 633.32,
+      "volume": 376965
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "IDXX",
+      "open": 625.66,
+      "high": 642.585,
+      "low": 625.615,
+      "close": 636.91,
+      "volume": 365423
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "IDXX",
+      "open": 640.2,
+      "high": 642.91,
+      "low": 631.78,
+      "close": 639.15,
+      "volume": 387084
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "IDXX",
+      "open": 643.44,
+      "high": 651.5,
+      "low": 628.17,
+      "close": 637.34,
+      "volume": 524682
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "IDXX",
+      "open": 633.88,
+      "high": 637.48,
+      "low": 627.43,
+      "close": 635.4,
+      "volume": 276999
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "IDXX",
+      "open": 638.2,
+      "high": 644.92,
+      "low": 634.905,
+      "close": 643.41,
+      "volume": 327360
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "IDXX",
+      "open": 641.64,
+      "high": 643.0,
+      "low": 630.49,
+      "close": 637.13,
+      "volume": 408089
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "IDXX",
+      "open": 642.41,
+      "high": 642.41,
+      "low": 628.6,
+      "close": 633.78,
+      "volume": 465451
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "IDXX",
+      "open": 631.25,
+      "high": 641.47,
+      "low": 630.7,
+      "close": 638.6,
+      "volume": 532713
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "IDXX",
+      "open": 641.76,
+      "high": 650.37,
+      "low": 639.075,
+      "close": 640.85,
+      "volume": 368181
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "IDXX",
+      "open": 644.46,
+      "high": 649.07,
+      "low": 639.11,
+      "close": 647.4,
+      "volume": 452626
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "IDXX",
+      "open": 640.525,
+      "high": 646.0,
+      "low": 633.18,
+      "close": 634.36,
+      "volume": 396241
     }
   ]
 }

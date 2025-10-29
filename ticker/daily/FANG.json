@@ -1,7 +1,7 @@
 {
   "ticker": "FANG",
-  "generated_at": "2025-10-10T02:42:49.574472+00:00",
-  "count": 3266,
+  "generated_at": "2025-10-29T01:21:07.619001+00:00",
+  "count": 3279,
   "data": [
     {
       "timestamp": "2012-10-12",
@@ -29396,6 +29396,123 @@
       "low": 144.02,
       "close": 144.21,
       "volume": 1480954
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "FANG",
+      "open": 141.67,
+      "high": 143.14,
+      "low": 139.69,
+      "close": 139.82,
+      "volume": 2134481
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "FANG",
+      "open": 142.23,
+      "high": 143.09,
+      "low": 140.75,
+      "close": 142.11,
+      "volume": 1527368
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "FANG",
+      "open": 139.39,
+      "high": 143.1,
+      "low": 139.0,
+      "close": 141.83,
+      "volume": 1751736
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "FANG",
+      "open": 143.19,
+      "high": 144.2,
+      "low": 140.8,
+      "close": 141.94,
+      "volume": 1105747
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "FANG",
+      "open": 142.61,
+      "high": 143.355,
+      "low": 137.25,
+      "close": 139.44,
+      "volume": 1915167
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "FANG",
+      "open": 139.65,
+      "high": 140.04,
+      "low": 137.58,
+      "close": 139.09,
+      "volume": 1541224
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "FANG",
+      "open": 139.9,
+      "high": 141.97,
+      "low": 139.4,
+      "close": 141.19,
+      "volume": 2216565
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "FANG",
+      "open": 141.38,
+      "high": 142.135,
+      "low": 139.5,
+      "close": 141.53,
+      "volume": 1410182
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "FANG",
+      "open": 143.1,
+      "high": 144.9,
+      "low": 140.83,
+      "close": 142.28,
+      "volume": 2404198
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "FANG",
+      "open": 147.62,
+      "high": 149.38,
+      "low": 146.5,
+      "close": 147.17,
+      "volume": 2477868
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "FANG",
+      "open": 147.76,
+      "high": 148.37,
+      "low": 145.2,
+      "close": 145.86,
+      "volume": 1434440
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "FANG",
+      "open": 146.5,
+      "high": 147.66,
+      "low": 143.9,
+      "close": 144.4,
+      "volume": 1389658
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "FANG",
+      "open": 143.64,
+      "high": 143.95,
+      "low": 140.41,
+      "close": 141.14,
+      "volume": 1139736
     }
   ]
 }

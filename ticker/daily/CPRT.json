@@ -1,7 +1,7 @@
 {
   "ticker": "CPRT",
-  "generated_at": "2025-10-10T02:42:35.278006+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:20:22.184411+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 44.0,
       "close": 44.04,
       "volume": 5471551
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "CPRT",
+      "open": 44.215,
+      "high": 44.405,
+      "low": 43.71,
+      "close": 43.88,
+      "volume": 7861385
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "CPRT",
+      "open": 43.86,
+      "high": 44.491,
+      "low": 43.77,
+      "close": 44.07,
+      "volume": 7001726
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "CPRT",
+      "open": 44.01,
+      "high": 44.915,
+      "low": 43.985,
+      "close": 44.77,
+      "volume": 5312315
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "CPRT",
+      "open": 44.88,
+      "high": 45.0,
+      "low": 44.4,
+      "close": 44.56,
+      "volume": 6377657
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "CPRT",
+      "open": 44.97,
+      "high": 44.97,
+      "low": 43.32,
+      "close": 44.055,
+      "volume": 7350460
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "CPRT",
+      "open": 44.02,
+      "high": 44.59,
+      "low": 43.82,
+      "close": 44.34,
+      "volume": 5025420
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "CPRT",
+      "open": 44.5,
+      "high": 44.83,
+      "low": 44.24,
+      "close": 44.76,
+      "volume": 3897706
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "CPRT",
+      "open": 44.83,
+      "high": 45.89,
+      "low": 44.645,
+      "close": 45.76,
+      "volume": 5363667
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "CPRT",
+      "open": 45.7,
+      "high": 45.76,
+      "low": 44.685,
+      "close": 44.93,
+      "volume": 5426457
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "CPRT",
+      "open": 44.98,
+      "high": 45.18,
+      "low": 44.495,
+      "close": 44.67,
+      "volume": 4338139
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "CPRT",
+      "open": 45.105,
+      "high": 45.2607,
+      "low": 44.56,
+      "close": 44.66,
+      "volume": 3590597
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "CPRT",
+      "open": 44.7,
+      "high": 44.79,
+      "low": 44.105,
+      "close": 44.16,
+      "volume": 5037981
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "CPRT",
+      "open": 44.0,
+      "high": 44.3365,
+      "low": 43.71,
+      "close": 44.07,
+      "volume": 4244355
     }
   ]
 }

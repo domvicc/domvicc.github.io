@@ -564,6 +564,34 @@
   ],
   "quarterlyReports": [
     {
+      "fiscalDateEnding": "2025-09-30",
+      "reportedCurrency": "None",
+      "grossProfit": "14845000000",
+      "totalRevenue": "37296000000",
+      "costOfRevenue": "22451000000",
+      "costofGoodsAndServicesSold": "22451000000",
+      "operatingIncome": "5392000000",
+      "sellingGeneralAndAdministrative": "6612000000",
+      "researchAndDevelopment": "None",
+      "operatingExpenses": "9453000000",
+      "investmentIncomeNet": "None",
+      "netInterestIncome": "None",
+      "interestIncome": "None",
+      "interestExpense": "16970000000",
+      "nonInterestIncome": "None",
+      "otherNonOperatingIncome": "None",
+      "depreciation": "None",
+      "depreciationAndAmortization": "531000000",
+      "incomeBeforeTax": "5392000000",
+      "incomeTaxExpense": "1294000000",
+      "interestAndDebtExpense": "None",
+      "netIncomeFromContinuingOperations": "None",
+      "comprehensiveIncomeNetOfTax": "None",
+      "ebit": "5392000000",
+      "ebitda": "5923000000",
+      "netIncome": "4098000000"
+    },
+    {
       "fiscalDateEnding": "2025-06-30",
       "reportedCurrency": "USD",
       "grossProfit": "14199000000",
@@ -587,8 +615,8 @@
       "interestAndDebtExpense": "None",
       "netIncomeFromContinuingOperations": "3723000000",
       "comprehensiveIncomeNetOfTax": "None",
-      "ebit": "2238000000",
-      "ebitda": "2856000000",
+      "ebit": "4958000000",
+      "ebitda": "5576000000",
       "netIncome": "3723000000"
     },
     {
@@ -2802,36 +2830,8 @@
       "ebit": "2405000000",
       "ebitda": "2615000000",
       "netIncome": "1617000000"
-    },
-    {
-      "fiscalDateEnding": "2005-06-30",
-      "reportedCurrency": "USD",
-      "grossProfit": "4927000000",
-      "totalRevenue": "8949000000",
-      "costOfRevenue": "4022000000",
-      "costofGoodsAndServicesSold": "4022000000",
-      "operatingIncome": "1244000000",
-      "sellingGeneralAndAdministrative": "2403000000",
-      "researchAndDevelopment": "0",
-      "operatingExpenses": "3683000000",
-      "investmentIncomeNet": "None",
-      "netInterestIncome": "None",
-      "interestIncome": "None",
-      "interestExpense": "4022000000",
-      "nonInterestIncome": "None",
-      "otherNonOperatingIncome": "None",
-      "depreciation": "None",
-      "depreciationAndAmortization": "230000000",
-      "incomeBeforeTax": "1244000000",
-      "incomeTaxExpense": "379000000",
-      "interestAndDebtExpense": "None",
-      "netIncomeFromContinuingOperations": "0",
-      "comprehensiveIncomeNetOfTax": "None",
-      "ebit": "1244000000",
-      "ebitda": "1474000000",
-      "netIncome": "865000000"
     }
   ],
   "ticker": "GS",
-  "generated_at": "2025-10-09T04:34:21.008288+00:00"
+  "generated_at": "2025-10-28T05:22:22.142129+00:00"
 }

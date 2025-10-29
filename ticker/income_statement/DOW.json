@@ -452,6 +452,34 @@
   ],
   "quarterlyReports": [
     {
+      "fiscalDateEnding": "2025-09-30",
+      "reportedCurrency": "None",
+      "grossProfit": "689000000",
+      "totalRevenue": "9973000000",
+      "costOfRevenue": "9284000000",
+      "costofGoodsAndServicesSold": "9284000000",
+      "operatingIncome": "159000000",
+      "sellingGeneralAndAdministrative": "None",
+      "researchAndDevelopment": "191000000",
+      "operatingExpenses": "530000000",
+      "investmentIncomeNet": "None",
+      "netInterestIncome": "None",
+      "interestIncome": "None",
+      "interestExpense": "221000000",
+      "nonInterestIncome": "None",
+      "otherNonOperatingIncome": "None",
+      "depreciation": "None",
+      "depreciationAndAmortization": "688000000",
+      "incomeBeforeTax": "70000000",
+      "incomeTaxExpense": "-54000000",
+      "interestAndDebtExpense": "None",
+      "netIncomeFromContinuingOperations": "None",
+      "comprehensiveIncomeNetOfTax": "None",
+      "ebit": "291000000",
+      "ebitda": "979000000",
+      "netIncome": "62000000"
+    },
+    {
       "fiscalDateEnding": "2025-06-30",
       "reportedCurrency": "USD",
       "grossProfit": "544000000",
@@ -2217,5 +2245,5 @@
     }
   ],
   "ticker": "DOW",
-  "generated_at": "2025-10-09T04:34:17.143319+00:00"
+  "generated_at": "2025-10-28T05:21:55.887917+00:00"
 }

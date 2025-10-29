@@ -1,7 +1,7 @@
 {
   "ticker": "TMUS",
-  "generated_at": "2025-10-10T02:43:37.048278+00:00",
-  "count": 4650,
+  "generated_at": "2025-10-29T01:23:56.773251+00:00",
+  "count": 4663,
   "data": [
     {
       "timestamp": "2007-04-19",
@@ -41852,6 +41852,123 @@
       "low": 225.0,
       "close": 226.21,
       "volume": 3303684
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "TMUS",
+      "open": 227.24,
+      "high": 231.02,
+      "low": 225.84,
+      "close": 228.79,
+      "volume": 5106302
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "TMUS",
+      "open": 228.87,
+      "high": 229.98,
+      "low": 224.06,
+      "close": 225.06,
+      "volume": 4698294
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "TMUS",
+      "open": 230.0,
+      "high": 230.65,
+      "low": 226.98,
+      "close": 229.42,
+      "volume": 3894172
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "TMUS",
+      "open": 229.18,
+      "high": 229.53,
+      "low": 226.37,
+      "close": 226.65,
+      "volume": 3286582
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "TMUS",
+      "open": 229.79,
+      "high": 230.07,
+      "low": 225.246,
+      "close": 226.45,
+      "volume": 4217752
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "TMUS",
+      "open": 227.15,
+      "high": 229.95,
+      "low": 226.68,
+      "close": 229.33,
+      "volume": 3446585
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "TMUS",
+      "open": 228.93,
+      "high": 230.54,
+      "low": 226.4,
+      "close": 230.09,
+      "volume": 4561281
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "TMUS",
+      "open": 230.09,
+      "high": 230.51,
+      "low": 227.64,
+      "close": 229.08,
+      "volume": 3580523
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "TMUS",
+      "open": 225.43,
+      "high": 227.89,
+      "low": 218.7728,
+      "close": 227.4,
+      "volume": 6674872
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "TMUS",
+      "open": 225.75,
+      "high": 225.93,
+      "low": 215.8155,
+      "close": 219.99,
+      "volume": 9826417
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "TMUS",
+      "open": 220.005,
+      "high": 220.22,
+      "low": 215.6,
+      "close": 217.77,
+      "volume": 5884425
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "TMUS",
+      "open": 216.975,
+      "high": 221.64,
+      "low": 215.55,
+      "close": 220.68,
+      "volume": 5968190
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "TMUS",
+      "open": 218.92,
+      "high": 222.83,
+      "low": 218.25,
+      "close": 219.99,
+      "volume": 4461662
     }
   ]
 }

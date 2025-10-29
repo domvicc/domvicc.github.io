@@ -1,7 +1,7 @@
 {
   "ticker": "EA",
-  "generated_at": "2025-10-10T02:42:47.661615+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:20:50.329276+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 199.81,
       "close": 200.05,
       "volume": 3618268
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "EA",
+      "open": 200.04,
+      "high": 200.39,
+      "low": 199.8,
+      "close": 200.02,
+      "volume": 3524147
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "EA",
+      "open": 200.05,
+      "high": 200.62,
+      "low": 200.05,
+      "close": 200.29,
+      "volume": 2431568
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "EA",
+      "open": 200.11,
+      "high": 200.78,
+      "low": 200.035,
+      "close": 200.2,
+      "volume": 3145850
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "EA",
+      "open": 200.31,
+      "high": 201.11,
+      "low": 200.29,
+      "close": 200.75,
+      "volume": 3807297
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "EA",
+      "open": 200.75,
+      "high": 201.15,
+      "low": 200.245,
+      "close": 200.35,
+      "volume": 2631726
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "EA",
+      "open": 200.54,
+      "high": 200.745,
+      "low": 200.13,
+      "close": 200.3,
+      "volume": 4512065
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "EA",
+      "open": 200.545,
+      "high": 200.71,
+      "low": 200.4,
+      "close": 200.59,
+      "volume": 2322808
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "EA",
+      "open": 200.51,
+      "high": 200.705,
+      "low": 200.14,
+      "close": 200.55,
+      "volume": 2619994
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "EA",
+      "open": 200.46,
+      "high": 200.87,
+      "low": 200.31,
+      "close": 200.75,
+      "volume": 3836583
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "EA",
+      "open": 200.65,
+      "high": 200.76,
+      "low": 200.49,
+      "close": 200.62,
+      "volume": 3357439
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "EA",
+      "open": 200.66,
+      "high": 200.9,
+      "low": 200.53,
+      "close": 200.84,
+      "volume": 3406108
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "EA",
+      "open": 200.63,
+      "high": 200.9,
+      "low": 200.45,
+      "close": 200.5,
+      "volume": 1939285
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "EA",
+      "open": 200.61,
+      "high": 200.67,
+      "low": 200.25,
+      "close": 200.3,
+      "volume": 3010923
     }
   ]
 }

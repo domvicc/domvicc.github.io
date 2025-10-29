@@ -18,8 +18,8 @@
       "goodwill": "119509000000",
       "investments": "None",
       "longTermInvestments": "15133000000",
-      "shortTermInvestments": "64313000000",
-      "otherCurrentAssets": "25733000000",
+      "shortTermInvestments": "64323000000",
+      "otherCurrentAssets": "25723000000",
       "otherNonCurrentAssets": "None",
       "totalLiabilities": "275524000000",
       "totalCurrentLiabilities": "141218000000",
@@ -709,7 +709,7 @@
       "shortTermDebt": "8796000000",
       "totalNonCurrentLiabilities": "6621000000",
       "capitalLeaseObligations": "None",
-      "longTermDebt": "1000000",
+      "longTermDebt": "None",
       "currentLongTermDebt": "None",
       "longTermDebtNoncurrent": "None",
       "shortLongTermDebtTotal": "None",
@@ -820,8 +820,8 @@
       "goodwill": "119509000000",
       "investments": "None",
       "longTermInvestments": "15133000000",
-      "shortTermInvestments": "64313000000",
-      "otherCurrentAssets": "25733000000",
+      "shortTermInvestments": "64323000000",
+      "otherCurrentAssets": "25723000000",
       "otherNonCurrentAssets": "None",
       "totalLiabilities": "275524000000",
       "totalCurrentLiabilities": "141218000000",
@@ -3551,7 +3551,7 @@
       "shortTermDebt": "8796000000",
       "totalNonCurrentLiabilities": "6621000000",
       "capitalLeaseObligations": "None",
-      "longTermDebt": "1000000",
+      "longTermDebt": "None",
       "currentLongTermDebt": "None",
       "longTermDebtNoncurrent": "None",
       "shortLongTermDebtTotal": "None",
@@ -4045,5 +4045,5 @@
     }
   ],
   "ticker": "MSFT",
-  "generated_at": "2025-10-10T02:33:27.124034+00:00"
+  "generated_at": "2025-10-28T01:29:09.100023+00:00"
 }

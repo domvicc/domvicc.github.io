@@ -1,7 +1,7 @@
 {
   "ticker": "ADI",
-  "generated_at": "2025-10-10T02:42:19.556094+00:00",
-  "count": 6525,
+  "generated_at": "2025-10-29T01:19:05.986136+00:00",
+  "count": 6538,
   "data": [
     {
       "timestamp": "1999-11-01",
@@ -58727,6 +58727,123 @@
       "low": 235.1,
       "close": 237.88,
       "volume": 3069164
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "ADI",
+      "open": 237.74,
+      "high": 239.035,
+      "low": 224.71,
+      "close": 225.32,
+      "volume": 4425112
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "ADI",
+      "open": 228.32,
+      "high": 235.82,
+      "low": 226.96,
+      "close": 234.67,
+      "volume": 4609877
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "ADI",
+      "open": 231.15,
+      "high": 238.78,
+      "low": 229.125,
+      "close": 235.4,
+      "volume": 3431567
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "ADI",
+      "open": 238.19,
+      "high": 238.8,
+      "low": 234.96,
+      "close": 238.15,
+      "volume": 2773694
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "ADI",
+      "open": 240.33,
+      "high": 244.225,
+      "low": 238.52,
+      "close": 241.61,
+      "volume": 2898707
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "ADI",
+      "open": 241.77,
+      "high": 243.54,
+      "low": 238.59,
+      "close": 242.87,
+      "volume": 2401260
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "ADI",
+      "open": 242.87,
+      "high": 246.835,
+      "low": 242.87,
+      "close": 246.22,
+      "volume": 2760134
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "ADI",
+      "open": 247.84,
+      "high": 248.8299,
+      "low": 245.61,
+      "close": 246.37,
+      "volume": 2361679
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "ADI",
+      "open": 240.54,
+      "high": 241.64,
+      "low": 236.909,
+      "close": 240.36,
+      "volume": 5270794
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "ADI",
+      "open": 237.3,
+      "high": 244.95,
+      "low": 237.26,
+      "close": 243.29,
+      "volume": 2774906
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "ADI",
+      "open": 245.45,
+      "high": 245.51,
+      "low": 236.63,
+      "close": 238.01,
+      "volume": 3488969
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "ADI",
+      "open": 239.695,
+      "high": 244.11,
+      "low": 238.345,
+      "close": 243.01,
+      "volume": 3506236
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "ADI",
+      "open": 241.51,
+      "high": 243.68,
+      "low": 238.84,
+      "close": 239.35,
+      "volume": 2417786
     }
   ]
 }

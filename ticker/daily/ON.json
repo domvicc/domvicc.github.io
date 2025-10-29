@@ -1,7 +1,7 @@
 {
   "ticker": "ON",
-  "generated_at": "2025-10-10T02:43:24.479900+00:00",
-  "count": 6399,
+  "generated_at": "2025-10-29T01:22:53.861247+00:00",
+  "count": 6412,
   "data": [
     {
       "timestamp": "2000-05-02",
@@ -57593,6 +57593,123 @@
       "low": 49.12,
       "close": 49.97,
       "volume": 5385608
+    },
+    {
+      "timestamp": "2025-10-10",
+      "ticker": "ON",
+      "open": 50.0,
+      "high": 50.49,
+      "low": 45.64,
+      "close": 45.74,
+      "volume": 13823829
+    },
+    {
+      "timestamp": "2025-10-13",
+      "ticker": "ON",
+      "open": 47.895,
+      "high": 50.66,
+      "low": 47.6001,
+      "close": 50.11,
+      "volume": 11877061
+    },
+    {
+      "timestamp": "2025-10-14",
+      "ticker": "ON",
+      "open": 48.74,
+      "high": 51.19,
+      "low": 48.68,
+      "close": 49.54,
+      "volume": 7921571
+    },
+    {
+      "timestamp": "2025-10-15",
+      "ticker": "ON",
+      "open": 50.62,
+      "high": 51.465,
+      "low": 49.39,
+      "close": 50.36,
+      "volume": 6547768
+    },
+    {
+      "timestamp": "2025-10-16",
+      "ticker": "ON",
+      "open": 50.97,
+      "high": 53.16,
+      "low": 50.7,
+      "close": 52.97,
+      "volume": 11164721
+    },
+    {
+      "timestamp": "2025-10-17",
+      "ticker": "ON",
+      "open": 52.97,
+      "high": 53.07,
+      "low": 51.22,
+      "close": 52.53,
+      "volume": 8037839
+    },
+    {
+      "timestamp": "2025-10-20",
+      "ticker": "ON",
+      "open": 53.35,
+      "high": 55.99,
+      "low": 53.1,
+      "close": 54.89,
+      "volume": 9630956
+    },
+    {
+      "timestamp": "2025-10-21",
+      "ticker": "ON",
+      "open": 54.7,
+      "high": 55.5,
+      "low": 53.42,
+      "close": 55.08,
+      "volume": 9780731
+    },
+    {
+      "timestamp": "2025-10-22",
+      "ticker": "ON",
+      "open": 53.19,
+      "high": 54.52,
+      "low": 51.6601,
+      "close": 51.93,
+      "volume": 11598911
+    },
+    {
+      "timestamp": "2025-10-23",
+      "ticker": "ON",
+      "open": 50.355,
+      "high": 52.655,
+      "low": 50.23,
+      "close": 51.78,
+      "volume": 12574104
+    },
+    {
+      "timestamp": "2025-10-24",
+      "ticker": "ON",
+      "open": 52.5,
+      "high": 52.62,
+      "low": 50.67,
+      "close": 50.71,
+      "volume": 8634418
+    },
+    {
+      "timestamp": "2025-10-27",
+      "ticker": "ON",
+      "open": 51.84,
+      "high": 54.68,
+      "low": 51.61,
+      "close": 52.68,
+      "volume": 9288112
+    },
+    {
+      "timestamp": "2025-10-28",
+      "ticker": "ON",
+      "open": 52.5,
+      "high": 52.58,
+      "low": 51.095,
+      "close": 51.8,
+      "volume": 6837084
     }
   ]
 }
